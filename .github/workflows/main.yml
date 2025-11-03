@@ -26,7 +26,7 @@ jobs:
 
     - name: Add Google verification file
       run: |
-        echo "google-site-verification: google172d625cbdc5c579.html" > ./build/google172d625cbdc5c579.html
+        echo "google-site-verification: google2c8028c0c6e3481b.html" > ./build/google2c8028c0c6e3481b.html
 
     - name: Add CNAME file for custom domain
       run: echo "iswc2026.semanticweb.org" > ./build/CNAME
