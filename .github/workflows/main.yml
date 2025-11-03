@@ -29,7 +29,7 @@ jobs:
         echo "google-site-verification: google172d625cbdc5c579.html" > ./build/google172d625cbdc5c579.html
 
     - name: Add CNAME file for custom domain
-      run: echo "iswc-conf.github.io" > ./build/CNAME
+      run: echo "iswc2026.semanticweb.org" > ./build/CNAME
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
