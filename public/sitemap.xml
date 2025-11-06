@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Base -->
+  <url>
+    <loc>https://iswc2026.semanticweb.org/#/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- About -->
+  <url><loc>https://iswc2026.semanticweb.org/#/</loc></url>
+
+  <!-- Important Dates -->
+  <url><loc>https://iswc2026.semanticweb.org/#/importantdates</loc></url>
+
+  <!-- Calls -->
+  <url><loc>https://iswc2026.semanticweb.org/#/calls/research</loc></url>
+  <url><loc>https://iswc2026.semanticweb.org/#/calls/resource</loc></url>
+  <url><loc>https://iswc2026.semanticweb.org/#/calls/in-use</loc></url>
+  <url><loc>https://iswc2026.semanticweb.org/#/calls/posters</loc></url>
+  <url><loc>https://iswc2026.semanticweb.org/#/calls/challenges</loc></url>
+  <url><loc>https://iswc2026.semanticweb.org/#/calls/industry</loc></url>
+  <url><loc>https://iswc2026.semanticweb.org/#/calls/doctoral</loc></url>
+  <url><loc>https://iswc2026.semanticweb.org/#/calls/workshops</loc></url>
+  <url><loc>https://iswc2026.semanticweb.org/#/calls/dagstuhl</loc></url>
+  <url><loc>https://iswc2026.semanticweb.org/#/calls/tutorials</loc></url>
+  <url><loc>https://iswc2026.semanticweb.org/#/calls/swsa</loc></url>
+  <url><loc>https://iswc2026.semanticweb.org/#/calls/journaltrack</loc></url>
+
+  <!-- Program -->
+  <url><loc>https://iswc2026.semanticweb.org/#/program/schedule</loc></url>
+  <url><loc>https://iswc2026.semanticweb.org/#/program/acceptedpapers</loc></url>
+  <url><loc>https://iswc2026.semanticweb.org/#/program/keynotespeakers</loc></url>
+  <url><loc>https://iswc2026.semanticweb.org/#/program/workshops</loc></url>
+  <url><loc>https://iswc2026.semanticweb.org/#/program/dagstuhl</loc></url>
+  <url><loc>https://iswc2026.semanticweb.org/#/program/tutorials</loc></url>
+  <url><loc>https://iswc2026.semanticweb.org/#/program/challenges</loc></url>
+  <url><loc>https://iswc2026.semanticweb.org/#/program/panel</loc></url>
+  <url><loc>https://iswc2026.semanticweb.org/#/program/awards</loc></url>
+
+  <!-- Guidelines -->
+  <url><loc>https://iswc2026.semanticweb.org/#/guidelines/html-submission</loc></url>
+  <url><loc>https://iswc2026.semanticweb.org/#/guidelines/prior-publications</loc></url>
+  <url><loc>https://iswc2026.semanticweb.org/#/guidelines/review</loc></url>
+  <url><loc>https://iswc2026.semanticweb.org/#/guidelines/supplemental</loc></url>
+  <url><loc>https://iswc2026.semanticweb.org/#/guidelines/resources</loc></url>
+
+  <!-- Sponsorship -->
+  <url><loc>https://iswc2026.semanticweb.org/#/sponsorship/sponsorshippackages</loc></url>
+
+  <!-- Attending -->
+  <url><loc>https://iswc2026.semanticweb.org/#/attending/visa</loc></url>
+  <url><loc>https://iswc2026.semanticweb.org/#/attending/studentgrants</loc></url>
+  <url><loc>https://iswc2026.semanticweb.org/#/attending/codeofconduct</loc></url>
+  <url><loc>https://iswc2026.semanticweb.org/#/attending/venueandaccomodation</loc></url>
+  <url><loc>https://iswc2026.semanticweb.org/#/attending/registration</loc></url>
+
+  <!-- Organization -->
+  <url><loc>https://iswc2026.semanticweb.org/#/organization/organizing_committee</loc></url>
+  <url><loc>https://iswc2026.semanticweb.org/#/organization/program_committee</loc></url>
+</urlset>
