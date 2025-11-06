@@ -1,0 +1,94 @@
+.h2-border-bottom {
+    border-bottom: 2px solid #e94607;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #e94607;
+}
+
+.ul-disc {
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+.ul-circle {
+    list-style-type: circle;
+    list-style-position: inside;
+}
+
+ol {
+    list-style-type: decimal;
+    padding-left: 32px;
+}
+
+ol li::marker {
+    color: #e94607;
+}
+
+ul.ul-disc {
+    list-style-type: disc;
+    font-size: 1.125rem; /* This is the default for lg:text-lg in Tailwind (18px) */
+}
+
+p {
+    margin-top: 1rem;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+
+.venue-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.venue-image {
+  width: 500px;
+  height: auto;
+  margin-left: 20px; /* existing margin */
+}
+
+.venue-text {
+  flex: 1;
+  margin-top: 0;
+  padding-left: 30px; /* NEW padding to add space on larger devices */
+}
+
+/* Responsive - Stack on smaller devices/tablets */
+@media (max-width: 1024px) {
+  .venue-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .venue-image {
+    width: 100%;
+    max-width: 700px;
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+
+  .venue-text {
+    width: 100%;
+    padding-left: 0; /* remove padding on small screens */
+  }
+}
+
+.custom-table {
+  border-collapse: collapse;
+  width: 50%;
+  margin: 10px;
+  border: 1px solid rgb(130, 129, 129); /* Outer border */
+}
+
+.custom-table th,
+.custom-table td {
+  border: 1px solid rgb(181, 181, 181); /* All inner borders visible */
+  padding: 4px 12px;
+  text-align: left;
+}
+
+.custom-table thead th {
+  color: white;
+}
