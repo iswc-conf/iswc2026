@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "./static/css/main.58f739c8.css",
-    "main.js": "./static/js/main.7a0271dc.js",
-    "static/js/453.e7103164.chunk.js": "./static/js/453.e7103164.chunk.js",
+    "main.css": "./static/css/main.534779be.css",
+    "main.js": "./static/js/main.f2e87040.js",
+    "static/js/453.6c79c11f.chunk.js": "./static/js/453.6c79c11f.chunk.js",
     "static/media/Oshani-Seneviratne.png": "./static/media/Oshani-Seneviratne.171ac5bd1cdb986efa9a.png",
     "static/media/community_1.png": "./static/media/community_1.52c46154e49d4a2a33b8.png",
     "static/media/nicolaus.png": "./static/media/nicolaus.1c16f8050fb5c49644f0.png",
@@ -66,12 +66,12 @@
     "static/media/digital_science_logo.png": "./static/media/digital_science_logo.dad5f3176ea4c4362b18.png",
     "static/media/Roberto.jpeg": "./static/media/Roberto.81d7a44977e25cf46e47.jpeg",
     "index.html": "./index.html",
-    "main.58f739c8.css.map": "./static/css/main.58f739c8.css.map",
-    "main.7a0271dc.js.map": "./static/js/main.7a0271dc.js.map",
-    "453.e7103164.chunk.js.map": "./static/js/453.e7103164.chunk.js.map"
+    "main.534779be.css.map": "./static/css/main.534779be.css.map",
+    "main.f2e87040.js.map": "./static/js/main.f2e87040.js.map",
+    "453.6c79c11f.chunk.js.map": "./static/js/453.6c79c11f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.58f739c8.css",
-    "static/js/main.7a0271dc.js"
+    "static/css/main.534779be.css",
+    "static/js/main.f2e87040.js"
   ]
 }
