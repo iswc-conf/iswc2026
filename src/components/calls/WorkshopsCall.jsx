@@ -103,8 +103,8 @@ export const Workshops = () => {
           </li>
           <li>
             <b>Challenge:</b> Workshops promoting open competition on a problem
-            of choice within the Semantic Web domain (e.g., see the KBC-LM
-            workshop series: https://lm-kbc.github.io/). Competitions are an
+            of choice within the Semantic Web domain (e.g., see the <ExternalLink href="https://lm-kbc.github.io/ ">KBC-LM
+            workshop series</ExternalLink>). Competitions are an
             effective way to advance the state of the art. Proposers should
             clearly specify the task to be addressed, provide an evaluation
             dataset, and define evaluation measures to compare the performance
@@ -171,7 +171,9 @@ export const Workshops = () => {
         Workshop proposals should be submitted via EasyChair at this link:
         <ExternalLink href="https://easychair.org/conferences/?conf=iswc2026">
           EasyChair Workshop Submission Link
-        </ExternalLink>
+        </ExternalLink>.
+        </p>
+        <p>
         Submissions must be in English and formatted as a single PDF document no
         longer than 4 pages, adhering to the LNCS guidelines. Detailed
         formatting instructions are available in{" "}
