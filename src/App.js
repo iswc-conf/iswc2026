@@ -61,7 +61,7 @@ export default function App() {
         <Route path="/calls/in-use" element={<InUse />} />
         <Route path="/calls/journaltrack" element={<JournalTrack />} />
         <Route path="/calls/posters" element={<Posters />} />
-        <Route path="/calls/challenges" element={<Challenges />} />
+        {/* <Route path="/calls/challenges" element={<Challenges />} /> */}
         <Route path="/calls/industry" element={<IndustryTrack />} />
         <Route path="/calls/doctoral" element={<DoctoralConsortium />} />
         <Route path="/calls/workshops" element={<WorkshopsCall />} />
@@ -82,7 +82,7 @@ export default function App() {
         <Route path="/program/workshops" element={<Workshops />} />
         <Route path="/program/dagstuhl" element={<ProgramDagstuhl />} />
         <Route path="/program/tutorials" element={<AcceptedTutorials />} />
-        <Route path="/program/challenges" element={<ProgramChallenges />} />
+        {/* <Route path="/program/challenges" element={<ProgramChallenges />} /> */}
         <Route path="/program/panel" element={<Panel />} />
         <Route path="/program/awards" element={<Awards />} />
         <Route path="/program/schedule" element={<Schedule />} />
