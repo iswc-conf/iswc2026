@@ -54,6 +54,7 @@ export const NavBar = () => {
         { label: "Tutorials", to: "/calls/tutorials" },
         { label: "SWSA Distinguished Dissertation Award", to: "/calls/swsa" },
         { label: "Journal track", to: "/calls/journaltrack" },
+        { label: "Visionary Ideas", to: "/calls/visionary" },
       ],
     },
     {

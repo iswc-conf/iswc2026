@@ -14,7 +14,8 @@ import Andrei_Ciortea from "./pictures/Andrei_Ciortea.jpg"
 import Ilaria_Tiddi from "./pictures/Ilaria_Tiddi.png"
 import Oshani_Senevi from "./pictures/Oshani-Seneviratne.png"
 import Shenghui_Wang from "./pictures/Shenghui Wang.png"
-
+import Maria_Vidal from "./pictures/MariaVidal.jpg"
+import Lora_Aroyo from "./pictures/lora.jpeg"
 
 const organizers = {
   "General Chair": [
@@ -64,7 +65,7 @@ const organizers = {
     },
     {
       name: 'Maria-Esther Vidal',
-      img: '',
+      img: Maria_Vidal,
       institution: 'Leibniz University, Hannover',
       country: 'Germany',
     },
@@ -123,6 +124,14 @@ const organizers = {
       img: '',
       institution: 'Bosch Center for Artificial Intelligence',
       country: 'Germany',
+    },
+  ],
+    "Visionary Ideas Track Chair": [
+    {
+      name: 'Lora Aroyo',
+      img: Lora_Aroyo,
+      institution: 'Google',
+      country: '',
     },
   ],
   "Doctoral Consortium Chair": [
@@ -189,6 +198,12 @@ const organizers = {
       img: Wen_Zhang,
       institution: 'Zhejiang University ',
       country: 'China',
+    },
+        {
+      name: 'Juan Sequeda',
+      img: '',
+      institution: 'ServiceNow',
+      country: '',
     },
     ],
    /*

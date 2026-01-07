@@ -44,6 +44,7 @@ import Registration from "./components/attending/Registration";
 import { SwsaDistinguishedDissertationAward } from "./components/calls/SwsaDistinguishedDissertationAward";
 import AcceptedPapers from "./components/program/AcceptedPapers";
 import ProgramCommitee from "./components/organization/program_commitee";
+import { Visionary } from "./components/calls/Visionary";
 
 export default function App() {
   return (
@@ -68,6 +69,7 @@ export default function App() {
         <Route path="/calls/tutorials" element={<Tutorials />} />
         <Route path="/calls/dagstuhl" element={<Dagstuhl />} />
         <Route path="/calls/swsa" element={<SwsaDistinguishedDissertationAward />} />
+        <Route path="/calls/visionary" element={<Visionary />} />
 
         {/* Guidelines */}
         <Route path="/guidelines/html-submission" element={<HTMLSubmissionGuide />} />

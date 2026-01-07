@@ -7,48 +7,33 @@ export const Timeline = () => {
 
     const timeline_theme = {
     colors: {
-      submissions: "#1E88E5",
-      notifications: "#FB8C00",
+      event: "#a93737ff",
+      submission: "#1E88E5",
+      notification: "#FB8C00",
       readyspring: "#43A047",
       readyceur: "#8E24AA",
       other: "#000000"
     },
   };
 
+
+
     const events = [
-   
+        { date: '10-Feb-26', title: 'Workshop Proposals Deadline', color: timeline_theme.colors.submission },
+        { date: '24-Feb-26', title: 'Workshop Notifications to Proposers', color: timeline_theme.colors.notification },
+        { date: '20-Mar-26', title: 'Workshop Website and CfP Available Online', color: timeline_theme.colors.other },
+
+        { date: '03-Apr-26', title: 'Challenge Workshops Release Datasets', color: timeline_theme.colors.other },
+        { date: '26-Jun-26', title: 'Challenge Solution Submission', color: timeline_theme.colors.submission },
+        { date: '10-Jul-26', title: 'Challenge Results', color: timeline_theme.colors.notification },
+        { date: '24-Jul-26', title: 'Workshop Paper Submission', color: timeline_theme.colors.submission },
+
+        { date: '21-Aug-26', title: 'Workshop Program with Accepted Papers Available Online', color: timeline_theme.colors.notification },
+        { date: '25-26 Oct-26', title: 'Workshop Days', color: timeline_theme.colors.event },
+
+        
     ];
 
-    {/*
-    const events = [
-        { date: '18-Feb-25', title: 'Workshop proposals', color: timeline_theme.colors.submissions },
-        { date: '4-Mar-25', title: 'Semantic Web Challenge proposals', color: timeline_theme.colors.submissions },
-        { date: '11-Mar-25', title: 'Workshop notifications', color: timeline_theme.colors.notifications },
-        { date: '16-Mar-25', title: 'Semantic Web Challenges notifications', color: timeline_theme.colors.notifications },
-        { date: '6-May-25', title: 'Abstracts (Research, In-use, and Resource tracks)', color: timeline_theme.colors.submissions },
-        { date: '13-May-25 (extended 14-May-25)', title: 'Papers (Research, In-use, and Resource tracks)', color: timeline_theme.colors.submissions },
-        { date: '3-Jun-25', title: 'Tutorial proposals', color: timeline_theme.colors.submissions },
-        { date: '3-Jun-25', title: 'Doctoral Consortium submissions', color: timeline_theme.colors.submissions },
-        { date: '10-Jun-25', title: 'Tutorial notifications', color: timeline_theme.colors.notifications },
-        { date: '17-20 Jun-25', title: 'Rebuttal (Research, In-use, and Resource tracks)', color: timeline_theme.colors.other },
-        { date: '30-Jun-25', title: 'Journal Sessions Proposals', color: timeline_theme.colors.submissions },
-        { date: '8-Jul-25', title: 'Doctoral Consortium notifications', color: timeline_theme.colors.notifications },
-        { date: '17-Jul-25', title: 'Paper notifications (Research, In-use, and Resource tracks)', color: timeline_theme.colors.notifications },
-        { date: '8-Jul-25', title: 'Industry papers submissions', color: timeline_theme.colors.submissions },
-        { date: '8-Jul-25', title: 'Dagstuhl-style workshop submission', color: timeline_theme.colors.submissions },
-        { date: '17-Jul-25', title: 'Journal Sessions Notifications', color: timeline_theme.colors.notifications },
-        { date: '29-Jul-25', title: 'Industry papers notifications', color: timeline_theme.colors.notifications },
-        { date: '31-Jul-25', title: 'Camera-ready papers (Research, In-use, and Resource tracks)', color: timeline_theme.colors.readyspring },
-        { date: '31-Jul-25', title: 'Poster & Demo submissions', color: timeline_theme.colors.submissions },
-        { date: '28-Aug-25', title: 'Poster & Demo notifications', color: timeline_theme.colors.notifications },
-        { date: '28-Aug-25', title: 'Workshop papers notifications', color: timeline_theme.colors.notifications },
-        { date: '11-Sep-25', title: 'Camera-ready - Industry', color: timeline_theme.colors.readyceur },
-        { date: '11-Sep-25', title: 'Camera-ready - Poster&Demo', color: timeline_theme.colors.readyceur },
-        { date: '11-Sep-25', title: 'Camera-ready - Doctoral Consortium', color: timeline_theme.colors.readyceur },
-        { date: '2-3 Nov-25', title: 'Workshops & Tutorials', color: timeline_theme.colors.other },
-        { date: '4-6 Nov-25', title: 'Main conference', color: timeline_theme.colors.other },
-    ];
-    */ }
     
 
 
@@ -60,11 +45,19 @@ export const Timeline = () => {
       {/* Legend */}
       <div className="container">
         <ul className="list-none space-y-1">
+              <li>
+            <span className="mr-2" style={{ color: timeline_theme.colors.event }}>
+              <b>&#8226;</b>
+            </span>
+            <span style={{ color: timeline_theme.colors.event }}>
+              <b>Event</b>
+            </span>
+          </li>
           <li>
             <span className="mr-2" style={{ color: timeline_theme.colors.submissions }}>
               <b>&#8226;</b>
             </span>
-            <span style={{ color: timeline_theme.colors.submissions }}>
+            <span style={{ color: timeline_theme.colors.submission }}>
               <b>Submissions</b>
             </span>
           </li>
@@ -72,7 +65,7 @@ export const Timeline = () => {
             <span className="mr-2" style={{ color: timeline_theme.colors.notifications }}>
               <b>&#8226;</b>
             </span>
-            <span style={{ color: timeline_theme.colors.notifications }}>
+            <span style={{ color: timeline_theme.colors.notification }}>
               <b>Notifications</b>
             </span>
           </li>
