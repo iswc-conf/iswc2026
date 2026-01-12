@@ -156,7 +156,7 @@ const organizers = {
       country: 'UK',
     },
     {
-      name: 'Robert Hoeldorf',
+      name: 'Robert Hoehndorf',
       img: '',
       institution: 'King Abdullah University of Science and Technology',
       country: 'Saudi Arabia',
