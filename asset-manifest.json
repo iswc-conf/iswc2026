@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.c50dd6ed.css",
-    "main.js": "./static/js/main.3e8b308f.js",
+    "main.js": "./static/js/main.f9a1697d.js",
     "static/js/453.6c79c11f.chunk.js": "./static/js/453.6c79c11f.chunk.js",
     "static/media/Oshani-Seneviratne.png": "./static/media/Oshani-Seneviratne.171ac5bd1cdb986efa9a.png",
     "static/media/community_1.png": "./static/media/community_1.52c46154e49d4a2a33b8.png",
@@ -28,6 +28,7 @@
     "static/media/Andrei_Ciortea.jpg": "./static/media/Andrei_Ciortea.3f4b63008096e27abf8a.jpg",
     "static/media/trans_map.png": "./static/media/trans_map.e47ccd137208d75f5842.png",
     "static/media/community_20.jpeg": "./static/media/community_20.0dec997558bf0b3e28fe.jpeg",
+    "static/media/ORKGWorkflow.jpg": "./static/media/ORKGWorkflow.cea3e1e04f6a07063675.jpg",
     "static/media/community_25.jpeg": "./static/media/community_25.7e80524e36ac91cbae04.jpeg",
     "static/media/community_23.png": "./static/media/community_23.2137f1df1c3248893a84.png",
     "static/media/community_19.jpeg": "./static/media/community_19.ded8a51fed7ffccad1dc.jpeg",
@@ -35,6 +36,7 @@
     "static/media/rachel_adams.png": "./static/media/rachel_adams.8629f2c4c9b0e1918ac6.png",
     "static/media/community_26.jpeg": "./static/media/community_26.f9d05b9f1cecfb7baabf.jpeg",
     "static/media/Ivan.png": "./static/media/Ivan.2df7e0ab59453db25948.png",
+    "static/media/jacopo_deberardinis.jpg": "./static/media/jacopo_deberardinis.5496bf425424215897be.jpg",
     "static/media/JWE_River_Logo.jpg": "./static/media/JWE_River_Logo.1a485d79767aeb12f62f.jpg",
     "static/media/community_18.jpeg": "./static/media/community_18.131d13e3f71b343d8872.jpeg",
     "static/media/community_6.png": "./static/media/community_6.86638daccb2dcb3a79ac.png",
@@ -60,6 +62,7 @@
     "static/media/community_13.jpeg": "./static/media/community_13.adc26e26c7749508dcc7.jpeg",
     "static/media/community_22.jpeg": "./static/media/community_22.f89a35833710139904da.jpeg",
     "static/media/Videolectures_logo.png": "./static/media/Videolectures_logo.cfa73b0eda9d934ddcd8.png",
+    "static/media/Juan_Sequeda.jpeg": "./static/media/Juan_Sequeda.2577019f465355c184dd.jpeg",
     "static/media/swsa_logo.png": "./static/media/swsa_logo.3f96eb5d67680db2422c.png",
     "static/media/ISWC1.png": "./static/media/ISWC1.547931b6dd43eade896d.png",
     "static/media/google_logo.png": "./static/media/google_logo.08b4ebfd25145471fde1.png",
@@ -67,11 +70,11 @@
     "static/media/Roberto.jpeg": "./static/media/Roberto.81d7a44977e25cf46e47.jpeg",
     "index.html": "./index.html",
     "main.c50dd6ed.css.map": "./static/css/main.c50dd6ed.css.map",
-    "main.3e8b308f.js.map": "./static/js/main.3e8b308f.js.map",
+    "main.f9a1697d.js.map": "./static/js/main.f9a1697d.js.map",
     "453.6c79c11f.chunk.js.map": "./static/js/453.6c79c11f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c50dd6ed.css",
-    "static/js/main.3e8b308f.js"
+    "static/js/main.f9a1697d.js"
   ]
 }
