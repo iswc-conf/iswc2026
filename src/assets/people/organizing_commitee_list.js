@@ -16,6 +16,8 @@ import Oshani_Senevi from "./pictures/Oshani-Seneviratne.png"
 import Shenghui_Wang from "./pictures/Shenghui Wang.png"
 import Maria_Vidal from "./pictures/MariaVidal.jpg"
 import Lora_Aroyo from "./pictures/lora.jpeg"
+import Jacopo_Beberardinis from "./pictures/jacopo_deberardinis.jpg"
+import Juan_Sequeda from "./pictures/Juan_Sequeda.jpeg"
 
 const organizers = {
   "General Chair": [
@@ -56,7 +58,7 @@ const organizers = {
     },
   ],  */
 
-  "Research Track Chair": [
+  "Research Track Chairs": [
     {
       name: 'Manolis Koubarakis',
       img: '',
@@ -70,7 +72,7 @@ const organizers = {
       country: 'Germany',
     },
   ],
-  "In-Use Application Track Chair": [
+  "In-Use Application Track Chairs": [
     {
       name: 'Ernesto Jimenez Ruiz',
       img: ernesto,
@@ -84,7 +86,7 @@ const organizers = {
       country: 'USA',
     },
   ],
-  "Resource Track Chair": [
+  "Resource Track Chairs": [
     {
       name: 'Axel Polleres',
       img: '',
@@ -98,7 +100,7 @@ const organizers = {
       country: 'The Netherlands',
     },
   ],
-  "Workshop and Tutorials Chair": [
+  "Workshop and Tutorials Chairs": [
     {
       name: 'Andrei Ciortea',
       img: Andrei_Ciortea,
@@ -112,7 +114,7 @@ const organizers = {
       country: 'The Netherlands',
     },
   ],
-  "Industry Track Chair": [
+  "Industry Track Chairs": [
     {
       name: 'Maria Keet',
       img: '',
@@ -126,7 +128,7 @@ const organizers = {
       country: 'Germany',
     },
   ],
-    "Visionary Ideas Track Chair": [
+  "Visionary Ideas Track Chair": [
     {
       name: 'Lora Aroyo',
       img: Lora_Aroyo,
@@ -134,7 +136,7 @@ const organizers = {
       country: '',
     },
   ],
-  "Doctoral Consortium Chair": [
+  "Doctoral Consortium Chairs": [
     {
       name: 'Anna Lisa Gentile',
       img: Anna_Lisa_Gentile,
@@ -148,7 +150,7 @@ const organizers = {
       country: 'Chile',
     },
   ],
-  "Poster, Demo & Lightning Talk Chair": [
+  "Poster, Demo & Lightning Talk Chairs": [
     {
       name: 'Jaoyan Chen',
       img: Jiaoyan_Chen,
@@ -163,10 +165,10 @@ const organizers = {
     },
   ],
   
-  "Dagsthul-style workshop": [
+  "Dagsthul-style workshop Chairs": [
     {
       name: 'Jacopo de Berardinis',
-      img: '',
+      img: Jacopo_Beberardinis,
       institution: 'University of Liverpool',
       country: 'UK',
     },
@@ -186,7 +188,7 @@ const organizers = {
       country: 'TBD',
     }
   ], */
-  "Sponsorship Chair": [
+  "Sponsorship Chairs": [
     {
       name: 'Peter Haase',
       img: Peter_Haase,
@@ -201,7 +203,7 @@ const organizers = {
     },
         {
       name: 'Juan Sequeda',
-      img: '',
+      img: Juan_Sequeda,
       institution: 'ServiceNow',
       country: '',
     },
@@ -213,7 +215,7 @@ const organizers = {
       country: 'Italy',
     },
   ],*/
-  "Proceedings & Metadata Chair": [
+  "Proceedings & Metadata Chairs": [
     {
       name: 'Reham Alharbi',
       img: '',
@@ -242,7 +244,7 @@ const organizers = {
     },
   ],
   */
-  "Web Presence & Publicity Chair": [
+  "Web Presence & Publicity Chairs": [
     {
       name: 'Fatima Zahra Amara',
       img: Fatima,

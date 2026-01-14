@@ -45,6 +45,7 @@ import { SwsaDistinguishedDissertationAward } from "./components/calls/SwsaDisti
 import AcceptedPapers from "./components/program/AcceptedPapers";
 import ProgramCommitee from "./components/organization/program_commitee";
 import { Visionary } from "./components/calls/Visionary";
+import OKBCSubmissionWorkflow from "./components/guidelines/OKBCSubmissionWorkflow";
 
 export default function App() {
   return (
@@ -77,6 +78,7 @@ export default function App() {
         <Route path="/guidelines/supplemental" element={<SupplementalMaterials />} />
         <Route path="/guidelines/resources" element={<ResourcesAvailability />} />
         <Route path="/guidelines/prior-publications" element={<PriorPublicationMultipleSubmission />} />
+        <Route path="/guidelines/okbcworkflow" element={<OKBCSubmissionWorkflow />} />
 
         {/* Program */}
         <Route path="/program/acceptedpapers" element={<AcceptedPapers />} />

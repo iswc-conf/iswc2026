@@ -59,9 +59,7 @@ export const Workshops = () => {
         </ul>
       </p>
 
-      <br></br>
-      <br></br>
-      <br></br>
+
       <UnderlineHeader>Workshop Topics</UnderlineHeader>
 
       <p>
@@ -121,9 +119,7 @@ export const Workshops = () => {
         and innovation of the Semantic Web and Knowledge Graph community.
       </p>
 
-      <br></br>
-      <br></br>
-      <br></br>
+
       <UnderlineHeader>Review Criteria</UnderlineHeader>
 
       <p>
@@ -163,9 +159,7 @@ export const Workshops = () => {
         influence the final decision.
       </p>
 
-      <br></br>
-      <br></br>
-      <br></br>
+
       <UnderlineHeader>Submission Guidelines</UnderlineHeader>
       <p>
         Workshop proposals should be submitted via EasyChair at this link:
@@ -318,9 +312,7 @@ export const Workshops = () => {
         </ul>
       </p>
 
-      <br></br>
-      <br></br>
-      <br></br>
+
       <UnderlineHeader>Requirements upon Acceptance</UnderlineHeader>
       <p>
         Accepted workshops will need to adhere to the following requirements:
@@ -383,9 +375,7 @@ export const Workshops = () => {
         </ul>
       </p>
 
-      <br></br>
-      <br></br>
-      <br></br>
+
       <UnderlineHeader>Timeline Template for Workshop Organizers</UnderlineHeader>
 
       <p>All workshops will adhere to a common timeline as follows (<b>all deadlines are 23:59 AoE</b>):</p>

@@ -5,7 +5,8 @@ import { theme } from "../../theme";
 export const UnderlineHeader = ({children}) => {
     return (
         <>
-        <h2  style={{ color: theme.colors.primary, borderBottom: "2px solid", borderBottomColor: theme.colors.primary}} className="h2-border-bottom">{children}</h2> 
+        <br></br>
+        <h2  style={{ color: theme.colors.primary, paddingTop: "30px", borderBottom: "2px solid", borderBottomColor: theme.colors.primary}} className="h2-border-bottom">{children}</h2> 
         </>
     
     );
