@@ -6,6 +6,8 @@ import ExternalLink from "../general/ExternalLink";
 import BaseContainer from "../general/BaseContainer";
 import { theme } from "../../theme";
 import Accent from "../general/Accent";
+import UnderlineHeader from "../general/UnderlineHeader";
+import NewsSection from "./News";
 
 export const About = () => {
   return (
@@ -13,7 +15,10 @@ export const About = () => {
       <br></br>
       <br></br>
       <Header>About ISWC 2026</Header>
-      <TextBlock>
+
+
+      <div className="max-w-3xl mx-auto px-4">
+     
         <p className="text-lg ">
           The International Semantic Web Conference (ISWC) is the premier
           international forum for the Semantic Web and Linked Data community.
@@ -34,7 +39,12 @@ export const About = () => {
           </ExternalLink>
           .
         </p>
-      </TextBlock>
+
+      <UnderlineHeader>News </UnderlineHeader>
+      <NewsSection></NewsSection>
+
+
+      </div>
     </div>
   );
 };

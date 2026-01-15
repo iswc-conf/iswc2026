@@ -5,6 +5,7 @@ export const theme = {
     accent: '#b15143ff',
     text: '#333333',
     background: '#ffffff',
-    logo_black: '#242c37'
+    logo_black: '#242c37',
+    gray:'#838383'
   },
 };
