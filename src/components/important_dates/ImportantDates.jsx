@@ -12,12 +12,10 @@ const ImportantDates = () => {
                     <div className="m-2 lg:col-span-8 flex flex-col justify-center items-center">
                         <div className="container mx-auto px-4 lg:px-8">
                             <Header>Important Dates</Header>
-                            
-                            {/* About Content */}
-                            <div className="bg-white p-6 lg:p-12 rounded-lg shadow-md">
+               
                                 
                                 <Timeline />
-                            </div>
+                            
                             
                         </div>
                     </div>

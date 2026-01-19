@@ -50,6 +50,7 @@ const NewsList = ({ news }) => {
 
 const NewsSection = () => {
   const newsData = [
+     { date: "January 19, 2026", text: "CFPs are now available for the Research, In Use, and Resource tracks", isLatest:"True"},
     { date: "November 6, 2025", text: "ISWC 2026 website is now live." },
   ];
 

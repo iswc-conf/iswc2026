@@ -2,16 +2,16 @@ import React from "react";
 import SubHeader from "../general/SubHeader";
 import UnderlineHeader from "../general/UnderlineHeader";
 import DeclareSoon from "../general/declareSoon";
+import Card from "../general/Card";
 
 export const Timeline = () => {
 
     const timeline_theme = {
     colors: {
-      event: "#a93737ff",
-      submission: "#1E88E5",
+      event: "rgb(206, 70, 70)",
+      submission: "#3d8cd1",
       notification: "#FB8C00",
-      readyspring: "#43A047",
-      readyceur: "#8E24AA",
+      cameraready: "#922be5",
       other: "#000000"
     },
   };
@@ -19,17 +19,30 @@ export const Timeline = () => {
 
 
     const events = [
+
+
+
+
         { date: '10-Feb-26', title: 'Workshop Proposals Deadline', color: timeline_theme.colors.submission },
         { date: '24-Feb-26', title: 'Workshop Notifications to Proposers', color: timeline_theme.colors.notification },
         { date: '20-Mar-26', title: 'Workshop Website and CfP Available Online', color: timeline_theme.colors.other },
 
         { date: '03-Apr-26', title: 'Challenge Workshops Release Datasets', color: timeline_theme.colors.other },
+
+        { date: '02-May-26', title: 'Research, Resource, In-Use Track Abstract Submission', color: timeline_theme.colors.submission },
+        { date: '07-May-26', title: 'Research, Resource, In-Use Track Full Paper Submission', color: timeline_theme.colors.submission },
+
+        { date: '24-Jun-26', title: 'Research, Resource, In-Use Track Notifications', color: timeline_theme.colors.notification },
+
         { date: '26-Jun-26', title: 'Challenge Solution Submission', color: timeline_theme.colors.submission },
+
+        { date: '08-Jul-26', title: 'Research, Resource, In-Use Track Camera Ready', color: timeline_theme.colors.cameraready },
         { date: '10-Jul-26', title: 'Challenge Results', color: timeline_theme.colors.notification },
         { date: '24-Jul-26', title: 'Workshop Paper Submission', color: timeline_theme.colors.submission },
 
         { date: '21-Aug-26', title: 'Workshop Program with Accepted Papers Available Online', color: timeline_theme.colors.notification },
         { date: '25-26 Oct-26', title: 'Workshop Days', color: timeline_theme.colors.event },
+        { date: '27-29 Oct-26', title: 'Conference Days', color: timeline_theme.colors.event },
 
         
     ];
@@ -44,51 +57,33 @@ export const Timeline = () => {
    <div className="my-2 mx-4 mb-8">
       {/* Legend */}
       <div className="container">
-        <ul className="list-none space-y-1">
+        <ul className="list-none space-y-1 ul-disc">
               <li>
-            <span className="mr-2" style={{ color: timeline_theme.colors.event }}>
-              <b>&#8226;</b>
-            </span>
+     
             <span style={{ color: timeline_theme.colors.event }}>
               <b>Event</b>
             </span>
           </li>
           <li>
-            <span className="mr-2" style={{ color: timeline_theme.colors.submissions }}>
-              <b>&#8226;</b>
-            </span>
+        
             <span style={{ color: timeline_theme.colors.submission }}>
               <b>Submissions</b>
             </span>
           </li>
           <li>
-            <span className="mr-2" style={{ color: timeline_theme.colors.notifications }}>
-              <b>&#8226;</b>
-            </span>
+         
             <span style={{ color: timeline_theme.colors.notification }}>
               <b>Notifications</b>
             </span>
           </li>
           <li>
-            <span className="mr-2" style={{ color: timeline_theme.colors.readyspring }}>
-              <b>&#8226;</b>
-            </span>
-            <span style={{ color: timeline_theme.colors.readyspring }}>
+          
+            <span style={{ color: timeline_theme.colors.cameraready }}>
               <b>Camera-Ready (impacting SPRINGER)</b>
             </span>
           </li>
           <li>
-            <span className="mr-2" style={{ color: timeline_theme.colors.readyceur }}>
-              <b>&#8226;</b>
-            </span>
-            <span style={{ color: timeline_theme.colors.readyceur }}>
-              <b>Camera-Ready (CEUR companion volume)</b>
-            </span>
-          </li>
-          <li>
-            <span className="mr-2" style={{ color: timeline_theme.colors.other }}>
-              <b>&#8226;</b>
-            </span>
+         
             <span style={{ color: timeline_theme.colors.other }}>
               <b>All other</b>
             </span>
@@ -98,7 +93,9 @@ export const Timeline = () => {
       </div>
   
  <UnderlineHeader>Timeline</UnderlineHeader>
- <DeclareSoon></DeclareSoon>
+ <Card>
+   <p><em>This timeline will be updated as new information, news, and events become available. Please review it periodically for the latest updates and newly announced dates.</em></p>
+ </Card>
   <div className="flex justify-start items-start min-h-screen">
    
 
