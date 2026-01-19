@@ -132,7 +132,7 @@ export const Research = () => {
             <p>Papers in this track will be reviewed according to the following criteria:</p>
 
             <p>
-                <ul className="list-disc list-inside">
+                <ul className="list-disc list-inside ml-8">
                     <li>Originality and novelty</li>
                     <li>Relevance of the topic to the conference</li>
                     <li>Impact of the research contributions</li>
@@ -213,7 +213,7 @@ export const Research = () => {
             <p> We strongly recommend that prospective authors carefully check the calls of the other main tracks of the conference in order to identify the optimal track for their submission (submission of the same work to multiple tracks is prohibited). </p>
 
             <p>
-                <ul className="list-disc list-inside">
+                <ul className="list-disc list-inside ml-8">
 
                     <li>Papers that propose new algorithms and architectures should be submitted to the regular research track;</li>
                     <li>Papers that reuse and apply state-of-the-art semantic technology or resources in practical settings should be submitted to the in-use track (i.e., the novelty falls into the in-use application of the semantic technology or resource);</li>
@@ -237,7 +237,7 @@ export const Research = () => {
 
 
             <p>
-                <ul className="list-disc list-inside">
+                <ul className="list-disc list-inside ml-8">
 
                     <li>The first page, on which the paper body begins, should include the title and abstract but not the names or affiliations of the authors.</li>
                     <li>Remove any identifying information, including author names, from file names and ensure document properties are also anonymized.</li>

@@ -143,7 +143,7 @@ export const Resource = () => {
 
         In addition to the above criteria for evaluation, we stress that there are availability requirements to fulfill, as specified as follows: </p>
       <p>
-        <ul className="list-disc list-inside">
+        <ul className="list-disc list-inside ml-8">
           <li><b>Mandatory</b>: Is the resource (and related results) published at a persistent URI (PURL, DOI, w3id)?</li>
           <li><b>Mandatory</b>: Is there a canonical citation associated with the resource?</li>
           <li><b>Mandatory</b>: Does the resource provide a license specification? (See creativecommons.org, opensource.org for more information)</li>
