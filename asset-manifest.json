@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.eda818c7.css",
-    "main.js": "./static/js/main.f14001ba.js",
+    "main.js": "./static/js/main.c7a31a19.js",
     "static/js/453.6c79c11f.chunk.js": "./static/js/453.6c79c11f.chunk.js",
     "static/media/Oshani-Seneviratne.png": "./static/media/Oshani-Seneviratne.171ac5bd1cdb986efa9a.png",
     "static/media/community_1.png": "./static/media/community_1.52c46154e49d4a2a33b8.png",
@@ -56,6 +56,7 @@
     "static/media/IIJ_logo.jpg": "./static/media/IIJ_logo.182c4db3e2395acb9d3c.jpg",
     "static/media/metaphacts-logo-standard.png": "./static/media/metaphacts-logo-standard.9f9adbf50506174d775b.png",
     "static/media/ISWC2.png": "./static/media/ISWC2.34c2ee991b39badf1a73.png",
+    "static/media/Marieke.jpg": "./static/media/Marieke.869d7f2bd2776f820112.jpg",
     "static/media/lore_star_logo.png": "./static/media/lore_star_logo.d741fd15e27954bf9003.png",
     "static/media/community_12.jpeg": "./static/media/community_12.e9f5784fd1e28fee5172.jpeg",
     "static/media/community_14.jpeg": "./static/media/community_14.a59c6178fb78527657d4.jpeg",
@@ -70,11 +71,11 @@
     "static/media/Roberto.jpeg": "./static/media/Roberto.81d7a44977e25cf46e47.jpeg",
     "index.html": "./index.html",
     "main.eda818c7.css.map": "./static/css/main.eda818c7.css.map",
-    "main.f14001ba.js.map": "./static/js/main.f14001ba.js.map",
+    "main.c7a31a19.js.map": "./static/js/main.c7a31a19.js.map",
     "453.6c79c11f.chunk.js.map": "./static/js/453.6c79c11f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.eda818c7.css",
-    "static/js/main.f14001ba.js"
+    "static/js/main.c7a31a19.js"
   ]
 }
