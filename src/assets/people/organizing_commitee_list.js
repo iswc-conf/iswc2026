@@ -18,6 +18,7 @@ import Maria_Vidal from "./pictures/MariaVidal.jpg"
 import Lora_Aroyo from "./pictures/lora.jpeg"
 import Jacopo_Beberardinis from "./pictures/jacopo_deberardinis.jpg"
 import Juan_Sequeda from "./pictures/Juan_Sequeda.jpeg"
+import Marieke_Erp from "./pictures/Marieke.jpg"
 
 const organizers = {
   "General Chair": [
@@ -95,7 +96,7 @@ const organizers = {
     },
     {
       name: 'Marieke van Erp',
-      img: '',
+      img: Marieke_Erp,
       institution: 'KNAW Humanities Cluster',
       country: 'The Netherlands',
     },
