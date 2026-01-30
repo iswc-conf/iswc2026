@@ -19,6 +19,12 @@ import Lora_Aroyo from "./pictures/lora.jpeg"
 import Jacopo_Beberardinis from "./pictures/jacopo_deberardinis.jpg"
 import Juan_Sequeda from "./pictures/Juan_Sequeda.jpeg"
 import Marieke_Erp from "./pictures/Marieke.jpg"
+import Koubarakis from "./pictures/koubarakis.jpg"
+import Polles from "./pictures/Polleres_Axel.jpg"
+import Maria_Keet from "./pictures/maria_keet.png"
+import Stepanova from "./pictures/Stepanova.png"
+import Hoehndorf from "./pictures/hoehndorf.jpeg"
+import Alharbi from "./pictures/Alharbi.jpg"
 
 const organizers = {
   "General Chair": [
@@ -62,7 +68,7 @@ const organizers = {
   "Research Track Chairs": [
     {
       name: 'Manolis Koubarakis',
-      img: '',
+      img: Koubarakis,
       institution: 'National and Kapodistrian University of Athens',
       country: 'Greece',
     },
@@ -90,7 +96,7 @@ const organizers = {
   "Resource Track Chairs": [
     {
       name: 'Axel Polleres',
-      img: '',
+      img: Polles,
       institution: 'Vienna University of Economics and Business (WU Wien)',
       country: 'Austria',
     },
@@ -118,13 +124,13 @@ const organizers = {
   "Industry Track Chairs": [
     {
       name: 'Maria Keet',
-      img: '',
+      img: Maria_Keet,
       institution: 'Meaningfy S.a.r.l',
       country: 'Luxembourg',
     },
     {
       name: 'Daria Stepanova',
-      img: '',
+      img: Stepanova,
       institution: 'Bosch Center for Artificial Intelligence',
       country: 'Germany',
     },
@@ -160,7 +166,7 @@ const organizers = {
     },
     {
       name: 'Robert Hoehndorf',
-      img: '',
+      img: Hoehndorf,
       institution: 'King Abdullah University of Science and Technology',
       country: 'Saudi Arabia',
     },
@@ -219,7 +225,7 @@ const organizers = {
   "Proceedings & Metadata Chairs": [
     {
       name: 'Reham Alharbi',
-      img: '',
+      img: Alharbi,
       institution: 'Taibah University',
       country: ' Saudi Arabia',
     },
