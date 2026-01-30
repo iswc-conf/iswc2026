@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.eda818c7.css",
-    "main.js": "./static/js/main.c7a31a19.js",
+    "main.js": "./static/js/main.b816d38a.js",
     "static/js/453.6c79c11f.chunk.js": "./static/js/453.6c79c11f.chunk.js",
     "static/media/Oshani-Seneviratne.png": "./static/media/Oshani-Seneviratne.171ac5bd1cdb986efa9a.png",
     "static/media/community_1.png": "./static/media/community_1.52c46154e49d4a2a33b8.png",
@@ -21,6 +21,7 @@
     "static/media/logo_banner.png": "./static/media/logo_banner.84bf796c062cb4e02dc1.png",
     "static/media/logo.png": "./static/media/logo.74405ea874bf0f7c2459.png",
     "static/media/hotels.png": "./static/media/hotels.44c9795af25f7b66e80d.png",
+    "static/media/Stepanova.png": "./static/media/Stepanova.532e540c3727fefd336f.png",
     "static/media/Jiaoyan_Chen.png": "./static/media/Jiaoyan_Chen.ef66bf51b9e77361648d.png",
     "static/media/Ilaria_Tiddi.png": "./static/media/Ilaria_Tiddi.bb16aa38f1319baeb2c8.png",
     "static/media/Anna_Lisa_Gentile.jpeg": "./static/media/Anna_Lisa_Gentile.6d5b4da3bbe7fda8845f.jpeg",
@@ -29,6 +30,7 @@
     "static/media/trans_map.png": "./static/media/trans_map.e47ccd137208d75f5842.png",
     "static/media/community_20.jpeg": "./static/media/community_20.0dec997558bf0b3e28fe.jpeg",
     "static/media/ORKGWorkflow.jpg": "./static/media/ORKGWorkflow.cea3e1e04f6a07063675.jpg",
+    "static/media/maria_keet.png": "./static/media/maria_keet.1a0d668433d4a2b6eef3.png",
     "static/media/community_25.jpeg": "./static/media/community_25.7e80524e36ac91cbae04.jpeg",
     "static/media/community_23.png": "./static/media/community_23.2137f1df1c3248893a84.png",
     "static/media/community_19.jpeg": "./static/media/community_19.ded8a51fed7ffccad1dc.jpeg",
@@ -55,6 +57,7 @@
     "static/media/ernesto.jpeg": "./static/media/ernesto.988d8e92e79770fe0956.jpeg",
     "static/media/IIJ_logo.jpg": "./static/media/IIJ_logo.182c4db3e2395acb9d3c.jpg",
     "static/media/metaphacts-logo-standard.png": "./static/media/metaphacts-logo-standard.9f9adbf50506174d775b.png",
+    "static/media/koubarakis.jpg": "./static/media/koubarakis.df354cd3d97512d85676.jpg",
     "static/media/ISWC2.png": "./static/media/ISWC2.34c2ee991b39badf1a73.png",
     "static/media/Marieke.jpg": "./static/media/Marieke.869d7f2bd2776f820112.jpg",
     "static/media/lore_star_logo.png": "./static/media/lore_star_logo.d741fd15e27954bf9003.png",
@@ -66,16 +69,19 @@
     "static/media/Juan_Sequeda.jpeg": "./static/media/Juan_Sequeda.2577019f465355c184dd.jpeg",
     "static/media/swsa_logo.png": "./static/media/swsa_logo.3f96eb5d67680db2422c.png",
     "static/media/ISWC1.png": "./static/media/ISWC1.547931b6dd43eade896d.png",
+    "static/media/Polleres_Axel.jpg": "./static/media/Polleres_Axel.129d33ed47682575cf4b.jpg",
+    "static/media/hoehndorf.jpeg": "./static/media/hoehndorf.feb3bddc7cd1112acd15.jpeg",
     "static/media/google_logo.png": "./static/media/google_logo.08b4ebfd25145471fde1.png",
     "static/media/digital_science_logo.png": "./static/media/digital_science_logo.dad5f3176ea4c4362b18.png",
+    "static/media/Alharbi.jpg": "./static/media/Alharbi.e4552fdc353095bc3de5.jpg",
     "static/media/Roberto.jpeg": "./static/media/Roberto.81d7a44977e25cf46e47.jpeg",
     "index.html": "./index.html",
     "main.eda818c7.css.map": "./static/css/main.eda818c7.css.map",
-    "main.c7a31a19.js.map": "./static/js/main.c7a31a19.js.map",
+    "main.b816d38a.js.map": "./static/js/main.b816d38a.js.map",
     "453.6c79c11f.chunk.js.map": "./static/js/453.6c79c11f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.eda818c7.css",
-    "static/js/main.c7a31a19.js"
+    "static/js/main.b816d38a.js"
   ]
 }
