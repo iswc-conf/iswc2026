@@ -45,10 +45,11 @@ export const NavBar = () => {
         { label: "Research", to: "/calls/research" },
         { label: "Resource", to: "/calls/resource" },
         { label: "In Use", to: "/calls/in-use" },
+        { label: "Doctoral Consortium", to: "/calls/doctoral" },
         { label: "Posters and Demos", to: "/calls/posters" },
         //{ label: "Challenges", to: "/calls/challenges" },
         { label: "Industry Track", to: "/calls/industry" },
-        { label: "Doctoral Consortium", to: "/calls/doctoral" },
+        
         { label: "Workshops", to: "/calls/workshops" },
         { label: "Dagstuhl Workshops", to: "/calls/dagstuhl" },
         { label: "Tutorials", to: "/calls/tutorials" },

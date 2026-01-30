@@ -22,26 +22,41 @@ export const Timeline = () => {
 
 
 
-
+        /** FEBRUARY */
         { date: '10-Feb-26', title: 'Workshop Proposals Deadline', color: timeline_theme.colors.submission },
         { date: '24-Feb-26', title: 'Workshop Notifications to Proposers', color: timeline_theme.colors.notification },
+        
+        /** MARCH */
         { date: '20-Mar-26', title: 'Workshop Website and CfP Available Online', color: timeline_theme.colors.other },
 
         { date: '03-Apr-26', title: 'Challenge Workshops Release Datasets', color: timeline_theme.colors.other },
 
+        /** MAY */
         { date: '02-May-26', title: 'Research, Resource, In-Use Track Abstract Submission', color: timeline_theme.colors.submission },
         { date: '07-May-26', title: 'Research, Resource, In-Use Track Full Paper Submission', color: timeline_theme.colors.submission },
 
+        /** JUNE */
+        { date: '01-Jun-26', title: 'Doctoral Consortium Track Submission', color: timeline_theme.colors.submission },
         { date: '24-Jun-26', title: 'Research, Resource, In-Use Track Notifications', color: timeline_theme.colors.notification },
-
         { date: '26-Jun-26', title: 'Challenge Solution Submission', color: timeline_theme.colors.submission },
 
+        /** JULY */
+        { date: '06-Jul-26', title: 'Doctoral Consortium Notification', color: timeline_theme.colors.notification },
+         { date: '07-Jul-26', title: 'Posters and Demos Track Submission', color: timeline_theme.colors.submission },
         { date: '08-Jul-26', title: 'Research, Resource, In-Use Track Camera Ready', color: timeline_theme.colors.cameraready },
         { date: '10-Jul-26', title: 'Challenge Results', color: timeline_theme.colors.notification },
         { date: '24-Jul-26', title: 'Workshop Paper Submission', color: timeline_theme.colors.submission },
+        { date: '27-Jul-26', title: 'Revised Doctoral Consortium Submission', color: timeline_theme.colors.submission },
 
+        /** AUGUST */
+         { date: '03-Aug-26', title: 'Doctoral Consortium Track Camera Ready', color: timeline_theme.colors.cameraready },
+        { date: '07-Aug-26', title: 'Posters and Demos Track Notification', color: timeline_theme.colors.notification },
         { date: '21-Aug-26', title: 'Workshop Program with Accepted Papers Available Online', color: timeline_theme.colors.notification },
+        { date: '21-Aug-26', title: 'Posters and Demos Track Camera Ready', color: timeline_theme.colors.cameraready },
+        
+        /** OCTOBER */
         { date: '25-26 Oct-26', title: 'Workshop Days', color: timeline_theme.colors.event },
+        { date: '26 Oct-26', title: 'Doctoral Consortium Day', color: timeline_theme.colors.event },
         { date: '27-29 Oct-26', title: 'Conference Days', color: timeline_theme.colors.event },
 
         

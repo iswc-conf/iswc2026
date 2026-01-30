@@ -15,11 +15,6 @@ export const Research = () => {
     const diff_track = useRef(null);
     const suppl_material = useRef(null);
 
-    const scrollToSection = (ref) => {
-        ref.current.scrollIntoView({ behavior: 'smooth' });
-    };
-
-
     return (
         <BaseContainer>
 
