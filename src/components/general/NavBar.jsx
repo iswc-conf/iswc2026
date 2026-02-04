@@ -42,17 +42,20 @@ export const NavBar = () => {
     {
       label: "Calls",
       dropdown: [
+        { type: "header", label: "Available" },
         { label: "Research", to: "/calls/research" },
         { label: "Resource", to: "/calls/resource" },
         { label: "In Use", to: "/calls/in-use" },
         { label: "Doctoral Consortium", to: "/calls/doctoral" },
         { label: "Posters and Demos", to: "/calls/posters" },
+        { label: "Tutorials", to: "/calls/tutorials" },
+        { type: "header", label: "To Be Announced" },
         //{ label: "Challenges", to: "/calls/challenges" },
         { label: "Industry Track", to: "/calls/industry" },
         
         { label: "Workshops", to: "/calls/workshops" },
         { label: "Dagstuhl Workshops", to: "/calls/dagstuhl" },
-        { label: "Tutorials", to: "/calls/tutorials" },
+ 
         { label: "SWSA Distinguished Dissertation Award", to: "/calls/swsa" },
         { label: "Journal track", to: "/calls/journaltrack" },
         { label: "Visionary Ideas", to: "/calls/visionary" },
@@ -61,6 +64,7 @@ export const NavBar = () => {
     {
       label: "Program",
       dropdown: [
+         { type: "header", label: "To Be Announced" },
         { label: "Schedule", to: "/program/schedule" },
         { label: "Accepted Papers", to: "/program/acceptedpapers" },
         { label: "Keynote Speakers", to: "/program/keynotespeakers" },
@@ -75,6 +79,7 @@ export const NavBar = () => {
     {
       label: "Guidelines",
       dropdown: [
+         { type: "header", label: "Available" },
         { label: "HTML Submission Guide", to: "/guidelines/html-submission" },
         { label: "Prior Publications and Simultaneous Submissions", to: "/guidelines/prior-publications" },
         { label: "Review Guidelines", to: "/guidelines/review" },
@@ -88,6 +93,7 @@ export const NavBar = () => {
     {
       label: "Sponsorship",
       dropdown: [
+         { type: "header", label: "To Be Announced" },
         { label: "Sponsorship Packages", to: "/sponsorship/sponsorshippackages" },
         //{ label: "Sponsors", to: "/sponsorship/sponsors" },
       ],
@@ -95,10 +101,14 @@ export const NavBar = () => {
     {
       label: "Attending",
       dropdown: [
+{ type: "header", label: "Available" },
+        { label: "Code of Conduct", to: "/attending/codeofconduct" },
+       
+         { label: "Venue and Accommodation", to: "/attending/venueandaccomodation" },
+         { type: "header", label: "To Be Announced" },
         { label: "VISA Information", to: "/attending/visa" },
         { label: "Student Grants", to: "/attending/studentgrants" },
-        { label: "Code of Conduct", to: "/attending/codeofconduct" },
-        { label: "Venue and Accommodation", to: "/attending/venueandaccomodation" },
+        
         //{ label: "Childcare", to: "/attending/childcare" },
         { label: "Registration", to: "/attending/registration" },
       ],
@@ -118,7 +128,9 @@ export const NavBar = () => {
     {
       label: "Organization",
       dropdown: [
+        { type: "header", label: "Available" },
         { label: "Organizing Committee", to: "organizing_committee" },
+        { type: "header", label: "To Be Announced" },
         { label: "Program Committee", to: "/organization/program_committee" },
       ],
     },
@@ -191,31 +203,48 @@ export const NavBar = () => {
                   {/* Dropdown */}
                   {isMobile ? (
                     <div className="flex flex-col bg-gray-50 rounded-md ml-4 mb-2">
-                      {item.dropdown.map((sub) => (
-                        <Link
-                          key={sub.label}
-                          to={sub.to}
-                          
-                          className="block px-4 py-2 text-[#000000] hover:bg-[#c9c9c7] "
-                          onClick={closeDropdown}
-                        >
-                          {sub.label}
-                        </Link>
-                      ))}
+                      {item.dropdown.map((sub) =>
+  sub.type === "header" ? (
+    <div
+      key={sub.label}
+      className="px-4 py-2 text-xs font-semibold uppercase tracking-wide text-gray-500 bg-gray-100"
+    >
+      {sub.label}
+    </div>
+  ) : (
+    <Link
+      key={sub.label}
+      to={sub.to}
+      className="block px-4 py-2 text-[#000000] hover:bg-[#c9c9c7]"
+      onClick={closeDropdown}
+    >
+      {sub.label}
+    </Link>
+  )
+)}
                     </div>
                   ) : (
                     dropdownOpen[item.label] && (
                       <div className="absolute left-0 top-full mt-2 bg-white shadow-md rounded-md z-50">
-                        {item.dropdown.map((sub) => (
-                          <Link
-                            key={sub.label}
-                            to={sub.to}
-                            className="block px-4 py-2 text-[#000000] hover:bg-[#c9c9c7]"
-                            onClick={closeDropdown}
-                          >
-                            {sub.label}
-                          </Link>
-                        ))}
+                        {item.dropdown.map((sub) =>
+  sub.type === "header" ? (
+    <div
+      key={sub.label}
+      className="px-4 py-2 text-xs font-semibold uppercase tracking-wide text-gray-500 bg-gray-100"
+    >
+      {sub.label}
+    </div>
+  ) : (
+    <Link
+      key={sub.label}
+      to={sub.to}
+      className="block px-4 py-2 text-[#000000] hover:bg-[#c9c9c7]"
+      onClick={closeDropdown}
+    >
+      {sub.label}
+    </Link>
+  )
+)}
                       </div>
                     )
                   )}

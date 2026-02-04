@@ -50,7 +50,8 @@ const NewsList = ({ news }) => {
 
 const NewsSection = () => {
   const newsData = [
-     { date: "January 30, 2026", text: "CFPs are now available for the Doctoral Consortum and 'Posters and Demo' Tracks", isLatest:"True"},
+    { date: "February 4, 2026", text: "CFP is now available for the Tutorial Track", isLatest:"True"},
+     { date: "January 30, 2026", text: "CFPs are now available for the Doctoral Consortum and 'Posters and Demo' Tracks"},
      { date: "January 19, 2026", text: "CFPs are now available for the Research, In Use, and Resource tracks"},
     { date: "November 6, 2025", text: "ISWC 2026 website is now live." },
   ];
