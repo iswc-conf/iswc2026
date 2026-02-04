@@ -48,12 +48,13 @@ export const NavBar = () => {
         { label: "In Use", to: "/calls/in-use" },
         { label: "Doctoral Consortium", to: "/calls/doctoral" },
         { label: "Posters and Demos", to: "/calls/posters" },
+        { label: "Workshops", to: "/calls/workshops" },
         { label: "Tutorials", to: "/calls/tutorials" },
         { type: "header", label: "To Be Announced" },
         //{ label: "Challenges", to: "/calls/challenges" },
         { label: "Industry Track", to: "/calls/industry" },
         
-        { label: "Workshops", to: "/calls/workshops" },
+        
         { label: "Dagstuhl Workshops", to: "/calls/dagstuhl" },
  
         { label: "SWSA Distinguished Dissertation Award", to: "/calls/swsa" },
