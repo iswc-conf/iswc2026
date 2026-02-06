@@ -50,28 +50,18 @@ export const InUse = () => {
       </p>
 
       <SubHeader>Important Dates</SubHeader>
-      <p>
-        <ul className="list-disc list-inside">
-          <li>
-            Abstract submission due <b>May 2nd, 2026</b>
-          </li>
-          <li>
-            Full paper submission due<b> May 7th, 2026</b>
-          </li>
-          <li>
-            Rebuttal <b>May 28th - June 3rd, 2026</b>
-          </li>
-          <li>
-            Notifications <b>June 24th, 2026</b>
-          </li>
-          <li>
-            Camera-ready papers due <b>July 8th, 2026</b>
-          </li>
-          <li>
-            Conference: <b>27 - 29 October 2026</b>
-          </li>
-        </ul>
-      </p>
+            <p>
+                <ul className="list-disc list-inside">
+
+                    <li>Abstract submission due<b>	2 May 2026</b></li>
+                    <li>Full paper submission due <b>7 May 2026</b></li>
+                    <li>Rebuttal<b> 11 June - 18 June 2026</b> </li>
+                    <li>Notifications<b> 16 July 2026</b> </li>
+                    <li>Camera-ready papers due<b>	6 August 2026</b></li>
+                    <li>Conference:			<b>27 - 29 October 2026</b></li>
+
+                </ul>
+            </p>
 
       <p>
         All deadlines are<b> 23:59 AoE (anywhere on Earth)</b>

@@ -50,9 +50,9 @@ export const Research = () => {
 
                     <li>Abstract submission due<b>	2 May 2026</b></li>
                     <li>Full paper submission due <b>7 May 2026</b></li>
-                    <li>Rebuttal<b> 28 May - 3 June 2026</b> </li>
-                    <li>Notifications<b> 24 June 2026</b> </li>
-                    <li>Camera-ready papers due<b>	8 July 2026</b></li>
+                    <li>Rebuttal<b> 11 June - 18 June 2026</b> </li>
+                    <li>Notifications<b> 16 July 2026</b> </li>
+                    <li>Camera-ready papers due<b>	6 August 2026</b></li>
                     <li>Conference:			<b>27 - 29 October 2026</b></li>
 
                 </ul>
