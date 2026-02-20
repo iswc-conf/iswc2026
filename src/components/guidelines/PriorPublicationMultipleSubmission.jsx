@@ -31,7 +31,7 @@ export const PriorPublicationMultipleSubmission = () => {
                 <ul className="list-disc list-inside">
                     <li><b>Anonymized</b> preprints within the anonymity period are allowed. Please note that some preprint servers such as Arxiv do not support this option. </li>
                     <li>
-                        <b>Non-anonymized</b> preprints before the anonymity period are allowed. The anonymity period starts on <b>TBA</b> (one week before abstract submission) and ends on  <b>TBA</b> (deadline review). We encourage authors to wait to post non-anonymized preprints until after the anonymity period has ended.
+                        <b>Non-anonymized</b> preprints before the anonymity period are allowed. The anonymity period starts on <b>April 25, 2026</b> (one week before abstract submission) and ends on  <b>July 16, 2026</b> (notification deadline). We encourage authors to wait to post non-anonymized preprints until after the anonymity period has ended.
                     </li>
                     <li>
                         If a <b>non-anonymized</b> preprint version exists, authors should not cite it and are asked not to publicize it further during the anonymity period, as the submitted paper should be as anonymous as possible.
