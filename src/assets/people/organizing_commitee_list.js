@@ -25,6 +25,8 @@ import Maria_Keet from "./pictures/maria_keet.png"
 import Stepanova from "./pictures/Stepanova.png"
 import Hoehndorf from "./pictures/hoehndorf.jpeg"
 import Alharbi from "./pictures/Alharbi.jpg"
+import MariaPellegrino from "./pictures/MariaPellegrino.png"
+import GeorgeHannah from "./pictures/GeorgeHannah.jpg"
 
 const organizers = {
   "General Chair": [
@@ -222,6 +224,22 @@ const organizers = {
       country: 'Italy',
     },
   ],*/
+
+  "Students Grants and Activities Chairs": [
+    {
+      name: 'George Hannah',
+      img: GeorgeHannah,
+      institution: 'University of Liverpool',
+      country: 'UK',
+    },
+    {
+      name: 'Maria Angela Pellegrino',
+      img: MariaPellegrino,
+      institution: 'University of Salerno',
+      country: 'Italy',
+    }
+    ],
+
   "Proceedings & Metadata Chairs": [
     {
       name: 'Reham Alharbi',

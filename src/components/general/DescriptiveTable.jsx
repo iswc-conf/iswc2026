@@ -53,6 +53,12 @@ export const DescriptiveTable = ({title, description, data}) => {
                       <div className="mt-2  whitespace-pre-line">
                         {paper.description}
 
+                        {paper.keywords && (
+                          <p mt-4>
+                            <span className="font-semibold">Keywords:</span> {paper.keywords}
+                          </p>
+                        )}
+
                         {/* Website */}
                         {paper.website && (
                           <p className="mt-3">

@@ -12,9 +12,7 @@ export const Workshops = () => {
     return (
         <BaseContainer>
         <Header>Accepted Workshops</Header>
-        <DeclareSoon></DeclareSoon>
-        {/** <DescriptiveTable title={"Workshop Title"} description={"Organizers"} data={workshops}></DescriptiveTable> */}
-           
+        <DescriptiveTable title={"Workshop Title"} description={"Organizers"} data={workshops}></DescriptiveTable>
         </BaseContainer>
     );
 };

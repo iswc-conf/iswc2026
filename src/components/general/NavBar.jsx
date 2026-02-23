@@ -65,11 +65,13 @@ export const NavBar = () => {
     {
       label: "Program",
       dropdown: [
+        { type: "header", label: "Available" },
+         { label: "Workshops", to: "/program/workshops" },
          { type: "header", label: "To Be Announced" },
         { label: "Schedule", to: "/program/schedule" },
         { label: "Accepted Papers", to: "/program/acceptedpapers" },
         { label: "Keynote Speakers", to: "/program/keynotespeakers" },
-        { label: "Workshops", to: "/program/workshops" },
+       
         { label: "Dagstuhl Workshops", to: "/program/dagstuhl" },
         { label: "Tutorials", to: "/program/tutorials" },
         //{ label: "Challenges", to: "/program/challenges" },

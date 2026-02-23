@@ -71,14 +71,7 @@ export const SponsorshipPackages = () => {
                             <td>✅</td>
                         </tr>
 
-                        <tr>
-                            <td>Social media promotions (ISWC channels)</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>1️⃣</td>
-                            <td>2️⃣</td>
-                            <td>3️⃣</td>
-                        </tr>
+
 
                         <tr>
                             <td>Free conference registrations</td>
@@ -96,6 +89,15 @@ export const SponsorshipPackages = () => {
                             <td>✅</td>
                             <td>✅</td>
                             <td>✅</td>
+                        </tr>
+
+                                                <tr>
+                            <td>Social media promotions (ISWC channels)</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>1️⃣</td>
+                            <td>2️⃣</td>
+                            <td>3️⃣</td>
                         </tr>
 
                         <tr>

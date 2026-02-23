@@ -1,62 +1,180 @@
 const workshops = [
-    {
-        title: "3rd Knowledge Base Construction from Pre-trained Language Models Workshop",
-        organizers: "Duygu Sezen Islakoğlu, Jan-Christoph Kalo, Simon Razniewski and Sneha Singhania",
-        description: "Language models (LMs), such as chatGPT, BARD, and T5, have demonstrated remarkable outcomes in numerous AI applications. Research has shown that these models implicitly capture vast amounts of factual knowledge within their parameters, resulting in an impressive performance in knowledge-intensive applications. The seminal paper ``Language Models as Knowledge Bases?'' sparked interest in the spectrum between language models and knowledge graphs, leading to a diverse range of interesting research on the usage of LMs for knowledge base construction. This research includes: (1) utilizing pre-trained LMs for knowledge base completion and construction tasks, (2) performing information extraction tasks, like entity linking and relation extraction, and (3) utilizing knowledge graphs to support LM applications. In this third edition of the LM-KBC workshop, we aim to continue last year's very successful 2nd edition of the LM-KBC workshop.",
-        website: "https://lm-kbc.github.io/workshop2025",
-        social_medias: [
-            {
-                social_media: "@lm_kbc (X)",
-                social_media_url: "https://x.com/lm_kbc"
-            }
-        ]
-    },
-    {
-        title: "20th International Workshop on Ontology Matching (OM-2025)",
-        organizers: "Sven Hertling, Huanyu Li, Cassia Trojahn, Pavel Shvaiko, Oktie Hassanzadeh, Jérôme Euzenat and Ernesto Jimenez-Ruiz",
-        description: "Ontology matching is a key interoperability enabler for the Semantic Web, as well as a useful technique in some classical data integration tasks dealing with the semantic heterogeneity problem. It takes ontologies as input and determines as output an alignment, that is, a set of correspondences between the semantically related entities of those ontologies. These correspondences can be used for various tasks, such as ontology merging, data interlinking, query answering or navigation over knowledge graphs. Thus, matching ontologies enables the knowledge and data expressed with the matched ontologies to interoperate. The workshop has the following goals: - To bring together leaders from academia, industry and user institutions to assess how academic advances are addressing real-world requirements. The workshop will strive to improve academic awareness of industrial and final user needs, and therefore, direct research towards those needs. Simultaneously, the workshop will serve to inform industry and user representatives about existing research efforts that may meet their requirements. The workshop will also investigate how the ontology matching technology is going to evolve, especially with respect to data interlinking, process matching, web table and knowledge graph matching tasks. - To conduct an extensive and rigorous evaluation of ontology matching and instance matching (link discovery) approaches through the OAEI (Ontology Alignment Evaluation Initiative) 2025 campaign. OAEI 2025, besides real-world specific matching tasks, will introduce a new Circular Economy track. Therefore, the ontology matching evaluation initiative itself will provide a solid ground for discussion of how well the current approaches are meeting business needs. - To examine similarities and differences from other, old, new and emerging, techniques and usages, such as process matching, web table matching or knowledge embeddings.",
-        website: "https://om.ontologymatching.org/2025/"
-    },
-    {
-        title: "Workshop on Actionable Knowledge Representation and Reasoning for Robots (AKR≥)",
-        organizers: "Michael Beetz, Philipp Cimiano, Ken Fukuda, Michaela Kümpel, Enrico Motta, Ilaria Tiddi, Jan-Philipp Töberg and Takanori Ugai",
-        description: "We propose a second edition for the Actionable Knowledge Representation and Reasoning for Robots workshop, focused on how robots can perform common sense reasoning to make sense of their environment, parameterize their actions and plan accordingly. Current robots are challenged by the dynamic nature of these environments, which requires them to deal with new situations, tasks, objects and goals they might not have experience with. As robots can't be pre-programmed for all possible variations, it is an important question to investigate how they can be equipped with the ability to acquire and apply commonsense knowledge to improve their sensemaking capabilities and reason about task execution. This can lead to more versatile robots, as they can tackle novel situations through reasoning instead of retraining. Given the availability of many commonsense knowledge resources on the Web, and the ability of large language models to extract and generate knowledge, this is a timely research topic. Our workshop will combine classical workshop elements (presentation of contributed papers, invited speakers) with hands-on tutorials to learn how symbolic knowledge can be put into action in existing robot architectures. Based on last year's experience, we expect to get approximately 8 submissions and 20-30 workshop participants.",
-        website: "https://kr3-workshop.net/"
-    },
-    {
-        title: "5th International Workshop on Scientific Knowledge Representation, Discovery, and Assessment (Sci-K 2025)",
-        organizers: "Anna Jacyszyn, Andrea Mannocci, Francesco Osborne, Georg Rehm, Angelo Salatino, Sonja Schimmler and Lise Stork",
-        description: "In the last decades, there has been a surge in the volume of published scientific articles and related research objects (e.g., data sets, software, models), a trend that is expected to continue. The Sci-K workshop aims to provide a forum for researchers and practitioners from different disciplines to present, educate from, and guide research related to scientific knowledge. Specifically, we foresee three main challenging themes. Representation. There is an urge for Scientific Knowledge Graphs (SKGs), that offer flexible, context-sensitive, fine-grained, and machine-actionable representations of scholarly knowledge that are simultaneously structured, interlinked, and semantically rich. The key challenge in this area is the development of ontologies and methodologies that can capture the conceptualisation, representation, and interoperability of scholarly knowledge across different SKGs. Discovery. It is crucial that scholarly information is easily findable, discoverable, and visible so that it can be mined and organised within SKGs. Current challenges are related to discovering and extracting entities and concepts, integrating information from heterogeneous sources, identifying duplicates, finding connections between entities, and identifying conceptual inconsistencies. Assessment. Due to the continuous growth in the volume of research outputs, we need reliable and comprehensive indicators of scientific impact and merit for the diverse scientific outputs and actors.",
-        website: "https://sci-k.github.io/2025/",
-        social_medias: [
-            {
-                social_media: "@scik_workshop (X)",
-                social_media_url: "https://x.com/scik_workshop"
-            },
-            {
-                social_media: "LinkedIn",
-                social_media_url: "https://www.linkedin.com/groups/10083235/"
-            }
-        ]
-    },
-    {
-        title: "Wikidata Workshop",
-        organizers: "Nicolas Ferranti, Marcelo de Oliveira Costa Machado, Jorao Gomes Junior, Simon Raznievski, Axel Polleres, and Markus Krötzsch",
-        description: "Wikidata, an open knowledge base maintained by the Wikimedia Foundation, plays a crucial role in structuring data for projects, such as Wikipedia and Wiktionary. Over the years, the Wikidata Workshop has addressed key challenges such as data quality, multilingualism, and collaborative knowledge graph dynamics. For its fifth edition, we expand the scope to include discussions on the intersection of Wikidata and Generative AI, while continuing to explore established topics. We welcome contributions on knowledge augmentation, data curation, reasoning, and the broader impact of generative AI on Wikidata. By bringing together researchers and practitioners, this workshop fosters discussions on the evolving role of knowledge graphs in an AI-driven world.",
-        website: "https://wikidataworkshop.github.io/2025/",
-        social_medias: [
-            {
-                social_media: "@ISWC_Wikidata (X)",
-                social_media_url: "https://x.com/ISWC_Wikidata"
-            }
-        ]
-    },
-    {
-        title: "SeMatS 2025 – Second International Workshop on Semantic Materials Science",
+{
+        title:"2nd International Workshop on Data Management for Knowledge Graphs (DMKG 2026)",
+        organizers: "Ruben Taelman, Olaf Hartig and Katja Hose",
+        description: "",
+        keywords: "Data, Management, Knowledge, Graphs, Storage, Management, Quality, Analytics, Exploration, Querying, Benchmarking"
+        
+},
+
+{
+        title:"ELMKE 2026: The 4th Workshop on Evaluation of Language Models in Knowledge Engineering",
+        organizers: "Reham Alharbi, Anna Sofia Lippolis, Bohui Zhang and Yuan He",
+        description: "",
+        keywords: "Language, Models, Knowledge, Engineering, Ontology, Engineering, Evaluation, Benchmarks, Dataset"
+        
+},
+
+{
+        title:"6th Wikidata Workshop",
+        organizers: "Nicolas Ferranti, Marcelo de Oliveira Costa Machado, Jorão Gomes Jr., Simon Razniewski, Axel Polleres, Markus Kroetzsch and Peter Patel-Schneider",
+        description: "",
+        keywords: "Wikidata, Knowledge-centric, systems, LLMs"
+        
+},
+
+{
+        title:"6th International Workshop on Scientific Knowledge Representation, Discovery, and Assessment (Sci-K 2026)",
+        organizers: "Allard Oelen, Anna Jacyszyn, Andrea Mannocci, Francesco Osborne, Georg Rehm, Angelo Salatino, Sonja Schimmler and Lise Stork",
+        description: "",
+        keywords: "Knowledge, Graphs, Research, Impact, Research, Assessment, Science, Of, Science, Knowledge, Discovery, Scholarly, Data"
+        
+},
+
+{
+        title:"WikiKGQA: Wiki-Based Knowledge Graph Question Answering Challenge",
+        organizers: "Shakeeb Arzoo, Debayan Banerjee, Philipp Cimiano, Aidan Hogan, Alberto Moya Loustaunau, David Maria Schmidt and Ricardo Usbeck",
+        description: "",
+        keywords: "Knowledge, Graph, Question, Answering, Question, Answering, over, Linked, Data, Text-to-SPARQL, SPARQL, Query, Generation"
+        
+},
+
+{
+        title:"Graph-Enhanced LLMs for Trustworthy Web Data Management",
+        organizers: "Gianluca Bonifazi, Stefano Cirillo, Eliana Pastor and Luca Virgili",
+        description: "",
+        keywords: "Large, Language, Models, Knowledge, Graphs, Property, Graphs, Data, Management, Trustworthy, AI, Explainability, Graph-based, Reasoning, Retrieval-Augmented, Generation, Natural, Language, Querying, Agentic, AI"
+        
+},
+
+{
+        title:"Workshop on Knowledge Graphs and  Model-driven Systems Engineering (KGMDSE)",
+        organizers: "Robert Andrei Buchmann, Dimitris Karagiannis and Dimitris Plexousakis",
+        description: "",
+        keywords: "Knowledge, Graphs, Model-driven, Systems, Engineering, Enterprise, Modeling, Enterprise, Context, Domain-specific, Modeling"
+        
+},
+
+{
+        title:"SeMatS 2026 Third International Workshop on Semantic Materials Science: Harnessing the Power of Semantic Web Technologies in Materials Science",
         organizers: "Andre Valdestilhas, Huanyu Li, Patrick Lambrix and Harald Sack",
-        description: "Advanced technological solutions are pivotal for leveraging data in innovative research, but compatibility issues in scientific data hinder progress. Interoperability and efficient data access are crucial, and the Semantic Web emerges as a powerful solution. Historically, the intersection between Semantic Web (SW) technologies, and Materials Science and Engineering (MSE) dates back before the formalization of the Semantic Web concept in 2001. For instance, the creation of the Plinius ontology in 1994 provided a language-independent conceptual construction kit for the chemical composition of materials. Recent conferences in the MSE domain, such as the FEMS-Euromat (European Congress and Exhibition on Advanced Materials and Processes) and MSE congress, show a significant increase in Semantic Web applications, with over ten SW-related presentations in 2022, more than 20 in 2023 and the previous edition of the SeMats workshop in 2024 counted 10 accepted contributions. This growing adoption prompts a focus on attracting participants at the intersection of both areas. Expanding Semantic Web technologies to the Materials Science domain can enhance research outcomes by enabling the uniform consideration of heterogeneous data. It improves traceability and reproducibility and facilitates automatable data management solutions. The primary objective of the proposed workshop is to gather works applying Semantic Web Technologies in Materials Science, making these technologies accessible to a broader community. The workshop aims to provide an overview of existing approaches, identify relevant works, and bring together Materials Science and Semantic Web stakeholders for collaboration and innovation. Join us in exploring the transformative possibilities of Semantic Web Technologies in Materials Science, paving the way for a more interconnected and efficient research landscape.",
-        website: "https://sites.google.com/view/semats2025"
-    },
+        description: "",
+        keywords: "Materials, Science, Engineering, Semantic, Web, Knowledge, Graphs"
+        
+},
+
+{
+        title:"21st International Workshop on Ontology Matching (OM-2026)",
+        organizers: "Ernesto Jiménez-Ruiz, Sven Hertling, Huanyu Li, Cassia Trojahn, Oktie Hassanzadeh, Pavel Shvaiko and Jérôme Euzenat",
+        description: "",
+        keywords: "ontology, matching, knowledge, graph, matching, entity, matching"
+        
+},
+
+{
+        title:"International Workshop on Structures to Stories: Multilingual NLP for Semantic Structured Data (IWSS)",
+        organizers: "Virginia Ramón Ferrer, Lia Draetta, Michael Oliverio, Rossana Damiano and Carlos Badenes-Olmedo",
+        description: "",
+        keywords: "Structured, data, Multilingual, NLP, Semantic, representation"
+        
+},
+
+{
+        title:"Fourth International Workshop on Semantic Industrial Information Modelling (SemIIM)",
+        organizers: "Jieying Chen, Eduard Kamburjan, Baifan Zhou and Arild Waaler",
+        description: "",
+        keywords: "Semantic, Information, Modelling, Industrial, Knowledge, Graphs, Digital, Twins, Ontologies, Data, Semantics, at, Scale"
+        
+},
+
+{
+        title:"KG-NeSy: The Third Workshop on Knowledge Graphs and Neurosymbolic AI",
+        organizers: "Shqiponja Ahmetaj, Fajar J. Ekaputra, Sebastian Neumaier, Andreas Ekelhart and Cogan Shimizu",
+        description: "",
+        keywords: "Neurosymbolic, AI, Knowledge, Graphs, Knowledge, Engineering"
+        
+},
+
+{
+        title:"Data-Driven Storytelling: Bridging Knowledge Graphs, GenAI, and Narrative (DDS 2026)",
+        organizers: "Pasquale Lisena, Maria Angela Pellegrino, Lisa-Yao Gan, Yihang Zhao and Yiwen Xing",
+        description: "",
+        keywords: "computational, storytelling, data-driven, storytelling, llm, genai, semantic, web, nlp, hci"
+        
+},
+
+{
+        title:"NLP4KGC 2026: 5th International Workshop on Natural Language Processing for Knowledge Graph Construction",
+        organizers: "Edlira Vakaj, Nandana Mihindukulasooriya and Rizou Stamatia",
+        description: "",
+        keywords: "Knowledge, Graph, Semantic, Web, Natural, Language, Understanding, Large, Language, Models, Responsible, AI"
+        
+},
+
+{
+        title:"3rd International Workshop on Retrieval-Augmented Generation Enabled by Knowledge Graphs (RAGE-KG 2026)",
+        organizers: "Daniel Dobriy, Marco Antonio Stranisci, Arianna Graciotti, Blerina Spahiu and Sahar Vahdati",
+        description: "",
+        keywords: "Knowledge, Graphs, Retrieval-Augmented, Generation, Knowledge-Augmented, Generation, Agentic, RAG, Large, Language, Models"
+        
+},
+
+{
+        title:"SPARK 2026 - First International Workshop on Spatial Intelligence and Reasoning Enabled by Knowledge Graphs",
+        organizers: "Amin Anjomshoaa, Manolis Koubarakis and Hamid Rabiei",
+        description: "",
+        keywords: "Spatial, Knowledge, Graphs, Spatial, Intelligence, Geodata"
+        
+},
+
+{
+        title:"6th International Workshop on Semantic Web and Ontology Design for Cultural Heritage, SWODCH 2026",
+        organizers: "Luca Biccheri, Antonis Bikakis, Roberta Ferrario, Béatrice Markhoff, Alessandro Mosca and Marianna Nicolosi-Asmundo",
+        description: "",
+        keywords: "Cultural, heritage, Digital, humanities, Applied, Ontologies"
+        
+},
+
+{
+        title:"LLMs4OL 2026: Large Language Models for Ontology Learning",
+        organizers: "Hamed Babaei Giglou, Jennifer D'Souza and Sören Auer",
+        description: "",
+        keywords: "LLMs4OL, Ontology, Learning, Large, Language, Models, Challenge"
+        
+},
+
+{
+        title:"AIAA4KE: 1st Workshop on AI-assisted Approaches to Knowledge Engineering",
+        organizers: "Patrik Schneider, Felix Sasaki, Evgeny Kharlamov, Nishtha Vaidya, Thomas Hubauer and Michael Hladik",
+        description: "",
+        keywords: "AI, Assistants, for, Knowledge, Engineering, Ontology, matching, KG, construction, Industrial, applications, Industrial, use, cases, Industrial, data"
+        
+},
+
+{
+        title:"17th Workshop on Ontology Design and Patterns (WOP)~2026",
+        organizers: "Abhilekha Dalal, Farhad Ameri, Christian Kindermann, Gunjan Singh, Alice Augustine and María Poveda-Villalón",
+        description: "",
+        keywords: "Ontology, Design, Patterns, Knowledge, Graphs, Semantic, Web, Knowledge, Engineering"
+        
+},
+
+{
+        title:"HAIBridge 2026: The 2nd Workshop on Bridging Hybrid (Artificial) Intelligence and the Semantic Web",
+        organizers: "Alexis Ellis, Cogan Shimizu and Mark Adamik",
+        description: "",
+        keywords: "Semantic, Web, Neurosymbolic, AI, Human, Factors, Hybrid, Collaboration"
+        
+},
+
+{
+        title:"International Workshop on Explainable AI and Knowledge Graphs (XAI+KG)",
+        organizers: "Roberto Barile, Roberto Confalonieri, Claudia D'Amato and Ernesto Jimenez-Ruiz",
+        description: "",
+        keywords: "Explanation, Knowledge, Graphs, Neural-Symbolic, AI"
+        
+},
+    /** 
     {
         title: "2nd International Workshop on Retrieval-Augmented Generation Enabled by Knowledge Graphs (RAGE-KG 2025)",
         organizers: "Daniil Dobriy, Sanju Tiwari, Jennifer D'Souza, Nandana Mihindukulasooriya and Francesco Osborne",
@@ -81,18 +199,8 @@ const workshops = [
             }
         ]
     },
-    {
-        title: "16th Workshop on Ontology Design and Patterns (WOP 2025)",
-        organizers: "Hande Kucuk McGinty, Cogan Shimizu, Valentina Presutti, Eva Blomqvist and Pascal Hitzler",
-        description: "We propose the 16th edition of the Workshop on Ontology Design and Patterns (WOP). The workshop series covers issues related to quality in ontology design and ontology design patterns (ODPs) for data and knowledge engineering in Semantic Web. The increased attention to ODPs in recent years through their interaction with emerging trends of the Semantic Web, such as knowledge graphs, can be attributed to their benefit for knowledge engineers and Semantic Web developers. Such benefits come in the form of direct links to requirements, reuse, guidance, and better communication. The workshop's aim is thus not just: 1) providing an arena for discussing patterns, pattern-based ontologies, systems, datasets, but also 2) broadening the pattern community by developing its own ``discourse'' for discussing and describing relevant problems and their solutions. A recent development in the Semantic Web community is that the general idea of \"pattern\" has begun to appear in different but related forms, and at WOP 2025, we intend to continue to include these new trends. We propose a full-day workshop consisting of three parts: a keynote, presentations of contributed papers, and a community session discussing joint long-term initiatives, with break-out sessions addressing specific problems.",
-        website: "https://odpa.github.io/workshop-on-ontology-design-and-patterns/2025/index.html"
-    },
-    {
-        title: "HAIBridge 2025: 1st Workshop on Bridging Hybrid Intelligence and the Semantic Web",
-        organizers: "Alexis Ellis, Subhashini Ganapathy, Fjollë Novakazi and Cogan Shimizu",
-        description: "The principled integration of Hybrid Intelligence (HI) -- which combines human and artificial intelligence -- with the Semantic Web presents novel opportunities for enhancing decision-making, knowledge representation, and collaborative problem-solving. This workshop promotes the exploration at the intersection of these domains, focusing on how semantic technologies (e.g., ontologies, knowledge graphs, and linked data) can improve the adaptability, explainability, and reasoning capabilities of hybrid intelligence systems. Topics include human-AI collaboration, trustworthy AI, context-aware knowledge management, and real-world applications in areas such as healthcare, finance, and smart cities. At \"Smarter Together: Bridging Hybrid Intelligence and the Semantic Web,\" participants will engage across disciplinary boundaries, fostering interdisciplinary collaboration toward more robust, intelligent, transparent, and ethical AI-driven systems. The workshop will generally consist of a keynote, interactive discussions and breakouts, and brief, but informative, state-of-the-art research presentations.",
-        website: "https://sites.google.com/view/iswc-haibridge25/home"
-    }
+    */
+
 ];
 
 export {workshops};
