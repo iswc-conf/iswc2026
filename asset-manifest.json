@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.93423adb.css",
-    "main.js": "./static/js/main.21af1e5e.js",
+    "main.js": "./static/js/main.21041bb6.js",
     "static/js/453.efd75403.chunk.js": "./static/js/453.efd75403.chunk.js",
     "static/media/Oshani-Seneviratne.png": "./static/media/Oshani-Seneviratne.171ac5bd1cdb986efa9a.png",
     "static/media/nicolaus.png": "./static/media/nicolaus.1c16f8050fb5c49644f0.png",
@@ -27,6 +27,7 @@
     "static/media/Aidan_Hogan.png": "./static/media/Aidan_Hogan.516641f37628f3e5142a.png",
     "static/media/Wen_Zhang.jpeg": "./static/media/Wen_Zhang.9c013ff8a1f1f289e3b5.jpeg",
     "static/media/ernesto.jpeg": "./static/media/ernesto.988d8e92e79770fe0956.jpeg",
+    "static/media/MariaPellegrino.png": "./static/media/MariaPellegrino.a8c57cd874b6c2bb5034.png",
     "static/media/koubarakis.jpg": "./static/media/koubarakis.df354cd3d97512d85676.jpg",
     "static/media/Marieke.jpg": "./static/media/Marieke.869d7f2bd2776f820112.jpg",
     "static/media/Juan_Sequeda.jpeg": "./static/media/Juan_Sequeda.2577019f465355c184dd.jpeg",
@@ -36,11 +37,11 @@
     "static/media/Roberto.jpeg": "./static/media/Roberto.81d7a44977e25cf46e47.jpeg",
     "index.html": "./index.html",
     "main.93423adb.css.map": "./static/css/main.93423adb.css.map",
-    "main.21af1e5e.js.map": "./static/js/main.21af1e5e.js.map",
+    "main.21041bb6.js.map": "./static/js/main.21041bb6.js.map",
     "453.efd75403.chunk.js.map": "./static/js/453.efd75403.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.93423adb.css",
-    "static/js/main.21af1e5e.js"
+    "static/js/main.21041bb6.js"
   ]
 }
