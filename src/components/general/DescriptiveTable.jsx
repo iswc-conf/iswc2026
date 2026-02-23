@@ -55,7 +55,7 @@ export const DescriptiveTable = ({title, description, data}) => {
 
                         {paper.keywords && (
                           <p mt-4>
-                            <span className="font-semibold">Keywords:</span> {paper.keywords}
+                            <span >Further information will be added shortly.</span> 
                           </p>
                         )}
 
