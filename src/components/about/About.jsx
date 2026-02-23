@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../general/Header";
+import SubHeader from "../general/SubHeader"
 import TextBlock from "../general/TextBlock";
 import { Link } from "react-router-dom";
 import ExternalLink from "../general/ExternalLink";
@@ -8,6 +9,8 @@ import { theme } from "../../theme";
 import Accent from "../general/Accent";
 import UnderlineHeader from "../general/UnderlineHeader";
 import NewsSection from "./News";
+import SubTitle from "../general/SubTitle";
+
 
 export const About = () => {
   return (
@@ -15,6 +18,7 @@ export const About = () => {
       <br></br>
       <br></br>
       <Header>About ISWC 2026</Header>
+      <SubTitle>Ontologies, Knowledge Graphs, and Smarter AI</SubTitle>
 
 
       <div className="max-w-3xl mx-auto px-4">

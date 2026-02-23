@@ -24,3 +24,78 @@ ol li::marker {
     color: #e94607;
     font-weight: bold;
 }
+
+.custom-table {
+  border-collapse: collapse;
+  width: 100%;              /* full width */
+  margin: 20px 0;
+  border: 5px solid rgb(130, 129, 129);
+  table-layout: fixed;
+}
+
+.custom-table th,
+.custom-table td {
+  border: 1px solid rgb(181, 181, 181);
+  padding: 8px 12px;
+}
+
+.custom-table thead th {
+  color: white;
+  text-align: center;
+}
+
+/* First column (benefits) wider */
+.custom-table th:first-child {
+  width: 280px;
+  height: 60px;
+  text-align: left;
+}
+.custom-table td:first-child {
+  width: 280px;
+  height: 80px;
+  text-align: left;
+}
+
+/* All tier columns equal */
+.custom-table th:not(:first-child),
+.custom-table td:not(:first-child) {
+  width: 100px;
+  text-align: center;   /* centers checkmarks */
+}
+
+.custom-table tbody td:not(:first-child) {
+  text-align: center;
+  font-size: 18px;   /* optional: makes checkmarks nicer */
+}
+
+.custom-table thead th.bronze {
+  background-color: #cd7f32;
+}
+
+.custom-table thead th.silver {
+  background-color: #c0c0c0;
+  color: black;
+}
+
+.custom-table thead th.gold {
+  background-color: #d4af37;
+  color: black;
+}
+
+.custom-table thead th.platinum {
+  background-color: #6c7a89;
+}
+
+.custom-table thead th.diamond {
+  background: linear-gradient(135deg, #b9f2ff, #e0ffff);
+  color: black;
+}
+
+.custom-table tbody tr:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+.custom-table tbody tr:hover {
+  background-color: #eeeeee;
+}
+
