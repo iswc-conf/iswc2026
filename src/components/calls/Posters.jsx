@@ -23,9 +23,9 @@ export const Posters = () => {
                     <p>
                 <ul className="list-disc list-inside">
 
-                    <li>Posters & demos submissions due:<b>	July 7th, 2026</b></li>
-                    <li>Author notifications:<b> August 7th, 2026</b> </li>
-                    <li>Camera-ready submissions due:<b>	August 21st, 2026</b></li>
+                    <li>Posters & demos submissions due:<b>	July 24th, 2026</b></li>
+                    <li>Author notifications:<b> August 21th, 2026</b> </li>
+                    <li>Camera-ready submissions due:<b>	September 4th, 2026</b></li>
 
                 </ul>
             </p>

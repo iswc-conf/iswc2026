@@ -48,12 +48,13 @@ export const Timeline = () => {
         /** JULY */
         { type: "month", label: "July 2026" },
         { date: '06-Jul-26', title: 'Doctoral Consortium Notification', color: timeline_theme.colors.notification },
-         { date: '07-Jul-26', title: 'Posters and Demos Track Submission', color: timeline_theme.colors.submission },
+         
        
         { date: '10-Jul-26', title: 'Challenge Results', color: timeline_theme.colors.notification },
          { date: '16-Jul-26', title: 'Research, Resource, In-Use Track Notifications', color: timeline_theme.colors.notification },
         { date: '24-Jul-26', title: 'Workshop Paper Submission', color: timeline_theme.colors.submission },
         { date: '21-Jul-26', title: 'Tutorial Website Online', color: timeline_theme.colors.other },
+        { date: '24-Jul-26', title: 'Posters and Demos Track Submission', color: timeline_theme.colors.submission },
         { date: '27-Jul-26', title: 'Revised Doctoral Consortium Submission', color: timeline_theme.colors.submission },
          { date: '31-Jul-26', title: 'Tutorial Materials Available on the Website (if any)', color: timeline_theme.colors.other },
 
@@ -61,9 +62,13 @@ export const Timeline = () => {
         { type: "month", label: "August 2026" },
          { date: '03-Aug-26', title: 'Doctoral Consortium Track Camera Ready', color: timeline_theme.colors.cameraready },
          { date: '06-Aug-26', title: 'Research, Resource, In-Use Track Camera Ready', color: timeline_theme.colors.cameraready },
-        { date: '07-Aug-26', title: 'Posters and Demos Track Notification', color: timeline_theme.colors.notification },
+        { date: '21-Aug-26', title: 'Posters and Demos Track Notification', color: timeline_theme.colors.notification },
         { date: '21-Aug-26', title: 'Workshop Program with Accepted Papers Available Online', color: timeline_theme.colors.notification },
-        { date: '21-Aug-26', title: 'Posters and Demos Track Camera Ready', color: timeline_theme.colors.cameraready },
+     
+
+         /** SEPTEMBER */
+        { type: "month", label: "September 2026" },
+        { date: '04-Sep-26', title: 'Posters and Demos Track Camera Ready', color: timeline_theme.colors.cameraready },
         
         /** OCTOBER */
         { type: "month", label: "ISWC 2026 Events in October" },

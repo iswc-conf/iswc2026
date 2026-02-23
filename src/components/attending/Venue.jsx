@@ -16,7 +16,6 @@ export const VenueAndAccomodation = () => {
   return (
     <BaseContainer>
       <Header>Venue and Accommodations</Header>
-      <DeclareSoon></DeclareSoon>
       <br></br>
       <UnderlineHeader>Venue</UnderlineHeader>
       <br></br>
