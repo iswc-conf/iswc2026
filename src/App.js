@@ -49,6 +49,7 @@ import OKBCSubmissionWorkflow from "./components/guidelines/OKBCSubmissionWorkfl
 import PolicyAI from "./components/guidelines/PolicyAI";
 import WhySponsor from "./components/sponsorship/WhySponsor";
 import Contact from "./components/sponsorship/Contact"
+import ESWCResubmission from "./components/calls/ESWCResubmission";
 
 export default function App() {
   return (
@@ -62,6 +63,7 @@ export default function App() {
 
         {/* Calls */}
         <Route path="/calls/research" element={<Research />} />
+        <Route path="/calls/eswcresubmission" element={<ESWCResubmission />} />
         <Route path="/calls/resource" element={<Resource />} />
         <Route path="/calls/in-use" element={<InUse />} />
         <Route path="/calls/journaltrack" element={<JournalTrack />} />

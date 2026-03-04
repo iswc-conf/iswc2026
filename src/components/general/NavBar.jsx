@@ -44,6 +44,7 @@ export const NavBar = () => {
       dropdown: [
         { type: "header", label: "Available" },
         { label: "Research", to: "/calls/research" },
+        { label: "Research - ESWC 2026 resubmissions", to: "/calls/eswcresubmission", badge:"NEW"},
         { label: "Resource", to: "/calls/resource" },
         { label: "In Use", to: "/calls/in-use" },
         { label: "Doctoral Consortium", to: "/calls/doctoral" },
@@ -66,7 +67,7 @@ export const NavBar = () => {
       label: "Program",
       dropdown: [
         { type: "header", label: "Available" },
-         { label: "Workshops", to: "/program/workshops" },
+        { label: "Workshops", to: "/program/workshops" },
          { type: "header", label: "To Be Announced" },
         { label: "Schedule", to: "/program/schedule" },
         { label: "Accepted Papers", to: "/program/acceptedpapers" },
@@ -222,7 +223,15 @@ export const NavBar = () => {
       className="block px-4 py-2 text-[#000000] hover:bg-[#c9c9c7]"
       onClick={closeDropdown}
     >
-      {sub.label}
+      <div className="flex items-center justify-between">
+  <span>{sub.label}</span>
+
+  {sub.badge && (
+    <span className="ml-2 px-2 py-0.5 text-xs font-semibold text-white bg-red-500 rounded-full">
+      {sub.badge}
+    </span>
+  )}
+</div>
     </Link>
   )
 )}
@@ -236,7 +245,9 @@ export const NavBar = () => {
       key={sub.label}
       className="px-4 py-2 text-xs font-semibold uppercase tracking-wide text-gray-500 bg-gray-100"
     >
-      {sub.label}
+      <span>{sub.label}</span>
+
+
     </div>
   ) : (
     <Link
@@ -245,7 +256,15 @@ export const NavBar = () => {
       className="block px-4 py-2 text-[#000000] hover:bg-[#c9c9c7]"
       onClick={closeDropdown}
     >
-      {sub.label}
+     <div className="flex items-center justify-between">
+  <span>{sub.label}</span>
+
+  {sub.badge && (
+    <span className="ml-2 px-2 py-0.5 text-xs font-semibold text-white bg-red-500 rounded-full">
+      {sub.badge}
+    </span>
+  )}
+</div>
     </Link>
   )
 )}
