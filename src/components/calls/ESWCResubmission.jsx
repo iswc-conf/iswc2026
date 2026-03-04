@@ -43,7 +43,7 @@ export const ESWCResubmission = () => {
 
 <UnderlineHeader>Paper Review</UnderlineHeader>
 
-<p>Your resubmitted paper will then be transferred, along with your previous reviews, to a reviewer pool composed of at least some of the original reviewers (ideally all, although obviously cannot be guaranteed) and at least one new, fresh reviewer. If your paper has sufficiently addressed the comments raised in ISWC, your chances of getting accepted at ISWC might be higher, although there is no guarantee for acceptance.</p>
+<p>Your resubmitted paper will then be transferred, along with your previous reviews, to a reviewer pool composed of at least some of the original reviewers (ideally all, although obviously cannot be guaranteed) and at least one new, fresh reviewer. If your paper has sufficiently addressed the comments raised in ESWC, your chances of getting accepted at ISWC might be higher, although there is no guarantee for acceptance.</p>
 
 <p>For further enquiries about this process, you can contact the ISWC 2026 Research Track chairs<ExternalLink href="mailto:iswc2026-research@easychair.org">iswc2026-research@easychair.org</ExternalLink></p>
 
