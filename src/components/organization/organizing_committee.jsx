@@ -2,7 +2,8 @@ import React from "react";
 import Sponsor from "./Sponsor";
 import organizers from "../../assets/people/organizing_commitee_list"
 import banner from "../../assets/logos/logo_banner.png"
-
+import UnderlineHeader from "../general/UnderlineHeader";
+import ExternalLink from "../general/ExternalLink";
 
 const Committees = () => {
   return (
@@ -16,6 +17,14 @@ const Committees = () => {
           />
         </div>
         <Sponsor users={organizers} word="Organizing Committee" />
+
+
+                    <UnderlineHeader>Contact Us!</UnderlineHeader>
+                    
+                    <p><b><ExternalLink href="mailto:iswc2026@easychair.org">iswc2026@easychair.org</ExternalLink></b></p>
+        
+        
+            <br></br>
       </div>
     </>
   );

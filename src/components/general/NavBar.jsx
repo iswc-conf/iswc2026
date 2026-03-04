@@ -99,7 +99,7 @@ export const NavBar = () => {
         { type: "header", label: "Available" },
         { label: "Why Sponsor?", to: "/sponsorship/whysponsor" },
         { label: "Sponsorship Packages", to: "/sponsorship/sponsorshippackages" },
-        //{ label: "Sponsors", to: "/sponsorship/sponsors" },
+        { label: "Contacts", to: "/sponsorship/contacts" },
       ],
     },
     {

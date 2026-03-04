@@ -48,6 +48,7 @@ import { Visionary } from "./components/calls/Visionary";
 import OKBCSubmissionWorkflow from "./components/guidelines/OKBCSubmissionWorkflow";
 import PolicyAI from "./components/guidelines/PolicyAI";
 import WhySponsor from "./components/sponsorship/WhySponsor";
+import Contact from "./components/sponsorship/Contact"
 
 export default function App() {
   return (
@@ -117,6 +118,7 @@ export default function App() {
         {/* Sponsorship */}
         <Route path="/sponsorship/whysponsor" element={<WhySponsor />} />
         <Route path="/sponsorship/sponsorshippackages" element={<SponsorshipPackages />} />
+        <Route path="/sponsorship/contacts" element={<Contact />} />
        {/** <Route path="/sponsorship/sponsors" element={<Sponsors />} />  */}
       </Routes>
       <Footer/>

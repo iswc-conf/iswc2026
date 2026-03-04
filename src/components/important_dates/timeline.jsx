@@ -48,10 +48,8 @@ export const Timeline = () => {
         /** JULY */
         { type: "month", label: "July 2026" },
         { date: '06-Jul-26', title: 'Doctoral Consortium Notification', color: timeline_theme.colors.notification },
-         
-       
-        { date: '10-Jul-26', title: 'Challenge Results', color: timeline_theme.colors.notification },
-         { date: '16-Jul-26', title: 'Research, Resource, In-Use Track Notifications', color: timeline_theme.colors.notification },
+      
+        { date: '16-Jul-26', title: 'Research, Resource, In-Use Track Notifications', color: timeline_theme.colors.notification },
         { date: '24-Jul-26', title: 'Workshop Paper Submission', color: timeline_theme.colors.submission },
         { date: '21-Jul-26', title: 'Tutorial Website Online', color: timeline_theme.colors.other },
         { date: '24-Jul-26', title: 'Posters and Demos Track Submission', color: timeline_theme.colors.submission },
