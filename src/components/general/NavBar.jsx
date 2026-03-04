@@ -227,7 +227,7 @@ export const NavBar = () => {
   <span>{sub.label}</span>
 
   {sub.badge && (
-    <span className="ml-2 px-2 py-0.5 text-xs font-semibold text-white bg-red-500 rounded-full">
+    <span className="ml-2 px-2 py-0.5 text-xs font-semibold text-white rounded-full" style={{backgroundColor: theme.colors.primary}}>
       {sub.badge}
     </span>
   )}
@@ -260,7 +260,7 @@ export const NavBar = () => {
   <span>{sub.label}</span>
 
   {sub.badge && (
-    <span className="ml-2 px-2 py-0.5 text-xs font-semibold text-white bg-red-500 rounded-full">
+    <span className="ml-2 px-2 py-0.5 text-xs font-semibold text-white rounded-full" style={{backgroundColor: theme.colors.primary}}>
       {sub.badge}
     </span>
   )}
