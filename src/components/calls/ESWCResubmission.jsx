@@ -19,7 +19,7 @@ export const ESWCResubmission = () => {
         <BaseContainer>
 
             <Header>ESWC 2026 Resubmissions</Header>
-<p>Following the decision that the Semantic Web Science Association (SWSA) is now overseeing the International Semantic Web Conference (ISWC) series, we are introducing a new Resubmission Model.</p>
+<p>Following the decision that the Semantic Web Science Association (SWSA) is now overseeing both the International Semantic Web Conference (ISWC) and the European Semantic Web Conference (ESWC) series, we are introducing a new Resubmission Model.</p>
 
 <p>Authors of rejected papers in the Research Track of ESWC 2026 can opt-in to re-submit an improved version of their paper to be considered at the next ISWC conference, to be held in Bari (Italy) in October 2026.</p>
 
@@ -37,7 +37,7 @@ export const ESWCResubmission = () => {
 
 <p>The full paper should be submitted in the regular ISWC 2026 deadline, together with a cover letter (as part of the Supplementary Material) detailing the changes you have performed in the paper.</p>
 
-<p>Submissions without such a cover letter will be <b>desk-rejected</b></p>
+<p>Submissions without such a cover letter will be <b>desk-rejected</b>.</p>
 
 <p>The full instruction for submitting your paper are found in the <ExternalLink href="https://iswc2026.semanticweb.org/#/calls/research">Call for Papers: Research Track page.</ExternalLink></p>
 
@@ -45,7 +45,7 @@ export const ESWCResubmission = () => {
 
 <p>Your resubmitted paper will then be transferred, along with your previous reviews, to a reviewer pool composed of at least some of the original reviewers (ideally all, although obviously cannot be guaranteed) and at least one new, fresh reviewer. If your paper has sufficiently addressed the comments raised in ESWC, your chances of getting accepted at ISWC might be higher, although there is no guarantee for acceptance.</p>
 
-<p>For further enquiries about this process, you can contact the ISWC 2026 Research Track chairs<ExternalLink href="mailto:iswc2026-research@easychair.org">iswc2026-research@easychair.org</ExternalLink></p>
+<p>For further enquiries about this process, you can contact the ISWC 2026 Research Track chairs<ExternalLink href="mailto:iswc2026-research@easychair.org">iswc2026-research@easychair.org</ExternalLink>.</p>
 
 
 
