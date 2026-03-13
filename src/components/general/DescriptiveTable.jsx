@@ -28,6 +28,7 @@ export const DescriptiveTable = ({title, description, data, header_title}) => {
           <tr style={{ color: theme.colors.secondary }} className="bg-[#f8f8f8] text-[#e94607] font-bold border-b">
             <th className="p-4 border border-gray-300 grid-no-grow w-3/4">{title}</th>
             <th className="p-4 border border-gray-300 grid-no-grow w-1/4">{description}</th>
+            <th className="p-4 border border-gray-300 grid-no-grow w-1/4">Links</th>
           </tr>
         </thead>
         <tbody>
@@ -107,6 +108,18 @@ export const DescriptiveTable = ({title, description, data, header_title}) => {
                 </div>
               </td>
               <td className="p-4 border border-gray-200 align-top">{paper.organizers}</td>
+              <td className="p-4 border border-gray-200 align-top">
+                <div>
+                    {paper.website && (
+                      <div><a href={paper.website}>Wesbite</a></div>
+                    )}
+                    
+                    {paper.cfp && (
+                    <div><a href={paper.cfp}>CFP</a></div>
+                    )}
+                </div>
+                                              
+              </td>
             </tr>
           ))}
         </tbody>
