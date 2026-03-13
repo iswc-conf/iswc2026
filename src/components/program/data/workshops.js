@@ -2,8 +2,10 @@ const workshops = [
 {
         title:"2nd International Workshop on Data Management for Knowledge Graphs (DMKG 2026)",
         organizers: "Ruben Taelman, Olaf Hartig and Katja Hose",
-        description: "",
-        keywords: "Data, Management, Knowledge, Graphs, Storage, Management, Quality, Analytics, Exploration, Querying, Benchmarking"
+        description: "The rapid increase in the adoption of knowledge graphs over the past years, both in the open data domain as well as the industry, means that data management solutions for knowledge graphs today have to support ever increasing amounts of data. The continously growing KGs resulting from the increasing popularity of semantic technologies highlight the necessity for scalable and efficient solutions for management of knowledge graphs in distributed, federated, and centralized environments. The DMKG workshop therefore invites novel research and advances in scalable data management solutions for large-scale knowledge graphs. Such data management solutions include techniques for storage and indexing, partitioning for decentralized/centralized systems, archiving and versioning, validation with SHACL/shEx, or federated data management. We welcome a broad range of papers including full research papers, vision papers, negative results, and system demonstrations. The main goal of the workshop is to bring together both early-stage and established researchers as well as industrial partners in order to facilitate communication and collaboration between partners in different domains on the issues relating to scalable data management techniques for large-scale knowledge graphs.",
+        keywords: "Data, Management, Knowledge, Graphs, Storage, Management, Quality, Analytics, Exploration, Querying, Benchmarking",
+        website: "https://dmkg-workshop.github.io/2026/",
+        cfp : "https://lists.w3.org/Archives/Public/semantic-web/2026Mar/0000.html"
         
 },
 
@@ -66,16 +68,26 @@ const workshops = [
 {
         title:"21st International Workshop on Ontology Matching (OM-2026)",
         organizers: "Ernesto Jiménez-Ruiz, Sven Hertling, Huanyu Li, Cassia Trojahn, Oktie Hassanzadeh, Pavel Shvaiko and Jérôme Euzenat",
-        description: "",
-        keywords: "ontology, matching, knowledge, graph, matching, entity, matching"
+        description: "Ontology matching is a key interoperability enabler for the Semantic Web, as well as a useful technique in some classical data integration tasks dealing with the semantic heterogeneity problem. It takes ontologies as input and determines as output an alignment, that is, a set of correspondences between the semantically related entities of those ontologies. These correspondences can be used for various tasks, such as ontology merging, data interlinking, query answering or navigation over knowledge graphs. Thus, matching ontologies enables the knowledge and data expressed with the matched ontologies to interoperate. The workshop has the following goals: 1) To bring together leaders from academia, industry and user institutions to assess how academic advances are addressing real-world requirements. The workshop will strive to improve academic awareness of industrial and final user needs, and therefore, direct research towards those needs. Simultaneously, the workshop will serve to inform industry and user representatives about existing research efforts that may meet their requirements. The workshop will also investigate how the ontology matching technology is going to evolve, especially with respect to data interlinking, process matching, web table and knowledge graph matching tasks. 2) To conduct an extensive and rigorous evaluation of ontology matching and instance matching approaches through the OAEI (Ontology Alignment Evaluation Initiative) 2026 campaign and 3) To examine similarities and differences from other, old, new and emerging, techniques and usages, such as process matching, web table matching or knowledge embeddings.",
+        keywords: "ontology, matching, knowledge, graph, matching, entity, matching",
+        website : "https://om.ontologymatching.org/2026/",
+        cfp : "https://om.ontologymatching.org/2026/#cfp"
         
 },
 
 {
         title:"International Workshop on Structures to Stories: Multilingual NLP for Semantic Structured Data (IWSS)",
         organizers: "Virginia Ramón Ferrer, Lia Draetta, Michael Oliverio, Rossana Damiano and Carlos Badenes-Olmedo",
-        description: "",
-        keywords: "Structured, data, Multilingual, NLP, Semantic, representation"
+        description: "Despite recent advances in LLM-based pipelines, the core multilingual Natural Language Processing (NLP) and Natural Language Generation (NLG) challenges of mapping between structured data and natural language, especially in low-resource and long-tail settings, remain largely unsolved and under-represented within the Semantic Web community. The International Workshop on Structures to Stories: Multilingual NLP for Semantic Structured Data (IWSS) brings together researchers and practitioners advancing multilingual methods to (i) extract structured representations from text and (ii) generate faithful answers, verbalisations, explanations, and narratives grounded in structured evidence. IWSS emphasises robust extraction, data-grounded generation, and realistic multilingual evaluation, with particular interest in under-represented languages, long-tail entities, and culturally specific concepts. We invite full and short papers, position and negative-result papers, datasets, system demos, and resource papers. Topics include faithful multilingual verbalisation and summarisation, entity extraction and linking, schema/ontology alignment, and low-resource benchmarks and evaluation, among others.",
+        keywords: "Structured, data, Multilingual, NLP, Semantic, representation",
+        website: "https://iwss-workshop.github.io/",
+        cfp: "https://iwss-workshop.github.io/#cfp",
+        social_medias: [
+                {
+                social_media: "Linkedin",
+                social_media_url: "https://www.linkedin.com/company/iwss-workshop/"
+                }
+        ]
         
 },
 

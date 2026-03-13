@@ -3,7 +3,7 @@ import { theme } from "../../theme.js"
 import { useState, useRef } from "react";
 import ExternalLink from "./ExternalLink.jsx"
 
-export const DescriptiveTable = ({title, description, data}) => {
+export const DescriptiveTable = ({title, description, data, header_title}) => {
     const [openIndexes, setOpenIndexes] = useState([]);
     const detailRefs = useRef([]);
     const toggleDetail = (index) => {
@@ -21,7 +21,7 @@ export const DescriptiveTable = ({title, description, data}) => {
     };
     return (
 <>
-  <div className="flex justify-start items-start flex-col pt-10 pb-0 lg:pt-16 lg:pb-4 mb-4 lg:my-6 lg:h-auto lg:px-32 px-8">
+ <div className="flex flex-col w-full pt-10 lg:pt-16 mb-4 lg:my-6 px-4 sm:px-6 lg:px-12">
     <div className="mb-6">
       <table className="border-collapse text-left text-sm lg:text-base table-fixed grid-no-grow">
         <thead>
@@ -50,20 +50,31 @@ export const DescriptiveTable = ({title, description, data}) => {
                   <div className="flex-1">
                     {paper.id && <span className="mr-1 font-mono font-semibold">{paper.id}:</span>} <span className="font-semibold" style={{ color: theme.colors.primary }}>{paper.title}</span>
                     {openIndexes.includes(`dc-${idx}`) && (
+                      
                       <div className="mt-2  whitespace-pre-line">
-                        {paper.description}
 
-                        {paper.keywords && (
-                          <p mt-4>
-                            <span >Further information will be added shortly.</span> 
-                          </p>
+                        {paper.description && (
+                          <div><p><b>{header_title}</b></p>
+                        <p>{paper.description}</p></div>
                         )}
+                        
+                        <p><b>Keywords</b></p>
+                        <p>{paper.keywords}</p>
 
                         {/* Website */}
                         {paper.website && (
                           <p className="mt-3">
                             
-                           <span className="font-semibold"> Website:</span> <ExternalLink href={paper.website}> {paper.website}</ExternalLink>
+                           <span className="font-bold" > Website:</span> <a href={paper.website} style={{color: theme.colors.primary}}>{paper.website}</a>
+                              
+               
+                          </p>
+                        )}
+
+                        {paper.cfp && (
+                          <p className="mt-3">
+                            
+                           <span className="font-bold"> CFP:</span> <a href={paper.cfp} style={{color: theme.colors.primary}}>{paper.cfp}</a>
                               
                         
                           </p>
@@ -71,17 +82,17 @@ export const DescriptiveTable = ({title, description, data}) => {
 
                         {/* Social Medias */}
                         {paper.social_medias && paper.social_medias.length > 0 && (
-                          <div className="mt-2">
-                            <span className="font-semibold">  Social Media: </span>
-                            <ul style={{color:theme.colors.primary}} className="list-disc list-inside text-[#e94607]">
+                          <p className="mt-3">
+                            <span className="font-bold">  Social Media: </span>
+                            <ul  style={{color:theme.colors.primary}} className="list-disc list-inside ml-8">
                               {paper.social_medias.map(({ social_media, social_media_url }, smIdx) => (
                                 <li key={`sm-${smIdx}`}>
-                                  <ExternalLink href={social_media_url}> {social_media}</ExternalLink>
-                                  
+                                  <a href={social_media_url} style={{color: theme.colors.primary}}>{social_media}</a>
+ 
                                 </li>
                               ))}
                             </ul>
-                          </div>
+                          </p>
                         )}
                       </div>
                     )}
