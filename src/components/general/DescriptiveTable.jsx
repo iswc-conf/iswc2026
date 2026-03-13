@@ -49,7 +49,15 @@ export const DescriptiveTable = ({title, description, data, header_title}) => {
                     ▶
                   </span>
                   <div className="flex-1">
-                    {paper.id && <span className="mr-1 font-mono font-semibold">{paper.id}:</span>} <span className="font-semibold" style={{ color: theme.colors.primary }}>{paper.title}</span>
+                    {paper.id && <span className="mr-1 font-mono font-semibold">{paper.id}:</span>} <span className="font-semibold" style={{ color: theme.colors.primary }}>
+                      {paper.new && (
+                      <span>
+                        <span className="ml-2 px-2 py-0.5 text-xs font-semibold text-white rounded-full" style={{backgroundColor: theme.colors.secondary}}>New Informations
+                          </span>&nbsp;</span>
+                          
+                         
+                      )}
+                      {paper.title}</span>
                     {openIndexes.includes(`dc-${idx}`) && (
                       
                       <div className="mt-2  whitespace-pre-line">
