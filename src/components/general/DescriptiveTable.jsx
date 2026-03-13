@@ -58,8 +58,15 @@ export const DescriptiveTable = ({title, description, data, header_title}) => {
                         <p>{paper.description}</p></div>
                         )}
                         
+
+                        {paper.keywords && (
+                          <div>
                         <p><b>Keywords</b></p>
                         <p>{paper.keywords}</p>
+
+                          </div>
+                        )}
+
 
                         {/* Website */}
                         {paper.website && (
