@@ -3,6 +3,7 @@ import SubHeader from "../general/SubHeader";
 import UnderlineHeader from "../general/UnderlineHeader";
 import DeclareSoon from "../general/declareSoon";
 import Card from "../general/Card";
+import BaseContainer from "../general/BaseContainer"
 
 export const Timeline = () => {
 
@@ -48,7 +49,7 @@ export const Timeline = () => {
         /** JULY */
         { type: "month", label: "July 2026" },
         { date: '06-Jul-26', title: 'Doctoral Consortium Notification', color: timeline_theme.colors.notification },
-      
+        { date: '07-Jul-26', title: 'Industry Track Submission', color: timeline_theme.colors.submission },
         { date: '16-Jul-26', title: 'Research, Resource, In-Use Track Notifications', color: timeline_theme.colors.notification },
         { date: '24-Jul-26', title: 'Workshop Paper Submission', color: timeline_theme.colors.submission },
         { date: '21-Jul-26', title: 'Tutorial Website Online', color: timeline_theme.colors.other },
@@ -59,6 +60,7 @@ export const Timeline = () => {
         /** AUGUST */
         { type: "month", label: "August 2026" },
          { date: '03-Aug-26', title: 'Doctoral Consortium Track Camera Ready', color: timeline_theme.colors.cameraready },
+         { date: '04-Aug-26', title: 'Industry Track Notification', color: timeline_theme.colors.notification },
          { date: '06-Aug-26', title: 'Research, Resource, In-Use Track Camera Ready', color: timeline_theme.colors.cameraready },
         { date: '21-Aug-26', title: 'Posters and Demos Track Notification', color: timeline_theme.colors.notification },
         { date: '21-Aug-26', title: 'Workshop Program with Accepted Papers Available Online', color: timeline_theme.colors.notification },
@@ -67,6 +69,7 @@ export const Timeline = () => {
          /** SEPTEMBER */
         { type: "month", label: "September 2026" },
         { date: '04-Sep-26', title: 'Posters and Demos Track Camera Ready', color: timeline_theme.colors.cameraready },
+        { date: '11-Sep-26', title: 'Industry Track Camera Ready', color: timeline_theme.colors.cameraready },
         
         /** OCTOBER */
         { type: "month", label: "ISWC 2026 Events in October" },
@@ -82,51 +85,10 @@ export const Timeline = () => {
 
 
     return (
-<>
-  <UnderlineHeader>Colors Meanings</UnderlineHeader>
 
-   <div className="my-2 mx-4 mb-8">
-      {/* Legend */}
-      <div className="container">
-        <ul className="list-none space-y-1 ul-disc">
-              <li>
-     
-            <span style={{ color: timeline_theme.colors.event }}>
-              <b>Event</b>
-            </span>
-          </li>
-          <li>
-        
-            <span style={{ color: timeline_theme.colors.submission }}>
-              <b>Submissions</b>
-            </span>
-          </li>
-          <li>
-         
-            <span style={{ color: timeline_theme.colors.notification }}>
-              <b>Notifications</b>
-            </span>
-          </li>
-          <li>
-          
-            <span style={{ color: timeline_theme.colors.cameraready }}>
-              <b>Camera-Ready (impacting SPRINGER)</b>
-            </span>
-          </li>
-          <li>
-         
-            <span style={{ color: timeline_theme.colors.other }}>
-              <b>All other</b>
-            </span>
-          </li>
-        </ul>
-      </div>
-      </div>
+<div style={{marginLeft:200}}>
   
- <UnderlineHeader>Timeline</UnderlineHeader>
- <Card>
-   <p><em>This timeline will be updated as new information, news, and events become available. Please review it periodically for the latest updates and newly announced dates.</em></p>
- </Card>
+
   <div className="flex justify-start items-start min-h-screen">
    
 
@@ -172,7 +134,7 @@ if (event.type === "month") {
 </div>
       </div>
     </div>
-</>
+</div>
 
     );
 };
