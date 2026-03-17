@@ -51,9 +51,10 @@ export const NavBar = () => {
         { label: "Posters and Demos", to: "/calls/posters" },
         { label: "Workshops", to: "/calls/workshops" },
         { label: "Tutorials", to: "/calls/tutorials" },
+        { label: "Industry Track", to: "/calls/industry" },
         { type: "header", label: "To Be Announced" },
         //{ label: "Challenges", to: "/calls/challenges" },
-        { label: "Industry Track", to: "/calls/industry" },
+        
         
         
         { label: "Dagstuhl Workshops", to: "/calls/dagstuhl" },
