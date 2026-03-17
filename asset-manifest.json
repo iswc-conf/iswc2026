@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.a624b8a0.css",
-    "main.js": "./static/js/main.a6d05372.js",
+    "main.css": "./static/css/main.ffb38386.css",
+    "main.js": "./static/js/main.2bfe0e88.js",
     "static/js/453.2d56430b.chunk.js": "./static/js/453.2d56430b.chunk.js",
     "static/media/Oshani-Seneviratne.png": "./static/media/Oshani-Seneviratne.171ac5bd1cdb986efa9a.png",
     "static/media/community_1.png": "./static/media/community_1.52c46154e49d4a2a33b8.png",
@@ -77,12 +77,12 @@
     "static/media/Alharbi.jpg": "./static/media/Alharbi.e4552fdc353095bc3de5.jpg",
     "static/media/Roberto.jpeg": "./static/media/Roberto.81d7a44977e25cf46e47.jpeg",
     "index.html": "./index.html",
-    "main.a624b8a0.css.map": "./static/css/main.a624b8a0.css.map",
-    "main.a6d05372.js.map": "./static/js/main.a6d05372.js.map",
+    "main.ffb38386.css.map": "./static/css/main.ffb38386.css.map",
+    "main.2bfe0e88.js.map": "./static/js/main.2bfe0e88.js.map",
     "453.2d56430b.chunk.js.map": "./static/js/453.2d56430b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a624b8a0.css",
-    "static/js/main.a6d05372.js"
+    "static/css/main.ffb38386.css",
+    "static/js/main.2bfe0e88.js"
   ]
 }
