@@ -119,7 +119,7 @@ export const DescriptiveTable = ({title, description, data, header_title}) => {
               <td className="p-4 border border-gray-200 align-top">
                 <div>
                     {paper.website && (
-                      <div><a href={paper.website}>Wesbite</a></div>
+                      <div><a href={paper.website}>Website</a></div>
                     )}
                     
                     {paper.cfp && (
