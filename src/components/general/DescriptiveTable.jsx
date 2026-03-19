@@ -23,6 +23,7 @@ export const DescriptiveTable = ({title, description, data, header_title}) => {
 <>
  <div className="flex flex-col w-full pt-10 lg:pt-16 mb-4 lg:my-6 px-4 sm:px-6 lg:px-12">
     <div className="mb-6">
+      <div className="overflow-x-auto">
       <table className="border-collapse text-left text-sm lg:text-base table-fixed grid-no-grow">
         <thead>
           <tr style={{ color: theme.colors.secondary }} className="bg-[#f8f8f8] text-[#e94607] font-bold border-b">
@@ -132,6 +133,7 @@ export const DescriptiveTable = ({title, description, data, header_title}) => {
           ))}
         </tbody>
       </table>
+    </div>
     </div>
   </div>
 </>
