@@ -37,7 +37,7 @@ export const ReviewGuidelines = () => {
 
                 <p><b>Use of Generative AI: Reviewers</b></p>
 
-                <br></br>
+                <p>
                 <ul className="list-disc list-inside ">
 
 
@@ -47,6 +47,7 @@ export const ReviewGuidelines = () => {
                     <li style={{ marginBottom: "10px" }}><b>4.</b> Reviewers are fully responsible for the accuracy, fairness, and content of their reviews, regardless of any editorial assistance obtained. Any errors, misrepresentations, or inaccuracies introduced through the use of generative AI tools remain the responsibility of the reviewer.</li>
                     <li style={{ marginBottom: "10px" }} ><b>5.</b> Reviewers must not cite polished or fluent writing as evidence of improper generative AI use in a submitted paper. Formal or well-structured prose is not, in itself, grounds for raising a concern about undisclosed AI-generated content. If a reviewer believes a paper has made undisclosed use of generative AI, this must be based on concrete textual cues — such as prompt artefacts (e.g. phrases like "let me think about that" or "certainly, here is a summary"), inappropriate emoji, or other content clearly inconsistent with human-authored academic writing. Any such concern should be raised with the programme chairs rather than reflected in the review score.</li>
                 </ul>
+                </p>
 
                 <UnderlineHeader>Review Content</UnderlineHeader>
                 <p>We discuss five guidelines for reviews. We include examples of things to avoid in reviews, compared with examples of what would be better to include in a review.</p>
