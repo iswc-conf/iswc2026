@@ -10,7 +10,7 @@ import ORKGSchema from "../../assets/ORKGWorkflow.jpg"
 export const OKBCSubmissionWorkflow = () => {
     return (
         <BaseContainer>
-            <Header>OKBC Submission Workflow</Header>
+            <Header>ORKG Submission Workflow</Header>
 
              
       <div

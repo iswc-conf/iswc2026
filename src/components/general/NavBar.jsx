@@ -90,7 +90,7 @@ export const NavBar = () => {
         { label: "Review Guidelines", to: "/guidelines/review" },
         { label: "Supplemental Materials", to: "/guidelines/supplemental" },
         { label: "Resources Availability", to: "/guidelines/resources" },
-        { label: "OKBC Submission Workflow", to: "/guidelines/okbcworkflow" },
+        { label: "ORKG Submission Workflow", to: "/guidelines/okbcworkflow" },
         { label: "Policy on the use of Generative AI", to: "/guidelines/generative-ai-policy" },
 
       ],
