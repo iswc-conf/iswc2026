@@ -69,11 +69,12 @@ export const NavBar = () => {
       dropdown: [
         { type: "header", label: "Available" },
         { label: "Workshops", to: "/program/workshops" },
+          { label: "Keynote Speakers", to: "/program/keynotespeakers" },
+       
          { type: "header", label: "To Be Announced" },
         { label: "Schedule", to: "/program/schedule" },
         { label: "Accepted Papers", to: "/program/acceptedpapers" },
-        { label: "Keynote Speakers", to: "/program/keynotespeakers" },
-       
+      
         { label: "Dagstuhl Workshops", to: "/program/dagstuhl" },
         { label: "Tutorials", to: "/program/tutorials" },
         //{ label: "Challenges", to: "/program/challenges" },
@@ -102,6 +103,7 @@ export const NavBar = () => {
         { label: "Why Sponsor?", to: "/sponsorship/whysponsor" },
         { label: "Sponsorship Packages", to: "/sponsorship/sponsorshippackages" },
         { label: "Contacts", to: "/sponsorship/contacts" },
+        { label: "Sponsors", to: "/sponsorship/sponsors"}
       ],
     },
     {

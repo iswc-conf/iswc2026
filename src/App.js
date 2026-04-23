@@ -121,7 +121,7 @@ export default function App() {
         <Route path="/sponsorship/whysponsor" element={<WhySponsor />} />
         <Route path="/sponsorship/sponsorshippackages" element={<SponsorshipPackages />} />
         <Route path="/sponsorship/contacts" element={<Contact />} />
-       {/** <Route path="/sponsorship/sponsors" element={<Sponsors />} />  */}
+        <Route path="/sponsorship/sponsors" element={<Sponsors />} />  
       </Routes>
       <Footer/>
     </>
