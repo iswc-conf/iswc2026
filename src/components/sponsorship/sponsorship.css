@@ -132,7 +132,7 @@ ol li::marker {
 }
 
 .sponsor-logo {
-  max-height: 120px;
+  max-height: 200px;
   object-fit: contain;
   transition: transform 0.2s ease;
 }

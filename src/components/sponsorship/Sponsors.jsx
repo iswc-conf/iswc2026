@@ -1,11 +1,6 @@
 import React from "react";
-import google_logo from "./assets/google_logo.png"
-import lore_star_logo from "./assets/lore_star_logo.png"
-import iij_logo from "./assets/IIJ_logo.jpg"
-import metaphacts from "./assets/metaphacts-logo-standard.png"
-import river_publisher_logo from "./assets/JWE_River_Logo.jpg"
 import swsa_logo from "./assets/swsa_logo.png"
-import videolectures_logo from "./assets/Videolectures_logo.png"
+import tentris from "./assets/tentris_logo.png"
 import digital_science_logo from "./assets/digital_science_logo.png"
 import './sponsorship.css';
 import BaseContainer from "../general/BaseContainer";
@@ -14,9 +9,21 @@ import DeclareSoon from "../general/declareSoon";
 export const Sponsors = () => {
 
 const sponsors = [
+    {
+    level: "Platinum Sponsors",
+    color: "#6c7a89",
+    items: [
+      {
+        name: "TENTRIS",
+        image: tentris,
+        link: "https://tentris.io",
+        width: 1000,
+      },
+    ],
+  },
 
 ]
-
+/*
 const sponsors_2025 = [
   {
     level: "Platinum",
@@ -122,6 +129,8 @@ const sponsors_2025 = [
     ],
   },
 ];
+*/
+
 
 const SponsorCard = ({ name, image, link, width }) => {
   const content = (
@@ -129,7 +138,7 @@ const SponsorCard = ({ name, image, link, width }) => {
       src={image}
       alt={`${name} Logo`}
       className="sponsor-logo"
-      style={{ width: width || 200 }}
+      style={{ width: 500 }}
     />
   );
 
@@ -152,8 +161,6 @@ const SponsorCard = ({ name, image, link, width }) => {
     return (
 
 <BaseContainer>
-  <Header>Sponsors</Header>
-  <DeclareSoon></DeclareSoon>
 
   {sponsors.map((group) => (
     <div key={group.level} className="sponsor-level">
