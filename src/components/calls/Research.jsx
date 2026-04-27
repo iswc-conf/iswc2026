@@ -34,7 +34,7 @@ export const Research = () => {
                 <ul className="list-disc list-inside">
 
                     <li>Submissions are dual anonymous</li>
-                    <li>Papers are limited to 15 pages excluding references and the "Declaration of use of Generative AI” section. Supplemental materials and annexes <b>do not</b> count toward the established page limit.
+                    <li>Papers are limited to 15 pages excluding references and the "Declaration of use of Generative AI” section. Supplemental materials and annexes <b>do not</b> count toward the established page limit. Annexes can be in the same pdf as the body of the paper and should follow the references. Supplemental materials will be uploaded separately.
 </li>
                     <li>All submissions are expected to include a mandatory <ScrollLink targetRef={suppl_material}>Supplemental Material Statement</ScrollLink> that may contain links to code and data repositories. In case this is not possible, the statement must be justified. </li>
                     <li>Unless otherwise justified in the <ScrollLink targetRef={suppl_material}>Supplemental Material Statement</ScrollLink>, we expect supplemental material to be provided anonymously with the submitted paper.</li>
