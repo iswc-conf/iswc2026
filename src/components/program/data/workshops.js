@@ -165,25 +165,31 @@ const workshops = [
             title: "6th International Workshop on Semantic Web and Ontology Design for Cultural Heritage, SWODCH 2026",
             new: false,
             organizers: "Luca Biccheri, Antonis Bikakis, Roberta Ferrario, Béatrice Markhoff, Alessandro Mosca and Marianna Nicolosi-Asmundo",
-            description: "",
-            website: "",
-            cfp: "",
+            description: "SWODCH 2026 is the sixth edition of the International Workshop on Semantic Web and Ontology Design for Cultural Heritage. The purpose of SWODCH is twofold. First, it aims to gather original research on foundational issues arising from the design of conceptual models, ontologies, and Semantic Web (SW) technologies for Cultural Heritage (CH) and the Digital Humanities (DH). The heterogeneous and multi-format data available in these domains call for principled methodologies and technologies to semantically characterise, integrate, and reason over data, as well as to support its retrieval, management, analysis, and visualisation. The workshop also welcomes studies addressing the philosophical and social analysis of CH and DH data and knowledge representation models, as ontologies in these domains often need to account for the historical and social dimensions of data. Second, SWODCH aims to bring together stakeholders – scholars from Computer Science and the Humanities and GLAM professionals, representatives from CH institutions, etc. – who are involved in the development and deployment of concrete SW solutions for Cultural Heritage. This includes solutions for building, managing, exploring, visualising, or mining concrete or virtual knowledge graphs. In this context, SW solutions should be designed in accordance with the FAIR principles and support the creation of CH datasets and applications that adhere to these standards.",
+            website: "https://www.loa.istc.cnr.it/index.php/swodch-2026/",
+            cfp: "https://www.loa.istc.cnr.it/index.php/swodch-2026/call-for-papers/",
         },
 {
             title: "LLMs4OL 2026: Large Language Models for Ontology Learning",
             new: false,
             organizers: "Hamed Babaei Giglou, Jennifer D'Souza and Sören Auer",
-            description: "",
-            website: "",
-            cfp: "",
+            description: "As knowledge grows faster than ever, transforming unstructured text into structured, machine-understandable knowledge remains a central challenge in AI. This challenge explores the next frontier of Ontology Learning (OL)—moving beyond isolated subtasks toward fully integrated, intelligent systems. Building upon LLMs4OL tasks paradigms,  participants will tackle three visionary scenarios: building ontologies end-to-end from raw text, continuously extending existing knowledge structures, and learning taxonomies that generalize across domains. Together, these tasks reflect real-world demands where knowledge is dynamic, interconnected, and domain-spanning. Powered by the OntoLearner framework (https://ontolearner.readthedocs.io/), the challenge provides a unified environment for reproducible benchmarking, modular pipelines, and scalable evaluation. It invites researchers to push the limits of large language models in constructing, evolving, and transferring structured knowledge.",
+            website: "https://sites.google.com/view/llms4ol2026",
+            cfp: "https://sites.google.com/view/llms4ol2026",
+                                  social_medias: [
+                {
+                social_media: "Google Group",
+                social_media_url: "https://groups.google.com/d/forum/llms4ol-challenge"
+                }
+        ]
         },
 {
             title: "AIAA4KE: 1st Workshop on AI-assisted Approaches to Knowledge Engineering",
             new: false,
             organizers: "Patrik Schneider, Felix Sasaki, Evgeny Kharlamov, Nishtha Vaidya, Thomas Hubauer and Michael Hladik",
-            description: "",
-            website: "",
-            cfp: "",
+            description: `The AI Assistants for Knowledge Engineering (AIAA4KE) 2026 workshop explores the potential of generative AI and agentic workflows in Knowledge Engineering. While AI-assisted approaches have revolutionised general software engineering, knowledge engineering — including ontology modelling and knowledge graph (KG) construction — remains a bottleneck, reliant on scarce human expertise. AIAA4KE provides a platform to discuss topics such as multi-modal user intent analysis, automated ontology matching, and KG curation from diverse data sources. Key focus areas include developing evaluation benchmarks, integrating emerging standards like MCP-based agentic systems, and implementing human-in-the-loop governance for auditing AI-driven changes. We welcome presentations across the RDF/OWL and labelled property graph communities, aiming to scale knowledge engineering through robust, industry-ready AI assistants. AIAA4KE seeks to connect three key communities: <ul style="list-style-type: disc; margin-left: 2rem; padding-left: 1rem;"> <li> Research communities at the intersection of AI assistants and Semantic Web technologies focus on developing technically sound methods, but often lack opportunities to validate their work in real-world settings.</li> <li> Industry practitioners are actively building AI assistants for ontology and KG creation, yet face challenges around the accessibility of Semantic Web technologies and the difficulty of evaluating the quality and alignment of generated outputs.</li> <li> Standardisation experts, active in both academia and industry, are well-positioned to bridge these communities but are often underrepresented in the conversation.</li></ul>  By bringing these groups together, AIAA4KE aims to foster collaboration, accelerate innovation, and ensure that the combination of these technologies is both scientifically rigorous and practically applicable.`,
+            website: "https://sites.google.com/view/aiaa4ke/",
+            cfp: "https://sites.google.com/view/aiaa4ke/home/call-for-papers",
         },
 {
             title: "17th Workshop on Ontology Design and Patterns (WOP)~2026",

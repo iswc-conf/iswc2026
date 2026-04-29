@@ -64,9 +64,14 @@ export const DescriptiveTable = ({title, description, data, header_title}) => {
                       <div className="mt-2  whitespace-pre-line">
 
                         {paper.description && (
-                          <div><p><b>{header_title}</b></p>
-                        <p>{paper.description}</p></div>
-                        )}
+  <div>
+    <p><b>{header_title}</b></p>
+    <div
+      className="mt-2"
+      dangerouslySetInnerHTML={{ __html: paper.description }}
+    />
+  </div>
+)}
                         
 
                         {paper.keywords && (
