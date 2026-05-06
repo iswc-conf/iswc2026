@@ -52,6 +52,7 @@ export const NavBar = () => {
         { label: "Workshops", to: "/calls/workshops" },
         { label: "Tutorials", to: "/calls/tutorials" },
         { label: "Industry Track", to: "/calls/industry" },
+        { label: "SWSA Distinguished Dissertation Award", to: "/calls/swsa" },
         { type: "header", label: "To Be Announced" },
         //{ label: "Challenges", to: "/calls/challenges" },
         
@@ -59,7 +60,7 @@ export const NavBar = () => {
         
         { label: "Dagstuhl Workshops", to: "/calls/dagstuhl" },
  
-        { label: "SWSA Distinguished Dissertation Award", to: "/calls/swsa" },
+        
         { label: "Journal track", to: "/calls/journaltrack" },
         { label: "Visionary Ideas", to: "/calls/visionary" },
       ],
