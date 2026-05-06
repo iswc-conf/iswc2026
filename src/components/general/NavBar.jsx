@@ -114,8 +114,9 @@ export const NavBar = () => {
         { label: "Code of Conduct", to: "/attending/codeofconduct" },
        
          { label: "Venue and Accommodation", to: "/attending/venueandaccomodation" },
+          { label: "VISA Information", to: "/attending/visa" },
          { type: "header", label: "To Be Announced" },
-        { label: "VISA Information", to: "/attending/visa" },
+      
         { label: "Student Grants", to: "/attending/studentgrants" },
         
         //{ label: "Childcare", to: "/attending/childcare" },
