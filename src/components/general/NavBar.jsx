@@ -111,6 +111,7 @@ export const NavBar = () => {
       label: "Attending",
       dropdown: [
 { type: "header", label: "Available" },
+ { label: "Registration", to: "/attending/registration" },
         { label: "Code of Conduct", to: "/attending/codeofconduct" },
        
          { label: "Venue and Accommodation", to: "/attending/venueandaccomodation" },
@@ -120,7 +121,7 @@ export const NavBar = () => {
         { label: "Student Grants", to: "/attending/studentgrants" },
         
         //{ label: "Childcare", to: "/attending/childcare" },
-        { label: "Registration", to: "/attending/registration" },
+       
       ],
     },
     /*
