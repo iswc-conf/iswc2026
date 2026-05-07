@@ -84,7 +84,7 @@ All expenses related to conference registration, travel, accommodation, and visa
 
             <SubHeader>Contact Information</SubHeader>
 
-            <p>For any inquiries, please contact:  </p>
+            <p>For any inquiries regarding visa support documentation, please contact: </p>
 
                             <p>
                 <ul className="ul-disc ml-8">
