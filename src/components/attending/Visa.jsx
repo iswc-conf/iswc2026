@@ -15,22 +15,31 @@ export const Visa = () => {
             <p>This page provides information about visa requirements and the application process. Please note that the submission of all required documentation does not guarantee that a visa will be granted</p>
 
 
-            <SubHeader>Visa Application Information</SubHeader>
+            <SubHeader>Visa Requirements</SubHeader>
 
-            <p>Details on how to apply for a Visa to enter Italy can be found on the following websites:</p>
+           <p> All non-Italian nationals entering Italy must carry valid travel documentation. Delegates who hold neither an EU passport nor a valid Schengen visa are strongly advised to check as soon as possible whether they require a visa to enter Italy, as visa application procedures may take up to 120 days.</p>
+           <p>
+Visa regulations depend on the applicant’s nationality, country of residence, purpose of stay, and length of stay. For official and updated information regarding visa requirements and application procedures, please consult the following websites:</p>
+
+
 
             <p>
                 <ul className="ul-disc ml-8">
-                    <li><ExternalLink href="https://www.esteri.it/en/servizi-opportunita/ingressosoggiornoinitalia/visto_ingresso/paesi_esenti_visto/">https://www.esteri.it/en/servizi-opportunita/ingressosoggiornoinitalia/visto_ingresso/paesi_esenti_visto/</ExternalLink></li>
-                    <li><ExternalLink href="https://vistoperitalia.esteri.it/?lang=en_US">https://vistoperitalia.esteri.it/?lang=en_US</ExternalLink></li>
+                    <li><ExternalLink href="https://vistoperitalia.esteri.it/?lang=en_US&utm_source=chatgpt.com">https://vistoperitalia.esteri.it/?lang=en_US&utm_source=chatgpt.com</ExternalLink></li>
                     <li><ExternalLink href="https://www.esteri.it/en/servizi-opportunita/ingressosoggiornoinitalia/visto_ingresso/">https://www.esteri.it/en/servizi-opportunita/ingressosoggiornoinitalia/visto_ingresso/</ExternalLink></li>
+                    <li><ExternalLink href="https://www.esteri.it/en/servizi-consolari-e-visti/ingressosoggiornoinitalia/visto_ingresso/paesi_esenti_visto/">https://www.esteri.it/en/servizi-consolari-e-visti/ingressosoggiornoinitalia/visto_ingresso/paesi_esenti_visto/</ExternalLink></li>
 
-                    <li><ExternalLink href="https://www.esteri.it/en/servizi-opportunita/ingressosoggiornoinitalia/">https://www.esteri.it/en/servizi-opportunita/ingressosoggiornoinitalia/</ExternalLink></li>
 
                 </ul>
 
 
             </p>
+
+            <p>
+                Participants are also encouraged to contact the Italian Diplomatic or Consular Representation in their country of residence for detailed and official instructions applicable to their individual case.
+            </p>
+
+
 
             <SubHeader>Exemption of Visa (Short Term Stay)</SubHeader>
             The list of exempt countries and further details on visa exemptions can be found on the official website of the Ministry of Foreign Affairs of Italy:
@@ -43,21 +52,35 @@ export const Visa = () => {
             </p>
 
 
-            <SubHeader>Visa Application Information for ISWC2026 Participants</SubHeader>
+            <UnderlineHeader>Visa Application Procedure</UnderlineHeader>
 
-            <p>All non-Italian nationals entering Italy must provide valid travel documentation. Delegates who hold neither an EU passport nor a Schengen visa should check as soon as possible the Italian Ministry of Foreign Affairs’ website to see if they require a Visa to enter Italy, as visa applications can take as long as 120 days. Visa regulations depend on your nationality and country of origin (visit <ExternalLink href="https://vistoperitalia.esteri.it/?lang=en_US">https://vistoperitalia.esteri.it/?lang=en_US</ExternalLink>  for more information). For the most updated information regarding visa requirements, we suggest you contact your local consulate for full and official instructions on the specific visa regulations and application procedures that apply to you.</p>
+            <p>If a visa is required, delegates should apply through the Italian Diplomatic and Consular Representation in their country of residence and submit all required supporting documentation as indicated by the Italian Ministry of Foreign Affairs and International Cooperation.</p>
+            <p>Please note that the submission of the required documentation does not guarantee that a visa will be issued.</p>
 
-            <p>If a visa is required, delegates should apply to the Italian Diplomatic and Consular Representations in their country of residence with the documents outlined on the Ministry of Foreign Affairs’ website <ExternalLink href="https://www.esteri.it/en/servizi-opportunita/ingressosoggiornoinitalia/">https://www.esteri.it/en/servizi-opportunita/ingressosoggiornoinitalia/</ExternalLink>.</p>
 
+            <SubHeader>Invitation Letter</SubHeader>
 
-            <SubHeader>Invitation Letter Details</SubHeader>
+            <p>Participants requiring a visa may request an official invitation letter for visa purposes by contacting: <ExternalLink href="mailto:ISWC2026@cicsud.it">ISWC2026@cicsud.it</ExternalLink></p>
+<p>Please include:</p>
+           <p>
+            <ul className="ul-disc ml-8">
 
-            <p>An invitation letter to the Congress may be requested writing to ISWC2026@cicsud.it explicitly indicating the visa request and the event acronym (ISWC 2026) in the object of the email.
-                Please note that the visa guarantee letter will only be available to participants already registered to the conference.</p>
+                <li>“Visa Request – ISWC 2026” in the subject line of the email; </li>
+                <li>Your full name;</li>
+                <li>affiliation/institution;</li>
+                <li>registration details, if available. </li>
+            </ul>
+           </p>
 
-            <p>
-                <b>
-                    Presentation of the requested documentation does not guarantee that the visa will be issued.</b></p>
+           <p>Please note that invitation letters (visa support letters) will only be issued to participants who have completed their conference registration.</p>
+
+           <p>The invitation letter is intended exclusively to support the participant’s visa application and does not imply any financial or legal responsibility on the part of the conference organizers.</p>
+
+            <SubHeader>Disclaimer</SubHeader>
+
+            <p>The Organizing Committee is not authorized to intervene with Embassies or Consulates on behalf of participants and cannot influence the outcome of visa applications.
+All expenses related to conference registration, travel, accommodation, and visa applications are the sole responsibility of the participant. The Organizing Committee does not accept responsibility for any losses or expenses incurred due to the rejection or delay of a visa application.
+</p>
 
             <SubHeader>Contact Information</SubHeader>
 
