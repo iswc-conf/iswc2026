@@ -135,7 +135,7 @@ const workshops = [
             new: false,
             organizers: "Edlira Vakaj, Nandana Mihindukulasooriya and Rizou Stamatia",
             description: "",
-            website: "",
+            website: "https://5thnlp4kgc-code.github.io/5nlp4kgc/index.html",
             cfp: "",
         },
 {
