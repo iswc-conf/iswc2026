@@ -12,13 +12,13 @@ import SubHeader from "../general/SubHeader";
 export const Dagstuhl = () => {
     return (
     <BaseContainer>
-    <div className="relative left-1/2 right-1/2 mb-10 w-screen -translate-x-1/2 px-4 lg:px-8">
-        <img
-          src={banner}
-          alt="Dagstuhl Style Workshops banner"
-          className="mx-auto w-full max-w-7xl max-h-[420px] object-cover"
-        />
-      </div>
+     <div className="-mt-12 -mb-12 w-full">
+    <img
+      src={banner}
+      alt="Dagstuhl Style Workshops banner"
+      className="block mx-auto w-full max-w-6xl object-contain"
+    />
+  </div>
 
     <Header>Call for Dagstuhl Style Workshops – ISWC 2026</Header>
 
