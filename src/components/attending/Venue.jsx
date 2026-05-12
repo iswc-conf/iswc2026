@@ -15,7 +15,7 @@ import SubHeader from "../general/SubHeader";
 export const VenueAndAccomodation = () => {
   return (
     <BaseContainer>
-      <Header>Venue and Accommodations</Header>
+      <Header>Venue and Accommodation</Header>
       <br></br>
       <UnderlineHeader>Venue</UnderlineHeader>
       <br></br>
@@ -272,32 +272,71 @@ and a wide selection of B&Bs and 3-star hotels. The median hotel price is
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>Hotel Boston</td>
+    <tr>
+        <td>The Nicolaus Hotel</td>
         <td>⭐⭐⭐⭐</td>
-        <td>City centre</td>
-        <td>4.3 Km</td>
+        <td>Congress venue</td>
+        <td>-</td>
         <td>
-          <ExternalLink href="https://www.bostonbari.it/">
+          <ExternalLink href="https://www.thenicolaushotel.com/">
             Website
           </ExternalLink>
         </td>
-        <td>15</td>
+        <td>150</td>
       </tr>
-
-      <tr>
-        <td>Hotel Victor</td>
+         <tr>
+        <td>Hi Hotel</td>
         <td>⭐⭐⭐⭐</td>
-        <td>City centre</td>
-        <td>3.9 Km</td>
+        <td>10 min walk</td>
+        <td>950 m</td>
         <td>
-          <ExternalLink href="https://www.victorhotelbari.it/">
+          <ExternalLink href="https://www.hihotelbari.com/">
             Website
           </ExternalLink>
         </td>
-        <td>30</td>
+        <td>50</td>
       </tr>
 
+    <tr>
+        <td>Hotel Excelsior</td>
+        <td>⭐⭐⭐⭐</td>
+        <td>City centre</td>
+        <td>2.5 Km</td>
+        <td>
+          <ExternalLink href="https://excelsiorbari.it/">
+            Website
+          </ExternalLink>
+        </td>
+        <td>20</td>
+      </tr>
+
+       <tr>
+        <td>Leon D’Oro</td>
+        <td>⭐⭐⭐⭐</td>
+        <td>City centre</td>
+        <td>2.9 Km</td>
+        <td>
+          <ExternalLink href="https://leonbari.it/">
+            Website
+          </ExternalLink>
+        </td>
+        <td>25</td>
+      </tr>
+
+       <tr>
+        <td>Adria Hotel</td>
+        <td>⭐⭐⭐</td>
+        <td>City centre</td>
+        <td>3.2 Km</td>
+        <td>
+          <ExternalLink href="https://www.adriahotelbari.com">
+            Website
+          </ExternalLink>
+        </td>
+        <td>5</td>
+      </tr>
+
+  
       <tr>
         <td>Mövenpick Hotel</td>
         <td>⭐⭐⭐⭐</td>
@@ -311,70 +350,41 @@ and a wide selection of B&Bs and 3-star hotels. The median hotel price is
         <td>40</td>
       </tr>
 
-      <tr>
-        <td>Leon D’Oro</td>
+
+  
+<tr>
+        <td>Hotel Victor</td>
         <td>⭐⭐⭐⭐</td>
         <td>City centre</td>
-        <td>2.9 Km</td>
+        <td>3.9 Km</td>
         <td>
-          <ExternalLink href="https://leonbari.it/">
+          <ExternalLink href="https://www.victorhotelbari.it/">
             Website
           </ExternalLink>
         </td>
-        <td>25</td>
+        <td>30</td>
       </tr>
 
+
       <tr>
-        <td>Hotel Excelsior</td>
+        <td>Hotel Boston</td>
         <td>⭐⭐⭐⭐</td>
         <td>City centre</td>
-        <td>2.5 Km</td>
+        <td>4.3 Km</td>
         <td>
-          <ExternalLink href="https://excelsiorbari.it/">
+          <ExternalLink href="https://www.bostonbari.it/">
             Website
           </ExternalLink>
         </td>
-        <td>20</td>
+        <td>15</td>
       </tr>
 
-      <tr>
-        <td>The Nicolaus Hotel</td>
-        <td>⭐⭐⭐⭐</td>
-        <td>Congress venue</td>
-        <td>-</td>
-        <td>
-          <ExternalLink href="https://www.thenicolaushotel.com/">
-            Website
-          </ExternalLink>
-        </td>
-        <td>150</td>
-      </tr>
+      
+     
 
-      <tr>
-        <td>Hi Hotel</td>
-        <td>⭐⭐⭐⭐</td>
-        <td>10 min. by walk</td>
-        <td>950 m</td>
-        <td>
-          <ExternalLink href="https://www.hihotelbari.com/">
-            Website
-          </ExternalLink>
-        </td>
-        <td>50</td>
-      </tr>
+   
 
-      <tr>
-        <td>Adria Hotel</td>
-        <td>⭐⭐⭐</td>
-        <td>City centre</td>
-        <td>3.2 Km</td>
-        <td>
-          <ExternalLink href="https://www.adriahotelbari.com">
-            Website
-          </ExternalLink>
-        </td>
-        <td>5</td>
-      </tr>
+     
     </tbody>
   </table>
 </div>

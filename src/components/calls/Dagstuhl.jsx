@@ -16,7 +16,7 @@ export const Dagstuhl = () => {
     <img
       src={banner}
       alt="Dagstuhl Style Workshops banner"
-      className="block w-full object-contain"
+       className="block mx-auto w-[1200px] max-w-full object-contain"
     />
   </div>
 
