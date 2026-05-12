@@ -116,9 +116,10 @@ export const NavBar = () => {
        
          { label: "Venue and Accommodation", to: "/attending/venueandaccomodation" },
           { label: "VISA Information", to: "/attending/visa" },
-         { type: "header", label: "To Be Announced" },
+           { label: "Student Grants", to: "/attending/studentgrants" },
+        // { type: "header", label: "To Be Announced" },
       
-        { label: "Student Grants", to: "/attending/studentgrants" },
+       ,
         
         //{ label: "Childcare", to: "/attending/childcare" },
        
