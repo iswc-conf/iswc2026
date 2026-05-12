@@ -12,11 +12,11 @@ import SubHeader from "../general/SubHeader";
 export const Dagstuhl = () => {
     return (
     <BaseContainer>
-     <div className="-mt-12 -mb-12 w-full">
+      <div className="-mt-12 -mb-12 w-full">
     <img
       src={banner}
       alt="Dagstuhl Style Workshops banner"
-      className="block mx-auto w-full max-w-6xl object-contain"
+      className="block w-full object-contain"
     />
   </div>
 
