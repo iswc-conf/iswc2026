@@ -70,8 +70,8 @@ export const VenueAndAccomodation = () => {
       brief overview:
       <br></br>
       <br></br>
-      <center>
-        <table className="custom-table">
+      <div className="table-wrapper">
+      <table className="custom-table">
           <thead style={{ backgroundColor: theme.colors.secondary }}>
             <tr>
               <th>Airport Transfer</th>
@@ -102,8 +102,8 @@ export const VenueAndAccomodation = () => {
               <td>25 EUR</td>
             </tr>
           </tbody>
-        </table>
-      </center>
+         </table>
+      </div>
       <br></br>
       Bari is connected to the most important national and international
       destinations, as well as major European hubs. More than 100 daily routes
@@ -254,6 +254,130 @@ and a wide selection of B&Bs and 3-star hotels. The median hotel price is
           className="venue-image mt-10"
         />
       </center>
+
+      <SubHeader>Special-Rate Hotels for ISWC 2026</SubHeader>
+
+      <p>The following hotels have a special conference rate that will be applied <b>ONLY</b> booking the hotels using the conference registration system, during or after registering for the conference. Attendees are invited to book their reservations in due time.</p>
+
+    <div className="table-wrapper">
+  <table className="custom-table">
+    <thead style={{ backgroundColor: theme.colors.secondary }}>
+      <tr>
+        <th>Hotel</th>
+        <th>Category</th>
+        <th>Location</th>
+        <th>Distance from venue</th>
+        <th>Website</th>
+        <th>Rooms</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Hotel Boston</td>
+        <td>⭐⭐⭐⭐</td>
+        <td>City centre</td>
+        <td>4.3 Km</td>
+        <td>
+          <ExternalLink href="https://www.bostonbari.it/">
+            Website
+          </ExternalLink>
+        </td>
+        <td>15</td>
+      </tr>
+
+      <tr>
+        <td>Hotel Victor</td>
+        <td>⭐⭐⭐⭐</td>
+        <td>City centre</td>
+        <td>3.9 Km</td>
+        <td>
+          <ExternalLink href="https://www.victorhotelbari.it/">
+            Website
+          </ExternalLink>
+        </td>
+        <td>30</td>
+      </tr>
+
+      <tr>
+        <td>Mövenpick Hotel</td>
+        <td>⭐⭐⭐⭐</td>
+        <td>City centre</td>
+        <td>3.7 Km</td>
+        <td>
+          <ExternalLink href="https://movenpickhotelbari.it/">
+            Website
+          </ExternalLink>
+        </td>
+        <td>40</td>
+      </tr>
+
+      <tr>
+        <td>Leon D’Oro</td>
+        <td>⭐⭐⭐⭐</td>
+        <td>City centre</td>
+        <td>2.9 Km</td>
+        <td>
+          <ExternalLink href="https://leonbari.it/">
+            Website
+          </ExternalLink>
+        </td>
+        <td>25</td>
+      </tr>
+
+      <tr>
+        <td>Hotel Excelsior</td>
+        <td>⭐⭐⭐⭐</td>
+        <td>City centre</td>
+        <td>2.5 Km</td>
+        <td>
+          <ExternalLink href="https://excelsiorbari.it/">
+            Website
+          </ExternalLink>
+        </td>
+        <td>20</td>
+      </tr>
+
+      <tr>
+        <td>The Nicolaus Hotel</td>
+        <td>⭐⭐⭐⭐</td>
+        <td>Congress venue</td>
+        <td>-</td>
+        <td>
+          <ExternalLink href="https://www.thenicolaushotel.com/">
+            Website
+          </ExternalLink>
+        </td>
+        <td>150</td>
+      </tr>
+
+      <tr>
+        <td>Hi Hotel</td>
+        <td>⭐⭐⭐⭐</td>
+        <td>10 min. by walk</td>
+        <td>950 m</td>
+        <td>
+          <ExternalLink href="https://www.hihotelbari.com/">
+            Website
+          </ExternalLink>
+        </td>
+        <td>50</td>
+      </tr>
+
+      <tr>
+        <td>Adria Hotel</td>
+        <td>⭐⭐⭐</td>
+        <td>City centre</td>
+        <td>3.2 Km</td>
+        <td>
+          <ExternalLink href="https://www.adriahotelbari.com">
+            Website
+          </ExternalLink>
+        </td>
+        <td>5</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
     </BaseContainer>
   );
 };
