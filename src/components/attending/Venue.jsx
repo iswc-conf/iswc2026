@@ -162,13 +162,10 @@ export const VenueAndAccomodation = () => {
         </table>
       </center>
       <br></br>
-To reach the <Accent>Venue Location</Accent> from the{" "}
-<Accent>City of Bari</Accent>, you can use the following methods of
-transportation (more detailed information is available on the{" "}
-<ExternalLink href="https://www.thenicolaushotel.com/location">
-  Venue Official Website
-</ExternalLink>). All options take around 20–25 minutes. Alternatively, the venue can be reached on
-foot in approximately 40 minutes (2.7 km):<br></br>
+
+To reach the venue from the centre of Bari (Bari Centrale railway station), you can use the transportation options below (more detailed information is available on the venue’s official website). It typically takes  20–25 minutes by public transport. Alternatively, you can walk from the station to the venue in about 40 minutes.
+<br></br>
+<br></br>
 
       <center>
         <table className="custom-table">
