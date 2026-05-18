@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.04c3f75c.css",
-    "main.js": "./static/js/main.d1b7601f.js",
+    "main.js": "./static/js/main.4c79a6b9.js",
     "static/js/453.6c79c11f.chunk.js": "./static/js/453.6c79c11f.chunk.js",
     "static/media/Oshani-Seneviratne.png": "./static/media/Oshani-Seneviratne.171ac5bd1cdb986efa9a.png",
     "static/media/community_1.png": "./static/media/community_1.52c46154e49d4a2a33b8.png",
@@ -61,6 +61,7 @@
     "static/media/ISWC2.png": "./static/media/ISWC2.34c2ee991b39badf1a73.png",
     "static/media/Marieke.jpg": "./static/media/Marieke.869d7f2bd2776f820112.jpg",
     "static/media/METAPACT.png": "./static/media/METAPACT.081f1ed28c90bf5e1b43.png",
+    "static/media/tara.png": "./static/media/tara.70221eaf0832b8c53a93.png",
     "static/media/community_12.jpeg": "./static/media/community_12.e9f5784fd1e28fee5172.jpeg",
     "static/media/community_14.jpeg": "./static/media/community_14.a59c6178fb78527657d4.jpeg",
     "static/media/community_13.jpeg": "./static/media/community_13.adc26e26c7749508dcc7.jpeg",
@@ -76,11 +77,11 @@
     "static/media/Roberto.jpeg": "./static/media/Roberto.81d7a44977e25cf46e47.jpeg",
     "index.html": "./index.html",
     "main.04c3f75c.css.map": "./static/css/main.04c3f75c.css.map",
-    "main.d1b7601f.js.map": "./static/js/main.d1b7601f.js.map",
+    "main.4c79a6b9.js.map": "./static/js/main.4c79a6b9.js.map",
     "453.6c79c11f.chunk.js.map": "./static/js/453.6c79c11f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.04c3f75c.css",
-    "static/js/main.d1b7601f.js"
+    "static/js/main.4c79a6b9.js"
   ]
 }
