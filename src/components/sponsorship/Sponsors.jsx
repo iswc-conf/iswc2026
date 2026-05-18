@@ -6,6 +6,8 @@ import './sponsorship.css';
 import BaseContainer from "../general/BaseContainer";
 import Header from "../general/Header";
 import DeclareSoon from "../general/declareSoon";
+import SPS from "./assets/SPSGlobal.png"
+import METAPACT from "./assets/METAPACT.png"
 export const Sponsors = () => {
 
 const sponsors = [
@@ -18,6 +20,18 @@ const sponsors = [
         image: tentris,
         link: "https://tentris.io",
         width: 1000,
+      },
+      {
+        name: "S&P Global",
+        image: SPS,
+        link: "https://www.spglobal.com/en",
+        width: 600,
+      },
+      {
+        name: "Metaphacts / Digital Science",
+        image: METAPACT,
+        link: "https://metaphacts.com",
+        width: 600,
       },
     ],
   },
@@ -132,13 +146,13 @@ const sponsors_2025 = [
 */
 
 
-const SponsorCard = ({ name, image, link, width }) => {
+const SponsorCard = ({ name, image, link, width = 300 }) => {
   const content = (
     <img
       src={image}
       alt={`${name} Logo`}
       className="sponsor-logo"
-      style={{ width: 500 }}
+      style={{ maxWidth: width }}
     />
   );
 
@@ -162,6 +176,9 @@ const SponsorCard = ({ name, image, link, width }) => {
 
 <BaseContainer>
 
+  <Header>ISWC 2026 Sponsors</Header>
+  <br></br>
+  <br></br>
   {sponsors.map((group) => (
     <div key={group.level} className="sponsor-level">
       <h2 className="level-title mb-6" style={{backgroundColor:group.color}}>{group.level}</h2>

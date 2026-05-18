@@ -80,3 +80,46 @@
 }
 
 
+.sponsor-marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.sponsor-marquee-inner {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  width: max-content;
+  animation: sponsor-marquee-scroll 55s linear infinite;
+  will-change: transform;
+}
+
+.sponsor-marquee-card {
+  flex: 0 0 auto;
+  width: 150px;
+  height: 100px;
+  padding: 0.65rem 1rem;
+  background: #ffffffe1;
+  border-radius: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.22);
+}
+
+.sponsor-marquee-logo {
+  max-width: 140px;
+  max-height: 70px;
+  object-fit: contain;
+}
+
+@keyframes sponsor-marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}

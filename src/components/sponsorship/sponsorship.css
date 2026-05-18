@@ -140,3 +140,38 @@ ol li::marker {
 .sponsor-logo:hover {
   transform: scale(1.05);
 }
+
+.sponsor-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+}
+
+.sponsor-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  flex: 1 1 280px;
+  max-width: 380px;
+  min-height: 220px;
+
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.sponsor-logo {
+  width: 100%;
+  height: auto;
+  max-height: 140px;
+  object-fit: contain;
+}
+
+.sponsor-card a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
