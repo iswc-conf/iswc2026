@@ -66,6 +66,7 @@ export const NavBar = () => {
         { label: "Visionary Ideas", to: "/calls/visionary" },
       ],
     },
+   
     {
       label: "Program",
       dropdown: [
@@ -98,6 +99,7 @@ export const NavBar = () => {
 
       ],
     },
+     { label: "SWSA Early Career Award", to: "https://swsa.semanticweb.org/content/swsa-early-career-award" },
     {
       label: "Sponsorship",
       dropdown: [
