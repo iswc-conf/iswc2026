@@ -2,6 +2,7 @@ import React from "react";
 import satoshi from "./data/keynote_speaker/satoshi_sekine.png";
 import denny from "./data/keynote_speaker/Dr_Denny_Vrandecic.jpg";
 import harmelen from "./data/keynote_speaker/hermelen.jpg"
+import tara from "./data/keynote_speaker/tara.png"
 import BaseContainer from "../general/BaseContainer";
 import Header from "../general/Header";
 import UnderlineHeader from "../general/UnderlineHeader";
@@ -56,6 +57,41 @@ export const KeynoteSpeakers = () => {
 
     <p className="mt-2">
       Frank is a fellow of the European AI Society EurAI, a member of the Academia Europaea, and a member of the Dutch Royal Academy of Sciences (KNAW). He received the EurAI Community Services Award, and he is a guest professor at the Wuhan University of Science and Technology (WUST) in Wuhan, China.
+    </p>
+  </div>
+
+</div>
+  </section>
+
+
+    <section className="my-6">
+    <UnderlineHeader>
+      Keynote Talk:{" "}
+      <span style={{ color: theme.colors.secondary }}>
+        Tara Raafat
+      </span>
+    </UnderlineHeader>
+</section>
+
+
+
+    {/* Speaker Bio Section */}
+  <section className="my-8">
+    <SubHeader>About Tara Raafat</SubHeader>
+
+<div className="flex flex-col md:flex-row gap-6 mt-4 items-start">
+  
+  {/* Image */}
+  <img
+    src={tara}
+    alt="Tara Raafat"
+    className="block rounded-xl h-[300px] object-cover self-start -mt-[2px]"
+  />
+
+  {/* Bio Text */}
+  <div className="mt-0">
+    <p className="mt-0">
+      Dr. Tara Raafat is Head of Metadata and Knowledge Graph Strategy in Bloomberg’s CTO Office, where she advances the enterprise use of metadata, semantic technologies, and knowledge graphs to make complex data more connected, trusted, and AI-ready. Her work sits at the intersection of knowledge engineering, data integration, enterprise AI, and organizational change, with a strong focus on the human practices needed to make knowledge graphs successful at scale. During her more than 15 years working in semantic technologies, she has led semantic data initiatives across financial services, regulatory compliance, healthcare, and industrial data ecosystems, helping organizations turn complex knowledge into durable and usable data infrastructure. Tara is an active speaker, author, and contributor in the global knowledge graph community, with work focused on enterprise knowledge graphs, AI-ready data, and human-centered semantic transformation. She holds a PhD in Information System Engineering from the UK. 
     </p>
   </div>
 
