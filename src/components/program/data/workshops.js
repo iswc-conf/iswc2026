@@ -73,7 +73,7 @@ const workshops = [
             organizers: "Robert Andrei Buchmann, Dimitris Karagiannis and Dimitris Plexousakis",
             description: "This is a cross-over event aiming to stimulate the convergence between the communities focusing on Knowledge Graphs and those working on Model-driven Engineering of Information Systems. The initiative is motivated, among other factors, by the emerging notion of 'Context Graphs' highlighting the importance of traceable decision-making and process knowledge, something that has been traditionally captured through enterprise modeling languages and execution traces associated with the enterprise aspects described through such languages. The recent uptake of the Agentic AI paradigm, with renewed interest in workflow orchestration and contextualized delegation, further suggests a growing relevance of this convergence. The workshop aims to stimulate a two-way exchange of knowledge and technical enablers - how approaches commonly employed in Model-driven Engineering can support KG-based systems or processes; and vice versa, how enterprise modeling methods and diagrammatic model contents can be augmented by KGs and KG-based AI systems. Furthermore, we also look at KG-LLMs integration patterns that can benefit from model-driven engineering practices, towards novel knowledge-driven architectures and knowledge conversion modes.",
             website: "https://www.omilab.org/activities/events/iswc2026_kgmdse/",
-            cfp: "",
+            cfp: "https://www.omilab.org/activities/events/iswc2026_kgmdse/material/Workshop_ISWC2026_KGMDSE.pdf",
         },
 {
             title: "SeMatS 2026 Third International Workshop on Semantic Materials Science: Harnessing the Power of Semantic Web Technologies in Materials Science",
@@ -136,7 +136,7 @@ const workshops = [
             organizers: "Edlira Vakaj, Nandana Mihindukulasooriya and Rizou Stamatia",
             description: "",
             website: "https://5thnlp4kgc-code.github.io/5nlp4kgc/index.html",
-            cfp: "",
+            cfp: "https://5thnlp4kgc-code.github.io/5nlp4kgc/pages/cfp.html",
         },
 {
             title: "3rd International Workshop on Retrieval-Augmented Generation Enabled by Knowledge Graphs (RAGE-KG 2026)",
