@@ -203,9 +203,9 @@ const workshops = [
             title: "HAIBridge 2026: The 2nd Workshop on Bridging Hybrid (Artificial) Intelligence and the Semantic Web",
             new: false,
             organizers: "Alexis Ellis, Cogan Shimizu and Mark Adamik",
-            description: "",
-            website: "",
-            cfp: "",
+            description: "The principled integration of Hybrid Intelligence (HI) – which combines human and artificial intelligence – with the Semantic Web presents novel opportunities for enhancing decision-making, knowledge representation, and collaborative problem-solving.This workshop promotes the exploration at the intersection of these domains, focusing on how semantic technologies (e.g., ontologies, knowledge graphs, and linked data) can improve the adaptability, explainability, and reasoning capabilities of hybrid intelligence systems. Topics include human-AI collaboration, trustworthy AI, context-aware knowledge management, and real-world applications in areas such as healthcare, finance, and smart cities. At HAIBridge 2025 – Smarter Together: Bridging Hybrid Intelligence and the Semantic Web, participants will engage across disciplinary boundaries, fostering interdisciplinary collaboration toward more robust, intelligent, transparent, and ethical AI-driven systems.",
+            website: "https://sites.google.com/view/haibridge2026-iswc2026/home",
+            cfp: "https://sites.google.com/view/haibridge2026-iswc2026/call-for-papers?authuser=0",
         },
 {
             title: "International Workshop on Explainable AI and Knowledge Graphs (XAI+KG)",
