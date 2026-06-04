@@ -27,6 +27,7 @@ import Hoehndorf from "./pictures/hoehndorf.jpeg"
 import Alharbi from "./pictures/Alharbi.jpg"
 import MariaPellegrino from "./pictures/MariaPellegrino.png"
 import GeorgeHannah from "./pictures/GeorgeHannah.jpg"
+import Demartini from "./pictures/demartini.jpg"
 
 const organizers = {
   "General Chair": [
@@ -137,12 +138,18 @@ const organizers = {
       country: 'Germany',
     },
   ],
-  "Visionary Ideas Track Chair": [
+  "Visionary Ideas Track Chairs": [
     {
       name: 'Lora Aroyo',
       img: Lora_Aroyo,
       institution: 'Google',
       country: '',
+    },
+    {
+      name: 'Gianluca Demartini',
+      img: Demartini  ,
+      institution: 'University of Queensland',
+      country: 'Australia',
     },
   ],
   "Doctoral Consortium Chairs": [
