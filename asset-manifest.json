@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "./static/css/main.04c3f75c.css",
-    "main.js": "./static/js/main.de94a41a.js",
+    "main.css": "./static/css/main.cc1374ae.css",
+    "main.js": "./static/js/main.05d640d8.js",
     "static/js/453.6c79c11f.chunk.js": "./static/js/453.6c79c11f.chunk.js",
+    "static/media/Toni.jpg": "./static/media/Toni.c16b97566cd12d6937db.jpg",
     "static/media/Oshani-Seneviratne.png": "./static/media/Oshani-Seneviratne.171ac5bd1cdb986efa9a.png",
     "static/media/community_1.png": "./static/media/community_1.52c46154e49d4a2a33b8.png",
     "static/media/nicolaus.png": "./static/media/nicolaus.1c16f8050fb5c49644f0.png",
@@ -26,6 +27,7 @@
     "static/media/Ilaria_Tiddi.png": "./static/media/Ilaria_Tiddi.bb16aa38f1319baeb2c8.png",
     "static/media/dashgtul.png": "./static/media/dashgtul.d6e31bdf80e0a2ec7df9.png",
     "static/media/Anna_Lisa_Gentile.jpeg": "./static/media/Anna_Lisa_Gentile.6d5b4da3bbe7fda8845f.jpeg",
+    "static/media/demartini.jpg": "./static/media/demartini.91bb5d77aa63ba6ce9d0.jpg",
     "static/media/Fatima.png": "./static/media/Fatima.733ebd7c598b0beb2fe0.png",
     "static/media/Andrei_Ciortea.jpg": "./static/media/Andrei_Ciortea.3f4b63008096e27abf8a.jpg",
     "static/media/trans_map.png": "./static/media/trans_map.e47ccd137208d75f5842.png",
@@ -76,12 +78,12 @@
     "static/media/Alharbi.jpg": "./static/media/Alharbi.e4552fdc353095bc3de5.jpg",
     "static/media/Roberto.jpeg": "./static/media/Roberto.81d7a44977e25cf46e47.jpeg",
     "index.html": "./index.html",
-    "main.04c3f75c.css.map": "./static/css/main.04c3f75c.css.map",
-    "main.de94a41a.js.map": "./static/js/main.de94a41a.js.map",
+    "main.cc1374ae.css.map": "./static/css/main.cc1374ae.css.map",
+    "main.05d640d8.js.map": "./static/js/main.05d640d8.js.map",
     "453.6c79c11f.chunk.js.map": "./static/js/453.6c79c11f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.04c3f75c.css",
-    "static/js/main.de94a41a.js"
+    "static/css/main.cc1374ae.css",
+    "static/js/main.05d640d8.js"
   ]
 }
