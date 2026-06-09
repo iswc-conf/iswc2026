@@ -42,12 +42,19 @@ const ImportantDates = () => {
         { date: '09-Jun-26', title: 'Tutorials Track Submission', color: timeline_theme.colors.submission },
         { date: '23-Jun-26', title: 'Tutorials Track Notification', color: timeline_theme.colors.notification },
         { date: '26-Jun-26', title: 'Challenge Solution Submission', color: timeline_theme.colors.submission },
-
+        { date: '30-Jun-26', title: 'Journal Track Session Proposal', color: timeline_theme.colors.submission },
+        { date: '30-Jun-26', title: 'Dagstuhl Style Workshops Submission', color: timeline_theme.colors.submission },
+        { date: '30-Jun-26', title: 'SWSA Early Career Award Application Deadline', color: timeline_theme.colors.submission },
+        
         /** JULY */
         { type: "month", label: "July 2026" },
+        { date: '03-Jul-26', title: 'Dagstuhl Style Workshops Notification', color: timeline_theme.colors.notification },
+        { date: '06-Jul-26', title: 'SWSA Distiguished Dissertation Award Submission', color: timeline_theme.colors.submission },
         { date: '06-Jul-26', title: 'Doctoral Consortium Notification', color: timeline_theme.colors.notification },
         { date: '07-Jul-26', title: 'Industry Track Submission', color: timeline_theme.colors.submission },
+        { date: '15-Jul-26', title: 'Journal Track Session Notifications', color: timeline_theme.colors.notification },
         { date: '16-Jul-26', title: 'Research, Resource, In-Use Track Notifications', color: timeline_theme.colors.notification },
+        { date: '17-Jul-26', title: 'Dagstuhl Style Workshops Website Online', color: timeline_theme.colors.other },
         { date: '24-Jul-26', title: 'Workshop Paper Submission', color: timeline_theme.colors.submission },
         { date: '21-Jul-26', title: 'Tutorial Website Online', color: timeline_theme.colors.other },
         { date: '24-Jul-26', title: 'Posters and Demos Track Submission', color: timeline_theme.colors.submission },
