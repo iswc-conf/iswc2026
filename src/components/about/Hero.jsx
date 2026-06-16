@@ -11,7 +11,7 @@ import LOGO4 from "../sponsorship/assets/GOLD/GOOGLE.png"
 import LOGO5 from "../sponsorship/assets/GOLD/DATATREEHOUSE.svg"
 
 import LOGO6 from "../sponsorship/assets/SILVER/EBAY.png"
-import LOGO7 from "../sponsorship/assets/SILVER/RELAI.pdf"
+import LOGO7 from "../sponsorship/assets/SILVER/RELAI.png"
 import LOGO8 from "../sponsorship/assets/SILVER/SIEMENS.png"
 
 const sponsors = [

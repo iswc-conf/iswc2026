@@ -18,7 +18,7 @@ import DATATREE from "./assets/GOLD/DATATREEHOUSE.svg"
 
 /* SILVER */
 import EBAY from "./assets/SILVER/EBAY.png"
-import RELAI from "./assets/SILVER/RELAI.pdf"
+import RELAI from "./assets/SILVER/RELAI.png"
 import SIEMENS from "./assets/SILVER/SIEMENS.png"
 
 
