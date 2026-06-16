@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.e5fe5c54.css",
-    "main.js": "./static/js/main.0f1dea06.js",
+    "main.js": "./static/js/main.72b3baca.js",
     "static/js/453.6c79c11f.chunk.js": "./static/js/453.6c79c11f.chunk.js",
     "static/media/Toni.jpg": "./static/media/Toni.c16b97566cd12d6937db.jpg",
     "static/media/Oshani-Seneviratne.png": "./static/media/Oshani-Seneviratne.171ac5bd1cdb986efa9a.png",
@@ -36,7 +36,6 @@
     "static/media/maria_keet.png": "./static/media/maria_keet.1a0d668433d4a2b6eef3.png",
     "static/media/community_25.jpeg": "./static/media/community_25.7e80524e36ac91cbae04.jpeg",
     "static/media/community_23.png": "./static/media/community_23.2137f1df1c3248893a84.png",
-    "static/media/RELAI.pdf": "./static/media/RELAI.dd7363891c34df5c9669.pdf",
     "static/media/community_19.jpeg": "./static/media/community_19.ded8a51fed7ffccad1dc.jpeg",
     "static/media/Valentina_Tamma.jpg": "./static/media/Valentina_Tamma.3f185820d25fc1dbf904.jpg",
     "static/media/community_26.jpeg": "./static/media/community_26.f9d05b9f1cecfb7baabf.jpeg",
@@ -65,6 +64,7 @@
     "static/media/koubarakis.jpg": "./static/media/koubarakis.df354cd3d97512d85676.jpg",
     "static/media/ISWC2.png": "./static/media/ISWC2.34c2ee991b39badf1a73.png",
     "static/media/Marieke.jpg": "./static/media/Marieke.869d7f2bd2776f820112.jpg",
+    "static/media/RELAI.png": "./static/media/RELAI.542b1e935bffa26c80df.png",
     "static/media/METAPACT.png": "./static/media/METAPACT.081f1ed28c90bf5e1b43.png",
     "static/media/tara.png": "./static/media/tara.70221eaf0832b8c53a93.png",
     "static/media/community_12.jpeg": "./static/media/community_12.e9f5784fd1e28fee5172.jpeg",
@@ -81,11 +81,11 @@
     "static/media/Roberto.jpeg": "./static/media/Roberto.81d7a44977e25cf46e47.jpeg",
     "index.html": "./index.html",
     "main.e5fe5c54.css.map": "./static/css/main.e5fe5c54.css.map",
-    "main.0f1dea06.js.map": "./static/js/main.0f1dea06.js.map",
+    "main.72b3baca.js.map": "./static/js/main.72b3baca.js.map",
     "453.6c79c11f.chunk.js.map": "./static/js/453.6c79c11f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e5fe5c54.css",
-    "static/js/main.0f1dea06.js"
+    "static/js/main.72b3baca.js"
   ]
 }
