@@ -1,13 +1,29 @@
 import React from "react";
-import swsa_logo from "./assets/swsa_logo.png"
-import tentris from "./assets/tentris_logo.png"
-import digital_science_logo from "./assets/digital_science_logo.png"
+
 import './sponsorship.css';
 import BaseContainer from "../general/BaseContainer";
 import Header from "../general/Header";
+
+
 import DeclareSoon from "../general/declareSoon";
-import SPS from "./assets/SPSGlobal.png"
-import METAPACT from "./assets/METAPACT.png"
+
+/* PLATINUM */
+import SPS from "./assets/PLATINUM/SPS.png"
+import METAPACT from "./assets/PLATINUM/METAPACT.png"
+import TENTRIS from "./assets/PLATINUM/TENTRIS.png"
+
+/* GOLD */
+import GOOGLE from "./assets/GOLD/GOOGLE.png"
+import DATATREE from "./assets/GOLD/DATATREEHOUSE.svg"
+
+/* SILVER */
+import EBAY from "./assets/SILVER/EBAY.png"
+import RELAI from "./assets/SILVER/RELAI.pdf"
+import SIEMENS from "./assets/SILVER/SIEMENS.png"
+
+
+
+
 export const Sponsors = () => {
 
 const sponsors = [
@@ -17,7 +33,7 @@ const sponsors = [
     items: [
       {
         name: "TENTRIS",
-        image: tentris,
+        image: TENTRIS,
         link: "https://tentris.io",
         width: 1000,
       },
@@ -35,6 +51,49 @@ const sponsors = [
       },
     ],
   },
+  {
+    level: "Gold Sponsors",
+    color: "#d4af37",
+    items: [
+      {
+        name: "Google",
+        image: GOOGLE,
+        link: "https://google.com",
+        width: 800,
+      },
+      {
+        name: "Data Treehouse",
+        image: DATATREE,
+        link: "https://www.data-treehouse.com",
+        width: 600,
+      }
+    ],
+  },
+    {
+    level: "Silver Sponsors",
+    color: "#c0c0c0",
+    items: [
+      {
+        name: "Siemens",
+        image: SIEMENS,
+        link: "https://www.siemens.com/it-it/",
+        width: 800,
+      },
+      {
+        name: "Relational-AI",
+        image: RELAI,
+        link: "https://www.relational.ai",
+        width: 600,
+      },
+      {
+        name: "EBAY",
+        image: EBAY,
+        link: "https://www.ebay.com",
+        width: 600,
+      }
+    ],
+  },
+
 
 ]
 /*

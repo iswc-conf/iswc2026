@@ -1,22 +1,51 @@
 import bg_image from "../../assets/logos/home_banner.jpeg"
 import { theme } from "../../theme";
 import "../../App.css"
-import LOGO1 from "../sponsorship/assets/tentris_logo.png"
-import LOGO2 from "../sponsorship/assets/METAPACT.png"
-import LOGO3 from "../sponsorship/assets/SPSGlobal.png"
+
+
+import LOGO1 from "../sponsorship/assets/PLATINUM/SPS.png"
+import LOGO2 from "../sponsorship/assets/PLATINUM/METAPACT.png"
+import LOGO3 from "../sponsorship/assets/PLATINUM/TENTRIS.png"
+
+import LOGO4 from "../sponsorship/assets/GOLD/GOOGLE.png"
+import LOGO5 from "../sponsorship/assets/GOLD/DATATREEHOUSE.svg"
+
+import LOGO6 from "../sponsorship/assets/SILVER/EBAY.png"
+import LOGO7 from "../sponsorship/assets/SILVER/RELAI.pdf"
+import LOGO8 from "../sponsorship/assets/SILVER/SIEMENS.png"
 
 const sponsors = [
   {
-    name: "Sponsor 1",
+    name: "SPS",
     logo: LOGO1,
   },
   {
-    name: "Sponsor 2",
+    name: "METAPACT",
     logo: LOGO2,
   },
   {
-    name: "Sponsor 3",
+    name: "TENTRIS",
     logo: LOGO3,
+  },
+  {
+    name: "GOOGLE",
+    logo: LOGO4,
+  },
+  {
+    name: "DATATREE",
+    logo: LOGO5,
+  },
+  {
+    name: "EBAY",
+    logo: LOGO6,
+  },
+  {
+    name: "RELAI",
+    logo: LOGO7,
+  },
+  {
+    name: "SIEMENS",
+    logo: LOGO8,
   },
 ];
 
