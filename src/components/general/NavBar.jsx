@@ -53,17 +53,19 @@ export const NavBar = () => {
         { label: "Tutorials", to: "/calls/tutorials" },
         { label: "Industry Track", to: "/calls/industry" },
         { label: "SWSA Distinguished Dissertation Award", to: "/calls/swsa" },
+        
              { label: "Dagstuhl Workshops", to: "/calls/dagstuhl" },
+             
  
         
         { label: "Journal track", to: "/calls/journaltrack" },
-        { type: "header", label: "To Be Announced" },
+        { label: "Visionary Ideas", to: "/calls/visionary" },
         //{ label: "Challenges", to: "/calls/challenges" },
         
         
         
    
-        { label: "Visionary Ideas", to: "/calls/visionary" },
+        
       ],
     },
    
