@@ -55,23 +55,25 @@ const ImportantDates = () => {
         { date: '15-Jul-26', title: 'Journal Track Session Notifications', color: timeline_theme.colors.notification },
         { date: '16-Jul-26', title: 'Research, Resource, In-Use Track Notifications', color: timeline_theme.colors.notification },
         { date: '17-Jul-26', title: 'Dagstuhl Style Workshops Website Online', color: timeline_theme.colors.other },
-        { date: '24-Jul-26', title: 'Workshop Paper Submission', color: timeline_theme.colors.submission },
         { date: '21-Jul-26', title: 'Tutorial Website Online', color: timeline_theme.colors.other },
         { date: '24-Jul-26', title: 'Posters and Demos Track Submission', color: timeline_theme.colors.submission },
+        { date: '25-Jul-26', title: 'Visionary Ideas Track Abstract Submission', color: timeline_theme.colors.submission },
         { date: '27-Jul-26', title: 'Revised Doctoral Consortium Submission', color: timeline_theme.colors.submission },
         { date: '31-Jul-26', title: 'Tutorial Materials Available on the Website (if any)', color: timeline_theme.colors.other },
 
         /** AUGUST */
         { type: "month", label: "August 2026" },
+        { date: '01-Aug-26', title: 'Visionary Idea Track Full Paper Submission', color: timeline_theme.colors.submission },
         { date: '03-Aug-26', title: 'Doctoral Consortium Track Camera Ready', color: timeline_theme.colors.cameraready },
         { date: '04-Aug-26', title: 'Industry Track Notification', color: timeline_theme.colors.notification },
         { date: '06-Aug-26', title: 'Research, Resource, In-Use Track Camera Ready', color: timeline_theme.colors.cameraready },
         { date: '21-Aug-26', title: 'Posters and Demos Track Notification', color: timeline_theme.colors.notification },
         { date: '21-Aug-26', title: 'Workshop Program with Accepted Papers Available Online', color: timeline_theme.colors.notification },
-
+        { date: '26-Aug-26', title: 'Visionary Ideas Track Notification', color: timeline_theme.colors.notification },
 
         /** SEPTEMBER */
         { type: "month", label: "September 2026" },
+        { date: '01-Sep-26', title: 'Visionary Ideas Track Camera Ready', color: timeline_theme.colors.cameraready },
         { date: '04-Sep-26', title: 'Posters and Demos Track Camera Ready', color: timeline_theme.colors.cameraready },
         { date: '11-Sep-26', title: 'Industry Track Camera Ready', color: timeline_theme.colors.cameraready },
 
