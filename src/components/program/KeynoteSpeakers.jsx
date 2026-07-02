@@ -10,12 +10,57 @@ import UnderlineHeader from "../general/UnderlineHeader";
 import SubHeader from "../general/SubHeader"
 import DeclareSoon from "../general/declareSoon";
 import { theme } from "../../theme";
+import ExternalLink from "../general/ExternalLink"
+import jim from "./data/keynote_speaker/jim.jpeg"
 
 export const KeynoteSpeakers = () => {
     return (
 <BaseContainer>
 
   <Header>Keynote Speakers</Header>
+
+    <section className="my-6">
+    <UnderlineHeader>
+      ISWC 25th Anniversary Keynote Talk:{" "}
+      <span style={{ color: theme.colors.secondary }}>
+        James Hendler
+      </span>
+    </UnderlineHeader>
+</section>
+
+
+    <SubHeader className="mt-3">Talk Overview</SubHeader>
+    <p className="mt-1 text-gray-700">
+      In 2001, I joined Tim Berners-Lee and our colleague Ora Lassila in writing an article describing a vision for the Semantic Web – combining work we'd each been doing for a decade or more. The paper, which appeared in Scientific American, has been widely cited and led to much work in both academia and industry aimed at adding machine-readable text to the Web. Now, 25 years later, while even the concept of what the Web is has changed, machine-readable metadata is crucial to search and many other applications, and knowledge graph technology, which also grew from this vision, is now a big business used by major organizations around the world. Further, with the advent of LLMs, a realization is growing that the difference between reality and hallucination requires machine-readable knowledge. However, despite this success, much of the original vision of the Semantic Web remains unrealized. In this talk, I discuss what was in the original vision, what has occurred and, most importantly, a call to action as to what still remains to be done if we are truly to recognize the full potential of the Semantic Web.
+The keynote will be followed by an open challenge to the audience. How do the researchers and academics working in the field today, and in particular the next generation of Semantic Web scientists — actually experience the research landscape they are working in? What has the field delivered, what has it failed to deliver, and what needs to change? Prof. Hendler will open the floor to an unscripted discussion, with young researchers and academics very much invited to lead it.
+
+    </p>
+  
+
+  {/* Speaker Bio Section */}
+  <section className="my-8">
+    <SubHeader>About James Hendler</SubHeader>
+
+<div className="flex flex-col md:flex-row gap-6 mt-4 items-start">
+  
+  {/* Image */}
+  <img
+    src={jim}
+    alt="James Hendler"
+    className="block rounded-xl h-[300px] object-cover self-start -mt-[2px]"
+  />
+
+  {/* Bio Text */}
+  <div className="mt-0">
+    <p className="mt-0">
+      James Hendler is the Tetherless World Professor of Computer, Web and Cognitive Sciences at RPI. In fifty years as an AI researcher, Hendler has worked in areas including planning, scalable KR, semantic data integration and global technology policy. He is best known for his work in bringing AI to the Web, as well as in government open data, knowledge graphs, and what’s now known as neuro-symbolic AI.  He is a fellow of the AAAI, AAIA, AAAS, ACM, BCS, IEEE and the US National Academy of Public Administration.  Among other awards, in 2025, Hendler received the AAAI Feigenbaum Award for “a sustained record of high-impact seminal contributions to experimental AI research” and in 2026 was a co-recipient the life-time achievement award from the Knowledge Graph Society.  For a longer, more detailed bio, see <ExternalLink href="https://en.wikipedia.org/wiki/James_Hendler">James Hendler Wikipedia Page</ExternalLink>. 
+
+    </p>
+  </div>
+
+</div>
+  </section>
+
 
   
   <section className="my-6">
