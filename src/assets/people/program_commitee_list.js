@@ -1,39 +1,121 @@
 const program_commitee_list = {
-    "Example Category 1": [
-        {
-            "name": "Maribel Acosta",
-            "institution": "Technical University of Munich",
-            "country": "Germany"
-        },
-        {
-            "name": "Carlos Buil Aranda",
-            "institution": "Philip Morris International",
-            "country": "Spain"
-        },
-        {
-            "name": "Carlos Buil Aranda",
-            "institution": "Philip Morris International",
-            "country": "Spain"
-        },
-             {
-            "name": "Carlos Buil Aranda",
-            "institution": "Philip Morris International",
-            "country": "Spain"
-        }
-    ],
-    "Example Category 2": [
-        {
-            "name": "Maribel Acosta",
-            "institution": "Technical University of Munich",
-            "country": "Germany"
-        },
-        {
-            "name": "Carlos Buil Aranda",
-            "institution": "Philip Morris International",
-            "country": "Spain"
-        }
-    ]
-
+  "Industry Track Program Committee": [
+  {
+    "name": "Maja Milicic Brandt",
+    "institution": "Siemens AG",
+    "country": "Germany"
+  },
+  {
+    "name": "Martin Rezk",
+    "institution": "Google",
+    "country": "United States"
+  },
+  {
+    "name": "Cornelis Bouter",
+    "institution": "TNO",
+    "country": "Netherlands"
+  },
+  {
+    "name": "Guohui Xiao",
+    "institution": "School of Computer Science and Engineering, Southeast University",
+    "country": "China"
+  },
+  {
+    "name": "Jakub Klímek",
+    "institution": "Charles University",
+    "country": "Czech Republic"
+  },
+  {
+    "name": "Anees Mehdi",
+    "institution": "Amazon",
+    "country": "United States"
+  },
+  {
+    "name": "Claudio Baldassare",
+    "institution": "SEMIC",
+    "country": "Belgium"
+  },
+  {
+    "name": "John Beverley",
+    "institution": "University at Buffalo",
+    "country": "United States"
+  },
+  {
+    "name": "Alessandro Oltramari",
+    "institution": "Bosch Research and Technology Center",
+    "country": "United States"
+  },
+  {
+    "name": "Danielle Welter",
+    "institution": "Luxembourg National Data Service",
+    "country": "Luxembourg"
+  },
+  {
+    "name": "Jinyu Zhao",
+    "institution": "eBay, Inc.",
+    "country": "United States"
+  },
+  {
+    "name": "Lars Heling",
+    "institution": "SAP",
+    "country": "Germany"
+  },
+  {
+    "name": "Peter Haase",
+    "institution": "metaphacts",
+    "country": "Germany"
+  },
+  {
+    "name": "Albin Ahmeti",
+    "institution": "Semantic Web Company; TU Wien",
+    "country": "Austria"
+  },
+  {
+    "name": "Riitta Alkula",
+    "institution": "Digital and Population Data Services Agency",
+    "country": "Finland"
+  },
+  {
+    "name": "Stefano Borgo",
+    "institution": "CNR-ISTC",
+    "country": "Italy"
+  },
+  {
+    "name": "Mariano Rodriguez",
+    "institution": "Google",
+    "country": "United States"
+  },
+  {
+    "name": "Vladimir Alexiev",
+    "institution": "Graphwise",
+    "country": "Bulgaria"
+  },
+  {
+    "name": "Achille Fokou",
+    "institution": "IBM",
+    "country": "United States"
+  },
+  {
+    "name": "Sergey Paramonov",
+    "institution": "Meltwater",
+    "country": "Norway"
+  },
+  {
+    "name": "Stefen Lamparter",
+    "institution": "Siemens AG, Corporate Technology",
+    "country": "Germany"
+  },
+  {
+    "name": "Babak Bagherihariri",
+    "institution": "Independent",
+    "country": "Unknown"
+  },
+  {
+    "name": "Irlan Grangel-González",
+    "institution": "Altair",
+    "country": "United States"
+  }
+]
     /*
     "Research Track Senior Program Committee": [
         {
