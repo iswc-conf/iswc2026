@@ -147,8 +147,9 @@ export const NavBar = () => {
       dropdown: [
         { type: "header", label: "Available" },
         { label: "Organizing Committee", to: "organizing_committee" },
-        { type: "header", label: "To Be Announced" },
-        { label: "Program Committee", to: "/organization/program_committee" },
+         { label: "Program Committee", to: "/organization/program_committee" },
+       
+       
       ],
     },
   ];
