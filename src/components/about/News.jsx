@@ -50,7 +50,8 @@ const NewsList = ({ news }) => {
 
 const NewsSection = () => {
   const newsData = [
-    { date: "March 17, 2026", text: "CFP is now available for the Industry Track ", isLatest:"True"},
+     { date: "July 8, 2026", text: "Accepted Doctoral Consortium Papers are now Available!", isLatest:"True"},
+    { date: "March 17, 2026", text: "CFP is now available for the Industry Track "},
      { date: "February 23, 2026", text: "Sponsorship Informations are now Available! "},
     { date: "February 4, 2026", text: "CFP is now available for the Tutorial Track"},
      { date: "January 30, 2026", text: "CFPs are now available for the Doctoral Consortum and 'Posters and Demo' Tracks"},

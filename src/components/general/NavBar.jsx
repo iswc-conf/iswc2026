@@ -75,10 +75,10 @@ export const NavBar = () => {
         { type: "header", label: "Available" },
         { label: "Workshops", to: "/program/workshops" },
           { label: "Keynote Speakers", to: "/program/keynotespeakers" },
-       
+        { label: "Accepted Papers", to: "/program/acceptedpapers" },
          { type: "header", label: "To Be Announced" },
         { label: "Schedule", to: "/program/schedule" },
-        { label: "Accepted Papers", to: "/program/acceptedpapers" },
+       
       
         { label: "Dagstuhl Workshops", to: "/program/dagstuhl" },
         { label: "Tutorials", to: "/program/tutorials" },

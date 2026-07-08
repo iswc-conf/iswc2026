@@ -20,9 +20,10 @@ export const PaperTable = ({data}) => {
     };
     return (
         <>
-<div className="flex justify-start items-start flex-col pt-10 pb-0 lg:pt-16 lg:pb-4 mb-4 lg:my-6 lg:h-auto lg:px-32 px-8">
+<div className="flex flex-col w-full pt-10 lg:pt-16 mb-4 lg:my-6 px-4 sm:px-6 lg:px-12">
   <div className="mb-6">
-    <table className="border-collapse text-left text-sm lg:text-base table-fixed grid-no-grow">
+    <div className="overflow-x-auto">
+      <table className="border-collapse text-left text-sm lg:text-base table-fixed grid-no-grow">
       <thead>
         <tr style={{ color: theme.colors.secondary }} className="bg-[#f8f8f8] text-[#e94607] font-bold border-b">
           <th className="p-4 border border-gray-300 grid-no-grow w-3/4">Title</th>
@@ -59,6 +60,7 @@ export const PaperTable = ({data}) => {
       </tbody>
     </table>
   </div>
+</div>
 </div>
 
         </>

@@ -1,9 +1,84 @@
 const doctoralConsortium = [
     {
-        title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-        authors: "Fatima and Ivan",
-        abstract: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur"
+        title: "Verified Neuro-Symbolic Knowledge Graph Repair under Explicit and Evolving Constraints",
+        authors: "Miguel Vázquez"
+    },
+    {
+        title: "Neuro-symbolic AI for Advanced Reasoning Over Marine Science Data",
+        authors: "Gustavo Nuñez"
+    },
+    {
+        title: "Modality-Aware Inductive Knowledge Graphs for Grounded Reasoning",
+        authors: "Jui-Chien Lin"
+    },
+    {
+        title: "Designing and Evaluating Defeasible Ontologies for Non-Monotonic Knowledge Representation",
+        authors: "Victoria Chama"
+    },
+    {
+        title: "From Regulation to Representation: Interoperability for Decentralised Data Exchange Under EU Data Law",
+        authors: "Marlin Kisia"
+    },
+    {
+        title: "A knowledge graph of faithfulness measures to evaluate user priorities for LLM explanations",
+        authors: "Danielle Villa"
+    },
+    {
+        title: "You ask iAnswer: Simplifying Knowledge Graph Creation through Abstracted Mapping Authoring and Improving Question-Answering Systems through Structured Knowledge Representation",
+        authors: "Tarek Al Mustafa"
+    },
+    {
+        title: "Semantic Validation of CAD Models",
+        authors: "Julian Gebhard"
+    },
+    {
+        title: "Requirements-Driven DCAT Profile Engineering for FAIR Metadata: Semi-Automated Generation and Validation",
+        authors: "Junda Huang"
+    },
+    {
+        title: "Towards Ontology-Guided and Traceable GraphRAG for Legal Knowledge in Industrial Maintenance",
+        authors: "Génesis Montenegro"
+    },
+    {
+        title: "Extracting and Representing Trustworthy Scientific Claims for Biomedical Knowledge Graphs",
+        authors: "Rohitha Ravinder"
+    },
+    {
+        title: "Making Epistemic Bias Explicit in and through Knowledge Engineering",
+        authors: "Minh Davide Ragagni"
+    },
+    {
+        title: "Toward the Characterization and Understanding of Negative Facts in Knowledge Graph Embeddings",
+        authors: "Ilyes Tebourski"
+    },
+    {
+        title: "Ever more land, labour, and information: Knowledge Graph construction for the seven most-traded commodities in the early nineteenth century",
+        authors: "Yijia Izzie He"
+    },
+    {
+        title: "Integrating Knowledge Graphs with Large Language Models for Automated Due Diligence",
+        authors: "Emin Osmanov"
+    },
+    {
+        title: "Spatio-Temporal Question Answering over Dynamic Knowledge Graphs",
+        authors: "Luciana Tanevitch"
+    },
+    {
+        title: "Knowledge Graphs as External Memory for LLM-based Scientific Assistants",
+        authors: "Benjamin Navet"
+    },
+    {
+        title: "Trustworthy Agentic AI for Knowledge Engineering",
+        authors: "Alexander Prock"
+    },
+    {
+        title: "Neurosymbolic Artificial Intelligence in Biomedical and Neuroimaging Applications",
+        authors: "Aleksandra Beliaeva"
+    },
+    {
+        title: "Analyzing Inconsistencies in LLM-Generated Explanations: A Multi-Stage Framework using Knowledge Graph Validation and Neuro-Symbolic Reasoning",
+        authors: "Najwa Alghamdi"
     }
-    ];
+];
 
 export { doctoralConsortium };

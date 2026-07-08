@@ -23,7 +23,7 @@ export const AcceptedPapers = () => {
             
         <UnderlineHeader>Doctoral Consortium</UnderlineHeader>
 
-        {/** <PaperTable data={doctoralConsortium}></PaperTable> */}
+        <PaperTable data={doctoralConsortium}></PaperTable> 
 
 
         <UnderlineHeader>Research Track</UnderlineHeader>
