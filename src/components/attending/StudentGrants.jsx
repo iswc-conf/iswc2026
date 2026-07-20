@@ -4,7 +4,7 @@ import Header from '../general/Header'
 import SubHeader from '../general/SubHeader'
 import UnderlineHeader from '../general/UnderlineHeader'
 import ExternalLink from '../general/ExternalLink'
-import './attending.css'
+import { theme } from "../../theme";
 
 
 export const StudentGrants = () => {
@@ -26,7 +26,7 @@ export const StudentGrants = () => {
 <UnderlineHeader>Selection Criteria</UnderlineHeader>
 
 <p>
-    <ul className='ul-disc ml-8'>
+    <ul className='list-disc list-outside pl-6 space-y-1 ml-8'>
        <li>Priority to students with papers in the doctoral symposium and the main track</li>
     <li>Priority to students from underrepresented groups</li>
     <li>Students with posters, demos, workshops, tutorials, and Semantic Web challenge papers if money is left</li>
@@ -37,12 +37,12 @@ export const StudentGrants = () => {
 <UnderlineHeader>Application Process</UnderlineHeader>
 
 <p>
-    <ul className='ul-disc ml-8'>
-        <li><b>1.</b> Fill out and submit the ISWC 2026 Student Travel Award Application Form on EasyChair (https://easychair.org/conferences/?conf=iswc2026), choosing “Student Grants” when making a new submission.
+    <ol className='ol-decimal ml-8'>
+        <li> Fill out and submit the ISWC 2026 Student Travel Award Application Form on EasyChair (https://easychair.org/conferences/?conf=iswc2026), choosing “Student Grants” when making a new submission.  <b>Applicants should use the title of their accepted contribution followed by "- Student grant" as the submission title</b>.
     
-        <li><b>2. </b>Ask your supervisor to email the student grants chairs using the following email address iswc2026-student-grants@easychair.org, confirming that you are a current student under their supervision and that you will be attending ISWC 2026. The subject of the email should be “ISWC 2026 Student Travel Award Application <strong>{'{'}EASYCHAIR SUBMISSION ID{'}'}</strong> - Verification for <b>{'{'}YOUR FULL NAME{'}'} </b>”. The text should read “I confirm that {'{'}YOUR FULL NAME{'}'} is a student that is currently under my supervision at  <b>{'{'}INSTITUTION NAME{'}'}</b> and that they will be attending ISWC 2026 to present work that they completed under my supervision. <b>{'{'}SUPERVISOR NAME{'}'}</b>”</li>
+        <li>Ask your supervisor to email the student grants chairs using the following email address iswc2026-student-grants@easychair.org, confirming that you are a current student under their supervision and that you will be attending ISWC 2026. The subject of the email should be “ISWC 2026 Student Travel Award Application <strong>{'{'}EASYCHAIR SUBMISSION ID{'}'}</strong> - Verification for <b>{'{'}YOUR FULL NAME{'}'} </b>”. The text should read “I confirm that {'{'}YOUR FULL NAME{'}'} is a student that is currently under my supervision at  <b>{'{'}INSTITUTION NAME{'}'}</b> and that they will be attending ISWC 2026 to present work that they completed under my supervision. <b>{'{'}SUPERVISOR NAME{'}'}</b>”</li>
     </li>
-    </ul>
+    </ol>
 </p>
         
 <UnderlineHeader>Timeline</UnderlineHeader>
