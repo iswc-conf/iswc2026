@@ -3,7 +3,7 @@ import { theme } from "../../theme.js"
 import { useState, useRef } from "react";
 import ExternalLink from "./ExternalLink.jsx"
 
-export const TutorialTable = ({title, description, data, header_title, type_title = "Type"}) => {
+export const TutorialTable = ({title, description, data, header_title, type_title = "Format"}) => {
     const [openIndexes, setOpenIndexes] = useState([]);
     const detailRefs = useRef([]);
     const toggleDetail = (index) => {
