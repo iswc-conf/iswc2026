@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "ISWC 2026",
+  "name": "ISWC 2026 — The 25th International Semantic Web Conference",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,18 +8,13 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo.webp",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo .png",
+      "src": "logo.png",
       "type": "image/png",
       "sizes": "512x512"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#023558",
   "background_color": "#ffffff"
 }
