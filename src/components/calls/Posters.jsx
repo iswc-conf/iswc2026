@@ -17,7 +17,7 @@ export const Posters = () => {
         
         <SubHeader>Important Dates</SubHeader>
 
-                    <ul className="list-disc list-inside">
+                    <ul>
 
                     <li>Posters & demos submissions due:<b>	July 24th, 2026</b></li>
                     <li>Author notifications:<b> August 21th, 2026</b> </li>
@@ -31,7 +31,7 @@ export const Posters = () => {
 
         <p>We invite submissions relevant to the areas of Semantic Web, Knowledge Graphs, and Linked Data, which address, but are not limited to, the topics of the Research Track, the Resources Track, the In-Use Track, and the Industry Track. Visionary ideas, position statements, negative results, and outrageous ideas are also welcome</p>
 
-        <ul className="list-disc list-inside ml-8">
+        <ul>
 
                     <li><b>Posters: </b>Submissions should describe research work (ongoing or completed), resource projects, or systems (both academic and commercial) relevant to the topics above.</li>
                    
@@ -42,7 +42,7 @@ export const Posters = () => {
         <p>We welcome submissions from Industry, provided they focus on technical contributions rather than product advertisements. Authors of full papers accepted in the Research, Resources, and In-Use Tracks are encouraged to submit a poster or a demonstration. The submission should be formatted as other submissions to this track. Still, it must cite the accepted full paper and include a description of how it complements or adds value to the full paper. The added value could include:</p>
         
 
-             <ul className="list-disc list-inside ml-8">
+             <ul>
 
                     <li>Extended results and experiments not presented in the full paper for reasons of space or</li>
                    
@@ -59,7 +59,7 @@ export const Posters = () => {
 
         <p>All submissions should follow the single anonymous submission policy (i.e., authors are named, reviewers are anonymous).</p>
 
-        <ul className="list-disc list-inside ml-8">
+        <ul>
                 <li>All submissions must be in English and in PDF format.</li>
 <li>Submissions must adhere to the <ExternalLink href="https://ceurws.wordpress.com/2020/03/31/ceurws-publishes-ceurart-paper-style/">CEURART 1-column style</ExternalLink> (LNCS is not valid anymore). The title should use the emphasizing capitalized style, and submissions should not include page numbers.</li>
 <li>For HTML submission guidance, please see the <ExternalLink href="https://iswc2026.semanticweb.org/#/guidelines/html-submission">HTML submission guide</ExternalLink>.</li>
@@ -92,7 +92,7 @@ Each submission must include a section titled "Declaration of use of Generative 
             <p><b>Contact: <ExternalLink href="mailto:iswc2026-pd@easychair.org">iswc2026-pd@easychair.org</ExternalLink></b></p>
 
 
-              <ul className="ul-disc">
+              <ul>
                 <li><b>Jiaoyan Chen</b> —  University of Manchester, UK</li>
         <li><b>Robert Hoehndorf</b> — King Abdullah University of Science and Technology, Saudi Arabi
 </li>

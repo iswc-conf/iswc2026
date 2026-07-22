@@ -33,7 +33,7 @@ export const Dagstuhl = () => {
 
 <SubHeader>Important Dates</SubHeader>
 
-<ul className="ul-disc ml-8">
+<ul>
         <li>Submission deadline: <b>June 30, 2026</b></li>
         <li>Notification to proposers:<b>July 3, 2026</b> </li>
         <li>Workshop website online:<b>July 17, 2026</b> </li>
@@ -48,7 +48,7 @@ export const Dagstuhl = () => {
     
     <SubHeader>The Barstuhl workshop proposal should include the following sections</SubHeader>
 
-    <ul className="ul-disc ml-8">
+    <ul>
 
   <li>
     <b>Workshop Title and Acronym</b>
@@ -100,7 +100,7 @@ export const Dagstuhl = () => {
 
     <p>I got my Barstuhl accepted, what’s next? Accepted workshops will follow these requirements:</p>
 
-    <ul className="ul-disc ml-8">
+    <ul>
             
   <li>
     <b>Workshop Web Page:</b> The page should emphasize the open, interactive, and discussion-driven nature of the event. It should highlight the key challenges or topics to be discussed, as well as the intended format and expected outcomes.
@@ -126,7 +126,7 @@ export const Dagstuhl = () => {
 
     <UnderlineHeader>Contacts</UnderlineHeader>
 <p>Contact: <ExternalLink href="mailto:iswc2026-ds-workshops@easychair.org">iswc2026-ds-workshops@easychair.org</ExternalLink>Workshop Chairs:</p>
-<ul className="ul-disc ml-8">
+<ul>
 
 
         <li>Jacopo de Berardinis - University of Liverpool, UK</li>

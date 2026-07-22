@@ -28,7 +28,7 @@ export const CodeOfConduct = () => {
 
                     <p>SWSA disapproves of offensive actions, aggressive acts, or comments that intimidate or disparage others. SWSA will not tolerate any kind of harassment, including but not limited to:</p>
 
-                    <ul className="ul-disc">
+                    <ul>
                         <li>Verbal attacks, accusations, bullying, or offensive comments</li>
                         <li>Aggressive or intimidatory questioning</li>
                         <li>Sustained disruption during presentations and other events</li>
@@ -51,7 +51,7 @@ export const CodeOfConduct = () => {
 
                     <UnderlineHeader>References</UnderlineHeader>
                 
-                        <ul className="ul-disc lg:text-lg">
+                        <ul>
                             <li><ExternalLink href="http://confcodeofconduct.com/">confcodeofconduct.com</ExternalLink></li>
                             <li><ExternalLink href="https://www.w3.org/Consortium/cepc/">W3C Code of Ethics and Professional Conduct</ExternalLink></li>
                             <li><ExternalLink href="https://www.aclweb.org/adminwiki/index.php?title=Anti-Harassment_Policy">ACL Anti-Harassment Policy</ExternalLink></li>

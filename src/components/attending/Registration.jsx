@@ -85,7 +85,7 @@ export const Registration = () => {
       <p><b>Fee: 100,00 EUR (VAT Included)</b></p>
 
       <p>Note:</p>
-      <ul className="ul-disc ml-8">
+      <ul>
 
           <li>If you wish to attend <b>both the Main Conference (Oct. 27-29) and the Pre-conference Days (Oct. 25-26)</b>, please ensure you select both the appropriate <b>"Main Conference Registration fee" and "the Pre-conference Days, Oct. 25-26 (Workshops / Tutorials / Ph.D. Symposium) option"</b>, and proceed with payment accordingly.</li>
           <li>If you wish to attend <b>ONLY the Pre-conference Days (Oct. 25-26)</b>, please select "the <b>Pre-conference Days, Oct. 25-26 (Workshops / Tutorials / Ph.D. Symposium) ONLY"</b>.</li>
@@ -93,7 +93,7 @@ export const Registration = () => {
 
 
       <UnderlineHeader>Main Conference Registration includes:</UnderlineHeader>
-      <ul className="ul-disc ml-8">
+      <ul>
 
           <li>Access to all main conference sessions (October 27-29, 2026)</li>
           <li>Lunch and coffee breaks during the main conference (Oct. 27-29, 2026)</li>
@@ -105,21 +105,21 @@ export const Registration = () => {
         </ul>
 
       <UnderlineHeader>Pre-conference Days option includes:</UnderlineHeader>
-      <ul className="ul-disc ml-8">
+      <ul>
           <li>Access to Workshops/Tutorials/Ph.D. Symposium sessions (October 25-26, 2026)</li>
           <li>Lunch and coffee breaks during both days (October 25-26, 2026)</li>
         </ul>
 
       <UnderlineHeader>Additional Gala Dinner Ticket for an Accompanying Persons includes:</UnderlineHeader>
 
-      <ul className="ul-disc ml-8">
+      <ul>
           <li>Gala Dinner (October 28, 2026)</li>
 
         </ul>
 
       <UnderlineHeader>Terms & Conditions</UnderlineHeader>
 
-      <ul className="ul-disc ml-8">
+      <ul>
           <li>All registration fees are listed in EUR and do not include tax (22% VAT).</li>
           <li>Payment in any other currency will not be accepted.</li>
           <li>The applicable fee is based on the date of receipt of both the registration request and payment. If either is received after midnight (CEST) on the relevant deadline date, the higher fee will apply.</li>
@@ -128,7 +128,7 @@ export const Registration = () => {
         </ul>
 
       <UnderlineHeader>Payment Details</UnderlineHeader>
-      <ul className="ul-disc ml-8">
+      <ul>
           <li>Registration fees can be paid by credit card.</li>
           <li>Accepted cards: VISA, MasterCard.</li>
           <li>Payment is confirmed at the time of registration.</li>
@@ -145,9 +145,9 @@ export const Registration = () => {
       <UnderlineHeader>Cancellation & Alteration Policy</UnderlineHeader>
 
 
-      <ul className="ul-disc ml-8">
+      <ul>
           <li>All cancellations or changes must be made in writing via email to: iswc2026@cicsud.it</li>
-          <li>Cancellation fees apply as follows: <ul className="ml-16">
+          <li>Cancellation fees apply as follows: <ul>
             <li>
               Until September 2, 2026: A refund will be issued after deducting a 6% processing fee from the total registration fee.
             </li>

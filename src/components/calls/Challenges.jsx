@@ -25,7 +25,7 @@ export const Challenges = () => {
 
                     <h2 style={{ color: '#e94607' }} className="text-xl font-semibold mt-6">Topics</h2>
                     <p>For ISWC 2025, Challenge proposals are invited for any challenge involving Semantic Web tasks, including but not limited to:</p>
-                    <ul className="list-disc ml-16 text-md lg:text-lg font-[300]">
+                    <ul>
                         <li>Ontology and knowledge graph alignment</li>
                         <li>Ontology and knowledge graph quality assurance (QA)</li>
                         <li>Knowledge graph construction and refinement</li>
@@ -54,7 +54,7 @@ export const Challenges = () => {
                     <p>
                         ISWC 2025 will run multiple challenges with the aim of evaluating and comparing software solutions for the Semantic Web and Knowledge Graphs in a systematic way. To propose a challenge, you are required to:
                     </p>
-                    <ul className="list-disc list-inside text-md lg:text-lg font-[300]">
+                    <ul>
                         <li>Specify a task to be addressed.</li>
                         <li>Provide an evaluation dataset.</li>
                         <li>Define evaluation measures to compare the performance of participating systems.</li>
@@ -69,7 +69,7 @@ export const Challenges = () => {
                     <p>
                         Proposals for challenges should be concise (2–4 pages) and include:
                     </p>
-                    <ul className="list-disc list-inside text-md lg:text-lg font-[300]">
+                    <ul>
                         <li>Names and affiliations of the organizers.</li>
                         <li>Description of the challenge, including its relevance to the Semantic Web community.</li>
                         <li>Process for selecting, acquiring, and preparing data for training and evaluation, with conditions of availability. Describing data in relation to the FAIR principles is recommended.</li>
@@ -82,7 +82,7 @@ export const Challenges = () => {
 
 
                     <h2 style={{ color: '#e94607' }} className="text-xl font-semibold mt-6">Selection Criteria</h2>
-                    <ul className="list-disc list-inside text-md lg:text-lg font-[300]">
+                    <ul>
                         <li>Relevance to the Semantic Web community.</li>
                         <li>Potential number of interested participants.</li>
                         <li>Rigor and transparency of task description and evaluation procedure.</li>
@@ -96,7 +96,7 @@ export const Challenges = () => {
                     <p>
                         Accepted challenges will need to adhere to the following requirements:
                     </p>
-                    <ul className="list-disc list-inside text-md lg:text-lg font-[300]">
+                    <ul>
                         <li>Challenge Web Page: Organizers must prepare a challenge web page with detailed participation instructions, format, and timelines.</li>
                         <li>Timeline for Deadlines: Organizers are encouraged to adhere to the indicative timeline for challenges provided by ISWC.</li>
                         <li>Participation Requirements: At least one challenge organizer must register for the conference by the early bird registration deadline and attend the challenge in person.</li>
@@ -106,7 +106,7 @@ export const Challenges = () => {
                     <p>
                         The tentative timeline template for organizing a Challenge is as follows (all deadlines are 23:59 AoE):
                     </p>
-                    <ul className="list-disc list-inside text-md lg:text-lg font-[300]">
+                    <ul>
                         <li>Website & first call for participation - Mar 16th</li>
                         <li>Release datasets - Mar 30th</li>
                         <li>Release of Test Set (optional) - May 16th</li>

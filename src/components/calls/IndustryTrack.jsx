@@ -55,7 +55,7 @@ export const IndustryTrack = () => {
                 <li>Integration of knowledge graphs and semantic technologies with other technologies, including
 
 
-                    <ul style={{ listStyleType: "circle" }} className="ml-16">
+                    <ul>
                         <li>GenAI agents and agent-based systems, e.g., for structuring agentic memory (i.e., history of interaction in an environment) in agentic AI applications.</li>
                         <li>Large Language Models (LLMs): use cases and best practices for leveraging semantic structures and knowledge graphs to enhance LLM performance, as well as employing LLMs to enrich or refine semantic data.</li>
                         <li>Information retrieval, machine learning, natural language processing, human-AI interaction, distributed computing, and stream processing.</li>

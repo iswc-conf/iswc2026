@@ -14,7 +14,7 @@ export const SupplementalMaterials = () => {
             <Header>  Supplemental Material Statement Guide</Header>
 
             <UnderlineHeader>Key Points:</UnderlineHeader>
-            <ul className="list-disc list-inside">
+            <ul>
                     <li>All papers submitted to the ISWC 2026 Research and In-Use Tracks must include a Supplemental Material Statement (even if to explain why such material cannot be published in whole or part)</li>
                     <li>It is expected that supplemental material is made (anonymously) available to reviewers as part of the initial submission, in anticipation of the review process, not after.</li>
                     <li>Reviewers are not obliged to review supplemental material in detail. Papers should thus be self-contained.</li>
@@ -36,7 +36,7 @@ export const SupplementalMaterials = () => {
 
             <p>In order to make it easier for readers to find supplemental material, to understand what is provided and what is not provided, and why, we ask all authors to include a standardized Supplemental Material Statement at the end of their paper that:</p>
 
-            <ul className="list-disc list-inside ml-6">
+            <ul>
                     <li>lists all supplemental resources required to reproduce or otherwise verify the results presented in the paper;</li>
                     <li>points to locations where those resources can be found;</li>
                     <li>if applicable, justifies why certain resources cannot be made available (e.g., the privacy, technical or legal concerns involved), or indicates the conditions under which they can be made available (if any);</li>
@@ -54,7 +54,7 @@ export const SupplementalMaterials = () => {
 
             <UnderlineHeader>Content of the Supplemental Material Statement</UnderlineHeader>
             <p>The Supplemental Material Statement should point to the location of all supplemental resources made available for the purposes of reproducing or verifying the results presented in the paper. The authors must be careful to ensure that it is clear (either from the statement, or the resource linked from the statement) what versions, configurations, dependencies, steps, etc., are needed to reproduce the results of the paper using these resources. Some example templates of statements to include are:</p>
-            <ul className="list-disc list-inside ml-6">
+            <ul>
                     <li>Source code for our System X is available from …</li>
                     <li>Datasets X, Y, Z are available from …</li>
                     <li>Query sets X, Y, Z are available from …</li>
@@ -64,7 +64,7 @@ export const SupplementalMaterials = () => {
                 </ul>
             <p>Pointers to resources can be provided either directly in the text, as footnotes, or as bibliographical references; for example:</p>
 
-            <ul className="list-disc list-inside ml-6">
+            <ul>
                     <li>Source code for MyRDF is available from Github.1</li>
                     <li>Source code for MyRDF is available from Github [1].</li>
                     <li>Source code for MyRDF is available from Github at https://github.com/anonauthor/MyRDF.</li>
@@ -75,7 +75,7 @@ export const SupplementalMaterials = () => {
             <p>In case supplemental resources are submitted via EasyChair, we ask that authors mention this, but also mention how the resources will be made available after review (without specifying a specific location). For example:</p>
 
 
-            <ul className="list-disc list-inside ml-6">
+            <ul>
                     <li>Full proofs of Theorem X and Y are attached with the submission in EasyChair and, if accepted, will be published on arXiv in an extended version of the paper.</li>
                 </ul>
 
@@ -84,14 +84,14 @@ export const SupplementalMaterials = () => {
             <p>In case a resource cannot be published, we ask that the authors to clarify this in the statement, summarize why it cannot be published, and include details about the conditions under which the resource can be accessed (if any); for example:</p>
 
 
-            <ul className="list-disc list-inside ml-6">
+            <ul>
                     <li>Source code for our System X cannot be made available due to plans to commercialize the software.</li>
                     <li>Dataset X cannot be made available as it incorporates private user data. However, an anonymized version may be made available, for the sole purpose of replicating the results of this paper, upon contact with the authors.</li>
                 </ul>
 
             <p>In the case of a completely self-contained work with no supplemental material (e.g., a theoretical paper with full proofs in the body of the paper), it is sufficient to write:</p>
 
-            <ul className="list-disc list-inside ml-6">
+            <ul>
                     <li>No supplemental material is required for reproducibility or verification.</li>
                 </ul>
 

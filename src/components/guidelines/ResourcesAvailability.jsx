@@ -15,7 +15,7 @@ export const ResourcesAvailability = () => {
             <Header>Resources Availability Statement Guide</Header>
       
                 <UnderlineHeader>Key Points:</UnderlineHeader>
-                <ul className="list-disc list-inside">
+                <ul>
                         <li>All papers submitted to the ISWC 2026 Resources Track must include a resource availability statement. Papers without a resource availability statement may be desk rejected.</li>
                         <li>Resources must be available along with the initial submission, in anticipation of the review process.</li>
                         <li>Reviewers are requested to review the resource as well as the paper.</li>
@@ -35,7 +35,7 @@ export const ResourcesAvailability = () => {
                 <p>While it has become increasingly common for papers to include links to supplemental material to help verify the results they present, often this is done in an ad hoc manner that differs from paper to paper, even in Resources Track papers.</p>
                 <p>To make it easier for readers to find the resource, to understand what is provided and what is not provided, and why, we ask all authors to include a standardized Resource Availability Statement at the end of their paper that:</p>
 
-                <ul className="list-disc list-inside ml-6">
+                <ul>
                         <li>lists all resources presented in the paper;</li>
                         <li>points to locations where those resources can be found;</li>
                         <li>if applicable, justifies why certain resources cannot be made available (e.g., the privacy, technical or legal concerns involved), or indicates the conditions under which they can be made available (if any).</li>
@@ -50,7 +50,7 @@ export const ResourcesAvailability = () => {
 
                 <UnderlineHeader>Content of Resource Availability Statements</UnderlineHeader>
                 <p>The Statement should point to the location of all resources made available as presented in the paper. The authors must be careful to ensure that it is clear (either from the statement, or the resource linked from the statement) what versions, configurations, dependencies, steps, etc., are needed to use the resource. Some example templates of statements to include are:</p>
-                <ul className="list-disc list-inside ml-6">
+                <ul>
                         <li>Source code for our System X is available from …</li>
                         <li>Datasets X, Y, Z are available from …</li>
                         <li>Query sets X, Y, Z are available from …</li>
@@ -59,13 +59,13 @@ export const ResourcesAvailability = () => {
                     </ul>
                 <p>Pointers to resources can be provided either directly in the text of the statement, as footnotes, or as bibliographical references; for example:</p>
 
-                <ul className="list-disc list-inside ml-6">
+                <ul>
                         <li>Source code for OurX is available from Github.1</li>
                         <li>Source code for OurX is available from Github [1].</li>
                         <li>Source code for OurX is available from Github at https://github.com/ThisIsUs/OurX.</li>
                     </ul>
                 <p>If multiple resources are available at one location, statements can be combined, for example: “Datasets A, B and query sets X, Y are available from …”. As per CfP, resources must not be submitted via EasyChair. In the unlikely case that a resource cannot be published openly, the authors must clarify this in the statement, summarizing why it cannot be published, and include details about the conditions under which the resource can be accessed; for example:</p>
-<ul className="list-disc list-inside ml-6">
+<ul>
                         <li>Source code for our System X cannot be made available due to plans to commercialize the software.</li>
                         <li>Dataset X cannot be made available as it incorporates private user data. However, a suitably anonymized version may be made available under a licence, upon contact with the authors.</li>
                     </ul>

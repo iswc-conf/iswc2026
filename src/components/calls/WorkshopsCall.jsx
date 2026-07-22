@@ -36,7 +36,7 @@ export const Workshops = () => {
 
       <SubHeader>Important dates include</SubHeader>
 
-      <ul className="ul-disc">
+      <ul>
           <li>
             Submission deadline: <b>February 10, 2026</b>{" "}
           </li>
@@ -64,7 +64,7 @@ export const Workshops = () => {
         Knowledge Graph community:
       </p>
 
-      <ul className="ul-disc">
+      <ul>
           <li>
             <b>Novel:</b> Workshops focusing on emerging topics that are
             expected to gain importance in the Semantic Web and Knowledge Graph
@@ -120,7 +120,7 @@ export const Workshops = () => {
         Workshop proposals should focus on research topics and workshop formats
         that meet the following criteria:
       </p>
-      <ul className="ul-disc">
+      <ul>
           <li>
             The topic aligns with the broader scope of ISWC 2026, emphasizing
             Semantic Web standards and technologies, knowledge representation,
@@ -172,7 +172,7 @@ export const Workshops = () => {
         All workshop proposals should include the following sections:
       </SubHeader>
 
-      <ul className="ul-disc">
+      <ul>
           <li>
             <b>Workshop Title and Acronym</b>
           </li>
@@ -216,7 +216,7 @@ export const Workshops = () => {
         For novel, crossover, and established workshops, include:
       </SubHeader>
 
-      <ul className="ul-disc">
+      <ul>
           <li>
             <b>Workshop Format:</b> Describe the structure and mix of events,
             such as paper presentations, invited talks, panels, demos, and
@@ -245,7 +245,7 @@ export const Workshops = () => {
         For novel, crossover, and challenge workshops, include:
       </SubHeader>
 
-      <ul className="ul-disc">
+      <ul>
           <li>
             <b>Motivation:</b> Explain why the topic or challenge is timely and
             relevant to ISWC participants.
@@ -261,7 +261,7 @@ export const Workshops = () => {
 
       <SubHeader>For established workshops, include:</SubHeader>
 
-      <ul className="ul-disc">
+      <ul>
           <li>
             <b>Continuation:</b> Justify the continuation of the workshop.
             Highlight emerging topics, recent developments, or new challenges
@@ -276,7 +276,7 @@ export const Workshops = () => {
 
       <SubHeader>For challenge workshops, include:</SubHeader>
 
-      <ul className="ul-disc">
+      <ul>
           <li>
             <b>Data Preparation:</b> Specify the process for selecting,
             acquiring, and preparing data for training and evaluation, with
@@ -299,7 +299,7 @@ export const Workshops = () => {
       <p>
         Accepted workshops will need to adhere to the following requirements:
       </p>
-      <ul className="list-disc list-inside">
+      <ul>
           <li>
             <strong>Workshop Web Page:</strong> Organizers must prepare a
             workshop web page with a detailed call for papers (where applicable)
@@ -315,11 +315,11 @@ export const Workshops = () => {
           </li>
           <li>
             <strong>Organizational Responsibilities:</strong>
-            <ul style={{ listStyleType: "circle" }} className="ml-8">
+            <ul>
               <li>
                 Workshop organizers for novel, crossover, and established, are
                 responsible for:
-                <ul style={{ listStyleType: "square" }} className="ml-8">
+                <ul>
                   <li>
                     Conducting the reviewing process for submitted contributions (if applicable).
                   </li>
@@ -344,7 +344,7 @@ export const Workshops = () => {
           <li>
             <strong>Cancellation Policy:</strong>
             Workshops may be canceled at the discretion of the workshop and tutorial track chairs if:
-             <ul style={{ listStyleType: "circle" }} className="ml-8">
+             <ul>
               <li>
                 The workshop receives an insufficient number of submissions.
               </li>
@@ -360,7 +360,7 @@ export const Workshops = () => {
 
       <p>All workshops will adhere to a common timeline as follows (<b>all deadlines are 23:59 AoE</b>):</p>
 
-      <ul className="ul-disc">
+      <ul>
         <li>Workshop website and CfP available online:<b> March 20, 2026</b></li>
         <li>Challenge workshops release datasets (incl. test solution if available): <b>April 3, 2026</b></li>
         <li>Challenge solution submission:<b> June 26, 2026</b></li>
@@ -372,7 +372,7 @@ export const Workshops = () => {
         </ul>
       <UnderlineHeader>Workshop Chairs</UnderlineHeader>
 
-      <ul className="ul-disc">
+      <ul>
         <li><b>Andrei Ciortea</b> — University of St.Gallen (Switzerland) and Inria, Université Côte d’Azur, CNRS, I3S (France)</li>
         <li><b>Ilaria Tiddi</b> — Vrije Universiteit Amsterdam (The Netherlands)</li>
       </ul>

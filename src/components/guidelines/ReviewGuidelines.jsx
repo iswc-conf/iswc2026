@@ -19,9 +19,9 @@ export const ReviewGuidelines = () => {
                 <p>Send feedback on this guide to <ExternalLink href="iswc2026@easychair.org ">iswc2026@easychair.org </ExternalLink></p>
 
                 <UnderlineHeader>Table of Contents</UnderlineHeader>
-                <ul className="list-disc list-inside ">
+                <ul>
                     <li>Review Content</li>
-                   <ul style={{ listStyleType: "circle" }} className="ml-16">
+                   <ul>
                         <li>Provide a detailed and constructive review</li>
                         <li>Be civil and polite</li>
                         <li>Adequately justify your recommendation</li>
@@ -35,7 +35,7 @@ export const ReviewGuidelines = () => {
 
                 <p><b>Use of Generative AI: Reviewers</b></p>
 
-                <ul className="list-disc list-inside ">
+                <ul>
 
 
                     <li style={{ marginBottom: "10px" }}><b>1.</b> Reviewers should not upload, submit, or otherwise share any part of a paper under review (including its title, abstract, text, figures, or data) to any generative AI tool or service, whether free or paid. Submitted papers are confidential documents, and their authors retain copyright over their unpublished work. Sharing them with third-party AI services risks breaching both author confidentiality and applicable copyright, regardless of the privacy terms or data retention policies of the service in question.</li>
@@ -115,34 +115,34 @@ export const ReviewGuidelines = () => {
                 <p>Please clearly relate your review comments to your recommendation. The authors do not necessarily need to agree with your recommendation, but they should at least be able to understand your rationale, and how you think they could improve their work.</p>
                 <p>Each paper should satisfy the relevance criteria of the call, advance the area by providing significant novel insights/claims (which may include negative results), be technically correct in terms of its key contributions, be understandable and (when applicable) reproducible by someone knowledgeable and patient, and provide enough evidence to justify its key claims and conclusions. Failing (in part or whole) with respect to one of the criteria in the call for papers is potentially a valid reason to reject. Keep in mind that papers can achieve these goals without being highly technical and while leaving open questions or tasks for future work.</p>
                 <p>In case you recommend a reject, ensure that you clearly justify the rejection …</p>
-                <ul className="list-disc list-inside">
+                <ul>
                     <li>Avoid rejecting a paper solely for infrequent minor issues that do not affect the key content of the paper, but can instead be addressed by the authors (in an obvious way) for a camera-ready version.</li>
-                   <ul style={{ listStyleType: "circle" }} className="ml-16">
+                   <ul>
                         <li>Rather make your recommendation assuming that infrequent minor issues are corrected. Make concrete suggestions on how to address these issues for a future (possibly camera-ready) version of the paper.</li>
                         <li>Rather base your recommendation on the proposed approach, and suggest exploring the idea for future work (if you are happy to share it).</li>
                     </ul>
                     <li>Avoid rejecting a paper solely because there is something it does not achieve.</li>
-                    <ul style={{ listStyleType: "circle" }} className="ml-16">
+                    <ul>
                         <li>Rather base your recommendation on what the paper does achieve, and whether or not that is correct, sufficient, etc. (Do, however, expect key limitations and scope to be adequately clarified.)</li>
                     </ul>
                     <li>Avoid rejecting a paper solely because there exists a benchmark or baseline not used in the experiments.</li>
-                    <ul style={{ listStyleType: "circle" }} className="ml-16">
+                    <ul>
                         <li>Rather base your recommendation on whether or not the experiments and/or proofs are sufficient to justify the key claims or conclusions of the paper, and whether or not those claims/conclusions are of importance.</li>
                     </ul>
                     <li>Avoid rejecting a paper solely because the results are negative.</li>
-                   <ul style={{ listStyleType: "circle" }} className="ml-16">
+                   <ul>
                         <li>Rather base your recommendation on whether or not it advances the state-of-the-art, or offers negative results that provide novel insights on how the state-of-the-art can be advanced in future.</li>
                     </ul>
                     <li>Avoid rejecting a paper solely because it is not clear how its results could be immediately put into practice.</li>
-                   <ul style={{ listStyleType: "circle" }} className="ml-16">
+                   <ul>
                         <li>Rather base your recommendation on what the community stands to learn from the paper.</li>
                     </ul>
                     <li>Avoid rejecting a paper solely because it does not appear highly technical, or because the method (in hindsight) appears “obvious” or “trivial”.</li>
-                   <ul style={{ listStyleType: "circle" }} className="ml-16">
+                   <ul>
                         <li>Rather base your recommendation on whether or not the paper provides novel ideas or insights that advance the field.</li>
                     </ul>
                     <li>Avoid rejecting a paper for not meeting unrealistic, arbitrary or open-ended goals.</li>
-                  <ul style={{ listStyleType: "circle" }} className="ml-16">
+                  <ul>
                         <li>Rather base your recommendation on realistic and/or concrete criteria that are justified in the context of the goals of the work and the literature.</li>
                     </ul>
                 </ul>
@@ -220,14 +220,14 @@ export const ReviewGuidelines = () => {
                 <p>Of all the guidelines, this can be the hardest to follow. As much as we can try to avoid this situation, it can happen that you are assigned a paper that is a bit outside your comfort zone or area of expertise. Or you may be assigned a paper in your area that contains a large amount of technical detail you cannot verify in the time given. Please do not give up right away. Try your best to understand as much as you can of the paper, and to provide a recommendation based on what you understood. Be honest in the review text about what you understood, and what you didn’t understand. It is possible that someone more expert in the area might find the paper really interesting and worthwhile. Conversely, and perhaps even more commonly, your lack of understanding might well be the paper’s fault: it might be the case that the paper uses unhelpful notation, over-complicates technical detail, is poorly written, etc.</p>
                 <p>Even if you do not have much experience in the particular sub-area, be wary of papers where you struggled to follow the motivation, overall technical ideas, and main results. These should be expressed in a manner that the broader ISWC audience can understand. Be particularly wary of papers for which other reviewers also expressed major difficulties understanding (something that can only be detected if reviewers are honest about their understanding of the paper). If the SPC or Chairs feel that a more expert review is necessary, they will solicit it (something that again depends on reviewers being honest about how much you understood).</p>
                 <p>If you did not fully understand a paper, please consider lowering your confidence score. When assigning the score, please take into account the following aspects:</p>
-                <ul className="list-disc list-inside">
+                <ul>
                         <li>Your depth of understanding of the paper.</li>
                         <li>How well you know the literature in the area.</li>
                         <li>How certain you are about your recommendation.</li>
                     </ul>
                 <p>Please try to be honest and fair when selecting your confidence, which is intended to be a measure of the previous three points only (and not your repute as a researcher). The scores can be interpreted as follows (<ExternalLink href="https://brenocon.com/blog/2014/02/what-the-acl-2014-review-scores-mean/">based on guidelines for ACL 2014</ExternalLink>).</p>
 
-                <ul className="list-disc list-inside">
+                <ul>
                         <li>5: (expert) Positive that my evaluation is correct. I read the paper very carefully and am familiar with related work and have published on this topic.</li>
                         <li>4: (high) Quite sure. I tried to check the important points carefully and am familiar with related work. It’s unlikely, though conceivable, that I missed something that should affect my ratings.</li>
                         <li>3: (medium) Pretty sure and willing to defend my evaluation, but there’s a chance I missed something. Although I have a good feel for this area in general, I did not carefully check all the paper’s details, e.g., the math, experimental design, or novelty.</li>
@@ -239,7 +239,7 @@ export const ReviewGuidelines = () => {
 
                 <UnderlineHeader>Suggested Review Structure</UnderlineHeader>
                 <p>Reviewers may develop their own style of review over time, and no individual style is “best”. But if you are a relative newcomer to reviewing, and are looking for guidance on how to structure your review, consider adopting the following structure:</p>
-                <ul className="list-disc list-inside">
+                <ul>
                         <li><b>Overview</b>: Summarise the paper in your own words in a short, concise paragraph. While the authors (presumably) already know what their paper is about, this demonstrates to the authors, other reviewers, and chairs the extent to which you understood the paper, and what your personal perspective of the paper is. If you can provide a good overview, the authors will tend to value your opinion more. It is also a good exercise to ensure that you understand the paper. (In case there are parts of the paper you did not understand, clarify them here.)</li>
                         <li><b>Strengths</b>: Summarise around three main strengths of the paper as concise bullet points. Being able to expand on the positive aspects of the paper can be encouraging to authors, and can also help them to improve their work by building upon those strengths.</li>
                         <li><b>Weaknesses</b>: Summarise around three main weaknesses of the paper as concise bullet points. You do not need to go into too much detail yet. Do not include minor issues here. Consider criteria as listed in the call and in the questions of the review form (e.g., relevance, impact, clarity, reproducibility) when preparing the list of weaknesses.</li>

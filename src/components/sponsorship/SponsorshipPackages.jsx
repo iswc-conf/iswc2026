@@ -149,7 +149,7 @@ export const SponsorshipPackages = () => {
 
             <UnderlineHeader>À la carte Sponsorship Opportunities</UnderlineHeader>
 
-            <ul className="ul-disc">
+            <ul>
                     <li>Doctoral Consortium Sponsor [exclusive] (1.000 €)</li>
                     <li>Posters and Demo Reception</li>
                     <li>Opportunity to be named as sponsor for the prize of one of the best paper awards at the conference</li>

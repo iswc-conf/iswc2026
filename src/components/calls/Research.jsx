@@ -30,7 +30,7 @@ export const Research = () => {
 
             <SubHeader>Important information for authors:</SubHeader>
 
-            <ul className="list-disc list-inside">
+            <ul>
 
                     <li>Submissions are dual anonymous</li>
                     <li>Papers are limited to 15 pages excluding references and the "Declaration of use of Generative AI” section. Supplemental materials and annexes <b>do not</b> count toward the established page limit. Annexes can be in the same pdf as the body of the paper and should follow the references. Supplemental materials will be uploaded separately.
@@ -44,7 +44,7 @@ export const Research = () => {
             <SubHeader>Important Dates</SubHeader>
 
 
-            <ul className="list-disc list-inside">
+            <ul>
 
                     <li>Abstract submission due<b>	2 May 2026</b></li>
                     <li>Full paper submission due <b>7 May 2026</b></li>
@@ -63,7 +63,7 @@ export const Research = () => {
             <p>We encourage papers that directly advance the Semantic Web. The relationship to the core area of the conference needs to be clearly described in the submitted work. Submissions beyond the scope will be desk-rejected. Topics in the Semantic Web area include, but are not limited to:</p>
 
             <SubHeader>Ontologies and capturing knowledge including:</SubHeader>
-            <ul className="list-disc list-inside">
+            <ul>
                     <li>Ontology Engineering and ontology patterns</li>
                     <li>Ontology modularity, mapping, merging, and alignment</li>
                     <li>Information extraction, knowledge graph construction</li>
@@ -71,7 +71,7 @@ export const Research = () => {
                 </ul>
 
             <SubHeader>Representation, management, and applications of Knowledge Graphs (including RDF and property graphs):</SubHeader>
-            <ul className="list-disc list-inside">
+            <ul>
                     <li>Knowledge Representation and Reasoning</li>
                     <li>Search, query, integration, and analysis</li>
                     <li>Robust and scalable management</li>
@@ -81,7 +81,7 @@ export const Research = () => {
 
                 </ul>
             <SubHeader>Integration of the Semantic Web with:</SubHeader>
-            <ul className="list-disc list-inside">
+            <ul>
                     <li>Machine learning, data mining, and neurosymbolic reasoning</li>
                     <li>Generative AI (including Large Language Models) and Agentic AI</li>
                     <li>User interfaces, usability, and accessibility</li>
@@ -95,7 +95,7 @@ export const Research = () => {
 
                 </ul>
             <SubHeader>Semantic Web Agents including:</SubHeader>
-            <ul className="list-disc list-inside">
+            <ul>
                     <li>Autonomous systems, including multi-agent systems and robotics</li>
                     <li>Architecture characteristics for autonomy exploiting KGs</li>
                     <li>Incomplete or conflicting knowledge, beliefs, and assumptions and KGs</li>
@@ -113,7 +113,7 @@ export const Research = () => {
 
             <p>Papers in this track will be reviewed according to the following criteria:</p>
 
-            <ul className="list-disc list-inside ml-8">
+            <ul>
                     <li>Originality and novelty</li>
                     <li>Relevance of the topic to the conference</li>
                     <li>Impact of the research contributions</li>
@@ -152,7 +152,7 @@ export const Research = () => {
 
             <UnderlineHeader>Submission Details</UnderlineHeader>
 
-            <ul className="list-disc list-inside">
+            <ul>
                     <li>Pre-submission of abstracts is a strict requirement. </li>
                     <li>All papers and abstracts have to be submitted electronically via <ExternalLink href="https://easychair.org/conferences/?conf=iswc2026">EasyChair</ExternalLink>. </li>
                     <li>Submitted papers will be checked to ensure that they satisfy the submission criteria and are in scope with the aims of the conference, and if such violations are identified, then the submission may be subject to desk rejection without review.</li>
@@ -176,7 +176,7 @@ export const Research = () => {
 
             <p> We strongly recommend that prospective authors carefully check the calls of the other main tracks of the conference in order to identify the optimal track for their submission (submission of the same work to multiple tracks is prohibited). </p>
 
-            <ul className="list-disc list-inside ml-8">
+            <ul>
 
                     <li>Papers that propose new algorithms and architectures should be submitted to the regular research track;</li>
                     <li>Papers that reuse and apply state-of-the-art semantic technology or resources in practical settings should be submitted to the in-use track (i.e., the novelty falls into the in-use application of the semantic technology or resource);</li>
@@ -198,7 +198,7 @@ export const Research = () => {
             <p>To help with the dual anonymous reviewing process please ensure the following when submitting to ISWC 2026: </p>
 
 
-            <ul className="list-disc list-inside ml-8">
+            <ul>
 
                     <li>The first page, on which the paper body begins, should include the title and abstract but not the names or affiliations of the authors.</li>
                     <li>Remove any identifying information, including author names, from file names and ensure document properties are also anonymized.</li>
@@ -240,7 +240,7 @@ export const Research = () => {
             <p><b>Contact: <ExternalLink href="mailto:iswc2026-research@easychair.org">iswc2026-research@easychair.org</ExternalLink></b></p>
 
 
-              <ul className="ul-disc">
+              <ul>
         <li><b>Manolis Koubarakis</b> — National and Kapodistrian University of Athens, Greece
 </li>
         <li><b>Maria-Esther Vidal</b> —  Leibniz University Hannover & TIB-Leibniz Information Center of Science and Technology, Germany</li>

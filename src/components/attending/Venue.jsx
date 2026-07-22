@@ -30,14 +30,14 @@ export const VenueAndAccomodation = () => {
             </ExternalLink>{" "}
             one of the most important hotels and conference centers in Bari.
           </p>
-          <ul className="ul-disc lg:text-lg">
+          <ul>
             <li>4-star hotel and conference center</li>
             <li>15 modular meeting rooms</li>
             <li>Wi-Fi in rooms and common areas</li>
             <li>5 different dining locations</li>
           </ul>
           <p>And for guests:</p>
-          <ul className="ul-disc lg:text-lg">
+          <ul>
             <li>Wellness area</li>
             <li>Free bike sharing</li>
             <li>174 bedrooms</li>

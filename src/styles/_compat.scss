@@ -1,14 +1,14 @@
 // =============================================================================
 // TEMPORARY compatibility shim
 // -----------------------------------------------------------------------------
-// A handful of content pages still carry inline Tailwind class names from the
-// previous codebase. Tailwind is gone, so this file reimplements exactly those
-// classes - nothing more - until each page is converted.
+// A few content pages still carry inline Tailwind class names from the previous
+// codebase. Tailwind is gone, so this file reimplements exactly those classes -
+// nothing more - until each page is converted.
 //
 // Nothing here may redefine a class Bootstrap already ships: Tailwind's spacing
 // scale (n x 0.25rem) and Bootstrap's ($spacer x factor) disagree on the shared
 // names m-4, p-3 and friends, so those are left to Bootstrap and only the steps
-// Bootstrap has no equivalent for (6, 8, 10, 16) appear below.
+// Bootstrap has no equivalent for appear below.
 //
 // This file shrinks as pages are migrated. Do not add to it; when you convert a
 // page, delete whatever is no longer referenced.
@@ -78,36 +78,12 @@
   justify-content: flex-start;
 }
 
-.list-disc {
-  list-style-type: disc;
-}
-
-.list-inside {
-  list-style-position: inside;
-}
-
 .mb-6 {
   margin-bottom: 1.5rem;
 }
 
 .mb-8 {
   margin-bottom: 2rem;
-}
-
-.ml-10 {
-  margin-left: 2.5rem;
-}
-
-.ml-16 {
-  margin-left: 4rem;
-}
-
-.ml-6 {
-  margin-left: 1.5rem;
-}
-
-.ml-8 {
-  margin-left: 2rem;
 }
 
 .mt-6 {
@@ -172,10 +148,6 @@
 
 .tracking-wide {
   letter-spacing: 0.025em;
-}
-
-.ul-disc {
-  list-style-type: disc;
 }
 
 .w-full {

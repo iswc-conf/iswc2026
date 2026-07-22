@@ -90,7 +90,8 @@ export default function MyPage() {
       <p>Plain paragraphs and lists are styled globally — no classes needed.</p>
       <UnderlineHeader>A section</UnderlineHeader>
       <ul>
-        <li>Bullets already look right.</li>
+        <li>Write lists as a bare &lt;ul&gt; — never add classes for bullets,
+            indentation or nesting. That is all handled globally.</li>
       </ul>
     </Page>
   );

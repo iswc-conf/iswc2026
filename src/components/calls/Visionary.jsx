@@ -87,7 +87,7 @@ export const Visionary = () => {
     <UnderlineHeader>Track Chairs</UnderlineHeader>
 
     <p>For inquiries regarding the alignment of your visionary paper, please reach out to the Track Chairs at: <ExternalLInk href="mailto:iswc2026-vision@easychair.org">iswc2026-vision@easychair.org</ExternalLInk></p>
-    <ul className="ml-8">
+    <ul>
             <li>Lora Aroyo, Google, USA</li>
 <li>Gianluca Demartini, University of Queensland, Australia</li>
 

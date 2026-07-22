@@ -29,7 +29,7 @@ export const Host = () => {
 
                     <p>Nara is easily accessible from major airports, ensuring a smooth journey for both international and domestic attendees.</p>
 
-                    <ul className="list-disc ml-16 text-md lg:text-lg font-[300]">
+                    <ul>
                         <li><b>From Kansai International Airport (KIX):</b> 90 minutes by airport bus, 100 minutes by train.</li>
                         <li><b>From Osaka International Airport (Itami Airport - ITM):</b> 70 minutes by airport bus, 110 minutes by train.</li>
                     </ul>
@@ -40,7 +40,7 @@ export const Host = () => {
                     <h2 style={{ color: '#e94607' }} className="text-xl font-semibold mt-6">Key Attractions for Attendees</h2>
 
                     <p>While attending ISWC 2025, take the opportunity to explore <b>Nara’s iconic landmarks:</b></p>
-                    <ul className="list-disc ml-16 text-md lg:text-lg font-[300]">
+                    <ul>
                         <li><b>Todaiji Temple & the Great Buddha</b> – One of Japan’s most famous temples, home to a massive bronze Buddha statue.</li>
                         <li><b>Nara Park</b> – Walk among the friendly, freely roaming deer, considered sacred messengers in Japanese culture.</li>
                         <li><b>Kasuga Taisha Shrine</b> – A beautiful Shinto shrine renowned for its atmospheric lantern-lit pathways.</li>
@@ -60,7 +60,7 @@ export const Host = () => {
                     <p>
                     Extend your stay and explore more of Japan’s wonders:
                     </p>
-                    <ul className="list-disc list-inside text-md lg:text-lg font-[300]">
+                    <ul>
                         <li><b>Kyoto (30 minutes from Nara)</b> – Visit the world-famous <b>Kinkaku-ji (Golden Pavilion), Fushimi Inari Shrine</b>, and <b>Arashiyama Bamboo Forest</b>.</li>
                         <li><b>Osaka (45 minutes from Nara)</b> – Experience the vibrant nightlife, indulge in delicious street food, and visit <b>Osaka Castle</b>.</li>
                     </ul>

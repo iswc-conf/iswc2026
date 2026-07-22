@@ -41,8 +41,10 @@ p {
 }
 
 // -- Lists --------------------------------------------------------------------
-// The original site leaned on Tailwind's `list-disc list-inside` everywhere.
-// Semantic lists now carry that styling by default.
+// Every list on the site is written as a bare <ul> or <ol> and styled from
+// here. The previous codebase had nine different conventions for this
+// (`ul-disc ml-8`, `list-disc list-inside`, inline listStyleType, ...), which
+// is why indentation and bullet styles drifted between pages.
 ul,
 ol {
   margin-bottom: 1rem;
@@ -65,10 +67,25 @@ li {
   }
 }
 
-// Nested lists step down the marker style, as before.
+// Nested lists step down the marker style and sit closer to their parent item.
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+  margin-top: 0.35rem;
+  margin-bottom: 0.5rem;
+}
+
 ul ul {
   list-style-type: circle;
-  margin-top: 0.35rem;
+}
+
+ul ul ul {
+  list-style-type: square;
+}
+
+ol ol {
+  list-style-type: lower-alpha;
 }
 
 // -- Links --------------------------------------------------------------------

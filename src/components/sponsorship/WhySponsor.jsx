@@ -24,7 +24,7 @@ export const WhySponsor = () => {
 
             <p>ISWC is where the core ideas behind knowledge graphs, ontologies, reasoning, and semantic interoperability are actively shaped — often years before they surface in enterprise platforms or mainstream AI narratives.</p>
             <p>Sponsorship enables organizations to:</p>
-            <ul className="ul-disc ml-8">
+            <ul>
                     <li>Gain early visibility into research directions that will define the next generation of AI and data platforms</li>
                     <li>Engage directly with researchers working on foundational problems of meaning, inference, and context</li>
                     <li>Help steer research toward real enterprise challenges through workshops, challenges, and industry engagement</li>
@@ -41,7 +41,7 @@ export const WhySponsor = () => {
             </p>
 
             <p>Sponsorship signals:</p>
-            <ul className="ul-disc ml-8">
+            <ul>
                     <li>Respect for rigor and foundational thinking</li>
                     <li>Commitment to serious, long-term knowledge work
                     </li>
@@ -59,7 +59,7 @@ export const WhySponsor = () => {
             <p><b>Open standards, interoperability, and long-term optionality</b></p>
             <p>As knowledge and context move to the center of AI systems, organizations face increasing risk of vendor <b>lock-in at the knowledge layer</b>. Historically, the semantic web community has emphasized open standards and interoperability to mitigate exactly this risk.</p>
             <p>Supporting ISWC helps:</p>
-            <ul className="ul-disc ml-8">
+            <ul>
                     <li>Reinforce open, interoperable approaches to knowledge and context
                     </li>
                     <li>Encourage collaboration across industry, academia, and vendors
@@ -75,7 +75,7 @@ export const WhySponsor = () => {
 
             <p>Organizations that sponsor ISWC are not simply supporting a conference. They are:
             </p>
-            <ul className="ul-disc ml-8">
+            <ul>
                     <li>Engaging upstream with the ideas shaping enterprise AI and knowledge
 
                     </li>

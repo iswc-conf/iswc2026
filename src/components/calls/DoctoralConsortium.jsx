@@ -20,7 +20,7 @@ export const DoctoralConsortium = () => {
             The <b>ISWC 2026 Doctoral Consortium (DC)</b> will take place as part of the <ExternalLink href="https://iswc2026.semanticweb.org/">25th International Semantic Web Conference</ExternalLink>. This forum will provide PhD students with an opportunity to:
 
 
-            <ul className="list-disc list-inside ml-8">
+            <ul>
                     <li>Present and discuss their research ideas in a supportive, formative, and yet critical environment;</li>
                     <li>Receive feedback from mentors, typically senior members of the Semantic Web research community, and peers;</li>
                     <li>Network and build collaborations with other members of the community.</li>
@@ -37,7 +37,7 @@ export const DoctoralConsortium = () => {
             <SubHeader>Important Dates</SubHeader>
 
 
-            <ul className="list-disc list-inside">
+            <ul>
 
                     <li>Submission due<b>	June 1, 2026</b></li>
                     <li>Notifications<b> July 6, 2026</b> </li>
@@ -62,7 +62,7 @@ export const DoctoralConsortium = () => {
 <p>The submission should address the following questions:
 </p>
 
-<ul className="list-disc list-inside ml-8">
+<ul>
 
 <li><b>1. Problem statement: </b> What is the problem that you are trying to solve?</li>
 <li><b>2. Importance:</b> Why is this problem important and for whom? Who will benefit and who should care? What is the impact of solving this problem (for the research community, or society in general)?</li>
@@ -95,7 +95,7 @@ Each submission must include a section titled "Declaration of use of Generative 
             <p><b>Contact: <ExternalLink href="mailto:iswc2026-doctoral-consortium@easychair.org">iswc2026-doctoral-consortium@easychair.org</ExternalLink></b></p>
 
 
-              <ul className="ul-disc">
+              <ul>
         <li><b>Anna Lisa Gentile</b> — IBM Research
 </li>
         <li><b>Aidan Hogan</b> —  DCC, Universidad de Chile</li>

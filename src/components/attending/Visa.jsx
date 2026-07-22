@@ -20,7 +20,7 @@ export const Visa = () => {
            <p>
 Visa regulations depend on the applicant’s nationality, country of residence, purpose of stay, and length of stay. For official and updated information regarding visa requirements and application procedures, please consult the following websites:</p>
 
-            <ul className="ul-disc ml-8">
+            <ul>
                     <li><ExternalLink href="https://vistoperitalia.esteri.it/?lang=en_US&utm_source=chatgpt.com">https://vistoperitalia.esteri.it/?lang=en_US&utm_source=chatgpt.com</ExternalLink></li>
                     <li><ExternalLink href="https://www.esteri.it/en/servizi-opportunita/ingressosoggiornoinitalia/visto_ingresso/">https://www.esteri.it/en/servizi-opportunita/ingressosoggiornoinitalia/visto_ingresso/</ExternalLink></li>
                     <li><ExternalLink href="https://www.esteri.it/en/servizi-consolari-e-visti/ingressosoggiornoinitalia/visto_ingresso/paesi_esenti_visto/">https://www.esteri.it/en/servizi-consolari-e-visti/ingressosoggiornoinitalia/visto_ingresso/paesi_esenti_visto/</ExternalLink></li>
@@ -35,7 +35,7 @@ Visa regulations depend on the applicant’s nationality, country of residence, 
             <SubHeader>Exemption of Visa (Short Term Stay)</SubHeader>
             The list of exempt countries and further details on visa exemptions can be found on the official website of the Ministry of Foreign Affairs of Italy:
 
-            <ul className="ul-disc ml-8">
+            <ul>
                     <li><ExternalLink href="https://www.esteri.it/en/servizi-opportunita/ingressosoggiornoinitalia/visto_ingresso/paesi_esenti_visto/">https://www.esteri.it/en/servizi-opportunita/ingressosoggiornoinitalia/visto_ingresso/paesi_esenti_visto/</ExternalLink></li>
 
                 </ul>
@@ -51,7 +51,7 @@ Visa regulations depend on the applicant’s nationality, country of residence, 
 
             <p>Participants requiring a visa may request an official invitation letter for visa purposes by contacting: <ExternalLink href="mailto:ISWC2026@cicsud.it">ISWC2026@cicsud.it</ExternalLink></p>
 <p>Please include:</p>
-           <ul className="ul-disc ml-8">
+           <ul>
 
                 <li>“Visa Request – ISWC 2026” in the subject line of the email; </li>
                 <li>Your full name;</li>
@@ -73,7 +73,7 @@ All expenses related to conference registration, travel, accommodation, and visa
 
             <p>For any inquiries regarding visa support documentation, please contact: </p>
 
-                            <ul className="ul-disc ml-8">
+                            <ul>
                     <li><ExternalLink href="mailto:ISWC2026@cicsud.it">ISWC2026@cicsud.it</ExternalLink></li>
 
                     <li><ExternalLink href="https://www.cicsud.it/">Cic Sud: Centro Italiano Congressi Bari</ExternalLink></li>

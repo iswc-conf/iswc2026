@@ -18,7 +18,7 @@ export const Tutorials = () => {
 
             <SubHeader>Important Dates</SubHeader>
 
-            <ul className="list-disc list-inside">
+            <ul>
 
                     <li>Submission deadline: <b>June 9, 2026</b></li>
                     <li>Notification to proposers: <b>June 23, 2026</b></li>
@@ -34,7 +34,7 @@ export const Tutorials = () => {
 </p>
 <p>For ISWC attendees, we envision tutorials of the following types:</p>
 
-            <ul className="list-disc list-inside ml-8">
+            <ul>
                     <li>Tutorials introducing core concepts and established practices in Semantic Web and Knowledge Graph domains (e.g., RDF, OWL, SPARQL, SHACL, and linked data principles) or foundational research methodologies (e.g., FAIR principles, Open Science practices).</li>
 <li>Tutorials exploring intersections between Semantic Web/Knowledge Graph technologies and other fields (e.g., big data, machine learning, generative AI, multi-agent systems) to examine how they complement each other and the potential for innovative applications.</li>
 <li>Tutorials focusing on cutting-edge trends, specific tools, or applications within the Semantic Web and Knowledge Graph space.</li>
@@ -44,7 +44,7 @@ export const Tutorials = () => {
             <p>The tutorials will be held during the pre-conference days, October 25th and 26th, divided into four slots each day (9:00-10:40, 11:10-12:50, 14:10-15:50, 16:20-18:00). The following formats are proposed for tutorials programs:</p>
 
 
-            <ul className="list-disc list-inside ml-8">
+            <ul>
                     <li><b>Half-day tutorials:</b> Two slots in either the morning or afternoon, ideal for concise, targeted introductions to a topic.</li>
 <li><b>Full-day tutorials:</b> Covering all four slots with three breaks, designed for in-depth exploration of topics or interconnected themes, similar to a condensed course.</li>
 <li><b>Special sessions:</b> Highly focused tutorials lasting a single slot, perfect for niche topics of significant relevance or timeliness, often led by recognized experts or authoritative figures in the field.</li>
@@ -56,7 +56,7 @@ export const Tutorials = () => {
 
             <p>Tutorials proposals will be evaluated based on their quality and appeal to a broad segment of the Semantic Web and Knowledge Graph community. Proposals should meet the following standards:</p>
 
-                    <ul className="list-disc list-inside ml-8">
+                    <ul>
           <li>The tutorial topic aligns with the general scope of the conference.</li>
 <li>The proposal clearly defines a specific focus on a technology, challenge, or application.</li>
 <li>There is compelling evidence of substantial interest within the community.</li>
@@ -76,7 +76,7 @@ export const Tutorials = () => {
 
 <SubHeader>Content, format and program:</SubHeader>
 
-                    <ul className="list-disc list-inside">
+                    <ul>
 <li><b>Title and acronym:</b> Provide a concise, descriptive title and an appropriate acronym for the tutorial.</li>
 <li><b>Abstract: </b>A 200-word summary highlighting the tutorial's purpose, goals, and core content.</li>
 <li><b>Detailed description:</b> Include an overview of the tutorial's content, the expected learning outcomes, and a description of the presentation and interaction style (e.g., hands-on, discussion-based, lecture).</li>
@@ -87,7 +87,7 @@ export const Tutorials = () => {
 
 <SubHeader>Tutorial type and intended audience:</SubHeader>
 
-                    <ul className="list-disc list-inside">
+                    <ul>
 <li><b>Type:</b> Indicate whether the tutorial is introductory, specialized/advanced, application/tool-focused, or domain-specific.</li>
 <li><b>Level: </b>Specify the level of the tutorial (beginner, intermediate, advanced).</li>
 <li><b>Target Audience:</b> Define the intended audience, including the estimated number of participants and their profiles.</li>
@@ -96,7 +96,7 @@ export const Tutorials = () => {
 
 <SubHeader>Presenters’ information:</SubHeader>
 
-                    <ul className="list-disc list-inside">
+                    <ul>
 <li>Provide the name, affiliation, email address, homepage, and a brief biography (one paragraph) for each presenter.</li>
 <li>Highlight each presenter’s expertise in the tutorial topic, their teaching background, and prior experience with tutorials or similar events.</li>
                 </ul>
@@ -118,7 +118,7 @@ export const Tutorials = () => {
 
 <p>For tutorials involving software or online services, the following guidelines are strongly recommended:</p>
 
-                    <ul className="list-disc list-inside ml-8">
+                    <ul>
 <li>Clear prerequisites and step-by-step instructions for downloading/installing software or registering for online services should be made available on the tutorial webpage well in advance. This ensures participants have sufficient time to prepare before the tutorial begins.</li>
 <li>Allocate time at the beginning of the tutorial to guide participants through any necessary installation or registration processes. Organisers should not assume that all attendees will arrive fully prepared.</li>
 <li>Develop a contingency plan to address potential issues such as limited Wi-Fi bandwidth (e.g., providing USB drives with large files) or the unavailability of online services (e.g., pre-recorded videos of demonstrations).</li>
@@ -137,7 +137,7 @@ export const Tutorials = () => {
             <p><b>Contact: <ExternalLink href="mailto:iswc2026-ws@easychair.org">iswc2026-ws@easychair.org</ExternalLink></b></p>
 
 
-              <ul className="ul-disc">
+              <ul>
         <li><b>Andrei Ciortea</b> — University of St.Gallen (Switzerland) and Inria, Université Côte d’Azur, CNRS, I3S (France)
 </li>
         <li><b>Ilaria Tiddi </b> —  LVrije Universiteit Amsterdam (The Netherlands)

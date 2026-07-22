@@ -24,7 +24,7 @@ export const Resource = () => {
 
       <SubHeader> Important Dates </SubHeader>
 
-            <ul className="list-disc list-inside">
+            <ul>
 
                     <li>Abstract submission due<b>	2 May 2026</b></li>
                     <li>Full paper submission due <b>7 May 2026</b></li>
@@ -42,9 +42,9 @@ export const Resource = () => {
 
       <p>A typical Resource Track paper has its focus set on reporting on resources that fall into one of the following categories.</p>
 
-      <ul className="list-disc list-inside">
+      <ul>
           <li>Datasets produced
-            <ul style={{ listStyleType: "circle" }} className="ml-16">
+            <ul>
               <li> to support specific evaluation tasks (for instance, labeled ground truth data);</li>
               <li>to support novel research methods;</li>
               <li>by novel algorithms.</li>
@@ -61,7 +61,7 @@ export const Resource = () => {
           <li>Protocols for conducting experiments and studies.</li>
           <li>Educational Material for and about semantic technologies and techniques
 
-            <ul style={{ listStyleType: "circle" }} className="ml-16">
+            <ul>
               <li> Curriculum pertaining to education about knowledge graphs, ontologies, or other semantic technologies (e.g., well-described tutorials)</li>
               <li>Semantic artifacts (e.g., knowledge graphs or ontologies) that can be used to enhance education</li>
 
@@ -83,7 +83,7 @@ export const Resource = () => {
 
       <SubHeader>Impact:</SubHeader>
 
-      <ul className="list-disc list-inside">
+      <ul>
           <li>Does the resource break new ground?</li>
           <li>Does the resource fill an important gap?</li>
           <li>How does the resource advance the state of the art?</li>
@@ -95,7 +95,7 @@ export const Resource = () => {
 
         </ul>
       <SubHeader>Reusability& Reproducibility:</SubHeader>
-      <ul className="list-disc list-inside">
+      <ul>
           <li>Is there evidence of usage by a wider community beyond the resource creators or their project? Alternatively (for new resources), what is the resource’s potential for being (re)used?</li>
           <li>Is the resource easy to (re)use? For example, does it have high-quality documentation? Are there tutorials available?</li>
           <li>Are reported evaluation results and metrics reproducible?</li>
@@ -105,14 +105,14 @@ export const Resource = () => {
           <li>Does the resource description clearly state what the resource can and cannot do, and the rationale for the exclusion of some functionality?</li>
         </ul>
       <SubHeader>Design & Technical Quality:</SubHeader>
-      <ul className="list-disc list-inside">
+      <ul>
           <li>Does the design of the resource follow resource-specific best practices?</li>
           <li>Did the authors perform an appropriate reuse or extension of suitable high-quality resources? For example, in the case of ontologies, authors might extend upper ontologies and/or reuse ontology design patterns.</li>
           <li>Is the resource suitable for solving the task at hand?</li>
           <li>Does the resource provide an appropriate description (both human- and machine-readable), thus encouraging the adoption of FAIR principles? If applicable: Is there a schema diagram? For datasets, is the description available in terms of VoID/DCAT/DublinCore or <ExternalLink href="https://github.com/mlcommons/croissant">Croissant metadata format</ExternalLink>?</li>
         </ul>
       <SubHeader>Availability:</SubHeader>
-      <ul className="list-disc list-inside">
+      <ul>
           <li>Is the resource publicly available? For example as API, Linked Open Data, Download, Open Code Repository.</li>
           <li>Is the resource publicly findable? Is it registered in (community) registries (e.g. Linked Open Vocabularies, BioPortal, or DataHub)? Is it registered in generic repositories such as FigShare, Zenodo or GitHub?</li>
           <li>Is there a sustainability plan specified for the resource? Is there a plan for the medium and long-term maintenance of the resource?</li>
@@ -122,7 +122,7 @@ export const Resource = () => {
       <p>
 
         In addition to the above criteria for evaluation, we stress that there are availability requirements to fulfill, as specified as follows: </p>
-      <ul className="list-disc list-inside ml-8">
+      <ul>
           <li><b>Mandatory</b>: Is the resource (and related results) published at a persistent URI (PURL, DOI, w3id)?</li>
           <li><b>Mandatory</b>: Is there a canonical citation associated with the resource?</li>
           <li><b>Mandatory</b>: Does the resource provide a license specification? (See creativecommons.org, opensource.org for more information)</li>
@@ -134,7 +134,7 @@ export const Resource = () => {
 
       <UnderlineHeader>Submission Details</UnderlineHeader>
 
-      <ul className="list-disc list-inside">
+      <ul>
 
           <li>Pre-submission of abstracts is a strict requirement. All papers and abstracts have to be submitted electronically via <ExternalLink href="https://easychair.org/conferences/?conf=iswc2026">EasyChair</ExternalLink>.</li>
 <li>Papers describing a resource must be in the range of <b>8 and 15 pages (excluding references and the "Declaration of use of Generative AI” section)</b>. Papers must describe the resource and focus on the sustainability and community surrounding the resource. Benchmark papers are expected to include evaluations and provide a detailed description of the experimental setting. <b>Papers that exceed the page limit will be rejected without review.</b></li>
@@ -152,7 +152,7 @@ export const Resource = () => {
 
  <p>We strongly recommend that prospective authors carefully check the calls of the other main tracks of the conference in order to identify the optimal track for their submission (submission of the same work to multiple tracks is prohibited). </p>
 
- <ul className="list-disc list-inside ml-8">
+ <ul>
 <li>Papers that propose new algorithms and architectures should be submitted to the regular research track;</li>
 <li>Papers that reuse and apply state-of-the-art semantic technology or resources in practical settings should be submitted to the in-use track (i.e., the novelty falls into the in-use application of the semantic technology or resource);</li>
 <li>Authors who want to present an interesting industry application but who do not want to submit a full paper should submit to the industry track;</li>
@@ -186,7 +186,7 @@ This addition to an ISWC paper submission is experimental and optional. It may n
 </p>
       <UnderlineHeader>Resource Track Chairs</UnderlineHeader>
 
-              <ul className="ul-disc">
+              <ul>
         <li><b>Axel Polleres</b> — Vienna University of Economics and Business (WU Wien), Austria
 </li>
         <li><b>Marieke van Erp</b> —  KNAW Humanities Cluster, The Netherlands</li>

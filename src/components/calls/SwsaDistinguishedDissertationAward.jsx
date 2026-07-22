@@ -31,10 +31,10 @@ Eligible doctoral dissertations are those which present innovative research resu
 <p>
 Submissions must include the following documents, which must be submitted via easychair on or before July 6, 2026:</p>
 
-<ul className="list-disc list-inside ml-8">
+<ul>
    <li>A pdf file of the dissertation.</li>
    <li>A short (no more than 5 pages in total) paper summarizing the key contributions of the dissertation. The paper should be in PDF, should be edited according to the Springer publication guideline for Lecture Notes in Computer Science (LNCS), and should cover the following elements:
-    <ul style={{ listStyleType: "circle" }} className="list-inside ml-16">
+    <ul>
        <li>Motivation and objectives of the research.</li>
        <li>Description of the approach, highlighting its key aspects and the novelty with respect to the state of the art.</li>
        <li>Major results.</li>

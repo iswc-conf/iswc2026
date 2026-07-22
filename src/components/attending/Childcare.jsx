@@ -15,7 +15,7 @@ export const Childcare = () => {
                     childcare, the following providers offer services in English:
                 </p>
 
-                <ul className="list-disc list-inside mb-6">
+                <ul>
                     <li>
                         <a
                             href="https://www.carefinder.jp/en/find-babysitter/nara"

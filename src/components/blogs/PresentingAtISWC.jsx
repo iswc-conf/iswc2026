@@ -14,7 +14,7 @@ export const PresentingAtISWC = () => {
                     </p>
 
                     <h2 style={{ color: "#e94607" }} className="text-xl font-semibold mt-6">📌 Contents</h2>
-                    <ul className="list-disc ml-10">
+                    <ul>
                         <li>Attending</li>
                         <li>Workshops and Tutorials</li>
                         <li>Dagstuhl-Style Workshops</li>
@@ -77,7 +77,7 @@ export const PresentingAtISWC = () => {
                     <p>
                         Each 90-minute session in the main program (marked with S1…S15) will feature:
                     </p>
-                    <ul className="list-disc ml-10">
+                    <ul>
                         <li>4 papers from the main tracks (Research, Resource, In-Use), with 20 minutes each (15 minutes + 5 for QA).</li>
                         <li>1 paper from the Industry track, with 10 minutes (7 minutes + 3 for QA).</li>
                     </ul>
@@ -88,7 +88,7 @@ export const PresentingAtISWC = () => {
 
                     <p>For your reference, our 15 main sessions are the following:</p>
 
-                    <ul className="list-disc ml-10">
+                    <ul>
                         <li>S1 Benchmarks</li>
                         <li>S2 Analytics, Concept Learning</li>
                         <li>S3 Graph Completion and Link Prediction</li>
@@ -112,7 +112,7 @@ export const PresentingAtISWC = () => {
 
                     <h2 style={{ color: "#e94607" }} className="text-xl font-semibold mt-6">Journal Sessions</h2>
                     <p>We will feature 2 journal sessions during the main conference days. Each journal session lasts 90 minutes and is marked in the <a href="https://iswc2025.semanticweb.org/#/program/schedule" target="_blank">schedule</a> with the letter J.</p>
-                    <ul className="list-disc ml-10">
+                    <ul>
                         <li>
                             <b>J JWS:</b> The Journal of Web Semantics (JWS) is an interdisciplinary forum at the intersection of the Semantic Web, Knowledge Graphs (KGs), and Artificial Intelligence (AI), with a strong emphasis on both theoretical and applied research. <b>The session</b> will be structured as a panel of the duration of 90 minutes. The panel will be inspired by a recent special issue published by the <a href="https://www.sciencedirect.com/special-issue/108TVL5VQML" target="_blank">Journal of WebSemantics</a>.
                         </li>

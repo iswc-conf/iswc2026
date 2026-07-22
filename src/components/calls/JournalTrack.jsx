@@ -16,7 +16,7 @@ export const JournalTrack = () => {
 
             <SubHeader>Important Dates</SubHeader>
 
-            <ul className="ul-disc ml-8">
+            <ul>
                 <li>Journal Track Session Proposals Due: <b>June 30th, 2026</b></li>
 <li>Notifications to Proposers: <b>July 15th, 2026</b></li>
 <li>All deadlines are <b>23:59 AoE (Anywhere on Earth).</b></li>
@@ -39,16 +39,16 @@ export const JournalTrack = () => {
 
             </p>
 
-            <ul className="ul-disc ml-8">
+            <ul>
                     <li>Journal Spotlight</li>
                     <li>Companion Proceedings
-                          <ul className="ul-disc ml-16">
+                          <ul>
                             <li>This is an optional venue, where the proposers may opt-in so that presenters may have some publication, which allows for attendance. Ideally, all presenters would provide a contextualization of their presented journal article. Ideally, the proposers (i.e., the editors) would provide an editorial-style introduction which discusses the entire session and its context.</li>
                             <li>This is currently anticipated to be a CEUR volume.</li>
                         </ul>
                     </li>
                     <li>First-come, first-serve slots at the Poster & Demo session
-                        <ul className="ul-disc ml-16">
+                        <ul>
                             <li>This must be communicated clearly, so that space can be reserved.</li>
                         </ul>
                     </li>
@@ -60,7 +60,7 @@ export const JournalTrack = () => {
 
             <SubHeader>Scientific and Community Impact and Relevance</SubHeader>
 
-            <ul className="ul-disc ml-8">
+            <ul>
                 <li>How did the collection break new ground?</li>
                 <li>How did the collection fill important gaps?</li>
                 <li>How did the collection otherwise advance the state of the art?</li>
@@ -71,13 +71,13 @@ export const JournalTrack = () => {
 
             <SubHeader>Availability</SubHeader>
 
-               <ul className="ul-disc ml-8">
+               <ul>
                     <li>Are the selected papers available for attendees of the proposed session to read without a paywall?</li>
                                </ul>
 
 
             <SubHeader>Attendance</SubHeader>
-<ul className="ul-disc ml-8">
+<ul>
     
                     <li>Is at least one author of each of the selected papers confirmed to attend ISWC 2026?</li>
                     <li>Is at least one editor confirmed to attend ISWC 2026?</li>
@@ -85,7 +85,7 @@ export const JournalTrack = () => {
 
             <UnderlineHeader>Submission Details</UnderlineHeader>
          
-  <ul className="ul-disc ml-8">
+  <ul>
         <li>All papers and abstracts must be submitted electronically via <ExternalLink href="https://easychair.org/conferences/?conf=iswc2026">EasyChair (choose "Journal Session Proposals").</ExternalLink></li>
       <li>Proposals must not exceed 4 pages (excluding references). Proposals that exceed the page limit will be rejected without review.</li>
       <li>All submissions must be in English.</li>

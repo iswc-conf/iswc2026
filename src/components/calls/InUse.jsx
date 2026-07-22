@@ -50,7 +50,7 @@ export const InUse = () => {
       </p>
 
       <SubHeader>Important Dates</SubHeader>
-            <ul className="list-disc list-inside">
+            <ul>
 
                     <li>Abstract submission due<b>	2 May 2026</b></li>
                     <li>Full paper submission due <b>7 May 2026</b></li>
@@ -82,7 +82,7 @@ export const InUse = () => {
         following topics:
       </p>
 
-      <ul className="list-disc list-inside">
+      <ul>
           <li>
             Applications in domain-specific areas (e.g., libraries, cultural
             heritage, healthcare, life sciences, engineering, smart
@@ -95,7 +95,7 @@ export const InUse = () => {
           <li>
             Assessment of the Semantic Web and Knowledge Graph technologies from
             diverse points of view, such as:
-            <ul style={{ listStyleType: "circle" }} className="ml-16">
+            <ul>
               <li>Usability and acceptance by stakeholder groups</li>
               <li>Uptake outside the proposing research communities</li>
               <li>Scalability of solutions and their large-scale deployment</li>
@@ -153,7 +153,7 @@ export const InUse = () => {
         multiple tracks is prohibited).{" "}
       </p>
 
-      <ul className="list-disc list-inside ml-8">
+      <ul>
           <li>
             Papers that propose new algorithms and architectures should be
             submitted to the regular research track;
@@ -237,7 +237,7 @@ export const InUse = () => {
         should only be used in two cases:
       </p>
 
-      <ul className="list-disc list-inside ml-8">
+      <ul>
           <li>
             In order to highlight clear factual errors in reviews regarding the
             content of the submission.
@@ -296,7 +296,7 @@ export const InUse = () => {
 
       <UnderlineHeader>Submission Details </UnderlineHeader>
 
-      <ul className="list-disc list-inside">
+      <ul>
           <li>
             Pre-submission of abstracts is a strict requirement. All papers and
             abstracts have to be submitted electronically via EasyChair.
@@ -400,7 +400,7 @@ This addition to an ISWC paper submission is experimental and optional. It may n
         </b>
       </p>
 
-      <ul className="ul-disc">
+      <ul>
         <li>
           <b>Ernesto Jimenez-Ruiz</b> — City St George’s, University of London,
           UK

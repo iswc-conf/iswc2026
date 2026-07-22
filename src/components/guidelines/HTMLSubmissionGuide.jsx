@@ -21,7 +21,7 @@ export const HTMLSubmissionGuide = () => {
                 Contributions in HTML should be shared in EasyChair as a ZIP archive that contains the complete and self-contained content of the article. It should include a main “index.html” and all used resources (like media, scripts) to guarantee a correct visualization of the document on common desktop and mobile Web browsers. Please note the following key requirements
             </p>
 
-            <ul className="list-disc list-inside">
+            <ul>
                     <li><b>HTML template:</b> any tooling or process can be used to produce the HTML.</li>
                     <li><b>Content</b>: the full content of the article must be human-readable with HTML alone. The use of CSS and JavaScript is encouraged, but should not interfere with the accessibility of the content.</li>
                     <li><b>Offline-friendly</b>: there must not be any external dependencies (e.g., a network connection) to retrieve, to render, or to manipulate the content of the article.</li>
@@ -33,7 +33,7 @@ export const HTMLSubmissionGuide = () => {
             </p>
 
             <UnderlineHeader>Final (“camera-ready”) Version</UnderlineHeader>
-            <ul className="list-disc list-inside">
+            <ul>
                     <li>The publisher for the Research, In-Use, and Resources tracks will be confirmed soon. It is likely that the publisher will require submissions in LaTeX (or possibly Word) format. If an article submitted in HTML is accepted, the authors can choose to convert their paper manually or using tool support as outlined below.</li>
                     <li>Articles accepted in the Posters & Demos track and in the Doctoral Consortium will be published as CEUR-WS.org proceedings volumes. CEUR-WS.org allows articles to be in HTML but, for guaranteed printability and archiving, requires an additional PDF, which should be a print-out of the HTML article in the LNCS layout.</li>
                     <li>Articles accepted in the Industry track will be published on the conference website. The same “HTML+PDF” rule applies as explained above for posters, demos and doctoral papers.</li>
@@ -43,7 +43,7 @@ export const HTMLSubmissionGuide = () => {
             <p>
                 We recommend that authors take the following steps independently of the general process:
             </p>
-            <ul className="list-disc list-inside">
+            <ul>
                     <li>Before sharing your article with ISWC, self-publish your HTML version, eg. at a repository, personal or institution website that’s publicly accessible and archivable from a URL.</li>
                     <li>Include the URL of your self-published article along the lines of: “Identifier: http://example.org/article “ after the list of authors and/or include the URL in the abstract of your article.</li>
                     <li>Make sure to preserve this information in your camera-ready version.</li>
