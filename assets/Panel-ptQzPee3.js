@@ -1,0 +1,1 @@
+import{j as e,H as r,S as s}from"./index-Cr8kX3Iy.js";import{B as o}from"./BaseContainer-CwYWC4W4.js";import{D as a}from"./declareSoon-Bw0OjmKR.js";import"./Page-BL1HF-VS.js";const l=()=>e.jsxs(o,{children:[e.jsx(r,{children:"ISWC 2026 Panel"}),e.jsx(s,{children:"A moderated discussion on where the field is heading"}),e.jsx(a,{})]});export{l as Panel,l as default};
