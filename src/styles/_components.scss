@@ -1257,6 +1257,44 @@
 }
 
 // -----------------------------------------------------------------------------
+// Proceedings notice (publisher logo beside a short statement)
+// -----------------------------------------------------------------------------
+.iswc-proceedings {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 0.5rem;
+  background: $iswc-surface;
+}
+
+.iswc-proceedings__logo {
+  flex: 0 0 auto;
+  // Sized here rather than relying on the image's own dimensions, which come
+  // from the publisher and may change.
+  width: 150px;
+  height: auto;
+  object-fit: contain;
+}
+
+.iswc-proceedings__text {
+  flex: 1 1 18rem;
+  min-width: 0;
+  text-align: left;
+}
+
+// Logo above the text on small screens.
+@media (max-width: 575.98px) {
+  .iswc-proceedings {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+// -----------------------------------------------------------------------------
 // Callout
 // -----------------------------------------------------------------------------
 // A short paragraph that needs to be noticed - booking conditions, caveats.
