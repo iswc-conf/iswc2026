@@ -439,75 +439,151 @@
 }
 
 // -----------------------------------------------------------------------------
-// Timeline (important dates)
+// Important dates
 // -----------------------------------------------------------------------------
-.iswc-timeline {
-  position: relative;
+.iswc-dates__note {
   max-width: 46rem;
-  margin-inline: auto;
-  padding-left: 2rem;
+  margin: 0 auto 1.5rem;
+  text-align: center;
+  font-size: 0.95rem;
+  color: $iswc-muted;
+}
 
-  // The continuous vertical rail.
-  &::before {
-    content: "";
-    position: absolute;
-    left: 0.35rem;
-    top: 0.5rem;
-    bottom: 0.5rem;
-    width: 2px;
-    background: rgba(0, 0, 0, 0.15);
+// Filter buttons double as the colour legend.
+.iswc-dates__filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.iswc-dates__filter {
+  --filter-color: #{$iswc-secondary};
+
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: $iswc-ink;
+  background: $iswc-surface;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+
+  &:hover {
+    border-color: var(--filter-color);
+  }
+
+  &[aria-pressed="true"] {
+    color: #fff;
+    background: var(--filter-color);
+    border-color: var(--filter-color);
   }
 }
 
-.iswc-timeline__month {
-  position: relative;
-  margin: 2rem 0 1rem -2rem;
-  padding-left: 2rem;
+.iswc-dates__swatch {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background: var(--filter-color);
 
-  span {
-    display: inline-block;
-    background: $iswc-surface;
-    border: 2px solid $iswc-secondary;
-    border-radius: 0.5rem;
-    padding: 0.35rem 1.25rem;
-    font-weight: 700;
-    color: $iswc-secondary;
+  .iswc-dates__filter[aria-pressed="true"] & {
+    background: #fff;
   }
 }
 
-.iswc-timeline__item {
-  position: relative;
-  padding-bottom: 1.5rem;
+// Months flow into columns on wide screens, halving the page height.
+.iswc-dates {
+  columns: 1;
+  column-gap: 2.5rem;
 
-  &::before {
-    content: "";
-    position: absolute;
-    left: calc(-2rem + 0.35rem);
-    top: 0.6rem;
-    width: 0.75rem;
-    height: 0.75rem;
-    border-radius: 50%;
-    background: currentColor;
-    transform: translateX(-50%);
+  @media (min-width: 992px) {
+    columns: 2;
   }
 }
 
-.iswc-timeline__date {
+.iswc-dates__month {
+  // Keep a month intact rather than splitting it across the column break.
+  break-inside: avoid;
+  margin-bottom: 2rem;
+}
+
+.iswc-dates__month-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: $iswc-secondary;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding-bottom: 0.4rem;
+  margin-bottom: 0.6rem;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.12);
+}
+
+.iswc-dates__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.iswc-dates__item {
+  --kind-color: #{$iswc-muted};
+
+  display: flex;
+  align-items: baseline;
+  gap: 0.85rem;
+  padding: 0.4rem 0.6rem 0.4rem 0.75rem;
+  border-left: 4px solid var(--kind-color);
+  border-radius: 0 0.3rem 0.3rem 0;
+  line-height: 1.4;
+
+  & + & {
+    margin-top: 0.25rem;
+  }
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.035);
+  }
+}
+
+// Dates that have passed stay legible but recede.
+.iswc-dates__item--past {
+  opacity: 0.45;
+}
+
+.iswc-dates__item--next {
+  background: rgba($iswc-primary, 0.09);
+}
+
+.iswc-dates__day {
+  flex: 0 0 5.25rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: $iswc-secondary;
+  white-space: nowrap;
+}
+
+.iswc-dates__label {
+  flex: 1 1 auto;
+  font-size: 0.95rem;
+}
+
+.iswc-dates__next-pill {
   display: inline-block;
-  background: $iswc-logo-black;
-  color: #fff;
-  font-size: 0.75rem;
+  margin-left: 0.5rem;
+  padding: 0.05rem 0.45rem;
+  font-size: 0.65rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
+  color: #fff;
+  background: $iswc-primary;
   border-radius: 2rem;
-  padding: 0.2rem 0.9rem;
-  margin-bottom: 0.4rem;
-}
-
-.iswc-timeline__title {
-  font-size: 1.05rem;
-  font-weight: 600;
+  vertical-align: 0.1em;
 }
 
 // -----------------------------------------------------------------------------

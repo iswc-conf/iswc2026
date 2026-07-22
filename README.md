@@ -45,8 +45,9 @@ src/
     _compat.scss     Temporary shim — see "Ongoing migration" below
     main.scss        Entry point; controls import order
   data/
-    navigation.js  The navbar menu
-    sponsors.js    Sponsors by tier
+    navigation.js      The navbar menu
+    sponsors.js        Sponsors by tier
+    importantDates.js  Deadlines shown on the Important Dates page
   components/
     general/       Shared building blocks used by every page
     about/         Homepage
@@ -69,6 +70,11 @@ keeping its URL reachable.
 
 **Add a news item.** Prepend to the `NEWS` array in
 `src/components/about/News.jsx` and move the `latest: true` flag to it.
+
+**Add or change an important date.** Edit `src/data/importantDates.js`. Add the
+entry anywhere in the list — months, ordering, the "next deadline" highlight and
+the dimming of past dates are all derived from the ISO date, so there is nothing
+to keep in sync. Use `endDate` for multi-day events.
 
 **Write a new content page.**
 

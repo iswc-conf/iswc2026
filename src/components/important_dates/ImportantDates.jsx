@@ -1,103 +1,143 @@
-import React from "react";
-import { Timeline } from "../general/Timeline";
+import React, { useMemo, useState } from "react";
+import Page from "../general/Page";
 import Header from "../general/Header";
-import DeclareSoon from "../general/declareSoon";
-import BaseContainer from "../general/BaseContainer";
-import UnderlineHeader from "../general/UnderlineHeader";
-import Card from "../general/Card";
+import { CATEGORIES, importantDates } from "../../data/importantDates";
 
-const ImportantDates = () => {
+const MONTH_FORMAT = { month: "long", year: "numeric" };
 
-    const timeline_theme = {
-        colors: {
-            event: "rgb(206, 70, 70)",
-            submission: "#3d8cd1",
-            notification: "#FB8C00",
-            cameraready: "#922be5",
-            other: "#000000"
-        },
-    };
+/** "10 Feb", or "25–26 Oct" for a multi-day entry. */
+const formatDay = ({ date, endDate }) => {
+  const start = new Date(`${date}T00:00:00Z`);
+  const day = start.getUTCDate();
+  const month = start.toLocaleString("en-GB", { month: "short", timeZone: "UTC" });
 
-    const events = [
+  if (!endDate) return `${day} ${month}`;
 
-        /** FEBRUARY */
-        { type: "month", label: "February 2026" },
-        { date: '10-Feb-26', title: 'Workshop Proposals Deadline', color: timeline_theme.colors.submission },
-        { date: '24-Feb-26', title: 'Workshop Notifications to Proposers', color: timeline_theme.colors.notification },
-
-        /** MARCH */
-        { type: "month", label: "March 2026" },
-        { date: '20-Mar-26', title: 'Workshop Website and CfP Available Online', color: timeline_theme.colors.other },
-
-        { date: '03-Apr-26', title: 'Challenge Workshops Release Datasets', color: timeline_theme.colors.other },
-
-        /** MAY */
-        { type: "month", label: "May 2026" },
-        { date: '02-May-26', title: 'Research, Resource, In-Use Track Abstract Submission', color: timeline_theme.colors.submission },
-        { date: '07-May-26', title: 'Research, Resource, In-Use Track Full Paper Submission', color: timeline_theme.colors.submission },
-
-        /** JUNE */
-        { type: "month", label: "June 2026" },
-        { date: '01-Jun-26', title: 'Doctoral Consortium Track Submission', color: timeline_theme.colors.submission },
-        { date: '09-Jun-26', title: 'Tutorials Track Submission', color: timeline_theme.colors.submission },
-        { date: '23-Jun-26', title: 'Tutorials Track Notification', color: timeline_theme.colors.notification },
-        { date: '26-Jun-26', title: 'Challenge Solution Submission', color: timeline_theme.colors.submission },
-        { date: '30-Jun-26', title: 'Journal Track Session Proposal', color: timeline_theme.colors.submission },
-        { date: '30-Jun-26', title: 'Dagstuhl Style Workshops Submission', color: timeline_theme.colors.submission },
-        { date: '30-Jun-26', title: 'SWSA Early Career Award Application Deadline', color: timeline_theme.colors.submission },
-        
-        /** JULY */
-        { type: "month", label: "July 2026" },
-        { date: '03-Jul-26', title: 'Dagstuhl Style Workshops Notification', color: timeline_theme.colors.notification },
-        { date: '06-Jul-26', title: 'SWSA Distiguished Dissertation Award Submission', color: timeline_theme.colors.submission },
-        { date: '06-Jul-26', title: 'Doctoral Consortium Notification', color: timeline_theme.colors.notification },
-        { date: '07-Jul-26', title: 'Industry Track Submission', color: timeline_theme.colors.submission },
-        { date: '15-Jul-26', title: 'Journal Track Session Notifications', color: timeline_theme.colors.notification },
-        { date: '16-Jul-26', title: 'Research, Resource, In-Use Track Notifications', color: timeline_theme.colors.notification },
-        { date: '17-Jul-26', title: 'Dagstuhl Style Workshops Website Online', color: timeline_theme.colors.other },
-        { date: '21-Jul-26', title: 'Tutorial Website Online', color: timeline_theme.colors.other },
-        { date: '24-Jul-26', title: 'Posters and Demos Track Submission', color: timeline_theme.colors.submission },
-        { date: '25-Jul-26', title: 'Visionary Ideas Track Abstract Submission', color: timeline_theme.colors.submission },
-        { date: '27-Jul-26', title: 'Revised Doctoral Consortium Submission', color: timeline_theme.colors.submission },
-        { date: '31-Jul-26', title: 'Tutorial Materials Available on the Website (if any)', color: timeline_theme.colors.other },
-
-        /** AUGUST */
-        { type: "month", label: "August 2026" },
-        { date: '01-Aug-26', title: 'Visionary Idea Track Full Paper Submission', color: timeline_theme.colors.submission },
-        { date: '03-Aug-26', title: 'Doctoral Consortium Track Camera Ready', color: timeline_theme.colors.cameraready },
-        { date: '04-Aug-26', title: 'Industry Track Notification', color: timeline_theme.colors.notification },
-        { date: '06-Aug-26', title: 'Research, Resource, In-Use Track Camera Ready', color: timeline_theme.colors.cameraready },
-        { date: '21-Aug-26', title: 'Posters and Demos Track Notification', color: timeline_theme.colors.notification },
-        { date: '21-Aug-26', title: 'Workshop Program with Accepted Papers Available Online', color: timeline_theme.colors.notification },
-        { date: '26-Aug-26', title: 'Visionary Ideas Track Notification', color: timeline_theme.colors.notification },
-
-        /** SEPTEMBER */
-        { type: "month", label: "September 2026" },
-        { date: '01-Sep-26', title: 'Visionary Ideas Track Camera Ready', color: timeline_theme.colors.cameraready },
-        { date: '04-Sep-26', title: 'Posters and Demos Track Camera Ready', color: timeline_theme.colors.cameraready },
-        { date: '11-Sep-26', title: 'Industry Track Camera Ready', color: timeline_theme.colors.cameraready },
-
-        /** OCTOBER */
-        { type: "month", label: "ISWC 2026 Events in October" },
-        { date: '25-26 Oct-26', title: 'Workshop Days', color: timeline_theme.colors.event },
-        { date: '25-26 Oct-26', title: 'Tutorial Days', color: timeline_theme.colors.event },
-        { date: '26 Oct-26', title: 'Doctoral Consortium Day', color: timeline_theme.colors.event },
-        { date: '27-29 Oct-26', title: 'Conference Days', color: timeline_theme.colors.event },
-
-
-    ];
-
-    return (
-        <BaseContainer>
-            <Header>Important Dates</Header>
-            <Card>
-                <p><em>This timeline will be updated as new information, news, and events become available. Please review it periodically for the latest updates and newly announced dates.</em></p>
-            </Card>
-
-            <Timeline data={events} />
-        </BaseContainer>
-    );
+  const end = new Date(`${endDate}T00:00:00Z`);
+  return `${day}–${end.getUTCDate()} ${month}`;
 };
 
+/** Groups entries into months, in chronological order. */
+const groupByMonth = (entries) => {
+  const months = new Map();
+
+  for (const entry of [...entries].sort((a, b) => a.date.localeCompare(b.date))) {
+    const key = entry.date.slice(0, 7);
+    if (!months.has(key)) {
+      months.set(key, {
+        key,
+        label: new Date(`${key}-01T00:00:00Z`).toLocaleString("en-GB", {
+          ...MONTH_FORMAT,
+          timeZone: "UTC",
+        }),
+        entries: [],
+      });
+    }
+    months.get(key).entries.push(entry);
+  }
+
+  return [...months.values()];
+};
+
+const ImportantDates = () => {
+  // A null filter means "show everything".
+  const [activeKind, setActiveKind] = useState(null);
+
+  const today = useMemo(() => new Date().toISOString().slice(0, 10), []);
+
+  const visible = activeKind
+    ? importantDates.filter((entry) => entry.kind === activeKind)
+    : importantDates;
+
+  const months = useMemo(() => groupByMonth(visible), [visible]);
+
+  // The first deadline that hasn't passed, highlighted as the one to act on.
+  const nextUp = useMemo(
+    () =>
+      [...importantDates]
+        .sort((a, b) => a.date.localeCompare(b.date))
+        .find((entry) => (entry.endDate ?? entry.date) >= today),
+    [today]
+  );
+
+  return (
+    <Page width="wide">
+      <Header>Important Dates</Header>
+
+      <p className="iswc-dates__note">
+        All deadlines are <strong>23:59 AoE</strong> (anywhere on Earth). This page is
+        updated as new dates are announced.
+      </p>
+
+      {/* Doubles as the colour legend: each button carries its category colour. */}
+      <div className="iswc-dates__filters" role="group" aria-label="Filter dates by type">
+        <button
+          type="button"
+          className="iswc-dates__filter"
+          aria-pressed={activeKind === null}
+          onClick={() => setActiveKind(null)}
+        >
+          All dates
+        </button>
+
+        {Object.entries(CATEGORIES).map(([kind, { label, color }]) => (
+          <button
+            key={kind}
+            type="button"
+            className="iswc-dates__filter"
+            aria-pressed={activeKind === kind}
+            style={{ "--filter-color": color }}
+            onClick={() => setActiveKind(activeKind === kind ? null : kind)}
+          >
+            <span className="iswc-dates__swatch" aria-hidden="true" />
+            {label}
+          </button>
+        ))}
+      </div>
+
+      <div className="iswc-dates">
+        {months.map((month) => (
+          <section className="iswc-dates__month" key={month.key}>
+            <h2 className="iswc-dates__month-title">{month.label}</h2>
+
+            <ul className="iswc-dates__list">
+              {month.entries.map((entry) => {
+                const isPast = (entry.endDate ?? entry.date) < today;
+                const isNext = entry === nextUp;
+
+                return (
+                  <li
+                    key={`${entry.date}-${entry.label}`}
+                    className={[
+                      "iswc-dates__item",
+                      isPast && "iswc-dates__item--past",
+                      isNext && "iswc-dates__item--next",
+                    ]
+                      .filter(Boolean)
+                      .join(" ")}
+                    style={{ "--kind-color": CATEGORIES[entry.kind].color }}
+                  >
+                    <time className="iswc-dates__day" dateTime={entry.date}>
+                      {formatDay(entry)}
+                    </time>
+
+                    <span className="iswc-dates__label">
+                      {entry.label}
+                      {isNext && <span className="iswc-dates__next-pill">Next</span>}
+                    </span>
+                  </li>
+                );
+              })}
+            </ul>
+          </section>
+        ))}
+      </div>
+
+      {months.length === 0 && (
+        <p className="text-center">No dates match that filter.</p>
+      )}
+    </Page>
+  );
+};
 
 export default ImportantDates;
