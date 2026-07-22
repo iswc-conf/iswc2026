@@ -14,7 +14,7 @@ export const Workshops = () => {
         <BaseContainer width="wide">
         <Header>Accepted Workshops</Header>
         <div className="text-center">
-        <p className="pt-2 font-semibold">Click on a workshop title below to open its full description.</p></div>
+        <p className="pt-2 fw-semibold">Click on a workshop title below to open its full description.</p></div>
         <DescriptiveTable title={"Workshop Title"} description={"Organizers"} data={workshops} header_title={"Abstract"} unit="workshops"></DescriptiveTable>
         </BaseContainer>
     );

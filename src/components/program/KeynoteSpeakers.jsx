@@ -3,6 +3,7 @@ import Page from "../general/Page";
 import Header from "../general/Header";
 import ExternalLink from "../general/ExternalLink";
 import { keynotes } from "../../data/keynotes";
+import SubHeader from "../general/SubHeader";
 
 /**
  * Jump links to each speaker. With four long biographies on one page, this
@@ -30,7 +31,7 @@ const SpeakerIndex = ({ speakers, onSelect }) => (
 
 const Keynote = ({ speaker, innerRef }) => (
   <article className="iswc-keynote" id={speaker.id} ref={innerRef}>
-    <p className="iswc-keynote__label">{speaker.label}</p>
+   <SubHeader>{speaker.label}</SubHeader>
 
     <div className="iswc-keynote__head">
       <img

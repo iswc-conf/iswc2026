@@ -25,7 +25,7 @@ const BARI_CENTRALE = "https://maps.app.goo.gl/MHtRHa3o888gmUES8";
 /** Small wrapper so every table on this page scrolls the same way on mobile. */
 const InfoTable = ({ caption, columns, children }) => (
   <div className="iswc-table-scroll">
-    <table className="iswc-info-table">
+    <table className="iswc-info-table iswc-info-table--labels">
       {caption && <caption className="iswc-info-table__caption">{caption}</caption>}
       <thead>
         <tr>

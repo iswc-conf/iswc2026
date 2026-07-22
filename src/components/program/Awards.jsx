@@ -8,32 +8,32 @@ export const Awards = () => {
     <BaseContainer>
       <Header>ISWC 2026 Awards</Header>
 
-      <section className="mb-6">
+      <section className="mb-4">
         <SubHeader>SWSA Distinguished Dissertation Award 2026</SubHeader>
          <p>To be announced.</p>
       </section>
 
-      <section className="mb-6">
+      <section className="mb-4">
         <SubHeader>Test-of-time Paper Award 2026</SubHeader>
         <p>To be announced.</p>
       </section>
 
-      <section className="mb-6">
+      <section className="mb-4">
         <SubHeader>Best Research Paper</SubHeader>
         <p>To be announced.</p>
       </section>
 
-      <section className="mb-6">
+      <section className="mb-4">
         <SubHeader>Best Resource Paper</SubHeader>
         <p>To be announced.</p>
       </section>
 
-      <section className="mb-6">
+      <section className="mb-4">
         <SubHeader>Best In-Use Paper</SubHeader>
         <p>To be announced.</p>
       </section>
 
-      <section className="mb-6">
+      <section className="mb-4">
         <SubHeader>Best Poster</SubHeader>
         <p>To be announced.</p>
       </section>

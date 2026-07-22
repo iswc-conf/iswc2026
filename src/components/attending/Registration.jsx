@@ -18,23 +18,20 @@ export const Registration = () => {
 
        <p style={{fontSize:18, color:"#083562"}}><b><em>All registration fees are listed in EUR and do not include tax (22% VAT)</em></b>
       </p>
-      <table
-        style={{
-
-        }}
-      >
+      <div className="iswc-table-scroll">
+        <table className="iswc-info-table iswc-info-table--labels">
         <thead>
           <tr>
-            <th style={{ border: "1px solid black", padding: "8px" }}></th>
-            <th style={{ border: "1px solid black", padding: "8px" }}>
+            <th></th>
+            <th>
               Early Fee
               (Until August 31st, 2026)
             </th>
-            <th style={{ border: "1px solid black", padding: "8px" }}>
+            <th>
               Regular Fee
               (From Sept 1st to Oct. 18th, 2026)
             </th>
-            <th style={{ border: "1px solid black", padding: "8px" }}>
+            <th>
               Late/Onsite Fee
               (From Oct 19th)
             </th>
@@ -42,25 +39,26 @@ export const Registration = () => {
         </thead>
         <tbody>
           <tr>
-            <td style={{ border: "1px solid black", padding: "8px" }}>Regular</td>
-            <td style={{ border: "1px solid black", padding: "8px" }}>810 EUR</td>
-            <td style={{ border: "1px solid black", padding: "8px" }}>990 EUR</td>
-            <td style={{ border: "1px solid black", padding: "8px" }}>1150 EUR</td>
+            <td>Regular</td>
+            <td>810 EUR</td>
+            <td>990 EUR</td>
+            <td>1150 EUR</td>
           </tr>
           <tr>
-            <td style={{ border: "1px solid black", padding: "8px" }}>Academic*</td>
-            <td style={{ border: "1px solid black", padding: "8px" }}>670 EUR</td>
-            <td style={{ border: "1px solid black", padding: "8px" }}>830 EUR</td>
-            <td style={{ border: "1px solid black", padding: "8px" }}>990 EUR</td>
+            <td>Academic*</td>
+            <td>670 EUR</td>
+            <td>830 EUR</td>
+            <td>990 EUR</td>
           </tr>
           <tr>
-            <td style={{ border: "1px solid black", padding: "8px" }}>Student</td>
-            <td style={{ border: "1px solid black", padding: "8px" }}>500 EUR</td>
-            <td style={{ border: "1px solid black", padding: "8px" }}>600 EUR</td>
-            <td style={{ border: "1px solid black", padding: "8px" }}>760 EUR</td>
+            <td>Student</td>
+            <td>500 EUR</td>
+            <td>600 EUR</td>
+            <td>760 EUR</td>
           </tr>
         </tbody>
-      </table>
+        </table>
+      </div>
 
 
       <p>* <b>Academic registration</b> refers to persons that are affiliated with a University or Research Institute. It does not refer to persons from industry for whom the Regular registration fee applies.</p>

@@ -35,81 +35,85 @@ export const ReviewGuidelines = () => {
 
                 <p><b>Use of Generative AI: Reviewers</b></p>
 
-                <ul>
+                <ol>
 
 
-                    <li style={{ marginBottom: "10px" }}><b>1.</b> Reviewers should not upload, submit, or otherwise share any part of a paper under review (including its title, abstract, text, figures, or data) to any generative AI tool or service, whether free or paid. Submitted papers are confidential documents, and their authors retain copyright over their unpublished work. Sharing them with third-party AI services risks breaching both author confidentiality and applicable copyright, regardless of the privacy terms or data retention policies of the service in question.</li>
-                    <li style={{ marginBottom: "10px" }}><b>2.</b> Reviewers should not upload their review or part of it to any generative AI tools even for the sole purpose of rephrasing, correcting grammar, or improving the clarity of review text that they have themselves written.</li>
-                    <li style={{ marginBottom: "10px" }}><b>3.</b> Reviewers may not use generative AI tools to perform or assist with the substantive analysis of a paper, to generate or summarise critiques or assessments of its contributions, or as a substitute for reading and properly evaluating the paper. Reviews must reflect the reviewer's own independent, expert assessment.</li>
-                    <li style={{ marginBottom: "10px" }}><b>4.</b> Reviewers are fully responsible for the accuracy, fairness, and content of their reviews, regardless of any editorial assistance obtained. Any errors, misrepresentations, or inaccuracies introduced through the use of generative AI tools remain the responsibility of the reviewer.</li>
-                    <li style={{ marginBottom: "10px" }} ><b>5.</b> Reviewers must not cite polished or fluent writing as evidence of improper generative AI use in a submitted paper. Formal or well-structured prose is not, in itself, grounds for raising a concern about undisclosed AI-generated content. If a reviewer believes a paper has made undisclosed use of generative AI, this must be based on concrete textual cues — such as prompt artefacts (e.g. phrases like "let me think about that" or "certainly, here is a summary"), inappropriate emoji, or other content clearly inconsistent with human-authored academic writing. Any such concern should be raised with the programme chairs rather than reflected in the review score.</li>
-                </ul>
+                    <li style={{ marginBottom: "10px" }}> Reviewers should not upload, submit, or otherwise share any part of a paper under review (including its title, abstract, text, figures, or data) to any generative AI tool or service, whether free or paid. Submitted papers are confidential documents, and their authors retain copyright over their unpublished work. Sharing them with third-party AI services risks breaching both author confidentiality and applicable copyright, regardless of the privacy terms or data retention policies of the service in question.</li>
+                    <li style={{ marginBottom: "10px" }}> Reviewers should not upload their review or part of it to any generative AI tools even for the sole purpose of rephrasing, correcting grammar, or improving the clarity of review text that they have themselves written.</li>
+                    <li style={{ marginBottom: "10px" }}> Reviewers may not use generative AI tools to perform or assist with the substantive analysis of a paper, to generate or summarise critiques or assessments of its contributions, or as a substitute for reading and properly evaluating the paper. Reviews must reflect the reviewer's own independent, expert assessment.</li>
+                    <li style={{ marginBottom: "10px" }}> Reviewers are fully responsible for the accuracy, fairness, and content of their reviews, regardless of any editorial assistance obtained. Any errors, misrepresentations, or inaccuracies introduced through the use of generative AI tools remain the responsibility of the reviewer.</li>
+                    <li style={{ marginBottom: "10px" }} > Reviewers must not cite polished or fluent writing as evidence of improper generative AI use in a submitted paper. Formal or well-structured prose is not, in itself, grounds for raising a concern about undisclosed AI-generated content. If a reviewer believes a paper has made undisclosed use of generative AI, this must be based on concrete textual cues — such as prompt artefacts (e.g. phrases like "let me think about that" or "certainly, here is a summary"), inappropriate emoji, or other content clearly inconsistent with human-authored academic writing. Any such concern should be raised with the programme chairs rather than reflected in the review score.</li>
+                </ol>
 
                 <UnderlineHeader>Review Content</UnderlineHeader>
                 <p>We discuss five guidelines for reviews. We include examples of things to avoid in reviews, compared with examples of what would be better to include in a review.</p>
 
                 <SubHeader>Provide a detailed and constructive review</SubHeader>
                 <p>Please provide reviews that help the authors to improve their work, particularly in cases where your recommendation is to reject the paper. Please avoid vague, subjective, or overly-general feedback that could apply to any paper. Rather aim to provide detailed feedback that is specific to the paper under review, and indicates concrete ways in which the paper could be improved.</p>
-                <table className="iswc-info-table">
+                <div className="iswc-table-scroll">
+                <table className="iswc-info-table iswc-info-table--split">
                     <thead>
                         <tr>
-                            <th className="border border-gray-400 px-4 py-2">Examples to Avoid</th>
-                            <th className="border border-gray-400 px-4 py-2">Better Examples</th>
+                            <th>Examples to Avoid</th>
+                            <th>Better Examples</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td className="border border-gray-400 px-4 py-2">“The paper lacks novelty.”(No justification or details provided.)</td>
-                            <td className="border border-gray-400 px-4 py-2">“The key method described in Algorithm 1 appears to be very similar to that of Doe et al. [A], with only minor changes to the recursive aspect. The authors should clarify the novelty or relation of their method with respect to that proposed by Doe et al.”</td>
+                            <td>“The paper lacks novelty.”(No justification or details provided.)</td>
+                            <td>“The key method described in Algorithm 1 appears to be very similar to that of Doe et al. [A], with only minor changes to the recursive aspect. The authors should clarify the novelty or relation of their method with respect to that proposed by Doe et al.”</td>
                         </tr>
                         <tr>
-                            <td className="border border-gray-400 px-4 py-2">“The techniques seem trivial.”(No justification or details provided.)</td>
-                            <td className="border border-gray-400 px-4 py-2">“The proof of the key result, described in Theorem 1, involves a standard reduction from an existing result that is described, for example, in Section 4.2 of the textbook by Zoe [A].”</td>
+                            <td>“The techniques seem trivial.”(No justification or details provided.)</td>
+                            <td>“The proof of the key result, described in Theorem 1, involves a standard reduction from an existing result that is described, for example, in Section 4.2 of the textbook by Zoe [A].”</td>
                         </tr>
                         <tr>
-                            <td className="border border-gray-400 px-4 py-2">“The paper is poorly written”(No justification or details provided.)</td>
-                            <td className="border border-gray-400 px-4 py-2">
+                            <td>“The paper is poorly written”(No justification or details provided.)</td>
+                            <td>
                                 “I found the paper difficult to follow; for example:
                                 – The novel concept of ‘logical transmogrification’ plays a central role in this paper, but only on page 8 is it actually discussed or defined. This left me lost for the first half of the paper. The concept should be clearly described in the introduction.
                                 – Section 3 defines the proposed method, but provides no examples nor intuition to aid readability. Some examples would greatly improve this section….”
                             </td>
                         </tr>
                         <tr>
-                            <td className="border border-gray-400 px-4 py-2">“The paper is uninteresting”(No justification or details provided.)</td>
-                            <td className="border border-gray-400 px-4 py-2">“The paper proposes a method to generate pseudorandom numbers from RDF triples, but it is unclear to me what such a method is useful for. It would be helpful if the authors could highlight concrete use-cases for such a method in the introduction, along with a motivating example.”</td>
+                            <td>“The paper is uninteresting”(No justification or details provided.)</td>
+                            <td>“The paper proposes a method to generate pseudorandom numbers from RDF triples, but it is unclear to me what such a method is useful for. It would be helpful if the authors could highlight concrete use-cases for such a method in the introduction, along with a motivating example.”</td>
                         </tr>
                         <tr>
-                            <td className="border border-gray-400 px-4 py-2">“The contributions are not clear”(No justification or details provided.)</td>
-                            <td className="border border-gray-400 px-4 py-2">“The title and introduction of the paper focus on data quality, but the techniques described and evaluated in the rest of the paper seem to apply standard OWL reasoners over the data for motivations that appear to be largely unrelated to data quality. The authors should clarify their contribution in the introduction and ensure that it reflects the content of the paper.”</td>
+                            <td>“The contributions are not clear”(No justification or details provided.)</td>
+                            <td>“The title and introduction of the paper focus on data quality, but the techniques described and evaluated in the rest of the paper seem to apply standard OWL reasoners over the data for motivations that appear to be largely unrelated to data quality. The authors should clarify their contribution in the introduction and ensure that it reflects the content of the paper.”</td>
                         </tr>
                     </tbody>
                 </table>
+                </div>
 
                 <SubHeader>Be civil and polite</SubHeader>
                 <p>Please keep a civil tone. Though (almost) nobody sets out to be uncivil, it can be challenging to avoid indeliberately coming across as being “harsh” in anonymous reviews. Keep in mind that you may be reviewing the papers of students who are new to research and the community, or more generally, the papers of authors who have invested a lot of time and effort into their work. Your review should be constructive. Your review should include discussions of both positive and negative aspects rather than focusing only on negatives. Your review should not be disparaging or dismissive, and should avoid unnecessarily negative language. Until proven otherwise, you should assume good faith on the part of the authors. Avoid calling into question the ethics or honesty of the authors, but rather keep your review factual. If you have an ethical concern regarding a paper, please discuss it with other PC/SPC/Chairs first to make sure there is consensus that the concern is indeed well-founded.</p>
 
-                <table className="iswc-info-table">
+                <div className="iswc-table-scroll">
+                <table className="iswc-info-table iswc-info-table--split">
                     <thead>
                         <tr>
-                            <th className="border border-gray-400 px-4 py-2">Examples to Avoid</th>
-                            <th className="border border-gray-400 px-4 py-2">Better Examples</th>
+                            <th>Examples to Avoid</th>
+                            <th>Better Examples</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td className="border border-gray-400 px-4 py-2">“The writing is terrible”(Unnecessarily disparaging and dismissive. Not constructive.)</td>
-                            <td className="border border-gray-400 px-4 py-2">“The writing contains frequent spelling mistakes and grammatical errors, making it hard to follow and review. Below I will provide some samples of these errors to illustrate the types of mistakes I hope the authors can fix for a future version.”</td>
+                            <td>“The writing is terrible”(Unnecessarily disparaging and dismissive. Not constructive.)</td>
+                            <td>“The writing contains frequent spelling mistakes and grammatical errors, making it hard to follow and review. Below I will provide some samples of these errors to illustrate the types of mistakes I hope the authors can fix for a future version.”</td>
                         </tr>
                         <tr>
-                            <td className="border border-gray-400 px-4 py-2">“The authors clearly have little understanding of the area.”(Unnecessarily disparaging and dismissive. Not constructive. Not justified. Speculative.)</td>
-                            <td className="border border-gray-400 px-4 py-2">“The paper makes claims that contradict the literature, for example, that SPARQL 1.1 does not support path queries. The related works section misses some key references [A,B,C] for evaluating path queries. The authors could perhaps look into [C] as a survey of the relevant literature, if they have not seen it.”</td>
+                            <td>“The authors clearly have little understanding of the area.”(Unnecessarily disparaging and dismissive. Not constructive. Not justified. Speculative.)</td>
+                            <td>“The paper makes claims that contradict the literature, for example, that SPARQL 1.1 does not support path queries. The related works section misses some key references [A,B,C] for evaluating path queries. The authors could perhaps look into [C] as a survey of the relevant literature, if they have not seen it.”</td>
                         </tr>
                         <tr>
-                            <td className="border border-gray-400 px-4 py-2">“The experiments were selected to make the authors’ approach look good.”(Assumes deliberate dishonesty when other possibilities have not been ruled out.)</td>
-                            <td className="border border-gray-400 px-4 py-2">“The paper does not justify why the authors create a benchmark of their own queries (with few joins), nor why they did not use an existing benchmark such as proposed by Roe et al. [A]. The latter benchmark has been used in many works and includes queries with a high number of joins, for which I suspect the authors’ approach will not work as well relative to the baselines. Including an external benchmark would help to examine these cases and solidify the papers’ claims.”</td>
+                            <td>“The experiments were selected to make the authors’ approach look good.”(Assumes deliberate dishonesty when other possibilities have not been ruled out.)</td>
+                            <td>“The paper does not justify why the authors create a benchmark of their own queries (with few joins), nor why they did not use an existing benchmark such as proposed by Roe et al. [A]. The latter benchmark has been used in many works and includes queries with a high number of joins, for which I suspect the authors’ approach will not work as well relative to the baselines. Including an external benchmark would help to examine these cases and solidify the papers’ claims.”</td>
                         </tr>
                     </tbody>
                 </table>
+                </div>
 
                 <SubHeader>Adequately justify your recommendation</SubHeader>
                 <p>Please clearly relate your review comments to your recommendation. The authors do not necessarily need to agree with your recommendation, but they should at least be able to understand your rationale, and how you think they could improve their work.</p>

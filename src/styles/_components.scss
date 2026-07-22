@@ -351,6 +351,13 @@
 // -----------------------------------------------------------------------------
 .iswc-table-wrap {
   margin-block: 2rem;
+  max-width: 100%;
+  // Deliberately NOT `overflow-x: auto`. Any overflow value here would make
+  // this element the scroll container for the sticky <thead> below, and the
+  // header's `top` offset would then be measured from the top of this box
+  // rather than the viewport - pushing the header down over the first row.
+  // The table is `table-layout: fixed` at `width: 100%`, so it cannot overflow
+  // and does not need a scroller.
 }
 
 // Search, count and expand-all sit above the table.
@@ -428,17 +435,30 @@
   // Fixed layout keeps the title column dominant instead of letting a long
   // author list push it narrow, which is what the old `table-fixed` did.
   table-layout: fixed;
+  // Separate borders, not collapsed. Browsers do not paint borders on a
+  // `position: sticky` <th> when borders are collapsed, which left the first
+  // body row without the top edge every other row had - it read as missing
+  // spacing above the first entry. With separate borders each cell paints its
+  // own edges, so the header keeps its rule whether stuck or not.
+  border-collapse: separate;
+  border-spacing: 0;
 
   th,
   td {
     padding: 0.9rem 1rem;
-    border: 1px solid rgba(0, 0, 0, 0.15);
     vertical-align: top;
     text-align: left;
+    // Each cell draws its right and bottom edge; the table draws the
+    // outermost left and top. That gives single-width lines throughout.
+    border-right: 1px solid rgba(0, 0, 0, 0.15);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   }
 
-  // Matches the header treatment on .iswc-info-table and .iswc-tiers-table so
-  // every table on the site reads the same way.
+  th:first-child,
+  td:first-child {
+    border-left: 1px solid rgba(0, 0, 0, 0.15);
+  }
+
   // Matches the header treatment on .iswc-info-table and .iswc-tiers-table so
   // every table on the site reads the same way.
   thead th {
@@ -448,11 +468,17 @@
     font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 0.06em;
-    border-color: rgba(255, 255, 255, 0.25);
+    border-top: 1px solid $iswc-logo-black;
+    border-right-color: rgba(255, 255, 255, 0.25);
+    border-bottom-color: $iswc-logo-black;
     // Sticks below the navbar while scrolling a long list of papers.
     position: sticky;
     top: var(--iswc-navbar-height);
     z-index: 1;
+  }
+
+  thead th:last-child {
+    border-right-color: $iswc-logo-black;
   }
 
   tbody tr {
@@ -573,6 +599,13 @@
 
     &:last-child {
       border-bottom: 0;
+    }
+
+    // The first cell has no label above it, so it needs the space the label
+    // would otherwise have provided - otherwise it sits tighter to the top of
+    // the card than every following cell.
+    &:first-child {
+      padding-top: 1.15rem;
     }
 
     // Surface the column name that the hidden <thead> would have provided.
@@ -1107,10 +1140,6 @@
     border-bottom: 0;
   }
 
-  // The first column is the label; keep it on one line where it can be.
-  tbody td:first-child {
-    white-space: nowrap;
-  }
 
   tbody tr:last-child td {
     border-bottom: 0;
@@ -1150,6 +1179,10 @@
   th:not(:first-child),
   td:not(:first-child) {
     text-align: center;
+  }
+
+  thead {
+    background-color: $iswc-logo-black;
   }
 
   thead th {
@@ -1245,6 +1278,22 @@
 }
 
 // Caption above an information table.
+// Opt-in: first column holds a short label that should not wrap. Only use it
+// when the labels really are short.
+.iswc-info-table--labels tbody td:first-child {
+  white-space: nowrap;
+}
+
+// Two columns of comparable prose, split evenly.
+.iswc-info-table--split {
+  table-layout: fixed;
+
+  th,
+  td {
+    width: 50%;
+  }
+}
+
 .iswc-info-table__caption {
   caption-side: top;
   padding: 0 0 0.5rem;
@@ -1294,6 +1343,19 @@
   }
 }
 
+// Small circular avatar, used by the (currently unrouted) blog pages.
+.iswc-avatar-sm {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+// Preserves newlines in text that was authored with line breaks.
+.iswc-preserve-lines {
+  white-space: pre-line;
+}
+
 // -----------------------------------------------------------------------------
 // Callout
 // -----------------------------------------------------------------------------
@@ -1312,6 +1374,23 @@
 // -----------------------------------------------------------------------------
 .iswc-table-scroll {
   width: 100%;
+  max-width: 100%;
   overflow-x: auto;
+  // Keeps a horizontally scrolled table from looking clipped at the edge.
+  -webkit-overflow-scrolling: touch;
   margin: 1.5rem 0 2rem;
+
+  // The table it wraps must not force the page itself to scroll.
+  > table {
+    margin-block: 0;
+  }
+}
+
+// Below `sm` a multi-column table needs a minimum width to stay legible; the
+// wrapper scrolls rather than the columns crushing together.
+@media (max-width: 575.98px) {
+  .iswc-table-scroll > .iswc-info-table,
+  .iswc-table-scroll > .iswc-tiers-table {
+    min-width: 32rem;
+  }
 }

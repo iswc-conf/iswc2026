@@ -2,7 +2,6 @@ import React from "react";
 import Page from "../general/Page";
 import Header from "../general/Header";
 import DeclareSoon from "../general/declareSoon";
-import { theme } from "../../theme";
 import UnderlineHeader from "../general/UnderlineHeader";
 
 
@@ -21,7 +20,7 @@ export const SponsorshipPackages = () => {
                 
     <div className="text-center">
                 <table className="iswc-tiers-table">
-                    <thead style={{ backgroundColor: theme.colors.logo_black }}>
+                    <thead>
                         <tr>
                             <th>Sponsor Benefits</th>
                             <th className="tier-bronze">Bronze</th>

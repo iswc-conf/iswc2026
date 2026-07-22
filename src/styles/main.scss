@@ -6,7 +6,6 @@
 //   2. theme                — overrides Bootstrap's defaults with ISWC tokens
 //   3. bootstrap            — only the modules this site actually uses
 //   4. base / components    — our own layers on top
-//   5. compat               — temporary shim for not-yet-migrated pages
 // =============================================================================
 
 @import "bootstrap/scss/functions";
@@ -45,4 +44,3 @@
 // ISWC layers.
 @import "base";
 @import "components";
-@import "compat";

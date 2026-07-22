@@ -7,11 +7,11 @@ import ISWC3 from "./pics/ISWC3.png";
 const NatureNavigator = () => {
     return (
         <div>
-            <div className="mt-[74px] px-4 pt-2 bg-white flex items-center justify-center">
+            <div className="px-4 pt-2 bg-white d-flex align-items-center justify-content-center">
             </div>
-            <div className="container mx-auto px-4 lg:px-8 lg:pb-12 mt-12">
-                <img src={ ISWC_HEAD } alt="ISWC Header" className="rounded-xl my-4" />
-                <h1 className="font-bold mb-4 lg:mx-10 sm:mx-2 tracking-wide text-center">ISWC under the Nature Navigator lens</h1>
+            <div className="container mx-auto px-4 mt-5">
+                <img src={ ISWC_HEAD } alt="ISWC Header" className="rounded-3 my-4" />
+                <h1 className="fw-bold mb-4 text-center">ISWC under the Nature Navigator lens</h1>
                 
                 <p><strong>Author:</strong> Angelo Salatino, Research Fellow at the Knowledge Media Institute of the Open University (UK)</p>
                 <p>The International Semantic Web Conference (ISWC) is a leading annual event that brings together researchers, practitioners, and industry leaders in semantic web technologies. The conference promotes collaboration and knowledge exchange, focusing on innovative approaches to data interoperability, knowledge representation, and intelligent information retrieval. Participants discuss the development and application of semantic web standards, tools, and methodologies for integrating and utilizing diverse data sources. By showcasing cutting-edge research and practical implementations, ISWC aims to drive the advancement and adoption of the semantic web across various domains and industries, ultimately improving the way information is accessed and used in an increasingly interconnected digital world.</p>
@@ -22,26 +22,26 @@ const NatureNavigator = () => {
 
                 <p>The figure below shows the distribution of publications over time. Records were registered in 2006, 2017, and 2011 with 85-86 papers. Interestingly, all three editions were held in Europe: Athens (2006), Bonn (2011), and Vienna (2017).</p>
 
-                <img src={ ISWC1 } alt="Distribution of ISWC papers" className="rounded-xl my-4" />
+                <img src={ ISWC1 } alt="Distribution of ISWC papers" className="rounded-3 my-4" />
                 <p><strong>Fig. 1. Distribution of ISWC papers in LNCS proceedings from 2002 to 2024.</strong>.</p>
                 <p>The conference papers were divided into six primary themes. The majority of papers fell under the Semantic Web Technologies and Applications category (762 papers, 49%), followed closely by Knowledge Graphs and Embedding Techniques (755 papers, 48%) and Ontology and Reasoning in Knowledge Bases (703 papers, 45%). A smaller but still substantial number of papers were categorized under Semantic Web and Information Retrieval (678 papers, 43%) and RDF Data and SPARQL Query Processing (541 papers, 35%). The smallest category was Semantic Web Services and Composition, with only 203 papers (13%).</p>
                 
                 <p>The sum of the subtopics is higher than the total papers analysed because one paper can be classified with more than one subtopic.</p>
 
-                <img src={ ISWC2 } alt="Main topics of ISWC" className="rounded-xl my-4" />
+                <img src={ ISWC2 } alt="Main topics of ISWC" className="rounded-3 my-4" />
                 <p><strong>Fig. 2. Main topics of ISWC and their associated papers in parenthesis. </strong></p>
                 <p>The cumulative distribution of papers across the six highlighted themes in the following figure shows varying research trends over time. Semantic Web Technologies and Applications (purple line), Ontology and Reasoning in Knowledge Bases (blue), and Semantic Web and Information Retrieval (cyan) all showed consistent, linear growth throughout the two decades. Knowledge Graphs and Embedding Techniques (red line) grew more slowly initially but sharply increased around 2011, eventually reaching the level of the previous three themes in a shorter time frame. RDF Data and SPARQL Query Processing (yellow) followed a similar pattern to Knowledge Graphs and Embedding Techniques (red), but research in this area appears to have slowed down around 2019. Semantic Web Services and Composition (green) showed a linear increase from 2002 to 2013, then plateaued and nearly ceased.</p>
 
-                <img src={ ISWC3 } alt="Cumulative distribution of papers" className="rounded-xl my-4" />
+                <img src={ ISWC3 } alt="Cumulative distribution of papers" className="rounded-3 my-4" />
                 <p><strong>Fig. 3. Cumulative distribution of papers for ISWC’s six main topics.</strong></p>
                 <p>How did the papers presented at ISWC 2024 relate to the six main global trends? To investigate this, all 11 session names from the 2024 main tracks–each containing 4 thematically coherent papers–were selected and mapped to these six general topics (see Table below). It is worth noting that we did not force a one-to-one mapping, acknowledging that sessions could contribute to multiple topics. From the mapping, we can observe that the most addressed topic is “Knowledge Graphs and Embedding Techniques”, involving sessions on Data Integration, Information Extraction, and Entity Linking. It ensures Data Quality, uses Machine Learning for Graphs and Link Prediction for analysis and completion, and leverages Language Models for enhanced KG interaction and representation, often using embeddings. Interestingly, no session from ISWC 2024 addressed Semantic Web Services and Composition, confirming the claim above.</p>
 
-                <div className="overflow-x-auto my-6">
-                    <table className="table-auto border border-gray-300 w-full">
+                <div className="overflow-auto my-4">
+                    <table className="border w-100">
                         <thead style={{ backgroundColor: '#e94607', color: 'white' }}>
                             <tr>
-                                <th className="px-4 py-2 border border-gray-300">Main Topics</th>
-                                <th className="px-4 py-2 border border-gray-300"><a href="https://iswc.umbc.edu/program/schedule/" target="_blank" style={{ color: '#e94607' }}>Main Tracks' Session Titles</a> from ISWC 2024</th>
+                                <th className="px-4 py-2 border">Main Topics</th>
+                                <th className="px-4 py-2 border"><a href="https://iswc.umbc.edu/program/schedule/" target="_blank" style={{ color: '#e94607' }}>Main Tracks' Session Titles</a> from ISWC 2024</th>
                             </tr>
                         </thead>
                         <tbody>
