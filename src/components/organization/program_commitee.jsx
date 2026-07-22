@@ -7,7 +7,6 @@ const ProgramCommitee = () => (
   <Page width="wide">
     <CommitteeSection
       word="Program Committee"
-      subtitle="The reviewers assessing submissions to ISWC 2026"
       users={program_commitee_list}
       hideImage
     />

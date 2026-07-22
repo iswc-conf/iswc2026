@@ -2,7 +2,6 @@ import React from "react";
 import DeclareSoon from "../general/declareSoon";
 import BaseContainer from "../general/BaseContainer";
 import Header from "../general/Header";
-import SubTitle from "../general/SubTitle";
 import SubHeader from "../general/SubHeader";
 import { theme } from "../../theme";
 import ExternalLink from "../general/ExternalLink"
@@ -15,7 +14,6 @@ export const Tutorials = () => {
     return (
         <BaseContainer width="wide">
             <Header>Call for Tutorials</Header>
-            <SubTitle>Propose a tutorial for the ISWC community</SubTitle>
             <p>The International Semantic Web Conference (ISWC) 2026 is pleased to announce the Call for Tutorials. Continuing the tradition of excellence, the 2026 edition will feature a comprehensive tutorial program serving the diverse interests and expertise of our audience. These tutorials aim to provide attendees with insights into foundational and cutting-edge topics, practical applications, and the latest advancements in Semantic Web, Knowledge Graphs, and Linked Data technologies.</p>
 
             <SubHeader>Important Dates</SubHeader>

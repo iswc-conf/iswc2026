@@ -1,7 +1,6 @@
 import React, { useMemo, useState } from "react";
 import Page from "../general/Page";
 import Header from "../general/Header";
-import SubTitle from "../general/SubTitle";
 import { CATEGORIES, importantDates } from "../../data/importantDates";
 
 const MONTH_FORMAT = { month: "long", year: "numeric" };
@@ -64,7 +63,6 @@ const ImportantDates = () => {
   return (
     <Page width="wide">
       <Header>Important Dates</Header>
-      <SubTitle>Every ISWC 2026 deadline, in one place</SubTitle>
 
       <p className="iswc-dates__note">
         All deadlines are <strong>23:59 AoE</strong> (anywhere on Earth). This page is

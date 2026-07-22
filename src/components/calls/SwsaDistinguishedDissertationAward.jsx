@@ -3,7 +3,6 @@ import SWSAImage from "../../assets/logos/swsa.png";
 import DeclareSoon from "../general/declareSoon";
 import BaseContainer from "../general/BaseContainer";
 import Header from "../general/Header";
-import SubTitle from "../general/SubTitle";
 import SubHeader from "../general/SubHeader";
 import UnderlineHeader from "../general/UnderlineHeader"
 import ExternalLink from "../general/ExternalLink"
@@ -12,7 +11,6 @@ export const SwsaDistinguishedDissertationAward = () => {
     return (
         <BaseContainer>
             <Header>SWSA Distinguished Dissertation Award</Header>
-            <SubTitle>Recognising outstanding doctoral research in the field</SubTitle>
             <p>The Semantic Web Science Association (SWSA) invites applications for the 2026 SWSA Distinguished Dissertation Award. The award will be presented during the International Semantic Web Conference (ISWC), taking  place in Bari, Italy on 25 - 29 October, 2026.</p>
 
             <p>For more information see <ExternalLink href="https://swsa.semanticweb.org/content/swsa-distinguished-dissertation-award">https://swsa.semanticweb.org/content/swsa-distinguished-dissertation-award</ExternalLink></p>

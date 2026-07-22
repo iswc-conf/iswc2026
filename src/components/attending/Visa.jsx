@@ -1,6 +1,5 @@
 import React from "react";
 import Header from "../general/Header";
-import SubTitle from "../general/SubTitle";
 import UnderlineHeader from "../general/UnderlineHeader";
 import DeclareSoon from "../general/declareSoon";
 import BaseContainer from "../general/BaseContainer";
@@ -11,7 +10,6 @@ export const Visa = () => {
     return (
         <BaseContainer>
             <Header>Visa Information</Header>
-            <SubTitle>Entry requirements and invitation letters</SubTitle>
 
             <p>This page provides information about visa requirements and the application process. Please note that the submission of all required documentation does not guarantee that a visa will be granted</p>
 

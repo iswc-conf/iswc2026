@@ -1084,22 +1084,32 @@
   width: 100%;
   font-variant-numeric: tabular-nums;
   max-width: 53rem;
-  margin: 1.5rem auto 2rem;
-  font-size: 1.05rem;
+  margin: 1.5rem 0 2.25rem;
+  font-size: 0.95rem;
 
   th,
   td {
-    padding: 0.75rem 1rem;
+    padding: 0.7rem 1rem;
     text-align: left;
+    vertical-align: top;
     border: 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.09);
   }
 
+  // Same header treatment as the programme tables.
   thead th {
     color: #fff;
-    font-weight: 600;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
     background-color: $iswc-logo-black;
     border-bottom: 0;
+  }
+
+  // The first column is the label; keep it on one line where it can be.
+  tbody td:first-child {
+    white-space: nowrap;
   }
 
   tbody tr:last-child td {
@@ -1232,6 +1242,31 @@
   max-height: 8rem;
   object-fit: contain;
   transition: transform 0.2s ease;
+}
+
+// Caption above an information table.
+.iswc-info-table__caption {
+  caption-side: top;
+  padding: 0 0 0.5rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: $iswc-muted;
+  text-align: left;
+}
+
+// -----------------------------------------------------------------------------
+// Callout
+// -----------------------------------------------------------------------------
+// A short paragraph that needs to be noticed - booking conditions, caveats.
+.iswc-callout {
+  padding: 0.9rem 1.1rem;
+  margin-block: 1.25rem;
+  background: rgba($iswc-primary, 0.08);
+  border-left: 4px solid $iswc-primary;
+  border-radius: 0 0.4rem 0.4rem 0;
+  text-align: left;
 }
 
 // -----------------------------------------------------------------------------

@@ -12,6 +12,9 @@ import DATATREEHOUSE from "../components/sponsorship/assets/GOLD/DATATREEHOUSE.s
 import EBAY from "../components/sponsorship/assets/SILVER/EBAY.png";
 import RELAI from "../components/sponsorship/assets/SILVER/RELAI.png";
 import SIEMENS from "../components/sponsorship/assets/SILVER/SIEMENS.png";
+import LNCS from "../components/sponsorship/assets/BRONZE/LNCS.jpg";
+import ACCENTURE from "../components/sponsorship/assets/GOLD/accenture.png";
+
 
 export const sponsorsByTier = {
   Platinum: [
@@ -22,11 +25,15 @@ export const sponsorsByTier = {
   Gold: [
     { name: "Google", logo: GOOGLE },
     { name: "Data Treehouse", logo: DATATREEHOUSE },
+    { name: "Accenture", logo: ACCENTURE },
   ],
   Silver: [
     { name: "eBay", logo: EBAY },
     { name: "Relai", logo: RELAI },
     { name: "Siemens", logo: SIEMENS },
+  ],
+    Bronze: [
+    { name: "LNCS", logo: LNCS },
   ],
 };
 

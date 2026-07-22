@@ -9,7 +9,6 @@ const Committees = () => (
   <Page width="wide">
     <CommitteeSection
       word="Organizing Committee"
-      subtitle="The people organising ISWC 2026"
       users={organizers}
     />
 

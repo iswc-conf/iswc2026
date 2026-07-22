@@ -2,7 +2,6 @@ import React from "react";
 import DeclareSoon from "../general/declareSoon";
 import BaseContainer from "../general/BaseContainer";
 import Header from "../general/Header";
-import SubTitle from "../general/SubTitle";
 import banner from "./dashgtul.png"
 import ExternalLink from "../general/ExternalLink";
 import UnderlineHeader from "../general/UnderlineHeader";
@@ -22,7 +21,6 @@ export const Dagstuhl = () => {
   </div>
 
     <Header>Call for Dagstuhl Style Workshops – ISWC 2026</Header>
-    <SubTitle>Small, focused workshops run in the Dagstuhl format</SubTitle>
 
            <Card>
                     <p>Did you know that both Dagstuhl and Bari share a connection through their historic castles? While<b> Schloss Dagstuhl</b> in Germany is globally renowned today as a secluded sanctuary for computer scientists to tackle open problems, Bari’s iconic <b>Castello Svevo</b> (Swabian Castle) was famously a vibrant hub of philosophical and scientific exchange under Emperor Frederick II. </p>

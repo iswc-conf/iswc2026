@@ -2,7 +2,6 @@ import React from "react";
 import BaseContainer from "../general/BaseContainer";
 import DeclareSoon from "../general/declareSoon";
 import Header from "../general/Header";
-import SubTitle from "../general/SubTitle";
 import SubHeader from "../general/SubHeader";
 import UnderlineHeader from "../general/UnderlineHeader";
 import ExternalLink from "../general/ExternalLink";
@@ -11,7 +10,6 @@ export const HTMLSubmissionGuide = () => {
     return (
         <BaseContainer>
             <Header>HTML Submission Guide</Header>
-            <SubTitle>How to prepare and submit a paper in HTML</SubTitle>
 
             <p>
                 ISWC 2026 welcomes research articles employing the Open Web Platform. This document provides guidance to authors who wish to make their contributions available in HTML and related technology stack.

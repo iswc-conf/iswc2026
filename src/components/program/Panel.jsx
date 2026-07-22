@@ -1,14 +1,12 @@
 import React from "react";
 import BaseContainer from "../general/BaseContainer";
 import Header from "../general/Header";
-import SubTitle from "../general/SubTitle";
 import DeclareSoon from "../general/declareSoon";
 
 export const Panel = () => {
     return (
         <BaseContainer>
         <Header>ISWC 2026 Panel</Header>
-        <SubTitle>A moderated discussion on where the field is heading</SubTitle>
         <DeclareSoon></DeclareSoon>
 
         {/**

@@ -2,7 +2,6 @@ import React from "react";
 import DeclareSoon from "../general/declareSoon";
 import BaseContainer from "../general/BaseContainer";
 import Header from "../general/Header";
-import SubTitle from "../general/SubTitle";
 import UnderlineHeader from "../general/UnderlineHeader";
 import SubHeader from "../general/SubHeader";
 import ExternalLink from "../general/ExternalLink";
@@ -11,7 +10,6 @@ export const JournalTrack = () => {
     return (
         <BaseContainer>
             <Header>Journal Track Call for Track Proposals</Header>
-            <SubTitle>Propose a session built around published journal papers</SubTitle>
             <p>Following the success at ISWC 2025 this year, we are soliciting a call for Journal Track sessions. These sessions will be held during the main conference.</p>
 
             <p>The aim of the Journal Track sessions is to facilitate cross-pollination between sub-communities, as well as overall strengthen the ties and pipelines between ISWC and the journals that serve our community.</p>

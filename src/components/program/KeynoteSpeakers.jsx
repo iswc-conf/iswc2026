@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 import Page from "../general/Page";
 import Header from "../general/Header";
-import SubTitle from "../general/SubTitle";
 import ExternalLink from "../general/ExternalLink";
 import { keynotes } from "../../data/keynotes";
 
@@ -81,7 +80,6 @@ export const KeynoteSpeakers = () => {
   return (
     <Page>
       <Header>Keynote Speakers</Header>
-      <SubTitle>The invited talks at ISWC 2026</SubTitle>
 
       <SpeakerIndex speakers={keynotes} onSelect={scrollToSpeaker} />
 

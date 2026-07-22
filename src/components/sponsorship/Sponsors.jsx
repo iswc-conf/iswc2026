@@ -2,7 +2,6 @@ import React from "react";
 
 import BaseContainer from "../general/BaseContainer";
 import Header from "../general/Header";
-import SubTitle from "../general/SubTitle";
 
 
 import DeclareSoon from "../general/declareSoon";
@@ -15,11 +14,18 @@ import TENTRIS from "./assets/PLATINUM/TENTRIS.png"
 /* GOLD */
 import GOOGLE from "./assets/GOLD/GOOGLE.png"
 import DATATREE from "./assets/GOLD/DATATREEHOUSE.svg"
+import ACCENTURE from "./assets/GOLD/accenture.png"
 
 /* SILVER */
 import EBAY from "./assets/SILVER/EBAY.png"
 import RELAI from "./assets/SILVER/RELAI.png"
 import SIEMENS from "./assets/SILVER/SIEMENS.png"
+
+
+/* BRONZE */
+import LNCS from "./assets/BRONZE/LNCS.jpg"
+
+
 
 export const Sponsors = () => {
 
@@ -63,6 +69,12 @@ const sponsors = [
         image: DATATREE,
         link: "https://www.data-treehouse.com",
         width: 600,
+      },
+            {
+        name: "Accenture",
+        image: ACCENTURE,
+        link: "https://www.accenture.com",
+        width: 600,
       }
     ],
   },
@@ -87,6 +99,19 @@ const sponsors = [
         image: EBAY,
         link: "https://www.ebay.com",
         width: 600,
+      }
+    ],
+  },
+
+      {
+    level: "Bronze",
+    color: "#cd7f32",
+    items: [
+      {
+        name: "LNCS",
+        image: LNCS,
+        link: "https://link.springer.com/series/558",
+        width: 800,
       }
     ],
   },
@@ -231,7 +256,6 @@ const SponsorCard = ({ name, image, link, width = 300 }) => {
 <BaseContainer>
 
   <Header>ISWC 2026 Sponsors</Header>
-  <SubTitle>The organisations supporting ISWC 2026</SubTitle>
   {sponsors.map((group) => (
     <div key={group.level} className="iswc-sponsor-level">
       <h2 className="iswc-sponsor-level__title" style={{backgroundColor:group.color}}>{group.level}</h2>

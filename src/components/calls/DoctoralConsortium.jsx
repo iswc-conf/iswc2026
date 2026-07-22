@@ -3,7 +3,6 @@ import { useRef } from "react";
 import DeclareSoon from "../general/declareSoon";
 import BaseContainer from "../general/BaseContainer";
 import Header from "../general/Header";
-import SubTitle from "../general/SubTitle";
 import ExternalLink from "../general/ExternalLink";
 import SubHeader from "../general/SubHeader";
 import UnderlineHeader from "../general/UnderlineHeader";
@@ -17,7 +16,6 @@ export const DoctoralConsortium = () => {
     return (
         <BaseContainer>
             <Header>Call for Doctoral Consortium Submissions</Header>
-            <SubTitle>Feedback and mentoring for doctoral researchers</SubTitle>
 
             The <b>ISWC 2026 Doctoral Consortium (DC)</b> will take place as part of the <ExternalLink href="https://iswc2026.semanticweb.org/">25th International Semantic Web Conference</ExternalLink>. This forum will provide PhD students with an opportunity to:
 

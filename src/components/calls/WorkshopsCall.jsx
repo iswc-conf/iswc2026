@@ -2,7 +2,6 @@ import React from "react";
 import DeclareSoon from "../general/declareSoon";
 import BaseContainer from "../general/BaseContainer";
 import Header from "../general/Header";
-import SubTitle from "../general/SubTitle";
 import SubHeader from "../general/SubHeader";
 import UnderlineHeader from "../general/UnderlineHeader";
 import ExternalLink from "../general/ExternalLink";
@@ -10,7 +9,6 @@ export const Workshops = () => {
   return (
     <BaseContainer width="wide">
       <Header>Call for Workshops</Header>
-      <SubTitle>Propose a workshop for ISWC 2026</SubTitle>
       <p>
         The International Semantic Web Conference (ISWC) serves as the premier
         venue for presenting groundbreaking research, innovative systems, and

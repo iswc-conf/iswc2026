@@ -1,365 +1,218 @@
 import React from "react";
+import Page from "../general/Page";
+import Header from "../general/Header";
+import UnderlineHeader from "../general/UnderlineHeader";
+import SubHeader from "../general/SubHeader";
+import ExternalLink from "../general/ExternalLink";
+import Accent from "../general/Accent";
+
+import VenueImage from "../../assets/promotional/nicolaus.png";
 import TransImage from "../../assets/promotional/trans_map.png";
 import HotelImage from "../../assets/promotional/hotels.png";
-import BaseContainer from "../general/BaseContainer";
-import Header from "../general/Header";
-import SubTitle from "../general/SubTitle";
-import UnderlineHeader from "../general/UnderlineHeader";
-import VenueImage from "../../assets/promotional/nicolaus.png";
-import ExternalLink from "../general/ExternalLink";
-import DeclareSoon from "../general/declareSoon";
-import Accent from "../general/Accent";
-import { theme } from "../../theme";
-import SubHeader from "../general/SubHeader";
 
-export const VenueAndAccomodation = () => {
-  return (
-    <BaseContainer>
-      <Header>Venue and Accommodation</Header>
-      <SubTitle>The Nicolaus Hotel in Bari, and where to stay nearby</SubTitle>
-      <UnderlineHeader>Venue</UnderlineHeader>
-      <section className="iswc-media-row">
-        <img
-          src={VenueImage}
-          alt="The Nicolaus Hotel, the ISWC 2026 venue"
-          className="iswc-media-row__image"
-        />
-        <div className="iswc-media-row__text">
-          <p>
-            The conference will take place at the{" "}
-            <ExternalLink href="https://www.thenicolaushotel.com/">
-              Nicolaus Hotel
-            </ExternalLink>{" "}
-            one of the most important hotels and conference centers in Bari.
-          </p>
-          <ul>
-            <li>4-star hotel and conference center</li>
-            <li>15 modular meeting rooms</li>
-            <li>Wi-Fi in rooms and common areas</li>
-            <li>5 different dining locations</li>
-          </ul>
-          <p>And for guests:</p>
-          <ul>
-            <li>Wellness area</li>
-            <li>Free bike sharing</li>
-            <li>174 bedrooms</li>
-          </ul>
-        </div>
-      </section>
-      <UnderlineHeader>
-        International Connections & Transpostation
-      </UnderlineHeader>
-      <Accent>Bari Palese "Karol Wojtyła"</Accent> International Airport (BRI),
-      the main airport in Puglia, situated 9km northwest fo the center of Bari.{" "}
-      <ExternalLink href="https://bari.airports.aeroportidipuglia.it/en/">
-        Airport Website
-      </ExternalLink>
-      . On here you can find all the updated infomation on how to go from the
-      Airport to Bari and back{" "}
-      <ExternalLink href="https://bari.airports.aeroportidipuglia.it/en/da-e-per-gli-aeroporti/type/bus/">
-        {" "}
-        From and To the Bari Airports
-      </ExternalLink>
-      , with either Bus, Taxi, Trains or Rental cars. This table will provide a
-      brief overview:
-      <div className="iswc-table-scroll">
-      <table className="iswc-info-table">
-          <thead style={{ backgroundColor: theme.colors.secondary }}>
-            <tr>
-              <th>Airport Transfer</th>
-              <th>Time</th>
-              <th>Price</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>🚆Train</td>
-              <td>20 mins</td>
-              <td>5,40 EUR</td>
-            </tr>
-            <tr>
-              <td>🚐 Shuttle Service</td>
-              <td>30 mins</td>
-              <td>5,00 EUR</td>
-            </tr>
-            <tr>
-              <td>🚌 Bus n.16</td>
-              <td>50 mins</td>
-              <td>1,20 EUR</td>
-            </tr>
+import {
+  AIRPORT,
+  VENUE,
+  airportTransfers,
+  busesToVenue,
+  cityTransport,
+  hotels,
+  venueTransfers,
+} from "../../data/venue";
 
-            <tr>
-              <td>🚕 Taxi or Car</td>
-              <td>25 mins</td>
-              <td>25 EUR</td>
-            </tr>
-          </tbody>
-         </table>
+const BARI_CENTRALE = "https://maps.app.goo.gl/MHtRHa3o888gmUES8";
+
+/** Small wrapper so every table on this page scrolls the same way on mobile. */
+const InfoTable = ({ caption, columns, children }) => (
+  <div className="iswc-table-scroll">
+    <table className="iswc-info-table">
+      {caption && <caption className="iswc-info-table__caption">{caption}</caption>}
+      <thead>
+        <tr>
+          {columns.map((column) => (
+            <th scope="col" key={column}>
+              {column}
+            </th>
+          ))}
+        </tr>
+      </thead>
+      <tbody>{children}</tbody>
+    </table>
+  </div>
+);
+
+const Stars = ({ count }) => (
+  <span aria-label={`${count} star`}>{"★".repeat(count)}</span>
+);
+
+export const VenueAndAccomodation = () => (
+  <Page>
+    <Header>Venue and Accommodation</Header>
+
+    {/* ---------------------------------------------------------------- Venue */}
+    <UnderlineHeader>Venue</UnderlineHeader>
+
+    <section className="iswc-media-row">
+      <img
+        src={VenueImage}
+        alt="The Nicolaus Hotel, the ISWC 2026 venue"
+        className="iswc-media-row__image"
+      />
+
+      <div className="iswc-media-row__text">
+        <p>
+          The conference will take place at the{" "}
+          <ExternalLink href={VENUE.website}>{VENUE.name}</ExternalLink>, one of the
+          largest hotels and conference centres in Bari.
+        </p>
+
+        <ul>
+          {VENUE.facilities.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+
+        <p className="mb-1">For guests staying at the hotel:</p>
+        <ul>
+          {VENUE.guestFacilities.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
       </div>
-      Bari is connected to the most important national and international
-      destinations, as well as major European hubs. More than 100 daily routes
-      are served by over 20 airlines, including low-cost carriers.
-      <figure className="text-center my-4">
-        <img
-          src={TransImage}
-          alt="Map of national and international flight routes serving Bari"
-          className="iswc-figure-img"
-        />
-      </figure>
-      City is served by{" "}
-      <Accent>Trenitalia (National Train Tranpostation)</Accent> connecting also
-      Italy with other European Contries. The main train stop is{" "}
-      <ExternalLink href="https://maps.app.goo.gl/MHtRHa3o888gmUES8">
-        "Stazione Centrale di Bari" (Google Maps Link)
-      </ExternalLink>
-      , providing a central connection point to all other destinations in the
-      city. Inside the city two main tranportation methods are available:
-      <div className="text-center">
-        <table className="iswc-info-table">
-          <thead style={{ backgroundColor: theme.colors.secondary }}>
-            <tr>
-              <th>Transportation</th>
-              <th>Tickets</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>🚆Train (Trenitalia)</td>
-              <td>
-                Automatic machines, Local Vendor or{" "}
-                <ExternalLink href="https://www.trenitalia.com/en.html">
-                  Trenitalia Website
-                </ExternalLink>
-              </td>
-            </tr>
+    </section>
 
-            <tr>
-              <td>🚌 Bus (AMTAB)</td>
-              <td>
-                Local vendors, card payments directly on the bus, and SMS
-                payments are available. For more information, visit the{" "}
-                <ExternalLink href="https://www.amtab.it/it/9-uncategorised/1038-biglietti">
-                  AMTAB Website
-                </ExternalLink>
-                .
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-To reach the venue from the centre of Bari (Bari Centrale railway station), you can use the transportation options below (more detailed information is available on the venue’s official website). It typically takes  20–25 minutes by public transport. Alternatively, you can walk from the station to the venue in about 40 minutes.
-      <div className="text-center">
-        <table className="iswc-info-table">
-          <thead style={{ backgroundColor: theme.colors.secondary }}>
-            <tr>
-              <th>Bus Number</th>
-              <th>Stop </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>AMTAB Line N 6</td>
-              <td>Via Matarrese</td>
-            </tr>
+    {/* ------------------------------------------------------ Getting to Bari */}
+    <UnderlineHeader>Getting to Bari</UnderlineHeader>
 
-            <tr>
-              <td>AMTAB Line N 10</td>
-              <td>Via Matarrese</td>
-            </tr>
+    <SubHeader>By air</SubHeader>
 
-            <tr>
-              <td>AMTAB Line D</td>
-              <td>Via Camillo Rosalba</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      Alternative tranporation methods are listed below:
-      <div className="text-center">
-        <table className="iswc-info-table">
-          <thead style={{ backgroundColor: theme.colors.secondary }}>
-            <tr>
-              <th>Tranportation</th>
-              <th>Description </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Free Nicholaus Shuttle Service </td>
-              <td>
-                Free shuttle service from and to Bari Airport by Nicolaus, upon
-                availability at scheduled times, to be booked at least 24 hours
-                in advance
-              </td>
-            </tr>
+    <p>
+      <Accent>{AIRPORT.name}</Accent> is the main airport in Puglia, 9 km north-west
+      of the centre of Bari. Bari is connected to major national and international
+      destinations, with more than 100 daily routes served by over 20 airlines,
+      including low-cost carriers. See the{" "}
+      <ExternalLink href={AIRPORT.website}>airport website</ExternalLink> for current
+      information, and{" "}
+      <ExternalLink href={AIRPORT.transfersPage}>
+        travelling to and from the airport
+      </ExternalLink>{" "}
+      for bus, taxi, train and car hire options.
+    </p>
 
-            <tr>
-              <td>Taxi </td>
-              <td>
-                Flat rates a) From the central railway station to the hotel:
-                average price € 10,00; b) From the airport to the hotel: average
-                price € 30,00
-              </td>
-            </tr>
+    <InfoTable caption="Airport to the city centre" columns={["Transfer", "Time", "Price"]}>
+      {airportTransfers.map((option) => (
+        <tr key={option.mode}>
+          <td>{option.mode}</td>
+          <td>{option.time}</td>
+          <td>{option.price}</td>
+        </tr>
+      ))}
+    </InfoTable>
 
-            <tr>
-              <td>By Car</td>
-              <td>
-                SS16 BIS to Brindisi, Exit 11 “Poggiofranco” of the bypass of
-                Bari, then follow the road signs “THE NICOLAUS HOTEL”{" "}
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <UnderlineHeader>Hotels</UnderlineHeader>
-The <Accent>Conference Venue "The Nicolaus Hotel"</Accent> offers 174
-rooms for attendees. Alternative accommodations within walking distance from the venue include:
-Hi Hotel (88 rooms), Hotel Rondo (62 rooms), Villa Romanazzi Carducci (123 rooms), 
-and a wide selection of B&Bs and 3-star hotels. The median hotel price is
-€80.00 (based on data from 251 hotel prices collected in 2024).
+    <figure className="iswc-figure">
+      <img
+        src={TransImage}
+        alt="Map of national and international flight routes serving Bari"
+      />
+      <figcaption className="iswc-figure__caption">
+        Direct flight connections to Bari.
+      </figcaption>
+    </figure>
 
-      <figure className="text-center my-4">
-        <img
-          src={HotelImage}
-          alt="Map of hotels near the ISWC 2026 venue in Bari"
-          className="iswc-figure-img"
-        />
-      </figure>
+    <SubHeader>By train</SubHeader>
 
-      <SubHeader>Special-Rate Hotels for ISWC 2026</SubHeader>
+    <p>
+      Bari is served by <Accent>Trenitalia</Accent>, the national rail operator,
+      which also connects Italy with other European countries. The main stop is{" "}
+      <ExternalLink href={BARI_CENTRALE}>Bari Centrale</ExternalLink>, a central
+      connection point for the rest of the city.
+    </p>
 
-      <p>The following hotels have a special conference rate that will be applied <b>ONLY</b> booking the hotels using the conference registration system, during or after registering for the conference. Attendees are invited to book their reservations in due time.</p>
+    <SubHeader>Getting around the city</SubHeader>
 
-    <div className="iswc-table-scroll">
-  <table className="iswc-info-table">
-    <thead style={{ backgroundColor: theme.colors.secondary }}>
-      <tr>
-        <th>Hotel</th>
-        <th>Category</th>
-        <th>Location</th>
-        <th>Distance from venue</th>
-        <th>Website</th>
-        <th>Rooms</th>
-      </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td>The Nicolaus Hotel</td>
-        <td>⭐⭐⭐⭐</td>
-        <td>Congress venue</td>
-        <td>-</td>
-        <td>
-          <ExternalLink href="https://www.thenicolaushotel.com/">
-            Website
-          </ExternalLink>
-        </td>
-        <td>150</td>
-      </tr>
-         <tr>
-        <td>Hi Hotel</td>
-        <td>⭐⭐⭐⭐</td>
-        <td>10 min walk</td>
-        <td>950 m</td>
-        <td>
-          <ExternalLink href="https://www.hihotelbari.com/">
-            Website
-          </ExternalLink>
-        </td>
-        <td>50</td>
-      </tr>
+    <InfoTable columns={["Transport", "Tickets"]}>
+      {cityTransport.map((option) => (
+        <tr key={option.mode}>
+          <td>{option.mode}</td>
+          <td>
+            {option.tickets}{" "}
+            <ExternalLink href={option.link.href}>{option.link.label}</ExternalLink>
+          </td>
+        </tr>
+      ))}
+    </InfoTable>
 
-    <tr>
-        <td>Hotel Excelsior</td>
-        <td>⭐⭐⭐⭐</td>
-        <td>City centre</td>
-        <td>2.5 Km</td>
-        <td>
-          <ExternalLink href="https://excelsiorbari.it/">
-            Website
-          </ExternalLink>
-        </td>
-        <td>20</td>
-      </tr>
+    {/* ----------------------------------------------- Getting to the venue */}
+    <UnderlineHeader>Getting to the Venue</UnderlineHeader>
 
-       <tr>
-        <td>Leon D’Oro</td>
-        <td>⭐⭐⭐⭐</td>
-        <td>City centre</td>
-        <td>2.9 Km</td>
-        <td>
-          <ExternalLink href="https://leonbari.it/">
-            Website
-          </ExternalLink>
-        </td>
-        <td>25</td>
-      </tr>
+    <p>
+      From Bari Centrale railway station the venue is roughly 20–25 minutes by
+      public transport, or about a 40 minute walk. Further detail is available on
+      the <ExternalLink href={VENUE.website}>venue&rsquo;s website</ExternalLink>.
+    </p>
 
-       <tr>
-        <td>Adria Hotel</td>
-        <td>⭐⭐⭐</td>
-        <td>City centre</td>
-        <td>3.2 Km</td>
-        <td>
-          <ExternalLink href="https://www.adriahotelbari.com">
-            Website
-          </ExternalLink>
-        </td>
-        <td>5</td>
-      </tr>
+    <InfoTable caption="Bus lines from Bari Centrale" columns={["Bus line", "Stop"]}>
+      {busesToVenue.map((bus) => (
+        <tr key={bus.line}>
+          <td>{bus.line}</td>
+          <td>{bus.stop}</td>
+        </tr>
+      ))}
+    </InfoTable>
 
-  
-      <tr>
-        <td>Mövenpick Hotel</td>
-        <td>⭐⭐⭐⭐</td>
-        <td>City centre</td>
-        <td>3.7 Km</td>
-        <td>
-          <ExternalLink href="https://movenpickhotelbari.it/">
-            Website
-          </ExternalLink>
-        </td>
-        <td>40</td>
-      </tr>
+    <InfoTable caption="Other options" columns={["Transport", "Details"]}>
+      {venueTransfers.map((option) => (
+        <tr key={option.mode}>
+          <td>{option.mode}</td>
+          <td>{option.description}</td>
+        </tr>
+      ))}
+    </InfoTable>
 
+    {/* -------------------------------------------------------- Accommodation */}
+    <UnderlineHeader>Accommodation</UnderlineHeader>
 
-  
-<tr>
-        <td>Hotel Victor</td>
-        <td>⭐⭐⭐⭐</td>
-        <td>City centre</td>
-        <td>3.9 Km</td>
-        <td>
-          <ExternalLink href="https://www.victorhotelbari.it/">
-            Website
-          </ExternalLink>
-        </td>
-        <td>30</td>
-      </tr>
+    <p>
+      The conference venue, <Accent>The Nicolaus Hotel</Accent>, has 174 rooms for
+      attendees. Other options within walking distance include Hi Hotel (88 rooms),
+      Hotel Rondò (62 rooms) and Villa Romanazzi Carducci (123 rooms), alongside a
+      wide selection of B&amp;Bs and three-star hotels. The median hotel price in
+      Bari is around €80, based on 251 prices collected in 2024.
+    </p>
 
+    <figure className="iswc-figure">
+      <img src={HotelImage} alt="Map of hotels near the ISWC 2026 venue in Bari" />
+      <figcaption className="iswc-figure__caption">
+        Hotels near the venue and in the city centre.
+      </figcaption>
+    </figure>
 
-      <tr>
-        <td>Hotel Boston</td>
-        <td>⭐⭐⭐⭐</td>
-        <td>City centre</td>
-        <td>4.3 Km</td>
-        <td>
-          <ExternalLink href="https://www.bostonbari.it/">
-            Website
-          </ExternalLink>
-        </td>
-        <td>15</td>
-      </tr>
+    <SubHeader>Hotels with a conference rate</SubHeader>
 
-      
-     
+    <p className="iswc-callout">
+      The rates below apply <b>only</b> when booking through the conference
+      registration system, during or after registering for the conference. Please
+      book in good time.
+    </p>
 
-   
+    <InfoTable
+      columns={["Hotel", "Category", "Location", "Distance from venue", "Rooms"]}
+    >
+      {hotels.map((hotel) => (
+        <tr key={hotel.name}>
+          <td>
+            <ExternalLink href={hotel.website}>{hotel.name}</ExternalLink>
+          </td>
+          <td>
+            <Stars count={hotel.stars} />
+          </td>
+          <td>{hotel.location}</td>
+          <td>{hotel.distance}</td>
+          <td>{hotel.rooms}</td>
+        </tr>
+      ))}
+    </InfoTable>
+  </Page>
+);
 
-     
-    </tbody>
-  </table>
-</div>
-    </BaseContainer>
-  );
-};
+export default VenueAndAccomodation;

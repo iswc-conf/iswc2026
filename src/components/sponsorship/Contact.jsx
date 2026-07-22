@@ -2,7 +2,6 @@ import React from "react";
 import DeclareSoon from "../general/declareSoon";
 import BaseContainer from "../general/BaseContainer";
 import Header from "../general/Header";
-import SubTitle from "../general/SubTitle";
 import UnderlineHeader from "../general/UnderlineHeader";
 import SubHeader from "../general/SubHeader";
 import { theme } from "../../theme";
@@ -13,7 +12,6 @@ export const WhySponsor = () => {
     return (
         <BaseContainer>
         <Header>Contacts</Header>
-        <SubTitle>Who to reach about sponsoring ISWC 2026</SubTitle>
 
         <p>Interested in sponsoring ISWC 2026? Contact us to learn about available sponsorship opportunities and how you can get involved.</p>
 

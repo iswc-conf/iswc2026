@@ -2,7 +2,6 @@ import React from "react";
 import DeclareSoon from "../general/declareSoon";
 import BaseContainer from "../general/BaseContainer";
 import Header from "../general/Header";
-import SubTitle from "../general/SubTitle";
 import ExternalLink from "../general/ExternalLink";
 import SubHeader from "../general/SubHeader";
 import UnderlineHeader from "../general/UnderlineHeader";
@@ -12,7 +11,6 @@ export const Posters = () => {
     return (
         <BaseContainer>
         <Header>Call for Poster and Demos</Header>
-        <SubTitle>Late-breaking work and live demonstrations</SubTitle>
 
         <p>The ISWC 2026 Posters and Demos Track offers an opportunity to showcase late-breaking research results, ongoing research or resource projects, speculative or innovative ideas, and interactive demonstrations. This track is designed to encourage dynamic discussions between presenters and participants, fostering feedback that can shape future research directions. These discussions will offer participants an effective way to broaden their knowledge of emerging research trends and to network with other researchers.</p>
     

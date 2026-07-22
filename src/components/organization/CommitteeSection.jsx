@@ -1,6 +1,5 @@
 import React from "react";
 import Header from "../general/Header";
-import SubTitle from "../general/SubTitle";
 import UnderlineHeader from "../general/UnderlineHeader";
 import PersonCard from "./PersonCard";
 
@@ -13,14 +12,12 @@ import PersonCard from "./PersonCard";
  * photos were shown.
  *
  * @param {string} word       Page title.
- * @param {string} subtitle   Short line describing the page.
  * @param {object} users      Map of role name to array of members.
  * @param {bool}   hideImage  Render names only, without portraits.
  */
-export const CommitteeSection = ({ word, subtitle, users, hideImage = false }) => (
+export const CommitteeSection = ({ word, users, hideImage = false }) => (
   <section>
     {word && <Header>{word}</Header>}
-    {subtitle && <SubTitle>{subtitle}</SubTitle>}
 
     {Object.entries(users).map(([role, members]) => (
       <div key={role}>

@@ -7,7 +7,6 @@ import { theme } from "../../theme";
 import ExternalLInk from "../general/ExternalLink"
 import BaseContainer from "../general/BaseContainer";
 import UnderlineHeader from "../general/UnderlineHeader"
-import SubTitle from "../general/SubTitle"
 import ExternalLink from "../general/ExternalLink";
 
 export const Visionary = () => {
@@ -23,7 +22,6 @@ export const Visionary = () => {
         <BaseContainer>
 
             <Header>Call for Visionary Ideas Track Papers</Header>
-            <SubTitle>Early-stage ideas that could reshape the field</SubTitle>
    
 
             <SubHeader>A Quarter-Century Milestone: Rethinking the Semantic Web</SubHeader>

@@ -2,12 +2,10 @@ import React from "react";
 import DeclareSoon from "../general/declareSoon";
 import BaseContainer from "../general/BaseContainer";
 import Header from "../general/Header";
-import SubTitle from "../general/SubTitle";
 export const Challenges = () => {
     return (
         <BaseContainer>
             <Header>Call for Challenges Proposals</Header>
-            <SubTitle>Propose a challenge for the ISWC 2026 community</SubTitle>
             <DeclareSoon></DeclareSoon>
 
             {/*

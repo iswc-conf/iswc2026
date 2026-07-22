@@ -2,7 +2,6 @@ import React from "react";
 import DeclareSoon from "../general/declareSoon";
 import BaseContainer from "../general/BaseContainer";
 import Header from "../general/Header";
-import SubTitle from "../general/SubTitle";
 import { theme } from "../../theme";
 import ExternalLink from "../general/ExternalLink"
 import UnderlineHeader from "../general/UnderlineHeader";
@@ -15,7 +14,6 @@ export const Resource = () => {
     <BaseContainer>
 
       <Header>Call for Resource Track Papers</Header>
-      <SubTitle>Datasets, ontologies, software, and benchmarks</SubTitle>
 
       <p><b>Resources</b> are of paramount importance as they foster scientific advancement and the development of novel applications. Sharing resources is key to ensuring <b>reproducibility</b>, allowing other researchers to leverage FAIR principles for scientific data management to compare results and methods or to explore new lines of research, and supporting practitioners in reusing research outputs.</p>
 

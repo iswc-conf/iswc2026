@@ -3,7 +3,6 @@ import { useState, useRef } from "react";
 import DescriptiveTable from "../general/DescriptiveTable";
 import BaseContainer from "../general/BaseContainer";
 import Header from "../general/Header"
-import SubTitle from "../general/SubTitle";
 import { workshops } from "./data/workshops";
 import DeclareSoon from "../general/declareSoon";
 import SubHeader from "../general/SubHeader";
@@ -14,7 +13,6 @@ export const Workshops = () => {
     return (
         <BaseContainer width="wide">
         <Header>Accepted Workshops</Header>
-        <SubTitle>Workshops running at ISWC 2026</SubTitle>
         <div className="text-center">
         <p className="pt-2 font-semibold">Click on a workshop title below to open its full description.</p></div>
         <DescriptiveTable title={"Workshop Title"} description={"Organizers"} data={workshops} header_title={"Abstract"} unit="workshops"></DescriptiveTable>
