@@ -331,10 +331,13 @@
     text-align: left;
   }
 
+  // Matches the header treatment on .iswc-info-table and .iswc-tiers-table so
+  // every table on the site reads the same way.
   thead th {
-    background-color: $iswc-surface-alt;
-    color: $iswc-secondary;
+    background-color: $iswc-logo-black;
+    color: #fff;
     font-weight: 700;
+    border-color: rgba(255, 255, 255, 0.25);
     position: sticky;
     top: 0;
     z-index: 1;
