@@ -31,9 +31,6 @@ export const OKBCSubmissionWorkflow = () => {
         />
       </div>
 
-
-
-
         </BaseContainer>
     );
 }

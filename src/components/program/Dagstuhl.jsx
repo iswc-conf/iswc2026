@@ -10,7 +10,7 @@ export const DagstuhlWorkshops = () => {
 
 
     return (
-        <BaseContainer>
+        <BaseContainer width="wide">
         <Header> Accepted Dagstuhl-style Workshops</Header>
         <DeclareSoon></DeclareSoon>
         {/** <DescriptiveTable data={dagshtul} title={"Workshop Title"} description={"Organizers"}></DescriptiveTable>}*/}

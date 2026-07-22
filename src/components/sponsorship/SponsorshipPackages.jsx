@@ -1,6 +1,5 @@
 import React from "react";
-import './sponsorship.css';
-import BaseContainer from "../general/BaseContainer";
+import Page from "../general/Page";
 import Header from "../general/Header";
 import DeclareSoon from "../general/declareSoon";
 import { theme } from "../../theme";
@@ -12,28 +11,24 @@ export const SponsorshipPackages = () => {
         
         
 
-            <>
-    <div className="mt-[150px] px-4 pt-2 bg-white flex items-center justify-center"></div>
-    <div className="container mx-auto px-4 lg:px-8 lg:pb-12 mt-12 max-w-6xl">
-
-
+            <Page width="wide">
 
             <Header>Sponsorship Packages</Header>
 
             <UnderlineHeader>Sponsorship Packages</UnderlineHeader>
 
-            <div className="w-full overflow-x-auto">
+            <div className="iswc-table-scroll">
                 
     <div className="text-center">
-                <table className="custom-table">
+                <table className="iswc-tiers-table">
                     <thead style={{ backgroundColor: theme.colors.logo_black }}>
                         <tr>
                             <th>Sponsor Benefits</th>
-                            <th className="bronze">Bronze</th>
-                            <th className="silver">Silver</th>
-                            <th className="gold">Gold</th>
-                            <th className="platinum">Platinum</th>
-                            <th className="diamond">Diamond</th>
+                            <th className="tier-bronze">Bronze</th>
+                            <th className="tier-silver">Silver</th>
+                            <th className="tier-gold">Gold</th>
+                            <th className="tier-platinum">Platinum</th>
+                            <th className="tier-diamond">Diamond</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -70,8 +65,6 @@ export const SponsorshipPackages = () => {
                             <td>✅</td>
                             <td>✅</td>
                         </tr>
-
-
 
                         <tr>
                             <td>Free conference registrations</td>
@@ -156,21 +149,15 @@ export const SponsorshipPackages = () => {
 
             <UnderlineHeader>À la carte Sponsorship Opportunities</UnderlineHeader>
 
-            <p>
-                <ul className="ul-disc">
+            <ul className="ul-disc">
                     <li>Doctoral Consortium Sponsor [exclusive] (1.000 €)</li>
                     <li>Posters and Demo Reception</li>
                     <li>Opportunity to be named as sponsor for the prize of one of the best paper awards at the conference</li>
                     <li>Open to any other suggestions</li>
 
                 </ul>
-            </p>
 
-
-
-
-           </div>
-    </>
+        </Page>
     );
 };
 

@@ -47,10 +47,6 @@ export const ESWCResubmission = () => {
 
 <p>For further enquiries about this process, you can contact the ISWC 2026 Research Track chairs<ExternalLink href="mailto:iswc2026-research@easychair.org">iswc2026-research@easychair.org</ExternalLink>.</p>
 
-
-
-
-
         </BaseContainer>
     );
 }

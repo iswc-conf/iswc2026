@@ -11,11 +11,9 @@ export const SwsaDistinguishedDissertationAward = () => {
     return (
         <BaseContainer>
             <Header>SWSA Distinguished Dissertation Award</Header>
+            <p>The Semantic Web Science Association (SWSA) invites applications for the 2026 SWSA Distinguished Dissertation Award. The award will be presented during the International Semantic Web Conference (ISWC), taking  place in Bari, Italy on 25 - 29 October, 2026.</p>
 
-            <br></br>
-
-            <p>The Semantic Web Science Association (SWSA) invites applications for the 2026 SWSA Distinguished Dissertation Award. The award will be presented during the International Semantic Web Conference (ISWC), taking  place in Bari, Italy on 25 - 29 October, 2026.
-            <br></br>For more information see <ExternalLink href="https://swsa.semanticweb.org/content/swsa-distinguished-dissertation-award">https://swsa.semanticweb.org/content/swsa-distinguished-dissertation-award</ExternalLink></p>
+            <p>For more information see <ExternalLink href="https://swsa.semanticweb.org/content/swsa-distinguished-dissertation-award">https://swsa.semanticweb.org/content/swsa-distinguished-dissertation-award</ExternalLink></p>
             <SubHeader>Eligibility</SubHeader>
 
             <p>
@@ -33,7 +31,6 @@ Eligible doctoral dissertations are those which present innovative research resu
 <p>
 Submissions must include the following documents, which must be submitted via easychair on or before July 6, 2026:</p>
 
-<p>
 <ul className="list-disc list-inside ml-8">
    <li>A pdf file of the dissertation.</li>
    <li>A short (no more than 5 pages in total) paper summarizing the key contributions of the dissertation. The paper should be in PDF, should be edited according to the Springer publication guideline for Lecture Notes in Computer Science (LNCS), and should cover the following elements:
@@ -46,7 +43,6 @@ Submissions must include the following documents, which must be submitted via ea
     <li>A document that lists your publications that are associated with the dissertation, with links to the corresponding pdf files.</li>
    <li>A letter from the student’s supervisor or institution that confirms that the student was awarded his/her PhD between January 01, 2025 and June 30, 2026.</li>
 </ul>
-</p>
 
 
         </BaseContainer>

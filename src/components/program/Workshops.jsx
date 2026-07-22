@@ -11,7 +11,7 @@ export const Workshops = () => {
 
 
     return (
-        <BaseContainer>
+        <BaseContainer width="wide">
         <Header>Accepted Workshops</Header>
         <div className="text-center">
         <p className="pt-2 font-semibold">Click on a workshop title below to open its full description.</p></div>

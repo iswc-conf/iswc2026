@@ -1,5 +1,4 @@
 import React from "react";
-import './attending.css'
 import SWSA from "../../assets/logos/swsa.png";
 
 export const Childcare = () => {

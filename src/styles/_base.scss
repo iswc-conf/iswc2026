@@ -91,6 +91,14 @@ svg {
   height: auto;
 }
 
+// Safety net: a content image with no sizing of its own is capped rather than
+// rendering at its intrinsic pixel size. Components that size their own images
+// (avatars, portraits, logos) set an explicit width and are unaffected.
+.iswc-page img:not([class*="iswc-"]):not([width]) {
+  max-height: 26rem;
+  object-fit: contain;
+}
+
 // -- Tables -------------------------------------------------------------------
 table {
   border-collapse: collapse;

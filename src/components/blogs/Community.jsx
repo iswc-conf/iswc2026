@@ -32,7 +32,6 @@ export const Community = () => {
         <>
             <div className="mt-[74px] px-4 pt-2 bg-white flex items-center justify-center">
             </div>
-            <br />
             <div className="flex justify-start items-start flex-col pt-10 pb-0 lg:pt-16 lg:pb-4 mb-4 lg:my-6 lg:h-auto lg:px-32 px-8 overflow-visible">
                 <p style={{ color: '#e94607' }} className="text-3xl font-bold mb-4 lg:mx-10 sm:mx-2 tracking-wide text-center">A community that fosters meaningful connections</p>
                 <div className="text-md lg:text-lg font-[300] lg:mx-10 sm:mx-2">
@@ -42,8 +41,6 @@ export const Community = () => {
                     <p>Beyond the technical sessions and paper presentations, ISWC is also known for its unforgettable social events - scenic excursions, lively banquets, and moments of fun that bring the community closer together. From shared laughter during excursions to memorable evenings at conference dinners, these experiences have become just as meaningful as the research itself.</p>
 
                     <p>In this post, we take a moment to look back through the eyes of past attendees - who have generously shared their memories, photos, and reflections. Their stories capture the energy, camaraderie, and spirit that make ISWC a highlight of the year for so many in the Semantic Web community.</p>
-
-                    <br />
                     <div className="flex items-center gap-4">
                         <div className="w-24 h-24 overflow-hidden">
                             <img
@@ -73,9 +70,6 @@ export const Community = () => {
                     <img src={group_pic_4} alt="Group Picture" className="rounded-xl my-4" />
 
                     <p>Another event close to my heart is the <a href="http://iswc2018.semanticweb.org/ada-lovelace-celebration/index.html" target="_blank" style={{ color: '#e94607' }}> ISWC Ada Lovelace Day celebration</a>. To honor the achievements of our Semantic Web women, we organized a Wikipedia edit-a-thon to create pages for those in our community who didn't have a page yet – we proudly added a few during the event, including <a href="https://en.wikipedia.org/wiki/Natasha_Noy" style={{ color: '#e94607' }} target="_blank">Natasha Noy</a> and <a href="https://en.wikipedia.org/wiki/Lora_Aroyo" style={{ color: '#e94607' }} target="_blank">Lora Aroyo</a>.</p>
-
-                    <br />
-                    <br />
                     <div className="flex items-center justify-end p-0 m-0 w-full">
                         <div className="text-right text-lg font-semibold leading-snug">
                             Sabrina Kirrane{' '}
@@ -100,9 +94,6 @@ export const Community = () => {
                     <img src={group_pic_6} alt="Group Picture" className="rounded-xl my-4 h-[500px]" />
                     <img src={group_pic_7} alt="Group Picture" className="rounded-xl my-4 h-[500px]" />
                     <img src={group_pic_8} alt="Group Picture" className="rounded-xl my-4 h-[500px]" />
-
-                    <br />
-                    <br />
                     <div className="flex items-center gap-4">
                         <div className="w-24 h-24 overflow-hidden">
                             <img
@@ -130,8 +121,6 @@ export const Community = () => {
                     <img src={group_pic_10} alt="Group Picture" className="rounded-xl my-4" />
 
                     <p>Monterey – Cogan Shimizu, Michelle Cheatham, MD Sarker, Lu Zhou</p>
-
-
 
                     <div className="flex flex-col gap-8 w-full">
                         {/* Top Row: 2 images, each 50% width */}
@@ -180,9 +169,6 @@ export const Community = () => {
                             </p>
                         </div>
                     </div>
-
-                    <br />
-                    <br />
                     <div className="flex items-center justify-end p-0 m-0 w-full">
                         <div className="text-right text-lg font-semibold leading-snug">
                             Blerina Spahiu{' '}
@@ -211,7 +197,6 @@ export const Community = () => {
                             />
                         </div>
                     </div>
-                    <br/>
                     <div className="w-full flex justify-end">
                         <div className="w-[400px] overflow-hidden">
                             <img
@@ -263,10 +248,6 @@ export const Community = () => {
                     </div>
 
                     <p className="text-right">Blerina Spahiu, Anisa Rula, Amrapali Zaveri (RIP) at the Monterey Aquarium for the social dinner at ISWC 2018.</p>
-
-                    <br/>
-                    <br/>
-
                     <div className="flex items-center gap-4">
                         <div className="w-24 h-24 overflow-hidden">
                             <img
@@ -293,10 +274,6 @@ export const Community = () => {
                     <p>The social side of this conference is also incredibly special. After the 2015 conference in Bethlehem, Pennsylvania, I celebrated my 30th birthday by going to New York City with close friends from the community for several days of celebrations. Another standout memory is the boat party during the 2013 conference in Sydney with the band formed by our colleagues. We then ended up dancing salsa in the harbor till early morning. </p>
 
                     <p>All of this highlights a central truth: science is a social process. The Semantic Web community has become not only my scientific and professional network but also a close-knit group of friends. Among all the conferences I attend, this is one of the most lively and meaningful.</p>
-
-
-                    <br />
-                    <br />
                     <div className="flex items-center justify-end p-0 m-0 w-full">
                         <div className="text-right text-lg font-semibold leading-snug">
                             Gong Cheng{' '}
@@ -324,7 +301,6 @@ export const Community = () => {
                             />
                         </div>
                     </div>
-                    <br/>
                     <div className="w-full flex justify-end">
                         <div className="w-[700px] overflow-hidden">
                             <img
@@ -334,13 +310,9 @@ export const Community = () => {
                             />
                         </div>
                     </div>
-
-                    <br/>
                     <p style={{ color: '#e94607' }} className="text-3xl font-bold mb-4 lg:mx-10 sm:mx-2 tracking-wide text-center">Thank You to Our Storytellers!</p>
 
                     <p>A heartfelt thank you to everyone who shared their ISWC memories and photos for this post. Your stories not only highlight the richness of the ISWC experience but also help preserve the spirit of the community for years to come. We are grateful for your time, reflections, and the glimpse into what makes ISWC meaningful to each of you.</p>
-
-                    <br/>
                     <p style={{ color: '#e94607' }} className="text-3xl font-bold mb-4 lg:mx-10 sm:mx-2 tracking-wide text-center">Your Turn to Make Memories – Onward to ISWC 2025!</p>
 
                     <p>As we look ahead to ISWC 2025, these shared memories remind us what makes this conference truly special - not just the cutting-edge research, but the people, the connections, and the moments that span continents and careers. Whether you are presenting a paper, diving into a workshop, or simply exploring new ideas, ISWC offers a unique space to grow, collaborate, and be inspired.</p>

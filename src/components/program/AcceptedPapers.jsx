@@ -16,7 +16,7 @@ import DeclareSoon from "../general/declareSoon"
 export const AcceptedPapers = () => {
 
     return (
-        <BaseContainer>
+        <BaseContainer width="wide">
         <Header>Accepted Papers</Header>
 
         <DeclareSoon></DeclareSoon>

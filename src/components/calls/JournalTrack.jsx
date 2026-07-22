@@ -39,8 +39,7 @@ export const JournalTrack = () => {
 
             </p>
 
-            <p>
-                <ul className="ul-disc ml-8">
+            <ul className="ul-disc ml-8">
                     <li>Journal Spotlight</li>
                     <li>Companion Proceedings
                           <ul className="ul-disc ml-16">
@@ -54,7 +53,6 @@ export const JournalTrack = () => {
                         </ul>
                     </li>
                 </ul>
-            </p>
 
 
             <UnderlineHeader>Review Criteria</UnderlineHeader>
@@ -62,8 +60,7 @@ export const JournalTrack = () => {
 
             <SubHeader>Scientific and Community Impact and Relevance</SubHeader>
 
-            <p>
-                <ul className="ul-disc ml-8">
+            <ul className="ul-disc ml-8">
                 <li>How did the collection break new ground?</li>
                 <li>How did the collection fill important gaps?</li>
                 <li>How did the collection otherwise advance the state of the art?</li>
@@ -71,33 +68,24 @@ export const JournalTrack = () => {
                 <li>What impact has this collection of papers had, scientifically and socially?</li>
                 <li>Is the collection relevant to the Semantic Web community, in particular along its emphasized themes for ISWC 2026?</li>
                 </ul>
-            </p>
 
             <SubHeader>Availability</SubHeader>
 
-               <p>
-                   <ul className="ul-disc ml-8">
+               <ul className="ul-disc ml-8">
                     <li>Are the selected papers available for attendees of the proposed session to read without a paywall?</li>
                                </ul>
-               </p>
 
 
             <SubHeader>Attendance</SubHeader>
-<p>
-    
-                   <ul className="ul-disc ml-8">
+<ul className="ul-disc ml-8">
     
                     <li>Is at least one author of each of the selected papers confirmed to attend ISWC 2026?</li>
                     <li>Is at least one editor confirmed to attend ISWC 2026?</li>
                 </ul>
-</p>
-
-
 
             <UnderlineHeader>Submission Details</UnderlineHeader>
          
-  <p>
-      <ul className="ul-disc ml-8">
+  <ul className="ul-disc ml-8">
         <li>All papers and abstracts must be submitted electronically via <ExternalLink href="https://easychair.org/conferences/?conf=iswc2026">EasyChair (choose "Journal Session Proposals").</ExternalLink></li>
       <li>Proposals must not exceed 4 pages (excluding references). Proposals that exceed the page limit will be rejected without review.</li>
       <li>All submissions must be in English.</li>
@@ -108,13 +96,10 @@ export const JournalTrack = () => {
       <li>At least one proposer must register for the conference and chair the session.</li>
       <li>At least one author of each selected paper must register for the conference and present the paper.</li>
                 </ul>
-  </p>
 
 <UnderlineHeader>Contact</UnderlineHeader>
 
 <p>For further information contact:<ExternalLink href="mailto:iswc2026-journal@easychair.org"> iswc2026-journal@easychair.org</ExternalLink></p>
-<br></br>
-<br></br>
         </BaseContainer>
     );
 }

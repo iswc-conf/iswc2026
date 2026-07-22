@@ -19,12 +19,10 @@ export const Schedule = () => {
         color: '#333',
     };
 
-
-
     return (
         <BaseContainer>
         
-            <div className="flex flex-col pt-10 lg:pt-16 lg:pb-4 mb-4 lg:my-6 lg:px-32 px-8 overflow-visible">
+            <div>
              <Header>Schedule</Header>
              <DeclareSoon></DeclareSoon>
 

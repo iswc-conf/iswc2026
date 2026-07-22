@@ -59,9 +59,23 @@ export const DataTable = ({
   const hasSecondaryColumn = Boolean(secondaryLabel && secondaryField);
   const hasLinksColumn = showLinks && data.some((row) => row.website || row.cfp);
 
+  const extraColumns =
+    Number(hasSecondaryColumn) + Number(hasTypeColumn) + Number(hasLinksColumn);
+  // Titles carry the most text, so give them the lion's share.
+  const titleColumnWidth = [70, 65, 55, 50][extraColumns] ?? 50;
+
   return (
     <div className="iswc-table-wrap">
       <table className="iswc-table">
+        {/* The title column takes the space it needs; the rest share what is
+            left evenly, so a long author list can't squeeze the titles. */}
+        <colgroup>
+          <col style={{ width: `${titleColumnWidth}%` }} />
+          {hasSecondaryColumn && <col />}
+          {hasTypeColumn && <col />}
+          {hasLinksColumn && <col />}
+        </colgroup>
+
         <thead>
           <tr>
             <th scope="col">{titleLabel}</th>

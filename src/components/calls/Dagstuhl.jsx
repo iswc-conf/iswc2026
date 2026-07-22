@@ -11,12 +11,12 @@ import SubHeader from "../general/SubHeader";
 
 export const Dagstuhl = () => {
     return (
-    <BaseContainer>
-      <div className="-mt-12 -mb-12 w-full">
+    <BaseContainer width="wide">
+      <div>
     <img
       src={banner}
       alt="Dagstuhl Style Workshops banner"
-       className="block mx-auto w-[1200px] max-w-full object-contain"
+       className="iswc-figure-img"
     />
   </div>
 
@@ -33,14 +33,12 @@ export const Dagstuhl = () => {
 
 <SubHeader>Important Dates</SubHeader>
 
-<p>
-    <ul className="ul-disc ml-8">
+<ul className="ul-disc ml-8">
         <li>Submission deadline: <b>June 30, 2026</b></li>
         <li>Notification to proposers:<b>July 3, 2026</b> </li>
         <li>Workshop website online:<b>July 17, 2026</b> </li>
         <li>Workshop days:<b>October 25-26, 2026</b> </li>
     </ul>
-</p>
 <p><b>All deadlines are 23:59 Anywhere on Earth (AoE).</b></p>
 
 
@@ -50,8 +48,7 @@ export const Dagstuhl = () => {
     
     <SubHeader>The Barstuhl workshop proposal should include the following sections</SubHeader>
 
-    <p>
-        <ul className="ul-disc ml-8">
+    <ul className="ul-disc ml-8">
 
   <li>
     <b>Workshop Title and Acronym</b>
@@ -98,14 +95,12 @@ export const Dagstuhl = () => {
   </li>
 
         </ul>
-    </p>
 
     <UnderlineHeader>Requirements upon Acceptance</UnderlineHeader>
 
     <p>I got my Barstuhl accepted, what’s next? Accepted workshops will follow these requirements:</p>
 
-    <p>
-        <ul className="ul-disc ml-8">
+    <ul className="ul-disc ml-8">
             
   <li>
     <b>Workshop Web Page:</b> The page should emphasize the open, interactive, and discussion-driven nature of the event. It should highlight the key challenges or topics to be discussed, as well as the intended format and expected outcomes.
@@ -128,20 +123,15 @@ export const Dagstuhl = () => {
   </li>
 
         </ul>
-    </p>
 
     <UnderlineHeader>Contacts</UnderlineHeader>
 <p>Contact: <ExternalLink href="mailto:iswc2026-ds-workshops@easychair.org">iswc2026-ds-workshops@easychair.org</ExternalLink>Workshop Chairs:</p>
-<p>
-    <ul className="ul-disc ml-8">
+<ul className="ul-disc ml-8">
 
 
         <li>Jacopo de Berardinis - University of Liverpool, UK</li>
         <li>Shenghui Wang - University of Twente, The Netherlands</li>
     </ul>
-    </p>
-
-    <br></br>
     </BaseContainer>
     );
 }

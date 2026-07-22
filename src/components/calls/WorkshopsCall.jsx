@@ -7,10 +7,8 @@ import UnderlineHeader from "../general/UnderlineHeader";
 import ExternalLink from "../general/ExternalLink";
 export const Workshops = () => {
   return (
-    <BaseContainer>
+    <BaseContainer width="wide">
       <Header>Call for Workshops</Header>
-      <br></br>
-
       <p>
         The International Semantic Web Conference (ISWC) serves as the premier
         venue for presenting groundbreaking research, innovative systems, and
@@ -38,8 +36,7 @@ export const Workshops = () => {
 
       <SubHeader>Important dates include</SubHeader>
 
-      <p>
-        <ul className="ul-disc">
+      <ul className="ul-disc">
           <li>
             Submission deadline: <b>February 10, 2026</b>{" "}
           </li>
@@ -57,7 +54,6 @@ export const Workshops = () => {
             Workshop days:<b> October 25-26, 2026</b>
           </li>
         </ul>
-      </p>
 
 
       <UnderlineHeader>Workshop Topics</UnderlineHeader>
@@ -68,8 +64,7 @@ export const Workshops = () => {
         Knowledge Graph community:
       </p>
 
-      <p>
-        <ul className="ul-disc">
+      <ul className="ul-disc">
           <li>
             <b>Novel:</b> Workshops focusing on emerging topics that are
             expected to gain importance in the Semantic Web and Knowledge Graph
@@ -112,7 +107,6 @@ export const Workshops = () => {
             description and evaluation procedure.
           </li>
         </ul>
-      </p>
 
       <p>
         Workshop proposals of all types are encouraged to promote the vitality
@@ -126,8 +120,7 @@ export const Workshops = () => {
         Workshop proposals should focus on research topics and workshop formats
         that meet the following criteria:
       </p>
-      <p>
-        <ul className="ul-disc">
+      <ul className="ul-disc">
           <li>
             The topic aligns with the broader scope of ISWC 2026, emphasizing
             Semantic Web standards and technologies, knowledge representation,
@@ -149,7 +142,6 @@ export const Workshops = () => {
             sessions, roadmapping, or hackathons.
           </li>
         </ul>
-      </p>
 
       <p>
         The decision to accept or reject a workshop proposal will be based on
@@ -180,8 +172,7 @@ export const Workshops = () => {
         All workshop proposals should include the following sections:
       </SubHeader>
 
-      <p>
-        <ul className="ul-disc">
+      <ul className="ul-disc">
           <li>
             <b>Workshop Title and Acronym</b>
           </li>
@@ -220,14 +211,12 @@ export const Workshops = () => {
             with local organizers.
           </li>
         </ul>
-      </p>
 
       <SubHeader>
         For novel, crossover, and established workshops, include:
       </SubHeader>
 
-      <p>
-        <ul className="ul-disc">
+      <ul className="ul-disc">
           <li>
             <b>Workshop Format:</b> Describe the structure and mix of events,
             such as paper presentations, invited talks, panels, demos, and
@@ -251,14 +240,12 @@ export const Workshops = () => {
             underrepresented and underserved groups.
           </li>
         </ul>
-      </p>
 
       <SubHeader>
         For novel, crossover, and challenge workshops, include:
       </SubHeader>
 
-      <p>
-        <ul className="ul-disc">
+      <ul className="ul-disc">
           <li>
             <b>Motivation:</b> Explain why the topic or challenge is timely and
             relevant to ISWC participants.
@@ -271,12 +258,10 @@ export const Workshops = () => {
             submissions.
           </li>
         </ul>
-      </p>
 
       <SubHeader>For established workshops, include:</SubHeader>
 
-      <p>
-        <ul className="ul-disc">
+      <ul className="ul-disc">
           <li>
             <b>Continuation:</b> Justify the continuation of the workshop.
             Highlight emerging topics, recent developments, or new challenges
@@ -288,12 +273,10 @@ export const Workshops = () => {
             accepted papers, and attendance.
           </li>
         </ul>
-      </p>
 
       <SubHeader>For challenge workshops, include:</SubHeader>
 
-      <p>
-        <ul className="ul-disc">
+      <ul className="ul-disc">
           <li>
             <b>Data Preparation:</b> Specify the process for selecting,
             acquiring, and preparing data for training and evaluation, with
@@ -310,15 +293,13 @@ export const Workshops = () => {
             challenge (targeted mailing lists, social media, etc.).
           </li>
         </ul>
-      </p>
 
 
       <UnderlineHeader>Requirements upon Acceptance</UnderlineHeader>
       <p>
         Accepted workshops will need to adhere to the following requirements:
       </p>
-      <p>
-        <ul className="list-disc list-inside">
+      <ul className="list-disc list-inside">
           <li>
             <strong>Workshop Web Page:</strong> Organizers must prepare a
             workshop web page with a detailed call for papers (where applicable)
@@ -373,14 +354,13 @@ export const Workshops = () => {
             </ul>
           </li>
         </ul>
-      </p>
 
 
       <UnderlineHeader>Timeline Template for Workshop Organizers</UnderlineHeader>
 
       <p>All workshops will adhere to a common timeline as follows (<b>all deadlines are 23:59 AoE</b>):</p>
 
-      <p><ul className="ul-disc">
+      <ul className="ul-disc">
         <li>Workshop website and CfP available online:<b> March 20, 2026</b></li>
         <li>Challenge workshops release datasets (incl. test solution if available): <b>April 3, 2026</b></li>
         <li>Challenge solution submission:<b> June 26, 2026</b></li>
@@ -389,11 +369,7 @@ export const Workshops = () => {
         <li>Workshop paper acceptance notification and accepted papers published on website:<b> August 21, 2026</b></li>
         <li>Workshop days: October <b>25-26, 2026</b></li>
         
-        </ul></p>
-
-    <br></br>
-      <br></br>
-      <br></br>
+        </ul>
       <UnderlineHeader>Workshop Chairs</UnderlineHeader>
 
       <ul className="ul-disc">
@@ -404,7 +380,7 @@ export const Workshops = () => {
       {/*
             
 
-                    <h3 style={{ color: '#e94607' }} className="text-lg font-medium mt-4">Workshop Chairs</h3>
+                    <SubHeader>Workshop Chairs</SubHeader>
                     <p>Blerina Spahiu - University of Milano-Bicocca, Italy</p>
                     <p>Juan Sequeda - data.world, USA</p>
 
@@ -414,8 +390,6 @@ export const Workshops = () => {
                 </div>
             </div>
             */}
-      <br></br>
-      <br></br>
     </BaseContainer>
   );
 };

@@ -20,13 +20,11 @@ export const DoctoralConsortium = () => {
             The <b>ISWC 2026 Doctoral Consortium (DC)</b> will take place as part of the <ExternalLink href="https://iswc2026.semanticweb.org/">25th International Semantic Web Conference</ExternalLink>. This forum will provide PhD students with an opportunity to:
 
 
-            <p>
-                <ul className="list-disc list-inside ml-8">
+            <ul className="list-disc list-inside ml-8">
                     <li>Present and discuss their research ideas in a supportive, formative, and yet critical environment;</li>
                     <li>Receive feedback from mentors, typically senior members of the Semantic Web research community, and peers;</li>
                     <li>Network and build collaborations with other members of the community.</li>
                 </ul>
-            </p>
             <p>The event is intended for students who have articulated a reasonably detailed research proposal, preferably supported by some preliminary results, but are not yet on the final stretch of their thesis, such that the feedback gathered at the DC will have a maximal impact. The aim is to support the students in refining their proposal and to suggest possible ways to improve their research plan and to achieve results with a greater prospective impact. This event is dedicated to students who HAVE NOT already participated in the DC in any previous ISWC edition, and in general, priority will be given to students who have never participated in a DC/PhD symposium before</p>
             
             <p>The submissions to the Doctoral Consortium should be structured like a research proposal (see “Submission Details” below). Please note that anything that looks like a research paper will be rejected without review.</p>
@@ -39,8 +37,7 @@ export const DoctoralConsortium = () => {
             <SubHeader>Important Dates</SubHeader>
 
 
-            <p>
-                <ul className="list-disc list-inside">
+            <ul className="list-disc list-inside">
 
                     <li>Submission due<b>	June 1, 2026</b></li>
                     <li>Notifications<b> July 6, 2026</b> </li>
@@ -49,7 +46,6 @@ export const DoctoralConsortium = () => {
                     <li>Doctoral Consortium <b>October 26, 2026</b></li>
 
                 </ul>
-            </p>
             <p>
             All deadlines are<b> 23:59 AoE (anywhere on Earth)</b></p>
 
@@ -66,8 +62,7 @@ export const DoctoralConsortium = () => {
 <p>The submission should address the following questions:
 </p>
 
-<p>
-                    <ul className="list-disc list-inside ml-8">
+<ul className="list-disc list-inside ml-8">
 
 <li><b>1. Problem statement: </b> What is the problem that you are trying to solve?</li>
 <li><b>2. Importance:</b> Why is this problem important and for whom? Who will benefit and who should care? What is the impact of solving this problem (for the research community, or society in general)?</li>
@@ -78,7 +73,6 @@ export const DoctoralConsortium = () => {
 <li><b>7. Reflection and future work:</b> Are there any limitations in your approach? What are your planned next steps to complete your investigation?</li>
 
                 </ul>
-</p>
 
 <p>Please aim to answer the above questions with as much detail as possible, especially questions 2 and 4. You should provide as much detail as possible to allow a knowledgeable reviewer from the Semantic Web community, but possibly not an expert in your topic, to assess the validity of your research contribution. All submissions should include references. References will not count towards the page limit. All submissions exceeding 7 pages will be rejected without review.</p>
 
@@ -106,9 +100,6 @@ Each submission must include a section titled "Declaration of use of Generative 
 </li>
         <li><b>Aidan Hogan</b> —  DCC, Universidad de Chile</li>
       </ul>
-
-
-
 
         </BaseContainer>
     );

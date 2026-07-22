@@ -11,10 +11,6 @@ export const PriorPublicationMultipleSubmission = () => {
         <BaseContainer>
             <Header>Prior Publications and Simultaneous Submissions</Header>
 
-
-
-
-
             <p>
                 ISWC 2026 will not accept research/resource/in-use papers that, at the time of submission, are under review for or have already been published in, or accepted for publication, in a journal or another conference. Prior submissions to workshops are acceptable, provided that the authors avoid self-plagiarism, hold sufficient rights to publish overlapping content in the proceedings, and significantly extend it with 30% of novel work. The conference organizers may share information on submissions with other venues to ensure that this rule is not violated.
             </p>
@@ -27,8 +23,7 @@ export const PriorPublicationMultipleSubmission = () => {
                 ):
             </p>
 
-            <p>
-                <ul className="list-disc list-inside">
+            <ul className="list-disc list-inside">
                     <li><b>Anonymized</b> preprints within the anonymity period are allowed. Please note that some preprint servers such as Arxiv do not support this option. </li>
                     <li>
                         <b>Non-anonymized</b> preprints before the anonymity period are allowed. The anonymity period starts on <b>April 25, 2026</b> (one week before abstract submission) and ends on  <b>July 16, 2026</b> (notification deadline). We encourage authors to wait to post non-anonymized preprints until after the anonymity period has ended.
@@ -37,9 +32,6 @@ export const PriorPublicationMultipleSubmission = () => {
                         If a <b>non-anonymized</b> preprint version exists, authors should not cite it and are asked not to publicize it further during the anonymity period, as the submitted paper should be as anonymous as possible.
                     </li>
                 </ul>
-            </p>
-
-
 
         </BaseContainer>
     );

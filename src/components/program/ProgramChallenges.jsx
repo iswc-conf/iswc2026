@@ -8,7 +8,7 @@ import DeclareSoon from "../general/declareSoon";
 
 export const ProgramChallenges = () => {
     return (
-        <BaseContainer>
+        <BaseContainer width="wide">
         <Header>Accepted Challenges</Header>
         <DeclareSoon></DeclareSoon>
         {/** <DescriptiveTable data={challenges} title={"Challenge Title"} description={"Organizers"}></DescriptiveTable> */}

@@ -50,8 +50,7 @@ export const InUse = () => {
       </p>
 
       <SubHeader>Important Dates</SubHeader>
-            <p>
-                <ul className="list-disc list-inside">
+            <ul className="list-disc list-inside">
 
                     <li>Abstract submission due<b>	2 May 2026</b></li>
                     <li>Full paper submission due <b>7 May 2026</b></li>
@@ -61,7 +60,6 @@ export const InUse = () => {
                     <li>Conference:			<b>27 - 29 October 2026</b></li>
 
                 </ul>
-            </p>
 
       <p>
         All deadlines are<b> 23:59 AoE (anywhere on Earth)</b>
@@ -84,8 +82,7 @@ export const InUse = () => {
         following topics:
       </p>
 
-      <p>
-        <ul className="list-disc list-inside">
+      <ul className="list-disc list-inside">
           <li>
             Applications in domain-specific areas (e.g., libraries, cultural
             heritage, healthcare, life sciences, engineering, smart
@@ -131,7 +128,6 @@ export const InUse = () => {
             flexible, more efficient, or otherwise improved solutions.
           </li>
         </ul>
-      </p>
 
       <UnderlineHeader>Differentiation From Other Tracks </UnderlineHeader>
 
@@ -157,8 +153,7 @@ export const InUse = () => {
         multiple tracks is prohibited).{" "}
       </p>
 
-      <p>
-        <ul className="list-disc list-inside ml-8">
+      <ul className="list-disc list-inside ml-8">
           <li>
             Papers that propose new algorithms and architectures should be
             submitted to the regular research track;
@@ -181,7 +176,6 @@ export const InUse = () => {
             track.
           </li>
         </ul>
-      </p>
 
       <p>
         Note that research, in-use and resource papers are published within the
@@ -243,15 +237,13 @@ export const InUse = () => {
         should only be used in two cases:
       </p>
 
-      <p>
-        <ul className="list-disc list-inside ml-8">
+      <ul className="list-disc list-inside ml-8">
           <li>
             In order to highlight clear factual errors in reviews regarding the
             content of the submission.
           </li>
           <li>In order to respond to explicit questions from reviewers.</li>
         </ul>
-      </p>
       <UnderlineHeader>Policy on the use of Generative AI</UnderlineHeader>
 
       <p>
@@ -304,8 +296,7 @@ export const InUse = () => {
 
       <UnderlineHeader>Submission Details </UnderlineHeader>
 
-      <p>
-        <ul className="list-disc list-inside">
+      <ul className="list-disc list-inside">
           <li>
             Pre-submission of abstracts is a strict requirement. All papers and
             abstracts have to be submitted electronically via EasyChair.
@@ -353,7 +344,6 @@ export const InUse = () => {
             accepted to ISWC workshops and the Poster & Demo session.
           </li>
         </ul>
-      </p>
 
       <UnderlineHeader>
         Prior Publication And Multiple Submissions
@@ -364,16 +354,10 @@ export const InUse = () => {
       ISWC 2026 will not accept papers that, at the time of submission, are under review for or have already been published or accepted for publication in a journal, another conference, or another ISWC track. The conference organizers may share information on submissions with other venues to ensure that this rule is not violated. Please refer to the <ExternalLink href="https://iswc2026.semanticweb.org/#/guidelines/prior-publications">Prior Publications and Simultaneous Submissions guide</ExternalLink> for further information.
 </p>
 
-
-
-
       <UnderlineHeader>Research Metadata and Comparisons</UnderlineHeader>
       <p>To facilitate clearly stating novelty to readers and peer-reviewers alike, findability of the paper if accepted, and trying to use knowledge graphs ourselves, you may add to the paper a so-called “ORKG comparison” with the<ExternalLink href="https://orkg.org/">Open Research Knowledge Graph (ORKG)</ExternalLink>. Such an ORKG Comparison is a characterization of a submission by juxtaposing it with related resources, if there are any, and thereby highlighting the key difference(s) of your resource with related ones. More information on the background and how to create an ORKG comparison can be found <ExternalLink href="https://www.orkg.org/orkg/help-center/article/38/Accompany_your_paper_submission_with_an_ORKG_comparison">here</ExternalLink> (including a how-to video). This can be done during the submission process, in which case a link to the comparison can be added to the submission for reviewers. <ExternalLink href="https://iswc2026.semanticweb.org/#/guidelines/okbcworkflow">This workflow</ExternalLink> describes the steps involved in the creation of such a comparison.
 This addition to an ISWC paper submission is experimental and optional. It may not be relevant to your resource, and the absence of such a comparison will not negatively affect the review of the paper.
 </p>
-
-
-
 
       <UnderlineHeader>
         Positioning with respect to other fields
@@ -386,30 +370,20 @@ This addition to an ISWC paper submission is experimental and optional. It may n
 
       <Card>Luggen, Michael, et al (2025). "Open Government Data as Multi-dimensional 5 Star Data: cube. link." International Semantic Web Conference. Cham: Springer Nature Switzerland, 2025.
       <ExternalLink href="https://doi.org/10.1007/978-3-032-09530-5">DOI</ExternalLink> </Card>
-      <br></br>
-
       <Card>Scrocca, M. et al. (2024) Intelligent Urban Traffic Management via Semantic Interoperability Across Multiple Heterogeneous Mobility Data Sources. ISWC 2024. LNCS, vol. 15233. Springer, pp. 218–235.
       <ExternalLink href="https://doi.org/10.1007/978-3-031-77847-6_12">DOI</ExternalLink> </Card>
-<br></br>
             <Card>Cuddihy, P. et al. (2023) Aviation Certification Powered by the Semantic Web Stack. ISWC 2023. LNCS, vol. 14266. Springer, pp. 345–361.
       <ExternalLink href="https://doi.org/10.1007/978-3-031-47243-5_19">DOI</ExternalLink> </Card>
-<br></br>
             <Card>Angioni, S. et al. (2022) Leveraging Knowledge Graph Technologies to Assess Journals and Conferences at Springer Nature. ISWC 2022. LNCS, vol 13489. Springer, pp. 735-752.
       <ExternalLink href="https://doi.org/10.1007/978-3-031-19433-7_42">DOI</ExternalLink> </Card>
-<br></br>
             <Card>Rojas J.A. et al. (2021) Leveraging Semantic Technologies for Digital Interoperability in the European Railway Domain. ISWC 2021. LNCS, vol 12922. Springer, pp. 648-664.
       <ExternalLink href="https://doi.org/10.1007/978-3-030-88361-4_38">DOI</ExternalLink> </Card>
-<br></br>
             <Card>Ibáñez LD., Millard I., Glaser H., Simperl E. (2019) An Assessment of Adoption and Quality of Linked Data in European Open Government Data. ISWC 2019. LNCS, vol 11779. Springer, pp. 436-453.
       <ExternalLink href="https://doi.org/10.1007/978-3-030-30796-7_27">DOI</ExternalLink> </Card>
-<br></br>
-
             <Card>Thanapalasingam T., Osborne F., Birukou A., Motta E. (2018) Ontology-Based Recommendation of Editorial Products. ISWC 2018. LNCS, vol 11137. Springer, pp. 341-358.
       <ExternalLink href="https://doi.org/10.1007/978-3-030-00668-6_21">DOI</ExternalLink> </Card>
-<br></br>
             <Card>Mehdi G. et al. (2017) Semantic Rule-Based Equipment Diagnostics. ISWC 2017. LNCS, vol 10588. Springer, pp. 314-333.
       <ExternalLink href="https://doi.org/10.1007/978-3-319-68204-4_29">DOI</ExternalLink> </Card>
-<br></br>
             <Card>Piro R. et al. (2016) Semantic Technologies for Data Analysis in Health Care. ISWC 2016.LNCS, vol 9982. Springer, pp. 400-417.
       <ExternalLink href="https://doi.org/10.1007/978-3-319-46547-0_34">DOI</ExternalLink> </Card>
 

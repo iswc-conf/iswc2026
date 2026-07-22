@@ -96,7 +96,20 @@ Then register it in `src/App.jsx` and add it to `src/data/navigation.js`.
 **Show a table of papers or workshops.** Use `general/DataTable`, or one of the
 presets around it: `PaperTable` (title + authors + abstract),
 `DescriptiveTable` (title + organisers + links), `TutorialTable` (adds a format
-column). Rows collapse into cards on narrow screens automatically.
+column). Rows collapse into cards on narrow screens automatically. Table-heavy
+pages should use the wider shell: `<Page width="wide">`.
+
+**List committee members.** Use `organization/CommitteeSection`, passing a map
+of role to members. Set `hideImage` for name-only lists. Portraits are sized by
+the stylesheet, so source images don't need cropping to a particular size.
+
+**Add a keynote speaker.** Use `general/TalkHeading` for the section heading and
+`general/SpeakerProfile` for the portrait-plus-biography block. Portraits are a
+fixed 220x260 regardless of the source image, so speakers line up down the page.
+
+**Add an image to a page.** Use `className="iswc-figure-img"` for a standalone
+diagram or map, or `iswc-media-row` / `iswc-media-row__image` /
+`iswc-media-row__text` for an image beside text. Don't set pixel sizes inline.
 
 **Add an image.** Keep source images under about 1600px wide. Large photos were
 a real problem here — the assets folder was 97 MB before being downscaled.
@@ -113,7 +126,13 @@ Bootstrap equivalents or plain semantic HTML, then delete anything from
 `_compat.scss` that is no longer referenced. That file should shrink to nothing
 over time. Nothing should ever be added to it.
 
-Two page-level stylesheets also remain, `components/attending/attending.css` and
-`components/sponsorship/sponsorship.css`. They both define a global
-`.custom-table`, with different rules, so whichever loads last wins across the
-whole site — worth folding into `_components.scss` when those pages are touched.
+The two page-level stylesheets that used to live in `components/attending/` and
+`components/sponsorship/` have been folded into `_components.scss`. They both
+defined a global `.custom-table` with conflicting rules, so whichever loaded
+last won across the whole site; they are now `.iswc-info-table` and
+`.iswc-tiers-table` respectively.
+
+Every class used on a live route resolves to a real definition. If you add
+markup, keep it that way — a class that isn't defined anywhere renders at the
+browser default, which is how photos ended up at full size during the
+migration.

@@ -30,8 +30,7 @@ export const Research = () => {
 
             <SubHeader>Important information for authors:</SubHeader>
 
-            <p>
-                <ul className="list-disc list-inside">
+            <ul className="list-disc list-inside">
 
                     <li>Submissions are dual anonymous</li>
                     <li>Papers are limited to 15 pages excluding references and the "Declaration of use of Generative AI” section. Supplemental materials and annexes <b>do not</b> count toward the established page limit. Annexes can be in the same pdf as the body of the paper and should follow the references. Supplemental materials will be uploaded separately.
@@ -41,13 +40,11 @@ export const Research = () => {
                     <li>Pre-submission of abstracts is a strict requirement.</li>
 
                 </ul>
-            </p>
 
             <SubHeader>Important Dates</SubHeader>
 
 
-            <p>
-                <ul className="list-disc list-inside">
+            <ul className="list-disc list-inside">
 
                     <li>Abstract submission due<b>	2 May 2026</b></li>
                     <li>Full paper submission due <b>7 May 2026</b></li>
@@ -57,7 +54,6 @@ export const Research = () => {
                     <li>Conference:			<b>27 - 29 October 2026</b></li>
 
                 </ul>
-            </p>
             <p>
                 All deadlines are<b> 23:59 AoE (anywhere on Earth)</b></p>
 
@@ -67,18 +63,15 @@ export const Research = () => {
             <p>We encourage papers that directly advance the Semantic Web. The relationship to the core area of the conference needs to be clearly described in the submitted work. Submissions beyond the scope will be desk-rejected. Topics in the Semantic Web area include, but are not limited to:</p>
 
             <SubHeader>Ontologies and capturing knowledge including:</SubHeader>
-            <p>
-                <ul className="list-disc list-inside">
+            <ul className="list-disc list-inside">
                     <li>Ontology Engineering and ontology patterns</li>
                     <li>Ontology modularity, mapping, merging, and alignment</li>
                     <li>Information extraction, knowledge graph construction</li>
 
                 </ul>
-            </p>
 
             <SubHeader>Representation, management, and applications of Knowledge Graphs (including RDF and property graphs):</SubHeader>
-            <p>
-                <ul className="list-disc list-inside">
+            <ul className="list-disc list-inside">
                     <li>Knowledge Representation and Reasoning</li>
                     <li>Search, query, integration, and analysis</li>
                     <li>Robust and scalable management</li>
@@ -87,10 +80,8 @@ export const Research = () => {
                     <li>Knowledge graph-centered Natural Language Processing, information retrieval, semantic analysis, and Large Language Models  </li>
 
                 </ul>
-            </p>
             <SubHeader>Integration of the Semantic Web with:</SubHeader>
-            <p>
-                <ul className="list-disc list-inside">
+            <ul className="list-disc list-inside">
                     <li>Machine learning, data mining, and neurosymbolic reasoning</li>
                     <li>Generative AI (including Large Language Models) and Agentic AI</li>
                     <li>User interfaces, usability, and accessibility</li>
@@ -103,10 +94,8 @@ export const Research = () => {
                     <li>Artificial Intelligence and hybrid app</li>
 
                 </ul>
-            </p>
             <SubHeader>Semantic Web Agents including:</SubHeader>
-            <p>
-                <ul className="list-disc list-inside">
+            <ul className="list-disc list-inside">
                     <li>Autonomous systems, including multi-agent systems and robotics</li>
                     <li>Architecture characteristics for autonomy exploiting KGs</li>
                     <li>Incomplete or conflicting knowledge, beliefs, and assumptions and KGs</li>
@@ -116,19 +105,15 @@ export const Research = () => {
                     <li>Governance of autonomous agents on the Web</li>
 
                 </ul>
-            </p>
 
             <p>We welcome descriptions of contributions that leverage knowledge representation based on Semantic Web standards or other graph data models to improve the acquisition, processing, and sharing of data on the Web. We require authors to explicitly highlight how their work could be applied in a Semantic Web setting.</p>
-
-
 
             <UnderlineHeader>Review Criteria</UnderlineHeader>
 
 
             <p>Papers in this track will be reviewed according to the following criteria:</p>
 
-            <p>
-                <ul className="list-disc list-inside ml-8">
+            <ul className="list-disc list-inside ml-8">
                     <li>Originality and novelty</li>
                     <li>Relevance of the topic to the conference</li>
                     <li>Impact of the research contributions</li>
@@ -139,13 +124,8 @@ export const Research = () => {
 
 
                 </ul>
-            </p>
 
             <p>Any submissions that are clearly out of scope, or have significant omissions with respect to these criteria, may be subject to desk rejection before a full review. Guidelines for reviewers are available <ExternalLink href="https://iswc2026.semanticweb.org/#/guidelines/review">here</ExternalLink>.</p>
-
-
-
-
 
             <UnderlineHeader>Rebuttal</UnderlineHeader>
             <p>Authors will have the chance to provide a response to the reviews during a rebuttal period that precedes the reviewer discussion period. The SPCs and PC Chairs will consider the authors' responses to the points raised by the reviewers.</p>
@@ -172,8 +152,7 @@ export const Research = () => {
 
             <UnderlineHeader>Submission Details</UnderlineHeader>
 
-            <p>
-                <ul className="list-disc list-inside">
+            <ul className="list-disc list-inside">
                     <li>Pre-submission of abstracts is a strict requirement. </li>
                     <li>All papers and abstracts have to be submitted electronically via <ExternalLink href="https://easychair.org/conferences/?conf=iswc2026">EasyChair</ExternalLink>. </li>
                     <li>Submitted papers will be checked to ensure that they satisfy the submission criteria and are in scope with the aims of the conference, and if such violations are identified, then the submission may be subject to desk rejection without review.</li>
@@ -189,18 +168,7 @@ export const Research = () => {
                     <li>At least one author of each accepted paper must register for the conference and present the paper. </li>
                     <li>As in previous years, students will be able to apply for funding to support their travel to attend/register for the conference. </li>
 
-
-
-
                 </ul>
-            </p>
-
-
-
-
-
-
-
 
             <div ref={diff_track}><UnderlineHeader>Differentiation From Other Tracks</UnderlineHeader></div>
 
@@ -208,8 +176,7 @@ export const Research = () => {
 
             <p> We strongly recommend that prospective authors carefully check the calls of the other main tracks of the conference in order to identify the optimal track for their submission (submission of the same work to multiple tracks is prohibited). </p>
 
-            <p>
-                <ul className="list-disc list-inside ml-8">
+            <ul className="list-disc list-inside ml-8">
 
                     <li>Papers that propose new algorithms and architectures should be submitted to the regular research track;</li>
                     <li>Papers that reuse and apply state-of-the-art semantic technology or resources in practical settings should be submitted to the in-use track (i.e., the novelty falls into the in-use application of the semantic technology or resource);</li>
@@ -218,7 +185,6 @@ export const Research = () => {
 
 
                 </ul>
-            </p>
 
 
             <p>Note that research, in-use and resource papers are published within the same proceedings by Springer’s Lecture Notes in Computer Science series.</p>
@@ -232,8 +198,7 @@ export const Research = () => {
             <p>To help with the dual anonymous reviewing process please ensure the following when submitting to ISWC 2026: </p>
 
 
-            <p>
-                <ul className="list-disc list-inside ml-8">
+            <ul className="list-disc list-inside ml-8">
 
                     <li>The first page, on which the paper body begins, should include the title and abstract but not the names or affiliations of the authors.</li>
                     <li>Remove any identifying information, including author names, from file names and ensure document properties are also anonymized.</li>
@@ -244,9 +209,6 @@ export const Research = () => {
 
 
                 </ul>
-            </p>
-
-
 
             <UnderlineHeader>Supplemental Material</UnderlineHeader>
 
@@ -283,11 +245,6 @@ export const Research = () => {
 </li>
         <li><b>Maria-Esther Vidal</b> —  Leibniz University Hannover & TIB-Leibniz Information Center of Science and Technology, Germany</li>
       </ul>
-
-
-
-
-
 
         </BaseContainer>
     );

@@ -1,6 +1,5 @@
 import React from "react";
 
-import './sponsorship.css';
 import BaseContainer from "../general/BaseContainer";
 import Header from "../general/Header";
 
@@ -20,9 +19,6 @@ import DATATREE from "./assets/GOLD/DATATREEHOUSE.svg"
 import EBAY from "./assets/SILVER/EBAY.png"
 import RELAI from "./assets/SILVER/RELAI.png"
 import SIEMENS from "./assets/SILVER/SIEMENS.png"
-
-
-
 
 export const Sponsors = () => {
 
@@ -210,13 +206,13 @@ const SponsorCard = ({ name, image, link, width = 300 }) => {
     <img
       src={image}
       alt={`${name} Logo`}
-      className="sponsor-logo"
+      className="iswc-sponsor-logo"
       style={{ maxWidth: width }}
     />
   );
 
   return (
-    <div className="sponsor-card">
+    <div className="iswc-sponsor-grid__item">
       <h3>{name}</h3>
       {link ? (
         <a href={link} target="_blank" rel="noopener noreferrer">
@@ -229,20 +225,16 @@ const SponsorCard = ({ name, image, link, width = 300 }) => {
   );
 };
 
-
-
     return (
 
 <BaseContainer>
 
   <Header>ISWC 2026 Sponsors</Header>
-  <br></br>
-  <br></br>
   {sponsors.map((group) => (
-    <div key={group.level} className="sponsor-level">
-      <h2 className="level-title mb-6" style={{backgroundColor:group.color}}>{group.level}</h2>
+    <div key={group.level} className="iswc-sponsor-level">
+      <h2 className="iswc-sponsor-level__title" style={{backgroundColor:group.color}}>{group.level}</h2>
 
-      <div className="sponsor-grid">
+      <div className="iswc-sponsor-grid">
         {group.items.map((sponsor) => (
           <SponsorCard key={sponsor.name} {...sponsor} />
         ))}

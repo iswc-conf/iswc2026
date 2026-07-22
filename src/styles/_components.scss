@@ -73,6 +73,11 @@
   font-weight: 700;
 }
 
+// Speaker name inside a talk heading.
+.iswc-talk-speaker {
+  color: $iswc-secondary;
+}
+
 // -----------------------------------------------------------------------------
 // Links
 // -----------------------------------------------------------------------------
@@ -314,6 +319,9 @@
 .iswc-table {
   width: 100%;
   font-size: 0.95rem;
+  // Fixed layout keeps the title column dominant instead of letting a long
+  // author list push it narrow, which is what the old `table-fixed` did.
+  table-layout: fixed;
 
   th,
   td {
@@ -522,14 +530,34 @@
 }
 
 // -----------------------------------------------------------------------------
-// Person / sponsor cards
+// Person cards (organising and programme committees)
 // -----------------------------------------------------------------------------
+.iswc-person-grid {
+  display: grid;
+  // Cards size themselves; the grid decides how many fit per row, so the
+  // committee lists reflow from four columns down to one without breakpoints.
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1.25rem;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+
+// Name-only lists (the programme committee has no photos) pack tighter.
+.iswc-person-grid--compact {
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: 0.75rem;
+}
+
 .iswc-person-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   height: 100%;
   text-align: center;
   border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 0.75rem;
   background: $iswc-surface;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   padding: 1.25rem 1rem;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 
@@ -539,26 +567,118 @@
   }
 }
 
+.iswc-person-card--compact {
+  padding: 0.85rem 0.75rem;
+}
+
 .iswc-person-card__avatar {
   width: 96px;
   height: 96px;
   border-radius: 50%;
   object-fit: cover;
-  margin: 0 auto 0.85rem;
-  display: block;
+  margin-bottom: 0.85rem;
   background: $iswc-surface-alt;
+  flex: 0 0 auto;
+}
+
+// Placeholder shown when a committee member has no photo.
+.iswc-person-card__avatar--empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  color: $iswc-muted;
 }
 
 .iswc-person-card__name {
+  font-size: 1rem;
   font-weight: 700;
-  color: $iswc-secondary;
-  margin-bottom: 0.2rem;
+  color: $iswc-accent;
+  margin-bottom: 0.25rem;
+  overflow-wrap: anywhere;
 }
 
 .iswc-person-card__detail {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
+  line-height: 1.45;
   color: $iswc-muted;
   margin-bottom: 0;
+  overflow-wrap: anywhere;
+}
+
+// -----------------------------------------------------------------------------
+// Speaker profile (keynotes, panellists)
+// -----------------------------------------------------------------------------
+.iswc-speaker {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.iswc-speaker__portrait {
+  flex: 0 0 auto;
+  width: 220px;
+  height: 260px;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 0.75rem;
+  background: $iswc-surface-alt;
+}
+
+.iswc-speaker__bio {
+  flex: 1 1 20rem;
+  min-width: 0;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Portrait goes full width and shorter on phones so it doesn't dominate.
+@media (max-width: 575.98px) {
+  .iswc-speaker__portrait {
+    width: 100%;
+    height: 18rem;
+    object-position: center 20%;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Figures
+// -----------------------------------------------------------------------------
+.iswc-figure {
+  margin: 2rem 0;
+  text-align: center;
+
+  img {
+    max-width: 100%;
+    max-height: 30rem;
+    object-fit: contain;
+    border-radius: 0.5rem;
+  }
+}
+
+// Diagrams and maps that need the room.
+.iswc-figure--wide img {
+  max-height: none;
+  width: 100%;
+}
+
+// Standalone diagram or map that should fill the column but stay contained.
+.iswc-figure-img {
+  display: block;
+  margin: 2rem auto;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 0.5rem;
+}
+
+.iswc-figure__caption {
+  margin-top: 0.6rem;
+  font-size: 0.85rem;
+  color: $iswc-muted;
 }
 
 // -----------------------------------------------------------------------------
@@ -585,4 +705,204 @@
   border-radius: 1rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
   padding: 2rem;
+}
+
+// -----------------------------------------------------------------------------
+// Media row (image beside text)
+// -----------------------------------------------------------------------------
+.iswc-media-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.iswc-media-row__image {
+  flex: 0 0 auto;
+  width: min(30rem, 45%);
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+.iswc-media-row__text {
+  flex: 1 1 20rem;
+  min-width: 0;
+}
+
+@media (max-width: 991.98px) {
+  .iswc-media-row {
+    flex-direction: column;
+  }
+
+  .iswc-media-row__image {
+    width: 100%;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Information table (venue facts, schedules)
+// -----------------------------------------------------------------------------
+// Previously `.custom-table` in attending.css. That name was also used, with
+// conflicting rules, by sponsorship.css — whichever stylesheet loaded last won
+// across the whole site. The two are now separate components.
+.iswc-info-table {
+  width: 100%;
+  max-width: 53rem;
+  margin: 1.5rem auto 2rem;
+  font-size: 1.05rem;
+
+  th,
+  td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+  }
+
+  thead th {
+    color: #fff;
+    font-weight: 600;
+    background-color: $iswc-logo-black;
+    border-bottom: 0;
+  }
+
+  tbody tr:last-child td {
+    border-bottom: 0;
+  }
+
+  tbody tr:hover {
+    background-color: rgba($iswc-primary, 0.08);
+  }
+
+  td:first-child {
+    font-weight: 600;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Sponsorship tier comparison table
+// -----------------------------------------------------------------------------
+.iswc-tiers-table {
+  width: 100%;
+  margin: 1.5rem 0 2rem;
+  table-layout: fixed;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+
+  th,
+  td {
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    padding: 0.6rem 0.85rem;
+  }
+
+  // Benefit names are the only prose here, so they get the width.
+  th:first-child,
+  td:first-child {
+    width: 40%;
+    text-align: left;
+  }
+
+  th:not(:first-child),
+  td:not(:first-child) {
+    text-align: center;
+  }
+
+  thead th {
+    color: #fff;
+    text-align: center;
+    font-weight: 700;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: $iswc-surface-alt;
+  }
+
+  tbody tr:hover {
+    background-color: rgba($iswc-primary, 0.08);
+  }
+
+  // Tier colours are conventional (bronze/silver/gold), not brand colours.
+  .tier-bronze {
+    background-color: #cd7f32;
+  }
+  .tier-silver {
+    background-color: #c0c0c0;
+    color: #000;
+  }
+  .tier-gold {
+    background-color: #d4af37;
+    color: #000;
+  }
+  .tier-platinum {
+    background-color: #6c7a89;
+  }
+  .tier-diamond {
+    background: linear-gradient(135deg, #b9f2ff, #e0ffff);
+    color: #000;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Sponsor logo grid (Sponsors page)
+// -----------------------------------------------------------------------------
+.iswc-sponsor-level {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.iswc-sponsor-level__title {
+  display: inline-block;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #fff;
+  background-color: $iswc-muted;
+  border-radius: 100px;
+  padding: 0.35rem 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.iswc-sponsor-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+}
+
+.iswc-sponsor-grid__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 16rem;
+  max-width: 22rem;
+  min-height: 12rem;
+  padding: 1.5rem;
+  text-align: center;
+
+  h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: $iswc-primary;
+    margin-bottom: 0.75rem;
+  }
+
+  a:hover .iswc-sponsor-logo {
+    transform: scale(1.05);
+  }
+}
+
+.iswc-sponsor-logo {
+  width: 100%;
+  max-height: 8rem;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+// -----------------------------------------------------------------------------
+// Horizontal scroll container for wide tables
+// -----------------------------------------------------------------------------
+.iswc-table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  margin: 1.5rem 0 2rem;
 }

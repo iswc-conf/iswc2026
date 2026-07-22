@@ -67,8 +67,6 @@ export const IndustryTrack = () => {
                 <li>Neurosymbolic approaches to solve problems.</li>
                 <li>Semantic models and technologies for good, for ICT4Development, or as a component of ICT4Peace.</li>
 
-
-
             </CircleList>
 
             <p>Differently from the in-use track, successful submissions to this track will ideally emphasize the majority of the following:</p>

@@ -19,7 +19,6 @@ export const ReviewGuidelines = () => {
                 <p>Send feedback on this guide to <ExternalLink href="iswc2026@easychair.org ">iswc2026@easychair.org </ExternalLink></p>
 
                 <UnderlineHeader>Table of Contents</UnderlineHeader>
-                <p>
                 <ul className="list-disc list-inside ">
                     <li>Review Content</li>
                    <ul style={{ listStyleType: "circle" }} className="ml-16">
@@ -31,13 +30,11 @@ export const ReviewGuidelines = () => {
                     </ul>
                     <li>Suggested review structure</li>
                 </ul>
-                </p>
 
                 <UnderlineHeader>Policy on the use of Generative AI by reviewers</UnderlineHeader>
 
                 <p><b>Use of Generative AI: Reviewers</b></p>
 
-                <p>
                 <ul className="list-disc list-inside ">
 
 
@@ -47,14 +44,13 @@ export const ReviewGuidelines = () => {
                     <li style={{ marginBottom: "10px" }}><b>4.</b> Reviewers are fully responsible for the accuracy, fairness, and content of their reviews, regardless of any editorial assistance obtained. Any errors, misrepresentations, or inaccuracies introduced through the use of generative AI tools remain the responsibility of the reviewer.</li>
                     <li style={{ marginBottom: "10px" }} ><b>5.</b> Reviewers must not cite polished or fluent writing as evidence of improper generative AI use in a submitted paper. Formal or well-structured prose is not, in itself, grounds for raising a concern about undisclosed AI-generated content. If a reviewer believes a paper has made undisclosed use of generative AI, this must be based on concrete textual cues — such as prompt artefacts (e.g. phrases like "let me think about that" or "certainly, here is a summary"), inappropriate emoji, or other content clearly inconsistent with human-authored academic writing. Any such concern should be raised with the programme chairs rather than reflected in the review score.</li>
                 </ul>
-                </p>
 
                 <UnderlineHeader>Review Content</UnderlineHeader>
                 <p>We discuss five guidelines for reviews. We include examples of things to avoid in reviews, compared with examples of what would be better to include in a review.</p>
 
                 <SubHeader>Provide a detailed and constructive review</SubHeader>
                 <p>Please provide reviews that help the authors to improve their work, particularly in cases where your recommendation is to reject the paper. Please avoid vague, subjective, or overly-general feedback that could apply to any paper. Rather aim to provide detailed feedback that is specific to the paper under review, and indicates concrete ways in which the paper could be improved.</p>
-                <table className="table-auto border-collapse border border-gray-400 mt-4">
+                <table className="iswc-info-table">
                     <thead>
                         <tr>
                             <th className="border border-gray-400 px-4 py-2">Examples to Avoid</th>
@@ -74,9 +70,7 @@ export const ReviewGuidelines = () => {
                             <td className="border border-gray-400 px-4 py-2">“The paper is poorly written”(No justification or details provided.)</td>
                             <td className="border border-gray-400 px-4 py-2">
                                 “I found the paper difficult to follow; for example:
-                                <br />
                                 – The novel concept of ‘logical transmogrification’ plays a central role in this paper, but only on page 8 is it actually discussed or defined. This left me lost for the first half of the paper. The concept should be clearly described in the introduction.
-                                <br />
                                 – Section 3 defines the proposed method, but provides no examples nor intuition to aid readability. Some examples would greatly improve this section….”
                             </td>
                         </tr>
@@ -94,7 +88,7 @@ export const ReviewGuidelines = () => {
                 <SubHeader>Be civil and polite</SubHeader>
                 <p>Please keep a civil tone. Though (almost) nobody sets out to be uncivil, it can be challenging to avoid indeliberately coming across as being “harsh” in anonymous reviews. Keep in mind that you may be reviewing the papers of students who are new to research and the community, or more generally, the papers of authors who have invested a lot of time and effort into their work. Your review should be constructive. Your review should include discussions of both positive and negative aspects rather than focusing only on negatives. Your review should not be disparaging or dismissive, and should avoid unnecessarily negative language. Until proven otherwise, you should assume good faith on the part of the authors. Avoid calling into question the ethics or honesty of the authors, but rather keep your review factual. If you have an ethical concern regarding a paper, please discuss it with other PC/SPC/Chairs first to make sure there is consensus that the concern is indeed well-founded.</p>
 
-                <table className="table-auto border-collapse border border-gray-400 mt-4">
+                <table className="iswc-info-table">
                     <thead>
                         <tr>
                             <th className="border border-gray-400 px-4 py-2">Examples to Avoid</th>
@@ -121,7 +115,6 @@ export const ReviewGuidelines = () => {
                 <p>Please clearly relate your review comments to your recommendation. The authors do not necessarily need to agree with your recommendation, but they should at least be able to understand your rationale, and how you think they could improve their work.</p>
                 <p>Each paper should satisfy the relevance criteria of the call, advance the area by providing significant novel insights/claims (which may include negative results), be technically correct in terms of its key contributions, be understandable and (when applicable) reproducible by someone knowledgeable and patient, and provide enough evidence to justify its key claims and conclusions. Failing (in part or whole) with respect to one of the criteria in the call for papers is potentially a valid reason to reject. Keep in mind that papers can achieve these goals without being highly technical and while leaving open questions or tasks for future work.</p>
                 <p>In case you recommend a reject, ensure that you clearly justify the rejection …</p>
-                <p>
                 <ul className="list-disc list-inside">
                     <li>Avoid rejecting a paper solely for infrequent minor issues that do not affect the key content of the paper, but can instead be addressed by the authors (in an obvious way) for a camera-ready version.</li>
                    <ul style={{ listStyleType: "circle" }} className="ml-16">
@@ -153,7 +146,6 @@ export const ReviewGuidelines = () => {
                         <li>Rather base your recommendation on realistic and/or concrete criteria that are justified in the context of the goals of the work and the literature.</li>
                     </ul>
                 </ul>
-                </p>
 
                 <p>We also ask reviewers to refrain from later changing (only) their recommendation to “follow the crowd” or to “seek consensus”, particularly when the new recommendation is no longer justified by the review text. However, if during the discussion phase with other reviewers and chairs you see something in a new light, or agree with another reviewer regarding a certain positive or negative aspect, you may of course change your recommendation, and modify your review text accordingly. We aim for real consensus on papers where the reviewers stand by their recommendations. Failing that, we prefer no consensus to an artificial consensus where recommendations are changed just for the sake of aligning them.</p>
 
@@ -165,10 +157,7 @@ export const ReviewGuidelines = () => {
                 <p>“For a future version of this paper (potentially the camera-ready version, if accepted), the authors should be sure to address the following minor comments:</p>
                 <p>Please spell-check, e.g., ‘qeury’, ‘frgment’, etc.The authors should acknowledge similar works in relational databases, e.g., by pointing to the survey of Roe et al. [A]. In Equation 1, max should be replaced by arg max.”</p>
                 </Card>
-                <br />
                 <p>OR</p>
-                <br />
-                
                 <Card>
                 <p>“The paper has many grammatical errors and notational bugs that made it difficult for me to follow and review. I fear that other readers, even experts in the area, would likewise have difficulty understanding the work. For this reason I recommend a reject. Below I will provide some illustrative examples of these issues, which should be addressed for a future version”</p>
                 <p>“I am rejecting this paper because one could obviously achieve better performance in Algorithm 1 by parallelising the branches.”</p>
@@ -178,53 +167,32 @@ export const ReviewGuidelines = () => {
                 <p>(Even though updates are important and not considered, the approach could be extended in future. The justification for rejection should consider what is presented, not what is not presented.)</p>
                 <p>“The work achieves impressive results for the read-only case. Though a complete solution would require support for updates, the authors discuss how such features could be combined with the proposed approach in future.”</p>
                 </Card>
-
-                <br />
                 <p>OR</p>
-                <br />
-
                 <Card>
                 <p>“One reason for rejecting the paper is that the current approach does not support updates, and there is no clear way in which the method could be extended to support updates due to the nature of the data structure proposed. The paper does not discuss this issue. While a highly-optimised read-only index might still be a useful contribution, the approach proves to be only marginally faster than baselines that do support updates.”</p>
                 <p>“The paper does not deal with the case of cyclic graphs, and hence I recommend rejection.”</p>
                 <p>(Even without considering the cyclic case, the results for acyclic cases might be an important contribution. The justification for rejection should consider what is presented, not what is not presented.)</p>
                 <p>“The paper proves a novel tractability result for the case of acyclic graphs using new techniques. This begs the question of what happens in the cyclic case, which seems an interesting direction for future research based on these results.”</p>
                 </Card>
-                <br />
                 <p>OR</p>
-                <br />
-
                 <Card>
                 <p>“While the paper proves a novel tractability result for the case of directed acyclic graphs, it is a minor extension of a similar result by Boe et al. [A] for trees, and uses the same techniques.”</p>
                 <p>“I recommend rejecting the paper as the benchmark from Doe et al. [A] is not used and the authors include only two baselines.”</p>
                 <p>(It is not clear what the additional benchmark would add to the discussion. The baselines the reviewer wishes to see are not specified, nor why these particular baselines are specified. It is not made clear why extra baselines are needed or what they would add to the discussion. It is not clear that it would be feasible to run them. It is not clear what claims are not properly validated, but would be validated with these additional experiments.)</p>
                 <p>“The paper’s selection of baselines and experiments, though incomplete, provides strong evidence for the claims of improved performance for path queries.”</p>
                 </Card>
-
-
-                <br />
                 <p>OR</p>
-                <br />
-                
                 <Card>
                 <p>“I recommend a reject because the paper claims to provide superior performance versus the state of the art for SPARQL queries, with a main contribution being the optimisation of path queries. However, the benchmarks tested include very few path queries. To validate these claims, it would be necessary to include a benchmark with more (diverse) path queries, such as proposed by Poe et al. [A], in order to better understand the performance of such queries. Also, the baselines included run on disk while the proposed approach runs in memory. A fairer and stronger baseline would be to compare with the in-memory database proposed by Joe et al. [B], which is optimised for path queries, and has a code repository linked from the paper.”</p>
                 <p>“The paper reports a precision measure of 46%, which is far too low for the approach to be applicable in practice.”</p>
                 <p>(While this may be true, the paper may still improve upon the state of the art for a challenging and important problem. It may lead to further developments that, in turn, lead to approaches applicable in practice. Alternatively, the paper may be reporting an interesting negative result that refutes a commonly held belief/misconception within the community.)</p>
                 <p>“The paper reports a precision measure of 46%, which though still too low for most practical applications, is a significant improvement with respect to the state of the art on this challenging and important problem. I think that further improvements can follow from this work, and can eventually yield more precise techniques that are applicable in practice.”</p>
                 </Card>
-
-                <br />
                 <p>OR</p>
-                <br />
-
                 <Card>
                 <p>“The paper reports a precision measure of 46%, indicating that Deep Learning methods are outperformed by much simpler classifiers for this task. This is quite a surprising negative result! The ablation study provides very useful insights into why this is the case.”</p>
                 </Card>
-
-
-                <br />
                 <p>OR</p>
-                <br />
-
                 <Card>
                 <p>“The paper reports a precision measure of 46%, which is too imprecise to be useful in practice, and offers only a single percentage point improvement over the baselines tested. On the other hand, recall drops by several percentage points compared to these baselines. Given the somewhat incremental nature of the proposal, and the arguable performance improvement over the baseline method, I lean towards rejecting this paper.”</p>
                 <p>“I recommend rejecting the paper. Though the approach is new and proves effective, it is also trivial and fairly obvious. It was not difficult to come up with this approach.”</p>
@@ -248,39 +216,30 @@ export const ReviewGuidelines = () => {
                 <p>(Do not do this.)</p>
                 </Card>
 
-
-
-
-
                 <SubHeader>Be honest about your understanding of the paper</SubHeader>
                 <p>Of all the guidelines, this can be the hardest to follow. As much as we can try to avoid this situation, it can happen that you are assigned a paper that is a bit outside your comfort zone or area of expertise. Or you may be assigned a paper in your area that contains a large amount of technical detail you cannot verify in the time given. Please do not give up right away. Try your best to understand as much as you can of the paper, and to provide a recommendation based on what you understood. Be honest in the review text about what you understood, and what you didn’t understand. It is possible that someone more expert in the area might find the paper really interesting and worthwhile. Conversely, and perhaps even more commonly, your lack of understanding might well be the paper’s fault: it might be the case that the paper uses unhelpful notation, over-complicates technical detail, is poorly written, etc.</p>
                 <p>Even if you do not have much experience in the particular sub-area, be wary of papers where you struggled to follow the motivation, overall technical ideas, and main results. These should be expressed in a manner that the broader ISWC audience can understand. Be particularly wary of papers for which other reviewers also expressed major difficulties understanding (something that can only be detected if reviewers are honest about their understanding of the paper). If the SPC or Chairs feel that a more expert review is necessary, they will solicit it (something that again depends on reviewers being honest about how much you understood).</p>
                 <p>If you did not fully understand a paper, please consider lowering your confidence score. When assigning the score, please take into account the following aspects:</p>
-                <p>
-                    <ul className="list-disc list-inside">
+                <ul className="list-disc list-inside">
                         <li>Your depth of understanding of the paper.</li>
                         <li>How well you know the literature in the area.</li>
                         <li>How certain you are about your recommendation.</li>
                     </ul>
-                </p>
                 <p>Please try to be honest and fair when selecting your confidence, which is intended to be a measure of the previous three points only (and not your repute as a researcher). The scores can be interpreted as follows (<ExternalLink href="https://brenocon.com/blog/2014/02/what-the-acl-2014-review-scores-mean/">based on guidelines for ACL 2014</ExternalLink>).</p>
 
-                <p>
-                    <ul className="list-disc list-inside">
+                <ul className="list-disc list-inside">
                         <li>5: (expert) Positive that my evaluation is correct. I read the paper very carefully and am familiar with related work and have published on this topic.</li>
                         <li>4: (high) Quite sure. I tried to check the important points carefully and am familiar with related work. It’s unlikely, though conceivable, that I missed something that should affect my ratings.</li>
                         <li>3: (medium) Pretty sure and willing to defend my evaluation, but there’s a chance I missed something. Although I have a good feel for this area in general, I did not carefully check all the paper’s details, e.g., the math, experimental design, or novelty.</li>
                         <li>2: (low) It is quite probable that I missed some details, didn’t understand some central points, or can’t be sure about the novelty of the work, since the topic is peripheral to my own interests.</li>
                         <li>1: (none) Not my area, or the paper is very hard to understand. My evaluation is an educated guess based on general understanding of science and scientific writing.</li>
                     </ul>
-                </p>
 
                 <p>While in an ideal world all reviews on a paper would provide genuinely expert comments and recommendations, in practice, this is quite a rare situation, even for experienced reviewers/researchers. In case of lower confidence, we encourage you to indicate in the review (or the internal comments to PC/SPC) issues relating to your understanding of the paper, your knowledge of the area, or doubts you may have about the recommendation. Such comments may be crucial for making fair decisions on which papers to accept, and which to reject.</p>
 
                 <UnderlineHeader>Suggested Review Structure</UnderlineHeader>
                 <p>Reviewers may develop their own style of review over time, and no individual style is “best”. But if you are a relative newcomer to reviewing, and are looking for guidance on how to structure your review, consider adopting the following structure:</p>
-                <p>
-                    <ul className="list-disc list-inside">
+                <ul className="list-disc list-inside">
                         <li><b>Overview</b>: Summarise the paper in your own words in a short, concise paragraph. While the authors (presumably) already know what their paper is about, this demonstrates to the authors, other reviewers, and chairs the extent to which you understood the paper, and what your personal perspective of the paper is. If you can provide a good overview, the authors will tend to value your opinion more. It is also a good exercise to ensure that you understand the paper. (In case there are parts of the paper you did not understand, clarify them here.)</li>
                         <li><b>Strengths</b>: Summarise around three main strengths of the paper as concise bullet points. Being able to expand on the positive aspects of the paper can be encouraging to authors, and can also help them to improve their work by building upon those strengths.</li>
                         <li><b>Weaknesses</b>: Summarise around three main weaknesses of the paper as concise bullet points. You do not need to go into too much detail yet. Do not include minor issues here. Consider criteria as listed in the call and in the questions of the review form (e.g., relevance, impact, clarity, reproducibility) when preparing the list of weaknesses.</li>
@@ -288,7 +247,6 @@ export const ReviewGuidelines = () => {
                         <li><b>Recommendation</b>: Explicitly state your recommendation (reject, borderline, accept, etc.). Relate your recommendation to the aforementioned strengths and weaknesses. Almost every paper, even strong ones, have weaknesses. Not all weaknesses are grounds for rejection. Some might refer to limitations that could be addressed for future work. Other weaknesses might be adequately addressed as part of the camera-ready version (e.g., being more upfront about certain limitations). In case you accept, make clear what improvements (if any) you expect for a camera ready version. In case you recommend a rejection, provide a summary of directions in which the authors could improve their work.</li>
                         <li><b>Minor comments</b>: Provide here minor comments that seem to have an easy and uncontroversial fix, such as spelling mistakes, grammatical mistakes, bugs in notation. In case such errors are frequent, you can opt to provide around three or four illustrative examples, and also list the general issue as a weakness above (e.g., if frequently poor grammar makes the paper very difficult to understand, make that a key weakness).</li>
                     </ul>
-                </p>
 
 
                 <p>Please note that the ISWC 2026 review form will include an explicit section in which you can summarise the strengths and weaknesses of the paper, and justify your recommendation.</p>

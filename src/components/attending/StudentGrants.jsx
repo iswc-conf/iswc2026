@@ -25,57 +25,44 @@ export const StudentGrants = () => {
 
 <UnderlineHeader>Selection Criteria</UnderlineHeader>
 
-<p>
-    <ul className='list-disc list-outside pl-6 space-y-1 ml-8'>
+<ul className="ml-8">
        <li>Priority to students with papers in the doctoral symposium and the main track</li>
     <li>Priority to students from underrepresented groups</li>
     <li>Students with posters, demos, workshops, tutorials, and Semantic Web challenge papers if money is left</li>
     <li>Students without a paper if there is money left</li>
     </ul>
-</p>
 
 <UnderlineHeader>Application Process</UnderlineHeader>
 
-<p>
-    <ol className='ol-decimal ml-8'>
+<ol className='ol-decimal ml-8'>
         <li> Fill out and submit the ISWC 2026 Student Travel Award Application Form on EasyChair (https://easychair.org/conferences/?conf=iswc2026), choosing “Student Grants” when making a new submission.  <b>Applicants should use the title of their accepted contribution followed by "- Student grant" as the submission title</b>.
     
         <li>Ask your supervisor to email the student grants chairs using the following email address iswc2026-student-grants@easychair.org, confirming that you are a current student under their supervision and that you will be attending ISWC 2026. The subject of the email should be “ISWC 2026 Student Travel Award Application <strong>{'{'}EASYCHAIR SUBMISSION ID{'}'}</strong> - Verification for <b>{'{'}YOUR FULL NAME{'}'} </b>”. The text should read “I confirm that {'{'}YOUR FULL NAME{'}'} is a student that is currently under my supervision at  <b>{'{'}INSTITUTION NAME{'}'}</b> and that they will be attending ISWC 2026 to present work that they completed under my supervision. <b>{'{'}SUPERVISOR NAME{'}'}</b>”</li>
     </li>
     </ol>
-</p>
         
 <UnderlineHeader>Timeline</UnderlineHeader>
 
-<p>
-    <ul className='ul-disc ml-8'>
+<ul className='ul-disc ml-8'>
     
         <li>Application opening date: <b>July 13th 2026</b></li>
     <li>Deadline for submission: <b>Sep 7th 2026 (or earlier if funds are no longer available)</b></li>
     <li>Notification of results: <b>Sep 21th 2026 (latest)</b></li>
     </ul>
-</p>
 
 <UnderlineHeader>Terms and Conditions</UnderlineHeader>
-              <p>
-                  <ul className='ul-disc ml-8'>
+              <ul className='ul-disc ml-8'>
                   <li>Attend the conference</li>
                   <li>Reimbursement after the conference</li>
                   <li>Keep all receipts</li>
                   </ul>
-              </p>
 
 <UnderlineHeader>Contacts</UnderlineHeader>
 <p>Student Grants and Activities Chairs. Contact:  <ExternalLink href="mailto:iswc2026-student-grants@easychair.org">iswc2026-student-grants@easychair.org</ExternalLink></p>
-            <p>
-                <ul className='ul-disc ml-8'>
+            <ul className='ul-disc ml-8'>
                 <li>George Hannah - University of Liverpool, UK</li>
                 <li>Maria Angela Pellegrino - University of Salerno, Italy</li>
                 </ul>
-            </p>
-<br>
-</br>
-
         </BaseContainer>
     )
 }

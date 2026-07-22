@@ -24,13 +24,11 @@ export const WhySponsor = () => {
 
             <p>ISWC is where the core ideas behind knowledge graphs, ontologies, reasoning, and semantic interoperability are actively shaped — often years before they surface in enterprise platforms or mainstream AI narratives.</p>
             <p>Sponsorship enables organizations to:</p>
-            <p>
-                <ul className="ul-disc ml-8">
+            <ul className="ul-disc ml-8">
                     <li>Gain early visibility into research directions that will define the next generation of AI and data platforms</li>
                     <li>Engage directly with researchers working on foundational problems of meaning, inference, and context</li>
                     <li>Help steer research toward real enterprise challenges through workshops, challenges, and industry engagement</li>
                 </ul>
-            </p>
 
             <p><b>Why it matters:</b> Organizations that engage upstream are better positioned to anticipate change — and influence it — rather than react after the fact.</p>
 
@@ -43,15 +41,13 @@ export const WhySponsor = () => {
             </p>
 
             <p>Sponsorship signals:</p>
-            <p>
-                <ul className="ul-disc ml-8">
+            <ul className="ul-disc ml-8">
                     <li>Respect for rigor and foundational thinking</li>
                     <li>Commitment to serious, long-term knowledge work
                     </li>
                     <li>Credibility with talent that values substance over hype
                     </li>
                 </ul>
-            </p>
 
             <p>This signal matters. For elite technical talent, who supports the community is often as important as who is hiring.</p>
 
@@ -63,8 +59,7 @@ export const WhySponsor = () => {
             <p><b>Open standards, interoperability, and long-term optionality</b></p>
             <p>As knowledge and context move to the center of AI systems, organizations face increasing risk of vendor <b>lock-in at the knowledge layer</b>. Historically, the semantic web community has emphasized open standards and interoperability to mitigate exactly this risk.</p>
             <p>Supporting ISWC helps:</p>
-            <p>
-                <ul className="ul-disc ml-8">
+            <ul className="ul-disc ml-8">
                     <li>Reinforce open, interoperable approaches to knowledge and context
                     </li>
                     <li>Encourage collaboration across industry, academia, and vendors
@@ -73,7 +68,6 @@ export const WhySponsor = () => {
                     <li>Protect long-term architectural flexibility and innovation
                     </li>
                 </ul>
-            </p>
 
             <p><b>Why it matters:</b> Ecosystem stewardship is strategic risk management in an AI-driven world.</p>
 
@@ -81,8 +75,7 @@ export const WhySponsor = () => {
 
             <p>Organizations that sponsor ISWC are not simply supporting a conference. They are:
             </p>
-            <p>
-                <ul className="ul-disc ml-8">
+            <ul className="ul-disc ml-8">
                     <li>Engaging upstream with the ideas shaping enterprise AI and knowledge
 
                     </li>
@@ -93,7 +86,6 @@ export const WhySponsor = () => {
                     <li>Investing in an open, resilient knowledge ecosystem
                     </li>
                 </ul>
-            </p>
 
             <p><b>Sponsoring ISWC is a statement of leadership in how knowledge works at scale.
             </b></p>

@@ -11,8 +11,6 @@ export const HTMLSubmissionGuide = () => {
         <BaseContainer>
             <Header>HTML Submission Guide</Header>
 
-
-
             <p>
                 ISWC 2026 welcomes research articles employing the Open Web Platform. This document provides guidance to authors who wish to make their contributions available in HTML and related technology stack.
             </p>
@@ -23,34 +21,29 @@ export const HTMLSubmissionGuide = () => {
                 Contributions in HTML should be shared in EasyChair as a ZIP archive that contains the complete and self-contained content of the article. It should include a main “index.html” and all used resources (like media, scripts) to guarantee a correct visualization of the document on common desktop and mobile Web browsers. Please note the following key requirements
             </p>
 
-            <p>
-                <ul className="list-disc list-inside">
+            <ul className="list-disc list-inside">
                     <li><b>HTML template:</b> any tooling or process can be used to produce the HTML.</li>
                     <li><b>Content</b>: the full content of the article must be human-readable with HTML alone. The use of CSS and JavaScript is encouraged, but should not interfere with the accessibility of the content.</li>
                     <li><b>Offline-friendly</b>: there must not be any external dependencies (e.g., a network connection) to retrieve, to render, or to manipulate the content of the article.</li>
                     <li><b>Privacy</b>: scripts must not be used to identify or track readers.</li>
                     <li><b>View</b>: the rendered article (HTML+CSS) should have the “look and feel” of the LNCS authoring guidelines. Pixel-perfection is not expected. This is to ensure visual consistency of the proceedings as well as to have comparative page limits with the print-based publication. The HTML article has to be compliant with the page limit constraint.</li>
                 </ul>
-            </p>
             <p>
                 It should be possible to read the HTML contributions on an average desktop computer or mobile computer that is equipped with a reasonably current, Javascript-enabled Web browser (e.g., Firefox, Chrome/Chromium, Internet Explorer, Brave, Safari). We encourage authors to make their articles as accessible as possible (for reading and interacting) because different consumers (in this case initially the reviewers and chairs) may have different environments and abilities.
             </p>
 
             <UnderlineHeader>Final (“camera-ready”) Version</UnderlineHeader>
-            <p>
-                <ul className="list-disc list-inside">
+            <ul className="list-disc list-inside">
                     <li>The publisher for the Research, In-Use, and Resources tracks will be confirmed soon. It is likely that the publisher will require submissions in LaTeX (or possibly Word) format. If an article submitted in HTML is accepted, the authors can choose to convert their paper manually or using tool support as outlined below.</li>
                     <li>Articles accepted in the Posters & Demos track and in the Doctoral Consortium will be published as CEUR-WS.org proceedings volumes. CEUR-WS.org allows articles to be in HTML but, for guaranteed printability and archiving, requires an additional PDF, which should be a print-out of the HTML article in the LNCS layout.</li>
                     <li>Articles accepted in the Industry track will be published on the conference website. The same “HTML+PDF” rule applies as explained above for posters, demos and doctoral papers.</li>
                 </ul>
-            </p>
 
             <UnderlineHeader>Recommendations</UnderlineHeader>
             <p>
                 We recommend that authors take the following steps independently of the general process:
             </p>
-            <p>
-                <ul className="list-disc list-inside">
+            <ul className="list-disc list-inside">
                     <li>Before sharing your article with ISWC, self-publish your HTML version, eg. at a repository, personal or institution website that’s publicly accessible and archivable from a URL.</li>
                     <li>Include the URL of your self-published article along the lines of: “Identifier: http://example.org/article “ after the list of authors and/or include the URL in the abstract of your article.</li>
                     <li>Make sure to preserve this information in your camera-ready version.</li>
@@ -102,7 +95,6 @@ export const HTMLSubmissionGuide = () => {
                     </li>
 
                 </ul>
-            </p>
 
             <UnderlineHeader>dokieli</UnderlineHeader>
             <p>
@@ -195,7 +187,7 @@ export const HTMLSubmissionGuide = () => {
 
             <SubHeader>Acknowledgements</SubHeader>
 
-            <p className="text-md lg:text-lg font-[300]">
+            <p>
                 We would like to thank{" "}
                 <ExternalLink href="https://csarven.ca/#i">
                     Sarven Capadisli

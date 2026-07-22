@@ -13,10 +13,7 @@ export const PolicyAI = () => {
         <Header>Policy on the use of Generative AI (adapted from the ACM Policy on Authoring) </Header>
    
 
-<p>
-
-
-    <ul>
+<ul>
 
         <li><b>1.</b> Generative AI tools and technologies, including but not restricted to ChatGPT, Grok, Gemini, and Perplexity, may not be listed as authors of an ISWC Work. </li>
 <li><b>2.</b> The use of generative AI tools and technologies to create content is permitted but must be fully disclosed in the Work and by ticking the Use of Generative AI tickbox in Easychair. Authors should include the following statement in a separate ‘Use of Generative AI’ section, just before the Bibliography in the Work: “ChatGPT was utilized to generate sections of this Work including” and then list what it was used for such as text, tables, images, graphs, code, data, citations, etc.</li>
@@ -25,7 +22,6 @@ export const PolicyAI = () => {
    <li><b>5.</b> As the line between Generative AI tools and these basic word processing systems becomes blurred, this Policy will be regularly updated.</li>
    
     </ul>
-</p>
 
         </BaseContainer>
     );

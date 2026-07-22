@@ -1,5 +1,4 @@
 import React from "react";
-import "./attending.css";
 import TransImage from "../../assets/promotional/trans_map.png";
 import HotelImage from "../../assets/promotional/hotels.png";
 import BaseContainer from "../general/BaseContainer";
@@ -16,16 +15,14 @@ export const VenueAndAccomodation = () => {
   return (
     <BaseContainer>
       <Header>Venue and Accommodation</Header>
-      <br></br>
       <UnderlineHeader>Venue</UnderlineHeader>
-      <br></br>
-      <section className="venue-container">
+      <section className="iswc-media-row">
         <img
           src={VenueImage}
-          alt="Under construction"
-          className="venue-image"
+          alt="The Nicolaus Hotel, the ISWC 2026 venue"
+          className="iswc-media-row__image"
         />
-        <div className="venue-text">
+        <div className="iswc-media-row__text">
           <p>
             The conference will take place at the{" "}
             <ExternalLink href="https://www.thenicolaushotel.com/">
@@ -33,7 +30,6 @@ export const VenueAndAccomodation = () => {
             </ExternalLink>{" "}
             one of the most important hotels and conference centers in Bari.
           </p>
-          <br />
           <ul className="ul-disc lg:text-lg">
             <li>4-star hotel and conference center</li>
             <li>15 modular meeting rooms</li>
@@ -41,7 +37,6 @@ export const VenueAndAccomodation = () => {
             <li>5 different dining locations</li>
           </ul>
           <p>And for guests:</p>
-          <br />
           <ul className="ul-disc lg:text-lg">
             <li>Wellness area</li>
             <li>Free bike sharing</li>
@@ -49,9 +44,6 @@ export const VenueAndAccomodation = () => {
           </ul>
         </div>
       </section>
-      <br></br>
-      <br></br>
-      <br></br>
       <UnderlineHeader>
         International Connections & Transpostation
       </UnderlineHeader>
@@ -68,10 +60,8 @@ export const VenueAndAccomodation = () => {
       </ExternalLink>
       , with either Bus, Taxi, Trains or Rental cars. This table will provide a
       brief overview:
-      <br></br>
-      <br></br>
-      <div className="table-wrapper">
-      <table className="custom-table">
+      <div className="iswc-table-scroll">
+      <table className="iswc-info-table">
           <thead style={{ backgroundColor: theme.colors.secondary }}>
             <tr>
               <th>Airport Transfer</th>
@@ -104,7 +94,6 @@ export const VenueAndAccomodation = () => {
           </tbody>
          </table>
       </div>
-      <br></br>
       Bari is connected to the most important national and international
       destinations, as well as major European hubs. More than 100 daily routes
       are served by over 20 airlines, including low-cost carriers.
@@ -112,11 +101,9 @@ export const VenueAndAccomodation = () => {
         <img
           src={TransImage}
           alt="Map of national and international flight routes serving Bari"
-          className="venue-image"
+          className="iswc-figure-img"
         />
       </figure>
-      <br></br>
-      <br></br>
       City is served by{" "}
       <Accent>Trenitalia (National Train Tranpostation)</Accent> connecting also
       Italy with other European Contries. The main train stop is{" "}
@@ -125,10 +112,8 @@ export const VenueAndAccomodation = () => {
       </ExternalLink>
       , providing a central connection point to all other destinations in the
       city. Inside the city two main tranportation methods are available:
-      <br></br>
-      <br></br>
       <div className="text-center">
-        <table className="custom-table">
+        <table className="iswc-info-table">
           <thead style={{ backgroundColor: theme.colors.secondary }}>
             <tr>
               <th>Transportation</th>
@@ -160,14 +145,9 @@ export const VenueAndAccomodation = () => {
           </tbody>
         </table>
       </div>
-      <br></br>
-
 To reach the venue from the centre of Bari (Bari Centrale railway station), you can use the transportation options below (more detailed information is available on the venue’s official website). It typically takes  20–25 minutes by public transport. Alternatively, you can walk from the station to the venue in about 40 minutes.
-<br></br>
-<br></br>
-
       <div className="text-center">
-        <table className="custom-table">
+        <table className="iswc-info-table">
           <thead style={{ backgroundColor: theme.colors.secondary }}>
             <tr>
               <th>Bus Number</th>
@@ -192,12 +172,9 @@ To reach the venue from the centre of Bari (Bari Centrale railway station), you 
           </tbody>
         </table>
       </div>
-      <br></br>
       Alternative tranporation methods are listed below:
-      <br></br>
-      <br></br>
       <div className="text-center">
-        <table className="custom-table">
+        <table className="iswc-info-table">
           <thead style={{ backgroundColor: theme.colors.secondary }}>
             <tr>
               <th>Tranportation</th>
@@ -233,8 +210,6 @@ To reach the venue from the centre of Bari (Bari Centrale railway station), you 
           </tbody>
         </table>
       </div>
-      <br></br>
-      <br />
       <UnderlineHeader>Hotels</UnderlineHeader>
 The <Accent>Conference Venue "The Nicolaus Hotel"</Accent> offers 174
 rooms for attendees. Alternative accommodations within walking distance from the venue include:
@@ -246,7 +221,7 @@ and a wide selection of B&Bs and 3-star hotels. The median hotel price is
         <img
           src={HotelImage}
           alt="Map of hotels near the ISWC 2026 venue in Bari"
-          className="venue-image"
+          className="iswc-figure-img"
         />
       </figure>
 
@@ -254,8 +229,8 @@ and a wide selection of B&Bs and 3-star hotels. The median hotel price is
 
       <p>The following hotels have a special conference rate that will be applied <b>ONLY</b> booking the hotels using the conference registration system, during or after registering for the conference. Attendees are invited to book their reservations in due time.</p>
 
-    <div className="table-wrapper">
-  <table className="custom-table">
+    <div className="iswc-table-scroll">
+  <table className="iswc-info-table">
     <thead style={{ backgroundColor: theme.colors.secondary }}>
       <tr>
         <th>Hotel</th>

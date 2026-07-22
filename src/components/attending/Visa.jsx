@@ -1,5 +1,4 @@
 import React from "react";
-import './attending.css'
 import Header from "../general/Header";
 import UnderlineHeader from "../general/UnderlineHeader";
 import DeclareSoon from "../general/declareSoon";
@@ -21,10 +20,7 @@ export const Visa = () => {
            <p>
 Visa regulations depend on the applicant’s nationality, country of residence, purpose of stay, and length of stay. For official and updated information regarding visa requirements and application procedures, please consult the following websites:</p>
 
-
-
-            <p>
-                <ul className="ul-disc ml-8">
+            <ul className="ul-disc ml-8">
                     <li><ExternalLink href="https://vistoperitalia.esteri.it/?lang=en_US&utm_source=chatgpt.com">https://vistoperitalia.esteri.it/?lang=en_US&utm_source=chatgpt.com</ExternalLink></li>
                     <li><ExternalLink href="https://www.esteri.it/en/servizi-opportunita/ingressosoggiornoinitalia/visto_ingresso/">https://www.esteri.it/en/servizi-opportunita/ingressosoggiornoinitalia/visto_ingresso/</ExternalLink></li>
                     <li><ExternalLink href="https://www.esteri.it/en/servizi-consolari-e-visti/ingressosoggiornoinitalia/visto_ingresso/paesi_esenti_visto/">https://www.esteri.it/en/servizi-consolari-e-visti/ingressosoggiornoinitalia/visto_ingresso/paesi_esenti_visto/</ExternalLink></li>
@@ -32,24 +28,17 @@ Visa regulations depend on the applicant’s nationality, country of residence, 
 
                 </ul>
 
-
-            </p>
-
             <p>
                 Participants are also encouraged to contact the Italian Diplomatic or Consular Representation in their country of residence for detailed and official instructions applicable to their individual case.
             </p>
 
-
-
             <SubHeader>Exemption of Visa (Short Term Stay)</SubHeader>
             The list of exempt countries and further details on visa exemptions can be found on the official website of the Ministry of Foreign Affairs of Italy:
 
-            <p>
-                <ul className="ul-disc ml-8">
+            <ul className="ul-disc ml-8">
                     <li><ExternalLink href="https://www.esteri.it/en/servizi-opportunita/ingressosoggiornoinitalia/visto_ingresso/paesi_esenti_visto/">https://www.esteri.it/en/servizi-opportunita/ingressosoggiornoinitalia/visto_ingresso/paesi_esenti_visto/</ExternalLink></li>
 
                 </ul>
-            </p>
 
 
             <UnderlineHeader>Visa Application Procedure</UnderlineHeader>
@@ -62,15 +51,13 @@ Visa regulations depend on the applicant’s nationality, country of residence, 
 
             <p>Participants requiring a visa may request an official invitation letter for visa purposes by contacting: <ExternalLink href="mailto:ISWC2026@cicsud.it">ISWC2026@cicsud.it</ExternalLink></p>
 <p>Please include:</p>
-           <p>
-            <ul className="ul-disc ml-8">
+           <ul className="ul-disc ml-8">
 
                 <li>“Visa Request – ISWC 2026” in the subject line of the email; </li>
                 <li>Your full name;</li>
                 <li>affiliation/institution;</li>
                 <li>registration details, if available. </li>
             </ul>
-           </p>
 
            <p>Please note that invitation letters (visa support letters) will only be issued to participants who have completed their conference registration.</p>
 
@@ -86,26 +73,16 @@ All expenses related to conference registration, travel, accommodation, and visa
 
             <p>For any inquiries regarding visa support documentation, please contact: </p>
 
-                            <p>
-                <ul className="ul-disc ml-8">
+                            <ul className="ul-disc ml-8">
                     <li><ExternalLink href="mailto:ISWC2026@cicsud.it">ISWC2026@cicsud.it</ExternalLink></li>
 
                     <li><ExternalLink href="https://www.cicsud.it/">Cic Sud: Centro Italiano Congressi Bari</ExternalLink></li>
           
 
                 </ul>
-           
-                
-                </p>
 
 
     
-
-
-
-
-
-
 
         </BaseContainer>
     );

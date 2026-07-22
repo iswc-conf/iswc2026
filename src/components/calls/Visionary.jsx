@@ -37,19 +37,16 @@ export const Visionary = () => {
        <SubHeader>Core Visionary Themes</SubHeader>
        <p>We invite submissions that push the boundaries of semantic technologies to forward the field into the new GenAI era. Some examples of foundational questions include:</p>
 
-       <p>
-        <ul className="list-disc list-outside pl-6 space-y-1">
+       <ul>
             <li>How do we move past mere data-feeding pipelines <b>to forge a unified, continuous reasoning architecture between Large Language Models and explicit semantic schemas?</b></li>
 <li>What are the challenges for Semantic Web protocols when the primary consumers, creators, and navigators of web semantics are <b>autonomous GenAI agents rather than humans?</b> Should query languages and data formats change when the user looking at the data is not human anymore?</li>
 <li>In a world dominated by extremely capable AI models, what is the <b>future of data engineering, data curation?</b></li>
 <li>Can semantic web paradigms facilitate <b>truth-grounding mechanisms to mitigate hallucinations, authenticate provenance, and enforce accountability across synthetic media ecosystems?</b></li>
 <li>Rationale-driven evaluations of which <b>early / prior Semantic Web visions failed to achieve mass adoption</b>, paired with the precise architectural shifts needed to revive, revise, or replace them today.</li>
         </ul>
-       </p>
     <UnderlineHeader>Submission Guidelines & Format</UnderlineHeader>
 
-    <p>
-        <ul className="list-disc list-outside pl-6 space-y-1">
+    <ul>
             <li>All papers and abstracts have to be submitted electronically via <ExternalLink href="https://easychair.org/conferences/?conf=iswc2026">EasyChair</ExternalLink>. </li>
             <li><b>Anything between 2 to 8 pages</b>, including references.</li>
 <li>Submissions must be formatted using the main conference template (Springer Publications format for Lecture Notes in Computer Science, LNCS). For details on the LNCS style, see For details on the LNCS style, see <ExternalLink href="https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines">Springer’s Author
@@ -57,53 +54,44 @@ export const Visionary = () => {
 <li>Double-blind review</li>
 <li>All papers will be part of the main conference proceedings </li>
         </ul>
-    </p>
 
     <SubHeader>🎯 Evaluation Criteria</SubHeader>
 
     <p>Submissions to the Vision Track are evaluated by a panel exclusively on their conceptual value:</p>
-<p>
-    <ol className="ol-decimal ml-8">
+<ol>
         <li><b>25-Year Visionary Leap:</b> Does the paper propose a transformative roadmap that charts a new path for the Semantic Web community in the GenAI landscape?</li>
         <li><b>Constructive Disruption:</b> Does it effectively challenge prevailing assumptions or address deep-seated bottlenecks in our current methodologies?</li>
         <li><b>Intellectual Rigor:</b> Is the conceptual argument logically sound, compellingly framed, and well-contextualized within computer science and semantic web history?</li>
     </ol>
-</p>
 
 
     <SubHeader>🚫 Strict Exclusions (Desk-Reject Criteria)
 </SubHeader>
            <p>Papers will be immediately desk-rejected without formal review if they present:</p>
-    <p>
-               <ul className="list-disc list-outside pl-6 space-y-1">
+    <ul>
 <li>   Incremental performance optimizations or minor extensions of existing ontology tools.</li>
 <li>Standard research papers with finalized empirical benchmarks.</li>
-        </ul> 
-    </p>
+        </ul>
 
     <UnderlineHeader>Important Dates (AoE)</UnderlineHeader>
 
-    <p>
-        <ul className="list-disc list-outside pl-6 space-y-1">
+    <ul>
             <li><b>Abstract Submission Deadline:</b> July 25, 2026</li>
 <li><b>Full Paper Submission Deadline:</b> Aug 1, 2026</li>
 <li><b>Author Notifications:</b> August 26, 2026</li>
 <li><b>Camera-Ready Copy Due:</b> September 1, 2026</li>
 <li><b>Conference Dates:</b> October 25–29, 2026</li>
         </ul>
-    </p>
 
 
     <UnderlineHeader>Track Chairs</UnderlineHeader>
 
     <p>For inquiries regarding the alignment of your visionary paper, please reach out to the Track Chairs at: <ExternalLInk href="mailto:iswc2026-vision@easychair.org">iswc2026-vision@easychair.org</ExternalLInk></p>
-    <p>
-        <ul className="list-disc list-outside pl-6 space-y-1 ml-8">
+    <ul className="ml-8">
             <li>Lora Aroyo, Google, USA</li>
 <li>Gianluca Demartini, University of Queensland, Australia</li>
 
         </ul>
-    </p>
             
         </BaseContainer>
     );

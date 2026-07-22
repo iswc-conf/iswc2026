@@ -10,7 +10,7 @@ import TutorialTable from "../general/TutorialTable";
 
 export const AcceptedTutorials = () => {
     return (
-        <BaseContainer>
+        <BaseContainer width="wide">
         <Header>Accepted Tutorials</Header>
         <div className="text-center"><p className="pt-2 font-semibold">Click on a tutorial title below to open its full description.</p></div>
         <TutorialTable title={"Tutorial Title"} description={"Authors"} data={tutorials} header_title={"Description"}></TutorialTable>

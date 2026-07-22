@@ -1,5 +1,4 @@
 import React from "react";
-import './attending.css'
 
 import SWSA from "../../assets/logos/swsa.png";
 import BaseContainer from "../general/BaseContainer";
@@ -16,11 +15,11 @@ export const CodeOfConduct = () => {
                     <img
                         src={ SWSA }
                         alt="Semantic Web Science Association"
-                        className="w-full max-w-3xl rounded-xl shadow-md"
+                        className="iswc-figure-img"
                     />
                 </div>
 
-                <div className="text-lg space-y-4 whitespace-pre-line">
+                <div className="whitespace-pre-line">
                     <p>The International Semantic Web Conference (ISWC) is organized by the Semantic Web Science Association (SWSA) as a forum to encourage rich interactions and promote the free exchange of ideas to benefit the community. SWSA welcomes conference participants that foster inclusion and respect to all members of the community.</p>
 
                     <p>Our association is dedicated to providing a respectful and inclusive conference experience for everyone. Respectful behavior is always assumed and expected of community members during all conference events, online discussions about conference topics, and networking events held after hours. Conference participants are expected to interact with others in a respectful and courteous manner, regardless of age, race, ethnicity, national origin, ancestry, gender, sexual orientation, gender identity, gender presentation, physical appearance, religious affiliation, creed, marital status, differing abilities, medical conditions, personal characteristics, or technology choices.</p>
@@ -69,8 +68,6 @@ export const CodeOfConduct = () => {
                             <li><ExternalLink href="http://swsa.semanticweb.org/content/code-conduct-iswc">SWSA Code of Conduct</ExternalLink></li>
 
                         </ul>
-                 
-                    <br/>
                     <p>Source: <ExternalLink href="http://swsa.semanticweb.org/content/code-conduct-iswc"s>http://swsa.semanticweb.org/content/code-conduct-iswc</ExternalLink></p>
                 </div>
         </BaseContainer>
