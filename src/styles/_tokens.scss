@@ -30,6 +30,14 @@ $iswc-notification: #fb8c00;
 $iswc-cameraready: #922be5;
 
 // -- Typography ---------------------------------------------------------------
+// Montserrat throughout, as the site has always used.
+//
+// Kept as two variables so headings and body can be split later without
+// touching every rule: $iswc-font-display drives headings and the hero,
+// $iswc-font-sans drives body copy, tables and UI. Both point at Montserrat
+// today. If a dedicated text face is ever wanted, changing $iswc-font-sans and
+// the <link> in index.html is the whole job.
+$iswc-font-display: "Montserrat", system-ui, -apple-system, "Segoe UI", sans-serif;
 $iswc-font-sans: "Montserrat", system-ui, -apple-system, "Segoe UI", sans-serif;
 
 // -- Layout -------------------------------------------------------------------
@@ -52,6 +60,9 @@ $iswc-content-max: 64rem; // reading width for content pages
   --iswc-submission: #{$iswc-submission};
   --iswc-notification: #{$iswc-notification};
   --iswc-cameraready: #{$iswc-cameraready};
+
+  --iswc-font-display: #{$iswc-font-display};
+  --iswc-font-sans: #{$iswc-font-sans};
 
   --iswc-navbar-height: #{$iswc-navbar-height};
   --iswc-content-max: #{$iswc-content-max};

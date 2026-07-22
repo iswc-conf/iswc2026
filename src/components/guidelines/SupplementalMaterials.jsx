@@ -2,6 +2,7 @@ import React from "react";
 import BaseContainer from "../general/BaseContainer";
 import DeclareSoon from "../general/declareSoon";
 import Header from "../general/Header";
+import SubTitle from "../general/SubTitle";
 import SubHeader from "../general/SubHeader";
 import UnderlineHeader from "../general/UnderlineHeader";
 import ExternalLink from "../general/ExternalLink";
@@ -12,6 +13,7 @@ export const SupplementalMaterials = () => {
     return (
         <BaseContainer>
             <Header>  Supplemental Material Statement Guide</Header>
+            <SubTitle>Declaring the material that supports your paper</SubTitle>
 
             <UnderlineHeader>Key Points:</UnderlineHeader>
             <ul>

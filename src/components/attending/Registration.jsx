@@ -11,6 +11,7 @@ export const Registration = () => {
   return (
     <BaseContainer>
       <Header>Registration</Header>
+      <SubTitle>Rates, deadlines, and how to register</SubTitle>
       <p>After reviewing the conditions below, please proceed with your registration by clicking the "Register" button at the bottom of the page.</p>
 
 

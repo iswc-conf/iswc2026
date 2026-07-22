@@ -19,6 +19,13 @@ body {
   background-color: $iswc-surface;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  // Turns on the font's kerning and standard ligatures.
+  text-rendering: optimizeLegibility;
+  // Montserrat is drawn wide, with generous default spacing that reads well at
+  // display sizes but loosely in paragraphs. A touch of negative tracking
+  // brings body text closer to a comfortable reading rhythm without changing
+  // the typeface. Headings set their own, positive, tracking.
+  letter-spacing: -0.006em;
   overflow-x: hidden;
 }
 
@@ -29,15 +36,32 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $iswc-font-sans;
+  font-family: $iswc-font-display;
   letter-spacing: 0.01em;
+  // Spreads a wrapped heading evenly across its lines instead of leaving a
+  // short last line.
   text-wrap: balance;
+  // Headings never hyphenate. Alignment is deliberately NOT set here: the hero
+  // title and other centred headings inherit their alignment from a parent, and
+  // setting it on the element would override that. The justify opt-out for
+  // headings is scoped to the page container in _components.scss instead.
+  hyphens: manual;
 }
 
 // -- Body copy ----------------------------------------------------------------
 p {
   margin-top: 0;
   margin-bottom: 1rem;
+  // Avoids a single word stranded on the last line.
+  text-wrap: pretty;
+}
+
+// The guideline and call pages quote long URLs and DOIs; without this they
+// push past the column on narrow screens.
+p,
+li,
+td {
+  overflow-wrap: break-word;
 }
 
 // -- Lists --------------------------------------------------------------------

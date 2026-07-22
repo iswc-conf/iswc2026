@@ -3,6 +3,7 @@ import TransImage from "../../assets/promotional/trans_map.png";
 import HotelImage from "../../assets/promotional/hotels.png";
 import BaseContainer from "../general/BaseContainer";
 import Header from "../general/Header";
+import SubTitle from "../general/SubTitle";
 import UnderlineHeader from "../general/UnderlineHeader";
 import VenueImage from "../../assets/promotional/nicolaus.png";
 import ExternalLink from "../general/ExternalLink";
@@ -15,6 +16,7 @@ export const VenueAndAccomodation = () => {
   return (
     <BaseContainer>
       <Header>Venue and Accommodation</Header>
+      <SubTitle>The Nicolaus Hotel in Bari, and where to stay nearby</SubTitle>
       <UnderlineHeader>Venue</UnderlineHeader>
       <section className="iswc-media-row">
         <img

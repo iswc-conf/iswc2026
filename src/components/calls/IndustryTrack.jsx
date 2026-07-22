@@ -2,6 +2,7 @@ import React from "react";
 import DeclareSoon from "../general/declareSoon";
 import BaseContainer from "../general/BaseContainer";
 import Header from "../general/Header";
+import SubTitle from "../general/SubTitle";
 import TextBlock from "../general/TextBlock";
 import SubHeader from "../general/SubHeader";
 import { theme } from "../../theme";
@@ -15,6 +16,7 @@ export const IndustryTrack = () => {
         <BaseContainer>
 
             <Header>Call For Papers: Industry, Public Administration, Healthcare and any other sector </Header>
+            <SubTitle>Real-world deployments from industry and the public sector</SubTitle>
             <SubHeader>Do you use knowledge graphs, ontologies, or semantic technologies in innovative applications?</SubHeader>
 
             <p>The Industry Track at ISWC 2026 welcomes extended abstracts about the application of knowledge graphs and semantic technologies in a wide range of sectors – from public administration and healthcare to manufacturing, system engineering and various industrial domains – aiming to showcase the state of their adoption and the latest trends. It provides an opportunity for industry practitioners to highlight and share the key learnings and new research challenges posed by real-world production-level implementations (i.e., at least TRL6 or 7).</p>

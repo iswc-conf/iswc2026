@@ -1,6 +1,7 @@
 import React from "react";
 import BaseContainer from "../general/BaseContainer";
 import Header from "../general/Header";
+import SubTitle from "../general/SubTitle";
 import DeclareSoon from "../general/declareSoon";
 import SubHeader from "../general/SubHeader";
 import UnderlineHeader from "../general/UnderlineHeader";
@@ -10,6 +11,7 @@ export const PriorPublicationMultipleSubmission = () => {
     return (
         <BaseContainer>
             <Header>Prior Publications and Simultaneous Submissions</Header>
+            <SubTitle>Rules on prior work and submitting elsewhere</SubTitle>
 
             <p>
                 ISWC 2026 will not accept research/resource/in-use papers that, at the time of submission, are under review for or have already been published in, or accepted for publication, in a journal or another conference. Prior submissions to workshops are acceptable, provided that the authors avoid self-plagiarism, hold sufficient rights to publish overlapping content in the proceedings, and significantly extend it with 30% of novel work. The conference organizers may share information on submissions with other venues to ensure that this rule is not violated.

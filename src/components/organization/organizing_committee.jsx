@@ -7,7 +7,11 @@ import organizers from "../../assets/people/organizing_commitee_list";
 
 const Committees = () => (
   <Page width="wide">
-    <CommitteeSection word="Organizing Committee" users={organizers} />
+    <CommitteeSection
+      word="Organizing Committee"
+      subtitle="The people organising ISWC 2026"
+      users={organizers}
+    />
 
     <UnderlineHeader>Contact Us</UnderlineHeader>
     <p className="text-center">

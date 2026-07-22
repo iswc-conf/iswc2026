@@ -8,6 +8,7 @@ export const PaperTable = ({ data }) => (
     titleLabel="Title"
     secondaryLabel="Authors"
     secondaryField="authors"
+    unit="papers"
   />
 );
 

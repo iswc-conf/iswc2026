@@ -13,6 +13,7 @@ export const WhySponsor = () => {
     return (
         <BaseContainer>
         <Header>Contacts</Header>
+        <SubTitle>Who to reach about sponsoring ISWC 2026</SubTitle>
 
         <p>Interested in sponsoring ISWC 2026? Contact us to learn about available sponsorship opportunities and how you can get involved.</p>
 

@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import Header from "../general/Header";
+import SubTitle from "../general/SubTitle";
 import DeclareSoon from "../general/declareSoon";
 import TextBlock from "../general/TextBlock";
 import SubHeader from "../general/SubHeader";
@@ -19,6 +20,7 @@ export const ESWCResubmission = () => {
         <BaseContainer>
 
             <Header>ESWC 2026 Resubmissions</Header>
+            <SubTitle>A fast track for papers already reviewed at ESWC 2026</SubTitle>
 <p>Following the decision that the Semantic Web Science Association (SWSA) is now overseeing both the International Semantic Web Conference (ISWC) and the European Semantic Web Conference (ESWC) series, we are introducing a new Resubmission Model.</p>
 
 <p>Authors of rejected papers in the Research Track of ESWC 2026 can opt-in to re-submit an improved version of their paper to be considered at the next ISWC conference, to be held in Bari (Italy) in October 2026.</p>

@@ -2,6 +2,7 @@ import React from "react";
 import BaseContainer from "../general/BaseContainer";
 import DeclareSoon from "../general/declareSoon";
 import Header from "../general/Header";
+import SubTitle from "../general/SubTitle";
 import SubHeader from "../general/SubHeader";
 import UnderlineHeader from "../general/UnderlineHeader";
 import ExternalLink from "../general/ExternalLink";
@@ -11,6 +12,7 @@ export const PolicyAI = () => {
     return (
         <BaseContainer>
         <Header>Policy on the use of Generative AI (adapted from the ACM Policy on Authoring) </Header>
+        <SubTitle>What is and is not permitted when writing with generative AI</SubTitle>
    
 
 <ul>

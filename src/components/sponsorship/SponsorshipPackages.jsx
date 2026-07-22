@@ -1,6 +1,7 @@
 import React from "react";
 import Page from "../general/Page";
 import Header from "../general/Header";
+import SubTitle from "../general/SubTitle";
 import DeclareSoon from "../general/declareSoon";
 import { theme } from "../../theme";
 import UnderlineHeader from "../general/UnderlineHeader";
@@ -14,6 +15,7 @@ export const SponsorshipPackages = () => {
             <Page width="wide">
 
             <Header>Sponsorship Packages</Header>
+            <SubTitle>What each sponsorship tier includes</SubTitle>
 
             <UnderlineHeader>Sponsorship Packages</UnderlineHeader>
 

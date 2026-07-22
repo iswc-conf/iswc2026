@@ -95,6 +95,32 @@ const ScrollToTop = () => {
   return null;
 };
 
+/**
+ * Skip link for keyboard users.
+ *
+ * Under HashRouter the URL hash is the route, so following `#main-content`
+ * would replace the current route and navigate home. Move focus manually
+ * instead, which is what the link is for.
+ */
+const SkipLink = () => {
+  const handleClick = (event) => {
+    event.preventDefault();
+
+    const main = document.getElementById("main-content");
+    if (!main) return;
+
+    main.setAttribute("tabindex", "-1");
+    main.focus({ preventScroll: true });
+    main.scrollIntoView({ block: "start" });
+  };
+
+  return (
+    <a className="visually-hidden-focusable" href="#main-content" onClick={handleClick}>
+      Skip to main content
+    </a>
+  );
+};
+
 const RouteFallback = () => (
   <div className="iswc-page" role="status" aria-live="polite">
     <div className="iswc-page__inner text-center">Loading&hellip;</div>
@@ -104,9 +130,7 @@ const RouteFallback = () => (
 export default function App() {
   return (
     <>
-      <a className="visually-hidden-focusable" href="#main-content">
-        Skip to main content
-      </a>
+      <SkipLink />
 
       <NavBar />
       <ScrollToTop />

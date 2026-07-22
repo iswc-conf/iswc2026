@@ -1,6 +1,7 @@
 import BaseContainer from '../general/BaseContainer'
 import DeclareSoon from '../general/declareSoon'
 import Header from '../general/Header'
+import SubTitle from '../general/SubTitle'
 import SubHeader from '../general/SubHeader'
 import UnderlineHeader from '../general/UnderlineHeader'
 import ExternalLink from '../general/ExternalLink'
@@ -11,6 +12,7 @@ export const StudentGrants = () => {
     return (
         <BaseContainer>
                 <Header>Student Grants</Header>
+                <SubTitle>Support for students attending the conference</SubTitle>
 
                 <p>If you are a student interested in attending ISWC 2026, you may be eligible to apply for travel grants to support the costs of travel and lodging. This year, travel grants are funded by the Semantic Web Science Association (SWSA).
 </p>

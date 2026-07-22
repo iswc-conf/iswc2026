@@ -1,12 +1,14 @@
 import React from "react";
 import BaseContainer from "../general/BaseContainer";
 import Header from "../general/Header";
+import SubTitle from "../general/SubTitle";
 import SubHeader from "../general/SubHeader";
 
 export const Awards = () => {
   return (
     <BaseContainer>
       <Header>ISWC 2026 Awards</Header>
+      <SubTitle>Recognising the best work presented at ISWC 2026</SubTitle>
 
       <section className="mb-6">
         <SubHeader>SWSA Distinguished Dissertation Award 2026</SubHeader>

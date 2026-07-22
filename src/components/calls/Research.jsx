@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import Header from "../general/Header";
+import SubTitle from "../general/SubTitle";
 import DeclareSoon from "../general/declareSoon";
 import TextBlock from "../general/TextBlock";
 import SubHeader from "../general/SubHeader";
@@ -19,6 +20,7 @@ export const Research = () => {
         <BaseContainer>
 
             <Header>Call for Research Track Papers</Header>
+            <SubTitle>Original research on semantics, data, and the Web</SubTitle>
             <p>The International Semantic Web Conference is the premier venue for presenting fundamental research, innovative technologies, and applications related to semantics, data, and the Web.</p>
 
             <p>The research track of ISWC 2026 solicits novel and significant research contributions addressing theoretical, analytical, and empirical aspects of the Semantic Web. We welcome work describing original and replicable research showing evidence of a substantial contribution to the Semantic Web.</p>

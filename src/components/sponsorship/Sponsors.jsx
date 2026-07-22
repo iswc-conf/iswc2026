@@ -2,6 +2,7 @@ import React from "react";
 
 import BaseContainer from "../general/BaseContainer";
 import Header from "../general/Header";
+import SubTitle from "../general/SubTitle";
 
 
 import DeclareSoon from "../general/declareSoon";
@@ -230,6 +231,7 @@ const SponsorCard = ({ name, image, link, width = 300 }) => {
 <BaseContainer>
 
   <Header>ISWC 2026 Sponsors</Header>
+  <SubTitle>The organisations supporting ISWC 2026</SubTitle>
   {sponsors.map((group) => (
     <div key={group.level} className="iswc-sponsor-level">
       <h2 className="iswc-sponsor-level__title" style={{backgroundColor:group.color}}>{group.level}</h2>

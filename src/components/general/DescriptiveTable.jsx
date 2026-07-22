@@ -2,7 +2,7 @@ import React from "react";
 import DataTable from "./DataTable";
 
 /** Workshops / calls table: title expands to a description plus links. */
-export const DescriptiveTable = ({ title, description, data, header_title }) => (
+export const DescriptiveTable = ({ title, description, data, header_title, unit }) => (
   <DataTable
     data={data}
     titleLabel={title}
@@ -10,6 +10,7 @@ export const DescriptiveTable = ({ title, description, data, header_title }) => 
     secondaryField="organizers"
     detailLabel={header_title}
     showLinks
+    unit={unit}
   />
 );
 

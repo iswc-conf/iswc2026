@@ -23,6 +23,7 @@ export const Visionary = () => {
         <BaseContainer>
 
             <Header>Call for Visionary Ideas Track Papers</Header>
+            <SubTitle>Early-stage ideas that could reshape the field</SubTitle>
    
 
             <SubHeader>A Quarter-Century Milestone: Rethinking the Semantic Web</SubHeader>

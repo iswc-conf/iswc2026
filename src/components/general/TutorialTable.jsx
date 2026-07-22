@@ -8,6 +8,7 @@ export const TutorialTable = ({
   data,
   header_title,
   type_title = "Format",
+  unit,
 }) => (
   <DataTable
     data={data}
@@ -17,6 +18,7 @@ export const TutorialTable = ({
     typeLabel={type_title}
     detailLabel={header_title}
     showLinks
+    unit={unit}
   />
 );
 

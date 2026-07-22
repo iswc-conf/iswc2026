@@ -9,6 +9,7 @@ import { posters } from "./data/accepted/posters"
 import { demos } from "./data/accepted/demos"
 import BaseContainer from "../general/BaseContainer";
 import Header from "../general/Header";
+import SubTitle from "../general/SubTitle";
 import UnderlineHeader from "../general/UnderlineHeader";
 import PaperTable from "../general/PaperTable"
 import DeclareSoon from "../general/declareSoon"
@@ -18,6 +19,7 @@ export const AcceptedPapers = () => {
     return (
         <BaseContainer width="wide">
         <Header>Accepted Papers</Header>
+        <SubTitle>Papers accepted across all ISWC 2026 tracks</SubTitle>
 
         <DeclareSoon></DeclareSoon>
             

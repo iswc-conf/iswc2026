@@ -1,6 +1,7 @@
 import React from "react";
 import BaseContainer from "../general/BaseContainer";
 import Header from "../general/Header";
+import SubTitle from "../general/SubTitle";
 import DeclareSoon from "../general/declareSoon";
 import SubHeader from "../general/SubHeader";
 import UnderlineHeader from "../general/UnderlineHeader";
@@ -13,6 +14,7 @@ export const ResourcesAvailability = () => {
     return (
         <BaseContainer>
             <Header>Resources Availability Statement Guide</Header>
+            <SubTitle>Describing where your data, code, and resources can be found</SubTitle>
       
                 <UnderlineHeader>Key Points:</UnderlineHeader>
                 <ul>

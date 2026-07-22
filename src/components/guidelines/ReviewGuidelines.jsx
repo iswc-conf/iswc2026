@@ -2,6 +2,7 @@ import React from "react";
 import BaseContainer from "../general/BaseContainer";
 import DeclareSoon from "../general/declareSoon";
 import Header from "../general/Header";
+import SubTitle from "../general/SubTitle";
 import SubHeader from "../general/SubHeader";
 import UnderlineHeader from "../general/UnderlineHeader";
 import ExternalLink from "../general/ExternalLink";
@@ -11,6 +12,7 @@ export const ReviewGuidelines = () => {
     return (
         <BaseContainer>
             <Header>Review Guidelines</Header>
+            <SubTitle>What reviewers look for, and how to write a good review</SubTitle>
 
 
                 <UnderlineHeader>Review guidelines for ISWC 2026 Research/In-Use/Resource Tracks</UnderlineHeader>

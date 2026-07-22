@@ -110,9 +110,12 @@ pages should use the wider shell: `<Page width="wide">`.
 of role to members. Set `hideImage` for name-only lists. Portraits are sized by
 the stylesheet, so source images don't need cropping to a particular size.
 
-**Add a keynote speaker.** Use `general/TalkHeading` for the section heading and
-`general/SpeakerProfile` for the portrait-plus-biography block. Portraits are a
-fixed 220x260 regardless of the source image, so speakers line up down the page.
+**Add a keynote speaker.** Edit `src/data/keynotes.js`. Each entry carries the
+name, affiliation, portrait, an optional talk abstract, and a biography as an
+array of paragraphs — long biographies should be split across several rather
+than left as one block. The page builds the speaker index and the sections from
+that list; portraits are cropped to a circle by the stylesheet, so source images
+don't need preparing.
 
 **Add an image to a page.** Use `className="iswc-figure-img"` for a standalone
 diagram or map, or `iswc-media-row` / `iswc-media-row__image` /

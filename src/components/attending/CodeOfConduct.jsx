@@ -3,6 +3,7 @@ import React from "react";
 import SWSA from "../../assets/logos/swsa.png";
 import BaseContainer from "../general/BaseContainer";
 import Header from "../general/Header";
+import SubTitle from "../general/SubTitle";
 import UnderlineHeader from "../general/UnderlineHeader";
 import ExternalLink from "../general/ExternalLink";
 
@@ -10,6 +11,7 @@ export const CodeOfConduct = () => {
     return (
         <BaseContainer>
                 <Header>Code of Conduct</Header>
+                <SubTitle>What we expect of everyone taking part in ISWC 2026</SubTitle>
 
                 <div className="flex justify-center mt-8 mb-8">
                     <img

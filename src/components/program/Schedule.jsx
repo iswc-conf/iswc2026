@@ -2,6 +2,7 @@ import React from "react";
 import BaseContainer from "../general/BaseContainer";
 import WhovaAgenda from "./WhovaAgenda";
 import Header from "../general/Header";
+import SubTitle from "../general/SubTitle";
 import DeclareSoon from "../general/declareSoon";
 
 export const Schedule = () => {
@@ -24,6 +25,7 @@ export const Schedule = () => {
         
             <div>
              <Header>Schedule</Header>
+             <SubTitle>The full programme, day by day</SubTitle>
              <DeclareSoon></DeclareSoon>
 
              {/**
