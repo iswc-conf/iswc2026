@@ -108,14 +108,13 @@ export const VenueAndAccomodation = () => {
       Bari is connected to the most important national and international
       destinations, as well as major European hubs. More than 100 daily routes
       are served by over 20 airlines, including low-cost carriers.
-      <center>
+      <figure className="text-center my-4">
         <img
-          cl
           src={TransImage}
-          alt="Under construction"
-          className="venue-image mt-10"
+          alt="Map of national and international flight routes serving Bari"
+          className="venue-image"
         />
-      </center>
+      </figure>
       <br></br>
       <br></br>
       City is served by{" "}
@@ -128,7 +127,7 @@ export const VenueAndAccomodation = () => {
       city. Inside the city two main tranportation methods are available:
       <br></br>
       <br></br>
-      <center>
+      <div className="text-center">
         <table className="custom-table">
           <thead style={{ backgroundColor: theme.colors.secondary }}>
             <tr>
@@ -160,14 +159,14 @@ export const VenueAndAccomodation = () => {
             </tr>
           </tbody>
         </table>
-      </center>
+      </div>
       <br></br>
 
 To reach the venue from the centre of Bari (Bari Centrale railway station), you can use the transportation options below (more detailed information is available on the venue’s official website). It typically takes  20–25 minutes by public transport. Alternatively, you can walk from the station to the venue in about 40 minutes.
 <br></br>
 <br></br>
 
-      <center>
+      <div className="text-center">
         <table className="custom-table">
           <thead style={{ backgroundColor: theme.colors.secondary }}>
             <tr>
@@ -192,12 +191,12 @@ To reach the venue from the centre of Bari (Bari Centrale railway station), you 
             </tr>
           </tbody>
         </table>
-      </center>
+      </div>
       <br></br>
       Alternative tranporation methods are listed below:
       <br></br>
       <br></br>
-      <center>
+      <div className="text-center">
         <table className="custom-table">
           <thead style={{ backgroundColor: theme.colors.secondary }}>
             <tr>
@@ -233,7 +232,7 @@ To reach the venue from the centre of Bari (Bari Centrale railway station), you 
             </tr>
           </tbody>
         </table>
-      </center>
+      </div>
       <br></br>
       <br />
       <UnderlineHeader>Hotels</UnderlineHeader>
@@ -243,14 +242,13 @@ Hi Hotel (88 rooms), Hotel Rondo (62 rooms), Villa Romanazzi Carducci (123 rooms
 and a wide selection of B&Bs and 3-star hotels. The median hotel price is
 €80.00 (based on data from 251 hotel prices collected in 2024).
 
-      <center>
+      <figure className="text-center my-4">
         <img
-          cl
           src={HotelImage}
-          alt="Under construction"
-          className="venue-image mt-10"
+          alt="Map of hotels near the ISWC 2026 venue in Bari"
+          className="venue-image"
         />
-      </center>
+      </figure>
 
       <SubHeader>Special-Rate Hotels for ISWC 2026</SubHeader>
 

@@ -1,13 +1,8 @@
 import React from "react";
-import { theme } from "../../theme.js"
 
-export const SubTitle = ({children}) => {
-    return (
-        <>
-          <p style={{ color: theme.colors.primary }}  className="text-2xl font-bold mb-4 lg:mx-10 sm:mx-2 tracking-wide text-center">{children}</p>
-        </>
-    
-    );
-}
+/** Centred tagline shown directly beneath a <Header>. */
+export const SubTitle = ({ children, className = "" }) => (
+  <p className={`iswc-subtitle ${className}`.trim()}>{children}</p>
+);
 
 export default SubTitle;

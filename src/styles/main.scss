@@ -1,0 +1,48 @@
+// =============================================================================
+// ISWC 2026 — stylesheet entry point
+// -----------------------------------------------------------------------------
+// Import order matters:
+//   1. bootstrap functions  — needed by our variable overrides
+//   2. theme                — overrides Bootstrap's defaults with ISWC tokens
+//   3. bootstrap            — only the modules this site actually uses
+//   4. base / components    — our own layers on top
+//   5. compat               — temporary shim for not-yet-migrated pages
+// =============================================================================
+
+@import "bootstrap/scss/functions";
+
+// ISWC overrides. Must sit between Bootstrap's functions and its variables.
+@import "theme";
+
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
+@import "bootstrap/scss/type";
+@import "bootstrap/scss/images";
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/grid";
+@import "bootstrap/scss/tables";
+@import "bootstrap/scss/forms";
+@import "bootstrap/scss/buttons";
+@import "bootstrap/scss/transitions";
+@import "bootstrap/scss/dropdown";
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/navbar";
+@import "bootstrap/scss/card";
+@import "bootstrap/scss/accordion";
+@import "bootstrap/scss/badge";
+@import "bootstrap/scss/alert";
+@import "bootstrap/scss/close";
+@import "bootstrap/scss/offcanvas";
+@import "bootstrap/scss/helpers";
+@import "bootstrap/scss/utilities/api";
+
+// ISWC layers.
+@import "base";
+@import "components";
+@import "compat";

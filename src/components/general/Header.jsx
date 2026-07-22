@@ -1,13 +1,8 @@
 import React from "react";
-import { theme } from "../../theme.js"
 
-export const Header = ({children}) => {
-    return (
-        <>
-         <p style={{ color: theme.colors.secondary }}  className="text-3xl font-bold mb-4 lg:mx-10 sm:mx-2 tracking-wide text-center">{children}</p>
-        </>
-    
-    );
-}
+/** Page title. One per page - renders the page's single <h1>. */
+export const Header = ({ children, className = "" }) => (
+  <h1 className={`iswc-heading ${className}`.trim()}>{children}</h1>
+);
 
 export default Header;

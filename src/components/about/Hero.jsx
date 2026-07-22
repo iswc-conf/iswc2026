@@ -1,114 +1,57 @@
-import bg_image from "../../assets/logos/home_banner.jpeg"
-import { theme } from "../../theme";
-import "../../App.css"
+import React from "react";
+import bgImage from "../../assets/logos/home_banner.jpeg";
+import { allSponsors } from "../../data/sponsors";
 
+const CONFERENCE = {
+  title: "ISWC 2026",
+  subtitle: "The 25th International Semantic Web Conference",
+  dates: "25 – 29 October 2026",
+  city: "Bari, Italy",
+  venue: "The Nicolaus Hotel, Bari",
+};
 
-import LOGO1 from "../sponsorship/assets/PLATINUM/SPS.png"
-import LOGO2 from "../sponsorship/assets/PLATINUM/METAPACT.png"
-import LOGO3 from "../sponsorship/assets/PLATINUM/TENTRIS.png"
-
-import LOGO4 from "../sponsorship/assets/GOLD/GOOGLE.png"
-import LOGO5 from "../sponsorship/assets/GOLD/DATATREEHOUSE.svg"
-
-import LOGO6 from "../sponsorship/assets/SILVER/EBAY.png"
-import LOGO7 from "../sponsorship/assets/SILVER/RELAI.png"
-import LOGO8 from "../sponsorship/assets/SILVER/SIEMENS.png"
-
-const sponsors = [
-  {
-    name: "SPS",
-    logo: LOGO1,
-  },
-  {
-    name: "METAPACT",
-    logo: LOGO2,
-  },
-  {
-    name: "TENTRIS",
-    logo: LOGO3,
-  },
-  {
-    name: "GOOGLE",
-    logo: LOGO4,
-  },
-  {
-    name: "DATATREE",
-    logo: LOGO5,
-  },
-  {
-    name: "EBAY",
-    logo: LOGO6,
-  },
-  {
-    name: "RELAI",
-    logo: LOGO7,
-  },
-  {
-    name: "SIEMENS",
-    logo: LOGO8,
-  },
-];
-
-export const Hero = () => {
-  const repeatedSponsors = Array(8).fill(sponsors).flat();
+/** Continuously scrolling sponsor strip along the bottom of the hero. */
+const SponsorMarquee = ({ sponsors }) => {
+  // The track is duplicated so the -50% keyframe loops seamlessly.
+  const track = [...sponsors, ...sponsors];
 
   return (
-    <div className="relative bg-gradient-to-r mt-10 from-purple-600 to-blue-600 min-h-screen text-white overflow-hidden">
-      <div className="absolute inset-0">
-        <img
-          src={bg_image}
-          alt="Background"
-          className="object-cover object-center w-full h-full"
-        />
-        <div className="absolute inset-0 bg-black opacity-[0.45]"></div>
-      </div>
-
-      <div className="relative z-10 flex flex-col justify-center items-center min-h-screen text-center m-2 lg:m-0 px-4 pt-20 pb-44">
-        <h1
-          style={{ color: theme.colors.primary }}
-          className="lg:text-7xl text-5xl font-bold tracking-wide lg:font-[800] leading-tight"
-        >
-          ISWC 2026
-        </h1>
-
-        <h1 className="lg:text-5xl text-3xl font-semibold tracking-wide lg:font-[800] leading-tight mb-4 mt-6 pt-6">
-          THE 25th INTERNATIONAL SEMANTIC WEB CONFERENCE
-        </h1>
-
-        <p className="text-2xl font-semibold mb-6">
-          Date:&nbsp;&nbsp; 25 - 29 October,&nbsp;&nbsp;2026
-        </p>
-
-        <p className="text-2xl font-semibold mb-6">Bari,&nbsp;&nbsp;Italy</p>
-
-        <p className="text-xl font-semibold mb-6 primary-color">
-          Venue:&nbsp;&nbsp;The Nicolaus Hotel, Bari
-        </p>
-      </div>
-
-      {/* Sponsors Marquee */}
-      <div className="absolute bottom-0 left-0 right-0 z-10 bg-white/10 backdrop-blur-md border-t border-white/20 py-4 pb-10 overflow-hidden">
-        <p className="text-center text-xs uppercase tracking-[0.3em] font-semibold mb-3 text-white/85 pb-2">
-          Sponsors
-        </p>
-
-        <div className="sponsor-marquee">
-          <div className="sponsor-marquee-inner">
-            {repeatedSponsors.map((sponsor, index) => (
-              <div
-                key={`${sponsor.name}-${index}`}
-                className="sponsor-marquee-card"
-              >
-                <img
-                  src={sponsor.logo}
-                  alt={sponsor.name}
-                  className="sponsor-marquee-logo"
-                />
-              </div>
-            ))}
+    <div className="iswc-marquee">
+      <p className="iswc-marquee__label">Sponsors</p>
+      <div className="iswc-marquee__track">
+        {track.map((sponsor, index) => (
+          <div className="iswc-marquee__item" key={`${sponsor.name}-${index}`}>
+            <img
+              src={sponsor.logo}
+              alt={sponsor.name}
+              loading="lazy"
+              // The first copy carries the accessible name; the duplicate is
+              // decorative, so screen readers don't announce every logo twice.
+              aria-hidden={index >= sponsors.length}
+            />
           </div>
-        </div>
+        ))}
       </div>
     </div>
   );
 };
+
+export const Hero = () => (
+  <section className="iswc-hero">
+    <div className="iswc-hero__media">
+      <img src={bgImage} alt="" fetchpriority="high" />
+    </div>
+
+    <div className="iswc-hero__content">
+      <h1 className="iswc-hero__title">{CONFERENCE.title}</h1>
+      <p className="iswc-hero__subtitle">{CONFERENCE.subtitle}</p>
+      <p className="iswc-hero__meta">{CONFERENCE.dates}</p>
+      <p className="iswc-hero__meta">{CONFERENCE.city}</p>
+      <p className="iswc-hero__meta">Venue: {CONFERENCE.venue}</p>
+    </div>
+
+    <SponsorMarquee sponsors={allSponsors} />
+  </section>
+);
+
+export default Hero;

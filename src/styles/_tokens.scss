@@ -1,0 +1,58 @@
+// =============================================================================
+// ISWC 2026 — Design tokens
+// -----------------------------------------------------------------------------
+// Single source of truth for colour, type scale and spacing.
+// These values feed Bootstrap's variables in _theme.scss, and are also exported
+// as CSS custom properties so plain CSS and inline styles can use them.
+// Keep this file in sync with src/theme.js (the JS mirror of these tokens).
+// =============================================================================
+
+// -- Brand colours (unchanged from the original site) -------------------------
+$iswc-primary: #d97262; // terracotta — headings, accents, links
+$iswc-secondary: #023558; // deep navy — nav, section titles
+$iswc-accent: #b15143; // darker terracotta — hover states
+$iswc-ink: #333333; // body copy
+$iswc-logo-black: #242c37;
+$iswc-muted: #838383;
+$iswc-surface: #ffffff;
+$iswc-surface-alt: #f8f8f8;
+
+// Body links render in a brighter orange than $iswc-primary on the current
+// site. Kept as its own token so the two can be unified later without hunting
+// through components.
+$iswc-link: #e94607;
+$iswc-link-hover: #b83705;
+
+// -- Timeline category colours ------------------------------------------------
+$iswc-event: #ce4646;
+$iswc-submission: #3d8cd1;
+$iswc-notification: #fb8c00;
+$iswc-cameraready: #922be5;
+
+// -- Typography ---------------------------------------------------------------
+$iswc-font-sans: "Montserrat", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+// -- Layout -------------------------------------------------------------------
+$iswc-navbar-height: 4.5rem;
+$iswc-content-max: 64rem; // reading width for content pages
+
+:root {
+  --iswc-primary: #{$iswc-primary};
+  --iswc-secondary: #{$iswc-secondary};
+  --iswc-accent: #{$iswc-accent};
+  --iswc-ink: #{$iswc-ink};
+  --iswc-logo-black: #{$iswc-logo-black};
+  --iswc-muted: #{$iswc-muted};
+  --iswc-surface: #{$iswc-surface};
+  --iswc-surface-alt: #{$iswc-surface-alt};
+  --iswc-link: #{$iswc-link};
+  --iswc-link-hover: #{$iswc-link-hover};
+
+  --iswc-event: #{$iswc-event};
+  --iswc-submission: #{$iswc-submission};
+  --iswc-notification: #{$iswc-notification};
+  --iswc-cameraready: #{$iswc-cameraready};
+
+  --iswc-navbar-height: #{$iswc-navbar-height};
+  --iswc-content-max: #{$iswc-content-max};
+}

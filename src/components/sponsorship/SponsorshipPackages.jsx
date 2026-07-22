@@ -24,7 +24,7 @@ export const SponsorshipPackages = () => {
 
             <div className="w-full overflow-x-auto">
                 
-    <center>
+    <div className="text-center">
                 <table className="custom-table">
                     <thead style={{ backgroundColor: theme.colors.logo_black }}>
                         <tr>
@@ -151,7 +151,7 @@ export const SponsorshipPackages = () => {
 
                     </tbody>
                 </table>
-                </center>
+                </div>
             </div>
 
             <UnderlineHeader>À la carte Sponsorship Opportunities</UnderlineHeader>

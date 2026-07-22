@@ -1,0 +1,76 @@
+// =============================================================================
+// Bootstrap variable overrides
+// -----------------------------------------------------------------------------
+// Maps the ISWC design tokens onto Bootstrap's own variables so that stock
+// Bootstrap components (buttons, badges, tables, navbar) come out on-brand
+// without per-component overrides.
+// =============================================================================
+
+@use "sass:color";
+@use "tokens" as *;
+
+// -- Colour system ------------------------------------------------------------
+$primary: $iswc-primary;
+$secondary: $iswc-secondary;
+$body-color: $iswc-ink;
+$body-bg: $iswc-surface;
+
+$theme-colors: (
+  "primary": $iswc-primary,
+  "secondary": $iswc-secondary,
+  "accent": $iswc-accent,
+  "success": #2e7d5b,
+  "info": $iswc-submission,
+  "warning": $iswc-notification,
+  "danger": $iswc-event,
+  "light": $iswc-surface-alt,
+  "dark": $iswc-logo-black,
+);
+
+// -- Typography ---------------------------------------------------------------
+$font-family-sans-serif: $iswc-font-sans;
+$font-size-base: 1.125rem; // 18px — matches the original body size
+$line-height-base: 1.75;
+$headings-font-weight: 700;
+$headings-color: $iswc-secondary;
+$headings-margin-bottom: 0.75rem;
+
+$h1-font-size: 2.5rem;
+$h2-font-size: 1.75rem;
+$h3-font-size: 1.375rem;
+$h4-font-size: 1.25rem;
+$h5-font-size: 1.125rem;
+$h6-font-size: 1rem;
+
+// -- Links --------------------------------------------------------------------
+$link-color: $iswc-link;
+$link-hover-color: $iswc-link-hover;
+$link-decoration: none;
+$link-hover-decoration: underline;
+
+// -- Components ---------------------------------------------------------------
+$border-radius: 0.5rem;
+$border-radius-sm: 0.35rem;
+$border-radius-lg: 0.85rem;
+$border-radius-xl: 1rem;
+
+$card-border-color: rgba(0, 0, 0, 0.12);
+$card-cap-bg: $iswc-surface-alt;
+
+$table-cell-padding-y: 0.9rem;
+$table-cell-padding-x: 1rem;
+$table-border-color: rgba(0, 0, 0, 0.15);
+
+$badge-font-weight: 600;
+$badge-padding-y: 0.3em;
+$badge-padding-x: 0.65em;
+
+$navbar-padding-y: 0.5rem;
+$dropdown-link-hover-bg: rgba($iswc-primary, 0.12);
+$dropdown-link-active-bg: rgba($iswc-primary, 0.18);
+$dropdown-link-active-color: $iswc-secondary;
+$dropdown-border-color: rgba(0, 0, 0, 0.1);
+$dropdown-padding-y: 0.35rem;
+
+$focus-ring-color: rgba($iswc-primary, 0.4);
+$focus-ring-width: 0.2rem;

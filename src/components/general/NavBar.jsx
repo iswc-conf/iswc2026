@@ -1,296 +1,116 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { Link, NavLink, useLocation } from "react-router-dom";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
+
 import logo from "../../assets/logos/logo.png";
-import { Link, useLocation } from "react-router-dom";
-import { theme } from "../../theme";
+import navigation from "../../data/navigation";
 
-export const NavBar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState({});
-  const location = useLocation();
+const isExternal = (to) => typeof to === "string" && to.startsWith("http");
 
-  useEffect(() => {
-    setIsOpen(false);
-  }, [location]);
+/** One dropdown entry: group header, external link, or internal route. */
+const MenuItem = ({ item, onNavigate }) => {
+  if (item.type === "header") {
+    return <NavDropdown.Header>{item.label}</NavDropdown.Header>;
+  }
 
-  useEffect(() => {
-    const handleResize = () => {
-      const mobile = window.innerWidth <= 1024; // use lg breakpoint
-      setIsMobile(mobile);
-      if (!mobile) setIsOpen(false);
-    };
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const content = (
+    <>
+      <span>{item.label}</span>
+      {item.badge && <span className="badge text-bg-primary">{item.badge}</span>}
+    </>
+  );
 
-  const handleMouseEnter = (key) => {
-    if (isMobile) return;
-    setDropdownOpen({ [key]: true });
-  };
-
-  const handleMouseLeave = () => {
-    if (isMobile) return;
-    setDropdownOpen({});
-  };
-
-  const closeDropdown = () => setDropdownOpen({});
-
-  const menuItems = [
-    { label: "About", to: "/" },
-    { label: "Important Dates", to: "/importantdates" },
-    {
-      label: "Calls",
-      dropdown: [
-        { type: "header", label: "Available" },
-        { label: "Research", to: "/calls/research" },
-        { label: "Research - ESWC 2026 resubmissions", to: "/calls/eswcresubmission", badge:"NEW"},
-        { label: "Resource", to: "/calls/resource" },
-        { label: "In Use", to: "/calls/in-use" },
-        { label: "Doctoral Consortium", to: "/calls/doctoral" },
-        { label: "Posters and Demos", to: "/calls/posters" },
-        { label: "Workshops", to: "/calls/workshops" },
-        { label: "Tutorials", to: "/calls/tutorials" },
-        { label: "Industry Track", to: "/calls/industry" },
-        { label: "SWSA Distinguished Dissertation Award", to: "/calls/swsa" },
-        
-             { label: "Dagstuhl Workshops", to: "/calls/dagstuhl" },
-             
- 
-        
-        { label: "Journal track", to: "/calls/journaltrack" },
-        { label: "Visionary Ideas", to: "/calls/visionary" },
-        //{ label: "Challenges", to: "/calls/challenges" },
-        
-        
-        
-   
-        
-      ],
-    },
-   
-    {
-      label: "Program",
-      dropdown: [
-        { type: "header", label: "Available" },
-        { label: "Workshops", to: "/program/workshops" },
-          { label: "Keynote Speakers", to: "/program/keynotespeakers" },
-        { label: "Accepted Papers", to: "/program/acceptedpapers" },
-         { label: "Tutorials", to: "/program/tutorials" },
-         { type: "header", label: "To Be Announced" },
-        { label: "Schedule", to: "/program/schedule" },
-       
-      
-        { label: "Dagstuhl Workshops", to: "/program/dagstuhl" },
-       
-        //{ label: "Challenges", to: "/program/challenges" },
-        { label: "Panel", to: "/program/panel" },
-        { label: "Awards", to: "/program/awards" },
-      ],
-    },
-    {
-      label: "Guidelines",
-      dropdown: [
-         { type: "header", label: "Available" },
-        { label: "HTML Submission Guide", to: "/guidelines/html-submission" },
-        { label: "Prior Publications and Simultaneous Submissions", to: "/guidelines/prior-publications" },
-        { label: "Review Guidelines", to: "/guidelines/review" },
-        { label: "Supplemental Materials", to: "/guidelines/supplemental" },
-        { label: "Resources Availability", to: "/guidelines/resources" },
-        { label: "ORKG Submission Workflow", to: "/guidelines/okbcworkflow" },
-        { label: "Policy on the use of Generative AI", to: "/guidelines/generative-ai-policy" },
-
-      ],
-    },
-     { label: "SWSA Early Career Award", to: "https://swsa.semanticweb.org/content/swsa-early-career-award" },
-    {
-      label: "Sponsorship",
-      dropdown: [
-        { type: "header", label: "Available" },
-        { label: "Why Sponsor?", to: "/sponsorship/whysponsor" },
-        { label: "Sponsorship Packages", to: "/sponsorship/sponsorshippackages" },
-        { label: "Contacts", to: "/sponsorship/contacts" },
-        { label: "Sponsors", to: "/sponsorship/sponsors"}
-      ],
-    },
-    {
-      label: "Attending",
-      dropdown: [
-{ type: "header", label: "Available" },
- { label: "Registration", to: "/attending/registration" },
-        { label: "Code of Conduct", to: "/attending/codeofconduct" },
-       
-         { label: "Venue and Accommodation", to: "/attending/venueandaccomodation" },
-          { label: "VISA Information", to: "/attending/visa" },
-           { label: "Student Grants", to: "/attending/studentgrants" },
-        // { type: "header", label: "To Be Announced" },
-      
-       ,
-        
-        //{ label: "Childcare", to: "/attending/childcare" },
-       
-      ],
-    },
-    /*
-    {
-      
-      label: "Blogs",
-      dropdown: [
-        { label: "ISWC 2025 Host", to: "/blogs/host" },
-        { label: "ISWC 2025 Nature Navigator", to: "/blogs/naturenavigator" },
-        { label: "ISWC Community", to: "/blogs/community" },
-        { label: "Presenting at ISWC", to: "/blogs/presentingatiswc" },
-      ],
-    },
-    */
-    {
-      label: "Organization",
-      dropdown: [
-        { type: "header", label: "Available" },
-        { label: "Organizing Committee", to: "organizing_committee" },
-         { label: "Program Committee", to: "/organization/program_committee" },
-       
-       
-      ],
-    },
-  ];
-
-
+  if (isExternal(item.to)) {
+    return (
+      <NavDropdown.Item
+        href={item.to}
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={onNavigate}
+      >
+        {content}
+      </NavDropdown.Item>
+    );
+  }
 
   return (
-    <nav 
-      className="absolute top-0 left-0 w-full bg-[#FEFFFE] text-[#000000] shadow-md z-50"
-      onMouseLeave={handleMouseLeave}
-    >
-      <div className="flex items-center justify-between flex-wrap p-2 lg:mr-4">
-        <Link to="/">
-          <img src={logo} className="w-[100px] mr-4 mb-2" alt="Logo" />
-        </Link>
-
-        {/* Mobile Hamburger */}
-        <div className="lg:hidden">
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="flex items-center px-3 py-2 rounded text-black-500 hover:text-black-400"
-          >
-            <svg
-              className={`h-4 w-4 fill-current ${isOpen ? "hidden" : "block"}`}
-              viewBox="0 0 20 20"
-            >
-              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-            </svg>
-            <svg
-              className={`h-4 w-4 fill-current ${isOpen ? "block" : "hidden"}`}
-              viewBox="0 0 20 20"
-            >
-              <path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z" />
-            </svg>
-          </button>
-        </div>
-
-        {/* Menu Items */}
-        <div className={`w-full lg:flex lg:items-center lg:w-auto ${isOpen ? "block" : "hidden"}`}>
-          <div
-            className={`${
-              isMobile
-                ? "flex flex-col space-y-2"
-                : "flex flex-row items-center space-x-4 text-md font-medium"
-            }`}
-          >
-            {menuItems.map((item) =>
-              !item.dropdown ? (
-                <Link
-                  key={item.label}
-                  to={item.to}
-                  style={{color:theme.colors.secondary}}
-                  className="block text-[#33358c] hover:text-[#000000] relative group px-2 py-1 font-bold"
-                >
-                  {item.label}
-                 
-                </Link>
-              ) : (
-                <div
-                  key={item.label}
-                  className="relative group"
-                  
-                  onMouseEnter={() => handleMouseEnter(item.label)}
-                >
-                  <span style={{color:theme.colors.secondary}} className="block cursor-pointer text-[#e94607] px-2 py-1">
-                    {item.label}
-                  </span>
-
-                  {/* Dropdown */}
-                  {isMobile ? (
-                    <div className="flex flex-col bg-gray-50 rounded-md ml-4 mb-2">
-                      {item.dropdown.map((sub) =>
-  sub.type === "header" ? (
-    <div
-      key={sub.label}
-      className="px-4 py-2 text-xs font-semibold uppercase tracking-wide text-gray-500 bg-gray-100"
-    >
-      {sub.label}
-    </div>
-  ) : (
-    <Link
-      key={sub.label}
-      to={sub.to}
-      className="block px-4 py-2 text-[#000000] hover:bg-[#c9c9c7]"
-      onClick={closeDropdown}
-    >
-      <div className="flex items-center justify-between">
-  <span>{sub.label}</span>
-
-  {sub.badge && (
-    <span className="ml-2 px-2 py-0.5 text-xs font-semibold text-white rounded-full" style={{backgroundColor: theme.colors.primary}}>
-      {sub.badge}
-    </span>
-  )}
-</div>
-    </Link>
-  )
-)}
-                    </div>
-                  ) : (
-                    dropdownOpen[item.label] && (
-                      <div className="absolute left-0 top-full mt-2 bg-white shadow-md rounded-md z-50">
-                        {item.dropdown.map((sub) =>
-  sub.type === "header" ? (
-    <div
-      key={sub.label}
-      className="px-4 py-2 text-xs font-semibold uppercase tracking-wide text-gray-500 bg-gray-100"
-    >
-      <span>{sub.label}</span>
-
-
-    </div>
-  ) : (
-    <Link
-      key={sub.label}
-      to={sub.to}
-      className="block px-4 py-2 text-[#000000] hover:bg-[#c9c9c7]"
-      onClick={closeDropdown}
-    >
-     <div className="flex items-center justify-between">
-  <span>{sub.label}</span>
-
-  {sub.badge && (
-    <span className="ml-2 px-2 py-0.5 text-xs font-semibold text-white rounded-full" style={{backgroundColor: theme.colors.primary}}>
-      {sub.badge}
-    </span>
-  )}
-</div>
-    </Link>
-  )
-)}
-                      </div>
-                    )
-                  )}
-                </div>
-              )
-            )}
-          </div>
-        </div>
-      </div>
-    </nav>
+    <NavDropdown.Item as={NavLink} to={item.to} onClick={onNavigate}>
+      {content}
+    </NavDropdown.Item>
   );
 };
+
+export const NavBar = () => {
+  const [expanded, setExpanded] = useState(false);
+  const location = useLocation();
+
+  // Collapse the mobile menu whenever the route changes.
+  useEffect(() => {
+    setExpanded(false);
+  }, [location]);
+
+  const closeMenu = () => setExpanded(false);
+
+  return (
+    <Navbar
+      expand="lg"
+      sticky="top"
+      expanded={expanded}
+      onToggle={setExpanded}
+      className="iswc-navbar"
+    >
+      <Container fluid="xl">
+        <Navbar.Brand as={Link} to="/" onClick={closeMenu}>
+          <img src={logo} alt="ISWC 2026 home" />
+        </Navbar.Brand>
+
+        <Navbar.Toggle aria-controls="iswc-main-nav" aria-label="Toggle navigation" />
+
+        <Navbar.Collapse id="iswc-main-nav">
+          <Nav as="ul" className="ms-auto align-items-lg-center">
+            {navigation.map((entry) =>
+              entry.items ? (
+                <NavDropdown
+                  as="li"
+                  key={entry.label}
+                  title={entry.label}
+                  id={`nav-${entry.label.toLowerCase().replace(/\s+/g, "-")}`}
+                >
+                  {entry.items.map((item) => (
+                    <MenuItem
+                      key={item.label}
+                      item={item}
+                      onNavigate={closeMenu}
+                    />
+                  ))}
+                </NavDropdown>
+              ) : (
+                <Nav.Item as="li" key={entry.label}>
+                  {isExternal(entry.to) ? (
+                    <Nav.Link
+                      href={entry.to}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={closeMenu}
+                    >
+                      {entry.label}
+                    </Nav.Link>
+                  ) : (
+                    <Nav.Link as={NavLink} to={entry.to} end onClick={closeMenu}>
+                      {entry.label}
+                    </Nav.Link>
+                  )}
+                </Nav.Item>
+              )
+            )}
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  );
+};
+
+export default NavBar;

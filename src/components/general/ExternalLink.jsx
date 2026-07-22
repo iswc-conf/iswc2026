@@ -1,22 +1,18 @@
 import React from "react";
-import { theme } from "../../theme.js"
 
-export const ExternalLink = ({ href, children }) => {
-  return (
-    <>
-    &nbsp;
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="underline  z-10 relative font-bold"
-      style={{color: theme.colors.secondary}}
-    >
+/**
+ * Link to another site. Always opens in a new tab with the rel attributes
+ * required to avoid leaking the opener reference.
+ */
+export const ExternalLink = ({ href, children, className = "" }) => (
+  <a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    className={`iswc-external-link ${className}`.trim()}
+  >
     {children}
-    </a>
-    &nbsp;
-    </>
-  );
-};
+  </a>
+);
 
 export default ExternalLink;

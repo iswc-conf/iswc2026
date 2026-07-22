@@ -1,14 +1,11 @@
 import React from "react";
-import { theme } from "../../theme.js"
 
-export const CircleList = ({children}) => {
-    return (
-        <p>
-        <ul className="ml-8 list-disc">
-        {children}
-        </ul>  
-        </p>
-    );
-}
+/**
+ * Bulleted list. Styling now comes from the global <ul> rules, so this is a
+ * thin semantic wrapper.
+ */
+export const CircleList = ({ children, className = "" }) => (
+  <ul className={className}>{children}</ul>
+);
 
 export default CircleList;

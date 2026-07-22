@@ -1,14 +1,21 @@
-/node_modules/*
-/node_modules
-/node_modules/.cache
-package-lock.json
-.DS_Store
-package-lock.json
-/build/*
-/build
-*.pack
+node_modules/
+build/
+dist/
 
+# Smoke-test output
+node_modules/.smoke/
+
+.DS_Store
+*.pack
+**/*Zone.Identifier
+
+.env
+.env.local
+*.log
+
+# Working files that shouldn't ship with the site
 /src/components/program/*.xlsx
 /src/components/program/*.py
 
-**/*Zone.Identifier
+# package-lock.json is intentionally committed: CI runs `npm ci`, which needs
+# it, and it keeps everyone's builds reproducible.

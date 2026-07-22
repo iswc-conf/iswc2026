@@ -1,12 +1,10 @@
 import React from "react";
+import Page from "./Page";
 
-const BaseContainer = ({children}) => {
-  return (
-    <>
-    <div className="mt-[150px] px-4 pt-2 bg-white flex items-center justify-center"></div>
-    <div className="container mx-auto px-4 lg:px-8 lg:pb-12 mt-12 max-w-5xl mx-auto px-4">{children}</div>
-    </>
-  );
-};
+/**
+ * Legacy alias for <Page>. Kept so existing pages keep working while they are
+ * migrated; prefer importing Page directly in new code.
+ */
+export const BaseContainer = ({ children, ...rest }) => <Page {...rest}>{children}</Page>;
 
 export default BaseContainer;

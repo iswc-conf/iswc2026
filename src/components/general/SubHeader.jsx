@@ -1,15 +1,8 @@
 import React from "react";
-import { theme } from "../../theme.js"
 
-export const SubHeader = ({children}) => {
-    return (
-        <>
-        <br></br>
-         <h2 style={{ color: theme.colors.primary}}  className="text-xl font-semibold mt-4 mb-1">{children}</h2>
-         <br></br>
-        </>
-    
-    );
-}
+/** Third-level heading inside a section. */
+export const SubHeader = ({ children, className = "" }) => (
+  <h3 className={`iswc-subheading ${className}`.trim()}>{children}</h3>
+);
 
 export default SubHeader;

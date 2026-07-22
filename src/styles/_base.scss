@@ -1,0 +1,129 @@
+// =============================================================================
+// Base element styling
+// -----------------------------------------------------------------------------
+// Replaces the scattered per-page CSS files. Content pages write plain
+// semantic HTML (<p>, <ul>, <li>, <a>) and get consistent typography for free.
+// =============================================================================
+
+@use "tokens" as *;
+
+html {
+  scroll-behavior: smooth;
+  // Stop in-page anchors from hiding underneath the fixed navbar.
+  scroll-padding-top: calc(var(--iswc-navbar-height) + 1rem);
+}
+
+body {
+  font-family: $iswc-font-sans;
+  color: $iswc-ink;
+  background-color: $iswc-surface;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+// -- Headings -----------------------------------------------------------------
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $iswc-font-sans;
+  letter-spacing: 0.01em;
+  text-wrap: balance;
+}
+
+// -- Body copy ----------------------------------------------------------------
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+// -- Lists --------------------------------------------------------------------
+// The original site leaned on Tailwind's `list-disc list-inside` everywhere.
+// Semantic lists now carry that styling by default.
+ul,
+ol {
+  margin-bottom: 1rem;
+  padding-left: 1.75rem;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+li {
+  margin-bottom: 0.35rem;
+
+  &::marker {
+    color: $iswc-primary;
+  }
+}
+
+// Nested lists step down the marker style, as before.
+ul ul {
+  list-style-type: circle;
+  margin-top: 0.35rem;
+}
+
+// -- Links --------------------------------------------------------------------
+a {
+  color: $iswc-link;
+  text-decoration: none;
+  transition: color 0.15s ease-in-out;
+
+  &:hover,
+  &:focus-visible {
+    color: $iswc-link-hover;
+    text-decoration: underline;
+  }
+}
+
+// -- Media --------------------------------------------------------------------
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+// -- Tables -------------------------------------------------------------------
+table {
+  border-collapse: collapse;
+}
+
+// -- Accessibility ------------------------------------------------------------
+:focus-visible {
+  outline: 3px solid rgba($iswc-primary, 0.55);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+// -- Utility used by skip links ----------------------------------------------
+.visually-hidden-focusable:focus {
+  position: fixed;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 2000;
+  padding: 0.75rem 1.25rem;
+  background: $iswc-surface;
+  border: 2px solid $iswc-primary;
+  border-radius: 0.5rem;
+}
