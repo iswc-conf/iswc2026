@@ -1,0 +1,1 @@
+import{j as e}from"./index-Bx25Xfwq.js";const a=()=>e.jsxs("div",{className:"iswc-notice",children:[e.jsx("p",{className:"fw-semibold fs-5 mb-2",children:"We’ll be updating the website soon."}),e.jsx("p",{className:"text-secondary mb-0",children:"Please check back later for the latest information."})]});export{a as D};
