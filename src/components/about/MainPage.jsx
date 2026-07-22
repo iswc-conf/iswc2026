@@ -7,7 +7,6 @@ const MainPage = () => (
   <main id="main-content">
     <Hero />
     <About />
-    <img className="w-100" src={banner} alt="ISWC 2026 — Bari, Italy" loading="lazy" />
   </main>
 );
 
