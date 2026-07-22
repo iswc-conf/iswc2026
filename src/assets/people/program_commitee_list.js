@@ -115,6 +115,184 @@ const program_commitee_list = {
     "institution": "Altair",
     "country": "United States"
   }
+],
+
+"Doctoral Consortium Program Committee" : [
+{
+    "name": "Maribel Acosta",
+    "institution": "TU Munich",
+    "country": "Germany"
+  },
+  {
+    "name": "Harith Alani",
+    "institution": "The Open University",
+    "country": "United Kingdom"
+  },
+  {
+    "name": "Gong Cheng",
+    "institution": "Nanjing University",
+    "country": "China"
+  },
+  {
+    "name": "Oscar Corcho",
+    "institution": "Universidad Politécnica de Madrid",
+    "country": "Spain"
+  },
+  {
+    "name": "Claudia d'Amato",
+    "institution": "University of Bari",
+    "country": "Italy"
+  },
+  {
+    "name": "Gianluca Demartini",
+    "institution": "The University of Queensland",
+    "country": "Australia"
+  },
+  {
+    "name": "John Domingue",
+    "institution": "The Open University",
+    "country": "United Kingdom"
+  },
+  {
+    "name": "Miriam Fernandez",
+    "institution": "Knowledge Media Institute, Open University",
+    "country": "United Kingdom"
+  },
+  {
+    "name": "Sebastián Ferrada",
+    "institution": "Universidad de Chile",
+    "country": "Chile"
+  },
+  {
+    "name": "Daniel Garijo",
+    "institution": "Universidad Politécnica de Madrid",
+    "country": "Spain"
+  },
+  {
+    "name": "Paul Groth",
+    "institution": "University of Amsterdam",
+    "country": "Netherlands"
+  },
+  {
+    "name": "Claudio Gutierrez",
+    "institution": "Universidad de Chile",
+    "country": "Chile"
+  },
+  {
+    "name": "Olaf Hartig",
+    "institution": "Linköping University",
+    "country": "Sweden"
+  },
+  {
+    "name": "Jim Hendler",
+    "institution": "Rensselaer Polytechnic Institute",
+    "country": "United States"
+  },
+  {
+    "name": "Wei Hu",
+    "institution": "Nanjing University",
+    "country": "China"
+  },
+  {
+    "name": "Krzysztof Janowicz",
+    "institution": "University of Vienna",
+    "country": "Austria"
+  },
+  {
+    "name": "Ernesto Jiménez-Ruiz",
+    "institution": "City St George's, University of London",
+    "country": "United Kingdom"
+  },
+  {
+    "name": "Lalana Kagal",
+    "institution": "Massachusetts Institute of Technology",
+    "country": "United States"
+  },
+  {
+    "name": "Sabrina Kirrane",
+    "institution": "Vienna University of Economics and Business",
+    "country": "Austria"
+  },
+  {
+    "name": "Raghava Mutharaju",
+    "institution": "IIT Palakkad",
+    "country": "India"
+  },
+  {
+    "name": "Terry Payne",
+    "institution": "University of Liverpool",
+    "country": "United Kingdom"
+  },
+  {
+    "name": "Axel Polleres",
+    "institution": "Vienna University of Economics and Business - WU Wien",
+    "country": "Austria"
+  },
+  {
+    "name": "Valentina Presutti",
+    "institution": "University of Bologna",
+    "country": "Italy"
+  },
+  {
+    "name": "Simon Razniewski",
+    "institution": "TU Dresden & ScaDS.AI",
+    "country": "Germany"
+  },
+  {
+    "name": "Anisa Rula",
+    "institution": "University of Brescia",
+    "country": "Italy"
+  },
+  {
+    "name": "Oshani Seneviratne",
+    "institution": "Rensselaer Polytechnic Institute",
+    "country": "United States"
+  },
+  {
+    "name": "Hala Skaf-Molli",
+    "institution": "University of Nantes - LS2N",
+    "country": "France"
+  },
+  {
+    "name": "Steffen Staab",
+    "institution": "UNI Stuttgart",
+    "country": "Germany"
+  },
+  {
+    "name": "Hideaki Takeda",
+    "institution": "National Institute of Informatics",
+    "country": "Japan"
+  },
+  {
+    "name": "Kerry Taylor",
+    "institution": "Australian National University and University of Surrey",
+    "country": "Australia"
+  },
+  {
+    "name": "Riccardo Tommasini",
+    "institution": "INSA Lyon - LIRIS",
+    "country": "France"
+  },
+  {
+    "name": "Maria-Esther Vidal",
+    "institution": "Leibniz University Hannover",
+    "country": "Germany"
+  },
+  {
+    "name": "Domagoj Vrgoc",
+    "institution": "Pontificia Universidad Católica de Chile",
+    "country": "Chile"
+  },
+  {
+    "name": "Xiaowang Zhang",
+    "institution": "Tianjin University",
+    "country": "China"
+  },
+  {
+    "name": "Ningyu Zhang",
+    "institution": "Zhejiang University",
+    "country": "China"
+  }
 ]
     /*
     "Research Track Senior Program Committee": [

@@ -76,12 +76,13 @@ export const NavBar = () => {
         { label: "Workshops", to: "/program/workshops" },
           { label: "Keynote Speakers", to: "/program/keynotespeakers" },
         { label: "Accepted Papers", to: "/program/acceptedpapers" },
+         { label: "Tutorials", to: "/program/tutorials" },
          { type: "header", label: "To Be Announced" },
         { label: "Schedule", to: "/program/schedule" },
        
       
         { label: "Dagstuhl Workshops", to: "/program/dagstuhl" },
-        { label: "Tutorials", to: "/program/tutorials" },
+       
         //{ label: "Challenges", to: "/program/challenges" },
         { label: "Panel", to: "/program/panel" },
         { label: "Awards", to: "/program/awards" },

@@ -1,6 +1,7 @@
 import React from 'react'
 import AvatarSlider from './SliderSponsor'
 import Header from '../general/Header'
+import UnderlineHeader from '../general/UnderlineHeader'
 
 
 function SponsorPC({word, users, hideImage = false}) {
@@ -8,6 +9,7 @@ function SponsorPC({word, users, hideImage = false}) {
     <>
       <section className="lg:px-16 px-6 py-8">
        <Header>{word} </Header>
+       <br></br>
         
         <div className="lg:mx-24 mx-6 mt-2">
           <AvatarSlider users={users} hideImage={hideImage}/>
@@ -18,4 +20,4 @@ function SponsorPC({word, users, hideImage = false}) {
   )
 }
 
-export default Sponsor;
+export default SponsorPC;

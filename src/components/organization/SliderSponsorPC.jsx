@@ -1,6 +1,7 @@
 import React from 'react';
 import AvatarCard from './SponsorCard';
 import { theme } from '../../theme';
+import UnderlineHeader from '../general/UnderlineHeader';
 
 function SliderSponsorPC({ users, hideImage = false }) {
   return (
@@ -17,9 +18,7 @@ function SliderSponsorPC({ users, hideImage = false }) {
 
           return (
             <div className="mb-8" key={role}>
-              <p  style={{ color: theme.colors.accent }} className="text-2xl font-bold mb-4 decoration-red-500">
-                {role}
-              </p>
+              <UnderlineHeader>{role}</UnderlineHeader>
               <div
                 className={`flex ${justifyContent} gap-4 flex-wrap`}
               >
