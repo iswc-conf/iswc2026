@@ -36,8 +36,11 @@ jobs:
       - name: Build the site
         run: npm run build
 
+      # The command contains ": " inside the quoted string, which YAML would
+      # otherwise read as a mapping separator. The block scalar avoids that.
       - name: Add Google verification file
-        run: echo "google-site-verification: google2c8028c0c6e3481b.html" > ./build/google2c8028c0c6e3481b.html
+        run: |
+          echo "google-site-verification: google2c8028c0c6e3481b.html" > ./build/google2c8028c0c6e3481b.html
 
       - name: Add CNAME file for custom domain
         run: echo "iswc2026.semanticweb.org" > ./build/CNAME
