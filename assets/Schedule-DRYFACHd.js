@@ -1,1 +1,0 @@
-import{j as e,H as r,S as s}from"./index-Cr8kX3Iy.js";import{B as o}from"./BaseContainer-CwYWC4W4.js";import{D as a}from"./declareSoon-Bw0OjmKR.js";import"./Page-BL1HF-VS.js";const m=()=>e.jsx(o,{children:e.jsxs("div",{children:[e.jsx(r,{children:"Schedule"}),e.jsx(s,{children:"The full programme, day by day"}),e.jsx(a,{})]})});export{m as Schedule};

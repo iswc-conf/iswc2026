@@ -1,0 +1,1 @@
+import{j as e}from"./index-Ca5RH6cZ.js";const t=({children:i,width:s="default",className:a=""})=>e.jsx("main",{id:"main-content",className:`iswc-page ${s==="wide"?"iswc-page--wide":""} ${a}`.trim(),children:e.jsx("div",{className:"iswc-page__inner",children:i})});export{t as P};
