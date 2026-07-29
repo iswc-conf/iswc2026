@@ -53,7 +53,7 @@ const resourceTrack = [
   },
   {
     title: "JediKG: Return of the Schema - Building Complete Datasets for Machine Learning and Reasoning on Knowledge Graphs",
-    authors: "Ivan Diliso, Roberto Barile, Nicola Fanizzi and Claudia D'Amato",
+    authors: "Ivan Diliso, Roberto Barile, Nicola Fanizzi and Claudia d'Amato",
   },
   {
     title: "MedSchema: A Chinese Medical Schema Rule Dataset for Advancing Neuro-Symbolic Reasoning",
