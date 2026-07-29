@@ -26,9 +26,9 @@ const PREVIOUS_PROCEEDINGS = "https://link.springer.com/conference/semweb";
  */
 const TRACKS = [
   { id: "doctoral-consortium", label: "Doctoral Consortium", data: doctoralConsortium, available: true },
-  { id: "research", label: "Research Track", data: researchTrack, available: false },
-  { id: "resource", label: "Resource Track", data: resourceTrack, available: false },
-  { id: "in-use", label: "In Use Track", data: inuseTrack, available: false },
+  { id: "research", label: "Research Track", data: researchTrack, available: true },
+  { id: "resource", label: "Resource Track", data: resourceTrack, available: true },
+  { id: "in-use", label: "In Use Track", data: inuseTrack, available: true },
   { id: "industry", label: "Industry Track", data: industryTrack, available: false },
   { id: "posters", label: "Posters", data: posters, available: false },
   { id: "demos", label: "Demos", data: demos, available: false },
