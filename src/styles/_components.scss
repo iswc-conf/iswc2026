@@ -874,6 +874,80 @@
 }
 
 // -----------------------------------------------------------------------------
+// Accepted papers — track jump index
+// -----------------------------------------------------------------------------
+// Same pattern as the keynote speaker index: pill buttons that scroll to a
+// section rather than anchors, because HashRouter owns the URL hash.
+.iswc-track-index {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-bottom: 3rem;
+}
+
+.iswc-track-index__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.4rem 0.5rem 0.4rem 1rem;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: $iswc-secondary;
+  background: $iswc-surface;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+
+  &:hover,
+  &:focus-visible {
+    color: $iswc-secondary;
+    text-decoration: none;
+    border-color: $iswc-primary;
+    background-color: rgba($iswc-primary, 0.08);
+  }
+}
+
+// Count badge on the right of each pill.
+.iswc-track-index__count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.5rem;
+  height: 1.5rem;
+  padding: 0 0.4rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #fff;
+  background: $iswc-secondary;
+  border-radius: 2rem;
+}
+
+// Tracks not yet announced read as quiet, not as a zero count.
+.iswc-track-index__count--tba {
+  color: $iswc-muted;
+  background: $iswc-surface-alt;
+}
+
+// -----------------------------------------------------------------------------
+// Accepted papers — track section
+// -----------------------------------------------------------------------------
+.iswc-track {
+  // Clears the sticky navbar when scrolled to, matching .iswc-keynote.
+  scroll-margin-top: calc(var(--iswc-navbar-height) + 1.5rem);
+}
+
+.iswc-track__tba {
+  padding: 1.25rem 1.5rem;
+  color: $iswc-muted;
+  background: $iswc-surface-alt;
+  border-radius: 0.5rem;
+}
+
+// -----------------------------------------------------------------------------
 // Keynote speakers
 // -----------------------------------------------------------------------------
 .iswc-keynote-index {
