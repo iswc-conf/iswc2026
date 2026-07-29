@@ -15,6 +15,7 @@ import MainPage from "./components/about/MainPage";
 const ImportantDates = lazy(() => import("./components/important_dates/ImportantDates"));
 
 /* Calls */
+const JobFair = lazy(() => import("./components/calls/JobFair"));
 const Research = lazy(() => import("./components/calls/Research"));
 const ESWCResubmission = lazy(() => import("./components/calls/ESWCResubmission"));
 const Resource = lazy(() => import("./components/calls/Resource"));
@@ -155,6 +156,8 @@ export default function App() {
           <Route path="/calls/dagstuhl" element={<Dagstuhl />} />
           <Route path="/calls/swsa" element={<SwsaDistinguishedDissertationAward />} />
           <Route path="/calls/visionary" element={<Visionary />} />
+           <Route path="/calls/jobfair" element={<JobFair />} />
+
 
           {/* Guidelines */}
           <Route path="/guidelines/html-submission" element={<HTMLSubmissionGuide />} />

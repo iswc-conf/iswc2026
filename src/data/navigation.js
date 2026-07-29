@@ -19,6 +19,11 @@ export const navigation = [
     label: "Calls",
     items: [
       { type: "header", label: "Available" },
+        {
+        label: "Job Fair",
+        to: "/calls/jobfair",
+        badge: "NEW",
+      },
       { label: "Research", to: "/calls/research" },
       {
         label: "Research — ESWC 2026 resubmissions",
