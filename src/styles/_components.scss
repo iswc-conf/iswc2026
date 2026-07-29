@@ -89,24 +89,56 @@
   margin-top: -2.35rem;
 }
 
+// Sub-section heading, one level below .iswc-rule-heading. A short terracotta
+// bar leads the text, giving a clear second tier: ruled terracotta title above,
+// navy sub-heading with an accent tick beneath. The bar stretches to match a
+// heading that wraps to two lines.
 .iswc-subheading {
-  color: $iswc-primary;
-  font-size: 1.25rem;
-  font-weight: 600;
+  display: flex;
+  align-items: stretch;
+  gap: 0.65rem;
+  color: $iswc-secondary;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
   margin-top: 2rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.6rem;
   text-align: left;
+
+  &::before {
+    content: "";
+    flex: 0 0 3px;
+    background: $iswc-primary;
+    border-radius: 3px;
+  }
 }
 
+// Section heading. A full-width hairline carries across the column, with a
+// short terracotta accent sitting on top of it under the start of the text —
+// an editorial treatment that reads as lighter and more considered than the
+// old heavy full-width terracotta rule, while keeping the same brand colour.
 .iswc-rule-heading {
+  position: relative;
   color: $iswc-primary;
   font-size: clamp(1.4rem, 1.1rem + 1vw, 1.75rem);
   font-weight: 700;
+  letter-spacing: -0.01em;
   margin-top: 3rem;
-  margin-bottom: 1.25rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid $iswc-primary;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
   text-align: left;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px; // sits over the hairline, not below it
+    width: 2.75rem;
+    height: 3px;
+    background: $iswc-primary;
+    border-radius: 3px;
+  }
 }
 
 .iswc-accent {
@@ -119,13 +151,37 @@
 // -----------------------------------------------------------------------------
 .iswc-external-link {
   color: $iswc-secondary;
-  font-weight: 700;
+  font-weight: 600;
+  // A lighter, offset underline reads as more refined than a solid one, and
+  // animates to the full terracotta on hover.
   text-decoration: underline;
+  text-decoration-color: rgba($iswc-primary, 0.4);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 0.16em;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
 
   &:hover,
   &:focus-visible {
     color: $iswc-primary;
+    text-decoration-color: $iswc-primary;
   }
+}
+
+// The "opens in a new tab" arrow, added by the ExternalLink component (not by
+// the same-page scroll link, which shares the styling above but not the icon).
+.iswc-external-link__icon {
+  width: 0.72em;
+  height: 0.72em;
+  margin-left: 0.18em;
+  vertical-align: 0.02em;
+  opacity: 0.7;
+  // The arrow never underlines, even though the link text does.
+  text-decoration: none;
+}
+
+a:hover .iswc-external-link__icon,
+a:focus-visible .iswc-external-link__icon {
+  opacity: 1;
 }
 
 .iswc-scroll-link {
