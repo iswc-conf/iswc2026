@@ -71,6 +71,9 @@ const Visa = lazy(() =>
 const StudentGrants = lazy(() =>
   import("./components/attending/StudentGrants").then((m) => ({ default: m.StudentGrants }))
 );
+const Tourism = lazy(() =>
+  import("./components/attending/Tourism").then((m) => ({ default: m.Tourism }))
+);
 
 /* Organization */
 const Committees = lazy(() => import("./components/organization/organizing_committee"));
@@ -187,6 +190,7 @@ export default function App() {
           <Route path="/attending/venueandaccomodation" element={<VenueAndAccomodation />} />
           <Route path="/attending/visa" element={<Visa />} />
           <Route path="/attending/studentgrants" element={<StudentGrants />} />
+          <Route path="/tourism" element={<Tourism />} />
 
           {/* Organization */}
           <Route path="/organizing_committee" element={<Committees />} />

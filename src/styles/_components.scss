@@ -1238,14 +1238,200 @@ a:focus-visible .iswc-external-link__icon {
   min-width: 0;
 }
 
+// Image on the right instead of the left.
+.iswc-media-row--reverse {
+  flex-direction: row-reverse;
+}
+
+// A figure used as the media-row image fills the column and drops its own margin.
+.iswc-media-row__image > .iswc-figure {
+  margin: 0;
+}
+
 @media (max-width: 991.98px) {
-  .iswc-media-row {
+  .iswc-media-row,
+  .iswc-media-row--reverse {
     flex-direction: column;
   }
 
   .iswc-media-row__image {
     width: 100%;
   }
+}
+
+// -----------------------------------------------------------------------------
+// Tourism — lead paragraph, photo slots, destination cards
+// -----------------------------------------------------------------------------
+.iswc-page__lead {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: $iswc-ink;
+  max-width: 52rem;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+  text-wrap: balance;
+}
+
+// A photo, or a labelled placeholder while none is supplied.
+.iswc-photo {
+  overflow: hidden;
+
+  img,
+  .iswc-photo__slot {
+    display: block;
+    width: 100%;
+    border-radius: 0.5rem;
+  }
+
+  img {
+    object-fit: cover;
+  }
+}
+
+.iswc-photo--wide {
+  max-width: 60rem;
+  margin-inline: auto;
+
+  img,
+  .iswc-photo__slot {
+    aspect-ratio: 16 / 7;
+  }
+}
+
+.iswc-photo--tall img,
+.iswc-photo--tall .iswc-photo__slot {
+  aspect-ratio: 3 / 4;
+}
+
+.iswc-photo--row img,
+.iswc-photo--row .iswc-photo__slot {
+  aspect-ratio: 4 / 3;
+}
+
+// The placeholder itself: a soft dashed panel naming the intended subject.
+.iswc-photo__slot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  text-align: center;
+  color: $iswc-muted;
+  font-size: 0.9rem;
+  background: repeating-linear-gradient(
+    45deg,
+    $iswc-surface-alt,
+    $iswc-surface-alt 12px,
+    rgba(0, 0, 0, 0.02) 12px,
+    rgba(0, 0, 0, 0.02) 24px
+  );
+  border: 1px dashed rgba(0, 0, 0, 0.22);
+
+  span {
+    max-width: 22rem;
+  }
+}
+
+// Destination cards (day trips, cathedral towns).
+.iswc-place-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0 2.5rem;
+}
+
+.iswc-place-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background: $iswc-surface;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.iswc-place-card__image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+.iswc-place-card__image--empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  text-align: center;
+  color: $iswc-muted;
+  font-size: 0.9rem;
+  font-weight: 600;
+  background: repeating-linear-gradient(
+    45deg,
+    $iswc-surface-alt,
+    $iswc-surface-alt 12px,
+    rgba(0, 0, 0, 0.02) 12px,
+    rgba(0, 0, 0, 0.02) 24px
+  );
+}
+
+.iswc-place-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.1rem 1.25rem 1.35rem;
+}
+
+.iswc-place-card__name {
+  position: relative;
+  color: $iswc-secondary;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  padding-left: 0.7rem;
+  margin: 0;
+
+  // The terracotta tick used by sub-headings, tying the cards to the site.
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.15em;
+    bottom: 0.15em;
+    width: 3px;
+    background: $iswc-primary;
+    border-radius: 3px;
+  }
+}
+
+.iswc-credits {
+  columns: 2;
+  column-gap: 2rem;
+  font-size: 0.9rem;
+  color: $iswc-muted;
+  max-width: 52rem;
+
+  li {
+    break-inside: avoid;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .iswc-credits {
+    columns: 1;
+  }
+}
+
+.iswc-place-card__text {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: $iswc-ink;
+  margin: 0;
+  text-align: left;
 }
 
 // -----------------------------------------------------------------------------

@@ -112,6 +112,7 @@ export const navigation = [
     ],
   },
 
+
   {
     label: "Organization",
     items: [
@@ -120,6 +121,9 @@ export const navigation = [
       { label: "Program Committee", to: "/organization/program_committee" },
     ],
   },
+
+  { label: "Tourism", to: "/tourism" },
+
 
   // Blogs are kept out of the menu for 2026 but the routes still exist.
   // {
