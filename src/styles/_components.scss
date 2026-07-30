@@ -607,6 +607,17 @@ a:focus-visible .iswc-external-link__icon {
   text-decoration: underline;
 }
 
+// A cancelled entry keeps its row (so its details stay readable) but is struck
+// through and muted, alongside the red "Cancelled" badge.
+.iswc-table__title--cancelled {
+  color: $iswc-muted;
+  text-decoration: line-through;
+}
+
+.iswc-table__toggle:hover .iswc-table__title--cancelled {
+  text-decoration: line-through underline;
+}
+
 .iswc-table__id {
   font-family: ui-monospace, "SFMono-Regular", "Menlo", monospace;
   font-weight: 600;

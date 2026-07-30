@@ -181,12 +181,21 @@ export const DataTable = ({
 
                       <span>
                         {row.id && <span className="iswc-table__id">{row.id}:</span>}
-                        {row.new && (
+                        {row.cancelled && (
+                          <span className="badge text-bg-danger me-2">Cancelled</span>
+                        )}
+                        {row.new && !row.cancelled && (
                           <span className="badge text-bg-secondary me-2">
                             New information
                           </span>
                         )}
-                        <span className="iswc-table__title">{row.title}</span>
+                        <span
+                          className={`iswc-table__title ${
+                            row.cancelled ? "iswc-table__title--cancelled" : ""
+                          }`.trim()}
+                        >
+                          {row.title}
+                        </span>
                       </span>
                     </button>
 

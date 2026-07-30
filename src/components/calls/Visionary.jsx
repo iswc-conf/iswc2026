@@ -8,6 +8,7 @@ import ExternalLInk from "../general/ExternalLink"
 import BaseContainer from "../general/BaseContainer";
 import UnderlineHeader from "../general/UnderlineHeader"
 import ExternalLink from "../general/ExternalLink";
+import Accent from "../general/Accent"
 
 export const Visionary = () => {
 
@@ -75,8 +76,8 @@ export const Visionary = () => {
     <UnderlineHeader>Important Dates (AoE)</UnderlineHeader>
 
     <ul>
-            <li><b>Abstract Submission Deadline:</b> July 25, 2026</li>
-<li><b>Full Paper Submission Deadline:</b> Aug 1, 2026</li>
+            <li><s><b>Abstract Submission Deadline:</b> July 25, 2026</s></li>
+<li><Accent>Extended</Accent> <b>Full Paper Submission Deadline:</b> <s>Aug 1, 2026</s> Aug 3, 2026</li>
 <li><b>Author Notifications:</b> August 26, 2026</li>
 <li><b>Camera-Ready Copy Due:</b> September 1, 2026</li>
 <li><b>Conference Dates:</b> October 25–29, 2026</li>

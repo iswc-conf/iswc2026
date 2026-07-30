@@ -69,7 +69,7 @@ export const importantDates = [
   { date: "2026-07-17", label: "Dagstuhl style workshops website online", kind: "other" },
   { date: "2026-07-21", label: "Tutorial website online", kind: "other" },
   { date: "2026-07-24", label: "Posters and Demos track submission", kind: "submission" },
-  { date: "2026-07-25", label: "Visionary Ideas track abstract submission", kind: "submission" },
+
   { date: "2026-07-27", label: "Revised Doctoral Consortium submission", kind: "submission" },
   {
     date: "2026-07-31",
@@ -78,7 +78,7 @@ export const importantDates = [
   },
 
   {
-    date: "2026-08-01",
+    date: "2026-08-03",
     label: "Visionary Ideas track full paper submission",
     kind: "submission",
   },
