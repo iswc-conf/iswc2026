@@ -118,7 +118,7 @@ export const navigation = [
       { label: "Venue and Accommodation", to: "/attending/venueandaccomodation" },
       { label: "VISA Information", to: "/attending/visa" },
       { label: "Student Grants", to: "/attending/studentgrants" },
-      // { label: "Childcare", to: "/attending/childcare" },
+      { label: "Childcare", to: "/attending/childcare" },
     ],
   },
 
