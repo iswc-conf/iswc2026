@@ -12,7 +12,7 @@ export const StudentGrants = () => {
         <BaseContainer>
                 <Header>Student Grants</Header>
 
-                <p>If you are a student interested in attending ISWC 2026, you may be eligible to apply for travel grants to support the costs of travel and lodging. This year, travel grants are funded by the Semantic Web Science Association (SWSA).
+                <p>If you are a student interested in attending ISWC 2026, you may be eligible to apply for travel grants to support the costs of conference registration, travel, and lodging. This year, travel grants are funded by the Semantic Web Science Association (SWSA).
 </p>
 
 <SubHeader>Funding Disclaimer</SubHeader>
