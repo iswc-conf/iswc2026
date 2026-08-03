@@ -84,6 +84,7 @@ const WhySponsor = lazy(() => import("./components/sponsorship/WhySponsor"));
 const SponsorshipPackages = lazy(() => import("./components/sponsorship/SponsorshipPackages"));
 const Contact = lazy(() => import("./components/sponsorship/Contact"));
 const Sponsors = lazy(() => import("./components/sponsorship/Sponsors"));
+const ImpactAward = lazy(() => import("./components/calls/ImpactAward"));
 
 /**
  * HashRouter keeps the scroll position between routes, which lands you
@@ -144,6 +145,8 @@ export default function App() {
           {/* Basics */}
           <Route path="/" element={<MainPage />} />
           <Route path="/importantdates" element={<ImportantDates />} />
+
+          <Route path="/swsaimpactaward" element={<ImpactAward />} />
 
           {/* Calls */}
           <Route path="/calls/research" element={<Research />} />

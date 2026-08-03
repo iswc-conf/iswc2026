@@ -8,23 +8,22 @@ import Accent from "../general/Accent";
 import VenueImage from "../../assets/promotional/nicolaus.png";
 import {
   SCENES,
-  TOURISM_LINKS,
   cathedrals,
-  commonsImage,
   dayTrips,
   photoCredits,
+  usefulLinks,
 } from "../../data/tourism";
 
 /**
- * A photo, or a labelled placeholder while none is supplied. Pass a Commons
- * scene from SCENES to show a photo.
+ * A photo, or a labelled placeholder while none is supplied. Pass a scene
+ * (`{ src, alt }`) to show a photo; omit it to show the placeholder.
  *
  * @param {'wide'|'tall'|'row'} shape  Aspect ratio of the slot.
  */
-const Photo = ({ scene, alt, caption, width = 1400, shape = "wide" }) => (
+const Photo = ({ scene, alt, caption, shape = "wide" }) => (
   <figure className={`iswc-figure iswc-photo iswc-photo--${shape}`}>
     {scene ? (
-      <img src={commonsImage(scene.file, width)} alt={scene.alt} loading="lazy" />
+      <img src={scene.src} alt={scene.alt} loading="lazy" />
     ) : (
       <div className="iswc-photo__slot" role="img" aria-label={`Photo placeholder: ${alt}`}>
         <span>{alt}</span>
@@ -39,8 +38,8 @@ const PlaceGrid = ({ places }) => (
   <div className="iswc-place-grid">
     {places.map((place) => (
       <article className="iswc-place-card" key={place.name}>
-        {place.image ? (
-          <img className="iswc-place-card__image" src={place.image} alt={place.name} loading="lazy" />
+        {place.src ? (
+          <img className="iswc-place-card__image" src={place.src} alt={place.name} loading="lazy" />
         ) : (
           <div
             className="iswc-place-card__image iswc-place-card__image--empty"
@@ -76,6 +75,16 @@ export const Tourism = () => (
       recalls ancient times.
     </p>
 
+    {/* ------------------------------------------------------ Useful links */}
+    <UnderlineHeader>Useful Links</UnderlineHeader>
+
+    <ul className="iswc-links">
+      {usefulLinks.map((link) => (
+        <li key={link.href}>
+          <ExternalLink href={link.href}>{link.label}</ExternalLink>
+        </li>
+      ))}
+    </ul>
 
     {/* --------------------------------------------------------- The city */}
     <UnderlineHeader>The City of Bari</UnderlineHeader>
@@ -137,9 +146,7 @@ export const Tourism = () => (
 
     <p>
       Visiting Bari means being overwhelmed by its genuine and true essence, made up of
-      good food, sea and historical monuments. More details can be found at{" "}
-      <ExternalLink href={TOURISM_LINKS.tenThings}>Bari Experience</ExternalLink>,
-      offering a detailed view of the city and information on the city tours.
+      good food, sea and historical monuments.
     </p>
 
     {/* ------------------------------------------------------------- Food */}
@@ -154,17 +161,7 @@ export const Tourism = () => (
           Bari is also well known for the wide offer of typical food, currently famous
           worldwide. Some examples: mozzarella, burrata, stracciatella, panzerotti,
           orecchiette pasta with turnip tops, bombette meat, brasciola meat, raw seafood
-          and many others (additional details can be found at{" "}
-          <ExternalLink href={TOURISM_LINKS.whereToEat}>Bari Experience</ExternalLink>,
-          at{" "}
-          <ExternalLink href={TOURISM_LINKS.freeWalkingTour}>
-            Free Walking Tour Bari
-          </ExternalLink>{" "}
-          and the slow active tour reference guide{" "}
-          <ExternalLink href={TOURISM_LINKS.slowActiveTours}>
-            Slow Active Tours
-          </ExternalLink>
-          ).
+          and many others.
         </p>
       </div>
     </section>
@@ -189,7 +186,7 @@ export const Tourism = () => (
     <PlaceGrid places={dayTrips} />
 
     {/* ------------------------------------------------------ Cathedrals */}
-    <UnderlineHeader>Romanesque Cathedrals</UnderlineHeader>
+    <UnderlineHeader>Romanesque Cathedrals and Castles</UnderlineHeader>
 
     <p>
       Romanesque cathedrals worth visiting include Bitonto, Trani, Ruvo di Puglia and
@@ -201,11 +198,7 @@ export const Tourism = () => (
     <p>
       Obviously, those listed are by no means the only ones worth mentioning, however they
       are an excellent starting point to give an idea of how many beautiful places can be
-      visited in the surroundings of Bari and beyond. For an insight it is suggested to
-      have a look at the link{" "}
-      <ExternalLink href={TOURISM_LINKS.nearBari}>Bari Experience</ExternalLink>, while
-      this link offers a brief description of Apulia region from Lonely Planet&rsquo;s{" "}
-      <ExternalLink href={TOURISM_LINKS.lonelyPlanet}>guide to Puglia</ExternalLink>.
+      visited in the surroundings of Bari and beyond.
     </p>
 
     {/* --------------------------------------------------- The region */}
@@ -228,17 +221,15 @@ export const Tourism = () => (
     <UnderlineHeader>Photo Credits</UnderlineHeader>
 
     <p>
-      Photographs on this page are from{" "}
-      <ExternalLink href="https://commons.wikimedia.org/">Wikimedia Commons</ExternalLink>{" "}
-      and are used under their respective free licences. Each link below leads to the
-      source file, where the author and licence are listed.
+      Photographs on this page are used under their respective free licences. Each link
+      below leads to the source, where the author and licence are listed.
     </p>
 
     <ul className="iswc-credits">
       {photoCredits.map((credit) => (
-        <li key={credit.file}>
+        <li key={credit.source}>
           {credit.label}:{" "}
-          <ExternalLink href={credit.source}>Wikimedia Commons</ExternalLink>
+          <ExternalLink href={credit.source}>{credit.provider}</ExternalLink>
         </li>
       ))}
     </ul>

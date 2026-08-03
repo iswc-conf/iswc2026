@@ -84,8 +84,18 @@ export const navigation = [
   },
 
   {
-    label: "SWSA Early Career Award",
-    to: "https://swsa.semanticweb.org/content/swsa-early-career-award",
+    label: "SWSA Awards",
+    items: [
+      {
+            label: "SWSA Early Career Award",
+            to: "https://swsa.semanticweb.org/content/swsa-early-career-award",
+      },
+      {
+            label: "SWSA Impact Award",
+            to: "/swsaimpactaward",
+      }
+    ]
+
   },
 
   {

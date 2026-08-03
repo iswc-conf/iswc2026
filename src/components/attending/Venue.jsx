@@ -187,12 +187,10 @@ export const VenueAndAccomodation = () => (
       </figcaption>
     </figure>
 
-    <SubHeader>Hotels with a conference rate</SubHeader>
+    <SubHeader>Hotels</SubHeader>
 
     <p className="iswc-callout">
-      The rates below apply <b>only</b> when booking through the conference
-      registration system, during or after registering for the conference. Please
-      book in good time.
+      The hotels below have special rates for the conference. They can be applied <b>only</b> when booking through the conference registration system, during or after registering for the conference. Please book in good time
     </p>
 
     <InfoTable

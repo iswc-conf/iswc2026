@@ -233,7 +233,17 @@ a:focus-visible .iswc-external-link__icon {
     justify-content: space-between;
     gap: 0.75rem;
     white-space: normal;
-    padding-block: 0.5rem;
+    line-height: 1.3;
+    padding-block: 0.55rem;
+    // A hairline between consecutive items, so two links that both wrap onto
+    // multiple lines stay clearly separate. Suppressed on the first item and on
+    // any item directly under a group header (the header already divides).
+    border-top: 1px solid rgba(0, 0, 0, 0.07);
+  }
+
+  .dropdown-item:first-child,
+  .dropdown-header + .dropdown-item {
+    border-top: 0;
   }
 
   .dropdown-header {
@@ -1408,6 +1418,33 @@ a:focus-visible .iswc-external-link__icon {
   }
 }
 
+.iswc-links {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 0.5rem 2rem;
+  max-width: 60rem;
+
+  li {
+    padding-left: 0.9rem;
+    position: relative;
+    line-height: 1.5;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.62em;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: $iswc-primary;
+    }
+  }
+}
+
 .iswc-credits {
   columns: 2;
   column-gap: 2rem;
@@ -1421,7 +1458,34 @@ a:focus-visible .iswc-external-link__icon {
 }
 
 @media (max-width: 575.98px) {
-  .iswc-credits {
+  .iswc-links {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 0.5rem 2rem;
+  max-width: 60rem;
+
+  li {
+    padding-left: 0.9rem;
+    position: relative;
+    line-height: 1.5;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.62em;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: $iswc-primary;
+    }
+  }
+}
+
+.iswc-credits {
     columns: 1;
   }
 }
