@@ -1,1 +1,0 @@
-import{j as r,H as e}from"./index-DgsaQiSn.js";import{B as o}from"./BaseContainer-CI_UUrLu.js";import{D as s}from"./declareSoon-DG853jQ3.js";import"./Page-Cj3MrR2q.js";const m=()=>r.jsxs(o,{children:[r.jsx(e,{children:"ISWC 2026 Panel"}),r.jsx(s,{})]});export{m as Panel,m as default};
