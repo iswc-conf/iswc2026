@@ -194,6 +194,73 @@ a:focus-visible .iswc-external-link__icon {
 }
 
 // -----------------------------------------------------------------------------
+// Announcement banner (temporary — registration deadline)
+// -----------------------------------------------------------------------------
+.iswc-banner {
+  background: $iswc-primary;
+  color: #fff;
+}
+
+.iswc-banner__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem 1.25rem;
+  max-width: 82rem;
+  margin-inline: auto;
+  padding: 0.7rem 1.25rem;
+}
+
+.iswc-banner__text {
+  margin: 0;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.iswc-banner__cta {
+  flex: 0 0 auto;
+  padding: 0.35rem 1.1rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: $iswc-primary;
+  background: #fff;
+  border-radius: 2rem;
+  white-space: nowrap;
+  transition: background-color 0.15s ease, color 0.15s ease;
+
+  &:hover,
+  &:focus-visible {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.18);
+    text-decoration: none;
+  }
+}
+
+.iswc-banner__close {
+  flex: 0 0 auto;
+  width: 1.75rem;
+  height: 1.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  line-height: 1;
+  color: #fff;
+  background: none;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0.85;
+
+  &:hover,
+  &:focus-visible {
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.18);
+  }
+}
+
+// -----------------------------------------------------------------------------
 // Navbar
 // -----------------------------------------------------------------------------
 .iswc-navbar {
