@@ -919,6 +919,236 @@ a:focus-visible .iswc-external-link__icon {
 }
 
 // -----------------------------------------------------------------------------
+// Schedule (day switcher + timetable) — shares the Important Dates vocabulary
+// -----------------------------------------------------------------------------
+.iswc-schedule__days {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.iswc-schedule__day {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  padding: 0.55rem 1.1rem;
+  font-family: inherit;
+  text-align: left;
+  color: $iswc-secondary;
+  background: $iswc-surface;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  border-radius: 0.6rem;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+
+  &:hover {
+    border-color: $iswc-primary;
+  }
+
+  &[aria-pressed="true"] {
+    color: #fff;
+    background: $iswc-secondary;
+    border-color: $iswc-secondary;
+  }
+}
+
+.iswc-schedule__day-label {
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.iswc-schedule__day-sub {
+  font-size: 0.78rem;
+  opacity: 0.8;
+}
+
+// Legend of session kinds.
+.iswc-schedule__legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.1rem;
+  margin-bottom: 1.75rem;
+  font-size: 0.82rem;
+  color: $iswc-muted;
+}
+
+.iswc-schedule__legend-item {
+  --kind-color: #{$iswc-muted};
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.iswc-schedule__swatch {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background: var(--kind-color);
+}
+
+// Room filter chips.
+.iswc-schedule__filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+  margin-bottom: 1.5rem;
+}
+
+.iswc-schedule__filter-label {
+  margin-right: 0.25rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: $iswc-secondary;
+}
+
+.iswc-schedule__chip {
+  padding: 0.3rem 0.85rem;
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: $iswc-secondary;
+  background: $iswc-surface;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+
+  &:hover {
+    border-color: $iswc-primary;
+  }
+
+  &[aria-pressed="true"] {
+    color: #fff;
+    background: $iswc-secondary;
+    border-color: $iswc-secondary;
+  }
+}
+
+.iswc-schedule__chip--reset {
+  color: $iswc-primary;
+  border-style: dashed;
+}
+
+// Agenda: sessions grouped by start time. A time marker on the left, then the
+// parallel sessions for that time as coloured cards that wrap onto as many
+// lines as needed — so every room is visible at once, no wide grid to scroll.
+.iswc-agenda {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.iswc-agenda__group {
+  display: grid;
+  grid-template-columns: 4.5rem 1fr;
+  gap: 0.75rem 1rem;
+  align-items: start;
+}
+
+.iswc-agenda__time {
+  padding-top: 0.35rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: $iswc-secondary;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.iswc-agenda__items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: 0.75rem;
+}
+
+// A coloured session card. Text colour inherits from the kind class.
+.iswc-agenda__card {
+  padding: 0.6rem 0.75rem;
+  border-radius: 0.5rem;
+  border-left: 4px solid currentColor;
+  overflow-wrap: anywhere;
+}
+
+// Full-width items (registration, breaks, lunch, receptions) span the row.
+.iswc-agenda__card--full {
+  grid-column: 1 / -1;
+}
+
+.iswc-agenda__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem 0.6rem;
+  margin-bottom: 0.25rem;
+}
+
+.iswc-agenda__range {
+  font-size: 0.72rem;
+  font-weight: 700;
+  opacity: 0.85;
+  font-variant-numeric: tabular-nums;
+}
+
+.iswc-agenda__room {
+  padding: 0.1rem 0.5rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: rgba(0, 0, 0, 0.13);
+  border-radius: 2rem;
+}
+
+.iswc-agenda__title {
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.iswc-agenda__speaker {
+  margin-top: 0.15rem;
+  font-size: 0.78rem;
+  opacity: 0.85;
+}
+
+// Per-kind fills: a pale tint with darker text/edge from the same family.
+.iswc-kind--session {
+  background: #e6f1fb;
+  color: #0c447c;
+}
+.iswc-kind--keynote {
+  background: #faece7;
+  color: #712b13;
+}
+.iswc-kind--plenary {
+  background: #eeedfe;
+  color: #26215c;
+}
+.iswc-kind--social {
+  background: #faeeda;
+  color: #633806;
+}
+.iswc-kind--break {
+  background: $iswc-surface-alt;
+  color: #5f5e5a;
+}
+
+// On very small screens the time sits above its sessions.
+@media (max-width: 519.98px) {
+  .iswc-agenda__group {
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+  }
+
+  .iswc-agenda__time {
+    padding-top: 0;
+    text-align: left;
+  }
+}
+
+// -----------------------------------------------------------------------------
 // News list
 // -----------------------------------------------------------------------------
 .iswc-news__item {

@@ -28,7 +28,7 @@ export const Childcare = () => {
             </p>
 
             <p>
-                For further information, you can contact us at{" "}
+                If you will still need further assistance, we will be happy to support you by contacting ISWC 2026 secretary at{" "}
                 <ExternalLink href="mailto:iswc2026@cicsud.it">iswc2026@cicsud.it</ExternalLink>.
             </p>
         </BaseContainer>
