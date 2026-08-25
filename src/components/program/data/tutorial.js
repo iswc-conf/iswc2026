@@ -103,5 +103,6 @@ export const tutorials = [
     new: false,
     organizers: "Robert David",
     type: ["Half-day"],
+    website: "http://graphwise.ai/iswc2026-workshop-scope"
   },
 ];
