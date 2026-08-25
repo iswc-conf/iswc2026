@@ -1,1 +1,0 @@
-import{j as s,H as r}from"./index-B8VE6E2S.js";import{B as o}from"./BaseContainer-CpxA5Ike.js";import{D as e}from"./declareSoon-Bshj-Fhl.js";import"./Page-DGryyJxr.js";const m=()=>s.jsxs(o,{width:"wide",children:[s.jsx(r,{children:" Accepted Dagstuhl-style Workshops"}),s.jsx(e,{})]});export{m as DagstuhlWorkshops,m as default};
