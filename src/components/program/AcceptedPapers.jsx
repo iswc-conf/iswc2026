@@ -29,7 +29,7 @@ const TRACKS = [
   { id: "research", label: "Research Track", data: researchTrack, available: true },
   { id: "resource", label: "Resource Track", data: resourceTrack, available: true },
   { id: "in-use", label: "In Use Track", data: inuseTrack, available: true },
-  { id: "industry", label: "Industry Track", data: industryTrack, available: false },
+  { id: "industry", label: "Industry Track", data: industryTrack, available: true },
   { id: "posters", label: "Posters", data: posters, available: false },
   { id: "demos", label: "Demos", data: demos, available: false },
 ];
