@@ -44,7 +44,7 @@ export const schedule = [
   {
     id: "2026-10-25",
     label: "Sunday, 25 October 2026",
-    subtitle: "Pre-conference day 1",
+    subtitle: "Conference Day 1",
     rooms: ["Sez. 1", "Sez. 2", "Sez. 3", "Sez. 4", "Sez. 5", "Sez. 6", "Sez. 7", "Sez. 8", "Sala Andromeda", "Sala Cigno", "Pegaso", "Orione", "Auriga (Perseo)"],
     sessions: [
 
@@ -88,7 +88,7 @@ export const schedule = [
   {
     id: "2026-10-26",
     label: "Monday, 26 October 2026",
-    subtitle: "Pre-conference day 2",
+    subtitle: "Conference Day 2",
     rooms: ["Sez. 1", "Sez. 2", "Sez. 3", "Sez. 4", "Sez. 5", "Sez. 6", "Sez. 7", "Sez. 8", "Sala Andromeda", "Sala Cigno", "Pegaso", "Orione", "Auriga (Perseo)"],
 
     sessions: [
