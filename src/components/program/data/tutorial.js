@@ -52,6 +52,8 @@ export const tutorials = [
     new: false,
     organizers: "Luigi Asprino, Enrico Daga, Martin van Harmelen, Ryan Shaw, Mathias Vanden Auweele and Ivo Velitchkov",
     type: ["Half-day"],
+    description: "Integrating heterogeneous data formats remains one of the most persistent obstacles in knowledge graph construction. Conventional approaches rely on dedicated mapping languages and separate toolchains, adding complexity that often falls to domain experts rather than engineers. Façade-X takes a different route: by exposing any format — CSV, JSON, XML, spreadsheets, and more — as a knowledge graph queryable with SPARQL alone, it removes the need for a second mapping language and keeps the entire workflow within familiar Semantic Web standards. This half-day tutorial introduces the Façade-X design philosophy and its underlying metamodel, then puts it into practice through a central hands-on session using SPARQL Anything, the reference open-source implementation. Participants query real non-RDF data directly with SPARQL, explore functions and magic properties, and work through guided exercises. The tutorial also brings in industry perspectives from production deployments, reflects on classroom teaching experience, and presents the standardisation roadmap of the W3C Façade-X Community Group. Pitched at an intermediate level, it targets knowledge graph engineers, data integration practitioners, Semantic Web researchers, and educators. Basic SPARQL familiarity is assumed; no prior knowledge of Façade-X is required.",
+    website: "https://w3c-facade-x.github.io/iswc2026-tutorial/"
   },
   {
     title: "ARGO: Agentic Retrieval and Graph Orchestration for Document Knowledge Systems",
