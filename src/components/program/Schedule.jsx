@@ -8,72 +8,140 @@ const toMinutes = (t) => {
   return h * 60 + m;
 };
 
-/**
- * Groups a day's sessions by start time so parallel sessions (same start,
- * different room) sit together. Full-width items come first within a group,
- * then rooms in alphabetical order.
- */
-const groupByStart = (sessions) => {
-  const groups = new Map();
-  for (const s of sessions) {
-    if (!groups.has(s.start)) groups.set(s.start, []);
-    groups.get(s.start).push(s);
-  }
+const formatHour = (m) => `${String(Math.floor(m / 60)).padStart(2, "0")}:00`;
 
-  return [...groups.entries()]
-    .sort((a, b) => toMinutes(a[0]) - toMinutes(b[0]))
-    .map(([start, items]) => ({
-      start,
-      items: items.slice().sort((a, b) => {
-        if (Boolean(a.allRooms) !== Boolean(b.allRooms)) return a.allRooms ? -1 : 1;
-        return (a.room || "").localeCompare(b.room || "");
-      }),
-    }));
+// The grid defaults to a 08:00–18:00 window, wide enough for a normal
+// conference day at a glance. It only grows beyond that if a session
+// actually starts earlier or ends later, so nothing is ever clipped.
+const DAY_START = 9 * 60;
+const DAY_END = 18 * 60;
+
+// Horizontal scale: pixels per minute. Events sit at their exact start
+// time (10:52 lands between the hour lines, not snapped to one) — this is
+// what makes the grid scrollable rather than squeezing everything to fit.
+const PX_PER_MINUTE = 2.5;
+
+// A very short session still needs enough width to read its title.
+const MIN_EVENT_WIDTH = 0;
+
+const byStart = (a, b) => toMinutes(a.start) - toMinutes(b.start);
+
+const gridBounds = (sessions) => {
+  const starts = sessions.map((s) => toMinutes(s.start));
+  const ends = sessions.map((s) => toMinutes(s.end));
+  return {
+    start: Math.min(DAY_START, ...starts),
+    end: Math.max(DAY_END, ...ends),
+  };
 };
 
-const DayAgenda = ({ day, visibleRooms }) => {
-  const groups = useMemo(() => {
-    const sessions = day.sessions.filter(
-      (s) => s.allRooms || visibleRooms.has(s.room)
-    );
-    return groupByStart(sessions);
-  }, [day, visibleRooms]);
+const SessionEvent = ({ session, left, width }) => (
+  <article
+    className={`iswc-schedule-grid__event iswc-agenda__card iswc-kind--${session.kind}`}
+    style={{ left: `${left}px`, width: `${width}px` }}
+  >
+    <div className="iswc-agenda__meta">
+      <span className="iswc-agenda__range">
+        {session.start}–{session.end}
+      </span>
+    </div>
+    <div className="iswc-agenda__title">{session.title}</div>
+    {session.speaker && (
+      <div className="iswc-agenda__speaker">{session.speaker}</div>
+    )}
+  </article>
+);
 
-  if (groups.length === 0) {
+// A track is one horizontal lane (either "All rooms" or a single room). It
+// draws its own hour gridlines and lays its sessions out absolutely so they
+// can float at any minute, independent of the hour columns.
+const Track = ({ sessions, start, trackWidth, hours, left, width }) => (
+  <div className="iswc-schedule-grid__track" style={{ width: `${trackWidth}px` }}>
+    {hours.map((m) => (
+      <span
+        key={m}
+        className="iswc-schedule-grid__gridline"
+        style={{ left: `${left(m)}px` }}
+        aria-hidden="true"
+      />
+    ))}
+    {sessions.map((session, i) => (
+      <SessionEvent
+        key={`${session.start}-${session.title}-${i}`}
+        session={session}
+        left={left(toMinutes(session.start))}
+        width={width(session)}
+      />
+    ))}
+  </div>
+);
+
+const DayTimeline = ({ day, visibleRooms }) => {
+  const rooms = day.rooms.filter((r) => visibleRooms.has(r));
+  const sessions = day.sessions.filter(
+    (s) => s.allRooms || visibleRooms.has(s.room)
+  );
+
+  const { start, end } = useMemo(
+    () => gridBounds(sessions.length ? sessions : day.sessions),
+    [sessions, day]
+  );
+
+  if (sessions.length === 0) {
     return <p className="iswc-note">No sessions match the selected rooms.</p>;
   }
 
-  return (
-    <div className="iswc-agenda">
-      {groups.map((group) => (
-        <div className="iswc-agenda__group" key={group.start}>
-          <div className="iswc-agenda__time">{group.start}</div>
+  const HEADER_PADDING = 50;
 
-          <div className="iswc-agenda__items">
-            {group.items.map((session, i) => (
-              <article
-                key={`${session.start}-${session.title}-${i}`}
-                className={`iswc-agenda__card iswc-kind--${session.kind}${
-                  session.allRooms ? " iswc-agenda__card--full" : ""
-                }`}
+  const trackWidth = (end - start) * PX_PER_MINUTE + HEADER_PADDING * 2;
+  const left = (min) => (min - start) * PX_PER_MINUTE + HEADER_PADDING;
+  const width = (s) =>
+    Math.max((toMinutes(s.end) - toMinutes(s.start)) * PX_PER_MINUTE, MIN_EVENT_WIDTH);
+
+  const hours = [];
+  for (let m = Math.ceil(start / 60) * 60; m <= end; m += 60) hours.push(m);
+
+  const common = sessions.filter((s) => s.allRooms).sort(byStart);
+  const roomRows = rooms
+    .map((room) => ({
+      room,
+      items: sessions.filter((s) => !s.allRooms && s.room === room).sort(byStart),
+    }))
+    .filter((r) => r.items.length > 0);
+
+  return (
+    <div className="iswc-schedule-grid__scroll">
+      <div className="iswc-schedule-grid">
+        {/* Hour header, sticky at the top while the grid scrolls vertically. */}
+        <div className="iswc-schedule-grid__row iswc-schedule-grid__row--header">
+          <div className="iswc-schedule-grid__room-label iswc-schedule-grid__room-label--corner" />
+          <div className="iswc-schedule-grid__track" style={{ width: `${trackWidth}px` }}>
+            {hours.map((m) => (
+              <span
+                key={m}
+                className="iswc-schedule-grid__hour"
+                style={{ left: `${left(m)}px` }}
               >
-                <div className="iswc-agenda__meta">
-                  <span className="iswc-agenda__range">
-                    {session.start}–{session.end}
-                  </span>
-                  {!session.allRooms && session.room && (
-                    <span className="iswc-agenda__room">{session.room}</span>
-                  )}
-                </div>
-                <div className="iswc-agenda__title">{session.title}</div>
-                {session.speaker && (
-                  <div className="iswc-agenda__speaker">{session.speaker}</div>
-                )}
-              </article>
+                {formatHour(m)}
+              </span>
             ))}
           </div>
         </div>
-      ))}
+
+        {common.length > 0 && (
+          <div className="iswc-schedule-grid__row iswc-schedule-grid__row--common">
+            <div className="iswc-schedule-grid__room-label">All rooms</div>
+            <Track sessions={common} start={start} trackWidth={trackWidth} hours={hours} left={left} width={width} />
+          </div>
+        )}
+
+        {roomRows.map(({ room, items }) => (
+          <div className="iswc-schedule-grid__row" key={room}>
+            <div className="iswc-schedule-grid__room-label">{room}</div>
+            <Track sessions={items} start={start} trackWidth={trackWidth} hours={hours} left={left} width={width} />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
@@ -107,8 +175,15 @@ export const Schedule = () => {
     <Page width="wide">
       <Header>Schedule</Header>
 
+
+            <p className="iswc-callout">
+            This is a draft schedule and may still change.  Room assignment can be subject to changes. All times are local (CEST).
+ 
+            </p>
+
+
       <p className="iswc-note">
-        This is a draft schedule and may still change. All times are local (CEST).
+      
       </p>
 
       {/* Day switcher */}
@@ -170,7 +245,7 @@ export const Schedule = () => {
 
       {day.note && <p className="iswc-callout">{day.note}</p>}
 
-      <DayAgenda day={day} visibleRooms={visibleRooms} />
+      <DayTimeline day={day} visibleRooms={visibleRooms} />
     </Page>
   );
 };

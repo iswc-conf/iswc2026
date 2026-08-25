@@ -26,11 +26,12 @@
 // matching pastel fill and text colours live in the stylesheet under
 // `.iswc-kind--{kind}`.
 export const SESSION_KINDS = {
-  session: { label: "Session", color: "#185FA5" },
-  keynote: { label: "Keynote", color: "#B15143" },
-  break: { label: "Break", color: "#7A7A73" },
-  social: { label: "Social", color: "#BA7517" },
-  plenary: { label: "Plenary", color: "#534AB7" },
+
+  doctoral: { label: "Doctoral Consortium",  color:"#8438a2"},
+  tutorial: { label: "Tutorial", color:"#85b38d"},
+  workshop: { label: "Workshop", color:"#8693c0"},
+  dag: {label: "Dagstuhl-style", color: "#ca7d7d"},
+  other: {label: "Other", color: "#898383"},
 };
 
 // -----------------------------------------------------------------------------
@@ -44,58 +45,54 @@ export const schedule = [
     id: "2026-10-25",
     label: "Sunday, 25 October 2026",
     subtitle: "Pre-conference day 1",
-    rooms: ["Room A", "Room B", "Room C"],
+    rooms: ["Sez. 1", "Sez. 2", "Sez. 3", "Sez. 4", "Sez. 5", "Sez. 6", "Sez. 7", "Sez. 8", "Sala Andromeda", "Sala Cigno", "Pegaso", "Orione", "Auriga (Perseo)"],
     sessions: [
-      { start: "08:30", end: "09:00", allRooms: true, title: "Registration", kind: "break" },
 
-      { start: "09:00", end: "10:30", room: "Room A", title: "Workshop — Knowledge Graphs (part 1)", kind: "session" },
-      { start: "09:00", end: "12:30", room: "Room B", title: "Tutorial — Ontology Engineering (full morning)", kind: "session" },
-      { start: "09:00", end: "10:30", room: "Room C", title: "Workshop — Neuro-symbolic AI (part 1)", kind: "session" },
+      { start: "10:40", end: "11:10", allRooms: true, title: "Break", kind: "break" },
+       { start: "12:50", end: "14:10", allRooms: true, title: "Break", kind: "break" },
+       { start: "15:50", end: "16:20", allRooms: true, title: "Break", kind: "break" },
 
-      { start: "10:30", end: "11:00", allRooms: true, title: "Coffee break", kind: "break" },
+      { start: "09:00", end: "18:00", room: "Sez. 1", title: "#4  6th Wikidata Workshop", kind: "workshop" },
+      { start: "09:00", end: "18:00", room: "Sez. 2", title: "#10  21st International Workshop on Ontology Matching (OM-2026)", kind: "workshop" },
+      { start: "09:00", end: "18:00", room: "Sez. 3", title: "#21  17th Workshop on Ontology Design and Patterns (WOP)~2026", kind: "workshop" },
 
-      { start: "11:00", end: "12:30", room: "Room A", title: "Workshop — Knowledge Graphs (part 2)", kind: "session" },
-      { start: "11:00", end: "12:30", room: "Room C", title: "Workshop — Neuro-symbolic AI (part 2)", kind: "session" },
+      { start: "09:00", end: "12:50", room: "Sez. 4", title: "#6  WikiKGQA: Wiki-Based Knowledge Graph Question Answering Challenge", kind: "workshop" },
+      { start: "14:10", end: "18:00", room: "Sez. 4", title: "#7  Graph-Enhanced LLMs for Trustworthy Web Data Management", kind: "workshop" },
 
-      { start: "12:30", end: "14:00", allRooms: true, title: "Lunch", kind: "break" },
+      { start: "09:00", end: "18:00", room: "Sez. 5", title: "#2  2nd International Workshop on Data Management for Knowledge Graphs (DMKG 2026)", kind: "workshop" },
 
-      { start: "14:00", end: "15:30", room: "Room A", title: "Tutorial — SHACL in practice", kind: "session" },
-      { start: "14:00", end: "15:30", room: "Room B", title: "Workshop — LLMs and Knowledge Engineering", kind: "session" },
-      { start: "14:00", end: "17:30", room: "Room C", title: "Doctoral Consortium (afternoon)", kind: "session" },
 
-      { start: "15:30", end: "16:00", allRooms: true, title: "Coffee break", kind: "break" },
+      { start: "09:00", end: "12:50", room: "Sez. 6", title: "#497  GOOD: GOod Ontologies and how to Develop them", kind: "tutorial" },
+      { start: "14:10", end: "18:00", room: "Sez. 6", title: "#458  OntoLM: Ontology Embedding, Reasoning and Construction with Language Models", kind: "tutorial" },
+      { start: "09:00", end: "12:50", room: "Sez. 7", title: "#501  ARGO: Agentic Retrieval and Graph Orchestration for Document Knowledge Systems", kind: "tutorial" },
+      { start: "14:10", end: "18:00", room: "Sez. 7", title: "#496  Continual Knowledge Graph Embedding: Foundations, Methods, and Open Challenges", kind: "tutorial" },
+      { start: "09:00", end: "12:50", room: "Sez. 8", title: "#486  Shapes for Knowledge Graphs", kind: "tutorial" },
+      { start: "14:10", end: "18:00", room: "Sez. 8", title: "#500  Façade-X Tutorial: Querying Any Format as a Knowledge Graph (FX)", kind: "tutorial" },
 
-      { start: "16:00", end: "17:30", room: "Room A", title: "Tutorial — SHACL in practice (part 2)", kind: "session" },
-      { start: "16:00", end: "17:30", room: "Room B", title: "Workshop — LLMs and Knowledge Engineering (part 2)", kind: "session" },
+      { start: "09:00", end: "18:00", room: "Sala Andromeda", title: "#13  KG-NeSy: The Third Workshop on Knowledge Graphs and Neurosymbolic AI", kind: "workshop" },
+
+
+    
+      { start: "09:00", end: "12:50", room: "Sala Cigno", title: "#9  SeMatS 2026 Third International Workshop on Semantic Materials Science: Harnessing the Power of Semantic Web Technologies in Materials Science", kind: "workshop" },
+      { start: "14:10", end: "18:00", room: "Sala Cigno", title: "#19  LLMs4OL 2026: Large Language Models for Ontology Learning", kind: "workshop" },
+
+      { start: "09:00", end: "18:00", room: "Pegaso", title: "Multi-dimensional Knowledge Graphs (MKG)", kind: "dag" },
+      { start: "09:00", end: "18:00", room: "Orione", title: "Computational cHallenges fRom hiGhly divErse Data (CHARGED)", kind: "dag" },
+
+      { start: "09:00", end: "12:50", room: "Auriga (Perseo)", title: "#495  Neural Networks meet Explicit Knowledge Representation: Towards Mechanistic Interpretability and Neuro-symbolic Modeling by-design", kind: "tutorial" },
+      { start: "14:10", end: "15:50", room: "Auriga (Perseo)", title: "#505  Intro to OWL Reasoning with Protégé", kind: "tutorial" },
+      { start: "16:20", end: "18:00", room: "Auriga (Perseo)", title: "Doctoral Consortium", kind: "doctoral" },
+
     ],
   },
   {
     id: "2026-10-26",
     label: "Monday, 26 October 2026",
     subtitle: "Pre-conference day 2",
-    rooms: ["Room A", "Room B", "Room C"],
+    rooms: ["Sez. 1", "Sez. 2", "Sez. 3", "Sez. 4", "Sez. 5", "Sez. 6", "Sez. 7", "Sez. 8", "Sala Andromeda", "Sala Cigno", "Pegaso", "Orione", "Auriga (Perseo)"],
+
     sessions: [
-      { start: "09:00", end: "10:30", room: "Room A", title: "Workshop session", kind: "session" },
-      { start: "09:00", end: "10:30", room: "Room B", title: "Tutorial session", kind: "session" },
-      { start: "09:00", end: "12:30", room: "Room C", title: "Doctoral Consortium (full morning)", kind: "session" },
 
-      { start: "10:30", end: "11:00", allRooms: true, title: "Coffee break", kind: "break" },
-
-      { start: "11:00", end: "12:30", room: "Room A", title: "Workshop session", kind: "session" },
-      { start: "11:00", end: "12:30", room: "Room B", title: "Tutorial session", kind: "session" },
-
-      { start: "12:30", end: "14:00", allRooms: true, title: "Lunch", kind: "break" },
-
-      { start: "14:00", end: "15:30", room: "Room A", title: "Workshop session", kind: "session" },
-      { start: "14:00", end: "15:30", room: "Room B", title: "Tutorial session", kind: "session" },
-      { start: "14:00", end: "15:30", room: "Room C", title: "Workshop session", kind: "session" },
-
-      { start: "15:30", end: "16:00", allRooms: true, title: "Coffee break", kind: "break" },
-
-      { start: "16:00", end: "17:30", room: "Room A", title: "Workshop session", kind: "session" },
-      { start: "16:00", end: "17:30", room: "Room B", title: "Tutorial session", kind: "session" },
-
-      { start: "18:00", end: "20:00", allRooms: true, title: "Welcome Reception", kind: "social" },
     ],
   },
 ];

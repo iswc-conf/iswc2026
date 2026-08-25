@@ -49,13 +49,14 @@ export const navigation = [
     label: "Program",
     items: [
       { type: "header", label: "Available" },
+        { label: "Schedule", to: "/program/schedule" },
       { label: "Workshops", to: "/program/workshops" },
       { label: "Keynote Speakers", to: "/program/keynotespeakers" },
       { label: "Accepted Papers", to: "/program/acceptedpapers" },
       { label: "Tutorials", to: "/program/tutorials" },
 
       { type: "header", label: "To Be Announced" },
-      { label: "Schedule", to: "/program/schedule" },
+    
       { label: "Dagstuhl Workshops", to: "/program/dagstuhl" },
       { label: "Panel", to: "/program/panel" },
       { label: "Awards", to: "/program/awards" },

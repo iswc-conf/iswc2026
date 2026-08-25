@@ -1031,49 +1031,143 @@ a:focus-visible .iswc-external-link__icon {
   border-style: dashed;
 }
 
-// Agenda: sessions grouped by start time. A time marker on the left, then the
-// parallel sessions for that time as coloured cards that wrap onto as many
-// lines as needed — so every room is visible at once, no wide grid to scroll.
-.iswc-agenda {
+// Schedule grid: hours run left-to-right as a scrollable time axis, rooms
+// stack top-to-bottom as lanes, and each session floats at its exact start
+// minute rather than snapping to an hour column (a session can start at
+// 11:52 and still land in the right place). The room-label column stays
+// pinned while the time axis scrolls horizontally.
+$iswc-grid-room-label-width: 10rem;
+$iswc-grid-row-height: 7rem;
+
+.iswc-schedule-grid__scroll {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 0.6rem;
+}
+
+.iswc-schedule-grid {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
+  width: fit-content;
 }
 
-.iswc-agenda__group {
-  display: grid;
-  grid-template-columns: 4.5rem 1fr;
-  gap: 0.75rem 1rem;
-  align-items: start;
+.iswc-schedule-grid__row {
+  display: flex;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+  &:last-child {
+    border-bottom: none;
+  }
 }
 
-.iswc-agenda__time {
-  padding-top: 0.35rem;
-  font-size: 0.95rem;
+// The shared row for sessions that apply to every room (breaks, lunch,
+// plenaries) reads as a lighter aside above the room-by-room lanes.
+.iswc-schedule-grid__row--common {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.iswc-schedule-grid__row--common .iswc-schedule-grid__room-label {
+  color: $iswc-muted;
+  font-style: italic;
+}
+
+.iswc-schedule-grid__row--header {
+    background: #fafafa;
+    border-bottom: 2px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+// Pinned left column naming the row. Stays put while the track beside it
+// scrolls horizontally.
+.iswc-schedule-grid__room-label {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  flex: 0 0 #{$iswc-grid-room-label-width};
+  width: $iswc-grid-room-label-width;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.85rem;
+  font-size: 0.9rem;
   font-weight: 700;
   color: $iswc-secondary;
+  background: $iswc-surface;
+  overflow-wrap: anywhere;
+  border-right: 1px solid rgba(0, 0, 0, 0.12);
+  background: #f8fafc;
+  font-weight: 600;
+  border-right: 1px solid #e5e7eb;
+}
+
+.iswc-schedule-grid__room-label--corner {
+  z-index: 3;
+}
+
+// The horizontal lane itself: a relatively-positioned strip that session
+// cards and hour gridlines are placed within absolutely.
+.iswc-schedule-grid__track {
+  position: relative;
+  min-height: $iswc-grid-row-height;
+}
+
+.iswc-schedule-grid__row--header .iswc-schedule-grid__track {
+  min-height: 2.25rem;
+}
+
+.iswc-schedule-grid__hour {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
   font-variant-numeric: tabular-nums;
-  text-align: right;
+  color: $iswc-secondary;
+  white-space: nowrap;
+  color: #6b7280;
+  font-size: .8rem;
+  font-weight: 700;
 }
 
-.iswc-agenda__items {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-  gap: 0.75rem;
+.iswc-schedule-grid__gridline {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: rgba(0, 0, 0, 0.08);
 }
 
-// A coloured session card. Text colour inherits from the kind class.
+// A coloured session card, floating at its exact start time. Text colour
+// inherits from the kind class.
+.iswc-schedule-grid__event {
+  position: absolute;
+  top: 0.4rem;
+  bottom: 0.4rem;
+  padding: 0.5rem 0.65rem;
+  border-radius: 10px;
+  border-left: 4px solid currentColor;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+  transition: transform .15s, box-shadow .15s;
+}
+
+
+.iswc-schedule-grid__event:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0,0,0,.14);
+}
+
 .iswc-agenda__card {
+  // Shared "session card" look, reused by both the legacy list layout (if
+  // still referenced elsewhere) and the schedule grid above.
   padding: 0.6rem 0.75rem;
   border-radius: 0.5rem;
   border-left: 4px solid currentColor;
   overflow-wrap: anywhere;
-}
-
-// Full-width items (registration, breaks, lunch, receptions) span the row.
-.iswc-agenda__card--full {
-  grid-column: 1 / -1;
 }
 
 .iswc-agenda__meta {
@@ -1091,16 +1185,6 @@ a:focus-visible .iswc-external-link__icon {
   font-variant-numeric: tabular-nums;
 }
 
-.iswc-agenda__room {
-  padding: 0.1rem 0.5rem;
-  font-size: 0.68rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  background: rgba(0, 0, 0, 0.13);
-  border-radius: 2rem;
-}
-
 .iswc-agenda__title {
   font-size: 0.92rem;
   font-weight: 600;
@@ -1114,37 +1198,39 @@ a:focus-visible .iswc-external-link__icon {
 }
 
 // Per-kind fills: a pale tint with darker text/edge from the same family.
-.iswc-kind--session {
-  background: #e6f1fb;
-  color: #0c447c;
+
+.iswc-kind--other {
+  background: #e5e2e2;
 }
-.iswc-kind--keynote {
-  background: #faece7;
-  color: #712b13;
+
+.iswc-kind--dag {
+  background: #fbe6e6;
 }
-.iswc-kind--plenary {
-  background: #eeedfe;
-  color: #26215c;
+
+.iswc-kind--doctoral {
+  background: #f7e6fb;
 }
-.iswc-kind--social {
-  background: #faeeda;
-  color: #633806;
+.iswc-kind--workshop {
+  background: #edf1fe;
 }
+.iswc-kind--tutorial {
+  background: #e6fbea;
+}
+
 .iswc-kind--break {
-  background: $iswc-surface-alt;
-  color: #5f5e5a;
+  background: #dedddd;
 }
 
-// On very small screens the time sits above its sessions.
+// On small screens, narrow the pinned room-label column so more of the
+// scrollable time axis stays visible at once.
 @media (max-width: 519.98px) {
-  .iswc-agenda__group {
-    grid-template-columns: 1fr;
-    gap: 0.4rem;
-  }
-
-  .iswc-agenda__time {
-    padding-top: 0;
-    text-align: left;
+  .iswc-schedule-grid__room-label {
+    flex-basis: 6rem;
+    width: 6rem;
+    padding: 0.5rem 0.6rem;
+    font-size: 0.82rem;
+    
+    
   }
 }
 
