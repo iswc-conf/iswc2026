@@ -51,13 +51,14 @@ export const navigation = [
       { type: "header", label: "Available" },
         { label: "Schedule", to: "/program/schedule" },
       { label: "Workshops", to: "/program/workshops" },
+      { label: "Dagstuhl Workshops", to: "/program/dagstuhl" },
       { label: "Keynote Speakers", to: "/program/keynotespeakers" },
       { label: "Accepted Papers", to: "/program/acceptedpapers" },
       { label: "Tutorials", to: "/program/tutorials" },
 
       { type: "header", label: "To Be Announced" },
     
-      { label: "Dagstuhl Workshops", to: "/program/dagstuhl" },
+      
       { label: "Panel", to: "/program/panel" },
       { label: "Awards", to: "/program/awards" },
       // { label: "Challenges", to: "/program/challenges" },
