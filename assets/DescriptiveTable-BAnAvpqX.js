@@ -1,1 +1,0 @@
-import{j as o}from"./index-C7r2cv1W.js";import{D as i}from"./DataTable-C8Nl_U6Z.js";const b=({title:e,description:a,data:s,header_title:r,unit:t})=>o.jsx(i,{data:s,titleLabel:e,secondaryLabel:a,secondaryField:"organizers",detailLabel:r,showLinks:!0,unit:t});export{b as D};
