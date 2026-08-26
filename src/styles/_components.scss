@@ -1185,6 +1185,22 @@ $iswc-grid-row-height: 7rem;
   font-variant-numeric: tabular-nums;
 }
 
+// Small pill next to the time range naming the session kind, tinted with
+// that kind's accent colour. Breaks are excluded in the component.
+.iswc-agenda__badge {
+  display: inline-block;
+  padding: 0.05rem 0.4rem;
+  font-size: 0.62rem;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: #fff;
+  background: var(--kind-color, #{$iswc-muted});
+  border-radius: 2rem;
+}
+
 .iswc-agenda__title {
   font-size: 0.92rem;
   font-weight: 600;
@@ -1200,7 +1216,7 @@ $iswc-grid-row-height: 7rem;
 // Per-kind fills: a pale tint with darker text/edge from the same family.
 
 .iswc-kind--other {
-  background: #e5e2e2;
+  background: #e5e4e2;
 }
 
 .iswc-kind--dag {

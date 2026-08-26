@@ -31,7 +31,8 @@ export const SESSION_KINDS = {
   tutorial: { label: "Tutorial", color:"#85b38d"},
   workshop: { label: "Workshop", color:"#8693c0"},
   dag: {label: "Dagstuhl-style", color: "#ca7d7d"},
-  other: {label: "Other", color: "#898383"},
+  break: {label: "Break", color: "#b0b0b0"},
+  other: {label: "Other", color: "#8a8803"},
 };
 
 // -----------------------------------------------------------------------------
@@ -89,6 +90,70 @@ export const schedule = [
     id: "2026-10-26",
     label: "Monday, 26 October 2026",
     subtitle: "Conference Day 2",
+    rooms: ["Sez. 1", "Sez. 2", "Sez. 3", "Sez. 4", "Sez. 5", "Sez. 6", "Sez. 7", "Sez. 8", "Sala Andromeda", "Sala Cigno", "Pegaso", "Orione", "Auriga (Perseo)"],
+
+    sessions: [
+      { start: "10:40", end: "11:10", allRooms: true, title: "Break", kind: "break" },
+       { start: "12:50", end: "14:10", allRooms: true, title: "Break", kind: "break" },
+       { start: "15:50", end: "16:20", allRooms: true, title: "Break", kind: "break" },
+
+
+    { start: "09:00", end: "18:00", room: "Sez. 1", title: "#16  3rd International Workshop on Retrieval-Augmented Generation Enabled by Knowledge Graphs (RAGE-KG 2026)", kind: "workshop" },
+    { start: "09:00", end: "18:00", room: "Sez. 2", title: "#5  6th International Workshop on Scientific Knowledge Representation, Discovery, and Assessment (Sci-K 2026)", kind: "workshop" },
+    { start: "09:00", end: "18:00", room: "Sez. 3", title: "#18  6th International Workshop on Semantic Web and Ontology Design for Cultural Heritage, SWODCH 2026", kind: "workshop" },
+
+    { start: "09:00", end: "12:50", room: "Sez. 4", title: "#20  AIAA4KE: 1st Workshop on AI-assisted Approaches to Knowledge Engineering", kind: "workshop" },
+    { start: "14:10", end: "18:00", room: "Sez. 4", title: "#15  NLP4KGC 2026: 5th International Workshop on Natural Language Processing for Knowledge Graph Construction", kind: "workshop" },
+    { start: "09:00", end: "12:50", room: "Sez. 5", title: "#14  Data-Driven Storytelling: Bridging Knowledge Graphs, GenAI, and Narrative (DDS 2026)", kind: "workshop" },
+    { start: "14:10", end: "18:00", room: "Sez. 5", title: "#12  Fourth International Workshop on Semantic Industrial Information Modelling (SemIIM)", kind: "workshop" },
+
+
+    { start: "09:00", end: "12:50", room: "Sez. 6", title: "#498  Knowledge Graphs for Data Interoperability with Chimera (KG4DI)", kind: "tutorial" },
+    { start: "14:10", end: "18:00", room: "Sez. 6", title: "#503  VocBench & Co.: Encompassing the Full Data Lifecycle", kind: "tutorial" },
+    { start: "09:00", end: "12:50", room: "Sez. 7", title: "#507  SCOPE - Using SHACL and OWL in Combination for Practical Knowledge Graph Editing", kind: "tutorial" },
+    { start: "14:10", end: "18:00", room: "Sez. 7", title: "#506  Unlocking Legal Automation with Semantic Web Technology (ULA-SWeT)", kind: "tutorial" },
+    { start: "09:00", end: "12:50", room: "Sez. 8", title: "#502  Semantic-Aware Partitioning of Property Graphs", kind: "tutorial" },
+    { start: "14:10", end: "18:00", room: "Sez. 8", title: "#504  Personal Knowledge Graphs for LLM-Powered Decentralized Recommendations", kind: "tutorial" },
+
+    { start: "09:00", end: "12:50", room: "Sala Andromeda", title: "#17  SPARK 2026 - First International Workshop on Spatial Intelligence and Reasoning Enabled by Knowledge Graphs and Foundation Models", kind: "workshop" },
+    { start: "14:10", end: "18:00", room: "Sala Andromeda", title: "#23  International Workshop on Explainable AI and Knowledge Graphs (XAI+KG)", kind: "workshop" },
+    { start: "09:00", end: "12:50", room: "Sala Cigno", title: "#3  ELMKE 2026: The 4th Workshop on Evaluation of Language Models in Knowledge Engineering", kind: "workshop" },
+    { start: "14:10", end: "18:00", room: "Sala Cigno", title: "#8  Workshop on Knowledge Graphs and  Model-driven Systems Engineering (KGMDSE)", kind: "workshop" },
+
+
+    { start: "09:00", end: "12:50", room: "Pegaso", title: "Rethinking Data Quality for Generative AI and Knowledge Graphs (ReDQ)", kind: "dag" },
+    { start: "14:10", end: "18:00", room: "Pegaso", title: "W3C TPAC RDF 1.2 WG", kind: "other" },
+    { start: "09:00", end: "12:50", room: "Orione", title: "Semantic Affordances for the Web of Agents: Bridging Multi-Agent Systems, Semantic Web Services, and Agentic AI", kind: "dag" },
+    { start: "14:10", end: "18:00", room: "Orione", title: "Towards Agendas for Advancing Personal Agentic Artificial Intelligence (TAAPAAI)", kind: "dag" },
+    { start: "09:00", end: "18:00", room: "Auriga (Perseo)", title: "Doctoral Consortium", kind: "doctoral" },
+
+
+    ],
+  },
+    {
+    id: "2026-10-27",
+    label: "Tuesday, 27 October 2026",
+    subtitle: "Conference Day 3",
+    rooms: ["Sez. 1", "Sez. 2", "Sez. 3", "Sez. 4", "Sez. 5", "Sez. 6", "Sez. 7", "Sez. 8", "Sala Andromeda", "Sala Cigno", "Pegaso", "Orione", "Auriga (Perseo)"],
+
+    sessions: [
+
+    ],
+  },
+    {
+    id: "2026-10-28",
+    label: "Wednesday, 28 October 2026",
+    subtitle: "Conference Day 4",
+    rooms: ["Sez. 1", "Sez. 2", "Sez. 3", "Sez. 4", "Sez. 5", "Sez. 6", "Sez. 7", "Sez. 8", "Sala Andromeda", "Sala Cigno", "Pegaso", "Orione", "Auriga (Perseo)"],
+
+    sessions: [
+
+    ],
+  },
+    {
+    id: "2026-10-29",
+    label: "Thursday, 29 October 2026",
+    subtitle: "Conference Day 5",
     rooms: ["Sez. 1", "Sez. 2", "Sez. 3", "Sez. 4", "Sez. 5", "Sez. 6", "Sez. 7", "Sez. 8", "Sala Andromeda", "Sala Cigno", "Pegaso", "Orione", "Auriga (Perseo)"],
 
     sessions: [

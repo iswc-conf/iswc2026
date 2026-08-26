@@ -10,7 +10,7 @@ const toMinutes = (t) => {
 
 const formatHour = (m) => `${String(Math.floor(m / 60)).padStart(2, "0")}:00`;
 
-// The grid defaults to a 08:00–18:00 window, wide enough for a normal
+// The grid defaults to a 09:00–18:00 window, wide enough for a normal
 // conference day at a glance. It only grows beyond that if a session
 // actually starts earlier or ends later, so nothing is ever clipped.
 const DAY_START = 9 * 60;
@@ -35,22 +35,36 @@ const gridBounds = (sessions) => {
   };
 };
 
-const SessionEvent = ({ session, left, width }) => (
-  <article
-    className={`iswc-schedule-grid__event iswc-agenda__card iswc-kind--${session.kind}`}
-    style={{ left: `${left}px`, width: `${width}px` }}
-  >
-    <div className="iswc-agenda__meta">
-      <span className="iswc-agenda__range">
-        {session.start}–{session.end}
-      </span>
-    </div>
-    <div className="iswc-agenda__title">{session.title}</div>
-    {session.speaker && (
-      <div className="iswc-agenda__speaker">{session.speaker}</div>
-    )}
-  </article>
-);
+const SessionEvent = ({ session, left, width }) => {
+  const kind = SESSION_KINDS[session.kind];
+
+  return (
+    <article
+      className={`iswc-schedule-grid__event iswc-agenda__card iswc-kind--${session.kind}`}
+      style={{ left: `${left}px`, width: `${width}px` }}
+    >
+      <div className="iswc-agenda__meta">
+        <span className="iswc-agenda__range">
+          {session.start}–{session.end}
+        </span>
+        {/* Kind badge next to the time — helps scanning parallel tracks.
+            Breaks are self-evident, so they get no badge. */}
+        {session.kind !== "break" && kind && (
+          <span
+            className="iswc-agenda__badge"
+            style={{ "--kind-color": kind.color }}
+          >
+            {kind.label}
+          </span>
+        )}
+      </div>
+      <div className="iswc-agenda__title">{session.title}</div>
+      {session.speaker && (
+        <div className="iswc-agenda__speaker">{session.speaker}</div>
+      )}
+    </article>
+  );
+};
 
 // A track is one horizontal lane (either "All rooms" or a single room). It
 // draws its own hour gridlines and lays its sessions out absolutely so they
@@ -86,6 +100,14 @@ const DayTimeline = ({ day, visibleRooms }) => {
     () => gridBounds(sessions.length ? sessions : day.sessions),
     [sessions, day]
   );
+
+  if (day.sessions.length === 0) {
+    return (
+      <p className="iswc-note">
+        The programme for this day will be announced soon.
+      </p>
+    );
+  }
 
   if (sessions.length === 0) {
     return <p className="iswc-note">No sessions match the selected rooms.</p>;
@@ -181,10 +203,6 @@ export const Schedule = () => {
  
             </p>
 
-
-      <p className="iswc-note">
-      
-      </p>
 
       {/* Day switcher */}
       <div className="iswc-schedule__days" role="group" aria-label="Select a day">
