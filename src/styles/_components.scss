@@ -1253,23 +1253,104 @@ $iswc-grid-row-height: 7rem;
 // -----------------------------------------------------------------------------
 // News list
 // -----------------------------------------------------------------------------
-.iswc-news__item {
-  border-left: 4px solid $iswc-muted;
-  padding-left: 1rem;
-  margin-bottom: 1.25rem;
+.iswc-news {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
-  &--latest {
-    border-left-color: $iswc-secondary;
+// Each item is a timeline entry: a marker dot on a vertical line, with the
+// date, text and optional link to its right.
+.iswc-news__item {
+  position: relative;
+  padding: 0 0 1.5rem 1.85rem;
+
+  // The connecting line runs from this item's marker down to the next.
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0.34rem;
+    top: 0.5rem;
+    bottom: 0;
+    width: 2px;
+    background: rgba($iswc-secondary, 0.14);
   }
+
+  &:last-child {
+    padding-bottom: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.iswc-news__marker {
+  position: absolute;
+  left: 0;
+  top: 0.35rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background: $iswc-muted;
+  // A ring in the surface colour lifts the dot cleanly off the line.
+  box-shadow: 0 0 0 4px $iswc-surface;
+}
+
+.iswc-news__item--latest .iswc-news__marker {
+  background: $iswc-primary;
+  box-shadow: 0 0 0 4px rgba($iswc-primary, 0.2);
 }
 
 .iswc-news__date {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
+  font-weight: 600;
   color: $iswc-secondary;
-  margin-bottom: 0.15rem;
+  margin-bottom: 0.2rem;
+}
+
+.iswc-news__pill {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #fff;
+  background: $iswc-primary;
+  padding: 0.1rem 0.5rem;
+  border-radius: 2rem;
+}
+
+.iswc-news__text {
+  margin: 0;
+  color: $iswc-ink;
+  line-height: 1.5;
+}
+
+.iswc-news__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-top: 0.35rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: $iswc-link;
+  text-decoration: none;
+
+  span {
+    transition: transform 0.15s ease;
+  }
+
+  &:hover,
+  &:focus-visible {
+    color: $iswc-link-hover;
+
+    span {
+      transform: translateX(3px);
+    }
+  }
 }
 
 // -----------------------------------------------------------------------------
