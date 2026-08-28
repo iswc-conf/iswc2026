@@ -57,7 +57,7 @@ export const sponsorTiers = [
       { name: "eBay", logo: EBAY, link: "https://www.ebay.com", width: 600 },
       { name: "Graphwise", logo: GRAPHWISE, link: "https://graphwise.ai", width: 600 },
       { name: "Artificial Intelligence Journal", logo: AIJ, link: "https://www.elsevier.com/locate/artint", width: 600 },
-      { name: "Lore Star", logo: LORE, link: "https://graphwise.ai", width: 600 },
+      { name: "Lore Star", logo: LORE, link: "https://lorestar.it", width: 600 },
     ],
   },
   {
