@@ -10,6 +10,7 @@ import { researchTrack } from "./data/accepted/researchTrack";
 import { resourceTrack } from "./data/accepted/resourceTrack";
 import { inuseTrack } from "./data/accepted/inuseTrack";
 import { industryTrack } from "./data/accepted/industryTrack";
+import { visionaryTrack } from "./data/accepted/visionaryTrack";
 import { posters } from "./data/accepted/posters";
 import { demos } from "./data/accepted/demos";
 import LNCS_LOGO from "../../assets/logos/springer_lncs.png";
@@ -30,6 +31,7 @@ const TRACKS = [
   { id: "resource", label: "Resource Track", data: resourceTrack, available: true },
   { id: "in-use", label: "In Use Track", data: inuseTrack, available: true },
   { id: "industry", label: "Industry Track", data: industryTrack, available: true },
+  { id: "visionary", label: "Visionary Ideas Track", data: visionaryTrack, available: true },
   { id: "posters", label: "Posters", data: posters, available: true },
   { id: "demos", label: "Demos", data: demos, available: true },
 ];

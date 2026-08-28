@@ -82,7 +82,7 @@ export const importantDates = [
     label: "Visionary Ideas track full paper submission",
     kind: "submission",
   },
-  { date: "2026-08-03", label: "Doctoral Consortium track camera-ready", kind: "cameraready" },
+ 
   { date: "2026-08-04", label: "Industry track notification", kind: "notification" },
   {
     date: "2026-08-06",
@@ -98,8 +98,9 @@ export const importantDates = [
   { date: "2026-08-26", label: "Visionary Ideas track notification", kind: "notification" },
 
   { date: "2026-09-01", label: "Visionary Ideas track camera-ready", kind: "cameraready" },
-  { date: "2026-09-04", label: "Posters and Demos track camera-ready", kind: "cameraready" },
+  { date: "2026-09-11", label: "Posters and Demos track camera-ready", kind: "cameraready" },
   { date: "2026-09-11", label: "Industry track camera-ready", kind: "cameraready" },
+  { date: "2026-09-11", label: "Doctoral Consortium track camera-ready", kind: "cameraready" },
 
   { date: "2026-10-25", endDate: "2026-10-26", label: "Workshop days", kind: "event" },
   { date: "2026-10-25", endDate: "2026-10-26", label: "Tutorial days", kind: "event" },

@@ -168,7 +168,7 @@ const organizers = {
   ],
   "Poster, Demo & Lightning Talk Chairs": [
     {
-      name: 'Jaoyan Chen',
+      name: 'Jiaoyan Chen',
       img: Jiaoyan_Chen,
       institution: 'University of Manchester',
       country: 'UK',
@@ -189,7 +189,7 @@ const organizers = {
       country: 'UK',
     },
   {
-      name: 'Shengui Wang',
+      name: 'Shenghui Wang',
       img: Shenghui_Wang,
       institution: 'University of Twente',
       country: 'NL'

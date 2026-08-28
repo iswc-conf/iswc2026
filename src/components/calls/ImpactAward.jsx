@@ -22,9 +22,11 @@ export const ImpactAward = () => {
     return (
         <BaseContainer>
 
-            <Header>SWSA Impact Award</Header>
+            <Header><s>SWSA Impact Award</s></Header>
             <SubTitle>The Semantic Web Science Association Impact Award</SubTitle>
 
+            <p className="iswc-callout"><b>The SWSA committee did not reach agreement to confer the inaugural ISWC Impact Award in 2026. It will be presented for the first time at ISWC 2027.</b></p>
+<s>
             <p>The focus of this award is to recognise and celebrate <b>contributions</b> made possible by the Semantic Web that have delivered an exemplary <b>positive impact on broader society</b>.</p>
 
             <p>See more at <ExternalLInk href="https://swsa.semanticweb.org/awards/swsa-impact-award/">SWSA Impact Award Official Page</ExternalLInk></p>
@@ -48,9 +50,9 @@ If you wish to promote a third-party contribution, we highly encourage you to ra
 
 <ExternalLInk href="https://swsa.semanticweb.org/awards/swsa-impact-award/">SWSA Impact Award Official Page</ExternalLInk>
 
-The winner for 2026 will be announced at ISWC 2026. The award includes certificates, a free registration to ISWC 2026, and an opportunity to give a talk on the contribution at the conference.</p>
+<s>The winner for 2026 will be announced at ISWC 2026.</s> The award includes certificates, a free registration to ISWC 2026, and an opportunity to give a talk on the contribution at the conference.</p>
 
-
+</s>
 
 
             

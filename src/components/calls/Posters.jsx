@@ -21,7 +21,7 @@ export const Posters = () => {
 
                     <li>Posters & demos submissions due:<b>	July 24th, 2026</b></li>
                     <li>Author notifications:<b> August 21th, 2026</b> </li>
-                    <li>Camera-ready submissions due:<b>	September 4th, 2026</b></li>
+                    <li>Camera-ready submissions due: <s>September 4th, 2026</s> <b>September 11, 2026	</b></li>
 
                 </ul>
                         <p>

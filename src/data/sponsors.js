@@ -21,7 +21,8 @@ import RELAI from "../components/sponsorship/assets/SILVER/RELAI.png";
 import SIEMENS from "../components/sponsorship/assets/SILVER/SIEMENS.png";
 import GRAPHWISE from "../components/sponsorship/assets/SILVER/GRAPHWISE.png";
 import LNCS from "../components/sponsorship/assets/BRONZE/LNCS.jpg";
-
+import LORE from "../components/sponsorship/assets/SILVER/LORE_STAR.png";
+import AIJ from "../components/sponsorship/assets/SILVER/AIJ.jpeg";
 
 /** Ordered list of tiers, each with its sponsors. Drives every sponsor view. */
 export const sponsorTiers = [
@@ -55,6 +56,8 @@ export const sponsorTiers = [
       { name: "Relational-AI", logo: RELAI, link: "https://www.relational.ai", width: 600 },
       { name: "eBay", logo: EBAY, link: "https://www.ebay.com", width: 600 },
       { name: "Graphwise", logo: GRAPHWISE, link: "https://graphwise.ai", width: 600 },
+      { name: "Artificial Intelligence Journal", logo: AIJ, link: "https://graphwise.ai", width: 600 },
+      { name: "Lore Star", logo: LORE, link: "https://graphwise.ai", width: 600 },
     ],
   },
   {

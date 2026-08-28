@@ -42,7 +42,7 @@ export const DoctoralConsortium = () => {
                     <li>Submission due<b>	June 1, 2026</b></li>
                     <li>Notifications<b> July 6, 2026</b> </li>
                     <li>Revised Version Addressing Reviewers’ Feedback<b>	July 27, 2026</b></li>
-                    <li>Camera-ready Submissions Due <b>August 3, 2026</b></li>
+                    <li>Camera-ready Submissions Due <s>August 3, 2026</s> <b>September 11, 2026</b></li>
                     <li>Doctoral Consortium <b>October 26, 2026</b></li>
 
                 </ul>
