@@ -426,6 +426,23 @@ a:focus-visible .iswc-external-link__icon {
   backdrop-filter: blur(10px);
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   overflow: hidden;
+
+  // Logos fade in/out at the edges instead of hard-cutting — reinforces
+  // the sense that the list continues beyond the viewport.
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 6%,
+    #000 94%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 6%,
+    #000 94%,
+    transparent
+  );
 }
 
 .iswc-marquee__label {
@@ -445,8 +462,21 @@ a:focus-visible .iswc-external-link__icon {
   width: max-content;
   animation: iswc-marquee-scroll 55s linear infinite;
   will-change: transform;
+
+  // Space between the two rows.
+  & + & {
+    margin-top: 1rem;
+  }
 }
 
+// Second row runs the same animation backwards. Slightly different duration
+// so the two rows don't feel mechanically locked together.
+.iswc-marquee__track--right {
+  animation-direction: reverse;
+  animation-duration: 65s;
+}
+
+// Pause both rows on hover.
 .iswc-marquee:hover .iswc-marquee__track {
   animation-play-state: paused;
 }

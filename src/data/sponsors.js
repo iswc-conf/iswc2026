@@ -18,11 +18,15 @@ import DATATREEHOUSE from "../components/sponsorship/assets/GOLD/DATATREEHOUSE.s
 import ACCENTURE from "../components/sponsorship/assets/GOLD/accenture.png";
 import EBAY from "../components/sponsorship/assets/SILVER/EBAY.png";
 import RELAI from "../components/sponsorship/assets/SILVER/RELAI.png";
+import SERVICE from "../components/sponsorship/assets/SILVER/SERVICE.png";
 import SIEMENS from "../components/sponsorship/assets/SILVER/SIEMENS.png";
 import GRAPHWISE from "../components/sponsorship/assets/SILVER/GRAPHWISE.png";
 import LNCS from "../components/sponsorship/assets/BRONZE/LNCS.jpg";
 import LORE from "../components/sponsorship/assets/SILVER/LORE_STAR.png";
 import AIJ from "../components/sponsorship/assets/SILVER/AIJ.jpeg";
+import ATOMIC from "../components/sponsorship/assets/PLATINUM/ATOMIC.png";
+import JP from "../components/sponsorship/assets/GOLD/JP.png";
+import SNOW from "../components/sponsorship/assets/PLATINUM/SNOW.png";
 
 /** Ordered list of tiers, each with its sponsors. Drives every sponsor view. */
 export const sponsorTiers = [
@@ -34,7 +38,9 @@ export const sponsorTiers = [
       { name: "Tentris", logo: TENTRIS, link: "https://tentris.io", width: 1000 },
       { name: "S&P Global", logo: SPS, link: "https://www.spglobal.com/en", width: 600 },
       { name: "Metaphacts / Digital Science", logo: METAPACT, link: "https://metaphacts.com", width: 600 },
-      { name: "SAP", logo: SAP, link: "https://sap.com", width: 600 }
+      { name: "SAP", logo: SAP, link: "https://sap.com", width: 600 },
+      { name: "ATOMIC", logo: ATOMIC, link: "https://atomic.dev", width: 600 , dark:true},
+       { name: "Snowflake", logo: SNOW, link: "https://www.snowflake.com/", width: 600 , },
     ],
   },
   {
@@ -45,6 +51,7 @@ export const sponsorTiers = [
       { name: "Google", logo: GOOGLE, link: "https://google.com", width: 800 },
       { name: "Data Treehouse", logo: DATATREEHOUSE, link: "https://www.data-treehouse.com", width: 600 },
       { name: "Accenture", logo: ACCENTURE, link: "https://www.accenture.com", width: 600 },
+      { name: "JPMC", logo: JP, link: "https://www.jpmorganchase.com", width: 600 , dark: true},
     ],
   },
   {
@@ -58,6 +65,7 @@ export const sponsorTiers = [
       { name: "Graphwise", logo: GRAPHWISE, link: "https://graphwise.ai", width: 600 },
       { name: "Artificial Intelligence Journal", logo: AIJ, link: "https://www.elsevier.com/locate/artint", width: 600 },
       { name: "Lore Star", logo: LORE, link: "https://lorestar.it", width: 600 },
+       { name: "ServiceNow", logo: SERVICE, link: "https://www.servicenow.com", width: 600 },
     ],
   },
   {

@@ -5,13 +5,20 @@ import Header from "../general/Header";
 
 import { sponsorTiers } from "../../data/sponsors";
 
-const SponsorCard = ({ name, logo, link, width = 300 }) => {
+const SponsorCard = ({ name, logo, link, width = 300, dark = false }) => {
   const content = (
     <img
       src={logo}
       alt={`${name} Logo`}
       className="iswc-sponsor-logo"
-      style={{ maxWidth: width }}
+      style={{
+        maxWidth: width,
+        ...(dark && {
+          backgroundColor: "#1a1a1a",
+          padding: "12px 16px",
+          borderRadius: "8px",
+        }),
+      }}
     />
   );
 

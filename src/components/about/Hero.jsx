@@ -10,28 +10,47 @@ const CONFERENCE = {
   venue: "The Nicolaus Hotel, Bari",
 };
 
-/** Continuously scrolling sponsor strip along the bottom of the hero. */
-const SponsorMarquee = ({ sponsors }) => {
-  // The track is duplicated so the -50% keyframe loops seamlessly.
+/** One scrolling row. `direction` is "left" (default) or "right". */
+const MarqueeRow = ({ sponsors, direction = "left" }) => {
+  // Duplicated so the -50% keyframe loops seamlessly.
   const track = [...sponsors, ...sponsors];
+
+  return (
+    <div className={`iswc-marquee__track iswc-marquee__track--${direction}`}>
+      {track.map((sponsor, index) => (
+        <div className="iswc-marquee__item" key={`${sponsor.name}-${index}`}>
+          <img
+            src={sponsor.logo}
+            alt={sponsor.name}
+            loading="lazy"
+            aria-hidden={index >= sponsors.length}
+            style={
+              sponsor.dark
+                ? {
+                    backgroundColor: "#1a1a1a",
+                    padding: "8px 12px",
+                    borderRadius: "6px",
+                  }
+                : undefined
+            }
+          />
+        </div>
+      ))}
+    </div>
+  );
+};
+
+const SponsorMarquee = ({ sponsors }) => {
+  // Split the list so each row carries different logos.
+  const mid = Math.ceil(sponsors.length / 2);
+  const topRow = sponsors.slice(0, mid);
+  const bottomRow = sponsors.slice(mid);
 
   return (
     <div className="iswc-marquee">
       <p className="iswc-marquee__label">Sponsors</p>
-      <div className="iswc-marquee__track">
-        {track.map((sponsor, index) => (
-          <div className="iswc-marquee__item" key={`${sponsor.name}-${index}`}>
-            <img
-              src={sponsor.logo}
-              alt={sponsor.name}
-              loading="lazy"
-              // The first copy carries the accessible name; the duplicate is
-              // decorative, so screen readers don't announce every logo twice.
-              aria-hidden={index >= sponsors.length}
-            />
-          </div>
-        ))}
-      </div>
+      <MarqueeRow sponsors={topRow} direction="left" />
+      <MarqueeRow sponsors={bottomRow} direction="right" />
     </div>
   );
 };
