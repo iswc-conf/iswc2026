@@ -103,6 +103,10 @@ const resourceTrack = [
     title: "Vibes Lore Core: the Aesthetics Knowledge Graph",
     authors: "Silvia Cappa, Anna Sofia Lippolis, Anouk Flinkert, Ekaterina Krasnova, Shiho Nakamura, Andrea Giovanni Nuzzolese and Aldo Gangemi",
   },
+   {
+    title: "SolidSessionBench: Realistic Query Sequences for User-Oriented Decentralized Environments",
+    authors: "Ruben Eschauzier and Ruben Taelman",
+ },
 ];
 
 export { resourceTrack };

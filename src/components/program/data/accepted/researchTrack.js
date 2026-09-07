@@ -203,6 +203,7 @@ const researchTrack = [
     title: "Words Matter: Robust Entity Alignment for Knowledge Graphs via Multi-View Textualization",
     authors: "Hanane Kteich, Gianluca Quercini, Joe Raad and Fatiha Sais",
   },
+
 ];
 
 export { researchTrack };
