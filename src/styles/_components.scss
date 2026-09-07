@@ -351,16 +351,14 @@ a:focus-visible .iswc-external-link__icon {
 // -----------------------------------------------------------------------------
 .iswc-hero {
   position: relative;
-  // Fills the viewport below the navbar without overflowing it.
   min-height: calc(100svh - var(--iswc-navbar-height));
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   text-align: center;
   color: #fff;
   overflow: hidden;
-  padding: 4rem 1.25rem 11rem;
+  padding: 4rem 1.25rem 0; // was 4rem 1.25rem 11rem
 }
 
 .iswc-hero__media {
@@ -386,6 +384,8 @@ a:focus-visible .iswc-external-link__icon {
   position: relative;
   z-index: 1;
   max-width: 60rem;
+  margin-block: auto;   // centers vertically, pushes marquee to the bottom
+  padding-bottom: 2rem; // breathing room before the strip
 }
 
 .iswc-hero__title {
@@ -417,32 +417,18 @@ a:focus-visible .iswc-external-link__icon {
 // Sponsor marquee
 // -----------------------------------------------------------------------------
 .iswc-marquee {
-  position: absolute;
-  inset-inline: 0;
-  bottom: 0;
+  position: relative;   // was: absolute
   z-index: 1;
+  width: 100%;          // replaces inset-inline: 0
+  margin-top: auto;     // pins it to the bottom even if content is short
   padding: 1rem 0 1.75rem;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   overflow: hidden;
 
-  // Logos fade in/out at the edges instead of hard-cutting — reinforces
-  // the sense that the list continues beyond the viewport.
-  -webkit-mask-image: linear-gradient(
-    90deg,
-    transparent,
-    #000 6%,
-    #000 94%,
-    transparent
-  );
-  mask-image: linear-gradient(
-    90deg,
-    transparent,
-    #000 6%,
-    #000 94%,
-    transparent
-  );
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
 }
 
 .iswc-marquee__label {
