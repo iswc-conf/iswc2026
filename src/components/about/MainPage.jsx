@@ -6,7 +6,7 @@ import banner from "../../assets/logos/logo_banner.png";
 
 const MainPage = () => (
   <main id="main-content">
-    <RegistrationBanner />
+    {/* <RegistrationBanner /> */}
     <Hero />
     <About />
   </main>
