@@ -3,6 +3,7 @@ const dags = [
         title: "TAAPAAI: Towards Agendas for Advancing Personal Agentic Artificial Intelligence",
 
         description: "Agentic AI systems—autonomous agents capable of planning, reasoning, and acting on behalf of users—are rapidly transitioning from experimental prototypes to real-world deployments. This shift introduces urgent challenges related to reliability, autonomy, accountability, and governance, particularly as such systems increasingly operate over personal and enterprise data. Personal Knowledge Graphs (PKGs) offer a promising foundation for addressing these issues by enabling explicit, machine-readable representations of context, policies, and provenance. Building on a successful Dagstuhl Seminar and prior TAPAI/TAAPAAI workshop editions at ISWC and ESWC, this workshop aims to consolidate and advance a growing research community focused on PKG-based agentic AI. The workshop will explore emerging architectures, decentralised ecosystems, and governance models for agentic systems grounded in semantic technologies. Adopting a Dagstuhl-style, discussion-led format, the workshop will emphasise collaborative exploration, cross-disciplinary exchange, and the co-creation of shared artefacts. Its primary contribution is to define a research agenda, identify key challenges, and develop a common conceptual foundation for PKG-based agentic AI, positioning the Semantic Web community at the forefront of this rapidly evolving field.",
+        website: "https://taapaai.github.io"
     },
 
     {
