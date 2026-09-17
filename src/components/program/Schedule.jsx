@@ -2,6 +2,7 @@ import React, { useMemo, useState } from "react";
 import Page from "../general/Page";
 import Header from "../general/Header";
 import { SESSION_KINDS, schedule } from "../../data/schedule";
+import ExternalLink from "../general/ExternalLink";
 
 const toMinutes = (t) => {
   const [h, m] = t.split(":").map(Number);
@@ -54,11 +55,17 @@ const SessionEvent = ({ session, left, width }) => {
             className="iswc-agenda__badge"
             style={{ "--kind-color": kind.color }}
           >
-            {kind.label}
+           {kind.label}
           </span>
         )}
       </div>
-      <div className="iswc-agenda__title">{session.title}</div>
+
+       {session.link 
+            ? <div className="iswc-agenda__title"><ExternalLink href={session.link}>{session.title}</ExternalLink></div>
+            : <div className="iswc-agenda__title">{session.title}</div>
+        }
+            
+      
       {session.speaker && (
         <div className="iswc-agenda__speaker">{session.speaker}</div>
       )}
