@@ -14,7 +14,7 @@ export const StudentGrants = () => {
 
                 <p className="iswc-callout">Applications for grants are now <b>closed</b></p>
 
-                <p>If you are a student interested in attending ISWC 2026, you may be eligible to apply for travel grants to support the costs of conference registration, travel, and lodging. This year, travel grants are funded by the Semantic Web Science Association (SWSA).
+                <p>If you are a student interested in attending ISWC 2026, you may be eligible to apply for travel grants to support the costs of conference registration, travel, and lodging. This year, travel grants are funded by the <ExternalLink href="https://swsa.semanticweb.org">Semantic Web Science Association (SWSA)</ExternalLink>, the <ExternalLink href="https://www.nsf.gov">U.S. National Science Foundation</ExternalLink>, and the <ExternalLink href="https://www.sciencedirect.com/journal/artificial-intelligence">Artificial Intelligence Journal</ExternalLink>.
 </p>
 
 <SubHeader>Funding Disclaimer</SubHeader>
