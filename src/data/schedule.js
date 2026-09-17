@@ -63,12 +63,12 @@ export const schedule = [
       { link: "https://dmkg-workshop.github.io/2026/", start: "09:00", end: "18:00", room: "Sez. 5", title: "#2  2nd International Workshop on Data Management for Knowledge Graphs (DMKG 2026)", kind: "workshop" },
 
 
-      { start: "09:00", end: "12:50", room: "Sez. 6", title: "#497  GOOD: GOod Ontologies and how to Develop them", kind: "tutorial" },
-      { start: "14:10", end: "18:00", room: "Sez. 6", title: "#458  OntoLM: Ontology Embedding, Reasoning and Construction with Language Models", kind: "tutorial" },
-      { start: "09:00", end: "12:50", room: "Sez. 7", title: "#501  ARGO: Agentic Retrieval and Graph Orchestration for Document Knowledge Systems", kind: "tutorial" },
-      { start: "14:10", end: "18:00", room: "Sez. 7", title: "#496  Continual Knowledge Graph Embedding: Foundations, Methods, and Open Challenges", kind: "tutorial" },
-      { start: "09:00", end: "12:50", room: "Sez. 8", title: "#486  Shapes for Knowledge Graphs", kind: "tutorial" },
-      { start: "14:10", end: "18:00", room: "Sez. 8", title: "#500  Façade-X Tutorial: Querying Any Format as a Knowledge Graph (FX)", kind: "tutorial" },
+      { link: "http://www.meteck.org/teaching/GOODtutISWC26.html", start: "09:00", end: "12:50", room: "Sez. 6", title: "#497  GOOD: GOod Ontologies and how to Develop them", kind: "tutorial" },
+      { link: "https://huiyang1997.github.io/OntoLM/", start: "14:10", end: "18:00", room: "Sez. 6", title: "#458  OntoLM: Ontology Embedding, Reasoning and Construction with Language Models", kind: "tutorial" },
+      { link: "https://argoiswc.github.io/", start: "09:00", end: "12:50", room: "Sez. 7", title: "#501  ARGO: Agentic Retrieval and Graph Orchestration for Document Knowledge Systems", kind: "tutorial" },
+      { link: "https://gerardponsrecasens.github.io/CKGE-FMOC/", start: "14:10", end: "18:00", room: "Sez. 7", title: "#496  Continual Knowledge Graph Embedding: Foundations, Methods, and Open Challenges", kind: "tutorial" },
+      { link: "https://www.validatingrdf.com/tutorial/iswc2026/", start: "09:00", end: "12:50", room: "Sez. 8", title: "#486  Shapes for Knowledge Graphs", kind: "tutorial" },
+      { link: "https://w3c-facade-x.github.io/iswc2026-tutorial/", start: "14:10", end: "18:00", room: "Sez. 8", title: "#500  Façade-X Tutorial: Querying Any Format as a Knowledge Graph (FX)", kind: "tutorial" },
 
       { link: "https://kg-nesy.github.io/", start: "09:00", end: "18:00", room: "Sala Andromeda", title: "#13  KG-NeSy: The Third Workshop on Knowledge Graphs and Neurosymbolic AI", kind: "workshop" },
 
@@ -77,10 +77,10 @@ export const schedule = [
       { link: "https://sites.google.com/view/semats2026", start: "09:00", end: "12:50", room: "Sala Cigno", title: "#9  SeMatS 2026 Third International Workshop on Semantic Materials Science: Harnessing the Power of Semantic Web Technologies in Materials Science", kind: "workshop" },
       { link: "https://sites.google.com/view/llms4ol2026", start: "14:10", end: "18:00", room: "Sala Cigno", title: "#19  LLMs4OL 2026: Large Language Models for Ontology Learning", kind: "workshop" },
 
-      { start: "11:00", end: "18:00", room: "Pegaso", title: "Multi-dimensional Knowledge Graphs (MKG)", kind: "dag" },
-      { start: "09:00", end: "18:00", room: "Orione", title: "Computational cHallenges fRom hiGhly divErse Data (CHARGED)", kind: "dag" },
+      {link:"https://mkg.infinity-eccch.eu/", start: "11:00", end: "18:00", room: "Pegaso", title: "Multi-dimensional Knowledge Graphs (MKG)", kind: "dag" },
+      {link:"https://dhlab-nl.github.io/charged-workshop/", start: "09:00", end: "18:00", room: "Orione", title: "Computational cHallenges fRom hiGhly divErse Data (CHARGED)", kind: "dag" },
 
-      { start: "09:00", end: "12:50", room: "Auriga (Perseo)", title: "#495  Neural Networks meet Explicit Knowledge Representation: Towards Mechanistic Interpretability and Neuro-symbolic Modeling by-design", kind: "tutorial" },
+      { link: "https://humancentricart.github.io/mechanistic-interpretability-by-design/iswc/index.html", start: "09:00", end: "12:50", room: "Auriga (Perseo)", title: "#495  Neural Networks meet Explicit Knowledge Representation: Towards Mechanistic Interpretability and Neuro-symbolic Modeling by-design", kind: "tutorial" },
       { start: "14:10", end: "15:50", room: "Auriga (Perseo)", title: "#505  Intro to OWL Reasoning with Protégé", kind: "tutorial" },
       { start: "16:20", end: "18:00", room: "Auriga (Perseo)", title: "Doctoral Consortium", kind: "doctoral" },
 
@@ -108,12 +108,12 @@ export const schedule = [
     { link: "https://sites.google.com/view/semiim-2026", start: "14:10", end: "18:00", room: "Sez. 5", title: "#12  Fourth International Workshop on Semantic Industrial Information Modelling (SemIIM)", kind: "workshop" },
 
 
-    { start: "09:00", end: "12:50", room: "Sez. 6", title: "#498  Knowledge Graphs for Data Interoperability with Chimera (KG4DI)", kind: "tutorial" },
-    { start: "14:10", end: "18:00", room: "Sez. 6", title: "#503  VocBench & Co.: Encompassing the Full Data Lifecycle", kind: "tutorial" },
-    { start: "09:00", end: "12:50", room: "Sez. 7", title: "#507  SCOPE - Using SHACL and OWL in Combination for Practical Knowledge Graph Editing", kind: "tutorial" },
+    { link: "https://cefriel.github.io/kg4di/", start: "09:00", end: "12:50", room: "Sez. 6", title: "#498  Knowledge Graphs for Data Interoperability with Chimera (KG4DI)", kind: "tutorial" },
+    { link: "https://vocbench.uniroma2.it/tutorials/iswc-2026", start: "14:10", end: "18:00", room: "Sez. 6", title: "#503  VocBench & Co.: Encompassing the Full Data Lifecycle", kind: "tutorial" },
+    { link: "http://graphwise.ai/iswc2026-workshop-scope", start: "09:00", end: "12:50", room: "Sez. 7", title: "#507  SCOPE - Using SHACL and OWL in Combination for Practical Knowledge Graph Editing", kind: "tutorial" },
     { start: "14:10", end: "18:00", room: "Sez. 7", title: "#506  Unlocking Legal Automation with Semantic Web Technology (ULA-SWeT)", kind: "tutorial" },
-    { start: "09:00", end: "12:50", room: "Sez. 8", title: "#502  Semantic-Aware Partitioning of Property Graphs", kind: "tutorial" },
-    { start: "14:10", end: "18:00", room: "Sez. 8", title: "#504  Personal Knowledge Graphs for LLM-Powered Decentralized Recommendations", kind: "tutorial" },
+    { link: "https://elisjana.github.io/research/iswc2026-tutorial/", start: "09:00", end: "12:50", room: "Sez. 8", title: "#502  Semantic-Aware Partitioning of Property Graphs", kind: "tutorial" },
+    { link: "https://brains-group.github.io/PKG-Recs", start: "14:10", end: "18:00", room: "Sez. 8", title: "#504  Personal Knowledge Graphs for LLM-Powered Decentralized Recommendations", kind: "tutorial" },
 
     { link: "https://sparkworkshop.github.io/", start: "09:00", end: "12:50", room: "Sala Andromeda", title: "#17  SPARK 2026 - First International Workshop on Spatial Intelligence and Reasoning Enabled by Knowledge Graphs and Foundation Models", kind: "workshop" },
     { link: "https://sites.google.com/view/xaikg2026", start: "14:10", end: "18:00", room: "Sala Andromeda", title: "#23  International Workshop on Explainable AI and Knowledge Graphs (XAI+KG)", kind: "workshop" },
@@ -121,10 +121,10 @@ export const schedule = [
     { link: "https://www.omilab.org/activities/events/iswc2026_kgmdse/", start: "14:10", end: "18:00", room: "Sala Cigno", title: "#8  Workshop on Knowledge Graphs and  Model-driven Systems Engineering (KGMDSE)", kind: "workshop" },
 
 
-    { start: "09:00", end: "12:50", room: "Pegaso", title: "Rethinking Data Quality for Generative AI and Knowledge Graphs (ReDQ)", kind: "dag" },
+    { link:"https://redq-workshop.github.io/", start: "09:00", end: "12:50", room: "Pegaso", title: "Rethinking Data Quality for Generative AI and Knowledge Graphs (ReDQ)", kind: "dag" },
     { start: "14:10", end: "18:00", room: "Pegaso", title: "W3C TPAC RDF 1.2 WG", kind: "other" },
     { start: "09:00", end: "12:50", room: "Orione", title: "Semantic Affordances for the Web of Agents: Bridging Multi-Agent Systems, Semantic Web Services, and Agentic AI", kind: "dag" },
-    { start: "14:10", end: "18:00", room: "Orione", title: "Towards Agendas for Advancing Personal Agentic Artificial Intelligence (TAAPAAI)", kind: "dag" },
+    { link: "https://taapaai.github.io", start: "14:10", end: "18:00", room: "Orione", title: "Towards Agendas for Advancing Personal Agentic Artificial Intelligence (TAAPAAI)", kind: "dag" },
     { start: "09:00", end: "18:00", room: "Auriga (Perseo)", title: "Doctoral Consortium", kind: "doctoral" },
 
 
