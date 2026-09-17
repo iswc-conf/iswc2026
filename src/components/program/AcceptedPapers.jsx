@@ -5,14 +5,14 @@ import UnderlineHeader from "../general/UnderlineHeader";
 import ExternalLink from "../general/ExternalLink";
 import PaperTable from "../general/PaperTable";
 
-import { doctoralConsortium } from "./data/accepted/docoralConsortium";
-import { researchTrack } from "./data/accepted/researchTrack";
-import { resourceTrack } from "./data/accepted/resourceTrack";
-import { inuseTrack } from "./data/accepted/inuseTrack";
-import { industryTrack } from "./data/accepted/industryTrack";
-import { visionaryTrack } from "./data/accepted/visionaryTrack";
-import { posters } from "./data/accepted/posters";
-import { demos } from "./data/accepted/demos";
+import { doctoralConsortium } from "../../data/program/accepted/docoralConsortium";
+import { researchTrack } from "../../data/program/accepted/researchTrack";
+import { resourceTrack } from "../../data/program/accepted/resourceTrack";
+import { inuseTrack } from "../../data/program/accepted/inuseTrack";
+import { industryTrack } from "../../data/program/accepted/industryTrack";
+import { visionaryTrack } from "../../data/program/accepted/visionaryTrack";
+import { posters } from "../../data/program/accepted/posters";
+import { demos } from "../../data/program/accepted/demos";
 import LNCS_LOGO from "../../assets/logos/springer_lncs.png";
 import SubHeader from "../general/SubHeader";
 

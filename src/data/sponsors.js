@@ -9,24 +9,24 @@
  * an optional outbound `link`, and a `width` cap (px) for the logo on the
  * Sponsors page. Each tier carries its display `label` and heading `color`.
  */
-import SPS from "../components/sponsorship/assets/PLATINUM/SPS.png";
-import METAPACT from "../components/sponsorship/assets/PLATINUM/METAPACT.png";
-import SAP from "../components/sponsorship/assets/PLATINUM/SAP.png";
-import TENTRIS from "../components/sponsorship/assets/PLATINUM/TENTRIS.png";
-import GOOGLE from "../components/sponsorship/assets/GOLD/GOOGLE.png";
-import DATATREEHOUSE from "../components/sponsorship/assets/GOLD/DATATREEHOUSE.svg";
-import ACCENTURE from "../components/sponsorship/assets/GOLD/accenture.png";
-import EBAY from "../components/sponsorship/assets/SILVER/EBAY.png";
-import RELAI from "../components/sponsorship/assets/SILVER/RELAI.png";
-import SERVICE from "../components/sponsorship/assets/SILVER/SERVICE.png";
-import SIEMENS from "../components/sponsorship/assets/SILVER/SIEMENS.png";
-import GRAPHWISE from "../components/sponsorship/assets/SILVER/GRAPHWISE.png";
-import LNCS from "../components/sponsorship/assets/BRONZE/LNCS.jpg";
-import LORE from "../components/sponsorship/assets/SILVER/LORE_STAR.png";
-import AIJ from "../components/sponsorship/assets/SILVER/AIJ.jpeg";
-import ATOMIC from "../components/sponsorship/assets/PLATINUM/ATOMIC.png";
-import JP from "../components/sponsorship/assets/GOLD/JP.png";
-import SNOW from "../components/sponsorship/assets/PLATINUM/SNOW.png";
+import SPS from "./sponsors/PLATINUM/SPS.png";
+import METAPACT from "./sponsors/PLATINUM/METAPACT.png";
+import SAP from "./sponsors/PLATINUM/SAP.png";
+import TENTRIS from "./sponsors/PLATINUM/TENTRIS.png";
+import GOOGLE from "./sponsors/GOLD/GOOGLE.png";
+import DATATREEHOUSE from "./sponsors/GOLD/DATATREEHOUSE.svg";
+import ACCENTURE from "./sponsors/GOLD/accenture.png";
+import EBAY from "./sponsors/SILVER/EBAY.png";
+import RELAI from "./sponsors/SILVER/RELAI.png";
+import SERVICE from "./sponsors/SILVER/SERVICE.png";
+import SIEMENS from "./sponsors/SILVER/SIEMENS.png";
+import GRAPHWISE from "./sponsors/SILVER/GRAPHWISE.png";
+import LNCS from "./sponsors/BRONZE/LNCS.jpg";
+import LORE from "./sponsors/SILVER/LORE_STAR.png";
+import AIJ from "./sponsors/SILVER/AIJ.jpeg";
+import ATOMIC from "./sponsors/PLATINUM/ATOMIC.png";
+import JP from "./sponsors/GOLD/JP.png";
+import SNOW from "./sponsors/PLATINUM/SNOW.png";
 
 /** Ordered list of tiers, each with its sponsors. Drives every sponsor view. */
 export const sponsorTiers = [

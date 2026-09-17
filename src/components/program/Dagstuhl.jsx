@@ -4,7 +4,7 @@ import BaseContainer from "../general/BaseContainer";
 import Header from "../general/Header";
 import DescriptiveTable from "../general/DescriptiveTable";
 import DeclareSoon from "../general/declareSoon";
-import { dags } from "./data/dagshtul";
+import { dags } from "../../data/program/dagshtul";
 
 export const DagstuhlWorkshops = () => {
 

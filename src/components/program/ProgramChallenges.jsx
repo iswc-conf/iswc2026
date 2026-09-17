@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useRef} from "react";
-import { challenges } from "./data/challenges";
+import { challenges } from "../../data/program/challenges";
 import BaseContainer from "../general/BaseContainer";
 import Header from "../general/Header";
 import DescriptiveTable from "../general/DescriptiveTable";

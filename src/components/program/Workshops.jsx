@@ -3,7 +3,7 @@ import { useState, useRef } from "react";
 import DescriptiveTable from "../general/DescriptiveTable";
 import BaseContainer from "../general/BaseContainer";
 import Header from "../general/Header"
-import { workshops } from "./data/workshops";
+import { workshops } from "../../data/program/workshops";
 import DeclareSoon from "../general/declareSoon";
 import SubHeader from "../general/SubHeader";
 

@@ -11,10 +11,10 @@
  *              biographies break up rather than running as one block.
  * link         Optional { href, label } for a homepage or profile.
  */
-import jim from "../components/program/data/keynote_speaker/jim.jpeg";
-import harmelen from "../components/program/data/keynote_speaker/hermelen.jpg";
-import tara from "../components/program/data/keynote_speaker/tara.png";
-import toni from "../components/program/data/keynote_speaker/Toni.jpg";
+import jim from "./program/keynote_speaker/jim.jpeg";
+import harmelen from "./program/keynote_speaker/hermelen.jpg";
+import tara from "./program/keynote_speaker/tara.png";
+import toni from "./program/keynote_speaker/Toni.jpg";
 
 export const keynotes = [
   {
