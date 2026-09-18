@@ -205,7 +205,11 @@ export const Schedule = () => {
       <Header>Schedule</Header>
 
 
-      
+            <p className="iswc-callout">
+            This is a draft schedule and may still change.  Room assignment can be subject to changes. All times are local (CEST).
+ 
+            </p>
+
 
       {/* Day switcher */}
       <div className="iswc-schedule__days" role="group" aria-label="Select a day">
