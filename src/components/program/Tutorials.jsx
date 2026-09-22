@@ -1,7 +1,6 @@
 import React from "react";
 import { useState, useRef } from "react";
 import { tutorials } from "../../data/program/tutorial";
-import { sponsored_tutorials } from "./data/sponsoredtutorial";
 import BaseContainer from "../general/BaseContainer";
 import Header from "../general/Header";
 import DescriptiveTable from "../general/DescriptiveTable";
