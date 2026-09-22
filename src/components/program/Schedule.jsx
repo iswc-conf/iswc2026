@@ -206,7 +206,6 @@ export const Schedule = () => {
 
 
 
-
       {/* Day switcher */}
       <div className="iswc-schedule__days" role="group" aria-label="Select a day">
         {schedule.map((d) => (
