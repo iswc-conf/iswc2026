@@ -11,10 +11,15 @@ import { Link } from "react-router-dom";
  */
 const NEWS = [
   {
+    date: "October 1, 2026",
+    text: "Bike Ride informations are now available!",
+    to: "/bikeride",
+    latest: true,
+  },
+  {
     date: "August 26, 2026",
     text: "Accepted Posters, Demos, and Doctoral Consortium papers are now available.",
     to: "/program/acceptedpapers",
-    latest: true,
   },
   { date: "July 22, 2026", text: "Accepted Tutorials are now available." },
   { date: "March 17, 2026", text: "The CFP is now available for the Industry Track." },

@@ -75,6 +75,10 @@ const Tourism = lazy(() =>
   import("./components/attending/Tourism").then((m) => ({ default: m.Tourism }))
 );
 
+const Bike = lazy(() =>
+  import("./components/attending/Bike").then((m) => ({ default: m.Bike }))
+);
+
 /* Organization */
 const Committees = lazy(() => import("./components/organization/organizing_committee"));
 const ProgramCommitee = lazy(() => import("./components/organization/program_commitee"));
@@ -196,6 +200,7 @@ export default function App() {
           <Route path="/attending/childcare" element={<Childcare />} />
           <Route path="/attending/studentgrants" element={<StudentGrants />} />
           <Route path="/tourism" element={<Tourism />} />
+          <Route path="/bikeride" element={<Bike />} />
 
           {/* Organization */}
           <Route path="/organizing_committee" element={<Committees />} />

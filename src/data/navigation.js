@@ -134,7 +134,17 @@ export const navigation = [
     ],
   },
 
-  { label: "Tourism", to: "/tourism" },
+
+  {
+    label: "Tourism",
+    items: [
+      { type: "header", label: "Available" },
+      { label: "Tourism in Apulia", to: "/tourism" },
+      { label: "Bike Ride", to: "/bikeride", badge: "NEW",},
+    ],
+  },
+
+
 
 
   // Blogs are kept out of the menu for 2026 but the routes still exist.

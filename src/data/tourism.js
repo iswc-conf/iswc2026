@@ -99,6 +99,18 @@ export const dayTrips = [
   },
 ];
 
+
+/** Every image in ./bike/photos, sorted by filename. */
+const bikeImages = import.meta.glob("./bike/photos/*.{jpg,jpeg,png,webp,avif}", {
+  eager: true,
+  import: "default",
+});
+
+export const bikePhotos = Object.keys(bikeImages)
+  .sort()
+  .map((path) => ({ src: bikeImages[path], alt: "" }));
+
+  
 /** Romanesque cathedral towns within reach of Bari. */
 export const cathedrals = [
   {
