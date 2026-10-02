@@ -77,7 +77,7 @@ export const schedule = [
       { link: "https://sites.google.com/view/semats2026", start: "09:00", end: "12:50", room: "Sala Cigno", title: "SeMatS 2026 Third International Workshop on Semantic Materials Science: Harnessing the Power of Semantic Web Technologies in Materials Science", kind: "workshop" },
       { link: "https://sites.google.com/view/llms4ol2026", start: "14:10", end: "18:00", room: "Sala Cigno", title: "LLMs4OL 2026: Large Language Models for Ontology Learning", kind: "workshop" },
 
-      {link:"https://mkg.infinity-eccch.eu/", start: "11:00", end: "18:00", room: "Pegaso", title: "Multi-dimensional Knowledge Graphs (MKG)", kind: "dag" },
+      {link:"https://mkg.infinity-eccch.eu/", start: "10:00", end: "18:00", room: "Pegaso", title: "Multi-dimensional Knowledge Graphs (MKG)", kind: "dag" },
       {link:"https://dhlab-nl.github.io/charged-workshop/", start: "09:00", end: "18:00", room: "Orione", title: "Computational cHallenges fRom hiGhly divErse Data (CHARGED)", kind: "dag" },
 
       { link: "https://humancentricart.github.io/mechanistic-interpretability-by-design/iswc/index.html", start: "09:00", end: "12:50", room: "Auriga (Perseo)", title: "Neural Networks meet Explicit Knowledge Representation: Towards Mechanistic Interpretability and Neuro-symbolic Modeling by-design", kind: "tutorial" },
