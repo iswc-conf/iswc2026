@@ -3,6 +3,25 @@ import Page from "../general/Page";
 import Header from "../general/Header";
 import { SESSION_KINDS, schedule } from "../../data/schedule";
 import ExternalLink from "../general/ExternalLink";
+import { slots } from "../../data/slots";
+import UnderlineHeader from "../general/UnderlineHeader";
+
+// Default length of one presentation, per track. Shown as a table at the top
+// of the page and used to total up each slot in the "Slots" section.
+const TRACK_SLOT_MINUTES = [
+  { track: "Research", minutes: 22 },
+  { track: "Resource", minutes: 22 },
+  { track: "In Use", minutes: 22 },
+  { track: "Visionary", minutes: 15 },
+  { track: "Industry", minutes: 10 },
+];
+
+// The spreadsheet writes "In-Use", the table "In Use" — compare loosely.
+const trackKey = (t) => t.toLowerCase().replace(/[^a-z]/g, "");
+const MINUTES_BY_TRACK = Object.fromEntries(
+  TRACK_SLOT_MINUTES.map(({ track, minutes }) => [trackKey(track), minutes])
+);
+const paperMinutes = (paper) => MINUTES_BY_TRACK[trackKey(paper.track)] ?? 0;
 
 const toMinutes = (t) => {
   const [h, m] = t.split(":").map(Number);
@@ -356,6 +375,115 @@ const DayColumns = ({ day, visibleRooms }) => {
   );
 };
 
+// Page sections the table of contents jumps to. The ids are looked up and
+// scrolled to in code rather than linked as `#anchors`, because HashRouter
+// owns the URL hash (same approach as the accepted-papers track index).
+const SECTIONS = [
+  { id: "schedule-programme", label: "Schedule" },
+  { id: "schedule-track-lengths", label: "Track lengths" },
+  { id: "schedule-slots", label: "Slots", count: slots.length },
+];
+
+const scrollToSection = (id) =>
+  document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+
+const Contents = () => (
+  <nav className="iswc-track-index" aria-label="On this page">
+    {SECTIONS.map(({ id, label, count }) => (
+      <button
+        type="button"
+        key={id}
+        className="iswc-track-index__item"
+        // The pill's tight right padding is sized for a count badge; even it
+        // out when there is none.
+        style={count == null ? { paddingRight: "1rem" } : undefined}
+        onClick={() => scrollToSection(id)}
+      >
+        {label}
+        {count != null && (
+          <span className="iswc-track-index__count">{count}</span>
+        )}
+      </button>
+    ))}
+  </nav>
+);
+
+const TrackLengths = () => (
+  <table className="iswc-info-table iswc-info-table--labels">
+    <thead>
+      <tr>
+        <th scope="col">Track</th>
+        <th scope="col">Default slot length (min)</th>
+      </tr>
+    </thead>
+    <tbody>
+      {TRACK_SLOT_MINUTES.map(({ track, minutes }) => (
+        <tr key={track}>
+          <td>{track}</td>
+          <td>{minutes}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+);
+
+// One table per slot. `slots` comes from the "SortedSubmissionsGroups" sheet
+// (see scripts/build-slots.mjs) already grouped by group id; both the slots
+// and the papers inside them are rendered in the sheet's order — no sorting
+// happens here.
+const Slots = () => (
+  <section id="schedule-slots" className="iswc-track">
+    <h2 className="iswc-rule-heading">Slots</h2>
+
+    {slots.length === 0 && (
+      <p className="iswc-note">The paper slots will be announced soon.</p>
+    )}
+
+    {slots.map((slot) => {
+      const minutes = slot.papers.reduce((sum, p) => sum + paperMinutes(p), 0);
+      // A slot that mixes topics says which paper belongs to which.
+      const mixed = slot.topics.length > 1;
+
+      return (
+        <div key={slot.id}>
+          <h3 className="iswc-subheading">Slot {slot.id}</h3>
+
+          <div className="iswc-table-scroll">
+            <table className="iswc-info-table">
+              <caption className="iswc-info-table__caption">
+                {slot.topics.join(" · ")} — {slot.papers.length} papers
+                {minutes > 0 && `, ${minutes} min`}
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Paper</th>
+                  <th scope="col">Track</th>
+                  {mixed && <th scope="col">Topic</th>}
+                </tr>
+              </thead>
+              <tbody>
+                {slot.papers.map((paper) => (
+                  <tr key={paper.id}>
+                    <td>
+                      <span className="iswc-table__id">#{paper.id}</span>
+                      <span className="iswc-table__title">{paper.title}</span>
+                      <div className="iswc-agenda__speaker">{paper.authors}</div>
+                    </td>
+                    <td>
+                      <span className="iswc-table__tag">{paper.track}</span>
+                    </td>
+                    {mixed && <td>{paper.topic}</td>}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      );
+    })}
+  </section>
+);
+
 export const Schedule = () => {
   const [activeId, setActiveId] = useState(schedule[0]?.id);
   const day = schedule.find((d) => d.id === activeId) ?? schedule[0];
@@ -367,7 +495,9 @@ export const Schedule = () => {
     return (
       <Page width="wide">
         <Header>Schedule</Header>
+        
         <p className="iswc-note">The schedule will be published here soon.</p>
+        <Slots />
       </Page>
     );
   }
@@ -387,7 +517,12 @@ export const Schedule = () => {
   return (
     <Page width="wide">
       <Header>Schedule</Header>
-    
+
+      <Contents />
+
+      {/* `iswc-track` gives each jump target the scroll margin that clears
+          the sticky navbar. */}
+      <section id="schedule-programme" className="iswc-track">
       <p className="iswc-callout">
         <b>Programme correct at time of publication.</b> Minor changes may occur; see this page for updates.
       </p>
@@ -454,6 +589,14 @@ export const Schedule = () => {
       {day.note && <p className="iswc-callout">{day.note}</p>}
 
       <DayView day={day} visibleRooms={visibleRooms} />
+      </section>
+
+      <section id="schedule-track-lengths" className="iswc-track">
+        <UnderlineHeader>Track Lengths</UnderlineHeader>
+        <TrackLengths />
+      </section>
+
+      <Slots />
     </Page>
   );
 };
