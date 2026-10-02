@@ -33,6 +33,11 @@ export const SESSION_KINDS = {
   dag: {label: "Dagstuhl-style", color: "#ca7d7d"},
   break: {label: "Break", color: "#b0b0b0"},
   other: {label: "Other", color: "#8a8803"},
+  ceremony: {label: "Ceremony", color: "#9800a3"},
+  keynote: {label: "Keynote", color: "#41a300"},
+  parallel: { label: "Parallel", color:"#8693c0"},
+  poster: { label: "Town", color:"#86c0b8"},
+
 };
 
 // -----------------------------------------------------------------------------
@@ -134,29 +139,100 @@ export const schedule = [
     id: "2026-10-27",
     label: "Tuesday, 27 October 2026",
     subtitle: "Conference Day 3",
-    rooms: ["Sez. 1", "Sez. 2", "Sez. 3", "Sez. 4", "Sez. 5", "Sez. 6", "Sez. 7", "Sez. 8", "Sala Andromeda", "Sala Cigno", "Pegaso", "Orione", "Auriga (Perseo)"],
+    dayEnd: "21:00",
+    rooms: ["Room 1", "Room 2", "Room 3", "Room 4"],
 
     sessions: [
+    {start: "08:45", end: "09:15", rooms: ["Room 1", "Room 2", "Room 3", "Room 4"], title: "Opening Ceremony", kind: "ceremony"},
+    {start: "09:15", end: "10:15", rooms: ["Room 1", "Room 2", "Room 3", "Room 4"], title: "Keynote 1", kind: "keynote"},
+    {start: "10:15", end: "10:45", rooms: ["Room 1", "Room 2", "Room 3", "Room 4"], title: "Coffee Break", kind: "break"},
+    
+    {start: "10:45", end: "12:15", room: "Room 1", title: "Slot 1: Research (3), Resource (1), Dynamic and Streaming Knowledge Graphs, Querying, and Provenance", kind: "parallel"},
+    {start: "10:45", end: "12:15", room: "Room 2", title: "Slot 6: Research (2), Resource(1), In-Use (1) SLOT 6 Knowledge Graph Learning and Temporal Reasoning", kind: "parallel"},
+    {start: "10:45", end: "12:15", room: "Room 3", title: "Slot 10 Research (1), Resource (2), In-Use (1)  Ontology-Driven Modeling, Integration, and Workflows", kind: "parallel"},
+    {start: "10:45", end: "12:15", room: "Room 4", title: "Research (2), Resource (1), In Use (1) SLOT 9  LLMs and Agentic AI for Knowledge Graphs", kind: "parallel"},
+ 
+    {start: "12:15", end: "13:45", rooms: ["Room 1", "Room 2", "Room 3", "Room 4"], title: "Lunch", kind: "break"},
 
-    ],
+    {start: "13:45", end: "15:15", room: "Room 1", title: "Slot 2: Research (3),  Resource (1)  Knowledge Graph Alignment, Evolution, and Temporal Forecasting", kind: "parallel"},
+    {start: "13:45", end: "15:15", room: "Room 2", title: "Slot 7: Research (1), Resource (3), Knowledge graphs and alignment", kind: "parallel"},
+    {start: "13:45", end: "15:15", room: "Room 3", title: "Journal Papers from TDKG", kind: "parallel"},
+    {start: "13:45", end: "15:15", room: "Room 4", title: "Journal Papers from SWJ", kind: "parallel"},
+
+    {start: "15:15", end: "15:45", rooms: ["Room 1", "Room 2", "Room 3", "Room 4"], title: "Coffee Break", kind: "break"},
+    {start: "15:45", end: "17:15", rooms: ["Room 1", "Room 2", "Room 3", "Room 4"], title: "Keynote 3", kind: "keynote"},
+
+    {start: "17:15", end: "18:25", rooms: ["Room 1", "Room 2", "Room 3", "Room 4"], title: "Minute Madness", kind: "parallel"},
+    
+    {start: "18:25", end: "19:00", rooms: ["Room 1", "Room 2", "Room 3", "Room 4"], title: "Buffer", kind: ""},
+
+    {start: "19:00", end: "21:00", rooms: ["Room 1", "Room 2", "Room 3", "Room 4"], title: "Poster and Demos", kind: "parallel"},
+
+
+  ],
   },
     {
     id: "2026-10-28",
     label: "Wednesday, 28 October 2026",
     subtitle: "Conference Day 4",
-    rooms: ["Sez. 1", "Sez. 2", "Sez. 3", "Sez. 4", "Sez. 5", "Sez. 6", "Sez. 7", "Sez. 8", "Sala Andromeda", "Sala Cigno", "Pegaso", "Orione", "Auriga (Perseo)"],
+    dayEnd: "18:00",
+    rooms: ["Room 1", "Room 2", "Room 3", "Room 4"],
 
     sessions: [
+    {start: "09:00", end: "10:00", rooms: ["Room 1", "Room 2", "Room 3", "Room 4"], title: "Keynote 2", kind: "keynote"},
+    {start: "10:00", end: "10:30", rooms: ["Room 1", "Room 2", "Room 3", "Room 4"], title: "Coffee Break", kind: "break"},
+    
+    {start: "10:30", end: "12:00", room: "Room 1", title: "Slot 4: Research 2, Resource 1, In-Use 1 - Federation, Alignment, and Semantic Interoperability", kind: "parallel"},
+    {start: "10:30", end: "12:00", room: "Room 2", title: "Slot 8: Research 4 - Robust Knowledge Graph Learning, Construction, and Data Quality", kind: "parallel"},
+    {start: "10:30", end: "12:00", room: "Room 3", title: "Slot 15: Research 2, Resource 2 -  Ontology Engineering, Question Answering and LLMs", kind: "parallel"},
+    {start: "10:30", end: "12:00", room: "Room 4", title: "Industry Papers I 6 papers · 10 min each · 28 min shared discussion/buffer", kind: "parallel"},
+ 
+    {start: "12:00", end: "13:30", rooms: ["Room 1", "Room 2", "Room 3", "Room 4"], title: "Lunch", kind: "break"},
 
-    ],
+    {start: "13:30", end: "15:00", room: "Room 1", title: "Slot 5: Research 3, Resource 1 ·  Graph Languages, Federation, and Provenance", kind: "parallel"},
+    {start: "13:30", end: "15:00", room: "Room 2", title: "Slot 11: Research 2, Resource 1, In-Use 1 - Neurosymbolic reasoning in knowledge graphs", kind: "parallel"},
+    {start: "13:30", end: "15:00", room: "Room 3", title: "Slot 17: Research 3, Resource 1- Ontology Explanation, Mapping, and Validation", kind: "parallel"},
+    {start: "13:30", end: "15:00", room: "Room 4", title: "Industry Papers II 6 papers · 10 min each · panel", kind: "parallel"},
+
+    {start: "15:00", end: "15:30", rooms: ["Room 1", "Room 2", "Room 3", "Room 4"], title: "Coffee Break", kind: "break"},
+
+    {start: "15:30", end: "17:45", room: "Room 1", title: "Slot 21: Research 4, Resource 1, In-Use 1- Uncertain Querying, Knowledge Graph Augmentation, and Data Sharing", kind: "parallel"},
+    {start: "15:30", end: "17:45", room: "Room 2", title: "Slot 13: Research 2, Resource 2, In-Use 2 - Neurosymbolic reasoning and ontologies,", kind: "parallel"},
+    {start: "15:30", end: "17:45", room: "Room 3", title: " Slot 20: Research 5 Resource 1  - Grounded LLMs, Scalable Reasoning, and Privacy, ", kind: "parallel"},
+    {start: "15:30", end: "17:45", room: "Room 4", title: "Slot 3: Research (2), Resource (1), In Use (3)  Scalable Knowledge Graph Query Processing and Optimization,", kind: "parallel"},
+
+
+
+
+  ],
   },
     {
     id: "2026-10-29",
     label: "Thursday, 29 October 2026",
     subtitle: "Conference Day 5",
-    rooms: ["Sez. 1", "Sez. 2", "Sez. 3", "Sez. 4", "Sez. 5", "Sez. 6", "Sez. 7", "Sez. 8", "Sala Andromeda", "Sala Cigno", "Pegaso", "Orione", "Auriga (Perseo)"],
+    dayEnd: "17:00",
+    rooms: ["Room 1", "Room 2", "Room 3", "Room 4"],
 
     sessions: [
+    {start: "09:00", end: "10:00", rooms: ["Room 1", "Room 2", "Room 3", "Room 4"], title: "Keynote 4", kind: "keynote"},
+    {start: "10:00", end: "10:30", rooms: ["Room 1", "Room 2", "Room 3", "Room 4"], title: "Coffee Break", kind: "break"},
+    
+    {start: "10:30", end: "12:00", room: "Room 1", title: "Slot 23: Research 3, Resource 1 - FAIR, Decentralized, and Trustworthy Knowledge Infrastructures", kind: "parallel"},
+    {start: "10:30", end: "12:00", room: "Room 2", title: "Slot 18: Research 3, Resource 1 - Knowledge Graphs for Retrieval, Knowledge Editing, and Adaptive Reasoning", kind: "parallel"},
+    {start: "10:30", end: "12:00", room: "Room 3", title: "Slot 16: Research 3, Resource 1- Ontology Learning, Requirements, and Evaluation", kind: "parallel"},
+    {start: "10:30", end: "12:00", room: "Room 4", title: "Visionary Papers 6 papers · 15 min each", kind: "parallel"},
+
+    {start: "12:00", end: "13:30", rooms: ["Room 1", "Room 2", "Room 3", "Room 4"], title: "Lunch", kind: "break"},
+
+    {start: "13:30", end: "14:40", room: "Room 1", title: "Slot 19: Research 1, Resource 2 - Knowledge Graphs and Ontologies for Domain Applications", kind: "parallel"},
+    {start: "13:30", end: "14:40", room: "Room 2", title: "Slot 24: Resource 2, In-Use 1- Human-Centered Ontology Engineering and Domain Knowledge Graphs", kind: "parallel"},
+    {start: "13:30", end: "14:40", room: "Room 4", title: "Round table about the vision of the 25 years of Semantic Web (60 minutes)", kind: "parallel"},
+
+    {start: "14:40", end: "15:10", rooms: ["Room 1", "Room 2", "Room 3", "Room 4"], title: "Coffee Break", kind: "break"},
+
+    {start: "15:10", end: "16:10", rooms: ["Room 1", "Room 2", "Room 3", "Room 4"], title: "Town Hall", kind: "poster"},
+    {start: "16:10", end: "16:55", rooms: ["Room 1", "Room 2", "Room 3", "Room 4"], title: "Workshop Summary & Closing Ceremony", kind: "ceremony"},
+
 
     ],
   },

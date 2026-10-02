@@ -19,12 +19,12 @@ export const RegistrationBanner = () => {
     <div className="iswc-banner" role="region" aria-label="Registration deadline">
       <div className="iswc-banner__inner">
         <p className="iswc-banner__text">
-          <strong>Early registration closes on {EARLY_DEADLINE}.</strong>{" "}
-          Register now to secure the lower rate.
+          <>Conference Schedule is now Available!</>{" "}
+         
         </p>
 
-        <Link className="iswc-banner__cta" to="/attending/registration">
-          Register now
+        <Link className="iswc-banner__cta" to="/program/schedule">
+          Schedule
         </Link>
 
       </div>

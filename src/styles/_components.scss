@@ -1253,6 +1253,18 @@ $iswc-grid-row-height: 7rem;
   background: #dedddd;
 }
 
+.iswc-kind--ceremony {
+  background: #fbeafc;
+}
+
+.iswc-kind--keynote {
+  background: #e0ffe9;
+}
+
+.iswc-kind--keynote {
+  background: #e0ffe9;
+}
+
 // On small screens, narrow the pinned room-label column so more of the
 // scrollable time axis stays visible at once.
 @media (max-width: 519.98px) {
@@ -2280,4 +2292,149 @@ $iswc-grid-row-height: 7rem;
   .iswc-table-scroll > .iswc-tiers-table {
     min-width: 32rem;
   }
+}
+
+// -----------------------------------------------------------------------------
+// Flipped schedule grid: rooms as columns, time running down the page.
+// Used for days with few rooms (see VERTICAL_MAX_ROOMS in Schedule.jsx).
+//
+// This is the ONLY block for .iswc-schedule-vgrid. The older plain-CSS copy
+// that used to sit above it has been removed.
+//
+// How the header behaves:
+//   - Below 992px the grid is wider than the screen (its min-width is the hour
+//     gutter + 200px per room), so the wrapper scrolls sideways - same as the
+//     timeline grid on the multi-room days. A scrolling wrapper becomes the
+//     reference box for `position: sticky`, so a sticky header with a navbar
+//     offset would be pushed DOWN inside the wrapper, over the first sessions.
+//     The header is therefore NOT sticky here: it sits in normal flow at the
+//     top of the grid.
+//   - From 992px up the grid fits, the wrapper stops scrolling, and only then
+//     does the header stick below the navbar.
+// -----------------------------------------------------------------------------
+.iswc-schedule-vgrid__scroll {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 2rem;
+}
+
+.iswc-schedule-vgrid {
+  --time-col: 64px;   // width of the hour-label gutter
+  --room-min: 200px;  // narrowest a room column may get
+  --vgrid-line: rgba(0, 0, 0, 0.1);
+
+  min-width: calc(var(--time-col) + var(--room-count) * var(--room-min));
+  // The page container justifies and hyphenates prose from `md` up; cards in
+  // narrow columns must not inherit that.
+  text-align: left;
+  hyphens: manual;
+}
+
+// Room names across the top. In normal flow by default (see note above).
+.iswc-schedule-vgrid__header {
+  display: grid;
+  grid-template-columns: var(--time-col) repeat(var(--room-count), minmax(0, 1fr));
+  position: relative;
+  top: auto;
+  z-index: 3;
+  background: #fafafa;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.iswc-schedule-vgrid__room-label {
+  padding: 0.6rem 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: $iswc-secondary;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+// Hour gutter + lanes
+.iswc-schedule-vgrid__body {
+  display: grid;
+  grid-template-columns: var(--time-col) minmax(0, 1fr);
+}
+
+.iswc-schedule-vgrid__hours {
+  position: relative;
+}
+
+.iswc-schedule-vgrid__hour {
+  position: absolute;
+  right: 0.75rem;
+  transform: translateY(-50%);
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: #6b7280;
+}
+
+.iswc-schedule-vgrid__lanes {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(var(--room-count), minmax(0, 1fr));
+}
+
+.iswc-schedule-vgrid__gridline {
+  position: absolute;
+  left: 0;
+  right: 0;
+  border-top: 1px solid var(--vgrid-line);
+  pointer-events: none;
+}
+
+.iswc-schedule-vgrid__lane {
+  border-left: 1px solid var(--vgrid-line);
+
+  &:last-of-type {
+    border-right: 1px solid var(--vgrid-line);
+  }
+}
+
+// Session cards. top/height (time) and left/width (which room columns the
+// card covers) all come from the component.
+.iswc-schedule-vgrid__event {
+  position: absolute;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+// Wide screens only: the grid fits, so the wrapper stops being a scroll
+// container and the room header can stick below the navbar.
+@media (min-width: 992px) {
+  .iswc-schedule-vgrid__scroll {
+    overflow: visible;
+  }
+
+  .iswc-schedule-vgrid__header {
+    position: sticky;
+    top: var(--iswc-navbar-height);
+  }
+}
+
+// Per-kind fills for the main conference days. Placeholder kinds — rename to
+// match SESSION_KINDS in the schedule data.
+.iswc-kind--keynote {
+  background: #e1ffd9;
+}
+.iswc-kind--papers {
+  background: #e3f0fb;
+}
+
+.iswc-kind--parallel {
+  background: #d3ebff;
+}
+.iswc-kind--poster {
+  background: #e2f5f1;
+}
+.iswc-kind--panel {
+  background: #ece8fa;
+}
+.iswc-kind--social {
+  background: #fde8f0;
 }

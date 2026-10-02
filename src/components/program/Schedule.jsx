@@ -25,24 +25,88 @@ const PX_PER_MINUTE = 2.5;
 // A very short session still needs enough width to read its title.
 const MIN_EVENT_WIDTH = 0;
 
+// --- Flipped layout (rooms as columns, time running down the page) ---------
+// Used automatically for days with this many rooms or fewer. A day can also
+// force either layout with `layout: "vertical"` or `layout: "horizontal"`
+// in the schedule data.
+const VERTICAL_MAX_ROOMS = 4;
+
+// Vertical scale: pixels per minute (2 → one hour is 120px tall).
+const PX_PER_MINUTE_VERTICAL = 2;
+
+// A very short session still needs enough height to read its time + title.
+const MIN_EVENT_HEIGHT = 44;
+
+// Breathing room above the first hour line and below the last one.
+const VERTICAL_PADDING = 16;
+
 const byStart = (a, b) => toMinutes(a.start) - toMinutes(b.start);
 
-const gridBounds = (sessions) => {
+// A session lives in one room (`room`), several (`rooms: [...]`), or all of
+// them (`allRooms: true`).
+const sessionRooms = (s) => s.rooms ?? (s.room ? [s.room] : []);
+
+const isVisible = (s, visibleRooms) =>
+  s.allRooms || sessionRooms(s).some((r) => visibleRooms.has(r));
+
+// Which room columns a session covers in the flipped layout, as runs of
+// adjacent columns. Rooms that are next to each other merge into one wide
+// card; rooms that are not adjacent get one card per run.
+const columnSpans = (s, rooms) => {
+  if (s.allRooms) return [{ from: 0, count: Math.max(rooms.length, 1) }];
+  const wanted = sessionRooms(s);
+  const spans = [];
+  rooms.forEach((room, i) => {
+    if (!wanted.includes(room)) return;
+    const last = spans[spans.length - 1];
+    if (last && last.from + last.count === i) last.count += 1;
+    else spans.push({ from: i, count: 1 });
+  });
+  return spans;
+};
+
+// Kinds shown in the legend for a day: the day's own `kinds` list if it has
+// one, otherwise whatever kinds its sessions actually use.
+const legendKinds = (day) => {
+  if (day.kinds) return day.kinds.filter((k) => SESSION_KINDS[k]);
+  const used = new Set(day.sessions.map((s) => s.kind));
+  return Object.keys(SESSION_KINDS).filter((k) => used.has(k));
+};
+
+// A day can set its own window with `dayStart` / `dayEnd` ("HH:MM"); otherwise
+// the 09:00–18:00 default applies. Either way the grid still grows if a
+// session falls outside the window.
+const gridBounds = (sessions, day = {}) => {
   const starts = sessions.map((s) => toMinutes(s.start));
   const ends = sessions.map((s) => toMinutes(s.end));
+  const dayStart = day.dayStart ? toMinutes(day.dayStart) : DAY_START;
+  const dayEnd = day.dayEnd ? toMinutes(day.dayEnd) : DAY_END;
   return {
-    start: Math.min(DAY_START, ...starts),
-    end: Math.max(DAY_END, ...ends),
+    start: Math.min(dayStart, ...starts),
+    end: Math.max(dayEnd, ...ends),
   };
 };
 
-const SessionEvent = ({ session, left, width }) => {
+const hourMarks = (start, end) => {
+  const hours = [];
+  for (let m = Math.ceil(start / 60) * 60; m <= end; m += 60) hours.push(m);
+  return hours;
+};
+
+const isVerticalDay = (day) =>
+  day.layout
+    ? day.layout === "vertical"
+    : day.rooms.length <= VERTICAL_MAX_ROOMS;
+
+// `gridClass` is the positioning class of the grid the card lives in; `style`
+// carries the absolute position (left/width or top/height).
+const SessionEvent = ({ session, style, gridClass = "iswc-schedule-grid__event" }) => {
   const kind = SESSION_KINDS[session.kind];
 
   return (
     <article
-      className={`iswc-schedule-grid__event iswc-agenda__card iswc-kind--${session.kind}`}
-      style={{ left: `${left}px`, width: `${width}px` }}
+      className={`${gridClass} iswc-agenda__card iswc-kind--${session.kind}`}
+      style={style}
     >
       <div className="iswc-agenda__meta">
         <span className="iswc-agenda__range">
@@ -55,17 +119,19 @@ const SessionEvent = ({ session, left, width }) => {
             className="iswc-agenda__badge"
             style={{ "--kind-color": kind.color }}
           >
-           {kind.label}
+            {kind.label}
           </span>
         )}
       </div>
 
-       {session.link 
-            ? <div className="iswc-agenda__title"><ExternalLink href={session.link}>{session.title}</ExternalLink></div>
-            : <div className="iswc-agenda__title">{session.title}</div>
-        }
-            
-      
+      {session.link ? (
+        <div className="iswc-agenda__title">
+          <ExternalLink href={session.link}>{session.title}</ExternalLink>
+        </div>
+      ) : (
+        <div className="iswc-agenda__title">{session.title}</div>
+      )}
+
       {session.speaker && (
         <div className="iswc-agenda__speaker">{session.speaker}</div>
       )}
@@ -76,7 +142,7 @@ const SessionEvent = ({ session, left, width }) => {
 // A track is one horizontal lane (either "All rooms" or a single room). It
 // draws its own hour gridlines and lays its sessions out absolutely so they
 // can float at any minute, independent of the hour columns.
-const Track = ({ sessions, start, trackWidth, hours, left, width }) => (
+const Track = ({ sessions, trackWidth, hours, left, width }) => (
   <div className="iswc-schedule-grid__track" style={{ width: `${trackWidth}px` }}>
     {hours.map((m) => (
       <span
@@ -90,24 +156,18 @@ const Track = ({ sessions, start, trackWidth, hours, left, width }) => (
       <SessionEvent
         key={`${session.start}-${session.title}-${i}`}
         session={session}
-        left={left(toMinutes(session.start))}
-        width={width(session)}
+        style={{
+          left: `${left(toMinutes(session.start))}px`,
+          width: `${width(session)}px`,
+        }}
       />
     ))}
   </div>
 );
 
-const DayTimeline = ({ day, visibleRooms }) => {
-  const rooms = day.rooms.filter((r) => visibleRooms.has(r));
-  const sessions = day.sessions.filter(
-    (s) => s.allRooms || visibleRooms.has(s.room)
-  );
-
-  const { start, end } = useMemo(
-    () => gridBounds(sessions.length ? sessions : day.sessions),
-    [sessions, day]
-  );
-
+// Shared empty states for both layouts. Returns null when there is something
+// to draw.
+const emptyNote = (day, sessions) => {
   if (day.sessions.length === 0) {
     return (
       <p className="iswc-note">
@@ -115,10 +175,26 @@ const DayTimeline = ({ day, visibleRooms }) => {
       </p>
     );
   }
-
   if (sessions.length === 0) {
     return <p className="iswc-note">No sessions match the selected rooms.</p>;
   }
+  return null;
+};
+
+// Rooms as rows, hours as columns — for the busy multi-room days.
+const DayTimeline = ({ day, visibleRooms }) => {
+  const rooms = day.rooms.filter((r) => visibleRooms.has(r));
+  const sessions = day.sessions.filter(
+    (s) => isVisible(s, visibleRooms)
+  );
+
+  const { start, end } = useMemo(
+    () => gridBounds(sessions.length ? sessions : day.sessions, day),
+    [sessions, day]
+  );
+
+  const note = emptyNote(day, sessions);
+  if (note) return note;
 
   const HEADER_PADDING = 50;
 
@@ -127,14 +203,16 @@ const DayTimeline = ({ day, visibleRooms }) => {
   const width = (s) =>
     Math.max((toMinutes(s.end) - toMinutes(s.start)) * PX_PER_MINUTE, MIN_EVENT_WIDTH);
 
-  const hours = [];
-  for (let m = Math.ceil(start / 60) * 60; m <= end; m += 60) hours.push(m);
+  const hours = hourMarks(start, end);
 
   const common = sessions.filter((s) => s.allRooms).sort(byStart);
   const roomRows = rooms
     .map((room) => ({
       room,
-      items: sessions.filter((s) => !s.allRooms && s.room === room).sort(byStart),
+      // A multi-room session is repeated in each of its rooms' rows.
+      items: sessions
+        .filter((s) => !s.allRooms && sessionRooms(s).includes(room))
+        .sort(byStart),
     }))
     .filter((r) => r.items.length > 0);
 
@@ -160,16 +238,119 @@ const DayTimeline = ({ day, visibleRooms }) => {
         {common.length > 0 && (
           <div className="iswc-schedule-grid__row iswc-schedule-grid__row--common">
             <div className="iswc-schedule-grid__room-label">All rooms</div>
-            <Track sessions={common} start={start} trackWidth={trackWidth} hours={hours} left={left} width={width} />
+            <Track sessions={common} trackWidth={trackWidth} hours={hours} left={left} width={width} />
           </div>
         )}
 
         {roomRows.map(({ room, items }) => (
           <div className="iswc-schedule-grid__row" key={room}>
             <div className="iswc-schedule-grid__room-label">{room}</div>
-            <Track sessions={items} start={start} trackWidth={trackWidth} hours={hours} left={left} width={width} />
+            <Track sessions={items} trackWidth={trackWidth} hours={hours} left={left} width={width} />
           </div>
         ))}
+      </div>
+    </div>
+  );
+};
+
+// Rooms as columns, hours as rows — for days with only a few rooms. Time runs
+// down the page; `allRooms` sessions (breaks, plenaries) stretch across every
+// column at their time slot.
+const DayColumns = ({ day, visibleRooms }) => {
+  const rooms = day.rooms.filter((r) => visibleRooms.has(r));
+  const sessions = day.sessions.filter(
+    (s) => isVisible(s, visibleRooms)
+  );
+
+  const { start, end } = useMemo(
+    () => gridBounds(sessions.length ? sessions : day.sessions, day),
+    [sessions, day]
+  );
+
+  const note = emptyNote(day, sessions);
+  if (note) return note;
+
+  const top = (min) => (min - start) * PX_PER_MINUTE_VERTICAL + VERTICAL_PADDING;
+  const height = (s) =>
+    Math.max(
+      (toMinutes(s.end) - toMinutes(s.start)) * PX_PER_MINUTE_VERTICAL,
+      MIN_EVENT_HEIGHT
+    );
+  const columns = Math.max(rooms.length, 1);
+  const position = (s, span) => ({
+    top: `${top(toMinutes(s.start))}px`,
+    height: `${height(s)}px`,
+    left: `calc(${(span.from / columns) * 100}% + 4px)`,
+    width: `calc(${(span.count / columns) * 100}% - 8px)`,
+  });
+  const bodyHeight =
+    (end - start) * PX_PER_MINUTE_VERTICAL + VERTICAL_PADDING * 2;
+
+  const hours = hourMarks(start, end);
+  const ordered = [...sessions].sort(byStart);
+
+  return (
+    <div className="iswc-schedule-vgrid__scroll">
+      <div
+        className="iswc-schedule-vgrid"
+        style={{ "--room-count": Math.max(rooms.length, 1) }}
+      >
+        {/* Room header, sticky at the top while the page scrolls. */}
+        <div className="iswc-schedule-vgrid__header">
+          <div className="iswc-schedule-vgrid__corner" />
+          {rooms.map((room) => (
+            <div className="iswc-schedule-vgrid__room-label" key={room}>
+              {room}
+            </div>
+          ))}
+        </div>
+
+        <div
+          className="iswc-schedule-vgrid__body"
+          style={{ height: `${bodyHeight}px` }}
+        >
+          {/* Hour labels down the left edge. */}
+          <div className="iswc-schedule-vgrid__hours">
+            {hours.map((m) => (
+              <span
+                key={m}
+                className="iswc-schedule-vgrid__hour"
+                style={{ top: `${top(m)}px` }}
+              >
+                {formatHour(m)}
+              </span>
+            ))}
+          </div>
+
+          <div className="iswc-schedule-vgrid__lanes">
+            {hours.map((m) => (
+              <span
+                key={m}
+                className="iswc-schedule-vgrid__gridline"
+                style={{ top: `${top(m)}px` }}
+                aria-hidden="true"
+              />
+            ))}
+
+            {/* One lane per room: just the column background and divider. */}
+            {rooms.map((room) => (
+              <div className="iswc-schedule-vgrid__lane" key={room} />
+            ))}
+
+            {/* Cards sit on top of the lanes and cover one, several or all
+                of them depending on the session's rooms. */}
+            {ordered.map((session, i) =>
+              columnSpans(session, rooms).map((span) => (
+                <SessionEvent
+                  key={`${session.start}-${session.title}-${i}-${span.from}`}
+                  session={session}
+                  gridClass="iswc-schedule-vgrid__event"
+                  style={position(session, span)}
+                />
+              ))
+            )}
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -200,11 +381,16 @@ export const Schedule = () => {
       return next;
     });
 
+  const DayView = isVerticalDay(day) ? DayColumns : DayTimeline;
+  const kinds = legendKinds(day);
+
   return (
     <Page width="wide">
       <Header>Schedule</Header>
-
-
+    
+      <p className="iswc-callout">
+        <b>Programme correct at time of publication.</b> Minor changes may occur; see this page for updates.
+      </p>
 
       {/* Day switcher */}
       <div className="iswc-schedule__days" role="group" aria-label="Select a day">
@@ -250,22 +436,24 @@ export const Schedule = () => {
       )}
 
       {/* Legend */}
-      <div className="iswc-schedule__legend">
-        {Object.entries(SESSION_KINDS).map(([key, { label, color }]) => (
-          <span
-            key={key}
-            className="iswc-schedule__legend-item"
-            style={{ "--kind-color": color }}
-          >
-            <span className="iswc-schedule__swatch" aria-hidden="true" />
-            {label}
-          </span>
-        ))}
-      </div>
+      {kinds.length > 0 && (
+        <div className="iswc-schedule__legend">
+          {kinds.map((key) => (
+            <span
+              key={key}
+              className="iswc-schedule__legend-item"
+              style={{ "--kind-color": SESSION_KINDS[key].color }}
+            >
+              <span className="iswc-schedule__swatch" aria-hidden="true" />
+              {SESSION_KINDS[key].label}
+            </span>
+          ))}
+        </div>
+      )}
 
       {day.note && <p className="iswc-callout">{day.note}</p>}
 
-      <DayTimeline day={day} visibleRooms={visibleRooms} />
+      <DayView day={day} visibleRooms={visibleRooms} />
     </Page>
   );
 };
