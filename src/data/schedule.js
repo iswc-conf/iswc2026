@@ -156,7 +156,7 @@ export const schedule = [
 
     {start: "13:45", end: "15:15", room: "Room 1", title: "Slot 2: Research (3),  Resource (1)  Knowledge Graph Alignment, Evolution, and Temporal Forecasting", kind: "parallel"},
     {start: "13:45", end: "15:15", room: "Room 2", title: "Slot 7: Research (1), Resource (3), Knowledge graphs and alignment", kind: "parallel"},
-    {start: "13:45", end: "15:15", room: "Room 3", title: "Journal Papers from TDKG", kind: "parallel"},
+    {start: "13:45", end: "15:15", room: "Room 3", title: "Journal Papers from TGDK", kind: "parallel"},
     {start: "13:45", end: "15:15", room: "Room 4", title: "Journal Papers from SWJ", kind: "parallel"},
 
     {start: "15:15", end: "15:45", rooms: ["Room 1", "Room 2", "Room 3", "Room 4"], title: "Coffee Break", kind: "break"},
