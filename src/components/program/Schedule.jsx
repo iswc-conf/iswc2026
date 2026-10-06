@@ -81,7 +81,7 @@ const Session = ({ session }) => {
       )}
       {session.chairs && (
         <div className="iswc-schedule-list__chairs">
-          Session chairs: {session.chairs}
+          Session chair: {session.chairs}
         </div>
       )}
 

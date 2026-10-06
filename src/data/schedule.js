@@ -144,7 +144,7 @@ export const schedule = [
     subtitle: "Conference Day 3",
     rooms: MAIN_ROOMS,
     sessions: [
-      { start: "08:45", end: "09:15", rooms: PLENARY, title: "Opening Ceremony", kind: "ceremony", chairs: "TBD" },
+      { start: "08:45", end: "09:15", rooms: PLENARY, title: "Opening Ceremony", kind: "ceremony"},
       { start: "09:15", end: "10:15", rooms: PLENARY, title: "Keynote 1", kind: "keynote", chairs: "TBD" },
       { start: "10:15", end: "10:45", rooms: PLENARY, title: "Coffee Break", kind: "break" },
 
