@@ -53,6 +53,9 @@ const KeynoteSpeakers = lazy(() => import("./components/program/KeynoteSpeakers"
 const Workshops = lazy(() => import("./components/program/Workshops"));
 const ProgramDagstuhl = lazy(() => import("./components/program/Dagstuhl"));
 const AcceptedTutorials = lazy(() => import("./components/program/Tutorials"));
+
+const DCProgram = lazy(() => import("./components/program/DCProgram"));
+
 const Panel = lazy(() => import("./components/program/Panel"));
 const Awards = lazy(() => import("./components/program/Awards"));
 const Schedule = lazy(() =>
@@ -191,6 +194,7 @@ export default function App() {
           <Route path="/program/panel" element={<Panel />} />
           <Route path="/program/awards" element={<Awards />} />
           <Route path="/program/schedule" element={<Schedule />} />
+          <Route path="/program/dc" element={<DCProgram />} />
 
           {/* Attending */}
           <Route path="/attending/registration" element={<Registration />} />

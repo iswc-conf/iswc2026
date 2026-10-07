@@ -55,6 +55,7 @@ export const navigation = [
       { label: "Keynote Speakers", to: "/program/keynotespeakers" },
       { label: "Accepted Papers", to: "/program/acceptedpapers" },
       { label: "Tutorials", to: "/program/tutorials" },
+      { label: "Doctoral Consortium", to: "/program/dc" },
 
       { type: "header", label: "To Be Announced" },
     
