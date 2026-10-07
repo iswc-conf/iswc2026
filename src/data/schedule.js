@@ -36,16 +36,17 @@ export const SESSION_KINDS = {
 };
 
 const PRE_CONFERENCE_ROOMS = [
-  "Sez. 1", "Sez. 2", "Sez. 3", "Sez. 4", "Sez. 5", "Sez. 6", "Sez. 7", "Sez. 8",
+  "Sezione  1", "Sezione  2", "Sezione  3", "Sezione  4", "Sezione  5", "Sezione  6", "Sezione  7", "Sezione  8",
   "Sala Andromeda", "Sala Cigno", "Pegaso", "Orione", "Auriga (Perseo)",
 ];
 
-const MAIN_ROOMS = ["Room 1", "Room 2", "Room 3", "Room 4"];
-
+const MAIN_ROOMS = ["Sezione 1", "Sezione 2", "Sezione 3&4", "Sezione 5"];
 // Where the plenary activities of the main conference take place (keynotes,
 // ceremonies, breaks, ...). Change the names here, or give a single session
-// its own list, e.g. `rooms: ["Auditorium", "Room 2 (streamed)"]`.
-const PLENARY = ["Room 1", "Room 2", "Room 3", "Room 4"];
+// its own list, e.g. `rooms: ["Auditorium", "Sezione 2 (streamed)"]`.
+const PLENARY = ["Plenary"];
+const COFFEE = "Foyer (Floor -1)"
+const LUNCH = "Cassiopea (Floor 1)"
 
 export const schedule = [
   // ---------------------------------------------------------------------------
@@ -62,21 +63,21 @@ export const schedule = [
       { start: "12:50", end: "14:10", allRooms: true, title: "Break", kind: "break" },
       { start: "15:50", end: "16:20", allRooms: true, title: "Break", kind: "break" },
 
-      { start: "09:00", end: "18:00", room: "Sez. 1", title: "6th Wikidata Workshop", kind: "workshop", link: "https://wikidataworkshop.github.io/2026/" },
-      { start: "09:00", end: "18:00", room: "Sez. 2", title: "21st International Workshop on Ontology Matching (OM-2026)", kind: "workshop", link: "https://om.ontologymatching.org/2026/" },
-      { start: "09:00", end: "18:00", room: "Sez. 3", title: "17th Workshop on Ontology Design and Patterns (WOP) 2026", kind: "workshop", link: "https://odpa.github.io/workshop-on-ontology-design-and-patterns/2026/" },
+      { start: "09:00", end: "18:00", room: "Sezione  1", title: "6th Wikidata Workshop", kind: "workshop", link: "https://wikidataworkshop.github.io/2026/" },
+      { start: "09:00", end: "18:00", room: "Sezione  2", title: "21st International Workshop on Ontology Matching (OM-2026)", kind: "workshop", link: "https://om.ontologymatching.org/2026/" },
+      { start: "09:00", end: "18:00", room: "Sezione  3", title: "17th Workshop on Ontology Design and Patterns (WOP) 2026", kind: "workshop", link: "https://odpa.github.io/workshop-on-ontology-design-and-patterns/2026/" },
 
-      { start: "09:00", end: "12:50", room: "Sez. 4", title: "WikiKGQA: Wiki-Based Knowledge Graph Question Answering Challenge", kind: "workshop", link: "https://wikikgqa.org/" },
-      { start: "14:10", end: "18:00", room: "Sez. 4", title: "Graph-Enhanced LLMs for Trustworthy Web Data Management", kind: "workshop", link: "https://glow-workshop.github.io/iswc2026/" },
+      { start: "09:00", end: "12:50", room: "Sezione  4", title: "WikiKGQA: Wiki-Based Knowledge Graph Question Answering Challenge", kind: "workshop", link: "https://wikikgqa.org/" },
+      { start: "14:10", end: "18:00", room: "Sezione  4", title: "Graph-Enhanced LLMs for Trustworthy Web Data Management", kind: "workshop", link: "https://glow-workshop.github.io/iswc2026/" },
 
-      { start: "09:00", end: "18:00", room: "Sez. 5", title: "2nd International Workshop on Data Management for Knowledge Graphs (DMKG 2026)", kind: "workshop", link: "https://dmkg-workshop.github.io/2026/" },
+      { start: "09:00", end: "18:00", room: "Sezione  5", title: "2nd International Workshop on Data Management for Knowledge Graphs (DMKG 2026)", kind: "workshop", link: "https://dmkg-workshop.github.io/2026/" },
 
-      { start: "09:00", end: "12:50", room: "Sez. 6", title: "GOOD: GOod Ontologies and how to Develop them", kind: "tutorial", link: "http://www.meteck.org/teaching/GOODtutISWC26.html" },
-      { start: "14:10", end: "18:00", room: "Sez. 6", title: "OntoLM: Ontology Embedding, Reasoning and Construction with Language Models", kind: "tutorial", link: "https://huiyang1997.github.io/OntoLM/" },
-      { start: "09:00", end: "12:50", room: "Sez. 7", title: "ARGO: Agentic Retrieval and Graph Orchestration for Document Knowledge Systems", kind: "tutorial", link: "https://argoiswc.github.io/" },
-      { start: "14:10", end: "18:00", room: "Sez. 7", title: "Continual Knowledge Graph Embedding: Foundations, Methods, and Open Challenges", kind: "tutorial", link: "https://gerardponsrecasens.github.io/CKGE-FMOC/" },
-      { start: "09:00", end: "12:50", room: "Sez. 8", title: "Shapes for Knowledge Graphs", kind: "tutorial", link: "https://www.validatingrdf.com/tutorial/iswc2026/" },
-      { start: "14:10", end: "18:00", room: "Sez. 8", title: "Façade-X Tutorial: Querying Any Format as a Knowledge Graph (FX)", kind: "tutorial", link: "https://w3c-facade-x.github.io/iswc2026-tutorial/" },
+      { start: "09:00", end: "12:50", room: "Sezione  6", title: "GOOD: GOod Ontologies and how to Develop them", kind: "tutorial", link: "http://www.meteck.org/teaching/GOODtutISWC26.html" },
+      { start: "14:10", end: "18:00", room: "Sezione  6", title: "OntoLM: Ontology Embedding, Reasoning and Construction with Language Models", kind: "tutorial", link: "https://huiyang1997.github.io/OntoLM/" },
+      { start: "09:00", end: "12:50", room: "Sezione  7", title: "ARGO: Agentic Retrieval and Graph Orchestration for Document Knowledge Systems", kind: "tutorial", link: "https://argoiswc.github.io/" },
+      { start: "14:10", end: "18:00", room: "Sezione  7", title: "Continual Knowledge Graph Embedding: Foundations, Methods, and Open Challenges", kind: "tutorial", link: "https://gerardponsrecasens.github.io/CKGE-FMOC/" },
+      { start: "09:00", end: "12:50", room: "Sezione  8", title: "Shapes for Knowledge Graphs", kind: "tutorial", link: "https://www.validatingrdf.com/tutorial/iswc2026/" },
+      { start: "14:10", end: "18:00", room: "Sezione  8", title: "Façade-X Tutorial: Querying Any Format as a Knowledge Graph (FX)", kind: "tutorial", link: "https://w3c-facade-x.github.io/iswc2026-tutorial/" },
 
       { start: "09:00", end: "18:00", room: "Sala Andromeda", title: "KG-NeSy: The Third Workshop on Knowledge Graphs and Neurosymbolic AI", kind: "workshop", link: "https://kg-nesy.github.io/" },
 
@@ -106,21 +107,21 @@ export const schedule = [
       { start: "12:50", end: "14:10", allRooms: true, title: "Break", kind: "break" },
       { start: "15:50", end: "16:20", allRooms: true, title: "Break", kind: "break" },
 
-      { start: "09:00", end: "18:00", room: "Sez. 1", title: "3rd International Workshop on Retrieval-Augmented Generation Enabled by Knowledge Graphs (RAGE-KG 2026)", kind: "workshop", link: "https://2026.rage-kg.org/" },
-      { start: "09:00", end: "18:00", room: "Sez. 2", title: "6th International Workshop on Scientific Knowledge Representation, Discovery, and Assessment (Sci-K 2026)", kind: "workshop", link: "https://sci-k.github.io/2026/" },
-      { start: "09:00", end: "18:00", room: "Sez. 3", title: "6th International Workshop on Semantic Web and Ontology Design for Cultural Heritage, SWODCH 2026", kind: "workshop", link: "https://www.loa.istc.cnr.it/index.php/swodch-2026/" },
+      { start: "09:00", end: "18:00", room: "Sezione  1", title: "3rd International Workshop on Retrieval-Augmented Generation Enabled by Knowledge Graphs (RAGE-KG 2026)", kind: "workshop", link: "https://2026.rage-kg.org/" },
+      { start: "09:00", end: "18:00", room: "Sezione  2", title: "6th International Workshop on Scientific Knowledge Representation, Discovery, and Assessment (Sci-K 2026)", kind: "workshop", link: "https://sci-k.github.io/2026/" },
+      { start: "09:00", end: "18:00", room: "Sezione  3", title: "6th International Workshop on Semantic Web and Ontology Design for Cultural Heritage, SWODCH 2026", kind: "workshop", link: "https://www.loa.istc.cnr.it/index.php/swodch-2026/" },
 
-      { start: "09:00", end: "12:50", room: "Sez. 4", title: "AIAA4KE: 1st Workshop on AI-assisted Approaches to Knowledge Engineering", kind: "workshop", link: "https://sites.google.com/view/aiaa4ke/" },
-      { start: "14:10", end: "18:00", room: "Sez. 4", title: "NLP4KGC 2026: 5th International Workshop on Natural Language Processing for Knowledge Graph Construction", kind: "workshop", link: "https://5thnlp4kgc-code.github.io/5nlp4kgc/index.html" },
-      { start: "09:00", end: "12:50", room: "Sez. 5", title: "Data-Driven Storytelling: Bridging Knowledge Graphs, GenAI, and Narrative (DDS 2026)", kind: "workshop", link: "https://data-driven-storytelling-workshop.replit.app/" },
-      { start: "14:10", end: "18:00", room: "Sez. 5", title: "Fourth International Workshop on Semantic Industrial Information Modelling (SemIIM)", kind: "workshop", link: "https://sites.google.com/view/semiim-2026" },
+      { start: "09:00", end: "12:50", room: "Sezione  4", title: "AIAA4KE: 1st Workshop on AI-assisted Approaches to Knowledge Engineering", kind: "workshop", link: "https://sites.google.com/view/aiaa4ke/" },
+      { start: "14:10", end: "18:00", room: "Sezione  4", title: "NLP4KGC 2026: 5th International Workshop on Natural Language Processing for Knowledge Graph Construction", kind: "workshop", link: "https://5thnlp4kgc-code.github.io/5nlp4kgc/index.html" },
+      { start: "09:00", end: "12:50", room: "Sezione  5", title: "Data-Driven Storytelling: Bridging Knowledge Graphs, GenAI, and Narrative (DDS 2026)", kind: "workshop", link: "https://data-driven-storytelling-workshop.replit.app/" },
+      { start: "14:10", end: "18:00", room: "Sezione  5", title: "Fourth International Workshop on Semantic Industrial Information Modelling (SemIIM)", kind: "workshop", link: "https://sites.google.com/view/semiim-2026" },
 
-      { start: "09:00", end: "12:50", room: "Sez. 6", title: "Knowledge Graphs for Data Interoperability with Chimera (KG4DI)", kind: "tutorial", link: "https://cefriel.github.io/kg4di/" },
-      { start: "14:10", end: "18:00", room: "Sez. 6", title: "VocBench & Co.: Encompassing the Full Data Lifecycle", kind: "tutorial", link: "https://vocbench.uniroma2.it/tutorials/iswc-2026" },
-      { start: "09:00", end: "12:50", room: "Sez. 7", title: "SCOPE - Using SHACL and OWL in Combination for Practical Knowledge Graph Editing", kind: "tutorial", link: "http://graphwise.ai/iswc2026-workshop-scope" },
-      { start: "14:10", end: "18:00", room: "Sez. 7", title: "Unlocking Legal Automation with Semantic Web Technology (ULA-SWeT)", kind: "tutorial" },
-      { start: "09:00", end: "12:50", room: "Sez. 8", title: "Semantic-Aware Partitioning of Property Graphs", kind: "tutorial", link: "https://elisjana.github.io/research/iswc2026-tutorial/" },
-      { start: "14:10", end: "18:00", room: "Sez. 8", title: "Personal Knowledge Graphs for LLM-Powered Decentralized Recommendations", kind: "tutorial", link: "https://brains-group.github.io/PKG-Recs" },
+      { start: "09:00", end: "12:50", room: "Sezione  6", title: "Knowledge Graphs for Data Interoperability with Chimera (KG4DI)", kind: "tutorial", link: "https://cefriel.github.io/kg4di/" },
+      { start: "14:10", end: "18:00", room: "Sezione  6", title: "VocBench & Co.: Encompassing the Full Data Lifecycle", kind: "tutorial", link: "https://vocbench.uniroma2.it/tutorials/iswc-2026" },
+      { start: "09:00", end: "12:50", room: "Sezione  7", title: "SCOPE - Using SHACL and OWL in Combination for Practical Knowledge Graph Editing", kind: "tutorial", link: "http://graphwise.ai/iswc2026-workshop-scope" },
+      { start: "14:10", end: "18:00", room: "Sezione  7", title: "Unlocking Legal Automation with Semantic Web Technology (ULA-SWeT)", kind: "tutorial" },
+      { start: "09:00", end: "12:50", room: "Sezione  8", title: "Semantic-Aware Partitioning of Property Graphs", kind: "tutorial", link: "https://elisjana.github.io/research/iswc2026-tutorial/" },
+      { start: "14:10", end: "18:00", room: "Sezione  8", title: "Personal Knowledge Graphs for LLM-Powered Decentralized Recommendations", kind: "tutorial", link: "https://brains-group.github.io/PKG-Recs" },
 
       { start: "09:00", end: "12:50", room: "Sala Andromeda", title: "SPARK 2026 - First International Workshop on Spatial Intelligence and Reasoning Enabled by Knowledge Graphs and Foundation Models", kind: "workshop", link: "https://sparkworkshop.github.io/" },
       { start: "14:10", end: "18:00", room: "Sala Andromeda", title: "International Workshop on Explainable AI and Knowledge Graphs (XAI+KG)", kind: "workshop", link: "https://sites.google.com/view/xaikg2026" },
@@ -145,11 +146,11 @@ export const schedule = [
     rooms: MAIN_ROOMS,
     sessions: [
       { start: "08:45", end: "09:15", rooms: PLENARY, title: "Opening Ceremony", kind: "ceremony"},
-      { start: "09:15", end: "10:15", rooms: PLENARY, title: "Keynote 1", kind: "keynote", chairs: "TBD" },
-      { start: "10:15", end: "10:45", rooms: PLENARY, title: "Coffee Break", kind: "break" },
+      { start: "09:15", end: "10:15", rooms: PLENARY, title: "Keynote 1 - Frank van Harmelen", kind: "keynote", chairs: "TBD", link: "/#/program/keynotespeakers?speaker=frank-van-harmelen" },
+      { start: "10:15", end: "10:45", room: COFFEE, title: "Coffee Break", kind: "break" },
 
       {
-        start: "10:45", end: "12:15", room: "Room 1", kind: "parallel",
+        start: "10:45", end: "12:15", room: "Sezione 1", kind: "parallel",
         title: "Dynamic and Streaming Knowledge Graphs, Querying, and Provenance",
         chairs: "TBD",
         papers: [
@@ -160,7 +161,7 @@ export const schedule = [
         ],
       },
       {
-        start: "10:45", end: "12:15", room: "Room 2", kind: "parallel",
+        start: "10:45", end: "12:15", room: "Sezione 2", kind: "parallel",
         title: "Knowledge Graph Learning and Temporal Reasoning",
         chairs: "TBD",
         papers: [
@@ -171,7 +172,7 @@ export const schedule = [
         ],
       },
       {
-        start: "10:45", end: "12:15", room: "Room 3", kind: "parallel",
+        start: "10:45", end: "12:15", room: "Sezione 3&4", kind: "parallel",
         title: "Ontology-Driven Modeling, Integration, and Workflows",
         chairs: "TBD",
         papers: [
@@ -182,7 +183,7 @@ export const schedule = [
         ],
       },
       {
-        start: "10:45", end: "12:15", room: "Room 4", kind: "parallel",
+        start: "10:45", end: "12:15", room: "Sezione 5", kind: "parallel",
         title: "LLMs and Agentic AI for Knowledge Graphs",
         chairs: "TBD",
         papers: [
@@ -193,10 +194,10 @@ export const schedule = [
         ],
       },
 
-      { start: "12:15", end: "13:45", rooms: PLENARY, title: "Lunch", kind: "break" },
+      { start: "12:15", end: "13:45", room: LUNCH, title: "Lunch", kind: "break" },
 
       {
-        start: "13:45", end: "15:15", room: "Room 1", kind: "parallel",
+        start: "13:45", end: "15:15", room: "Sezione 1", kind: "parallel",
         title: "Knowledge Graph Alignment, Evolution, and Temporal Forecasting",
         chairs: "TBD",
         papers: [
@@ -207,7 +208,7 @@ export const schedule = [
         ],
       },
       {
-        start: "13:45", end: "15:15", room: "Room 2", kind: "parallel",
+        start: "13:45", end: "15:15", room: "Sezione 2", kind: "parallel",
         title: "Knowledge graphs and alignment",
         chairs: "TBD",
         papers: [
@@ -217,13 +218,13 @@ export const schedule = [
           { id: 377, title: "DMFO: A Modular Alignment Architecture for Situationally Interpretable State Representations", authors: "Jan Christian Redlich, Peter Kloke and Sebastian Bosse", track: "Resource" },
         ],
       },
-      { start: "13:45", end: "15:15", room: "Room 3", title: "Journal Papers from TGDK", kind: "parallel", chairs: "TBD" },
-      { start: "13:45", end: "15:15", room: "Room 4", title: "Journal Papers from SWJ", kind: "parallel", chairs: "TBD" },
+      { start: "13:45", end: "15:15", room: "Sezione 3&4", title: "Journal Papers from TGDK", kind: "parallel", chairs: "TBD" },
+      { start: "13:45", end: "15:15", room: "Sezione 5", title: "Journal Papers from SWJ", kind: "parallel", chairs: "TBD" },
 
-      { start: "15:15", end: "15:45", rooms: PLENARY, title: "Coffee Break", kind: "break" },
-      { start: "15:45", end: "17:15", rooms: PLENARY, title: "Keynote 3", kind: "keynote", chairs: "TBD" },
+      { start: "15:15", end: "15:45", room: COFFEE, title: "Coffee Break", kind: "break" },
+      { start: "15:45", end: "17:15", rooms: PLENARY, title: "Keynote 2 - James Hendler ", kind: "keynote", chairs: "TBD", link: "/#/program/keynotespeakers?speaker=james-hendler"},
       { start: "17:15", end: "18:25", rooms: PLENARY, title: "Minute Madness", kind: "parallel", chairs: "TBD" },
-      { start: "18:25", end: "19:00", rooms: PLENARY, title: "Buffer", kind: "other" },
+      //{ start: "18:25", end: "19:00",  title: "Poster Setting Up" },
       { start: "19:00", end: "21:00", rooms: PLENARY, title: "Poster and Demos", kind: "parallel", chairs: "TBD" },
     ],
   },
@@ -237,11 +238,11 @@ export const schedule = [
     subtitle: "Conference Day 4",
     rooms: MAIN_ROOMS,
     sessions: [
-      { start: "09:00", end: "10:00", rooms: PLENARY, title: "Keynote 2", kind: "keynote", chairs: "TBD" },
-      { start: "10:00", end: "10:30", rooms: PLENARY, title: "Coffee Break", kind: "break" },
+      { start: "09:00", end: "10:00", rooms: PLENARY, title: "Keynote 3 - Tara Raafat", kind: "keynote", chairs: "TBD", link: "/#/program/keynotespeakers?speaker=tara-raafat" },
+      { start: "10:00", end: "10:30", room: COFFEE, title: "Coffee Break", kind: "break" },
 
       {
-        start: "10:30", end: "12:00", room: "Room 1", kind: "parallel",
+        start: "10:30", end: "12:00", room: "Sezione 1", kind: "parallel",
         title: "Federation, Alignment, and Semantic Interoperability",
         chairs: "TBD",
         papers: [
@@ -252,7 +253,7 @@ export const schedule = [
         ],
       },
       {
-        start: "10:30", end: "12:00", room: "Room 2", kind: "parallel",
+        start: "10:30", end: "12:00", room: "Sezione 2", kind: "parallel",
         title: "Robust Knowledge Graph Learning, Construction, and Data Quality",
         chairs: "TBD",
         papers: [
@@ -263,7 +264,7 @@ export const schedule = [
         ],
       },
       {
-        start: "10:30", end: "12:00", room: "Room 3", kind: "parallel",
+        start: "10:30", end: "12:00", room: "Sezione 3&4", kind: "parallel",
         title: "Ontology Engineering, Question Answering and LLMs",
         chairs: "TBD",
         papers: [
@@ -273,12 +274,12 @@ export const schedule = [
           { id: 401, title: "RDFS-LLM-Bench: A Benchmark for Evaluating RDF Schema Inference in LLMs", authors: "Taichi Hosokawa, Sudesna Chakraborty and Takeshi Morita", track: "Resource" },
         ],
       },
-      { start: "10:30", end: "12:00", room: "Room 4", title: "Industry Papers I", kind: "parallel", chairs: "TBD" },
+      { start: "10:30", end: "12:00", room: "Sezione 5", title: "Industry Papers I", kind: "parallel", chairs: "TBD" },
 
-      { start: "12:00", end: "13:30", rooms: PLENARY, title: "Lunch", kind: "break" },
+      { start: "12:00", end: "13:30", room: LUNCH, title: "Lunch", kind: "break" },
 
       {
-        start: "13:30", end: "15:00", room: "Room 1", kind: "parallel",
+        start: "13:30", end: "15:00", room: "Sezione 1", kind: "parallel",
         title: "Graph Languages, Federation, and Provenance",
         chairs: "TBD",
         papers: [
@@ -289,7 +290,7 @@ export const schedule = [
         ],
       },
       {
-        start: "13:30", end: "15:00", room: "Room 2", kind: "parallel",
+        start: "13:30", end: "15:00", room: "Sezione 2", kind: "parallel",
         title: "Neurosymbolic reasoning in knowledge graphs",
         chairs: "TBD",
         papers: [
@@ -300,7 +301,7 @@ export const schedule = [
         ],
       },
       {
-        start: "13:30", end: "15:00", room: "Room 3", kind: "parallel",
+        start: "13:30", end: "15:00", room: "Sezione 3&4", kind: "parallel",
         title: "Ontology Explanation, Mapping, and Validation",
         chairs: "TBD",
         papers: [
@@ -310,12 +311,12 @@ export const schedule = [
           { id: 312, title: "A Semantic Resource Suite for Privacy Policy Formalization", authors: "Rui Zhao, Vladyslav Melnychuk, Jesse Wright, Jun Zhao and Nigel Shadbolt", track: "Resource" },
         ],
       },
-      { start: "13:30", end: "15:00", room: "Room 4", title: "Industry Papers II", kind: "parallel", chairs: "TBD" },
+      { start: "13:30", end: "15:00", room: "Sezione 5", title: "Industry Papers II", kind: "parallel", chairs: "TBD" },
 
-      { start: "15:00", end: "15:30", rooms: PLENARY, title: "Coffee Break", kind: "break" },
+      { start: "15:00", end: "15:30", room: COFFEE, title: "Coffee Break", kind: "break" },
 
       {
-        start: "15:30", end: "17:45", room: "Room 1", kind: "parallel",
+        start: "15:30", end: "17:45", room: "Sezione 1", kind: "parallel",
         title: "Uncertain Querying, Knowledge Graph Augmentation, and Data Sharing",
         chairs: "TBD",
         papers: [
@@ -328,7 +329,7 @@ export const schedule = [
         ],
       },
       {
-        start: "15:30", end: "17:45", room: "Room 2", kind: "parallel",
+        start: "15:30", end: "17:45", room: "Sezione 2", kind: "parallel",
         title: "Neurosymbolic reasoning and ontologies",
         chairs: "TBD",
         papers: [
@@ -341,7 +342,7 @@ export const schedule = [
         ],
       },
       {
-        start: "15:30", end: "17:45", room: "Room 3", kind: "parallel",
+        start: "15:30", end: "17:45", room: "Sezione 3&4", kind: "parallel",
         title: "Grounded LLMs, Scalable Reasoning, and Privacy",
         chairs: "TBD",
         papers: [
@@ -354,7 +355,7 @@ export const schedule = [
         ],
       },
       {
-        start: "15:30", end: "17:45", room: "Room 4", kind: "parallel",
+        start: "15:30", end: "17:45", room: "Sezione 5", kind: "parallel",
         title: "Scalable Knowledge Graph Query Processing and Optimization",
         chairs: "TBD",
         papers: [
@@ -366,6 +367,9 @@ export const schedule = [
           { id: 234, title: "Semantified CEUR-WS in Wikidata", authors: "Wolfgang Fahl, Tim Holzheim, Christoph Lange, Jerven Bolleman and Stefan Decker", track: "In-Use" },
         ],
       },
+      { start: "19:15 ", end: " Late",  title: "Gala Dinner & Disco (Villa de Grecis)", link: "https://maps.app.goo.gl/rnbViwj1LuaGquZp8" },
+
+
     ],
   },
 
@@ -378,11 +382,11 @@ export const schedule = [
     subtitle: "Conference Day 5",
     rooms: MAIN_ROOMS,
     sessions: [
-      { start: "09:00", end: "10:00", rooms: PLENARY, title: "Keynote 4", kind: "keynote", chairs: "TBD" },
-      { start: "10:00", end: "10:30", rooms: PLENARY, title: "Coffee Break", kind: "break" },
-
+      { start: "09:00", end: "10:00", rooms: PLENARY, title: "Keynote 4 - Francesca Toni", kind: "keynote", chairs: "TBD", link: "/#/program/keynotespeakers?speaker=francesca-toni" },
+      { start: "10:00", end: "10:30", room: COFFEE, title: "Coffee Break", kind: "break" },
+ 
       {
-        start: "10:30", end: "12:00", room: "Room 1", kind: "parallel",
+        start: "10:30", end: "12:00", room: "Sezione 1", kind: "parallel",
         title: "FAIR, Decentralized, and Trustworthy Knowledge Infrastructures",
         chairs: "TBD",
         papers: [
@@ -393,7 +397,7 @@ export const schedule = [
         ],
       },
       {
-        start: "10:30", end: "12:00", room: "Room 2", kind: "parallel",
+        start: "10:30", end: "12:00", room: "Sezione 2", kind: "parallel",
         title: "Knowledge Graphs for Retrieval, Knowledge Editing, and Adaptive Reasoning",
         chairs: "TBD",
         papers: [
@@ -404,7 +408,7 @@ export const schedule = [
         ],
       },
       {
-        start: "10:30", end: "12:00", room: "Room 3", kind: "parallel",
+        start: "10:30", end: "12:00", room: "Sezione 3&4", kind: "parallel",
         title: "Ontology Learning, Requirements, and Evaluation",
         chairs: "TBD",
         papers: [
@@ -414,12 +418,12 @@ export const schedule = [
           { id: 390, title: "The Prebiotic Origins of Life Ontology", authors: "Shweta U Narkar, Vincent S Riggi, Karyn L Rogers and James A Hendler", track: "Resource" },
         ],
       },
-      { start: "10:30", end: "12:00", room: "Room 4", title: "Visionary Papers", kind: "parallel", chairs: "TBD" },
+      { start: "10:30", end: "12:00", room: "Sezione 5", title: "Visionary Papers", kind: "parallel", chairs: "TBD" },
 
-      { start: "12:00", end: "13:30", rooms: PLENARY, title: "Lunch", kind: "break" },
+      { start: "12:00", end: "13:30", room: LUNCH, title: "Lunch", kind: "break" },
 
       {
-        start: "13:30", end: "14:40", room: "Room 1", kind: "parallel",
+        start: "13:30", end: "14:40", room: "Sezione 1", kind: "parallel",
         title: "Knowledge Graphs and Ontologies for Domain Applications",
         chairs: "TBD",
         papers: [
@@ -429,7 +433,7 @@ export const schedule = [
         ],
       },
       {
-        start: "13:30", end: "14:40", room: "Room 2", kind: "parallel",
+        start: "13:30", end: "14:40", room: "Sezione 2", kind: "parallel",
         title: "Human-Centered Ontology Engineering and Domain Knowledge Graphs",
         chairs: "TBD",
         papers: [
@@ -438,9 +442,9 @@ export const schedule = [
           { id: 333, title: "RTSKG: Building a Rail Transit Station Knowledge Graph Dataset", authors: "Shutong Zhu, Tianxing Wu, Runfeng Liu, Yuang Gu, Xuan He and Yuan Zhu", track: "Resource" },
         ],
       },
-      { start: "13:30", end: "14:40", room: "Room 4", title: "Round table about the vision of the 25 years of Semantic Web", kind: "parallel", chairs: "TBD" },
+      { start: "13:30", end: "14:40", room: "Sezione 5", title: "Round table about the vision of the 25 years of Semantic Web", kind: "parallel", chairs: "TBD" },
 
-      { start: "14:40", end: "15:10", rooms: PLENARY, title: "Coffee Break", kind: "break" },
+      { start: "14:40", end: "15:10", room: COFFEE, title: "Coffee Break", kind: "break" },
       { start: "15:10", end: "16:10", rooms: PLENARY, title: "Town Hall", kind: "poster", chairs: "TBD" },
       { start: "16:10", end: "16:55", rooms: PLENARY, title: "Workshop Summary & Closing Ceremony", kind: "ceremony", chairs: "TBD" },
     ],

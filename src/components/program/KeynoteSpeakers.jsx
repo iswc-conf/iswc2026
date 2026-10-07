@@ -1,4 +1,5 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
+import { useSearchParams } from "react-router-dom";
 import Page from "../general/Page";
 import Header from "../general/Header";
 import ExternalLink from "../general/ExternalLink";
@@ -12,6 +13,9 @@ import SubHeader from "../general/SubHeader";
  * These are buttons that scroll, not anchors. The site runs on HashRouter, so
  * the URL hash is the route — an `href="#speaker"` would overwrite
  * `#/program/keynotespeakers` and navigate away instead of scrolling.
+ *
+ * Selecting a speaker also writes `?speaker=<id>` into the route, so the
+ * address bar holds a shareable link to that keynote.
  */
 const SpeakerIndex = ({ speakers, onSelect }) => (
   <nav className="iswc-keynote-index" aria-label="Jump to a keynote speaker">
@@ -31,7 +35,7 @@ const SpeakerIndex = ({ speakers, onSelect }) => (
 
 const Keynote = ({ speaker, innerRef }) => (
   <article className="iswc-keynote" id={speaker.id} ref={innerRef}>
-   <SubHeader>{speaker.label}</SubHeader>
+    <SubHeader>{speaker.label}</SubHeader>
 
     <div className="iswc-keynote__head">
       <img
@@ -53,17 +57,17 @@ const Keynote = ({ speaker, innerRef }) => (
       </div>
     </div>
 
-{(speaker.title || speaker.abstract) && (
-  <section className="iswc-keynote__section">
-    <h3 className="iswc-keynote__section-title">About the talk</h3>
-    {speaker.title && (
-      <p className="iswc-keynote__talk-title">{speaker.title}</p>
+    {(speaker.title || speaker.abstract) && (
+      <section className="iswc-keynote__section">
+        <h3 className="iswc-keynote__section-title">About the talk</h3>
+        {speaker.title && (
+          <p className="iswc-keynote__talk-title">{speaker.title}</p>
+        )}
+        {speaker.abstract?.map((paragraph) => (
+          <p key={paragraph.slice(0, 40)}>{paragraph}</p>
+        ))}
+      </section>
     )}
-    {speaker.abstract?.map((paragraph) => (
-      <p key={paragraph.slice(0, 40)}>{paragraph}</p>
-    ))}
-  </section>
-)}
 
     <section className="iswc-keynote__section">
       <h3 className="iswc-keynote__section-title">About {speaker.name}</h3>
@@ -76,16 +80,31 @@ const Keynote = ({ speaker, innerRef }) => (
 
 export const KeynoteSpeakers = () => {
   const sections = useRef({});
+  const [searchParams, setSearchParams] = useSearchParams();
+  const speakerId = searchParams.get("speaker");
 
   const scrollToSpeaker = (id) => {
     sections.current[id]?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
+  // Arriving via a shared link (#/program/keynotespeakers?speaker=<id>),
+  // or moving through history with back/forward.
+  useEffect(() => {
+    if (speakerId) scrollToSpeaker(speakerId);
+  }, [speakerId]);
+
+  // Clicking an index item: put the speaker in the URL so it can be copied,
+  // and scroll directly so re-clicking the current speaker still works.
+  const selectSpeaker = (id) => {
+    setSearchParams({ speaker: id }, { replace: true });
+    scrollToSpeaker(id);
   };
 
   return (
     <Page>
       <Header>Keynote Speakers</Header>
 
-      <SpeakerIndex speakers={keynotes} onSelect={scrollToSpeaker} />
+      <SpeakerIndex speakers={keynotes} onSelect={selectSpeaker} />
 
       {keynotes.map((speaker) => (
         <Keynote
