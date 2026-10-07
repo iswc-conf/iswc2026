@@ -53,14 +53,17 @@ const Keynote = ({ speaker, innerRef }) => (
       </div>
     </div>
 
-    {speaker.abstract && (
-      <section className="iswc-keynote__section">
-        <h3 className="iswc-keynote__section-title">About the talk</h3>
-        {speaker.abstract.map((paragraph) => (
-          <p key={paragraph.slice(0, 40)}>{paragraph}</p>
-        ))}
-      </section>
+{(speaker.title || speaker.abstract) && (
+  <section className="iswc-keynote__section">
+    <h3 className="iswc-keynote__section-title">About the talk</h3>
+    {speaker.title && (
+      <p className="iswc-keynote__talk-title">{speaker.title}</p>
     )}
+    {speaker.abstract?.map((paragraph) => (
+      <p key={paragraph.slice(0, 40)}>{paragraph}</p>
+    ))}
+  </section>
+)}
 
     <section className="iswc-keynote__section">
       <h3 className="iswc-keynote__section-title">About {speaker.name}</h3>
