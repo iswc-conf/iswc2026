@@ -44,6 +44,11 @@ export const keynotes = [
     affiliation: "Professor of Artificial Intelligence, Vrije Universiteit Amsterdam",
     photo: harmelen,
     label: "Keynote Talk",
+    title: "It Was Never About the Web: Rethinking Semantics at 25",
+    abstract: [
+"Twenty-five years in, the Semantic Web has not reshaped the World Wide Web, but knowledge graphs have quietly become essential infrastructure. They underpin operations across industries and government, and organisations have discovered that large language models require structured, reliable knowledge to perform well. Ontologies and knowledge graphs have moved from research curiosity to competitive necessity.",
+"Yet throughout this journey we have worked with a single, largely unquestioned model of what semantics is. This talk argues it is time to expand that model. Open-world versus closed-world, deterministic versus probabilistic, formal versus natural language, designed versus negotiated versus emergent, grounded versus ungrounded, single-agent versus multi-agent, each axis opens a distinct and important research programme. The next 25 years belong not to the Semantic Web, but to Semantics itself."
+    ],
     bio: [
       "Frank van Harmelen is professor of Artificial Intelligence at the Vrije Universiteit Amsterdam. Frank has been involved in Semantic Web research ever since he was co-PI on OnToKnowledge, the first European Semantic Web project in 1999. He is one of the co-designers of the Web Ontology Language OWL, he co-authored the first academic textbook of the field (the Semantic Web Primer), and he was one of the architects of Sesame, one of the first RDF storage and retrieval engines. This work received the 10-year impact award at ISWC 2012. In recent years, Frank has been contributing to neuro-symbolic AI: the combination of symbolic reasoning (knowledge graphs, ontologies) with data-driven machine learning.",
       "Frank is a fellow of the European AI Society EurAI, a member of the Academia Europaea, and a member of the Dutch Royal Academy of Sciences (KNAW). He received the EurAI Community Services Award, and he is a guest professor at the Wuhan University of Science and Technology (WUST) in Wuhan, China.",
@@ -57,6 +62,13 @@ export const keynotes = [
       "Head of Metadata and Knowledge Graph Strategy, CTO Office, Bloomberg",
     photo: tara,
     label: "Keynote Talk",
+    title: "Knowing What You Know: The Semantic Web in the Age of Agency",
+    abstract: [
+      "For much of my career, I believed the central challenge of knowledge engineering was one of representation: how to describe the world precisely enough for machines to interpret and reason about it. Over time, I have come to question whether representation was ever the whole problem.",
+      "Knowledge does not remain static once it is represented. It continues to evolve with the world it seeks to describe, shaped by changing contexts, interpretations, and sources of authority. What changes in our representations can, in turn, change how machines reason about the world.",
+      "For decades, the Semantic Web and Knowledge Graph communities have worked to make meaning explicit and usable by machines. Today, a new transition is taking place. AI systems are beginning to use those representations not only to answer questions, but increasingly to make decisions and take actions.",
+      "This keynote explores what happens when semantics becomes part of the machinery of action. It asks how our conception of knowledge must evolve as machines move from interpreting representations of the world to acting upon them, and what this transition means for the future of the Semantic Web. The challenge ahead may not simply be to give machines more knowledge, but to ask a more fundamental question: What must a machine know about what it knows before it is allowed to act?"
+    ],
     bio: [
       "Dr. Tara Raafat is Head of Metadata and Knowledge Graph Strategy in Bloomberg's CTO Office, where she advances the enterprise use of metadata, semantic technologies, and knowledge graphs to make complex data more connected, trusted, and AI-ready. Her work sits at the intersection of knowledge engineering, data integration, enterprise AI, and organizational change, with a strong focus on the human practices needed to make knowledge graphs successful at scale.",
       "During her more than 15 years working in semantic technologies, she has led semantic data initiatives across financial services, regulatory compliance, healthcare, and industrial data ecosystems, helping organizations turn complex knowledge into durable and usable data infrastructure. Tara is an active speaker, author, and contributor in the global knowledge graph community, with work focused on enterprise knowledge graphs, AI-ready data, and human-centered semantic transformation. She holds a PhD in Information System Engineering from the UK.",
@@ -69,6 +81,10 @@ export const keynotes = [
     affiliation: "Professor in Computational Logic, Imperial College London",
     photo: toni,
     label: "Keynote Talk",
+    title: "Argumentation-based Explainable AI for Contestability",
+    abstract: [
+"The need for explainability in AI is widely agreed upon as crucial towards safe and trustworthy deployment of AI systems, especially given the very many opportunities for undesired behaviour, including misinformation, hallucination and bias. What is less clear is the type of explanations AI systems should be able to produce, and the properties these explanations should satisfy. In this talk I will advocate (X)AI approaches based on computational argumentation that can (1) interact to progressively explain outputs and/or reasoning as well as assess grounds for contestation provided by humans and/or other machines, and (2) revise decision-making processes to redress any issues successfully raised during contestation. These approaches lead to explanations that faithfully reflect the \"reasoning\" behind the outputs they are explaining and can inform formal contestability of these outputs and of the models. I will ground the talk in LLM-based claim verification."
+    ],
     bio: [
       "Francesca Toni is Professor in Computational Logic at the Department of Computing, Imperial College London, UK. She is also the founder and leader of the CLArg (Computational Logic and Argumentation) research group and of the XAI research Centre at Imperial. Her research interests lie within the broad area of Knowledge Representation and Reasoning in AI and Explainable AI, and in particular include Argumentation, Argument Mining, Logic-Based Multi-Agent Systems, Non-monotonic/Default/Defeasible Reasoning, and Machine Learning.",
       "She graduated, summa cum laude, in Computing at the University of Pisa, Italy and received her PhD in Computing from Imperial College London. She has coordinated two EU projects, received funding from EPSRC and the EU, was awarded a Senior Research Fellowship from The Royal Academy of Engineering and the Leverhulme Trust, was Technical Director of the ROAD2H EPSRC-funded project and co-Director for the Centres of Doctoral Training in Safe and Trusted AI and in AI for Healthcare, and held the Royal Academy of Engineering/JP Morgan Research Chair on Argumentation-based Interactive Explainable AI (2020-25).",
