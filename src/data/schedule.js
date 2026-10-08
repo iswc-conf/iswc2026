@@ -153,6 +153,7 @@ export const schedule = [
         start: "10:45", end: "12:15", room: "Sezione 1", kind: "parallel",
         title: "Dynamic and Streaming Knowledge Graphs, Querying, and Provenance",
         chairs: "TBD",
+        slot: 1,
         papers: [
           { id: 259, title: "Open all the windows! : RSP-QL under cross-window entailment with provenance semi-rings", authors: "Cas Proost and Pieter Bonte", track: "Research" },
           { id: 54, title: "Fully Inductive Cardinality Estimation", authors: "Tim Schwabe, Lukas Ketzer and Maribel Acosta", track: "Research" },
@@ -164,6 +165,7 @@ export const schedule = [
         start: "10:45", end: "12:15", room: "Sezione 2", kind: "parallel",
         title: "Knowledge Graph Learning and Temporal Reasoning",
         chairs: "TBD",
+        slot: 6,
         papers: [
           { id: 151, title: "Fetch That Stream! RetrievR-guided Virtual Linked Stream Discovery and Access", authors: "Daniel de Leng, Robin Keskisärkkä, Volodymyr Kadzhaia and Pieter Bonte", track: "Research" },
           { id: 310, title: "Can we GLUE it? Extending an Interactive Adhesive Selector with Knowledge Graphs", authors: "Ioannis Dasoulas, Simon Vandevelde, Jeroen Jordens, Duo Yang, Xuemin Duan, Abdellatif Bey-Temsamani, Joost Vennekens and Anastasia Dimou", track: "In-Use" },
@@ -175,6 +177,7 @@ export const schedule = [
         start: "10:45", end: "12:15", room: "Sezione 3&4", kind: "parallel",
         title: "Ontology-Driven Modeling, Integration, and Workflows",
         chairs: "TBD",
+        slot: 10,
         papers: [
           { id: 170, title: "Integrating Semantics into Research Data Management: Modelling and Validating Materials Science Experiment Workflows", authors: "Samuel García Vázquez, Victor Dudarev, Alfred Ludwig, Markus Stricker and Maribel Acosta", track: "In-Use" },
           { id: 111, title: "A General Sufficient Condition for Rewriting Horn-ALCHI Queries into GQL", authors: "David Carral, Calixte Gruson and Quentin Manière", track: "Research" },
@@ -186,6 +189,7 @@ export const schedule = [
         start: "10:45", end: "12:15", room: "Sezione 5", kind: "parallel",
         title: "LLMs and Agentic AI for Knowledge Graphs",
         chairs: "TBD",
+        slot: 9,
         papers: [
           { id: 37, title: "Select, Don’t Train: The Benefits of Modular Entity Disambiguation with LLM-Based Selection", authors: "Fina Polat, Daniel Daza, Pengyu Zhang, Klim Zaporojets and Paul Groth", track: "Research" },
           { id: 173, title: "Transparent, Traceable, Deterministic: Agentic Memory via Knowledge Graphs", authors: "Anna Lisa Gentile, Sungeun An and Chad DeLuca", track: "In-Use" },
@@ -200,17 +204,20 @@ export const schedule = [
         start: "13:45", end: "15:15", room: "Sezione 1", kind: "parallel",
         title: "Knowledge Graph Alignment, Evolution, and Temporal Forecasting",
         chairs: "TBD",
+        slot: 2,
         papers: [
           { id: 90, title: "SECEA: Self Configuring Matcher Framework For Entity And Knowledge Graph Alignment", authors: "Alexander Becker, Axel-Cyrille Ngonga Ngomo and Mohamed Ahmed Sherif", track: "Research" },
-          { id: 93, title: "Words Matter: Robust Entity Alignment for Knowledge Graphs via Multi-View Textualization", authors: "Hanane Kteich, Gianluca Quercini, Joe Raad and Fatiha Sais", track: "Research" },
+          { id: 240, title: "Evaluating Competency Questions: Measuring Perspectivisation from Requirement Sources", authors: "Anna Sofia Lippolis, Andrea Giovanni Nuzzolese, Valentina Presutti and Minh Davide Ragagni", track: "Research" },
           { id: 167, title: "CountTRuCoLa: Rule Learning for Interpretable Temporal Knowledge Graph Forecasting", authors: "Julia Gastinger, Christian Meilicke and Heiner Stuckenschmidt", track: "Research" },
-          { id: 305, title: "From Records to Signs: A Layered Knowledge Graph for Conceptual Dynamics in Charles S. Peirce's Manuscripts", authors: "Carlo Teo Pedretti, Dario Baldini, Lorenzo Zangari, Alessandro Adamou and Davide Picca", track: "Resource" },
+          { id: 267, title: "Vibes Lore Core: the Aesthetics Knowledge Graph", authors: "Silvia Cappa, Anna Sofia Lippolis, Anouk Flinkert, Ekaterina Krasnova, Shiho Nakamura, Andrea Giovanni Nuzzolese and Aldo Gangemi", track: "Resource" },
+
         ],
       },
       {
         start: "13:45", end: "15:15", room: "Sezione 2", kind: "parallel",
-        title: "Knowledge graphs and alignment",
+        title: "Knowledge Graphs and Linked Data",
         chairs: "TBD",
+        slot: 7,
         papers: [
           { id: 293, title: "FITTER: Vocabulary-Agnostic Inference on Temporal Knowledge Graphs", authors: "Jiaxin Pan, Mojtaba Nayyeri, Osama Mohammed, Daniel Hernández, Rongchuan Zhang, Cheng Cheng and Steffen Staab", track: "Research" },
           { id: 127, title: "An Open Linked Data Portal for Benchmarking Web AI Agents in the European Health Data Space", authors: "Meem Arafat Manab and Victor Rodríguez-Doncel", track: "Resource" },
@@ -241,21 +248,12 @@ export const schedule = [
       { start: "09:00", end: "10:00", rooms: PLENARY, title: "Keynote 3 - Tara Raafat", kind: "keynote", chairs: "TBD", link: "/#/program/keynotespeakers?speaker=tara-raafat" },
       { start: "10:00", end: "10:30", room: COFFEE, title: "Coffee Break", kind: "break" },
 
+
       {
         start: "10:30", end: "12:00", room: "Sezione 1", kind: "parallel",
-        title: "Federation, Alignment, and Semantic Interoperability",
-        chairs: "TBD",
-        papers: [
-          { id: 199, title: "Does SPARQL federation work in the real world? A case study over large biological SPARQL endpoints", authors: "Elias Crum, Bryan-Elliott Tam, Jonni Hanski, Ana-Claudia Sima, Tarcisio Mendes de Farias, Jerven Bolleman and Ruben Taelman", track: "In-Use" },
-          { id: 295, title: "Uplifting the Superpowers of Worst-Case-Optimal Join Algorithms", authors: "Adrián Gómez-Brandón, Aidan Hogan and Gonzalo Navarro", track: "Research" },
-          { id: 350, title: "Improving Interoperability among Defence and National Security Ontologies: Analysis and Evaluation Tasks", authors: "Jonathon Dilworth, Pedro Giesteira Cotovio, David Herron, Paul Cripps, Nigel Dewdney, Catia Pesquita and Ernesto Jiménez-Ruiz", track: "Resource" },
-          { id: 444, title: "SEER-KG: Side Effect Exploration and Evaluation with Knowledge Graph-based Retrieval in Knowledge Editing for LLMs", authors: "Patipon Wiangnak, Natthawut Kertkeidkachorn and Kiyoaki Shirai", track: "Research" },
-        ],
-      },
-      {
-        start: "10:30", end: "12:00", room: "Sezione 2", kind: "parallel",
         title: "Robust Knowledge Graph Learning, Construction, and Data Quality",
         chairs: "TBD",
+        slot: 8,
         papers: [
           { id: 216, title: "Simulating Missing Data Patterns in Knowledge Graphs", authors: "Jovana Dobreva and Tomer Sagi", track: "Research" },
           { id: 221, title: "THGFM: Dual-Branch Temporal Heterogeneous Graph Fusion Model", authors: "Yixin Peng, Diego Collarana, Er Jin and Stefan Decker", track: "Research" },
@@ -263,10 +261,13 @@ export const schedule = [
           { id: 266, title: "Constraint-Guided RDF Construction with Provenance", authors: "Xuemin Duan, David Chaves-Fraga and Anastasia Dimou", track: "Research" },
         ],
       },
+
+
       {
-        start: "10:30", end: "12:00", room: "Sezione 3&4", kind: "parallel",
+        start: "10:30", end: "12:00", room: "Sezione 2", kind: "parallel",
         title: "Ontology Engineering, Question Answering and LLMs",
         chairs: "TBD",
+        slot: 15,
         papers: [
           { id: 56, title: "DistillER: Knowledge Distillation in Entity Resolution with Large Language Models", authors: "Alexandros Zeakis, George Papadakis and Dimitrios Skoutas", track: "Research" },
           { id: 176, title: "FedV-KGQA: Multi-Hop Question Answering over Vertically Partitioned Knowledge Graphs", authors: "Md Saikat Islam Khan Bappy and Oshani Seneviratne", track: "Research" },
@@ -274,6 +275,20 @@ export const schedule = [
           { id: 401, title: "RDFS-LLM-Bench: A Benchmark for Evaluating RDF Schema Inference in LLMs", authors: "Taichi Hosokawa, Sudesna Chakraborty and Takeshi Morita", track: "Resource" },
         ],
       },
+
+      {
+        start: "10:30", end: "12:00", room: "Sezione 3&4", kind: "parallel",
+        title: "Federation, Alignment, and Semantic Interoperability",
+        chairs: "TBD",
+        slot: 4,
+        papers: [
+          { id: 199, title: "Does SPARQL federation work in the real world? A case study over large biological SPARQL endpoints", authors: "Elias Crum, Bryan-Elliott Tam, Jonni Hanski, Ana-Claudia Sima, Tarcisio Mendes de Farias, Jerven Bolleman and Ruben Taelman", track: "In-Use" },
+          { id: 295, title: "Uplifting the Superpowers of Worst-Case-Optimal Join Algorithms", authors: "Adrián Gómez-Brandón, Aidan Hogan and Gonzalo Navarro", track: "Research" },
+          { id: 350, title: "Improving Interoperability among Defence and National Security Ontologies: Analysis and Evaluation Tasks", authors: "Jonathon Dilworth, Pedro Giesteira Cotovio, David Herron, Paul Cripps, Nigel Dewdney, Catia Pesquita and Ernesto Jiménez-Ruiz", track: "Resource" },
+          { id: 444, title: "SEER-KG: Side Effect Exploration and Evaluation with Knowledge Graph-based Retrieval in Knowledge Editing for LLMs", authors: "Patipon Wiangnak, Natthawut Kertkeidkachorn and Kiyoaki Shirai", track: "Research" },
+        ],
+      },
+
       { start: "10:30", end: "12:00", room: "Sezione 5", title: "Industry Papers I", kind: "parallel", chairs: "TBD" },
 
       { start: "12:00", end: "13:30", room: LUNCH, title: "Lunch", kind: "break" },
@@ -282,6 +297,7 @@ export const schedule = [
         start: "13:30", end: "15:00", room: "Sezione 1", kind: "parallel",
         title: "Graph Languages, Federation, and Provenance",
         chairs: "TBD",
+        slot: 5,
         papers: [
           { id: 306, title: "A Compositional Language for Property Graphs", authors: "Marcelo Arenas, Leonid Libkin and Wim Martens", track: "Research" },
           { id: 437, title: "FeDivers: Graph-Pattern-Aware Source Selection for Scalable SPARQL Federations", authors: "Erwan Boisteau-Desdevises, Gabriela Montoya, Brice Nédelec, Pascal Molli, Hala Skaf-Molli and Salim Tasan", track: "Research" },
@@ -289,21 +305,12 @@ export const schedule = [
           { id: 126, title: "Authoring and Management of Transparent Research Integrity Assessments of Randomised Clinical Trial Publications Using LLM-Assisted Tools and Provenance Knowledge Graphs", authors: "Milan Markovic, Goutham Indukuri, Somayajulu Sripada, Colby Vorland, Jack Wilkinson, Mark Bolland, Andrew Grey, Miriam Brazzelli, Alison Avenell and Clare Robertson", track: "Resource" },
         ],
       },
+
       {
         start: "13:30", end: "15:00", room: "Sezione 2", kind: "parallel",
-        title: "Neurosymbolic reasoning in knowledge graphs",
+        title: "Ontology Management and Explanation, and Knowledge Graph Validation ",
         chairs: "TBD",
-        papers: [
-          { id: 257, title: "A Neurosymbolic Scholarly Intelligence System in Use at Springer Nature", authors: "Antonello Meloni, Angelo Salatino, Francesco Osborne, Alexis Vizcaino, Aliaksandr Birukou, Diego Reforgiato Recupero and Enrico Motta", track: "In-Use" },
-          { id: 69, title: "Dempster–Shafer Evidence Calibration for Conflict-Aware Knowledge Graph Reasoning", authors: "Kang Yao, Quanbo Cheng, Zhijie Ren, Jinjiang Cui and Weiwei Fu", track: "Research" },
-          { id: 331, title: "Stratified Negation in RDF Rules: A Correct Approach", authors: "Nils Küchenmeister, Alex Ivliev, Dörthe Arndt and Markus Krötzsch", track: "Research" },
-          { id: 189, title: "MedSchema: A Chinese Medical Schema Rule Dataset for Advancing Neuro-Symbolic Reasoning", authors: "Yu Huang, Ke Xiong, Chuanhao Xu, Tingxin Jiang, Yang Liu and Xiaowang Zhang", track: "Resource" },
-        ],
-      },
-      {
-        start: "13:30", end: "15:00", room: "Sezione 3&4", kind: "parallel",
-        title: "Ontology Explanation, Mapping, and Validation",
-        chairs: "TBD",
+        slot: 17,
         papers: [
           { id: 347, title: "Recovering Explanations from Transformed Rule-Based Ontologies", authors: "Alex Ivliev, Markus Krötzsch and Maximilian Marx", track: "Research" },
           { id: 270, title: "Ontology Unpacking and Semantic Bridging for Enterprise Decision-Making", authors: "Antony Medeiros, Daniel Schwabe and Sergio Lifschitz", track: "Research" },
@@ -311,40 +318,29 @@ export const schedule = [
           { id: 312, title: "A Semantic Resource Suite for Privacy Policy Formalization", authors: "Rui Zhao, Vladyslav Melnychuk, Jesse Wright, Jun Zhao and Nigel Shadbolt", track: "Resource" },
         ],
       },
+      {
+        start: "13:30", end: "15:00", room: "Sezione 3&4", kind: "parallel",
+        title: "Neurosymbolic reasoning in knowledge graphs",
+        chairs: "TBD",
+        slot: 11,
+        papers: [
+          { id: 257, title: "A Neurosymbolic Scholarly Intelligence System in Use at Springer Nature", authors: "Antonello Meloni, Angelo Salatino, Francesco Osborne, Alexis Vizcaino, Aliaksandr Birukou, Diego Reforgiato Recupero and Enrico Motta", track: "In-Use" },
+          { id: 69, title: "Dempster–Shafer Evidence Calibration for Conflict-Aware Knowledge Graph Reasoning", authors: "Kang Yao, Quanbo Cheng, Zhijie Ren, Jinjiang Cui and Weiwei Fu", track: "Research" },
+          { id: 331, title: "Stratified Negation in RDF Rules: A Correct Approach", authors: "Nils Küchenmeister, Alex Ivliev, Dörthe Arndt and Markus Krötzsch", track: "Research" },
+          { id: 189, title: "MedSchema: A Chinese Medical Schema Rule Dataset for Advancing Neuro-Symbolic Reasoning", authors: "Yu Huang, Ke Xiong, Chuanhao Xu, Tingxin Jiang, Yang Liu and Xiaowang Zhang", track: "Resource" },
+        ],
+      },
+
       { start: "13:30", end: "15:00", room: "Sezione 5", title: "Industry Papers II", kind: "parallel", chairs: "TBD" },
 
       { start: "15:00", end: "15:30", room: COFFEE, title: "Coffee Break", kind: "break" },
 
+
       {
         start: "15:30", end: "17:45", room: "Sezione 1", kind: "parallel",
-        title: "Uncertain Querying, Knowledge Graph Augmentation, and Data Sharing",
-        chairs: "TBD",
-        papers: [
-          { id: 254, title: "ProbSPARQL: Querying Knowledge Graphs with Multi-dimensional, Uncertain Numeric Data", authors: "Jingcheng Wu, Ratan Bahadur Thapa, Daniel Hernandez, Hongkuan Zhou and Steffen Staab", track: "In-Use" },
-          { id: 421, title: "Mitigating Exploration Sluggishness in Iterative Knowledge Graph Augmentation", authors: "Zequn Sun, Xiaohui Zhang, Yaqin Jin and Wei Hu", track: "Research" },
-          { id: 311, title: "Beyond Edge Addition: A Dataset for Information Extraction Incorporating New Instances, Types, and Relations", authors: "Sven Hertling, Cedric Möller, Nandana Mihindukulasooriya and Ricardo Usbeck", track: "Resource" },
-          { id: 337, title: "Knowledge Graph–Supported Negotiation for Data Sharing", authors: "Soulmaz Gheisari and George Konstantinidis", track: "Research" },
-          { id: 273, title: "SNAP-KG: Streaming Node Assignment via Projection for Knowledge Graph Entity Integration", authors: "Jui-Chien Lin, Oshani Seneviratne and Mohammad Mohammadi Amiri", track: "Research" },
-          { id: 143, title: "Knowledge Graph Representation Learning with Efficient Message Passing", authors: "Huu Tan Mai, Cuong Xuan Chu, Heiko Paulheim and Daria Stepanova", track: "Research" },
-        ],
-      },
-      {
-        start: "15:30", end: "17:45", room: "Sezione 2", kind: "parallel",
-        title: "Neurosymbolic reasoning and ontologies",
-        chairs: "TBD",
-        papers: [
-          { id: 147, title: "Bridging the Semantic Web and Model-Based Systems Engineering with the Ontological Modeling Language", authors: "Maged Elaasar, Bentley Oakes, Eduard Kamburjan, Mohammad Hamdaqa and Abdelwahab Hamou-Lhadj", track: "In-Use" },
-          { id: 89, title: "Neuro-Symbolic Meta-Policies for Temporal Knowledge-Graph Memory under Partial Observability", authors: "Taewoon Kim, Vincent Francois Lavet and Michael Cochez", track: "Research" },
-          { id: 106, title: "Moose: Latent concept learning with reasoning-shortcut awareness in EL++", authors: "Olga Mashkova, Asaad Mohammedsaleh, Fernando Zhapa-Camacho and Robert Hoehndorf", track: "Research" },
-          { id: 241, title: "TP-ONT: An Ontology for Enhanced Reasoning in AI Task Planning via Atomic Decomposition", authors: "Ma'Ayan Armony, Albert Meroño-Peñuela and Gerard Canal", track: "Resource" },
-          { id: 375, title: "Linking the Grid: A Knowledge Graph Approach to France’s Electricity Consumption", authors: "Thibault Ehrhart, Pasquale Lisena, Raphael Troncy, Ghislain Agoua, Somsakun Maneerat and Fatma-Zohra Hannou", track: "In-Use" },
-          { id: 255, title: "NORMA: A Semantic Framework for Legal Norm Representation from Annotated BPMN", authors: "Sheyla Leyva Sánchez, María Poveda-Villalón, Victor Rodríguez-Doncel, Marinella Quaranta, Ilaria Angela Amantea and Meem Arafat Manab", track: "Resource" },
-        ],
-      },
-      {
-        start: "15:30", end: "17:45", room: "Sezione 3&4", kind: "parallel",
         title: "Grounded LLMs, Scalable Reasoning, and Privacy",
         chairs: "TBD",
+        slot: 20,
         papers: [
           { id: 190, title: "How Graphs ground Large Language Models - Counterfactuals for Subgraph Verbalizations", authors: "Sara Buchmann, Emanuel Slany and Stephan Scheele", track: "Research" },
           { id: 404, title: "Fast, flexible, interpretable: massively parallel knowledge graph reasoning and concept alignment with OWL ontologies", authors: "Jade Franklin, John Erickson and Deborah McGuinness", track: "Research" },
@@ -354,10 +350,42 @@ export const schedule = [
           { id: 288, title: "LELA: LLM-based Entity Linking with Zero-Shot Domain Adaptation", authors: "Samy Haffoudhi, Fabian Suchanek and Nils Holzenberger", track: "Research" },
         ],
       },
+
+      {
+        start: "15:30", end: "17:45", room: "Sezione 2", kind: "parallel",
+        title: "Neurosymbolic reasoning and ontologies",
+        chairs: "TBD",
+        slot: 13,
+        papers: [
+          { id: 147, title: "Bridging the Semantic Web and Model-Based Systems Engineering with the Ontological Modeling Language", authors: "Maged Elaasar, Bentley Oakes, Eduard Kamburjan, Mohammad Hamdaqa and Abdelwahab Hamou-Lhadj", track: "In-Use" },
+          { id: 89, title: "Neuro-Symbolic Meta-Policies for Temporal Knowledge-Graph Memory under Partial Observability", authors: "Taewoon Kim, Vincent Francois Lavet and Michael Cochez", track: "Research" },
+          { id: 106, title: "Moose: Latent concept learning with reasoning-shortcut awareness in EL++", authors: "Olga Mashkova, Asaad Mohammedsaleh, Fernando Zhapa-Camacho and Robert Hoehndorf", track: "Research" },
+          { id: 241, title: "TP-ONT: An Ontology for Enhanced Reasoning in AI Task Planning via Atomic Decomposition", authors: "Ma'Ayan Armony, Albert Meroño-Peñuela and Gerard Canal", track: "Resource" },
+          { id: 375, title: "Linking the Grid: A Knowledge Graph Approach to France’s Electricity Consumption", authors: "Thibault Ehrhart, Pasquale Lisena, Raphael Troncy, Ghislain Agoua, Somsakun Maneerat and Fatma-Zohra Hannou", track: "In-Use" },
+          { id: 255, title: "NORMA: A Semantic Framework for Legal Norm Representation from Annotated BPMN", authors: "Sheyla Leyva Sánchez, María Poveda-Villalón, Victor Rodríguez-Doncel, Marinella Quaranta, Ilaria Angela Amantea and Meem Arafat Manab", track: "Resource" },
+        ],
+      },
+
+      {
+        start: "15:30", end: "17:45", room: "Sezione 3&4", kind: "parallel",
+        title: "Uncertain Querying, Knowledge Graph Augmentation, and Data Sharing",
+        chairs: "TBD",
+        slot: 21,
+        papers: [
+          { id: 254, title: "ProbSPARQL: Querying Knowledge Graphs with Multi-dimensional, Uncertain Numeric Data", authors: "Jingcheng Wu, Ratan Bahadur Thapa, Daniel Hernandez, Hongkuan Zhou and Steffen Staab", track: "In-Use" },
+          { id: 421, title: "Mitigating Exploration Sluggishness in Iterative Knowledge Graph Augmentation", authors: "Zequn Sun, Xiaohui Zhang, Yaqin Jin and Wei Hu", track: "Research" },
+          { id: 311, title: "Beyond Edge Addition: A Dataset for Information Extraction Incorporating New Instances, Types, and Relations", authors: "Sven Hertling, Cedric Möller, Nandana Mihindukulasooriya and Ricardo Usbeck", track: "Resource" },
+          { id: 337, title: "Knowledge Graph–Supported Negotiation for Data Sharing", authors: "Soulmaz Gheisari and George Konstantinidis", track: "Research" },
+          { id: 273, title: "SNAP-KG: Streaming Node Assignment via Projection for Knowledge Graph Entity Integration", authors: "Jui-Chien Lin, Oshani Seneviratne and Mohammad Mohammadi Amiri", track: "Research" },
+          { id: 143, title: "Knowledge Graph Representation Learning with Efficient Message Passing", authors: "Huu Tan Mai, Cuong Xuan Chu, Heiko Paulheim and Daria Stepanova", track: "Research" },
+        ],
+      },
+
       {
         start: "15:30", end: "17:45", room: "Sezione 5", kind: "parallel",
         title: "Scalable Knowledge Graph Query Processing and Optimization",
         chairs: "TBD",
+        slot: 3,
         papers: [
           { id: 138, title: "Evolving FedX: High-Performance SPARQL Federation in the Eclipse RDF4J Ecosystem", authors: "Andreas Schwarte, Peter Haase and Katja Hose", track: "In-Use" },
           { id: 125, title: "Query-Specific Pruning of RML Mappings", authors: "Sitt Min Oo and Olaf Hartig", track: "Research" },
@@ -384,22 +412,13 @@ export const schedule = [
     sessions: [
       { start: "09:00", end: "10:00", rooms: PLENARY, title: "Keynote 4 - Francesca Toni", kind: "keynote", chairs: "TBD", link: "/#/program/keynotespeakers?speaker=francesca-toni" },
       { start: "10:00", end: "10:30", room: COFFEE, title: "Coffee Break", kind: "break" },
- 
+
+
       {
         start: "10:30", end: "12:00", room: "Sezione 1", kind: "parallel",
-        title: "FAIR, Decentralized, and Trustworthy Knowledge Infrastructures",
-        chairs: "TBD",
-        papers: [
-          { id: 427, title: "RangeFC: Interval-Aware Temporal Fact Checking for Knowledge Graph", authors: "Abdullah Qamar, Umair Qudus, Michael Röder and Axel-Cyrille Ngonga Ngomo", track: "Research" },
-          { id: 428, title: "Autonomous FAIR Digital Objects: From Passive Assertions to Active Knowledge", authors: "Zeyd Boukhers, Oya Beyan, Cong Yang and Christoph Lange", track: "Research" },
-          { id: 272, title: "BLOD: A Domain-Specific Subcloud for Discoverable and FAIR Biomedical Knowledge Graphs", authors: "Sana Latif and Maria Angela Pellegrino", track: "Resource" },
-          { id: 75, title: "A Robust Decentralized Infrastructure for Trust-Aware Open Knowledge Sharing", authors: "Tobias Kuhn, Virginia Balseiro, Ashley Caselli, Ziroli Plutschow, Piotr Sowiński and Anastasiya Danilenka", track: "Research" },
-        ],
-      },
-      {
-        start: "10:30", end: "12:00", room: "Sezione 2", kind: "parallel",
         title: "Knowledge Graphs for Retrieval, Knowledge Editing, and Adaptive Reasoning",
         chairs: "TBD",
+        slot: 18,
         papers: [
           { id: 27, title: "Retrieval-Augmented Generation of Ontologies from Relational Databases", authors: "Nadeen Fathallah, Mojtaba Nayyeri, Yogi Athish Aalla, Ratan Bahadur Thapa, Hans-Michael Tautenhahn, Anton Schnurpel and Steffen Staab", track: "Research" },
           { id: 149, title: "Graph-Based Reranking for Cross-Domain Biomedical Ontology Alignment", authors: "Giuseppe Futia", track: "Research" },
@@ -407,35 +426,55 @@ export const schedule = [
           { id: 370, title: "Eventour: A GeoSPARQL Knowledge Graph for Cultural and Service-Aware Urban Exploration", authors: "Blerina Spahiu, Marco Cremaschi and Giuseppe Vizzari", track: "Resource" },
         ],
       },
-      {
-        start: "10:30", end: "12:00", room: "Sezione 3&4", kind: "parallel",
-        title: "Ontology Learning, Requirements, and Evaluation",
+
+        {
+        start: "10:30", end: "12:00", room: "Sezione 2", kind: "parallel",
+        title: "Ontology and Shape Learning",
         chairs: "TBD",
+        slot: 16,
         papers: [
           { id: 164, title: "LYRA: Belief-Driven Scalable Class Expression Learning in Description Logics", authors: "Amgad Abdulmaqsod, Yasir Mahmood, Axel-Cyrille Ngonga Ngomo and Mohamed Sherif", track: "Research" },
           { id: 159, title: "Shapes from Examples: Foundations of Shape Learning in Recursive SHACL", authors: "Bente Gortworst, Cem Okulmus, Magdalena Ortiz and Anni-Yasmin Turhan", track: "Research" },
-          { id: 240, title: "Evaluating Competency Questions: Measuring Perspectivisation from Requirement Sources", authors: "Anna Sofia Lippolis, Andrea Giovanni Nuzzolese, Valentina Presutti and Minh Davide Ragagni", track: "Research" },
-          { id: 390, title: "The Prebiotic Origins of Life Ontology", authors: "Shweta U Narkar, Vincent S Riggi, Karyn L Rogers and James A Hendler", track: "Resource" },
+         // { id: 240, title: "Evaluating Competency Questions: Measuring Perspectivisation from Requirement Sources", authors: "Anna Sofia Lippolis, Andrea Giovanni Nuzzolese, Valentina Presutti and Minh Davide Ragagni", track: "Research" },
+          { id: 93, title: "Words Matter: Robust Entity Alignment for Knowledge Graphs via Multi-View Textualization", authors: "Hanane Kteich, Gianluca Quercini, Joe Raad and Fatiha Sais", track: "Research" },
+         { id: 390, title: "The Prebiotic Origins of Life Ontology", authors: "Shweta U Narkar, Vincent S Riggi, Karyn L Rogers and James A Hendler", track: "Resource" },
         ],
       },
+ 
+      {
+        start: "10:30", end: "12:00", room: "Sezione 3&4", kind: "parallel",
+        title: "FAIR, Decentralized, and Trustworthy Knowledge Infrastructures",
+        chairs: "TBD",
+        slot: 23,
+        papers: [
+          { id: 427, title: "RangeFC: Interval-Aware Temporal Fact Checking for Knowledge Graph", authors: "Abdullah Qamar, Umair Qudus, Michael Röder and Axel-Cyrille Ngonga Ngomo", track: "Research" },
+          { id: 428, title: "Autonomous FAIR Digital Objects: From Passive Assertions to Active Knowledge", authors: "Zeyd Boukhers, Oya Beyan, Cong Yang and Christoph Lange", track: "Research" },
+          { id: 272, title: "BLOD: A Domain-Specific Subcloud for Discoverable and FAIR Biomedical Knowledge Graphs", authors: "Sana Latif and Maria Angela Pellegrino", track: "Resource" },
+          { id: 75, title: "A Robust Decentralized Infrastructure for Trust-Aware Open Knowledge Sharing", authors: "Tobias Kuhn, Virginia Balseiro, Ashley Caselli, Ziroli Plutschow, Piotr Sowiński and Anastasiya Danilenka", track: "Research" },
+        ],
+      },
+  
+
       { start: "10:30", end: "12:00", room: "Sezione 5", title: "Visionary Papers", kind: "parallel", chairs: "TBD" },
 
       { start: "12:00", end: "13:30", room: LUNCH, title: "Lunch", kind: "break" },
 
       {
         start: "13:30", end: "14:40", room: "Sezione 1", kind: "parallel",
-        title: "Knowledge Graphs and Ontologies for Domain Applications",
+        title: "Knowledge Graphs, Retrieval-Augmented Question Answering, and Ontologies for Domain Applications",
         chairs: "TBD",
+        slot: 19,
         papers: [
           { id: 432, title: "KARMA: When Knowledge Graphs Still Matter for Retrieval-Augmented Question Answering", authors: "Thi Hoang Thi Pham, Pascal Molli and Hala Skaf-Molli", track: "Research" },
           { id: 132, title: "CEON: Circular Economy Ontology Network", authors: "Huanyu Li, Els de Vleeschauwer, Robin Keskisärkkä, Mikael Lindecrantz, Mina Abd Nikooie Pour, Ying Li, Ben De Meester, Patrick Lambrix and Eva Blomqvist", track: "Resource" },
-          { id: 267, title: "Vibes Lore Core: the Aesthetics Knowledge Graph", authors: "Silvia Cappa, Anna Sofia Lippolis, Anouk Flinkert, Ekaterina Krasnova, Shiho Nakamura, Andrea Giovanni Nuzzolese and Aldo Gangemi", track: "Resource" },
+          { id: 305, title: "From Records to Signs: A Layered Knowledge Graph for Conceptual Dynamics in Charles S. Peirce's Manuscripts", authors: "Carlo Teo Pedretti, Dario Baldini, Lorenzo Zangari, Alessandro Adamou and Davide Picca", track: "Resource" },    
         ],
       },
       {
         start: "13:30", end: "14:40", room: "Sezione 2", kind: "parallel",
         title: "Human-Centered Ontology Engineering and Domain Knowledge Graphs",
         chairs: "TBD",
+        slot: 24,
         papers: [
           { id: 345, title: "A Collaborative Human-AI Workflow for Ontology Requirement Engineering in Use", authors: "Reham Alharbi, George Hannah, Elliott Watkiss-Leek, Wilf Morlidge, Jacopo de Berardinis and Terry R. Payne", track: "In-Use" },
           { id: 117, title: "SVEN: A Framework to Semanticize Virtual Environments", authors: "Nicolas Saint-Léger, Joe Raad, Nicolas Férey and Patrick Bourdot", track: "Resource" },
