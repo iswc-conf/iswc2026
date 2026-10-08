@@ -395,7 +395,7 @@ export const schedule = [
           { id: 234, title: "Semantified CEUR-WS in Wikidata", authors: "Wolfgang Fahl, Tim Holzheim, Christoph Lange, Jerven Bolleman and Stefan Decker", track: "In-Use" },
         ],
       },
-      { start: "19:15 ", end: " Late",  title: "Gala Dinner & Disco (Villa de Grecis)", link: "https://maps.app.goo.gl/rnbViwj1LuaGquZp8" },
+      { start: "19:15 ", end: " Late",  title: "Gala Dinner & Disco (Villa de Grecis)", link: "https://www.villadegrecis.com" },
 
 
     ],
