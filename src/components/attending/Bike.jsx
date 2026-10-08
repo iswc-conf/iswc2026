@@ -101,8 +101,9 @@ Cantare... oh, that we'll do, all along the coast road.</b>
 <p className="iswc-callout">The ride takes place on <b>October 24th, 2026.</b> </p>
 
 <p>
-No bike? No problem. Bikes can be rented by <ExternalLink href="https://veloservice.org/en/">Velo Service, Bari</ExternalLink>. They will be able to advise on the right gear for this ride. If you’re planning to attend please let us know by adding your name to this <ExternalLink href="https://docs.google.com/spreadsheets/d/11Io2NrVPtF6gin5B7qeloa__HyWJfVh77CoG7b3_7ac/edit?usp=sharing">list</ExternalLink>. This will facilitate communication for further updates.  
+No bike? No problem. Bikes can be rented by <ExternalLink href="https://veloservice.org/en/">Velo Service, Bari</ExternalLink>. They will be able to advise on the right gear for this ride. If you’re planning to attend please let us know by filling this <ExternalLink href="https://forms.gle/w7KtMpkxgw2dsCgN8">form</ExternalLink>. This will facilitate communication for further updates.  
 </p>
+
 
 <p className="iswc-callout">
 <b>One small disclaimer</b>: this is a coastal ride, and the sea doesn't always play nice. If the weather turns bad, we'll have to cancel for everyone's safety. We'll keep you posted as the date approaches, so keep an eye out for updates.   
