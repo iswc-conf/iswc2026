@@ -553,7 +553,7 @@ export const slots = [
       {
         "id": 270,
         "title": "Ontology Unpacking and Semantic Bridging for Enterprise Decision-Making",
-        "authors": "Antony Medeiros, Daniel Schwabe and Sergio Lifschitz",
+        "authors": "Antony Seabra, Daniel Schwabe and Sergio Lifschitz",
         "track": "Research",
         "topic": "Ontologies, Semantic Modeling, and Validation"
       },

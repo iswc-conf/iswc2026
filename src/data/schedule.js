@@ -313,7 +313,7 @@ export const schedule = [
         slot: 17,
         papers: [
           { id: 347, title: "Recovering Explanations from Transformed Rule-Based Ontologies", authors: "Alex Ivliev, Markus Krötzsch and Maximilian Marx", track: "Research" },
-          { id: 270, title: "Ontology Unpacking and Semantic Bridging for Enterprise Decision-Making", authors: "Antony Medeiros, Daniel Schwabe and Sergio Lifschitz", track: "Research" },
+          { id: 270, title: "Ontology Unpacking and Semantic Bridging for Enterprise Decision-Making", authors: "Antony Seabra, Daniel Schwabe and Sergio Lifschitz", track: "Research" },
           { id: 362, title: "Rewrite Once, Validate Anywhere: Producing OWL-Aware SHACL Constraints", authors: "Anouk Michelle Oudshoorn, Piotr Gorczyca and Dörthe Arndt", track: "Research" },
           { id: 312, title: "A Semantic Resource Suite for Privacy Policy Formalization", authors: "Rui Zhao, Vladyslav Melnychuk, Jesse Wright, Jun Zhao and Nigel Shadbolt", track: "Resource" },
         ],

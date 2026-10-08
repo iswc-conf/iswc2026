@@ -125,7 +125,7 @@ const researchTrack = [
   },
   {
     title: "Ontology Unpacking and Semantic Bridging for Enterprise Decision-Making",
-    authors: "Antony Medeiros, Daniel Schwabe and Sergio Lifschitz",
+    authors: "Antony Seabra, Daniel Schwabe and Sergio Lifschitz",
   },
   {
     title: "Open all the windows! : RSP-QL under cross-window entailment with provenance semi-rings",
