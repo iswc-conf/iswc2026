@@ -119,7 +119,7 @@ export const schedule = [
       { start: "09:00", end: "12:50", room: "Sezione  6", title: "Knowledge Graphs for Data Interoperability with Chimera (KG4DI)", kind: "tutorial", link: "https://cefriel.github.io/kg4di/" },
       { start: "14:10", end: "18:00", room: "Sezione  6", title: "VocBench & Co.: Encompassing the Full Data Lifecycle", kind: "tutorial", link: "https://vocbench.uniroma2.it/tutorials/iswc-2026" },
       { start: "09:00", end: "12:50", room: "Sezione  7", title: "SCOPE - Using SHACL and OWL in Combination for Practical Knowledge Graph Editing", kind: "tutorial", link: "http://graphwise.ai/iswc2026-workshop-scope" },
-      { start: "14:10", end: "18:00", room: "Sezione  7", title: "Unlocking Legal Automation with Semantic Web Technology (ULA-SWeT)", kind: "tutorial" },
+      { start: "14:10", end: "18:00", room: "Sezione  7", title: "Unlocking Legal Automation with Semantic Web Technology (ULA-SWeT)", kind: "tutorial", link: "https://github.com/gvdgdo/ulaswet" },
       { start: "09:00", end: "12:50", room: "Sezione  8", title: "Semantic-Aware Partitioning of Property Graphs", kind: "tutorial", link: "https://elisjana.github.io/research/iswc2026-tutorial/" },
       { start: "14:10", end: "18:00", room: "Sezione  8", title: "Personal Knowledge Graphs for LLM-Powered Decentralized Recommendations", kind: "tutorial", link: "https://brains-group.github.io/PKG-Recs" },
 
