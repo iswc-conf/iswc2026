@@ -89,7 +89,7 @@ export const schedule = [
 
       { start: "09:00", end: "12:50", room: "Auriga (Perseo)", title: "Neural Networks meet Explicit Knowledge Representation: Towards Mechanistic Interpretability and Neuro-symbolic Modeling by-design", kind: "tutorial", link: "https://humancentricart.github.io/mechanistic-interpretability-by-design/iswc/index.html" },
       { start: "14:10", end: "15:50", room: "Auriga (Perseo)", title: "Intro to OWL Reasoning with Protégé", kind: "tutorial" },
-      { start: "16:20", end: "18:00", room: "Auriga (Perseo)", title: "Doctoral Consortium", kind: "doctoral" },
+      { start: "16:20", end: "18:00", room: "Auriga (Perseo)", title: "Doctoral Consortium Poster Session", kind: "doctoral" },
     ],
   },
 
