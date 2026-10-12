@@ -67,6 +67,48 @@ const SessionTitle = ({ session }) =>
 
 // --- Main conference days: time slot by time slot ---------------------------
 
+// Paper tracks → badge modifier class. Unknown tracks fall back to a neutral badge.
+const TRACK_CLASS = {
+  Research: "research",
+  Resource: "resource",
+  "In-Use": "in-use",
+};
+
+const StarIcon = () => (
+  <svg
+    className="iswc-paper-badge__icon"
+    viewBox="0 0 20 20"
+    aria-hidden="true"
+    focusable="false"
+  >
+    <path
+      fill="currentColor"
+      d="M10 1.5l2.6 5.3 5.9.9-4.25 4.1 1 5.85L10 14.9l-5.25 2.75 1-5.85L1.5 7.7l5.9-.9z"
+    />
+  </svg>
+);
+
+const PaperBadges = ({ paper }) =>
+  (paper.track || paper.spotlight) && (
+    <div className="iswc-paper-badges">
+      {paper.track && (
+        <span
+          className={`iswc-paper-badge iswc-paper-badge--${
+            TRACK_CLASS[paper.track] ?? "other"
+          }`}
+        >
+          {paper.track}
+        </span>
+      )}
+      {paper.spotlight && (
+        <span className="iswc-paper-badge iswc-paper-badge--spotlight">
+          <StarIcon />
+          Spotlight
+        </span>
+      )}
+    </div>
+  );
+
 const Session = ({ session }) => {
   const room = roomLabel(session);
 
@@ -87,14 +129,16 @@ const Session = ({ session }) => {
 
       {session.papers?.length > 0 && (
         <ul className="iswc-schedule-list__papers">
-          {session.papers.map((paper) => (
-            <li key={paper.id}>
-              <span className="iswc-table__title">{paper.title}</span>
-              <div className="iswc-agenda__speaker">
-                {paper.authors} · {paper.track}
-              </div>
-            </li>
-          ))}
+         {session.papers.map((paper) => (
+  <li
+    key={paper.id}
+    className={paper.spotlight ? "iswc-paper--spotlight" : undefined}
+  >
+    <span className="iswc-table__title">{paper.title}</span>
+    <div className="iswc-agenda__speaker">{paper.authors}</div>
+    <PaperBadges paper={paper} />
+  </li>
+))}
         </ul>
       )}
     </li>

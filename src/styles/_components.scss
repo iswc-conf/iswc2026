@@ -2520,6 +2520,73 @@ $iswc-grid-row-height: 7rem;
   color: $iswc-secondary;
 }
 
+// -----------------------------------------------------------------------------
+// Paper badges (track + spotlight) in the schedule
+// -----------------------------------------------------------------------------
+.iswc-paper-badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.3rem;
+}
+
+.iswc-paper-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.12rem 0.6rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+  white-space: nowrap;
+  color: $iswc-muted;
+  background: $iswc-surface-alt;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 2rem;
+}
+
+.iswc-paper-badge--research {
+  color: #1f4e8c;
+  background: #e6eef9;
+  border-color: #b9cdea;
+}
+
+.iswc-paper-badge--resource {
+  color: #1e6b4f;
+  background: #e3f4ec;
+  border-color: #b3dcc8;
+}
+
+.iswc-paper-badge--in-use {
+  color: #8a4b08;
+  background: #fdf0e1;
+  border-color: #f0cfa6;
+}
+
+.iswc-paper-badge--spotlight {
+  color: #6b4500;
+  background: linear-gradient(10deg, #fff6d1, #ffe08a);
+  border-color: #e0b03a;
+  box-shadow: 0 1px 4px rgba(224, 176, 58, 0.35);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.iswc-paper-badge__icon {
+  width: 0.85em;
+  height: 0.85em;
+  flex: 0 0 auto;
+  color: #d18b00;
+}
+
+// A spotlight paper also gets a gold tick in the list, so it stands out
+// while scanning a session.
+.iswc-schedule-list__papers .iswc-paper--spotlight::marker {
+  color: #d18b00;
+}
+
 .iswc-keynote__talk-title {
   font-size: 1.15rem;
   font-weight: 600;
