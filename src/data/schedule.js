@@ -135,6 +135,9 @@ export const schedule = [
       { start: "09:00", end: "12:50", room: "Orione", title: "Semantic Affordances for the Web of Agents: Bridging Multi-Agent Systems, Semantic Web Services, and Agentic AI", kind: "dag" },
       { start: "14:10", end: "18:00", room: "Orione", title: "Towards Agendas for Advancing Personal Agentic Artificial Intelligence (TAAPAAI)", kind: "dag", link: "https://taapaai.github.io" },
       { start: "09:00", end: "18:00", room: "Auriga (Perseo)", title: "Doctoral Consortium", kind: "doctoral" },
+
+      // Listed under "Evening" (anything starting at 18:00 or later).
+      { start: "18:00", end: "Late", title: "Welcome Reception", kind: "other" },
     ],
   },
 
@@ -227,7 +230,7 @@ export const schedule = [
           { id: 377, title: "DMFO: A Modular Alignment Architecture for Situationally Interpretable State Representations", authors: "Jan Christian Redlich, Peter Kloke and Sebastian Bosse", track: "Resource" },
         ],
       },
-      { start: "13:45", end: "15:15", room: "Sezione 3&4", title: "Journal Papers from TGDK", kind: "parallel", chairs: "TBD", link: "https://tgdk-iswc2026.dcc.uchile.cl/"},
+      { start: "13:45", end: "15:15", room: "Sezione 3&4", title: "Journal Papers from TGDK", kind: "parallel", chairs: "TBD" },
       { start: "13:45", end: "15:15", room: "Sezione 5", title: "Journal Papers from SWJ", kind: "parallel", chairs: "TBD" },
 
       { start: "15:15", end: "15:45", room: COFFEE, title: "Coffee Break", kind: "break" },

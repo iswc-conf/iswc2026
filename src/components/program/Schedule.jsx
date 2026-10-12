@@ -29,8 +29,9 @@ const timeGroups = (day) => {
 };
 
 // Workshop and tutorial days: which part of the day a session takes.
-const PARTS = ["Full day", "Morning", "Afternoon"];
+const PARTS = ["Full day", "Morning", "Afternoon", "Evening"];
 const partOf = (session) => {
+  if (session.start.trim() >= "18:00") return "Evening";
   if (session.end <= "13:00") return "Morning";
   if (session.start >= "12:00") return "Afternoon";
   return "Full day";
