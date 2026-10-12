@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Page from "../general/Page";
 import Header from "../general/Header";
 import UnderlineHeader from "../general/UnderlineHeader";
@@ -14,11 +14,14 @@ const roomLabel = (session) =>
 const byTime = (a, b) =>
   a.start.localeCompare(b.start) || a.end.localeCompare(b.end);
 
+// "09:00–10:15". Trimmed, so a stray space in the data doesn't split a group.
+const timeRange = (session) => `${session.start.trim()}–${session.end.trim()}`;
+
 // A day's sessions grouped by their "start–end" time, earliest first.
 const timeGroups = (day) => {
   const groups = new Map();
   [...day.sessions].sort(byTime).forEach((session) => {
-    const time = `${session.start}–${session.end}`;
+    const time = timeRange(session);
     if (!groups.has(time)) groups.set(time, []);
     groups.get(time).push(session);
   });
@@ -33,12 +36,50 @@ const partOf = (session) => {
   return "Full day";
 };
 
+// Stable DOM id for a session in the expanded view, so the table view can
+// jump to it. Based on the session's position in the data, which never
+// changes at runtime (the views sort copies of the array).
+const sessionAnchor = (day, session) =>
+  `schedule-${day.id}-s${day.sessions.indexOf(session)}`;
+
 // Scrolled to in code rather than linked as `#anchors`, because HashRouter
-// owns the URL hash.
-const scrollToDay = (id) =>
-  document
-    .getElementById(`schedule-${id}`)
-    ?.scrollIntoView({ behavior: "smooth", block: "start" });
+// owns the URL hash. With `highlight`, the target briefly flashes so it is
+// easy to spot among its neighbours.
+const scrollToId = (id, { highlight = false } = {}) => {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.scrollIntoView({ behavior: "smooth", block: "start" });
+  if (highlight) {
+    el.classList.remove("is-highlighted");
+    void el.offsetWidth; // restart the animation if it is already running
+    el.classList.add("is-highlighted");
+    el.addEventListener(
+      "animationend",
+      () => el.classList.remove("is-highlighted"),
+      { once: true }
+    );
+  }
+};
+
+const VIEWS = [
+  { id: "schedule-table-view", label: "Table View" },
+  { id: "schedule-expanded-view", label: "Expanded View" },
+];
+
+const ViewSelector = () => (
+  <nav className="iswc-track-index" aria-label="Choose a view">
+    {VIEWS.map((view) => (
+      <button
+        type="button"
+        key={view.id}
+        className="iswc-track-index__item"
+        onClick={() => scrollToId(view.id)}
+      >
+        {view.label}
+      </button>
+    ))}
+  </nav>
+);
 
 const DaySelector = () => (
   <nav className="iswc-schedule__days" aria-label="Jump to a day">
@@ -47,7 +88,7 @@ const DaySelector = () => (
         type="button"
         key={day.id}
         className="iswc-schedule__day"
-        onClick={() => scrollToDay(day.id)}
+        onClick={() => scrollToId(`schedule-${day.id}`)}
       >
         <span className="iswc-schedule__day-label">{day.label}</span>
         {day.subtitle && (
@@ -65,6 +106,180 @@ const SessionTitle = ({ session }) =>
     session.title
   );
 
+// --- Table view: one compact table per day ----------------------------------
+//
+// Rows are time slots; parallel sessions sit side by side in unnamed
+// columns. A row with fewer sessions than the day's busiest slot lets its
+// last session stretch across the remaining columns, so a keynote or a
+// break spans the full width.
+
+// A horizontal scroller that shows when there is more to see. Whichever edge
+// has hidden content fades out, and a small bar above the table says so and
+// offers buttons to scroll. Nothing shows when the table fits (wide screens,
+// quiet days, and phones, where the table reflows into cards).
+const ScrollHint = ({ children }) => {
+  const ref = useRef(null);
+  const [edges, setEdges] = useState({ left: false, right: false });
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return undefined;
+
+    const update = () => {
+      const max = el.scrollWidth - el.clientWidth;
+      setEdges({ left: el.scrollLeft > 1, right: el.scrollLeft < max - 1 });
+    };
+
+    update();
+    el.addEventListener("scroll", update, { passive: true });
+    const observer = new ResizeObserver(update);
+    observer.observe(el);
+    return () => {
+      el.removeEventListener("scroll", update);
+      observer.disconnect();
+    };
+  }, []);
+
+  const scrollBy = (direction) =>
+    ref.current?.scrollBy({
+      left: direction * ref.current.clientWidth * 0.8,
+      behavior: "smooth",
+    });
+
+  const overflowing = edges.left || edges.right;
+
+  return (
+    <>
+      {overflowing && (
+        <div className="iswc-scroll-hint__bar">
+          <span className="iswc-scroll-hint__text">
+            {edges.right
+              ? "More sessions to the right"
+              : "Scroll back for earlier sessions"}
+          </span>
+          <button
+            type="button"
+            className="iswc-table-toggle-all"
+            onClick={() => scrollBy(-1)}
+            disabled={!edges.left}
+            aria-label="Scroll left"
+          >
+            ←
+          </button>
+          <button
+            type="button"
+            className="iswc-table-toggle-all"
+            onClick={() => scrollBy(1)}
+            disabled={!edges.right}
+            aria-label="Scroll right"
+          >
+            More sessions →
+          </button>
+        </div>
+      )}
+      <div
+        className={`iswc-scroll-hint${
+          edges.left ? " iswc-scroll-hint--left" : ""
+        }${edges.right ? " iswc-scroll-hint--right" : ""}`}
+      >
+        <div ref={ref} className="iswc-table-scroll">
+          {children}
+        </div>
+      </div>
+    </>
+  );
+};
+
+const OverviewCell = ({ day, session, colSpan }) => {
+  const kind = SESSION_KINDS[session.kind];
+  const isBreak = session.kind === "break";
+  const papers = session.papers?.length ?? 0;
+  const meta = [
+    roomLabel(session),
+    papers > 0 && `${papers} paper${papers === 1 ? "" : "s"}`,
+  ]
+    .filter(Boolean)
+    .join(" · ");
+
+  return (
+    <td
+      colSpan={colSpan > 1 ? colSpan : undefined}
+      className={`iswc-overview__cell${
+        session.kind ? ` iswc-kind--${session.kind}` : ""
+      }`}
+      style={kind ? { "--kind-color": kind.color } : undefined}
+    >
+      {isBreak ? (
+        // Breaks have no entry of their own in the expanded view.
+        <span className="iswc-overview__title">{session.title}</span>
+      ) : (
+        <button
+          type="button"
+          className="iswc-scroll-link iswc-overview__title"
+          onClick={() =>
+            scrollToId(sessionAnchor(day, session), { highlight: true })
+          }
+        >
+          {session.title}
+        </button>
+      )}
+      {meta && <div className="iswc-overview__meta">{meta}</div>}
+    </td>
+  );
+};
+
+const DayOverview = ({ day }) => {
+  const groups = timeGroups(day);
+  if (groups.length === 0) return null;
+
+  // Parallel sessions in room order, as in the expanded view.
+  const roomOrder = (s) => day.rooms.indexOf(s.room ?? s.rooms?.[0]);
+  const columns = Math.max(...groups.map((g) => g.sessions.length));
+
+  return (
+    <section id={`overview-${day.id}`} className="iswc-track">
+      <h3 className="iswc-subheading">{day.label}</h3>
+      <ScrollHint>
+        <table
+          className="iswc-table iswc-overview"
+          style={{ "--overview-cols": columns }}
+        >
+          <colgroup>
+            <col className="iswc-overview__time-col" />
+            {Array.from({ length: columns }, (_, i) => (
+              <col key={i} />
+            ))}
+          </colgroup>
+          <tbody>
+            {groups.map(({ time, sessions }) => {
+              const row = [...sessions].sort(
+                (a, b) => roomOrder(a) - roomOrder(b)
+              );
+              return (
+                <tr key={time}>
+                  <th scope="row" className="iswc-overview__time">
+                    {time}
+                  </th>
+                  {row.map((session, i) => (
+                    <OverviewCell
+                      key={sessionAnchor(day, session)}
+                      day={day}
+                      session={session}
+                      colSpan={
+                        i === row.length - 1 ? columns - row.length + 1 : 1
+                      }
+                    />
+                  ))}
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </ScrollHint>
+    </section>
+  );
+};
+
 // --- Main conference days: time slot by time slot ---------------------------
 
 // Paper tracks → badge modifier class. Unknown tracks fall back to a neutral badge.
@@ -72,6 +287,8 @@ const TRACK_CLASS = {
   Research: "research",
   Resource: "resource",
   "In-Use": "in-use",
+  "Visionary Ideas" : "vis",
+  "Industry" : "ind"
 };
 
 const StarIcon = () => (
@@ -109,11 +326,11 @@ const PaperBadges = ({ paper }) =>
     </div>
   );
 
-const Session = ({ session }) => {
+const Session = ({ day, session }) => {
   const room = roomLabel(session);
 
   return (
-    <li>
+    <li id={sessionAnchor(day, session)} className="iswc-schedule-anchor">
       <span className="iswc-schedule-list__title">
         <SessionTitle session={session} />
       </span>
@@ -129,16 +346,16 @@ const Session = ({ session }) => {
 
       {session.papers?.length > 0 && (
         <ul className="iswc-schedule-list__papers">
-         {session.papers.map((paper) => (
-  <li
-    key={paper.id}
-    className={paper.spotlight ? "iswc-paper--spotlight" : undefined}
-  >
-    <span className="iswc-table__title">{paper.title}</span>
-    <div className="iswc-agenda__speaker">{paper.authors}</div>
-    <PaperBadges paper={paper} />
-  </li>
-))}
+          {session.papers.map((paper) => (
+            <li
+              key={paper.id}
+              className={paper.spotlight ? "iswc-paper--spotlight" : undefined}
+            >
+              <span className="iswc-table__title">{paper.title}</span>
+              <div className="iswc-agenda__speaker">{paper.authors}</div>
+              <PaperBadges paper={paper} />
+            </li>
+          ))}
         </ul>
       )}
     </li>
@@ -150,8 +367,12 @@ const DayBySlot = ({ day }) =>
     <div key={time}>
       <h3 className="iswc-subheading">{time}</h3>
       <ul className="iswc-schedule-list">
-        {sessions.map((session, i) => (
-          <Session key={`${session.title}-${i}`} session={session} />
+        {sessions.map((session) => (
+          <Session
+            key={sessionAnchor(day, session)}
+            day={day}
+            session={session}
+          />
         ))}
       </ul>
     </div>
@@ -159,11 +380,14 @@ const DayBySlot = ({ day }) =>
 
 // --- Workshop and tutorial days: Full day / Morning / Afternoon -------------
 
-const SessionRow = ({ session }) => {
+const SessionRow = ({ day, session }) => {
   const kind = SESSION_KINDS[session.kind];
 
   return (
-    <li className="iswc-schedule-rows__row">
+    <li
+      id={sessionAnchor(day, session)}
+      className="iswc-schedule-rows__row iswc-schedule-anchor"
+    >
       <div className="iswc-schedule-rows__room">{roomLabel(session)}</div>
       <div>
         <SessionTitle session={session} />
@@ -171,9 +395,7 @@ const SessionRow = ({ session }) => {
           {kind && session.kind !== "other" && (
             <span className="iswc-table__tag">{kind.label}</span>
           )}
-          <span>
-            {session.start}–{session.end}
-          </span>
+          <span>{timeRange(session)}</span>
         </div>
       </div>
     </li>
@@ -192,8 +414,7 @@ const DayByPart = ({ day }) => {
     <>
       {breaks.length > 0 && (
         <p className="iswc-schedule-rows__breaks">
-          <b>Breaks:</b>{" "}
-          {breaks.map((s) => `${s.start}–${s.end}`).join(" · ")}
+          <b>Breaks:</b> {breaks.map(timeRange).join(" · ")}
         </p>
       )}
 
@@ -205,8 +426,12 @@ const DayByPart = ({ day }) => {
           <div key={part}>
             <h3 className="iswc-subheading">{part}</h3>
             <ul className="iswc-schedule-rows">
-              {items.map((session, i) => (
-                <SessionRow key={`${session.title}-${i}`} session={session} />
+              {items.map((session) => (
+                <SessionRow
+                  key={sessionAnchor(day, session)}
+                  day={day}
+                  session={session}
+                />
               ))}
             </ul>
           </div>
@@ -242,16 +467,30 @@ export const Schedule = () => (
       <p className="iswc-note">The schedule will be published here soon.</p>
     ) : (
       <>
-        <DaySelector />
+       {/* <ViewSelector /> */}
 
         <p className="iswc-callout">
           <b>Programme correct at time of publication.</b> Minor changes may
           occur; see this page for updates.
         </p>
 
-        {schedule.map((day) => (
-          <Day key={day.id} day={day} />
-        ))}
+         {/*
+
+        <section id="schedule-table-view" className="iswc-track">
+          <UnderlineHeader>Table View</UnderlineHeader>
+          {schedule.map((day) => (
+            <DayOverview key={day.id} day={day} />
+          ))}
+        </section>
+        */}
+
+        <section id="schedule-expanded-view" className="iswc-track">
+             {/*<UnderlineHeader>Expanded View</UnderlineHeader>  */}
+          <DaySelector />
+          {schedule.map((day) => (
+            <Day key={day.id} day={day} />
+          ))}
+        </section>
       </>
     )}
   </Page>

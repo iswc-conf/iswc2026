@@ -227,14 +227,14 @@ export const schedule = [
           { id: 377, title: "DMFO: A Modular Alignment Architecture for Situationally Interpretable State Representations", authors: "Jan Christian Redlich, Peter Kloke and Sebastian Bosse", track: "Resource" },
         ],
       },
-      { start: "13:45", end: "15:15", room: "Sezione 3&4", title: "Journal Papers from TGDK", kind: "parallel", chairs: "TBD" },
+      { start: "13:45", end: "15:15", room: "Sezione 3&4", title: "Journal Papers from TGDK", kind: "parallel", chairs: "TBD", link: "https://tgdk-iswc2026.dcc.uchile.cl/"},
       { start: "13:45", end: "15:15", room: "Sezione 5", title: "Journal Papers from SWJ", kind: "parallel", chairs: "TBD" },
 
       { start: "15:15", end: "15:45", room: COFFEE, title: "Coffee Break", kind: "break" },
       { start: "15:45", end: "17:15", rooms: PLENARY, title: "Keynote 2 - James Hendler ", kind: "keynote", chairs: "TBD", link: "/#/program/keynotespeakers?speaker=james-hendler"},
       { start: "17:15", end: "18:25", rooms: PLENARY, title: "Minute Madness", kind: "parallel", chairs: "TBD" },
       //{ start: "18:25", end: "19:00",  title: "Poster Setting Up" },
-      { start: "19:00", end: "21:00", rooms: PLENARY, title: "Poster and Demos", kind: "parallel", chairs: "TBD" },
+      { start: "19:00", end: "21:00", rooms: PLENARY, title: "Poster and Demos", kind: "parallel" },
     ],
   },
 
@@ -291,7 +291,19 @@ export const schedule = [
         ],
       },
 
-      { start: "10:30", end: "12:00", room: "Sezione 5", title: "Industry Papers I", kind: "parallel", chairs: "TBD" },
+      {
+        start: "10:30", end: "12:00", room: "Sezione 5", kind: "parallel",
+        title: "Industry Papers I",
+        chairs: "TBD",
+        papers: [
+          { id: 518, title: "Ontology-Grounded Semantic Routing Under Diagnostic Uncertainty: A Biolink-Federated CDSS for Emergency Care", authors: "Roberto Shimizu, Thiago Porto and Roberta Garcia", track: "Industry" },
+          { id: 520, title: "Grounding AI Agents in Plant Knowledge Graphs: A Neuro-Symbolic Approach towards Autonomous Industrial Operations", authors: "Naveen Kumar and Swathi Shyam Sunder", track: "Industry" },
+          { id: 525, title: "A Semantic-Layer-Grounded AI Agent for Building Maintenance and Operations", authors: "Xinyi She, Shintaro Suzuki and Hideo Aoki", track: "Industry" },
+          { id: 526, title: "Complementing the Expert: Agentic Discovery of Intrinsic Quality Defects in a Production Judaica Knowledge Graph", authors: "Oren Mishali, Stav Klein and Nimrod Busany", track: "Industry" },
+          { id: 536, title: "Evaluating Entity Resolution Without Ground Truth: A Calibrated LLM-Judge Framework", authors: "Simmi Mourya, Karteek Chada and Deepika Khera", track: "Industry" },
+          { id: 540, title: "The Patents4Science Information Infrastructure (P4SI) - A Semantic Knowledge Infrastructure for Linked Patent Data", authors: "Hidir Aras, Ahmad Alrifai, Mustafa Sofean, Farag Saad, Markus Sitzmann and Lei Zhang", track: "Industry" },
+        ],
+      },
 
       { start: "12:00", end: "13:30", room: LUNCH, title: "Lunch", kind: "break" },
 
@@ -333,7 +345,18 @@ export const schedule = [
         ],
       },
 
-      { start: "13:30", end: "15:00", room: "Sezione 5", title: "Industry Papers II", kind: "parallel", chairs: "TBD" },
+      {
+        start: "13:30", end: "15:00", room: "Sezione 5", kind: "parallel",
+        title: "Industry Papers II",
+        chairs: "TBD",
+        papers: [
+          { id: 528, title: "Ontology-Based Enterprise Knowledge Management", authors: "Utku Sivacilar, Wouter Lubbers, Alireza Emad and Marc Korthouwer", track: "Industry" },
+          { id: 533, title: "Quality Assurance for Knowledge Graph Construction: The EU Public Procurement Experience", authors: "Rashif Rahman, Achillefs Dougalis, Csongor I. Nyulas and Eugeniu Costetchi", track: "Industry" },
+          { id: 534, title: "Maqui.ai: Knowledge graphs and GraphRag to manage legal documents", authors: "Nicolas Barrionuevo, Ri Diaz, Benjamin Farias, Sebastián Ferrada, Alejandro Grez, Juan L. Reutter, Hernan Sarmiento and Agustin Urrutia", track: "Industry" },
+          { id: 537, title: "Data Packages for Enterprise Knowledge Graph Evolution", authors: "Felix Sasaki, Hassan el Hajj, Lars Heling and Mulang Onando", track: "Industry" },
+          { id: 539, title: "Nexus: Semantic Interoperability for Energy Asset Data", authors: "Francisco Martin-Recuerda, Erik Nystad, An Ngoc Lam and Erik Jacques Wiborg", track: "Industry" },
+        ],
+      },
 
       { start: "15:00", end: "15:30", room: COFFEE, title: "Coffee Break", kind: "break" },
 
@@ -457,7 +480,21 @@ export const schedule = [
       },
   
 
-      { start: "10:30", end: "12:00", room: "Sezione 5", title: "Visionary Papers", kind: "parallel", chairs: "TBD" },
+      { start: "10:30", end: "12:00", room: "Sezione 5", title: "Visionary Papers", kind: "parallel", chairs: "TBD" ,
+        papers: [
+          { id: 0, title: "Unrethinking the Semantic Web", authors: "Aidan Hogan, Ora Lassila and James A. Hendler", track: "Visionary Ideas" },
+          { id: 0, title: "	Symbiotic Knowledge Graphs: A Vision for Semantic Brain-Computer Interfaces", authors: "Ruben Taelman", track: "Visionary Ideas" },
+          { id: 0, title: "From a Web of Documents to a Web of Claims: A Claim Layer for Human and AI Science", authors: "Jingbo He and Michael Färber", track: "Visionary Ideas" },
+          { id: 0, title: "From Universal Knowledge Graphs to Contextual Semantic Contracts", authors: "Himanshu Beniwal and Michael Färber", track: "Visionary Ideas" },
+          { id: 0, title: "The Dark Side of the Semantic Web: Fighting for the User in the Age of Palantir", authors: "Harry Halpin", track: "Visionary Ideas" },
+          { id: 0, title: "Digital Emancipation: Property, Banks, and the Completed Web", authors: "Adrianna Janik", track: "Visionary Ideas" },
+
+        ]
+
+
+
+
+      },
 
       { start: "12:00", end: "13:30", room: LUNCH, title: "Lunch", kind: "break" },
 

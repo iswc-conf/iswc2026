@@ -2565,6 +2565,19 @@ $iswc-grid-row-height: 7rem;
   border-color: #f0cfa6;
 }
 
+.iswc-paper-badge--vis {
+  color: #86088a;
+  background: #f6e1fd;
+  border-color: #e4a6f0;
+}
+
+.iswc-paper-badge--ind {
+  color: #6b1e1e;
+  background: #f4e3e3;
+  border-color: #dcb3b3;
+}
+
+
 .iswc-paper-badge--spotlight {
   color: #6b4500;
   background: linear-gradient(10deg, #fff6d1, #ffe08a);
@@ -2592,4 +2605,235 @@ $iswc-grid-row-height: 7rem;
   font-weight: 600;
   font-style: italic;
   margin-bottom: 0.5rem;
+}
+
+// -----------------------------------------------------------------------------
+// Schedule — table view (overview) and jump targets in the expanded view.
+// Append to the end of the components stylesheet. Builds on .iswc-table,
+// .iswc-table-scroll, .iswc-scroll-link and the .iswc-kind--* fills.
+// -----------------------------------------------------------------------------
+
+// Each expanded-view session is a jump target: clear the sticky navbar, and
+// flash briefly when reached from the table view (class set in Schedule.jsx).
+.iswc-schedule-anchor {
+  scroll-margin-top: calc(var(--iswc-navbar-height) + 1.5rem);
+  border-radius: 0.4rem;
+
+  &.is-highlighted {
+    animation: iswc-schedule-flash 2s ease-out;
+  }
+}
+
+@keyframes iswc-schedule-flash {
+  from {
+    background-color: rgba($iswc-primary, 0.18);
+  }
+  to {
+    background-color: transparent;
+  }
+}
+
+.iswc-overview {
+  font-size: 0.88rem;
+
+  // The time column is a row header, not a dark column header.
+  .iswc-overview__time {
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+    color: $iswc-secondary;
+    background: $iswc-surface-alt;
+  }
+
+  // The session's kind colour as a left accent, like .iswc-dates__item.
+  .iswc-overview__cell {
+    box-shadow: inset 3px 0 0 var(--kind-color, transparent);
+  }
+}
+
+.iswc-overview__time-col {
+  width: 7.5rem;
+}
+
+.iswc-overview__title {
+  display: block;
+  text-align: left;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.iswc-overview__meta {
+  margin-top: 0.3rem;
+  font-size: 0.75rem;
+  color: $iswc-muted;
+}
+
+// From `md` up the table keeps a readable column width and the wrapper
+// scrolls sideways on busy days (the workshop days run up to 9 in parallel).
+@media (min-width: 768px) {
+  .iswc-overview {
+    min-width: calc(7.5rem + var(--overview-cols, 1) * 11rem);
+  }
+}
+
+// Below `md` .iswc-table reflows each row into a card; the time header joins
+// the reflow as the card's first line, and the sessions stack beneath it.
+@media (max-width: 767.98px) {
+  .iswc-overview th {
+    display: block;
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Schedule — table view (overview) and jump targets in the expanded view.
+// Append to the end of the components stylesheet. Builds on .iswc-table,
+// .iswc-table-scroll, .iswc-scroll-link and the .iswc-kind--* fills.
+// -----------------------------------------------------------------------------
+
+// Each expanded-view session is a jump target: clear the sticky navbar, and
+// flash briefly when reached from the table view (class set in Schedule.jsx).
+.iswc-schedule-anchor {
+  scroll-margin-top: calc(var(--iswc-navbar-height) + 1.5rem);
+  border-radius: 0.4rem;
+
+  &.is-highlighted {
+    animation: iswc-schedule-flash 2s ease-out;
+  }
+}
+
+@keyframes iswc-schedule-flash {
+  from {
+    background-color: rgba($iswc-primary, 0.18);
+  }
+  to {
+    background-color: transparent;
+  }
+}
+
+.iswc-overview {
+  font-size: 0.88rem;
+
+  // The time column is a row header, not a dark column header.
+  .iswc-overview__time {
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+    color: $iswc-secondary;
+    background: $iswc-surface-alt;
+  }
+
+  // The session's kind colour as a left accent, like .iswc-dates__item.
+  .iswc-overview__cell {
+    box-shadow: inset 3px 0 0 var(--kind-color, transparent);
+  }
+}
+
+.iswc-overview__time-col {
+  width: 7.5rem;
+}
+
+.iswc-overview__title {
+  display: block;
+  text-align: left;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.iswc-overview__meta {
+  margin-top: 0.3rem;
+  font-size: 0.75rem;
+  color: $iswc-muted;
+}
+
+// From `md` up the table keeps a readable column width and the wrapper
+// scrolls sideways on busy days (the workshop days run up to 9 in parallel).
+@media (min-width: 768px) {
+  .iswc-overview {
+    min-width: calc(7.5rem + var(--overview-cols, 1) * 11rem);
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Scroll hint for the overview tables (ScrollHint in Schedule.jsx)
+// -----------------------------------------------------------------------------
+// The fades are drawn on a wrapper, not on the scroller itself, so they stay
+// put while the table moves underneath. The table's cells have their own
+// backgrounds, so a background-only shadow trick would be hidden by them.
+.iswc-scroll-hint {
+  position: relative;
+  margin: 0.5rem 0 2rem;
+
+  // The wrapper carries the spacing, so the fades line up with the table.
+  > .iswc-table-scroll {
+    margin: 0;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 3.5rem;
+    z-index: 2;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  &::before {
+    left: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.14), transparent);
+  }
+
+  &::after {
+    right: 0;
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0.14), transparent);
+  }
+
+  &--left::before,
+  &--right::after {
+    opacity: 1;
+  }
+}
+
+// Bar above the table: a short note plus the scroll buttons, which reuse the
+// .iswc-table-toggle-all pill.
+.iswc-scroll-hint__bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 1rem;
+
+  .iswc-table-toggle-all:disabled {
+    opacity: 0.4;
+    cursor: default;
+    border-color: rgba(0, 0, 0, 0.2);
+    background: $iswc-surface;
+  }
+}
+
+.iswc-scroll-hint__text {
+  margin-right: auto;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: $iswc-muted;
+}
+
+// Below `md` .iswc-table reflows each row into a card; the time header joins
+// the reflow as the card's first line, and the sessions stack beneath it.
+@media (max-width: 767.98px) {
+  .iswc-overview th {
+    display: block;
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
 }
