@@ -296,15 +296,19 @@ export const schedule = [
 
       {
         start: "10:30", end: "12:00", room: "Sezione 5", kind: "parallel",
-        title: "Industry Papers I",
+        title: "Industry Papers I: High-quality KGs for Managing Enterprise Knowledge",
         chairs: "TBD",
         papers: [
-          { id: 518, title: "Ontology-Grounded Semantic Routing Under Diagnostic Uncertainty: A Biolink-Federated CDSS for Emergency Care", authors: "Roberto Shimizu, Thiago Porto and Roberta Garcia", track: "Industry" },
-          { id: 520, title: "Grounding AI Agents in Plant Knowledge Graphs: A Neuro-Symbolic Approach towards Autonomous Industrial Operations", authors: "Naveen Kumar and Swathi Shyam Sunder", track: "Industry" },
-          { id: 525, title: "A Semantic-Layer-Grounded AI Agent for Building Maintenance and Operations", authors: "Xinyi She, Shintaro Suzuki and Hideo Aoki", track: "Industry" },
-          { id: 526, title: "Complementing the Expert: Agentic Discovery of Intrinsic Quality Defects in a Production Judaica Knowledge Graph", authors: "Oren Mishali, Stav Klein and Nimrod Busany", track: "Industry" },
-          { id: 536, title: "Evaluating Entity Resolution Without Ground Truth: A Calibrated LLM-Judge Framework", authors: "Simmi Mourya, Karteek Chada and Deepika Khera", track: "Industry" },
+          { id: 528, title: "Ontology-Based Enterprise Knowledge Management", authors: "Utku Sivacilar, Wouter Lubbers, Alireza Emad and Marc Korthouwer", track: "Industry" },
+          { id: 534, title: "Maqui.ai: Knowledge graphs and GraphRag to manage legal documents", authors: "Nicolas Barrionuevo, Ri Diaz, Benjamin Farias, Sebastián Ferrada, Alejandro Grez, Juan L. Reutter, Hernan Sarmiento and Agustin Urrutia", track: "Industry" },
+          { id: 539, title: "Nexus: Semantic Interoperability for Energy Asset Data", authors: "Francisco Martin-Recuerda, Erik Nystad, An Ngoc Lam and Erik Jacques Wiborg", track: "Industry" },
           { id: 540, title: "The Patents4Science Information Infrastructure (P4SI) - A Semantic Knowledge Infrastructure for Linked Patent Data", authors: "Hidir Aras, Ahmad Alrifai, Mustafa Sofean, Farag Saad, Markus Sitzmann and Lei Zhang", track: "Industry" },
+          { id: 526, title: "Complementing the Expert: Agentic Discovery of Intrinsic Quality Defects in a Production Judaica Knowledge Graph", authors: "Oren Mishali, Stav Klein and Nimrod Busany", track: "Industry" },
+          { id: 537, title: "Quality Assurance for Knowledge Graph Construction: The EU Public Procurement Experience", authors: "Rashif Rahman, Achillefs Dougalis, Csongor I. Nyulas and Eugeniu Costetchi", track: "Industry" },
+          { id: 537, title: "Data Packages for Enterprise Knowledge Graph Evolution", authors: "Felix Sasaki, Hassan el Hajj, Lars Heling and Mulang Onando", track: "Industry" },
+          { id: 537, title: "Semantic API Discovery at Scale: A Knowledge Graph Approach for the SAP Ecosystem", authors: "Nikhil Acharya, Natalia Minakova, Lars Heling, Hassan el Hajj, Mulang Onando and Felix Sasaki", track: "Industry" },
+          { id: 518, title: "Ontology-Grounded Semantic Routing Under Diagnostic Uncertainty: A Biolink-Federated CDSS for Emergency Care", authors: "Roberto Shimizu, Thiago Porto and Roberta Garcia", track: "Industry" },
+
         ],
       },
 
@@ -350,14 +354,16 @@ export const schedule = [
 
       {
         start: "13:30", end: "15:00", room: "Sezione 5", kind: "parallel",
-        title: "Industry Papers II",
+        title: "Industry Papers II: Sematic Layer for AI Agents",
         chairs: "TBD",
         papers: [
-          { id: 528, title: "Ontology-Based Enterprise Knowledge Management", authors: "Utku Sivacilar, Wouter Lubbers, Alireza Emad and Marc Korthouwer", track: "Industry" },
-          { id: 533, title: "Quality Assurance for Knowledge Graph Construction: The EU Public Procurement Experience", authors: "Rashif Rahman, Achillefs Dougalis, Csongor I. Nyulas and Eugeniu Costetchi", track: "Industry" },
-          { id: 534, title: "Maqui.ai: Knowledge graphs and GraphRag to manage legal documents", authors: "Nicolas Barrionuevo, Ri Diaz, Benjamin Farias, Sebastián Ferrada, Alejandro Grez, Juan L. Reutter, Hernan Sarmiento and Agustin Urrutia", track: "Industry" },
-          { id: 537, title: "Data Packages for Enterprise Knowledge Graph Evolution", authors: "Felix Sasaki, Hassan el Hajj, Lars Heling and Mulang Onando", track: "Industry" },
-          { id: 539, title: "Nexus: Semantic Interoperability for Energy Asset Data", authors: "Francisco Martin-Recuerda, Erik Nystad, An Ngoc Lam and Erik Jacques Wiborg", track: "Industry" },
+
+          { id: 520, title: "Grounding AI Agents in Plant Knowledge Graphs: A Neuro-Symbolic Approach towards Autonomous Industrial Operations", authors: "Naveen Kumar and Swathi Shyam Sunder", track: "Industry" },
+          { id: 525, title: "A Semantic-Layer-Grounded AI Agent for Building Maintenance and Operations", authors: "Xinyi She, Shintaro Suzuki and Hideo Aoki", track: "Industry" },
+          { id: 536, title: "Evaluating Entity Resolution Without Ground Truth: A Calibrated LLM-Judge Framework", authors: "Simmi Mourya, Karteek Chada and Deepika Khera", track: "Industry" },
+          { id: 536, title: "Unlocking AI-Powered BI with Continuous Semantic Context", authors: "Benjamin Hiplrecht", track: "Industry" },
+          { id: 536, title: "Panel Discussion", authors: "Panelist TBA", track: "Industry" },
+
         ],
       },
 
