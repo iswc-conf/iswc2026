@@ -21,7 +21,7 @@ const dags = [
     },
     {
         title: "SAWA: Semantic Affordances for the Web of Agents: Bridging Multi-Agent Systems, Semantic Web Services, and Agentic AI",
-
+        website: "https://sawa-workshop.github.io/",
         description: "The emergence of LLM-based agentic AI has recreated many of the challenges formally faced by the Semantic Web Services (SWS) community two decades ago: how should agents with differing ontological commitments discover, compose, and invoke capabilities coherently? The original SWS response provided formally grounded capability descriptions and mechanisms for bridging ontological mismatches. Current agentic AI systems largely lack this formal rigour, reintroducing well-understood failure modes, such as a reliance on linguistic descriptions of services/tools/capabilities without enforcing semantic guarantees. Furthermore, the Multi-Agent Systems (MAS) community has developed rich models of agent-environment interaction through affordances, formalising what an agent can do given its current state and the environment it inhabits. This discussion-led workshop will re-examine the role of semantics within the description of agents and services, with a specific focus on the affordance frameworks that cut across the MAS, SWS, and Agentic AI communities. Through discussion, we will critically evaluate how this research, together with the use of the Semantic Web can inform the design of LLM-enabled agentic systems. The result will identify key challenges, open problems, and a shared research agenda for semantically grounded, interoperable agentic AI.",
     },
     {
