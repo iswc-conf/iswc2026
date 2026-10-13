@@ -27,6 +27,7 @@ import AIJ from "./sponsors/SILVER/AIJ.jpeg";
 import ATOMIC from "./sponsors/PLATINUM/ATOMIC.png";
 import JP from "./sponsors/GOLD/JP.png";
 import SNOW from "./sponsors/PLATINUM/SNOW.png";
+import VIDEO from "./sponsors/SILVER/VIDEOLECTURES.png"
 
 /** Ordered list of tiers, each with its sponsors. Drives every sponsor view. */
 export const sponsorTiers = [
@@ -65,7 +66,8 @@ export const sponsorTiers = [
       { name: "Graphwise", logo: GRAPHWISE, link: "https://graphwise.ai", width: 600 },
       { name: "Artificial Intelligence Journal", logo: AIJ, link: "https://www.elsevier.com/locate/artint", width: 600 },
       { name: "Lore Star", logo: LORE, link: "https://lorestar.it", width: 600 },
-       { name: "ServiceNow", logo: SERVICE, link: "https://www.servicenow.com", width: 600 },
+      { name: "VideoLectures", logo: VIDEO, link: "https://www.new.videolectures.net", width: 600 },
+      { name: "ServiceNow", logo: SERVICE, link: "https://www.servicenow.com", width: 600 },
     ],
   },
   {
