@@ -230,7 +230,7 @@ export const schedule = [
           { id: 377, title: "DMFO: A Modular Alignment Architecture for Situationally Interpretable State Representations", authors: "Jan Christian Redlich, Peter Kloke and Sebastian Bosse", track: "Resource" },
         ],
       },
-      { start: "13:45", end: "15:15", room: "Sezione 3&4", title: "Journal Papers from TGDK", kind: "parallel", chairs: "TBD" },
+      { start: "13:45", end: "15:15", room: "Sezione 3&4", title: "Journal Papers from TGDK", kind: "parallel", chairs: "Aidan Hogan, Markus Krötzsch, Kerry Taylor", link:"https://tgdk-iswc2026.dcc.uchile.cl/" },
       { start: "13:45", end: "15:15", room: "Sezione 5", title: "Journal Papers from SWJ", kind: "parallel", chairs: "TBD" },
 
       { start: "15:15", end: "15:45", room: COFFEE, title: "Coffee Break", kind: "break" },
