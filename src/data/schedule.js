@@ -150,7 +150,7 @@ export const schedule = [
     subtitle: "Conference Day 3",
     rooms: MAIN_ROOMS,
     sessions: [
-      { start: "08:45", end: "09:15", rooms: PLENARY, title: "Opening Ceremony", kind: "ceremony"},
+      { start: "08:30", end: "09:15", rooms: PLENARY, title: "Opening Ceremony", kind: "ceremony"},
       { start: "09:15", end: "10:15", rooms: PLENARY, title: "Keynote 1 - Frank van Harmelen", kind: "keynote", chairs: "TBD", link: "/#/program/keynotespeakers?speaker=frank-van-harmelen" },
       { start: "10:15", end: "10:45", room: COFFEE, title: "Coffee Break", kind: "break" },
 
@@ -227,7 +227,6 @@ export const schedule = [
           { id: 293, title: "FITTER: Vocabulary-Agnostic Inference on Temporal Knowledge Graphs", authors: "Jiaxin Pan, Mojtaba Nayyeri, Osama Mohammed, Daniel Hernández, Rongchuan Zhang, Cheng Cheng and Steffen Staab", track: "Research", spotlight: true },
           { id: 127, title: "An Open Linked Data Portal for Benchmarking Web AI Agents in the European Health Data Space", authors: "Meem Arafat Manab and Victor Rodríguez-Doncel", track: "Resource" },
           { id: 305, title: "From Records to Signs: A Layered Knowledge Graph for Conceptual Dynamics in Charles S. Peirce's Manuscripts", authors: "Carlo Teo Pedretti, Dario Baldini, Lorenzo Zangari, Alessandro Adamou and Davide Picca", track: "Resource" },    
-
           //{ id: 135, title: "PeGazUs: A knowledge graph to represent Paris addresses from the 18th century to nowadays", authors: "Charly Bernard, Nathalie Abadie, Bertrand Duménieu and Julien Perret", track: "Resource" },
           { id: 377, title: "DMFO: A Modular Alignment Architecture for Situationally Interpretable State Representations", authors: "Jan Christian Redlich, Peter Kloke and Sebastian Bosse", track: "Resource" },
         ],
@@ -237,9 +236,9 @@ export const schedule = [
 
       { start: "15:15", end: "15:45", room: COFFEE, title: "Coffee Break", kind: "break" },
       { start: "15:45", end: "17:15", rooms: PLENARY, title: "Keynote 2 - James Hendler ", kind: "keynote", chairs: "TBD", link: "/#/program/keynotespeakers?speaker=james-hendler"},
-      { start: "17:15", end: "18:25", rooms: PLENARY, title: "Minute Madness", kind: "parallel", chairs: "TBD" },
+      { start: "17:15", end: "18:45", rooms: PLENARY, title: "Minute Madness", kind: "parallel", chairs: "TBD" },
       //{ start: "18:25", end: "19:00",  title: "Poster Setting Up" },
-      { start: "19:00", end: "21:00", rooms: PLENARY, title: "Poster and Demos", kind: "parallel" },
+      { start: "19:15", end: "21:00", rooms: PLENARY, title: "Poster and Demos", kind: "parallel" },
     ],
   },
 

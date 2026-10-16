@@ -59,8 +59,7 @@ export const navigation = [
 
       { type: "header", label: "To Be Announced" },
     
-      
-      { label: "Panel", to: "/program/panel" },
+  
       { label: "Awards", to: "/program/awards" },
       // { label: "Challenges", to: "/program/challenges" },
     ],
