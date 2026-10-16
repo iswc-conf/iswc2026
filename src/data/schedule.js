@@ -472,7 +472,9 @@ export const schedule = [
           { id: 159, title: "Shapes from Examples: Foundations of Shape Learning in Recursive SHACL", authors: "Bente Gortworst, Cem Okulmus, Magdalena Ortiz and Anni-Yasmin Turhan", track: "Research" },
          // { id: 240, title: "Evaluating Competency Questions: Measuring Perspectivisation from Requirement Sources", authors: "Anna Sofia Lippolis, Andrea Giovanni Nuzzolese, Valentina Presutti and Minh Davide Ragagni", track: "Research" },
           { id: 93, title: "Words Matter: Robust Entity Alignment for Knowledge Graphs via Multi-View Textualization", authors: "Hanane Kteich, Gianluca Quercini, Joe Raad and Fatiha Sais", track: "Research" },
-         { id: 390, title: "The Prebiotic Origins of Life Ontology", authors: "Shweta U Narkar, Vincent S Riggi, Karyn L Rogers and James A Hendler", track: "Resource" },
+          { id: 135, title: "PeGazUs: A knowledge graph to represent Paris addresses from the 18th century to nowadays", authors: "Charly Bernard, Nathalie Abadie, Bertrand Duménieu and Julien Perret", track: "Resource" },
+
+          //{ id: 390, title: "The Prebiotic Origins of Life Ontology", authors: "Shweta U Narkar, Vincent S Riggi, Karyn L Rogers and James A Hendler", track: "Resource" },
         ],
       },
  
@@ -516,7 +518,8 @@ export const schedule = [
         papers: [
           { id: 432, title: "KARMA: When Knowledge Graphs Still Matter for Retrieval-Augmented Question Answering", authors: "Thi Hoang Thi Pham, Pascal Molli and Hala Skaf-Molli", track: "Research" },     
           { id: 132, title: "CEON: Circular Economy Ontology Network", authors: "Huanyu Li, Els de Vleeschauwer, Robin Keskisärkkä, Mikael Lindecrantz, Mina Abd Nikooie Pour, Ying Li, Ben De Meester, Patrick Lambrix and Eva Blomqvist", track: "Resource" },
-          { id: 135, title: "PeGazUs: A knowledge graph to represent Paris addresses from the 18th century to nowadays", authors: "Charly Bernard, Nathalie Abadie, Bertrand Duménieu and Julien Perret", track: "Resource" },
+          //{ id: 135, title: "PeGazUs: A knowledge graph to represent Paris addresses from the 18th century to nowadays", authors: "Charly Bernard, Nathalie Abadie, Bertrand Duménieu and Julien Perret", track: "Resource" },
+         { id: 390, title: "The Prebiotic Origins of Life Ontology", authors: "Shweta U Narkar, Vincent S Riggi, Karyn L Rogers and James A Hendler", track: "Resource" },
 
           //{ id: 305, title: "From Records to Signs: A Layered Knowledge Graph for Conceptual Dynamics in Charles S. Peirce's Manuscripts", authors: "Carlo Teo Pedretti, Dario Baldini, Lorenzo Zangari, Alessandro Adamou and Davide Picca", track: "Resource" },    
         ],
