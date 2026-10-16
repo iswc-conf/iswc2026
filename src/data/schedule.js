@@ -175,7 +175,7 @@ export const schedule = [
           { id: 151, title: "Fetch That Stream! RetrievR-guided Virtual Linked Stream Discovery and Access", authors: "Daniel de Leng, Robin Keskisärkkä, Volodymyr Kadzhaia and Pieter Bonte", track: "Research" },
           { id: 310, title: "Can we GLUE it? Extending an Interactive Adhesive Selector with Knowledge Graphs", authors: "Ioannis Dasoulas, Simon Vandevelde, Jeroen Jordens, Duo Yang, Xuemin Duan, Abdellatif Bey-Temsamani, Joost Vennekens and Anastasia Dimou", track: "In-Use" },
           { id: 28, title: "Bridging Semantic Gap in Temporal Knowledge Graph Reasoning via Spatiotemporal-aware Entity Profile Graph Embedding", authors: "Sheng Tian, Haoran Wang, Wanru Fang, Shijie Leng, Kun Wang, Qi Liu and Xiaomei Wei", track: "Research" },
-          { id: 112, title: "JediKG: Return of the Schema - Building Complete Datasets for Machine Learning and Reasoning on Knowledge Graphs", authors: "Ivan Diliso, Roberto Barile, Nicola Fanizzi and Claudia D'Amato", track: "Resource" },
+          { id: 112, spotlight:true, title: "JediKG: Return of the Schema - Building Complete Datasets for Machine Learning and Reasoning on Knowledge Graphs", authors: "Ivan Diliso, Roberto Barile, Nicola Fanizzi and Claudia d'Amato", track: "Resource" },
         ],
       },
       {
@@ -214,7 +214,7 @@ export const schedule = [
           { id: 90, title: "SECEA: Self Configuring Matcher Framework For Entity And Knowledge Graph Alignment", authors: "Alexander Becker, Axel-Cyrille Ngonga Ngomo and Mohamed Ahmed Sherif", track: "Research" },
           { id: 240, title: "Evaluating Competency Questions: Measuring Perspectivisation from Requirement Sources", authors: "Anna Sofia Lippolis, Andrea Giovanni Nuzzolese, Valentina Presutti and Minh Davide Ragagni", track: "Research" },
           { id: 167, title: "CountTRuCoLa: Rule Learning for Interpretable Temporal Knowledge Graph Forecasting", authors: "Julia Gastinger, Christian Meilicke and Heiner Stuckenschmidt", track: "Research" },
-          { id: 267, title: "Vibes Lore Core: the Aesthetics Knowledge Graph", authors: "Silvia Cappa, Anna Sofia Lippolis, Anouk Flinkert, Ekaterina Krasnova, Shiho Nakamura, Andrea Giovanni Nuzzolese and Aldo Gangemi", track: "Resource" },
+          { id: 267, spotlight: true, title: "Vibes Lore Core: the Aesthetics Knowledge Graph", authors: "Silvia Cappa, Anna Sofia Lippolis, Anouk Flinkert, Ekaterina Krasnova, Shiho Nakamura, Andrea Giovanni Nuzzolese and Aldo Gangemi", track: "Resource" },
 
         ],
       },
@@ -228,7 +228,7 @@ export const schedule = [
           { id: 127, title: "An Open Linked Data Portal for Benchmarking Web AI Agents in the European Health Data Space", authors: "Meem Arafat Manab and Victor Rodríguez-Doncel", track: "Resource" },
           { id: 305, title: "From Records to Signs: A Layered Knowledge Graph for Conceptual Dynamics in Charles S. Peirce's Manuscripts", authors: "Carlo Teo Pedretti, Dario Baldini, Lorenzo Zangari, Alessandro Adamou and Davide Picca", track: "Resource" },    
           //{ id: 135, title: "PeGazUs: A knowledge graph to represent Paris addresses from the 18th century to nowadays", authors: "Charly Bernard, Nathalie Abadie, Bertrand Duménieu and Julien Perret", track: "Resource" },
-          { id: 377, title: "DMFO: A Modular Alignment Architecture for Situationally Interpretable State Representations", authors: "Jan Christian Redlich, Peter Kloke and Sebastian Bosse", track: "Resource" },
+          { id: 377, spotlight:true, title: "DMFO: A Modular Alignment Architecture for Situationally Interpretable State Representations", authors: "Jan Christian Redlich, Peter Kloke and Sebastian Bosse", track: "Resource" },
         ],
       },
       { start: "13:45", end: "15:15", room: "Sezione 3&4", title: "Journal Papers from TGDK", kind: "parallel", chairs: "Aidan Hogan, Markus Krötzsch, Kerry Taylor", link:"https://tgdk-iswc2026.dcc.uchile.cl/" },
@@ -349,7 +349,7 @@ export const schedule = [
           { id: 257, title: "A Neurosymbolic Scholarly Intelligence System in Use at Springer Nature", authors: "Antonello Meloni, Angelo Salatino, Francesco Osborne, Alexis Vizcaino, Aliaksandr Birukou, Diego Reforgiato Recupero and Enrico Motta", track: "In-Use", spotlight: true },
           { id: 69, title: "Dempster–Shafer Evidence Calibration for Conflict-Aware Knowledge Graph Reasoning", authors: "Kang Yao, Quanbo Cheng, Zhijie Ren, Jinjiang Cui and Weiwei Fu", track: "Research" },
           { id: 331, title: "Stratified Negation in RDF Rules: A Correct Approach", authors: "Nils Küchenmeister, Alex Ivliev, Dörthe Arndt and Markus Krötzsch", track: "Research" },
-          { id: 189, title: "MedSchema: A Chinese Medical Schema Rule Dataset for Advancing Neuro-Symbolic Reasoning", authors: "Yu Huang, Ke Xiong, Chuanhao Xu, Tingxin Jiang, Yang Liu and Xiaowang Zhang", track: "Resource" },
+          { id: 189, spotlight:true, title: "MedSchema: A Chinese Medical Schema Rule Dataset for Advancing Neuro-Symbolic Reasoning", authors: "Yu Huang, Ke Xiong, Chuanhao Xu, Tingxin Jiang, Yang Liu and Xiaowang Zhang", track: "Resource" },
         ],
       },
 
