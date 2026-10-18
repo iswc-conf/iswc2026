@@ -468,14 +468,14 @@ export const Schedule = () => (
       <p className="iswc-note">The schedule will be published here soon.</p>
     ) : (
       <>
-       {/* <ViewSelector /> */}
+        <ViewSelector /> 
 
         <p className="iswc-callout">
           <b>Programme correct at time of publication.</b> Minor changes may
           occur; see this page for updates.
         </p>
 
-         {/*
+         
 
         <section id="schedule-table-view" className="iswc-track">
           <UnderlineHeader>Table View</UnderlineHeader>
@@ -483,7 +483,7 @@ export const Schedule = () => (
             <DayOverview key={day.id} day={day} />
           ))}
         </section>
-        */}
+        
 
         <section id="schedule-expanded-view" className="iswc-track">
              {/*<UnderlineHeader>Expanded View</UnderlineHeader>  */}
