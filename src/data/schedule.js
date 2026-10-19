@@ -247,7 +247,14 @@ export const schedule = [
       { start: "13:45", end: "15:15", room: "Sezione 5", title: "Journal Papers from SWJ", kind: "parallel", chairs: "TBD" },
 
       { start: "15:15", end: "15:45", room: COFFEE, title: "Coffee Break", kind: "break" },
-      { start: "15:45", end: "17:15", rooms: PLENARY, title: "Keynote 2 - James Hendler ", kind: "keynote", chairs: "TBD", link: "/#/program/keynotespeakers?speaker=james-hendler"},
+      { start: "15:45", end: "", rooms: PLENARY, title: "Keynote 2 - James Hendler ", kind: "keynote", chairs: "TBD", link: "/#/program/keynotespeakers?speaker=james-hendler"},
+      { start: "16:35", end: "17:15", rooms: PLENARY, title: "No Script: a conversation with Jim Hendler, Frank van Harmelen and the audience", kind: "keynote", chairs: "TBD",
+        papers: [
+          {title: "A conversation with Jim Hendler and Frank van Harmelen that starts with questions from early-career researchers and then opens to the whole audience. "}
+        ]
+      },
+
+      
       { start: "17:15", end: "18:45", rooms: PLENARY, title: "Minute Madness", kind: "parallel", chairs: "TBD" },
       //{ start: "18:25", end: "19:00",  title: "Poster Setting Up" },
       { start: "19:15", end: "21:00", rooms: PLENARY, title: "Poster and Demos", kind: "parallel" },
