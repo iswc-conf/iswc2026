@@ -359,6 +359,10 @@ const Session = ({ day, session }) => {
         </div>
       )}
 
+       {session.description && (
+        <p className="iswc-schedule-list__description">{session.description}</p>
+      )}
+
       {session.papers?.length > 0 && (
         <ul className="iswc-schedule-list__papers">
           {session.papers.map((paper) => (

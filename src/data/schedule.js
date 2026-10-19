@@ -103,6 +103,12 @@ export const schedule = [
       { start: "09:00", end: "12:50", room: "Auriga (Perseo)", title: "Neural Networks meet Explicit Knowledge Representation: Towards Mechanistic Interpretability and Neuro-symbolic Modeling by-design", kind: "tutorial", link: "https://humancentricart.github.io/mechanistic-interpretability-by-design/iswc/index.html" },
       { start: "14:10", end: "15:50", room: "Auriga (Perseo)", title: "Intro to OWL Reasoning with Protégé", kind: "tutorial" },
       { start: "16:20", end: "18:00", room: "Auriga (Perseo)", title: "Doctoral Consortium Poster Session", kind: "doctoral" },
+      
+      
+      { start: "Late", end: "", title: "Doctoral Consortium Dinner at L'Osteria Dei Quattro Gatti", kind: "other", link:"https://share.google/V4sXl08R9D12jN3pA" },
+
+   
+   
     ],
   },
 
@@ -248,11 +254,10 @@ export const schedule = [
 
       { start: "15:15", end: "15:45", room: COFFEE, title: "Coffee Break", kind: "break" },
       { start: "15:45", end: "", rooms: PLENARY, title: "Keynote 2 - James Hendler ", kind: "keynote", chairs: "TBD", link: "/#/program/keynotespeakers?speaker=james-hendler"},
-      { start: "16:35", end: "17:15", rooms: PLENARY, title: "No Script: a conversation with Jim Hendler, Frank van Harmelen and the audience", kind: "keynote", chairs: "TBD",
-        papers: [
-          {title: "A conversation with Jim Hendler and Frank van Harmelen that starts with questions from early-career researchers and then opens to the whole audience. "}
-        ]
-      },
+      { start: "16:35", end: "17:15", rooms: PLENARY, title: "No Script: a conversation with James Hendler, Frank van Harmelen and the audience", kind: "keynote", chairs: "TBD",
+        description: "A conversation with Jim Hendler and Frank van Harmelen that starts with questions from early-career researchers and then opens to the whole audience. "}
+        
+      ,
 
       
       { start: "17:15", end: "18:45", rooms: PLENARY, title: "Minute Madness", kind: "parallel", chairs: "TBD" },
