@@ -560,7 +560,7 @@ export const schedule = [
 
       { start: "14:40", end: "15:10", room: COFFEE, title: "Coffee Break", kind: "break" },
       { start: "15:10", end: "16:10", rooms: PLENARY, title: "Town Hall", kind: "poster", chairs: "TBD" },
-      { start: "16:10", end: "16:55", rooms: PLENARY, title: "Workshop Summary & Closing Ceremony", kind: "ceremony", chairs: "TBD" },
+      { start: "16:10", end: "16:55", rooms: PLENARY, title: "Closing Ceremony", kind: "ceremony", chairs: "TBD" },
     ],
   },
 ];
