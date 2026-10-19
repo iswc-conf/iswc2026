@@ -24,6 +24,16 @@
  * - `kind` is one of SESSION_KINDS below.
  */
 
+import floorMinus1 from "./plans/piano-1.pdf";
+import floor1 from "./plans/piano1.pdf";
+import floor2 from "./plans/piano2.pdf";
+
+export const FLOOR_PLANS = [
+  { id: "floor-minus-1", label: "Floor -1", file: floorMinus1 },
+  { id: "floor-1", label: "Floor 1", file: floor1 },
+  { id: "floor-2", label: "Floor 2", file: floor2 },
+];
+
 export const SESSION_KINDS = {
   doctoral: { label: "Doctoral Consortium", color: "#8438a2" },
   tutorial: { label: "Tutorial", color: "#85b38d" },

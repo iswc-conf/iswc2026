@@ -2837,3 +2837,87 @@ $iswc-grid-row-height: 7rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   }
 }
+
+// -----------------------------------------------------------------------------
+// Floor plan viewer (FloorPlanViewer.jsx)
+// -----------------------------------------------------------------------------
+.iswc-floorplan {
+  margin: 1.5rem 0 2.5rem;
+  text-align: left;
+  hyphens: manual;
+
+  .iswc-table-toggle-all {
+    text-decoration: none;
+
+    &:disabled {
+      opacity: 0.4;
+      cursor: default;
+      border-color: rgba(0, 0, 0, 0.2);
+      background: $iswc-surface;
+    }
+  }
+}
+
+.iswc-floorplan__toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.iswc-floorplan__group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.iswc-floorplan__level {
+  min-width: 3.25rem;
+  text-align: center;
+  font-size: 0.82rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: $iswc-secondary;
+}
+
+// Fixed-size window; the plan scrolls inside it when zoomed.
+.iswc-floorplan__viewport {
+  height: clamp(22rem, 70vh, 42rem);
+  overflow: auto;
+  // Reserves the scrollbar's space, so it appearing doesn't resize the plan.
+  scrollbar-gutter: stable;
+  overscroll-behavior: contain;
+  background: $iswc-surface-alt;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 0.6rem;
+
+  &.is-zoomed {
+    cursor: grab;
+    user-select: none;
+
+    &:active {
+      cursor: grabbing;
+    }
+  }
+
+  .react-pdf__Page {
+    margin-inline: auto;
+  }
+
+  .react-pdf__Page + .react-pdf__Page {
+    margin-top: 1rem;
+  }
+
+  canvas {
+    display: block;
+  }
+}
+
+.iswc-floorplan__status {
+  padding: 2rem;
+  text-align: center;
+  color: $iswc-muted;
+}

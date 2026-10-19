@@ -1,9 +1,22 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { Suspense, lazy, useEffect, useRef, useState } from "react";
 import Page from "../general/Page";
 import Header from "../general/Header";
 import UnderlineHeader from "../general/UnderlineHeader";
 import ExternalLink from "../general/ExternalLink";
-import { SESSION_KINDS, schedule } from "../../data/schedule";
+import { SESSION_KINDS, schedule, FLOOR_PLANS } from "../../data/schedule";
+
+const FloorPlanViewer = lazy(() => import("./FloorPlanViewer"));
+
+const FloorPlans = () => (
+  <section id="schedule-floor-plans" className="iswc-track">
+    <UnderlineHeader>Floor Plans</UnderlineHeader>
+    <Suspense fallback={<p className="iswc-floorplan__status">Loading floor plans…</p>}>
+      <FloorPlanViewer />
+    </Suspense>
+  </section>
+);
+
+
 
 // The room(s) shown under a session: `room` for one, `rooms: [...]` for
 // several (each with its own name). None for `allRooms` sessions.
@@ -65,6 +78,7 @@ const scrollToId = (id, { highlight = false } = {}) => {
 const VIEWS = [
   { id: "schedule-table-view", label: "Table View" },
   { id: "schedule-expanded-view", label: "Expanded View" },
+  { id: "schedule-floor-plans", label: "Floor Plans" },
 ];
 
 const ViewSelector = () => (
@@ -476,6 +490,9 @@ export const Schedule = () => (
           <b>Programme correct at time of publication.</b> Minor changes may
           occur; see this page for updates.
         </p>
+
+        <FloorPlans />
+
 
          
 
