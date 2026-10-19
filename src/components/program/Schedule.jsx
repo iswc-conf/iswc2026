@@ -495,6 +495,8 @@ export const Schedule = () => (
           occur; see this page for updates.
         </p>
 
+         <DaySelector />
+
         <FloorPlans />
 
 
@@ -510,7 +512,7 @@ export const Schedule = () => (
 
         <section id="schedule-expanded-view" className="iswc-track">
              {/*<UnderlineHeader>Expanded View</UnderlineHeader>  */}
-          <DaySelector />
+         
           {schedule.map((day) => (
             <Day key={day.id} day={day} />
           ))}
