@@ -415,8 +415,10 @@ const DayByPart = ({ day }) => {
     <>
       {breaks.length > 0 && (
         <p className="iswc-schedule-rows__breaks">
+          <b>Registration: </b> 08:00<br></br>
           <b>Breaks:</b> {breaks.map(timeRange).join(" · ")}
         </p>
+
       )}
 
       {PARTS.map((part) => {

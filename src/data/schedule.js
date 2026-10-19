@@ -61,6 +61,7 @@ export const schedule = [
     layout: "parts",
     rooms: PRE_CONFERENCE_ROOMS,
     sessions: [
+
       { start: "10:40", end: "11:10", allRooms: true, title: "Break", kind: "break" },
       { start: "12:50", end: "14:10", allRooms: true, title: "Break", kind: "break" },
       { start: "15:50", end: "16:20", allRooms: true, title: "Break", kind: "break" },
@@ -150,6 +151,7 @@ export const schedule = [
     subtitle: "Conference Day 3",
     rooms: MAIN_ROOMS,
     sessions: [
+      { start: "08:00", end: "", title: "Registration", kind:"break"},
       { start: "08:30", end: "09:15", rooms: PLENARY, title: "Opening Ceremony", kind: "ceremony"},
       { start: "09:15", end: "10:15", rooms: PLENARY, title: "Keynote 1 - Frank van Harmelen", kind: "keynote", chairs: "TBD", link: "/#/program/keynotespeakers?speaker=frank-van-harmelen" },
       { start: "10:15", end: "10:45", room: COFFEE, title: "Coffee Break", kind: "break" },
@@ -251,6 +253,7 @@ export const schedule = [
     subtitle: "Conference Day 4",
     rooms: MAIN_ROOMS,
     sessions: [
+       { start: "08:00", end: "", title: "Registration", kind:"break"},
       { start: "09:00", end: "10:00", rooms: PLENARY, title: "Keynote 3 - Tara Raafat", kind: "keynote", chairs: "TBD", link: "/#/program/keynotespeakers?speaker=tara-raafat" },
       { start: "10:00", end: "10:30", room: COFFEE, title: "Coffee Break", kind: "break" },
 
@@ -445,6 +448,7 @@ export const schedule = [
     subtitle: "Conference Day 5",
     rooms: MAIN_ROOMS,
     sessions: [
+       { start: "08:00", end: "", title: "Registration", kind:"break"},
       { start: "09:00", end: "10:00", rooms: PLENARY, title: "Keynote 4 - Francesca Toni", kind: "keynote", chairs: "TBD", link: "/#/program/keynotespeakers?speaker=francesca-toni" },
       { start: "10:00", end: "10:30", room: COFFEE, title: "Coffee Break", kind: "break" },
 
