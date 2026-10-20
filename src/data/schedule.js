@@ -75,6 +75,7 @@ export const schedule = [
       { start: "10:40", end: "11:10", allRooms: true, title: "Break", kind: "break" },
       { start: "12:50", end: "14:10", allRooms: true, title: "Break", kind: "break" },
       { start: "15:50", end: "16:20", allRooms: true, title: "Break", kind: "break" },
+      { start: "08:00", end: "", allRooms: true, title: "Registration", kind: "break" },
 
       { start: "09:00", end: "18:00", room: "Sezione  1", title: "6th Wikidata Workshop", kind: "workshop", link: "https://wikidataworkshop.github.io/2026/" },
       { start: "09:00", end: "18:00", room: "Sezione  2", title: "21st International Workshop on Ontology Matching (OM-2026)", kind: "workshop", link: "https://om.ontologymatching.org/2026/" },
@@ -122,6 +123,8 @@ export const schedule = [
     layout: "parts",
     rooms: PRE_CONFERENCE_ROOMS,
     sessions: [
+
+            { start: "08:00", end: "", allRooms: true, title: "Registration", kind: "break" },
       { start: "10:40", end: "11:10", allRooms: true, title: "Break", kind: "break" },
       { start: "12:50", end: "14:10", allRooms: true, title: "Break", kind: "break" },
       { start: "15:50", end: "16:20", allRooms: true, title: "Break", kind: "break" },
