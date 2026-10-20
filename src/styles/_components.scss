@@ -2885,6 +2885,10 @@ $iswc-grid-row-height: 7rem;
 
 // Fixed-size window; the plan scrolls inside it when zoomed.
 .iswc-floorplan__viewport {
+  // Grid + `margin: auto` on the image centres the plan while it is smaller
+  // than the window, and still lets it scroll from its top-left edge once it
+  // is bigger (plain `place-items: center` would clip the top and left).
+  display: grid;
   height: clamp(22rem, 70vh, 42rem);
   overflow: auto;
   // Reserves the scrollbar's space, so it appearing doesn't resize the plan.
@@ -2902,21 +2906,27 @@ $iswc-grid-row-height: 7rem;
       cursor: grabbing;
     }
   }
+}
 
-  .react-pdf__Page {
-    margin-inline: auto;
-  }
+.iswc-floorplan__image {
+  display: block;
+  margin: auto;
+  // Width is set in pixels by the component; nothing here may override it.
+  max-width: none;
+  max-height: none;
+  height: auto;
+  user-select: none;
+  -webkit-user-drag: none;
+  transition: opacity 0.15s ease;
 
-  .react-pdf__Page + .react-pdf__Page {
-    margin-top: 1rem;
-  }
-
-  canvas {
-    display: block;
+  // Hidden until loaded, so it doesn't jump from a guessed size to the fitted one.
+  &:not(.is-ready) {
+    opacity: 0;
   }
 }
 
 .iswc-floorplan__status {
+  margin: auto;
   padding: 2rem;
   text-align: center;
   color: $iswc-muted;

@@ -1,47 +1,80 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Document, Page as PdfPage, pdfjs } from "react-pdf";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { FLOOR_PLANS } from "../../data/schedule";
-
-pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-  "pdfjs-dist/build/pdf.worker.min.mjs",
-  import.meta.url
-).toString();
 
 const ZOOM_STEP = 1.25;
 const MIN_ZOOM = 1;
-// Kept modest: iOS Safari refuses canvases above ~16 megapixels.
-const MAX_ZOOM = 3;
+// Images are scaled by the browser (no canvas limits), so we can zoom further than with PDFs.
+const MAX_ZOOM = 4;
 
 const FloorPlanViewer = () => {
   const [floor, setFloor] = useState(FLOOR_PLANS[0]);
   const [zoom, setZoom] = useState(MIN_ZOOM);
-  const [pages, setPages] = useState(0);
-  const [width, setWidth] = useState(0);
+  const [failed, setFailed] = useState(false);
+  const [box, setBox] = useState({ w: 0, h: 0 }); // viewport's inner size
+  const [natural, setNatural] = useState(null); // image's own size, once loaded
   const viewport = useRef(null);
   const drag = useRef(null);
+  const anchor = useRef(null); // point to keep centred while zooming
 
-  // Pages render at the viewport's width × zoom, so 100% always fits the box.
+  // Track the viewport's inner size (it changes with the window).
   useEffect(() => {
-    const observer = new ResizeObserver(([entry]) =>
-      setWidth(Math.floor(entry.contentRect.width))
-    );
-    observer.observe(viewport.current);
+    const el = viewport.current;
+    if (!el) return;
+    const measure = () => setBox({ w: el.clientWidth, h: el.clientHeight });
+    measure();
+    const observer = new ResizeObserver(measure);
+    observer.observe(el);
     return () => observer.disconnect();
   }, []);
 
-  const choose = (plan) => {
-    setFloor(plan);
-    setPages(0);
-    setZoom(MIN_ZOOM);
-    viewport.current.scrollTo(0, 0);
+  // "Fit" = the whole plan visible: as wide as the box, unless that would make
+  // it taller than the box, in which case as tall as the box.
+  const fitWidth = natural
+    ? Math.min(box.w, (box.h * natural.w) / natural.h)
+    : box.w;
+  const imgWidth = Math.floor(fitWidth * zoom);
+
+  // After a zoom, scroll so the point that was in the centre stays in the centre.
+  useLayoutEffect(() => {
+    const el = viewport.current;
+    const a = anchor.current;
+    if (!el || !a) return;
+    el.scrollLeft = a.x * el.scrollWidth - el.clientWidth / 2;
+    el.scrollTop = a.y * el.scrollHeight - el.clientHeight / 2;
+    anchor.current = null;
+  }, [zoom]);
+
+  const zoomTo = (next) => {
+    const el = viewport.current;
+    const z = Math.min(MAX_ZOOM, Math.max(MIN_ZOOM, next));
+    if (z === zoom) return;
+    if (el) {
+      anchor.current = {
+        x: (el.scrollLeft + el.clientWidth / 2) / el.scrollWidth,
+        y: (el.scrollTop + el.clientHeight / 2) / el.scrollHeight,
+      };
+    }
+    setZoom(z);
   };
 
-  const zoomBy = (factor) =>
-    setZoom((z) => Math.min(MAX_ZOOM, Math.max(MIN_ZOOM, z * factor)));
+  const choose = (plan) => {
+    if (plan.id === floor.id) return;
+    setFloor(plan);
+    setFailed(false);
+    setNatural(null);
+    setZoom(MIN_ZOOM);
+    viewport.current?.scrollTo(0, 0);
+  };
+
+  const onLoad = (e) => {
+    const img = e.currentTarget;
+    setNatural({ w: img.naturalWidth, h: img.naturalHeight });
+  };
 
   // Drag to pan with the mouse; touch screens already pan by scrolling.
   const onPointerDown = (e) => {
     if (e.pointerType !== "mouse" || zoom === MIN_ZOOM) return;
+    e.preventDefault(); // stop the browser from starting a native image drag
     const el = viewport.current;
     drag.current = { x: e.clientX, y: e.clientY, left: el.scrollLeft, top: el.scrollTop };
     e.currentTarget.setPointerCapture(e.pointerId);
@@ -74,16 +107,16 @@ const FloorPlanViewer = () => {
 
         <div className="iswc-floorplan__group">
           <button type="button" className="iswc-table-toggle-all"
-            onClick={() => zoomBy(1 / ZOOM_STEP)} disabled={zoom <= MIN_ZOOM}
+            onClick={() => zoomTo(zoom / ZOOM_STEP)} disabled={zoom <= MIN_ZOOM}
             aria-label="Zoom out">−</button>
           <span className="iswc-floorplan__level">{Math.round(zoom * 100)}%</span>
           <button type="button" className="iswc-table-toggle-all"
-            onClick={() => zoomBy(ZOOM_STEP)} disabled={zoom >= MAX_ZOOM}
+            onClick={() => zoomTo(zoom * ZOOM_STEP)} disabled={zoom >= MAX_ZOOM}
             aria-label="Zoom in">+</button>
           <button type="button" className="iswc-table-toggle-all"
-            onClick={() => setZoom(MIN_ZOOM)} disabled={zoom === MIN_ZOOM}>Fit</button>
+            onClick={() => zoomTo(MIN_ZOOM)} disabled={zoom === MIN_ZOOM}>Fit</button>
           <a className="iswc-table-toggle-all" href={floor.file} download>
-            Download PDF
+            Download image
           </a>
         </div>
       </div>
@@ -96,28 +129,24 @@ const FloorPlanViewer = () => {
         onPointerUp={endDrag}
         onPointerCancel={endDrag}
       >
-        <Document
-          file={floor.file}
-          onLoadSuccess={({ numPages }) => setPages(numPages)}
-          loading={<p className="iswc-floorplan__status">Loading floor plan…</p>}
-          error={
-            <p className="iswc-floorplan__status">
-              Could not display the floor plan. <a href={floor.file}>Open the PDF</a>
-            </p>
-          }
-        >
-          {width > 0 &&
-            Array.from({ length: pages }, (_, i) => (
-              <PdfPage
-                key={i}
-                pageNumber={i + 1}
-                width={width * zoom}
-                devicePixelRatio={Math.min(2, window.devicePixelRatio || 1)}
-                renderTextLayer={false}
-                renderAnnotationLayer={false}
-              />
-            ))}
-        </Document>
+        {failed ? (
+          <p className="iswc-floorplan__status">
+            Could not display the floor plan. <a href={floor.file}>Open the image</a>
+          </p>
+        ) : (
+          box.w > 0 && (
+            <img
+              key={floor.id}
+              src={floor.file}
+              alt={`Floor plan: ${floor.label}`}
+              draggable={false}
+              className={`iswc-floorplan__image${natural ? " is-ready" : ""}`}
+              onLoad={onLoad}
+              onError={() => setFailed(true)}
+              style={{ width: `${imgWidth}px` }}
+            />
+          )
+        )}
       </div>
     </div>
   );

@@ -24,12 +24,14 @@
  * - `kind` is one of SESSION_KINDS below.
  */
 
-import floorMinus1 from "./plans/piano-1.pdf";
-import floor1 from "./plans/piano1.pdf";
-import floor2 from "./plans/piano2.pdf";
+import floorMinus1 from "./plans/FLOORM1.png";
+import floor1 from "./plans/FLOOR1.png";
+import floor2 from "./plans/FLOOR2.png";
+import floor0 from "./plans/FLOOR0.png";
 
 export const FLOOR_PLANS = [
   { id: "floor-minus-1", label: "Floor -1", file: floorMinus1 },
+    { id: "floor-0", label: "Floor 0", file: floor0 },
   { id: "floor-1", label: "Floor 1", file: floor1 },
   { id: "floor-2", label: "Floor 2", file: floor2 },
 ];
