@@ -88,6 +88,12 @@ export const AcceptedPapers = () => {
           <p>
             The proceedings of ISWC 2026 will be published by Springer in the{" "}
             <b>Lecture Notes in Computer Science (LNCS)</b> series.
+
+            <ul>
+<li><ExternalLink href="https://link.springer.com/book/9783032420145">LNCS Volume 17126 (Part 1)</ExternalLink></li>
+<li><ExternalLink href="https://link.springer.com/book/9783032420251">LNCS Volume 17127 (Part 2)</ExternalLink></li>
+<li><ExternalLink href="https://link.springer.com/book/9783032420282">LNCS Volume 17128 (Part 3)</ExternalLink></li>
+            </ul>
           </p>
           <p className="mb-0">
             Proceedings from previous editions of ISWC are available on{" "}
