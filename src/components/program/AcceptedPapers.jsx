@@ -87,7 +87,9 @@ export const AcceptedPapers = () => {
        
           <p>
             The proceedings of ISWC 2026 will be published by Springer in the{" "}
-            <b>Lecture Notes in Computer Science (LNCS)</b> series.
+            <b>Lecture Notes in Computer Science (LNCS)</b> series.<br></br> <br></br>
+
+            <b>25th International Semantic Web Conference, Bari, Italy, October 25–29, 2026, Proceedings, Part I + II + III </b>
 
             <ul>
 <li><ExternalLink href="https://link.springer.com/book/9783032420145">LNCS Volume 17126 (Part 1)</ExternalLink></li>
