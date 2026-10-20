@@ -154,7 +154,7 @@ export const schedule = [
       { start: "09:00", end: "18:00", room: "Auriga (Perseo)", title: "Doctoral Consortium", kind: "doctoral" },
 
       // Listed under "Evening" (anything starting at 18:00 or later).
-      { start: "18:00", end: "Late", title: "Welcome Reception", kind: "other" },
+      { start: "18:30", end: "Late", title: "Welcome Reception", kind: "other" },
     ],
   },
 
