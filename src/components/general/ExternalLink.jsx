@@ -8,11 +8,12 @@ import React from "react";
  * The arrow is a child of the anchor (not a CSS ::after) so that the same-page
  * scroll link, which shares the underline styling, does not inherit it.
  */
-export const ExternalLink = ({ href, children, className = "" }) => (
+export const ExternalLink = ({ href, children, className = "", sendReferrer = false }) => (
   <a
     href={href}
     target="_blank"
-    rel="noopener noreferrer"
+    rel={sendReferrer ? "noopener" : "noopener noreferrer"}
+    referrerPolicy={sendReferrer ? "no-referrer-when-downgrade" : undefined}
     className={`iswc-external-link ${className}`.trim()}
   >
     {children}

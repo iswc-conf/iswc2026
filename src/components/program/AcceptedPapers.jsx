@@ -92,9 +92,9 @@ export const AcceptedPapers = () => {
             <b>25th International Semantic Web Conference, Bari, Italy, October 25–29, 2026, Proceedings, Part I + II + III </b>
 
             <ul>
-<li><ExternalLink href="https://link.springer.com/book/9783032420145">LNCS Volume 17126 (Part 1)</ExternalLink></li>
-<li><ExternalLink href="https://link.springer.com/book/9783032420251">LNCS Volume 17127 (Part 2)</ExternalLink></li>
-<li><ExternalLink href="https://link.springer.com/book/9783032420282">LNCS Volume 17128 (Part 3)</ExternalLink></li>
+<li><ExternalLink href="https://link.springer.com/book/9783032420145" sendReferrer>LNCS Volume 17126 (Part 1)</ExternalLink></li>
+<li><ExternalLink href="https://link.springer.com/book/9783032420251" sendReferrer>LNCS Volume 17127 (Part 2)</ExternalLink></li>
+<li><ExternalLink href="https://link.springer.com/book/9783032420282" sendReferrer>LNCS Volume 17128 (Part 3)</ExternalLink></li>
             </ul>
           </p>
           <p className="mb-0">
