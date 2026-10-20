@@ -106,7 +106,7 @@ export const schedule = [
       { start: "16:20", end: "18:00", room: "Auriga (Perseo)", title: "Doctoral Consortium Poster Session", kind: "doctoral" },
       
       
-      { start: "Late", end: "", title: "Doctoral Consortium Dinner at L'Osteria Dei Quattro Gatti", kind: "other", link:"https://share.google/V4sXl08R9D12jN3pA" },
+      { start: "19:30", end: "Late", title: "Doctoral Consortium Dinner at L'Osteria Dei Quattro Gatti", kind: "other", link:"https://share.google/V4sXl08R9D12jN3pA" },
 
    
    
