@@ -115,8 +115,7 @@ export const schedule = [
       
       
       
-      //{ start: "18:15", end: "Late", title: "Wikidata Side Event at Collegio Universitario di Merito IPE Poggiolevante ", kind: "other" },
-
+      { start: "18:15", end: "21:00", title: "Wikidata Birthday 2026", kind: "other", link:"https://www.poggiolevante.it/evento/2026-10-25/" },
       { start: "19:30", end: "Late", title: "Doctoral Consortium Dinner at L'Osteria Dei Quattro Gatti", kind: "other", link:"https://share.google/V4sXl08R9D12jN3pA" },
 
    
