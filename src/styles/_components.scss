@@ -2931,3 +2931,42 @@ $iswc-grid-row-height: 7rem;
   text-align: center;
   color: $iswc-muted;
 }
+
+// Sub-events under a session (e.g. Journal Lunch under Lunch).
+.iswc-subsessions {
+  list-style: none;
+  margin: 0.45rem 0 0;
+  padding: 0 0 0 0.75rem;
+  border-left: 2px solid rgba(0, 0, 0, 0.15);
+  text-align: left;
+  hyphens: manual;
+}
+
+.iswc-subsessions__item + .iswc-subsessions__item {
+  margin-top: 0.35rem;
+}
+
+.iswc-subsessions__title {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.iswc-subsessions__meta {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: $iswc-secondary;
+}
+
+.iswc-subsessions__description {
+  margin: 0.15rem 0 0;
+  font-size: 0.82rem;
+  color: $iswc-muted;
+}
+
+// Tighter inside the overview table cells.
+.iswc-subsessions--compact {
+  .iswc-subsessions__title { font-size: 0.8rem; }
+  .iswc-subsessions__meta  { font-size: 0.72rem; font-weight: 600; color: $iswc-muted; }
+}

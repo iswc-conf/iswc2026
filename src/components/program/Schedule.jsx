@@ -239,6 +239,7 @@ const OverviewCell = ({ day, session, colSpan }) => {
         </button>
       )}
       {meta && <div className="iswc-overview__meta">{meta}</div>}
+      <SubSessions session={session} compact />
     </td>
   );
 };
@@ -363,6 +364,8 @@ const Session = ({ day, session }) => {
         <p className="iswc-schedule-list__description">{session.description}</p>
       )}
 
+      <SubSessions session={session} />
+
       {session.papers?.length > 0 && (
         <ul className="iswc-schedule-list__papers">
           {session.papers.map((paper) => (
@@ -479,6 +482,31 @@ const Day = ({ day }) => (
     {day.layout === "parts" ? <DayByPart day={day} /> : <DayBySlot day={day} />}
   </section>
 );
+
+const SubSessions = ({ session, compact = false }) => {
+  const subs = session.subsessions ?? [];
+  if (subs.length === 0) return null;
+
+  return (
+    <ul className={`iswc-subsessions${compact ? " iswc-subsessions--compact" : ""}`}>
+      {subs.map((sub, i) => {
+        const time = sub.start ? timeRange({ start: sub.start, end: sub.end ?? "" }) : null;
+        const meta = [sub.room, time].filter(Boolean).join(" · ");
+        return (
+          <li key={i} className="iswc-subsessions__item">
+            <span className="iswc-subsessions__title">
+              <SessionTitle session={sub} />
+            </span>
+            {meta && <span className="iswc-subsessions__meta">{meta}</span>}
+            {!compact && sub.description && (
+              <p className="iswc-subsessions__description">{sub.description}</p>
+            )}
+          </li>
+        );
+      })}
+    </ul>
+  );
+};
 
 export const Schedule = () => (
   <Page>

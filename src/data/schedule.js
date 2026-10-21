@@ -75,7 +75,13 @@ export const schedule = [
     sessions: [
 
       { start: "10:40", end: "11:10", allRooms: true, title: "Break", kind: "break" },
-      { start: "12:50", end: "14:10", allRooms: true, title: "Break", kind: "break" },
+      { start: "12:50", end: "14:10", allRooms: true, title: "Lunch", kind: "break",
+               subsessions: [
+    { title: "Semantic Web Women and Allies Network Lunch", room: "VERANDA - Piano 0" },
+  ],
+
+
+       },
       { start: "15:50", end: "16:20", allRooms: true, title: "Break", kind: "break" },
       { start: "08:00", end: "", allRooms: true, title: "Registration", kind: "break" },
 
@@ -126,9 +132,9 @@ export const schedule = [
     rooms: PRE_CONFERENCE_ROOMS,
     sessions: [
 
-            { start: "08:00", end: "", allRooms: true, title: "Registration", kind: "break" },
+      { start: "08:00", end: "", allRooms: true, title: "Registration", kind: "break" },
       { start: "10:40", end: "11:10", allRooms: true, title: "Break", kind: "break" },
-      { start: "12:50", end: "14:10", allRooms: true, title: "Break", kind: "break" },
+      { start: "12:50", end: "14:10", allRooms: true, title: "Lunch", kind: "break" },
       { start: "15:50", end: "16:20", allRooms: true, title: "Break", kind: "break" },
 
       { start: "09:00", end: "18:00", room: "Sezione  1", title: "3rd International Workshop on Retrieval-Augmented Generation Enabled by Knowledge Graphs (RAGE-KG 2026)", kind: "workshop", link: "https://2026.rage-kg.org/" },
@@ -226,7 +232,16 @@ export const schedule = [
         ],
       },
 
-      { start: "12:15", end: "13:45", room: LUNCH, title: "Lunch", kind: "break" },
+      { start: "12:15", end: "13:45", room: LUNCH, title: "Lunch", kind: "break",
+
+
+         subsessions: [
+    { title: "Mentoring Lunch", room: "GLASHAUS" },
+        { title: "Journal of Web Semantics Lunch", room: "ORIONE - 2 Floor" },
+            { title: "SW Journal Lunch", room: "PERSEO - 2 Floor" },
+   
+  ],
+       },
 
       {
         start: "13:45", end: "15:15", room: "Sezione 1", kind: "parallel",
@@ -343,7 +358,15 @@ export const schedule = [
         ],
       },
 
-      { start: "12:00", end: "13:30", room: LUNCH, title: "Lunch", kind: "break" },
+      { start: "12:00", end: "13:30", room: LUNCH, title: "Lunch", kind: "break",
+
+
+         subsessions: [
+    { title: "TGDK (Journal) Meetup", room: "ORIONE+PERSEO" },
+        { title: "Industry Lunch + Sponsor", room: "GLASHAUS" },
+           
+   
+  ], },
 
       {
         start: "13:30", end: "15:00", room: "Sezione 1", kind: "parallel",
@@ -539,7 +562,15 @@ export const schedule = [
 
       },
 
-      { start: "12:00", end: "13:30", room: LUNCH, title: "Lunch", kind: "break" },
+      { start: "12:00", end: "13:30", room: LUNCH, title: "Lunch", kind: "break" ,
+
+
+         subsessions: [
+    { title: "Handover Lunch", room: "ORIONE+PERSEO" },
+        
+           
+   
+  ],},
 
       {
         start: "13:30", end: "14:40", room: "Sezione 1", kind: "parallel",
