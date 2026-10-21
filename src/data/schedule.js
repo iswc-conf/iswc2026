@@ -189,7 +189,7 @@ export const schedule = [
       {
         start: "10:45", end: "12:15", room: "Sezione 1", kind: "parallel",
         title: "Dynamic and Streaming Knowledge Graphs, Querying, and Provenance",
-        chairs: "TBD",
+        chairs: "George Konstantinidis",
         slot: 1,
         papers: [
           { id: 259, title: "Open all the windows! : RSP-QL under cross-window entailment with provenance semi-rings", authors: "Cas Proost and Pieter Bonte", track: "Research" },
@@ -201,7 +201,7 @@ export const schedule = [
       {
         start: "10:45", end: "12:15", room: "Sezione 2", kind: "parallel",
         title: "Knowledge Graph Learning and Temporal Reasoning",
-        chairs: "TBD",
+        chairs: "Alexandros Zeakis",
         slot: 6,
         papers: [
           { id: 151, title: "Fetch That Stream! RetrievR-guided Virtual Linked Stream Discovery and Access", authors: "Daniel de Leng, Robin Keskisärkkä, Volodymyr Kadzhaia and Pieter Bonte", track: "Research" },
@@ -213,7 +213,7 @@ export const schedule = [
       {
         start: "10:45", end: "12:15", room: "Sezione 3&4", kind: "parallel",
         title: "Ontology-Driven Modeling, Integration, and Workflows",
-        chairs: "TBD",
+        chairs: "Juan Sequeda",
         slot: 10,
         papers: [
           { id: 170, title: "Integrating Semantics into Research Data Management: Modelling and Validating Materials Science Experiment Workflows", authors: "Samuel García Vázquez, Victor Dudarev, Alfred Ludwig, Markus Stricker and Maribel Acosta", track: "In-Use", spotlight: true },
@@ -225,7 +225,7 @@ export const schedule = [
       {
         start: "10:45", end: "12:15", room: "Sezione 5", kind: "parallel",
         title: "LLMs and Agentic AI for Knowledge Graphs",
-        chairs: "TBD",
+        chairs: "Peter Haase",
         slot: 9,
         papers: [
           { id: 37, title: "Select, Don’t Train: The Benefits of Modular Entity Disambiguation with LLM-Based Selection", authors: "Fina Polat, Daniel Daza, Pengyu Zhang, Klim Zaporojets and Paul Groth", track: "Research" },
@@ -249,7 +249,7 @@ export const schedule = [
       {
         start: "13:45", end: "15:15", room: "Sezione 1", kind: "parallel",
         title: "Knowledge Graph Alignment, Evolution, and Temporal Forecasting",
-        chairs: "TBD",
+        chairs: "Blerina Spahiu",
         slot: 2,
         papers: [
           { id: 90, title: "SECEA: Self Configuring Matcher Framework For Entity And Knowledge Graph Alignment", authors: "Alexander Becker, Axel-Cyrille Ngonga Ngomo and Mohamed Ahmed Sherif", track: "Research" },
@@ -262,7 +262,7 @@ export const schedule = [
       {
         start: "13:45", end: "15:15", room: "Sezione 2", kind: "parallel",
         title: "Knowledge Graphs and Linked Data",
-        chairs: "TBD",
+        chairs: "Pasquale Lisena",
         slot: 7,
         papers: [
           { id: 293, title: "FITTER: Vocabulary-Agnostic Inference on Temporal Knowledge Graphs", authors: "Jiaxin Pan, Mojtaba Nayyeri, Osama Mohammed, Daniel Hernández, Rongchuan Zhang, Cheng Cheng and Steffen Staab", track: "Research", spotlight: true },
@@ -306,7 +306,7 @@ export const schedule = [
       {
         start: "10:30", end: "12:00", room: "Sezione 1", kind: "parallel",
         title: "Robust Knowledge Graph Learning, Construction, and Data Quality",
-        chairs: "TBD",
+        chairs: "Anisa Rula",
         slot: 8,
         papers: [
           { id: 216, title: "Simulating Missing Data Patterns in Knowledge Graphs", authors: "Jovana Dobreva and Tomer Sagi", track: "Research" },
@@ -320,7 +320,7 @@ export const schedule = [
       {
         start: "10:30", end: "12:00", room: "Sezione 2", kind: "parallel",
         title: "Ontology Engineering, Question Answering and LLMs",
-        chairs: "TBD",
+        chairs: "Matteo Palmonari",
         slot: 15,
         papers: [
           { id: 56, title: "DistillER: Knowledge Distillation in Entity Resolution with Large Language Models", authors: "Alexandros Zeakis, George Papadakis and Dimitrios Skoutas", track: "Research" },
@@ -333,7 +333,7 @@ export const schedule = [
       {
         start: "10:30", end: "12:00", room: "Sezione 3&4", kind: "parallel",
         title: "Federation, Alignment, and Semantic Interoperability",
-        chairs: "TBD",
+        chairs: "Antoine Zimmermann",
         slot: 4,
         papers: [
           { id: 199, title: "Does SPARQL federation work in the real world? A case study over large biological SPARQL endpoints", authors: "Elias Crum, Bryan-Elliott Tam, Jonni Hanski, Ana-Claudia Sima, Tarcisio Mendes de Farias, Jerven Bolleman and Ruben Taelman", track: "In-Use", spotlight: true },
@@ -346,7 +346,7 @@ export const schedule = [
       {
         start: "10:30", end: "12:00", room: "Sezione 5", kind: "parallel",
         title: "Industry Papers I: High-quality KGs for Managing Enterprise Knowledge",
-        chairs: "TBD",
+        chairs: "Maria Keet",
         papers: [
           { id: 528, title: "Ontology-Based Enterprise Knowledge Management", authors: "Utku Sivacilar, Wouter Lubbers, Alireza Emad and Marc Korthouwer", track: "Industry" },
           { id: 534, title: "Maqui.ai: Knowledge graphs and GraphRag to manage legal documents", authors: "Nicolas Barrionuevo, Ri Diaz, Benjamin Farias, Sebastián Ferrada, Alejandro Grez, Juan L. Reutter, Hernan Sarmiento and Agustin Urrutia", track: "Industry" },
@@ -374,7 +374,7 @@ export const schedule = [
       {
         start: "13:30", end: "15:00", room: "Sezione 1", kind: "parallel",
         title: "Graph Languages, Federation, and Provenance",
-        chairs: "TBD",
+        chairs: "Olaf Hartig",
         slot: 5,
         papers: [
           { id: 306, title: "A Compositional Language for Property Graphs", authors: "Marcelo Arenas, Leonid Libkin and Wim Martens", track: "Research" },
@@ -387,7 +387,7 @@ export const schedule = [
       {
         start: "13:30", end: "15:00", room: "Sezione 2", kind: "parallel",
         title: "Ontology Management and Explanation, and Knowledge Graph Validation ",
-        chairs: "TBD",
+        chairs: "Aidan Hogan",
         slot: 17,
         papers: [
           { id: 347, title: "Recovering Explanations from Transformed Rule-Based Ontologies", authors: "Alex Ivliev, Markus Krötzsch and Maximilian Marx", track: "Research", spotlight: true },
@@ -399,7 +399,7 @@ export const schedule = [
       {
         start: "13:30", end: "15:00", room: "Sezione 3&4", kind: "parallel",
         title: "Neurosymbolic reasoning in knowledge graphs",
-        chairs: "TBD",
+        chairs: "Steffen Staab",
         slot: 11,
         papers: [
           { id: 257, title: "A Neurosymbolic Scholarly Intelligence System in Use at Springer Nature", authors: "Antonello Meloni, Angelo Salatino, Francesco Osborne, Alexis Vizcaino, Aliaksandr Birukou, Diego Reforgiato Recupero and Enrico Motta", track: "In-Use", spotlight: true },
@@ -412,7 +412,7 @@ export const schedule = [
       {
         start: "13:30", end: "15:00", room: "Sezione 5", kind: "parallel",
         title: "Industry Papers II: Sematic Layer for AI Agents",
-        chairs: "TBD",
+        chairs: "Daria Stepanova",
         papers: [
 
           { id: 520, title: "Grounding AI Agents in Plant Knowledge Graphs: A Neuro-Symbolic Approach towards Autonomous Industrial Operations", authors: "Naveen Kumar and Swathi Shyam Sunder", track: "Industry" },
@@ -430,7 +430,7 @@ export const schedule = [
       {
         start: "15:30", end: "17:45", room: "Sezione 1", kind: "parallel",
         title: "Grounded LLMs, Scalable Reasoning, and Privacy",
-        chairs: "TBD",
+        chairs: "Raghava Mutharaju",
         slot: 20,
         papers: [
           { id: 190, title: "How Graphs ground Large Language Models - Counterfactuals for Subgraph Verbalizations", authors: "Sara Buchmann, Emanuel Slany and Stephan Scheele", track: "Research", spotlight: true },
@@ -445,7 +445,7 @@ export const schedule = [
       {
         start: "15:30", end: "17:45", room: "Sezione 2", kind: "parallel",
         title: "Neurosymbolic reasoning and ontologies",
-        chairs: "TBD",
+        chairs: "Catia Pesquita",
         slot: 13,
         papers: [
           { id: 147, title: "Bridging the Semantic Web and Model-Based Systems Engineering with the Ontological Modeling Language", authors: "Maged Elaasar, Bentley Oakes, Eduard Kamburjan, Mohammad Hamdaqa and Abdelwahab Hamou-Lhadj", track: "In-Use" },
@@ -460,7 +460,7 @@ export const schedule = [
       {
         start: "15:30", end: "17:45", room: "Sezione 3&4", kind: "parallel",
         title: "Uncertain Querying, Knowledge Graph Augmentation, and Data Sharing",
-        chairs: "TBD",
+        chairs: "Philipp Cimiano",
         slot: 21,
         papers: [
           { id: 254, title: "ProbSPARQL: Querying Knowledge Graphs with Multi-dimensional, Uncertain Numeric Data", authors: "Jingcheng Wu, Ratan Bahadur Thapa, Daniel Hernandez, Hongkuan Zhou and Steffen Staab", track: "In-Use", spotlight: true },
@@ -475,7 +475,7 @@ export const schedule = [
       {
         start: "15:30", end: "17:45", room: "Sezione 5", kind: "parallel",
         title: "Scalable Knowledge Graph Query Processing and Optimization",
-        chairs: "TBD",
+        chairs: "Hala Skaf-Molli",
         slot: 3,
         papers: [
           { id: 138, title: "Evolving FedX: High-Performance SPARQL Federation in the Eclipse RDF4J Ecosystem", authors: "Andreas Schwarte, Peter Haase and Katja Hose", track: "In-Use", spotlight: true },
@@ -509,7 +509,7 @@ export const schedule = [
       {
         start: "10:30", end: "12:00", room: "Sezione 1", kind: "parallel",
         title: "Knowledge Graphs for Retrieval, Knowledge Editing, and Adaptive Reasoning",
-        chairs: "TBD",
+        chairs: "Oscar Corcho",
         slot: 18,
         papers: [
           { id: 27, title: "Retrieval-Augmented Generation of Ontologies from Relational Databases", authors: "Nadeen Fathallah, Mojtaba Nayyeri, Yogi Athish Aalla, Ratan Bahadur Thapa, Hans-Michael Tautenhahn, Anton Schnurpel and Steffen Staab", track: "Research" },
@@ -522,7 +522,7 @@ export const schedule = [
         {
         start: "10:30", end: "12:00", room: "Sezione 2", kind: "parallel",
         title: "Ontology and Shape Learning",
-        chairs: "TBD",
+        chairs: "Lorenzo Marconi",
         slot: 16,
         papers: [
           { id: 164, title: "LYRA: Belief-Driven Scalable Class Expression Learning in Description Logics", authors: "Amgad Abdulmaqsod, Yasir Mahmood, Axel-Cyrille Ngonga Ngomo and Mohamed Sherif", track: "Research" },
@@ -538,7 +538,7 @@ export const schedule = [
       {
         start: "10:30", end: "12:00", room: "Sezione 3&4", kind: "parallel",
         title: "FAIR, Decentralized, and Trustworthy Knowledge Infrastructures",
-        chairs: "TBD",
+        chairs: "Terry Payne",
         slot: 23,
         papers: [
           { id: 427, title: "RangeFC: Interval-Aware Temporal Fact Checking for Knowledge Graph", authors: "Abdullah Qamar, Umair Qudus, Michael Röder and Axel-Cyrille Ngonga Ngomo", track: "Research" },
@@ -549,7 +549,7 @@ export const schedule = [
       },
   
 
-      { start: "10:30", end: "12:00", room: "Sezione 5", title: "Visionary Papers", kind: "parallel", chairs: "TBD" ,
+      { start: "10:30", end: "12:00", room: "Sezione 5", title: "Visionary Papers", kind: "parallel", chairs: "Elena Simperl and Chris Welty" ,
         papers: [
           { id: 0, title: "Unrethinking the Semantic Web", authors: "Aidan Hogan, Ora Lassila and James A. Hendler", track: "Visionary Ideas" },
           { id: 0, title: "	Symbiotic Knowledge Graphs: A Vision for Semantic Brain-Computer Interfaces", authors: "Ruben Taelman", track: "Visionary Ideas" },
@@ -578,7 +578,7 @@ export const schedule = [
       {
         start: "13:30", end: "14:40", room: "Sezione 1", kind: "parallel",
         title: "Knowledge Graphs, Retrieval-Augmented Question Answering, and Ontologies for Domain Applications",
-        chairs: "TBD",
+        chairs: "Enrico Daga",
         slot: 19,
         papers: [
           { id: 432, title: "KARMA: When Knowledge Graphs Still Matter for Retrieval-Augmented Question Answering", authors: "Thi Hoang Thi Pham, Pascal Molli and Hala Skaf-Molli", track: "Research" },     
@@ -592,7 +592,7 @@ export const schedule = [
       {
         start: "13:30", end: "14:40", room: "Sezione 2", kind: "parallel",
         title: "Human-Centered Ontology Engineering and Domain Knowledge Graphs",
-        chairs: "TBD",
+        chairs: "Lise Stork",
         slot: 24,
         papers: [
           { id: 345, title: "A Collaborative Human-AI Workflow for Ontology Requirement Engineering in Use", authors: "Reham Alharbi, George Hannah, Elliott Watkiss-Leek, Wilf Morlidge, Jacopo de Berardinis and Terry R. Payne", track: "In-Use" },
