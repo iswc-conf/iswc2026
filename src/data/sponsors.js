@@ -28,6 +28,7 @@ import ATOMIC from "./sponsors/PLATINUM/ATOMIC.png";
 import JP from "./sponsors/GOLD/JP.png";
 import SNOW from "./sponsors/PLATINUM/SNOW.png";
 import VIDEO from "./sponsors/SILVER/VIDEOLECTURES.png"
+import AI from "./sponsors/OTHER/AIIA.png"
 
 /** Ordered list of tiers, each with its sponsors. Drives every sponsor view. */
 export const sponsorTiers = [
@@ -76,6 +77,15 @@ export const sponsorTiers = [
     color: "#cd7f32",
     sponsors: [
       { name: "LNCS", logo: LNCS, link: "https://link.springer.com/series/558", width: 800 },
+    ],
+  },
+
+  {
+    tier: "Other",
+    label: "Other",
+    color: "#161613",
+    sponsors: [
+      { name: "AI*IA", logo: AI, link: "https://aixia.it/", width: 800 },
     ],
   },
 ];
