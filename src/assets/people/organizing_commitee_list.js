@@ -289,6 +289,14 @@ const organizers = {
       institution: 'University of Bari',
       country: 'Italy',
     },
+      ],
+  "Official Photographer": [
+    {
+      name: 'George Hannah',
+      img: GeorgeHannah,
+      institution: 'University of Liverpool',
+      country: 'UK',
+    },
   ],
    /* "Journal Track": [
     {
