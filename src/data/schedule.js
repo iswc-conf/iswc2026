@@ -75,7 +75,7 @@ export const schedule = [
     sessions: [
 
       { start: "10:40", end: "11:10", allRooms: true, title: "Break", kind: "break" },
-      { start: "12:50", end: "14:10", allRooms: true, title: "Lunch", kind: "break",
+      { start: "12:50", end: "14:10", room: LUNCH, title: "Lunch", kind: "break",
                subsessions: [
     { title: "Semantic Web Women and Allies Network Lunch", room: "VERANDA - Piano 0" },
   ],
@@ -148,7 +148,7 @@ export const schedule = [
 
       { start: "08:00", end: "", allRooms: true, title: "Registration", kind: "break" },
       { start: "10:40", end: "11:10", allRooms: true, title: "Break", kind: "break" },
-      { start: "12:50", end: "14:10", allRooms: true, title: "Lunch", kind: "break" },
+      { start: "12:50", end: "14:10", room: LUNCH, title: "Lunch", kind: "break" },
       { start: "15:50", end: "16:20", allRooms: true, title: "Break", kind: "break" },
 
       { start: "09:00", end: "18:00", room: "Sezione  1", title: "3rd International Workshop on Retrieval-Augmented Generation Enabled by Knowledge Graphs (RAGE-KG 2026)", kind: "workshop", link: "https://2026.rage-kg.org/" },
@@ -308,7 +308,7 @@ export const schedule = [
       { start: "17:15", end: "18:45", rooms: PLENARY, title: "Minute Madness", kind: "parallel", chairs: "TBD" },
       //{ start: "18:25", end: "19:00",  title: "Poster Setting Up" },
       { start: "19:15", end: "21:00", rooms: PLENARY, title: "Poster and Demos", kind: "parallel" },
-      { start: "21:00", end: "23:00", rooms: "Cassiopea", title: "Singing with Piano all Together!", kind: "break" },
+      { start: "21:00", end: "23:00", room: LUNCH, title: "Singing with Piano all Together!", kind: "break" },
 
     
     ],

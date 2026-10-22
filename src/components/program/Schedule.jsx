@@ -450,22 +450,30 @@ const DayByPart = ({ day }) => {
               <b>Registration:</b> {registration.start.trim()}
             </p>
           )}
-          {breaks.length > 0 && (
-            <p>
-              <b>Breaks:</b>{" "}
-              {breaks.map((b) => `${b.title} ${timeRange(b)}`).join(" · ")}
-            </p>
-          )}
-          {breaksWithSubs.map((b) => (
-            <div
-              key={sessionAnchor(day, b)}
-              id={sessionAnchor(day, b)}
-              className="iswc-schedule-anchor"
-            >
-              <b>{b.title}</b> ({timeRange(b)})
-              <SubSessions session={b} />
-            </div>
-          ))}
+{breaks.length > 0 && (
+  <p>
+    <b>Breaks:</b>{" "}
+    {breaks
+      .map((b) => {
+        const room = roomLabel(b);
+        return `${b.title} ${timeRange(b)}${room ? ` (${room})` : ""}`;
+      })
+      .join(" · ")}
+  </p>
+)}
+      {breaksWithSubs.map((b) => {
+  const room = roomLabel(b);
+  return (
+    <div
+      key={sessionAnchor(day, b)}
+      id={sessionAnchor(day, b)}
+      className="iswc-schedule-anchor"
+    >
+      <b>{b.title}</b> ({timeRange(b)}{room ? ` · ${room}` : ""})
+      <SubSessions session={b} />
+    </div>
+  );
+})}
         </div>
       )}
 
