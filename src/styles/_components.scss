@@ -2970,3 +2970,31 @@ $iswc-grid-row-height: 7rem;
   .iswc-subsessions__title { font-size: 0.8rem; }
   .iswc-subsessions__meta  { font-size: 0.72rem; font-weight: 600; color: $iswc-muted; }
 }
+
+// -----------------------------------------------------------------------------
+// Job fair — sponsor logo on top of an .iswc-place-card
+// -----------------------------------------------------------------------------
+.iswc-job-card__logo {
+  // The card is a flex column: without this the band can shrink and let the
+  // logo spill over the text.
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 6rem;
+  padding: 1rem 1.5rem;
+  overflow: hidden;
+  background: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
+  img {
+    display: block;
+    // A fixed box the logo always fits inside, whatever its shape or format
+    // (SVGs without width/height included). `contain` keeps it whole and
+    // undistorted.
+    width: 100%;
+    height: 100%;
+    max-width: 12rem;
+    object-fit: contain;
+  }
+}

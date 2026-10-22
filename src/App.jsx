@@ -15,7 +15,6 @@ import MainPage from "./components/about/MainPage";
 const ImportantDates = lazy(() => import("./components/important_dates/ImportantDates"));
 
 /* Calls */
-const JobFair = lazy(() => import("./components/calls/JobFair"));
 const Research = lazy(() => import("./components/calls/Research"));
 const ESWCResubmission = lazy(() => import("./components/calls/ESWCResubmission"));
 const Resource = lazy(() => import("./components/calls/Resource"));
@@ -55,8 +54,8 @@ const ProgramDagstuhl = lazy(() => import("./components/program/Dagstuhl"));
 const AcceptedTutorials = lazy(() => import("./components/program/Tutorials"));
 
 const DCProgram = lazy(() => import("./components/program/DCProgram"));
+const JobFair = lazy(() => import("./components/program/JobFair"));
 
-const Panel = lazy(() => import("./components/program/Panel"));
 const Awards = lazy(() => import("./components/program/Awards"));
 const Schedule = lazy(() =>
   import("./components/program/Schedule").then((m) => ({ default: m.Schedule }))
@@ -170,7 +169,7 @@ export default function App() {
           <Route path="/calls/dagstuhl" element={<Dagstuhl />} />
           <Route path="/calls/swsa" element={<SwsaDistinguishedDissertationAward />} />
           <Route path="/calls/visionary" element={<Visionary />} />
-           <Route path="/calls/jobfair" element={<JobFair />} />
+     
 
 
           {/* Guidelines */}
@@ -191,10 +190,10 @@ export default function App() {
           <Route path="/program/workshops" element={<Workshops />} />
           <Route path="/program/dagstuhl" element={<ProgramDagstuhl />} />
           <Route path="/program/tutorials" element={<AcceptedTutorials />} />
-          <Route path="/program/panel" element={<Panel />} />
           <Route path="/program/awards" element={<Awards />} />
           <Route path="/program/schedule" element={<Schedule />} />
           <Route path="/program/dc" element={<DCProgram />} />
+          <Route path="/program/jobfair" element={<JobFair />} />
 
           {/* Attending */}
           <Route path="/attending/registration" element={<Registration />} />

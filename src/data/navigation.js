@@ -19,11 +19,7 @@ export const navigation = [
     label: "Calls",
     items: [
       { type: "header", label: "Available" },
-        {
-        label: "Job Fair",
-        to: "/calls/jobfair",
-        badge: "NEW",
-      },
+
       { label: "Research", to: "/calls/research" },
       {
         label: "Research — ESWC 2026 resubmissions",
@@ -56,7 +52,11 @@ export const navigation = [
       { label: "Accepted Papers", to: "/program/acceptedpapers" },
       { label: "Tutorials", to: "/program/tutorials" },
       { label: "Doctoral Consortium", to: "/program/dc" },
-
+        {
+        label: "Job Fair",
+        to: "/program/jobfair",
+        badge: "NEW",
+      },
       { type: "header", label: "To Be Announced" },
     
   
