@@ -110,6 +110,6 @@ export const tutorials = [
     new: false,
     organizers: "Robert David",
     type: ["Half-day"],
-    website: "http://graphwise.ai/iswc2026-workshop-scope"
+    website: "https://graphwise.ai/event-resource/using-shacl-and-owl-in-combination-for-practical-knowledge-graph/"
   },
 ];
