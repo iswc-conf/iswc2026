@@ -84,8 +84,7 @@ export const JobFair = () => {
       </p>
 
       <p>
-        As part of their sponsorship packages, ISWC 2026 sponsors share job
-        openings with the Semantic Web community. Whether you are a student
+       Whether you are a student
         approaching graduation, an early-career researcher or an experienced
         practitioner, take a look at the positions below and get in touch with
         the companies directly, or meet their representatives at the
