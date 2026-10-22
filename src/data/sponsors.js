@@ -30,6 +30,7 @@ import SNOW from "./sponsors/PLATINUM/SNOW.png";
 import VIDEO from "./sponsors/SILVER/VIDEOLECTURES.png"
 import AI from "./sponsors/OTHER/AIIA.png"
 import PUGLIA from "./sponsors/OTHER/PUGLIA.png"
+import CEUR from "./sponsors/OTHER/CEUR.png"
 
 /** Ordered list of tiers, each with its sponsors. Drives every sponsor view. */
 export const sponsorTiers = [
@@ -83,10 +84,11 @@ export const sponsorTiers = [
 
   {
     tier: "Other",
-    label: "Other",
+    label: "Supported by",
     color: "#161613",
     sponsors: [
       { name: "AI*IA", logo: AI, link: "https://aixia.it/", width: 800 },
+        { name: "CEUR-WS", logo: CEUR, link: "https://ceur-ws.org/", width: 800 },
     ],
   },
 ];

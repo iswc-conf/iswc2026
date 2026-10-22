@@ -85,35 +85,40 @@ export const schedule = [
       { start: "15:50", end: "16:20", allRooms: true, title: "Break", kind: "break" },
       { start: "08:00", end: "", allRooms: true, title: "Registration", kind: "break" },
 
-      { start: "09:00", end: "18:00", room: "Sezione  1", title: "6th Wikidata Workshop", kind: "workshop", link: "https://wikidataworkshop.github.io/2026/" },
-      { start: "09:00", end: "18:00", room: "Sezione  2", title: "21st International Workshop on Ontology Matching (OM-2026)", kind: "workshop", link: "https://om.ontologymatching.org/2026/" },
-      { start: "09:00", end: "18:00", room: "Sezione  3", title: "17th Workshop on Ontology Design and Patterns (WOP) 2026", kind: "workshop", link: "https://odpa.github.io/workshop-on-ontology-design-and-patterns/2026/" },
+      { start: "09:00", end: "18:00", room: "Sezione 1", title: "6th Wikidata Workshop", kind: "workshop", link: "https://wikidataworkshop.github.io/2026/" },
+      { start: "09:00", end: "18:00", room: "Sezione 2", title: "KG-NeSy: The Third Workshop on Knowledge Graphs and Neurosymbolic AI", kind: "workshop", link: "https://kg-nesy.github.io/" },
+      { start: "09:00", end: "18:00", room: "Sezione 3", title: "17th Workshop on Ontology Design and Patterns (WOP) 2026", kind: "workshop", link: "https://odpa.github.io/workshop-on-ontology-design-and-patterns/2026/" },
 
-      { start: "09:00", end: "12:50", room: "Sezione  4", title: "WikiKGQA: Wiki-Based Knowledge Graph Question Answering Challenge", kind: "workshop", link: "https://wikikgqa.org/" },
-      { start: "14:10", end: "18:00", room: "Sezione  4", title: "Graph-Enhanced LLMs for Trustworthy Web Data Management", kind: "workshop", link: "https://glow-workshop.github.io/iswc2026/" },
-
+      { start: "09:00", end: "12:50", room: "Sezione 4", title: "SeMatS 2026 Third International Workshop on Semantic Materials Science: Harnessing the Power of Semantic Web Technologies in Materials Science", kind: "workshop", link: "https://sites.google.com/view/semats2026" },
+      { start: "14:10", end: "18:00", room: "Sezione 4", title: "Graph-Enhanced LLMs for Trustworthy Web Data Management", kind: "workshop", link: "https://glow-workshop.github.io/iswc2026/" },
+      
       { start: "09:00", end: "18:00", room: "Sezione  5", title: "2nd International Workshop on Data Management for Knowledge Graphs (DMKG 2026)", kind: "workshop", link: "https://dmkg-workshop.github.io/2026/" },
 
       { start: "09:00", end: "12:50", room: "Sezione  6", title: "GOOD: GOod Ontologies and how to Develop them", kind: "tutorial", link: "http://www.meteck.org/teaching/GOODtutISWC26.html" },
       { start: "14:10", end: "18:00", room: "Sezione  6", title: "OntoLM: Ontology Embedding, Reasoning and Construction with Language Models", kind: "tutorial", link: "https://huiyang1997.github.io/OntoLM/" },
+
       { start: "09:00", end: "12:50", room: "Sezione  7", title: "ARGO: Agentic Retrieval and Graph Orchestration for Document Knowledge Systems", kind: "tutorial", link: "https://argoiswc.github.io/" },
       { start: "14:10", end: "18:00", room: "Sezione  7", title: "Continual Knowledge Graph Embedding: Foundations, Methods, and Open Challenges", kind: "tutorial", link: "https://gerardponsrecasens.github.io/CKGE-FMOC/" },
+
       { start: "09:00", end: "12:50", room: "Sezione  8", title: "Shapes for Knowledge Graphs", kind: "tutorial", link: "https://www.validatingrdf.com/tutorial/iswc2026/" },
       { start: "14:10", end: "18:00", room: "Sezione  8", title: "Façade-X Tutorial: Querying Any Format as a Knowledge Graph (FX)", kind: "tutorial", link: "https://w3c-facade-x.github.io/iswc2026-tutorial/" },
 
-      { start: "09:00", end: "18:00", room: "Sala Andromeda", title: "KG-NeSy: The Third Workshop on Knowledge Graphs and Neurosymbolic AI", kind: "workshop", link: "https://kg-nesy.github.io/" },
 
-      { start: "09:00", end: "12:50", room: "Sala Cigno", title: "SeMatS 2026 Third International Workshop on Semantic Materials Science: Harnessing the Power of Semantic Web Technologies in Materials Science", kind: "workshop", link: "https://sites.google.com/view/semats2026" },
-      { start: "14:10", end: "18:00", room: "Sala Cigno", title: "LLMs4OL 2026: Large Language Models for Ontology Learning", kind: "workshop", link: "https://sites.google.com/view/llms4ol2026" },
+      { start: "09:00", end: "18:00", room: "Sala Cigno", title: "21st International Workshop on Ontology Matching (OM-2026)", kind: "workshop", link: "https://om.ontologymatching.org/2026/" },
 
-      { start: "10:00", end: "18:00", room: "Pegaso", title: "Multi-dimensional Knowledge Graphs (MKG)", kind: "dag", link: "https://mkg.infinity-eccch.eu/" },
-      { start: "09:00", end: "18:00", room: "Orione", title: "Computational cHallenges fRom hiGhly divErse Data (CHARGED)", kind: "dag", link: "https://dhlab-nl.github.io/charged-workshop/" },
 
-      { start: "09:00", end: "12:50", room: "Auriga (Perseo)", title: "Neural Networks meet Explicit Knowledge Representation: Towards Mechanistic Interpretability and Neuro-symbolic Modeling by-design", kind: "tutorial", link: "https://humancentricart.github.io/mechanistic-interpretability-by-design/iswc/index.html" },
-      { start: "14:10", end: "15:50", room: "Auriga (Perseo)", title: "Intro to OWL Reasoning with Protégé", kind: "tutorial" },
-      { start: "16:20", end: "18:00", room: "Auriga (Perseo)", title: "Doctoral Consortium Poster Session", kind: "doctoral" },
-      
-      
+      { start: "09:00", end: "12:50", room: "Sala Auriga", title: "WikiKGQA: Wiki-Based Knowledge Graph Question Answering Challenge", kind: "workshop", link: "https://wikikgqa.org/" },
+      { start: "14:10", end: "18:00", room: "Sala Auriga", title: "LLMs4OL 2026: Large Language Models for Ontology Learning", kind: "workshop", link: "https://sites.google.com/view/llms4ol2026" },
+
+      { start: "09:00", end: "18:00", room: "Sala Andromeda", title: "Computational cHallenges fRom hiGhly divErse Data (CHARGED)", kind: "dag", link: "https://dhlab-nl.github.io/charged-workshop/" },
+
+
+      { start: "09:00", end: "12:50", room: "Sala Orione", title: "Neural Networks meet Explicit Knowledge Representation: Towards Mechanistic Interpretability and Neuro-symbolic Modeling by-design", kind: "tutorial", link: "https://humancentricart.github.io/mechanistic-interpretability-by-design/iswc/index.html" },
+      { start: "14:10", end: "15:50", room: "Sala Orione", title: "Intro to OWL Reasoning with Protégé", kind: "tutorial" },
+      { start: "16:20", end: "18:00", room: "Sala Orione", title: "Doctoral Consortium Poster Session", kind: "doctoral" },
+
+      { start: "10:00", end: "18:00", room: "Sala Pegaso", title: "Multi-dimensional Knowledge Graphs (MKG)", kind: "dag", link: "https://mkg.infinity-eccch.eu/" },
+
       
       { start: "18:15", end: "21:00", title: "Wikidata Birthday 2026", kind: "other", link:"https://www.poggiolevante.it/evento/2026-10-25/" },
       { start: "19:30", end: "Late", title: "Doctoral Consortium Dinner at L'Osteria Dei Quattro Gatti", kind: "other", link:"https://share.google/V4sXl08R9D12jN3pA" },
