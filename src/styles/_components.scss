@@ -2998,3 +2998,23 @@ $iswc-grid-row-height: 7rem;
     object-fit: contain;
   }
 }
+
+.iswc-patronage {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.iswc-patronage__label {
+  margin: 0 0 0.75rem;
+  font-size: 1.1rem;
+  font-style: italic;
+  letter-spacing: 0.02em;
+}
+
+.iswc-patronage__banner {
+  display: block;
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  margin: 0 auto;
+}

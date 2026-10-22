@@ -102,8 +102,7 @@ export const JobFair = () => {
 
       <div className="iswc-callout">
         More job postings may be added as sponsors send them in, so check back
-        during the conference. Applications are handled by each company; ISWC
-        2026 is not involved in the hiring process.
+        during the conference. Applications are handled by each company.
       </div>
     </BaseContainer>
   );

@@ -3,7 +3,7 @@ import React from "react";
 import BaseContainer from "../general/BaseContainer";
 import Header from "../general/Header";
 
-import { sponsorTiers } from "../../data/sponsors";
+import { sponsorTiers, patronage } from "../../data/sponsors";
 
 const SponsorCard = ({ name, logo, link, width = 300, dark = false }) => {
   const content = (
@@ -56,6 +56,17 @@ export const Sponsors = () => (
         </div>
       </div>
     ))}
+
+    {patronage && (
+      <section className="iswc-patronage">
+        <p className="iswc-patronage__label">{patronage.label}</p>
+        <img
+          src={patronage.logo}
+          alt={`${patronage.name} Logo`}
+          className="iswc-patronage__banner"
+        />
+      </section>
+    )}
   </BaseContainer>
 );
 

@@ -29,6 +29,7 @@ import JP from "./sponsors/GOLD/JP.png";
 import SNOW from "./sponsors/PLATINUM/SNOW.png";
 import VIDEO from "./sponsors/SILVER/VIDEOLECTURES.png"
 import AI from "./sponsors/OTHER/AIIA.png"
+import PUGLIA from "./sponsors/OTHER/PUGLIA.png"
 
 /** Ordered list of tiers, each with its sponsors. Drives every sponsor view. */
 export const sponsorTiers = [
@@ -89,6 +90,13 @@ export const sponsorTiers = [
     ],
   },
 ];
+
+/** Patronage banner, shown full-width at the bottom of the Sponsors page. */
+export const patronage = {
+  name: "Regione Puglia",
+  label: "Under the patronage of",
+  logo: PUGLIA,
+};
 
 /** Tier name -> sponsors, kept for any consumer that indexes by tier. */
 export const sponsorsByTier = Object.fromEntries(
