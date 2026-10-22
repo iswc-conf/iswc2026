@@ -82,7 +82,14 @@ export const schedule = [
 
 
        },
-      { start: "15:50", end: "16:20", allRooms: true, title: "Break", kind: "break" },
+      { start: "15:40", end: "16:20", allRooms: true, title: "Coffee with Sponsors", kind: "break",
+
+         subsessions: [
+    { title: "Sponsor representatives will introduce themselves to all the students (15:40 - 15:50) to bootstrap some networking - informal chats with them can continue during the coffee break." }]
+       },
+
+
+
       { start: "08:00", end: "", allRooms: true, title: "Registration", kind: "break" },
 
       { start: "09:00", end: "18:00", room: "Sezione 1", title: "6th Wikidata Workshop", kind: "workshop", link: "https://wikidataworkshop.github.io/2026/" },

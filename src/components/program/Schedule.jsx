@@ -425,7 +425,16 @@ const SessionRow = ({ day, session }) => {
 };
 
 const DayByPart = ({ day }) => {
-  const breaks = day.sessions.filter((s) => s.kind === "break").sort(byTime);
+  // Registration has no end time; it gets its own line rather than "08:00–".
+  const registration = day.sessions.find(
+    (s) => s.kind === "break" && s.title === "Registration"
+  );
+  const breaks = day.sessions
+    .filter((s) => s.kind === "break" && s !== registration)
+    .sort(byTime);
+  // Breaks with something happening inside them (lunches, sponsor coffee…)
+  const breaksWithSubs = breaks.filter((b) => b.subsessions?.length > 0);
+
   // Kept in room order, so a room is easy to find in each list.
   const order = (s) => day.rooms.indexOf(s.room ?? s.rooms?.[0]);
   const sessions = day.sessions
@@ -434,12 +443,30 @@ const DayByPart = ({ day }) => {
 
   return (
     <>
-      {breaks.length > 0 && (
-        <p className="iswc-schedule-rows__breaks">
-          <b>Registration: </b> 08:00<br></br>
-          <b>Breaks:</b> {breaks.map(timeRange).join(" · ")}
-        </p>
-
+      {(registration || breaks.length > 0) && (
+        <div className="iswc-schedule-rows__breaks">
+          {registration && (
+            <p>
+              <b>Registration:</b> {registration.start.trim()}
+            </p>
+          )}
+          {breaks.length > 0 && (
+            <p>
+              <b>Breaks:</b>{" "}
+              {breaks.map((b) => `${b.title} ${timeRange(b)}`).join(" · ")}
+            </p>
+          )}
+          {breaksWithSubs.map((b) => (
+            <div
+              key={sessionAnchor(day, b)}
+              id={sessionAnchor(day, b)}
+              className="iswc-schedule-anchor"
+            >
+              <b>{b.title}</b> ({timeRange(b)})
+              <SubSessions session={b} />
+            </div>
+          ))}
+        </div>
       )}
 
       {PARTS.map((part) => {
