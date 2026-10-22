@@ -160,16 +160,27 @@ export const schedule = [
       { start: "09:00", end: "12:50", room: "Sezione  8", title: "Semantic-Aware Partitioning of Property Graphs", kind: "tutorial", link: "https://elisjana.github.io/research/iswc2026-tutorial/" },
       { start: "14:10", end: "18:00", room: "Sezione  8", title: "Personal Knowledge Graphs for LLM-Powered Decentralized Recommendations", kind: "tutorial", link: "https://brains-group.github.io/PKG-Recs" },
 
-      { start: "09:00", end: "12:50", room: "Sala Andromeda", title: "SPARK 2026 - First International Workshop on Spatial Intelligence and Reasoning Enabled by Knowledge Graphs and Foundation Models", kind: "workshop", link: "https://sparkworkshop.github.io/" },
-      { start: "14:10", end: "18:00", room: "Sala Andromeda", title: "International Workshop on Explainable AI and Knowledge Graphs (XAI+KG)", kind: "workshop", link: "https://sites.google.com/view/xaikg2026" },
       { start: "09:00", end: "12:50", room: "Sala Cigno", title: "ELMKE 2026: The 4th Workshop on Evaluation of Language Models in Knowledge Engineering", kind: "workshop", link: "https://sites.google.com/view/elmke" },
-      { start: "14:10", end: "18:00", room: "Sala Cigno", title: "Workshop on Knowledge Graphs and Model-driven Systems Engineering (KGMDSE)", kind: "workshop", link: "https://www.omilab.org/activities/events/iswc2026_kgmdse/" },
+      { start: "14:10", end: "18:00", room: "Sala Cigno", title: "International Workshop on Explainable AI and Knowledge Graphs (XAI+KG)", kind: "workshop", link: "https://sites.google.com/view/xaikg2026" },
 
-      { start: "09:00", end: "12:50", room: "Pegaso", title: "Rethinking Data Quality for Generative AI and Knowledge Graphs (ReDQ)", kind: "dag", link: "https://redq-workshop.github.io/" },
-      { start: "14:10", end: "18:00", room: "Pegaso", title: "W3C TPAC RDF 1.2 WG", kind: "other" },
-      { start: "09:00", end: "12:50", room: "Orione", title: "Semantic Affordances for the Web of Agents: Bridging Multi-Agent Systems, Semantic Web Services, and Agentic AI", kind: "dag", link: "https://sawa-workshop.github.io/" },
-      { start: "14:10", end: "18:00", room: "Orione", title: "Towards Agendas for Advancing Personal Agentic Artificial Intelligence (TAAPAAI)", kind: "dag", link: "https://taapaai.github.io" },
-      { start: "09:00", end: "18:00", room: "Auriga (Perseo)", title: "Doctoral Consortium", kind: "doctoral" },
+      { start: "09:00", end: "12:50", room: "Sala Auriga", title: "SPARK 2026 - First International Workshop on Spatial Intelligence and Reasoning Enabled by Knowledge Graphs and Foundation Models", kind: "workshop", link: "https://sparkworkshop.github.io/" },
+      { start: "14:10", end: "18:00", room: "Sala Auriga", title: "Workshop on Knowledge Graphs and Model-driven Systems Engineering (KGMDSE)", kind: "workshop", link: "https://www.omilab.org/activities/events/iswc2026_kgmdse/" },
+
+
+      { start: "09:00", end: "12:50", room: "Sala Andromeda", title: "Semantic Affordances for the Web of Agents: Bridging Multi-Agent Systems, Semantic Web Services, and Agentic AI", kind: "dag", link: "https://sawa-workshop.github.io/" },
+      { start: "14:10", end: "18:00", room: "Sala Andromeda", title: "Towards Agendas for Advancing Personal Agentic Artificial Intelligence (TAAPAAI)", kind: "dag", link: "https://taapaai.github.io" },
+
+      { start: "09:00", end: "18:00", room: "Sala Orione", title: "Doctoral Consortium", kind: "doctoral" },
+
+      { start: "09:00", end: "12:50", room: "Sala Pegaso", title: "Rethinking Data Quality for Generative AI and Knowledge Graphs (ReDQ)", kind: "dag", link: "https://redq-workshop.github.io/" },
+      { start: "14:10", end: "18:00", room: "Sala Pegaso", title: "W3C TPAC RDF 1.2 WG", kind: "other" },
+    
+
+      // to check
+
+
+
+
 
       // Listed under "Evening" (anything starting at 18:00 or later).
       { start: "18:30", end: "Late", title: "Welcome Reception", kind: "other" },
