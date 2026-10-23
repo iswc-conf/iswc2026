@@ -57,16 +57,35 @@ export const Sponsors = () => (
       </div>
     ))}
 
-    {patronage && (
-      <section className="iswc-patronage">
-        <p className="iswc-patronage__label">{patronage.label}</p>
+{patronage && (
+  <div className="iswc-sponsor-level iswc-patronage">
+    <h2
+      className="iswc-sponsor-level__title"
+      style={{ backgroundColor: patronage.color }}
+    >
+      {patronage.label}
+    </h2>
+
+    <div className="iswc-sponsor-grid">
+      {patronage.logos
+        .filter((p) => !p.banner)
+        .map((p) => (
+          <SponsorCard key={p.name} {...p} />
+        ))}
+    </div>
+
+    {patronage.logos
+      .filter((p) => p.banner)
+      .map((p) => (
         <img
-          src={patronage.logo}
-          alt={`${patronage.name} Logo`}
+          key={p.name}
+          src={p.logo}
+          alt={`${p.name} Logo`}
           className="iswc-patronage__banner"
         />
-      </section>
-    )}
+      ))}
+  </div>
+)}
   </BaseContainer>
 );
 

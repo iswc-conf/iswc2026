@@ -116,7 +116,7 @@ export const schedule = [
 
 
       { start: "09:00", end: "12:50", room: "Sala Orione", title: "Neural Networks meet Explicit Knowledge Representation: Towards Mechanistic Interpretability and Neuro-symbolic Modeling by-design", kind: "tutorial", link: "https://humancentricart.github.io/mechanistic-interpretability-by-design/iswc/index.html" },
-      { start: "14:10", end: "15:50", room: "Sala Orione", title: "Intro to OWL Reasoning with Protégé", kind: "tutorial" },
+      { start: "14:10", end: "15:50", room: "Sala Orione", title: "Intro to OWL Reasoning with Protégé", kind: "tutorial", link: "https://github.com/marksem/bari" },
       { start: "16:20", end: "18:00", room: "Sala Orione", title: "Doctoral Consortium Poster Session", kind: "doctoral" },
 
       { start: "10:00", end: "18:00", room: "Sala Pegaso", title: "Multi-dimensional Knowledge Graphs (MKG)", kind: "dag", link: "https://mkg.infinity-eccch.eu/" },
@@ -205,7 +205,7 @@ export const schedule = [
     sessions: [
       { start: "08:00", end: "", title: "Registration", kind:"break"},
       { start: "08:30", end: "09:15", rooms: PLENARY, title: "Opening Ceremony", kind: "ceremony"},
-      { start: "09:15", end: "10:15", rooms: PLENARY, title: "Keynote 1 - Frank van Harmelen", kind: "keynote", chairs: "TBD", link: "/#/program/keynotespeakers?speaker=frank-van-harmelen" },
+      { start: "09:15", end: "10:15", rooms: PLENARY, title: "Keynote 1 - Frank van Harmelen", kind: "keynote", chairs: "Maria-Esther Vidal", link: "/#/program/keynotespeakers?speaker=frank-van-harmelen" },
       { start: "10:15", end: "10:45", room: COFFEE, title: "Coffee Break", kind: "break" },
 
       {
@@ -299,7 +299,9 @@ export const schedule = [
 
       { start: "15:15", end: "15:45", room: COFFEE, title: "Coffee Break", kind: "break" },
       { start: "15:45", end: "", rooms: PLENARY, title: "Keynote 2 - James Hendler ", kind: "keynote", chairs: "TBD", link: "/#/program/keynotespeakers?speaker=james-hendler"},
-      { start: "16:35", end: "17:15", rooms: PLENARY, title: "No Script: a conversation with James Hendler, Frank van Harmelen and the audience", kind: "keynote", chairs: "TBD",
+      
+      
+      { start: "16:35", end: "17:15", rooms: PLENARY, title: "No Script: a conversation with James Hendler, Frank van Harmelen and the audience", kind: "keynote", chairs: "Valentina Tamma",
         description: "A conversation with Jim Hendler and Frank van Harmelen that starts with questions from early-career researchers and then opens to the whole audience. "}
         
       ,
@@ -324,7 +326,7 @@ export const schedule = [
     rooms: MAIN_ROOMS,
     sessions: [
        { start: "08:00", end: "", title: "Registration", kind:"break"},
-      { start: "09:00", end: "10:00", rooms: PLENARY, title: "Keynote 3 - Tara Raafat", kind: "keynote", chairs: "TBD", link: "/#/program/keynotespeakers?speaker=tara-raafat" },
+      { start: "09:00", end: "10:00", rooms: PLENARY, title: "Keynote 3 - Tara Raafat", kind: "keynote", chairs: "Juan Sequeda", link: "/#/program/keynotespeakers?speaker=tara-raafat" },
       { start: "10:00", end: "10:30", room: COFFEE, title: "Coffee Break", kind: "break" },
 
 
@@ -527,7 +529,7 @@ export const schedule = [
     rooms: MAIN_ROOMS,
     sessions: [
        { start: "08:00", end: "", title: "Registration", kind:"break"},
-      { start: "09:00", end: "10:00", rooms: PLENARY, title: "Keynote 4 - Francesca Toni", kind: "keynote", chairs: "TBD", link: "/#/program/keynotespeakers?speaker=francesca-toni" },
+      { start: "09:00", end: "10:00", rooms: PLENARY, title: "Keynote 4 - Francesca Toni", kind: "keynote", chairs: "Manolis Koubarakis", link: "/#/program/keynotespeakers?speaker=francesca-toni" },
       { start: "10:00", end: "10:30", room: COFFEE, title: "Coffee Break", kind: "break" },
 
 

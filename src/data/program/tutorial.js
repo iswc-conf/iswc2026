@@ -93,6 +93,7 @@ export const tutorials = [
     title: "Intro to OWL Reasoning with Protégé",
     new: false,
     organizers: "Mark Wallace",
+    website: "https://github.com/marksem/bari",
     type: ["Special Session"],
     description: "Abstract: This tutorial is the perfect mix of formal ontology meets practical application for use in modern information systems. This tutorial will introduce OWL reasoning while focusing on those constructs of OWL that Mark has personally found to be the most practical and useful in real-life information systems. Such practical reasoning is especially important in this resurgent AI era, where symbolic, semantic models can valuably augment LLMs with asserted and inferred facts to help avoid hallucinations while providing explainable reasoning. Goal: The goal of this tutorial is to teach key elements of OWL Reasoning, and how to execute reasoning in the Protégé Desktop tool. Expected Audience: Beginners to OWL Reasoning (or Beginners to using Protégé for OWL Reasoning). Background and Experience: Participants shouldn’t have to be too technical. Some familiarity with the idea of RDF may be helpful. However, being detail-oriented will be important! Also, they need competency and comfort with desktop tools so that they can follow directions and point and click and type in a bunch of stuff. Therefore, technologists are probably the main target (especially data modelers). However, technically minded businesspeople may also enjoy it. Computer science and Engineering students should fit right in!",
   },

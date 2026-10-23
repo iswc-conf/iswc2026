@@ -31,6 +31,7 @@ import VIDEO from "./sponsors/SILVER/VIDEOLECTURES.png"
 import AI from "./sponsors/OTHER/AIIA.png"
 import PUGLIA from "./sponsors/OTHER/PUGLIA.png"
 import CEUR from "./sponsors/OTHER/CEUR.png"
+import UNIBA from "./sponsors/OTHER/UNIBA.svg"
 
 /** Ordered list of tiers, each with its sponsors. Drives every sponsor view. */
 export const sponsorTiers = [
@@ -95,9 +96,12 @@ export const sponsorTiers = [
 
 /** Patronage banner, shown full-width at the bottom of the Sponsors page. */
 export const patronage = {
-  name: "Regione Puglia",
   label: "Under the patronage of",
-  logo: PUGLIA,
+  color: "#161613",
+  logos: [
+    { name: "", logo: UNIBA,  width: 600 }, // ← fill in
+    { name: "Regione Puglia", logo: PUGLIA, banner: true },
+  ],
 };
 
 /** Tier name -> sponsors, kept for any consumer that indexes by tier. */
