@@ -419,6 +419,7 @@ const SessionRow = ({ day, session }) => {
           )}
           <span>{timeRange(session)}</span>
         </div>
+        <SubSessions session={session} />
       </div>
     </li>
   );

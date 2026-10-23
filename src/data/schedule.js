@@ -190,7 +190,14 @@ export const schedule = [
 
 
       // Listed under "Evening" (anything starting at 18:00 or later).
-      { start: "18:30", end: "Late", title: "Welcome Reception", kind: "other" },
+      { start: "19:15", end: "Late", title: "Welcome Reception", kind: "other",
+  subsessions: [
+    { title: "Ex Convento di San Francesco della Scarpa",
+      link: "https://cultura.gov.it/luogo/ex-convento-di-san-francesco-della-scarpa" },
+    { title: "Complesso monumentale di Santa Chiara",
+      link: "https://sabapba.cultura.gov.it/complesso-monumentale-di-santa-chiara" },
+  ],
+},
     ],
   },
 
@@ -301,8 +308,14 @@ export const schedule = [
       { start: "15:45", end: "", rooms: PLENARY, title: "Keynote 2 - James Hendler ", kind: "keynote", chairs: "TBD", link: "/#/program/keynotespeakers?speaker=james-hendler"},
       
       
-      { start: "16:35", end: "17:15", rooms: PLENARY, title: "No Script: a conversation with James Hendler, Frank van Harmelen and the audience", kind: "keynote", chairs: "Valentina Tamma",
-        description: "A conversation with Jim Hendler and Frank van Harmelen that starts with questions from early-career researchers and then opens to the whole audience. "}
+      { start: "16:35", end: "17:15", rooms: PLENARY, title: "No Script: A conversation with Jim Hendler, Frank van Harmelen and the audience,", kind: "keynote", chairs: "Valentina Tamma",
+         description: "A conversation with Jim Hendler and Frank van Harmelen that starts with questions from early-career researchers and then opens to the whole audience. With the participation of early-career researchers:",
+  subsessions: [
+    { title: "Anastasia Dimou", description: "Associate Professor, KU Leuven, BE" },
+    { title: "Sebastian Ferrada", description: "Assistant Professor, Universidad de Chile, CL" },
+    { title: "Mark Grünsteidl", description: "PhD student, WU Vienna University of Economics and Business, AT" },
+    { title: "Lise Stork", description: "Assistant Professor, University of Amsterdam, NL" },
+  ],}
         
       ,
 
