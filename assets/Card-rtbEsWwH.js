@@ -1,1 +1,0 @@
-import{j as r}from"./index-O_20Qq6t.js";function i({children:s,className:a=""}){return r.jsx("div",{className:`card ${a}`.trim(),children:r.jsx("div",{className:"card-body",children:s})})}export{i as C};
