@@ -7,6 +7,7 @@ import ExternalLink from "../general/ExternalLink";
 // TODO: point these at your logos folder and actual file names.
 import graphwiseLogo from "../../data/sponsors/SILVER/GRAPHWISE.png";
 import sapLogo from "../../data/sponsors/PLATINUM/SAP.png";
+import datatree from "../../data/sponsors/GOLD/DATATREEHOUSE.svg";
 
 /**
  * Job openings posted by ISWC 2026 sponsors (a benefit of the sponsorship
@@ -45,9 +46,23 @@ const jobPosts = [
       href: "https://jobs.sap.com/search/?q=%22knowledge+Graphs%22+Ontology+Ontologies", // TODO: confirm
     },
   },
+
+  {
+    id: "datatree",
+    company: "Data Treehouse",
+    logo: datatree,
+    description: [
+      "We are looking for a senior hands-on developer to work directly with our clients, building knowledge graph solutions using maplib and the semantic technology stack. You will take ownership of client projects, understand their data and domain, and deliver working solutions.",
+    ],
+    link: {
+      label: "See full job posting details!",
+      href: "", 
+    },
+  },
+  
 ];
 
-const JobCard = ({ post }) => (
+const JobCard = ({ post, children }) => (
   <article className="iswc-place-card" id={`job-${post.id}`}>
     {/* Logo is optional: a posting without one simply starts with the name. */}
     {post.logo && (
@@ -61,7 +76,7 @@ const JobCard = ({ post }) => (
 
       {post.description.map((paragraph) => (
         <p className="iswc-place-card__text" key={paragraph.slice(0, 40)}>
-          {paragraph}
+          {children}
         </p>
       ))}
 
@@ -95,7 +110,7 @@ export const JobFair = () => {
 
       <div className="iswc-place-grid">
         {jobPosts.map((post) => (
-          <JobCard post={post} key={post.id} />
+          <JobCard post={post} key={post.id}> {post.description}</JobCard>
         ))}
       </div>
 
