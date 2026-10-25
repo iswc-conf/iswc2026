@@ -74,7 +74,7 @@ export const schedule = [
     rooms: PRE_CONFERENCE_ROOMS,
     sessions: [
 
-      { start: "10:40", end: "11:10", room:"Cassiopea", title: "Break", kind: "break" },
+      { start: "10:40", end: "11:10", room: LUNCH, title: "Break", kind: "break" },
       { start: "12:50", end: "14:10", room: LUNCH, title: "Lunch", kind: "break",
                subsessions: [
     { title: "Semantic Web Women and Allies Network Lunch", room: "VERANDA - Piano 0" },
@@ -82,7 +82,7 @@ export const schedule = [
 
 
        },
-        { start: "15:50", end: "16:20", room:"Cassiopea", title: "Break", kind: "break" },
+        { start: "15:50", end: "16:20", room:LUNCH, title: "Break", kind: "break" },
 
 
       { start: "08:00", end: "", allRooms: true, title: "Registration", kind: "break" },
@@ -142,10 +142,10 @@ export const schedule = [
     sessions: [
 
       { start: "08:00", end: "", allRooms: true, title: "Registration", kind: "break" },
-      { start: "10:40", end: "11:10", room:"Cassiopea", title: "Break", kind: "break" },
+      { start: "10:40", end: "11:10", room:LUNCH, title: "Break", kind: "break" },
       { start: "12:50", end: "14:10", room: LUNCH, title: "Lunch", kind: "break" },
   
-            { start: "15:40", end: "16:20", room:"Cassiopea", title: "Coffee with Sponsors", kind: "break",
+            { start: "15:40", end: "16:20", room:LUNCH, title: "Coffee with Sponsors", kind: "break",
 
          subsessions: [
     { title: "Sponsor representatives will introduce themselves to all the students (15:40 - 15:50) to bootstrap some networking - informal chats with them can continue during the coffee break." }]

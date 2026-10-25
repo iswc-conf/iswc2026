@@ -9,6 +9,10 @@ import graphwiseLogo from "../../data/sponsors/SILVER/GRAPHWISE.png";
 import sapLogo from "../../data/sponsors/PLATINUM/SAP.png";
 import datatree from "../../data/sponsors/GOLD/DATATREEHOUSE.svg";
 
+
+import datapost from "../../data/jobpostdata/datajob.pdf"
+import tentrispost from "../../data/jobpostdata/tentrisjob.pdf"
+
 /**
  * Job openings posted by ISWC 2026 sponsors (a benefit of the sponsorship
  * packages). To add a new posting, append an entry to `jobPosts` — the page
@@ -56,7 +60,7 @@ const jobPosts = [
     ],
     link: {
       label: "See full job posting details!",
-      href: "", 
+      href: datapost, 
     },
   },
   
