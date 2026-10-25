@@ -8,6 +8,7 @@ import ExternalLink from "../general/ExternalLink";
 import graphwiseLogo from "../../data/sponsors/SILVER/GRAPHWISE.png";
 import sapLogo from "../../data/sponsors/PLATINUM/SAP.png";
 import datatree from "../../data/sponsors/GOLD/DATATREEHOUSE.svg";
+import tentris from "../../data/sponsors/PLATINUM/TENTRIS.png";  
 
 
 import datapost from "../../data/jobpostdata/datajob.pdf"
@@ -53,7 +54,7 @@ const jobPosts = [
 
   {
     id: "datatree",
-    company: "Data Treehouse",
+    company: "Data TreeHouse",
     logo: datatree,
     description: [
       "We are looking for a senior hands-on developer to work directly with our clients, building knowledge graph solutions using maplib and the semantic technology stack. You will take ownership of client projects, understand their data and domain, and deliver working solutions.",
@@ -61,6 +62,20 @@ const jobPosts = [
     link: {
       label: "See full job posting details!",
       href: datapost, 
+    },
+  },
+
+
+  {
+    id: "tentris",
+    company: "Tentris",
+    logo: tentris,
+    description: [
+      "We are looking for a Senior / Principal Database Internals Engineer (f/m/d) Storage & Transaction Engine",
+    ],
+    link: {
+      label: "See full job posting details!",
+      href: tentrispost, 
     },
   },
   
