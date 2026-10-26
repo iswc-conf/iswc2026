@@ -16,6 +16,7 @@ import TENTRIS from "./sponsors/PLATINUM/TENTRIS.png";
 import GOOGLE from "./sponsors/GOLD/GOOGLE.png";
 import DATATREEHOUSE from "./sponsors/GOLD/DATATREEHOUSE.svg";
 import ACCENTURE from "./sponsors/GOLD/accenture.png";
+import JWS from "./sponsors/GOLD/JWS.jpg";
 import EBAY from "./sponsors/SILVER/EBAY.png";
 import RELAI from "./sponsors/SILVER/RELAI.png";
 import SERVICE from "./sponsors/SILVER/SERVICE.png";
@@ -57,6 +58,7 @@ export const sponsorTiers = [
       { name: "Data Treehouse", logo: DATATREEHOUSE, link: "https://www.data-treehouse.com", width: 600 },
       { name: "Accenture", logo: ACCENTURE, link: "https://www.accenture.com", width: 600 },
       { name: "JPMC", logo: JP, link: "https://www.jpmorganchase.com", width: 600 , dark: true},
+      { name: "Journal of Web Semantics", logo: JWS, link: "https://www.sciencedirect.com/journal/journal-of-web-semantics", width: 600 },
     ],
   },
   {

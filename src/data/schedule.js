@@ -264,7 +264,7 @@ export const schedule = [
 
 
          subsessions: [
-    { title: "Mentoring Lunch", room: "GLASHAUS" },
+    { title: "Mentoring Lunch", room: "Glasshous" },
         { title: "Journal of Web Semantics Lunch", room: "ORIONE - 2 Floor" },
             { title: "SW Journal Lunch", room: "PERSEO - 2 Floor" },
    
@@ -301,7 +301,7 @@ export const schedule = [
       { start: "13:45", end: "15:15", room: "Sezione 5", title: "Journal Papers from SWJ", kind: "parallel", chairs: "TBD" },
 
       { start: "15:15", end: "15:45", room: COFFEE, title: "Coffee Break", kind: "break" },
-      { start: "15:45", end: "", rooms: PLENARY, title: "Keynote 2 - James Hendler ", kind: "keynote", chairs: "TBD", link: "/#/program/keynotespeakers?speaker=james-hendler"},
+      { start: "15:45", end: "", rooms: PLENARY, title: "Keynote 2 - James Hendler ", kind: "keynote", chairs: "Valentina Tamma", link: "/#/program/keynotespeakers?speaker=james-hendler"},
       
       
       { start: "16:35", end: "17:15", rooms: PLENARY, title: "No Script: A conversation with Jim Hendler, Frank van Harmelen and the audience,", kind: "keynote", chairs: "Valentina Tamma",
@@ -402,7 +402,7 @@ export const schedule = [
 
          subsessions: [
     { title: "TGDK (Journal) Meetup", room: "ORIONE+PERSEO" },
-        { title: "Industry Lunch + Sponsor", room: "GLASHAUS" },
+        { title: "Industry Lunch + Sponsor", room: "Glasshous" },
            
    
   ], },
