@@ -145,11 +145,7 @@ export const schedule = [
       { start: "10:40", end: "11:10", room:LUNCH, title: "Break", kind: "break" },
       { start: "12:50", end: "14:10", room: LUNCH, title: "Lunch", kind: "break" },
   
-            { start: "15:40", end: "16:20", room:LUNCH, title: "Coffee with Sponsors", kind: "break",
-
-         subsessions: [
-    { title: "Sponsor representatives will introduce themselves to all the students (15:40 - 15:50) to bootstrap some networking - informal chats with them can continue during the coffee break." }]
-       },
+            { start: "15:40", end: "16:20", room:LUNCH, title: "Coffee with Sponsors", kind: "break"},
 
       { start: "09:00", end: "18:00", room: "Sezione  1", title: "3rd International Workshop on Retrieval-Augmented Generation Enabled by Knowledge Graphs (RAGE-KG 2026)", kind: "workshop", link: "https://2026.rage-kg.org/" },
       { start: "09:00", end: "18:00", room: "Sezione  2", title: "6th International Workshop on Scientific Knowledge Representation, Discovery, and Assessment (Sci-K 2026)", kind: "workshop", link: "https://sci-k.github.io/2026/" },

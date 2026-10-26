@@ -220,7 +220,8 @@ Familiarize yourself with your colleagues.
       <Third>Afternoon Break</Third>
 
       <ul>
-        <li><b>15:40 – 16:20:</b> Coffee Break</li>
+        <li><b>15:40 – 16:20:</b> Coffee Break with Sponsors</li>
+    <li> Sponsor representatives will introduce themselves to all the students (15:40 - 15:50) to bootstrap some networking - informal chats with them can continue during the coffee break.</li>
       </ul>
 
 
