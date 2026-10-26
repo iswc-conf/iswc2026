@@ -458,8 +458,8 @@ export const schedule = [
           { id: 520, title: "Grounding AI Agents in Plant Knowledge Graphs: A Neuro-Symbolic Approach towards Autonomous Industrial Operations", authors: "Naveen Kumar and Swathi Shyam Sunder", track: "Industry" },
           { id: 525, title: "A Semantic-Layer-Grounded AI Agent for Building Maintenance and Operations", authors: "Xinyi She, Shintaro Suzuki and Hideo Aoki", track: "Industry" },
           { id: 536, title: "Evaluating Entity Resolution Without Ground Truth: A Calibrated LLM-Judge Framework", authors: "Simmi Mourya, Karteek Chada and Deepika Khera", track: "Industry" },
-          { id: 536, title: "Unlocking AI-Powered BI with Continuous Semantic Context", authors: "Benjamin Hiplrecht", track: "Industry" },
-          { id: 536, title: "Panel Discussion", authors: "Panelist TBA", track: "Industry" },
+          { id: 536, title: "Unlocking AI-Powered BI with Continuous Semantic Context (Sponsored Talk)", authors: "Benjamin Hiplrecht", track: "Industry" },
+          { id: 536, title: "Panel Discussion", authors: "Panelist: Veronika Heimsbakk (Data Treehouse), Lars Heling (SAP), Yavor Nenov (Oxford Semantic Technologies), Natasha Noy (Google).", track: "Industry" },
 
         ],
       },
