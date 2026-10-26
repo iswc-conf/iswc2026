@@ -58,7 +58,7 @@ const MAIN_ROOMS = ["Sezione 1", "Sezione 2", "Sezione 3&4", "Sezione 5"];
 // Where the plenary activities of the main conference take place (keynotes,
 // ceremonies, breaks, ...). Change the names here, or give a single session
 // its own list, e.g. `rooms: ["Auditorium", "Sezione 2 (streamed)"]`.
-const PLENARY = ["Plenary"];
+const PLENARY = ["Sezione 1"];
 const COFFEE = "Foyer (Floor -1)"
 const LUNCH = "Cassiopea (Floor 1)"
 
