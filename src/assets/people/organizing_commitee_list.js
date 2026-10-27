@@ -1,4 +1,3 @@
-
 import Ivan from "./pictures/Ivan.png";
 import Fatima from "./pictures/Fatima.png";
 import Roberto from "./pictures/Roberto.jpeg";
@@ -28,6 +27,20 @@ import Alharbi from "./pictures/Alharbi.jpg"
 import MariaPellegrino from "./pictures/MariaPellegrino.png"
 import GeorgeHannah from "./pictures/GeorgeHannah.jpg"
 import Demartini from "./pictures/demartini.jpg"
+
+// Student volunteers
+import Student_Alessandra_Piccolo from "./pictures/students/alessandra_piccolo.JPG";
+import Student_Alessio_Ronzullo from "./pictures/students/Alessio_Ronzullo.jpeg";
+import Student_Ali_Elbahraoui from "./pictures/students/Ali_Elbahraoui.JPG";
+import Student_Antonio_Campanozzi from "./pictures/students/Antonio_Campanozzi.jpg";
+import Student_Arianna_Mariani from "./pictures/students/Arianna_Mariani.jpg";
+import Student_Aurora_Quarto from "./pictures/students/Aurora_Quarto.jpeg";
+import Student_Emilia_Payne from "./pictures/students/Emilia_Payne.jpg";
+import Student_Nicolas_Laera from "./pictures/students/Nicolas_Laera.jpg";
+import Student_Pavan_Sai_Bhyri from "./pictures/students/Pavan_Sai_Bhyri.jpg";
+import Student_Roberto_Massante from "./pictures/students/Roberto_Massante.jpeg";
+import Student_Sara_Pignatelli from "./pictures/students/Sara_Pignatelli.jpeg";
+import Student_Thwin_Htoo_Aung from "./pictures/students/Thwin_Htoo_Aung.jpg";
 
 const organizers = {
   "General Chair": [
@@ -298,14 +311,80 @@ const organizers = {
       country: 'UK',
     },
   ],
-   /* "Journal Track": [
+  "Student Volunteers": [
     {
-      name: 'TBD',
-      img: '',
-      institution: 'TBD',
-      country: 'TBD',
+      name: 'Alessandra Piccolo',
+      img: Student_Alessandra_Piccolo,
+      institution: 'University of Bari',
+      country: 'Italy',
     },
-  ],*/
+    {
+      name: 'Alessio Ronzullo',
+      img: Student_Alessio_Ronzullo,
+      institution: 'University of Bari',
+      country: 'Italy',
+    },
+    {
+      name: 'Ali Elbahraoui',
+      img: Student_Ali_Elbahraoui,
+      institution: 'University of Bari',
+      country: 'Italy',
+    },
+    {
+      name: 'Antonio Campanozzi',
+      img: Student_Antonio_Campanozzi,
+      institution: 'University of Bari',
+      country: 'Italy',
+    },
+    {
+      name: 'Arianna Mariani',
+      img: Student_Arianna_Mariani,
+      institution: 'University of Bari',
+      country: 'Italy',
+    },
+    {
+      name: 'Aurora Quarto',
+      img: Student_Aurora_Quarto,
+      institution: 'University of Bari',
+      country: 'Italy',
+    },
+    {
+      name: 'Emilia Payne',
+      img: Student_Emilia_Payne,
+      institution: 'University of Bari',
+      country: 'Italy',
+    },
+    {
+      name: 'Nicolas Laera',
+      img: Student_Nicolas_Laera,
+      institution: 'University of Bari',
+      country: 'Italy',
+    },
+    {
+      name: 'Pavan Sai Bhyri',
+      img: Student_Pavan_Sai_Bhyri,
+      institution: 'University of Bari',
+      country: 'Italy',
+    },
+    {
+      name: 'Roberto Massante',
+      img: Student_Roberto_Massante,
+      institution: 'University of Bari',
+      country: 'Italy',
+    },
+    {
+      name: 'Sara Pignatelli',
+      img: Student_Sara_Pignatelli,
+      institution: 'University of Bari',
+      country: 'Italy',
+    },
+    {
+      name: 'Thwin Htoo Aung',
+      img: Student_Thwin_Htoo_Aung,
+      institution: 'University of Bari',
+      country: 'Italy',
+    },
+  ],
 };
 
 export default organizers;
