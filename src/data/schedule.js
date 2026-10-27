@@ -318,7 +318,7 @@ export const schedule = [
       
       { start: "17:15", end: "18:45", rooms: PLENARY, title: "Minute Madness", kind: "parallel", chairs: "TBD" },
       //{ start: "18:25", end: "19:00",  title: "Poster Setting Up" },
-      { start: "19:15", end: "21:00", rooms: PLENARY, title: "Poster and Demos", kind: "parallel" },
+      { start: "19:15", end: "21:00", rooms: "Sala Cassiopea (Floor 1) ", title: "Poster and Demos", kind: "parallel" },
       { start: "21:00", end: "23:59", room: LUNCH, title: "Singing with Piano all Together!", kind: "break" },
 
     
