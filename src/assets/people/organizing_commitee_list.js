@@ -134,7 +134,7 @@ const organizers = {
     {
       name: 'Daria Stepanova',
       img: Stepanova,
-      institution: 'Bosch Center for Artificial Intelligence',
+      institution: 'Bosch Research',
       country: 'Germany',
     },
   ],
