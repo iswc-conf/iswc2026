@@ -29,9 +29,9 @@ import GeorgeHannah from "./pictures/GeorgeHannah.jpg"
 import Demartini from "./pictures/demartini.jpg"
 
 // Student volunteers
-import Student_Alessandra_Piccolo from "./pictures/students/alessandra_piccolo.JPG";
+import Student_Alessandra_Piccolo from "./pictures/students/alessandra_piccolo.jpg";
 import Student_Alessio_Ronzullo from "./pictures/students/Alessio_Ronzullo.jpeg";
-import Student_Ali_Elbahraoui from "./pictures/students/Ali_Elbahraoui.JPG";
+import Student_Ali_Elbahraoui from "./pictures/students/Ali_Elbahraoui.jpg";
 import Student_Antonio_Campanozzi from "./pictures/students/Antonio_Campanozzi.jpg";
 import Student_Arianna_Mariani from "./pictures/students/Arianna_Mariani.jpg";
 import Student_Aurora_Quarto from "./pictures/students/Aurora_Quarto.jpeg";

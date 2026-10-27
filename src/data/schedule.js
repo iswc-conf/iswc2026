@@ -320,7 +320,7 @@ export const schedule = [
       //{ start: "18:25", end: "19:00",  title: "Poster Setting Up" },
       { start: "19:15", end: "21:00", room: "Sala Cassiopea (Floor 1)", title: "Poster and Demos", kind: "parallel" },
       { start: "21:00", end: "23:59", room: LUNCH, title: "Singing with Piano all Together!", kind: "break" },
-
+  
     
     ],
   },
