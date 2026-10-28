@@ -1,0 +1,1 @@
+import{j as o}from"./index-BPOREbMQ.js";import{D as i}from"./DataTable-CGoHESo2.js";const b=({title:e,description:a,data:s,header_title:r,unit:t})=>o.jsx(i,{data:s,titleLabel:e,secondaryLabel:a,secondaryField:"organizers",detailLabel:r,showLinks:!0,unit:t});export{b as D};
