@@ -422,10 +422,12 @@ const Session = ({ day, session }) => {
         </div>
       )}
 
-      {session.description && (
-        <p className="iswc-schedule-list__description">{session.description}</p>
-      )}
-
+{session.description && (
+  <div
+    className="iswc-schedule-list__description"
+    dangerouslySetInnerHTML={{ __html: session.description }}
+  />
+)}
       <SubSessions session={session} />
 
       {session.papers?.length > 0 && (

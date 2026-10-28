@@ -29,6 +29,9 @@ import floor1 from "./plans/floor1.jpg";
 import floor2 from "./plans/floor2.jpg";
 import floor0 from "./plans/floor0.jpg";
 
+import galadinner from "./directions/0.jpg"
+import underpass from "./directions/1.jpg"
+
 export const FLOOR_PLANS = [
   { id: "floor-minus-1", label: "Floor -1", file: floorMinus1 },
     { id: "floor-0", label: "Floor 0", file: floor0 },
@@ -522,7 +525,7 @@ export const schedule = [
           { id: 234, title: "Semantified CEUR-WS in Wikidata", authors: "Wolfgang Fahl, Tim Holzheim, Christoph Lange, Jerven Bolleman and Stefan Decker", track: "In-Use" },
         ],
       },
-      { start: "19:15 ", end: " Late",  title: "Gala Dinner & Disco (Villa de Grecis)", link: "https://www.villadegrecis.com" },
+      { start: "19:15 ", end: " Late",  title: "Gala Dinner & Disco (Villa de Grecis)", link: "https://www.villadegrecis.com",description: `<br><h5>How to get to the Gala Dinner</h5><ol><li><b>Leave the hotel (Via Cardinale Agostino Ciasca 27)</b> and walk to Via Matarrese, which is about 200 m south-west.</li><li><b>Join Via Orfeo Mazzitelli</b> at its junction with Via Matarrese, and walk north along it. This is the long straight stretch of roughly 1.1 km, with the bistros and restaurants on your side of the road.</li><li><b>Reach the roundabout</b> where Via Mazzitelli meets Viale Cotugno and Via Bellomo.</li><li><b>Take the left (west) exit</b> and follow the road a short way.</li><li><b>Turn north onto the paved path</b> that leads to the underpass. It slopes down to the tunnel, with the paved footpath on the left and the cycle lane on the right, as in your photos.</li><li><b>Walk through the underpass</b>, passing under the railway. This is the part that avoids going round the bridge to Viale Pasteur.</li><li><b>Come out on the north side</b> and follow the road on the left towards Via delle Murge.</li><li><b>Reach Villa de Grecis (Via delle Murge 63)</b>, about 250 m after the underpass. </li></ol><br><h5>Approximate Route </h5><br><img src="${galadinner}" style="max-width:100%;height:auto"><br><br><h5>Underpass entrance </h5><br><img src="${underpass}" style="max-width:100%;height:auto">` },
 
 
     ],
@@ -639,8 +642,8 @@ export const schedule = [
       { start: "13:30", end: "14:40", room: "Sezione 5", title: "Round table about the vision of the 25 years of Semantic Web", kind: "parallel", chairs: "TBD" },
 
       { start: "14:40", end: "15:10", room: COFFEE, title: "Coffee Break", kind: "break" },
-      { start: "15:10", end: "16:10", rooms: PLENARY, title: "Town Hall", kind: "poster", chairs: "TBD" },
-      { start: "16:10", end: "16:55", rooms: PLENARY, title: "Closing Ceremony", kind: "ceremony", chairs: "TBD" },
+      { start: "15:10", end: "16:10", rooms: PLENARY, title: "Town Hall", kind: "poster", chairs: "Valentina Tamma and Claudia d'Amato" },
+      { start: "16:10", end: "16:55", rooms: PLENARY, title: "Closing Ceremony", kind: "ceremony" },
     ],
   },
 ];
