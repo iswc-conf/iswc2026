@@ -16,8 +16,6 @@ const FloorPlans = () => (
   </section>
 );
 
-
-
 // The room(s) shown under a session: `room` for one, `rooms: [...]` for
 // several (each with its own name). None for `allRooms` sessions.
 const roomLabel = (session) =>
@@ -96,23 +94,56 @@ const ViewSelector = () => (
   </nav>
 );
 
-const DaySelector = () => (
-  <nav className="iswc-schedule__days" aria-label="Jump to a day">
-    {schedule.map((day) => (
-      <button
-        type="button"
-        key={day.id}
-        className="iswc-schedule__day"
-        onClick={() => scrollToId(`schedule-${day.id}`)}
-      >
-        <span className="iswc-schedule__day-label">{day.label}</span>
-        {day.subtitle && (
-          <span className="iswc-schedule__day-sub">{day.subtitle}</span>
-        )}
-      </button>
-    ))}
-  </nav>
-);
+// Sticky bar of day filters. `selected` is a day id, or null for all days.
+// Its height is published as --iswc-daybar-height so jump targets can clear
+// it as well as the navbar (see the scroll-margin rules in the stylesheet).
+const DaySelector = ({ selected, onSelect }) => {
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return undefined;
+    const root = document.documentElement;
+    const update = () =>
+      root.style.setProperty("--iswc-daybar-height", `${el.offsetHeight}px`);
+    update();
+    const observer = new ResizeObserver(update);
+    observer.observe(el);
+    return () => {
+      observer.disconnect();
+      root.style.removeProperty("--iswc-daybar-height");
+    };
+  }, []);
+
+  return (
+    <div ref={ref} className="iswc-schedule__daybar">
+      <nav className="iswc-schedule__days" aria-label="Show one day">
+        <button
+          type="button"
+          className="iswc-schedule__day"
+          aria-pressed={selected === null}
+          onClick={() => onSelect(null)}
+        >
+          <span className="iswc-schedule__day-label">All days</span>
+        </button>
+        {schedule.map((day) => (
+          <button
+            type="button"
+            key={day.id}
+            className="iswc-schedule__day"
+            aria-pressed={selected === day.id}
+            onClick={() => onSelect(day.id)}
+          >
+            <span className="iswc-schedule__day-label">{day.label}</span>
+            {day.subtitle && (
+              <span className="iswc-schedule__day-sub">{day.subtitle}</span>
+            )}
+          </button>
+        ))}
+      </nav>
+    </div>
+  );
+};
 
 const SessionTitle = ({ session }) =>
   session.link ? (
@@ -303,8 +334,8 @@ const TRACK_CLASS = {
   Research: "research",
   Resource: "resource",
   "In-Use": "in-use",
-  "Visionary Ideas" : "vis",
-  "Industry" : "ind"
+  "Visionary Ideas": "vis",
+  Industry: "ind",
 };
 
 const StarIcon = () => (
@@ -360,7 +391,7 @@ const Session = ({ day, session }) => {
         </div>
       )}
 
-       {session.description && (
+      {session.description && (
         <p className="iswc-schedule-list__description">{session.description}</p>
       )}
 
@@ -451,30 +482,31 @@ const DayByPart = ({ day }) => {
               <b>Registration:</b> {registration.start.trim()}
             </p>
           )}
-{breaks.length > 0 && (
-  <p>
-    <b>Breaks:</b>{" "}
-    {breaks
-      .map((b) => {
-        const room = roomLabel(b);
-        return `${b.title} ${timeRange(b)}${room ? ` (${room})` : ""}`;
-      })
-      .join(" · ")}
-  </p>
-)}
-      {breaksWithSubs.map((b) => {
-  const room = roomLabel(b);
-  return (
-    <div
-      key={sessionAnchor(day, b)}
-      id={sessionAnchor(day, b)}
-      className="iswc-schedule-anchor"
-    >
-      <b>{b.title}</b> ({timeRange(b)}{room ? ` · ${room}` : ""})
-      <SubSessions session={b} />
-    </div>
-  );
-})}
+          {breaks.length > 0 && (
+            <p>
+              <b>Breaks:</b>{" "}
+              {breaks
+                .map((b) => {
+                  const room = roomLabel(b);
+                  return `${b.title} ${timeRange(b)}${room ? ` (${room})` : ""}`;
+                })
+                .join(" · ")}
+            </p>
+          )}
+          {breaksWithSubs.map((b) => {
+            const room = roomLabel(b);
+            return (
+              <div
+                key={sessionAnchor(day, b)}
+                id={sessionAnchor(day, b)}
+                className="iswc-schedule-anchor"
+              >
+                <b>{b.title}</b> ({timeRange(b)}
+                {room ? ` · ${room}` : ""})
+                <SubSessions session={b} />
+              </div>
+            );
+          })}
         </div>
       )}
 
@@ -544,46 +576,63 @@ const SubSessions = ({ session, compact = false }) => {
   );
 };
 
-export const Schedule = () => (
-  <Page>
-    <Header>Schedule</Header>
+export const Schedule = () => {
+  // null = every day; otherwise the id of the one day being shown.
+ 
 
-    {schedule.length === 0 ? (
-      <p className="iswc-note">The schedule will be published here soon.</p>
-    ) : (
-      <>
-        <ViewSelector /> 
+  const today = new Date().toLocaleDateString("en-CA"); // "YYYY-MM-DD", local time
+const todayDay = schedule.find((day) => day.id === today);
 
-        <p className="iswc-callout">
-          <b>Programme correct at time of publication.</b> Minor changes may
-          occur; see this page for updates.
-        </p>
+const [selectedDay, setSelectedDay] = useState(todayDay?.id ?? null);
 
-         <DaySelector />
+  const days = selectedDay
+    ? schedule.filter((day) => day.id === selectedDay)
+    : schedule;
 
-        <FloorPlans />
+  // Clicking the active day again goes back to all days. After the switch,
+  // bring the start of the (now filtered) programme into view. Clicks are
+  // rendered synchronously by React, so by the next frame the new day is in
+  // the DOM.
+  const selectDay = (id) => {
+    setSelectedDay((current) => (current === id ? null : id));
+    requestAnimationFrame(() => scrollToId("schedule-table-view"));
+  };
 
+  return (
+    <Page>
+      <Header>Schedule</Header>
 
-         
+      {schedule.length === 0 ? (
+        <p className="iswc-note">The schedule will be published here soon.</p>
+      ) : (
+        <>
+          <ViewSelector />
 
-        <section id="schedule-table-view" className="iswc-track">
-          <UnderlineHeader>Table View</UnderlineHeader>
-          {schedule.map((day) => (
-            <DayOverview key={day.id} day={day} />
-          ))}
-        </section>
-        
+          <p className="iswc-callout">
+            <b>Programme correct at time of publication.</b> Minor changes may
+            occur; see this page for updates.
+          </p>
 
-        <section id="schedule-expanded-view" className="iswc-track">
-             {/*<UnderlineHeader>Expanded View</UnderlineHeader>  */}
-         
-          {schedule.map((day) => (
-            <Day key={day.id} day={day} />
-          ))}
-        </section>
-      </>
-    )}
-  </Page>
-);
+          <DaySelector selected={selectedDay} onSelect={selectDay} />
+
+          <FloorPlans />
+
+          <section id="schedule-table-view" className="iswc-track">
+            <UnderlineHeader>Table View</UnderlineHeader>
+            {days.map((day) => (
+              <DayOverview key={day.id} day={day} />
+            ))}
+          </section>
+
+          <section id="schedule-expanded-view" className="iswc-track">
+            {days.map((day) => (
+              <Day key={day.id} day={day} />
+            ))}
+          </section>
+        </>
+      )}
+    </Page>
+  );
+};
 
 export default Schedule;

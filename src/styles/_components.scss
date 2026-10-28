@@ -3019,3 +3019,61 @@ $iswc-grid-row-height: 7rem;
   margin: 0 auto;
 }
 
+// -----------------------------------------------------------------------------
+// Schedule — sticky day filter bar (DaySelector in Schedule.jsx)
+// Append to the END of the components stylesheet, so the scroll-margin
+// overrides below win over the earlier .iswc-track / .iswc-schedule-anchor rules.
+// -----------------------------------------------------------------------------
+.iswc-schedule__daybar {
+  position: sticky;
+  top: var(--iswc-navbar-height);
+  z-index: 5; // above the overview fades (z-index 2) and table cells
+  // Bleed into the page gutter so content doesn't peek out at the sides.
+  margin: 0 -1.25rem 1.5rem;
+  padding: 0.6rem 1.25rem;
+  background: $iswc-surface;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 12px -10px rgba(0, 0, 0, 0.25);
+  text-align: left;
+
+  .iswc-schedule__days {
+    margin-bottom: 0;
+  }
+
+  // The selected day stays highlighted (aria-pressed styling already exists
+  // on .iswc-schedule__day); give keyboard users a visible focus ring too.
+  .iswc-schedule__day:focus-visible {
+    outline: 2px solid $iswc-primary;
+    outline-offset: 2px;
+  }
+}
+
+// On phones, one swipeable row instead of several wrapped rows, so the
+// sticky bar doesn't eat half the screen.
+@media (max-width: 767.98px) {
+  .iswc-schedule__daybar .iswc-schedule__days {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .iswc-schedule__daybar .iswc-schedule__day {
+    flex: 0 0 auto;
+    padding: 0.4rem 0.85rem;
+  }
+}
+
+// Jump targets clear the navbar AND the sticky day bar. The variable is set
+// by DaySelector only while the schedule page is mounted, so other pages
+// fall back to 0px and are unaffected.
+.iswc-track,
+.iswc-schedule-anchor {
+  scroll-margin-top: calc(
+    var(--iswc-navbar-height) + var(--iswc-daybar-height, 0px) + 1.5rem
+  );
+}
