@@ -3026,7 +3026,8 @@ $iswc-grid-row-height: 7rem;
 // -----------------------------------------------------------------------------
 .iswc-schedule__daybar {
   position: sticky;
-  top: var(--iswc-navbar-height);
+  // Measured header bottom (set by DaySelector), navbar token as a fallback.
+  top: var(--iswc-daybar-top, var(--iswc-navbar-height));
   z-index: 5; // above the overview fades (z-index 2) and table cells
   // Bleed into the page gutter so content doesn't peek out at the sides.
   margin: 0 -1.25rem 1.5rem;
@@ -3074,6 +3075,7 @@ $iswc-grid-row-height: 7rem;
 .iswc-track,
 .iswc-schedule-anchor {
   scroll-margin-top: calc(
-    var(--iswc-navbar-height) + var(--iswc-daybar-height, 0px) + 1.5rem
+    var(--iswc-daybar-top, var(--iswc-navbar-height)) +
+      var(--iswc-daybar-height, 0px) + 1.5rem
   );
 }

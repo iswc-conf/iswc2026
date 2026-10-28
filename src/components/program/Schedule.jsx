@@ -94,9 +94,25 @@ const ViewSelector = () => (
   </nav>
 );
 
+// The element that actually sticks at the top of the page: the navbar itself,
+// or a wrapper around it (e.g. one that also holds the announcement banner).
+const findStickyHeader = () => {
+  const navbar = document.querySelector(".iswc-navbar");
+  for (let el = navbar; el && el !== document.body; el = el.parentElement) {
+    const { position } = getComputedStyle(el);
+    if (position === "sticky" || position === "fixed") return el;
+  }
+  return navbar;
+};
+
 // Sticky bar of day filters. `selected` is a day id, or null for all days.
-// Its height is published as --iswc-daybar-height so jump targets can clear
-// it as well as the navbar (see the scroll-margin rules in the stylesheet).
+//
+// Two measured values are published on <html>:
+//   --iswc-daybar-top     where the stuck header really ends. Measured rather
+//                         than taken from --iswc-navbar-height, which is only
+//                         the navbar's *minimum* height (the real one grows
+//                         with the logo, padding or the banner).
+//   --iswc-daybar-height  so jump targets clear this bar as well.
 const DaySelector = ({ selected, onSelect }) => {
   const ref = useRef(null);
 
@@ -104,14 +120,29 @@ const DaySelector = ({ selected, onSelect }) => {
     const el = ref.current;
     if (!el) return undefined;
     const root = document.documentElement;
-    const update = () =>
+    const header = findStickyHeader();
+
+    const update = () => {
       root.style.setProperty("--iswc-daybar-height", `${el.offsetHeight}px`);
+      if (header) {
+        const stickyTop = parseFloat(getComputedStyle(header).top) || 0;
+        root.style.setProperty(
+          "--iswc-daybar-top",
+          `${stickyTop + header.offsetHeight}px`
+        );
+      }
+    };
+
     update();
     const observer = new ResizeObserver(update);
     observer.observe(el);
+    if (header) observer.observe(header);
+    window.addEventListener("resize", update);
     return () => {
       observer.disconnect();
+      window.removeEventListener("resize", update);
       root.style.removeProperty("--iswc-daybar-height");
+      root.style.removeProperty("--iswc-daybar-top");
     };
   }, []);
 
@@ -578,8 +609,6 @@ const SubSessions = ({ session, compact = false }) => {
 
 export const Schedule = () => {
   // null = every day; otherwise the id of the one day being shown.
- 
-
   const today = new Date().toLocaleDateString("en-CA"); // "YYYY-MM-DD", local time
 const todayDay = schedule.find((day) => day.id === today);
 
@@ -606,7 +635,7 @@ const [selectedDay, setSelectedDay] = useState(todayDay?.id ?? null);
         <p className="iswc-note">The schedule will be published here soon.</p>
       ) : (
         <>
-         
+          <ViewSelector />
 
           <p className="iswc-callout">
             <b>Programme correct at time of publication.</b> Minor changes may
@@ -614,7 +643,6 @@ const [selectedDay, setSelectedDay] = useState(todayDay?.id ?? null);
           </p>
 
           <DaySelector selected={selectedDay} onSelect={selectDay} />
-           <ViewSelector />
 
           <FloorPlans />
 
