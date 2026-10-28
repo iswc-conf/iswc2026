@@ -606,7 +606,7 @@ const [selectedDay, setSelectedDay] = useState(todayDay?.id ?? null);
         <p className="iswc-note">The schedule will be published here soon.</p>
       ) : (
         <>
-          <ViewSelector />
+         
 
           <p className="iswc-callout">
             <b>Programme correct at time of publication.</b> Minor changes may
@@ -614,6 +614,7 @@ const [selectedDay, setSelectedDay] = useState(todayDay?.id ?? null);
           </p>
 
           <DaySelector selected={selectedDay} onSelect={selectDay} />
+           <ViewSelector />
 
           <FloorPlans />
 
