@@ -639,7 +639,7 @@ export const schedule = [
           { id: 333, title: "RTSKG: Building a Rail Transit Station Knowledge Graph Dataset", authors: "Shutong Zhu, Tianxing Wu, Runfeng Liu, Yuang Gu, Xuan He and Yuan Zhu", track: "Resource" },
         ],
       },
-      { start: "13:30", end: "14:40", room: "Sezione 5", title: "Round table about the vision of the 25 years of Semantic Web", kind: "parallel", chairs: "TBD" },
+      { start: "13:30", end: "14:40", room: "Sezione 5", title: "Round table about the vision of the 25 years of Semantic Web", kind: "parallel", chairs: "Chris Welty" },
 
       { start: "14:40", end: "15:10", room: COFFEE, title: "Coffee Break", kind: "break" },
       { start: "15:10", end: "16:10", rooms: PLENARY, title: "Town Hall", kind: "poster", chairs: "Valentina Tamma and Claudia d'Amato" },
