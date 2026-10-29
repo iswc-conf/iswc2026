@@ -615,7 +615,7 @@ export const schedule = [
   ],},
 
       {
-        start: "13:30", end: "14:40", room: "Sezione 5", kind: "parallel",
+        start: "13:30", end: "14:40", room: "Sezione 3+4", kind: "parallel",
         title: "Knowledge Graphs, Retrieval-Augmented Question Answering, and Ontologies for Domain Applications",
         chairs: "Enrico Daga",
         slot: 19,
