@@ -4,6 +4,7 @@ import Header from "../general/Header";
 import UnderlineHeader from "../general/UnderlineHeader";
 import ExternalLink from "../general/ExternalLink";
 import { SESSION_KINDS, schedule, FLOOR_PLANS } from "../../data/schedule";
+import RegistrationBanner from "../about/RegistrationBanner";
 
 const FloorPlanViewer = lazy(() => import("./FloorPlanViewer"));
 
@@ -631,7 +632,10 @@ const [selectedDay, setSelectedDay] = useState(todayDay?.id ?? null);
 
   return (
     <Page>
+   
       <Header>Schedule</Header>
+      <RegistrationBanner></RegistrationBanner>
+      <br></br>
 
       {schedule.length === 0 ? (
         <p className="iswc-note">The schedule will be published here soon.</p>
