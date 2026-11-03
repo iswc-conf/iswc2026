@@ -101,11 +101,7 @@ const AWARD_GROUPS = [
           },
         ],
       },
-      {
-        name: "ORKG Comparison Award",
-        sponsors: ["SWSA", "ORKG"],
-        winners: [],
-      },
+
     ],
   },
   {
