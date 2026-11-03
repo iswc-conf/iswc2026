@@ -45,6 +45,7 @@ export const navigation = [
     label: "Program",
     items: [
       { type: "header", label: "Available" },
+       { label: "Awards", to: "/program/awards" },
         { label: "Schedule", to: "/program/schedule" },
       { label: "Workshops", to: "/program/workshops" },
       { label: "Dagstuhl Workshops", to: "/program/dagstuhl" },
@@ -56,11 +57,10 @@ export const navigation = [
         label: "Job Fair",
         to: "/program/jobfair",
         badge: "NEW",
-      },
-      { type: "header", label: "To Be Announced" },
+      }
     
   
-      { label: "Awards", to: "/program/awards" },
+     
       // { label: "Challenges", to: "/program/challenges" },
     ],
   },
