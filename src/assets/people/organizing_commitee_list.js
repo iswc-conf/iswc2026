@@ -41,6 +41,8 @@ import Student_Pavan_Sai_Bhyri from "./pictures/students/Pavan_Sai_Bhyri.jpg";
 import Student_Roberto_Massante from "./pictures/students/Roberto_Massante.jpeg";
 import Student_Sara_Pignatelli from "./pictures/students/Sara_Pignatelli.jpeg";
 import Student_Thwin_Htoo_Aung from "./pictures/students/Thwin_Htoo_Aung.jpg";
+import Student_Lyes from "./pictures/students/lyes.jpeg";
+
 
 const organizers = {
   "General Chair": [
@@ -351,8 +353,8 @@ const organizers = {
     {
       name: 'Emilia Payne',
       img: Student_Emilia_Payne,
-      institution: 'University of Bari',
-      country: 'Italy',
+      institution: '',
+      country: '',
     },
     {
       name: 'Nicolas Laera',
@@ -381,6 +383,13 @@ const organizers = {
     {
       name: 'Thwin Htoo Aung',
       img: Student_Thwin_Htoo_Aung,
+      institution: 'University of Bari',
+      country: 'Italy',
+    },
+
+    {
+      name: 'Arab Mokhtar Lyes',
+      img: Student_Lyes,
       institution: 'University of Bari',
       country: 'Italy',
     },
